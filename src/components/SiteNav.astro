@@ -40,7 +40,7 @@ const current = (href: string) => (path === href ? 'page' : undefined);
 
     <div class="nav-right glass">
       <ul>
-        <li><a class="nav-link" href="/about">Our approach</a></li>
+        <li class="nav-secondary"><a class="nav-link" href="/about">Our approach</a></li>
         <li><a class="nav-cta" href="/latest">Explore latest</a></li>
       </ul>
     </div>
@@ -297,6 +297,24 @@ const current = (href: string) => (path === href ? 'page' : undefined);
     .nav-brand {
       width: calc(100% - 32px);
       max-width: 385px;
+    }
+  }
+
+  /* Keep the bottom-bar pill clear of the menu button (16-72px). Tighter pills buy room for a
+     desktop scrollbar at 360-374px; below that "Our approach" goes, since About is in the menu. */
+  @media (max-width: 374px) {
+    .nav-right ul {
+      gap: 4px;
+    }
+
+    .nav-right :is(.nav-link, .nav-cta) {
+      padding-inline: 12px;
+    }
+  }
+
+  @media (max-width: 359px) {
+    .nav-secondary {
+      display: none;
     }
   }
 </style>
