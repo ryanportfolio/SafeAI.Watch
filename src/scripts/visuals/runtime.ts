@@ -184,6 +184,8 @@ function mount(slot: HTMLElement, create: SceneFactory): Mounted | null {
     scene = null;
     canvas.remove();
     slot.removeAttribute('data-visual-ready');
+    // the CSS still comes back right away (see VisualSlot.astro)
+    slot.setAttribute('data-visual-still', '');
     mounted.delete(slot);
   }
 
@@ -205,9 +207,11 @@ export function mountVisuals(root: ParentNode = document) {
             if (!slot.isConnected || mounted.has(slot)) return;
             const handle = mount(slot, mod.default);
             if (handle) mounted.set(slot, handle);
+            else slot.setAttribute('data-visual-still', '');
           })
           .catch(() => {
-            /* chunk failed to load: the CSS fallback stays */
+            // chunk failed to load: the CSS fallback stays
+            slot.setAttribute('data-visual-still', '');
           });
       }
     },

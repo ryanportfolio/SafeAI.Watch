@@ -169,3 +169,7 @@ Files under `src/` do not share one line ending: some tools wrote CRLF, others L
 ## Font preload warnings on every navigation after the first (2026-09-23)
 
 Chrome logged "preloaded using link preload but not used within a few seconds" for both preloaded fonts on every page after the first, with preload hrefs, `as`, `type` and `crossorigin` all matching the `@font-face` URLs. Disabling the HTTP cache did not help. Cause: Chrome reuses the parsed contents of an unchanged external stylesheet across same-origin navigations, including font sources it already loaded, so the new page never requests the font and its preload goes unclaimed. Moving the preloaded faces' `@font-face` rules into an inline `<style>` (parsed per document) gave 0 warnings; removing the preloads did too. `BaseLayout.astro` inlines them via `?inline` imports. Reproduce with one browser context walking all five routes twice, 4.5 s after each load; a fresh context per page never shows it.
+
+## No formatter config: don't run Prettier (2026-09-23)
+
+The repo has no Prettier config, so `npx prettier --write` falls back to defaults and rewraps whole files to 80 columns, turning a small edit into a full-file diff (happened on `hero.ts`; reverted). Edit by hand or with the Edit tool; don't run a formatter unless one is configured.
