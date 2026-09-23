@@ -1,0 +1,550 @@
+---
+/*
+ * Interactive timeline of the public record.
+ *
+ * Every tab and panel is rendered at build time; the client script only
+ * switches which one is selected. Self-contained so the homepage can reuse it:
+ * pass `eyebrow` for a section label, `framed` for the dashed outline.
+ */
+import { events, formatDayMonth, formatLong, formatShort, lastUpdated } from '../data/record';
+
+interface Props {
+  /** Optional mono label above the heading, e.g. "03 · The public record". */
+  eyebrow?: string;
+  heading?: string;
+  /** Prefix for element ids; must be unique if the page holds two timelines. */
+  id?: string;
+  /** Dashed outline, for use on the plain page background. */
+  framed?: boolean;
+}
+
+const { eyebrow, heading = 'AI risk, in context', id = 'timeline', framed = false } = Astro.props;
+
+const yearOf = (iso: string) => iso.slice(0, 4);
+const years = [...new Set(events.map((event) => yearOf(event.date)))];
+const selected = events.length - 1;
+const selectedYear = yearOf(events[selected].date);
+const total = events.length;
+const pad = (n: number) => String(n).padStart(2, '0');
+---
+<section
+  class:list={['timeline', { 'timeline-framed': framed }]}
+  aria-labelledby={`${id}-heading`}
+  data-timeline
+>
+  <div class="tl-top">
+    <div class="tl-heading">
+      {eyebrow && <p class="tl-eyebrow">{eyebrow}</p>}
+      <h2 id={`${id}-heading`} class="tl-title">{heading}</h2>
+    </div>
+    <div class="tl-years" role="group" aria-label="Choose a year">
+      {years.map((year) => (
+        <button type="button" data-year-button={year} aria-pressed={String(year === selectedYear)}>
+          {year}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <div class="tl-track" data-track>
+    <div class="tl-tabs" role="tablist" aria-label="Dated developments">
+      {events.map((event, i) => (
+        <button
+          type="button"
+          role="tab"
+          class="tl-tab"
+          id={`${id}-tab-${i}`}
+          aria-controls={`${id}-panel-${i}`}
+          aria-selected={String(i === selected)}
+          aria-label={`${formatDayMonth(event.date)}, ${event.category}, ${yearOf(event.date)}`}
+          tabindex={i === selected ? 0 : -1}
+          hidden={yearOf(event.date) !== selectedYear}
+          data-tab-year={yearOf(event.date)}
+        >
+          <span class="tl-dot" aria-hidden="true"></span>
+          <time datetime={event.date}>{formatDayMonth(event.date)}</time>
+          <span class="tl-tab-category">{event.category}</span>
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <div class="tl-panels">
+    {events.map((event, i) => (
+      <div
+        class="tl-panel"
+        id={`${id}-panel-${i}`}
+        role="tabpanel"
+        aria-labelledby={`${id}-tab-${i}`}
+        tabindex="0"
+        data-active={i === selected ? '' : undefined}
+      >
+        <p class="tl-meta">
+          <time datetime={event.date}>{formatLong(event.date)}</time>
+          <span>{event.category}</span>
+        </p>
+        <h3 class="tl-panel-title">{event.title}</h3>
+        <p class="tl-summary">{event.summary}</p>
+        <a class="tl-source" href={event.url} target="_blank" rel="noopener noreferrer">
+          {event.source} <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+        </a>
+      </div>
+    ))}
+  </div>
+
+  <div class="tl-bottom">
+    <p class="tl-note">
+      Publication dates · Selected sources through <time datetime={lastUpdated}>{formatShort(lastUpdated)}</time>
+    </p>
+    <div class="tl-steps">
+      <button type="button" class="tl-step" data-step="-1" aria-label="Previous development" aria-disabled={String(selected === 0)}>
+        <span aria-hidden="true">←</span>
+      </button>
+      <span class="tl-counter" data-counter aria-hidden="true">{pad(selected + 1)} / {pad(total)}</span>
+      <button type="button" class="tl-step" data-step="1" aria-label="Next development" aria-disabled={String(selected === total - 1)}>
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
+    <p class="visually-hidden" aria-live="polite" data-live></p>
+  </div>
+</section>
+
+<style>
+  .timeline {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 600px;
+    padding: 54px 56px 30px;
+    background: var(--card-light);
+    color: var(--card-dark);
+  }
+
+  /* faint 28px grid behind the card */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.24;
+    background-image:
+      linear-gradient(var(--card-grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--card-grid) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .timeline-framed {
+    border: 1px dashed var(--grey-dash);
+  }
+
+  .tl-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .tl-eyebrow,
+  .tl-years,
+  .tl-tabs,
+  .tl-meta,
+  .tl-bottom {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+  }
+
+  .tl-eyebrow {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: var(--grey-label);
+  }
+
+  .tl-title {
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+
+  .tl-years {
+    display: flex;
+    flex: none;
+    padding: 4px;
+    border: 1px dashed var(--grey-dash);
+    border-radius: 30px;
+  }
+
+  .tl-years button {
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 30px;
+    background: transparent;
+    cursor: pointer;
+    transition:
+      background-color 0.2s var(--ease-out),
+      color 0.2s var(--ease-out);
+  }
+
+  .tl-years button[aria-pressed='true'] {
+    background: var(--card-dark);
+    color: #fff;
+  }
+
+  /* The track scrolls sideways inside the card when the dates outgrow it. */
+  .tl-track {
+    flex: none;
+    margin-top: 20px;
+    padding: 28px 0 18px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-track) transparent;
+  }
+
+  .tl-tabs {
+    display: flex;
+    min-width: min-content;
+  }
+
+  .tl-tab {
+    position: relative;
+    flex: 1 0 112px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px 8px 8px;
+    border: 0;
+    border-top: 1px solid var(--grey-track);
+    background: transparent;
+    color: var(--grey-muted);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.2s var(--ease-out);
+  }
+
+  .tl-tab[hidden] {
+    display: none;
+  }
+
+  /* the card is light, so the blue ring alone has contrast; no paper halo */
+  .timeline :focus-visible {
+    box-shadow: none;
+  }
+
+  .tl-tab:focus-visible {
+    outline-offset: -2px;
+  }
+
+  .tl-tab:hover {
+    color: var(--card-dark);
+  }
+
+  .tl-tab-category {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .tl-dot {
+    position: absolute;
+    top: -5px;
+    left: 8px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--grey-track);
+    transition:
+      background-color 0.2s var(--ease-out),
+      box-shadow 0.2s var(--ease-out);
+  }
+
+  .tl-tab[aria-selected='true'] {
+    color: var(--link-blue);
+  }
+
+  .tl-tab[aria-selected='true'] .tl-dot {
+    background: var(--link-blue);
+    box-shadow: 0 0 0 5px rgb(28 65 144 / 0.1);
+  }
+
+  /* Panels share one grid cell so the card keeps the height of the longest entry. */
+  .tl-panels {
+    flex: 1;
+    display: grid;
+    padding: 24px 0;
+  }
+
+  .tl-panel {
+    grid-area: 1 / 1;
+    max-width: 790px;
+    visibility: hidden;
+  }
+
+  .tl-panel[data-active] {
+    visibility: visible;
+  }
+
+  .tl-panel:focus-visible {
+    outline-offset: 6px;
+  }
+
+  .tl-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 24px;
+    text-transform: uppercase;
+    color: var(--grey-label);
+  }
+
+  .tl-panel-title {
+    margin: 16px 0;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+  }
+
+  .tl-summary {
+    max-width: 690px;
+    margin-bottom: 22px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--grey-text);
+  }
+
+  .tl-source {
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--grey-track);
+    font-size: 13px;
+    transition: border-color 0.2s var(--ease-out);
+  }
+
+  .tl-source:hover {
+    border-bottom-color: currentColor;
+  }
+
+  .tl-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--grey-rule);
+    color: var(--grey-muted);
+  }
+
+  .tl-steps {
+    display: flex;
+    flex: none;
+    align-items: center;
+    gap: 17px;
+  }
+
+  .tl-counter {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tl-step {
+    padding: 0 2px;
+    border: 0;
+    background: transparent;
+    color: var(--card-dark);
+    font-size: 23px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  /* Dim the arrow only: the button stays focusable, so its focus ring keeps full contrast. */
+  .tl-step[aria-disabled='true'] {
+    cursor: default;
+  }
+
+  .tl-step[aria-disabled='true'] > span {
+    opacity: 0.2;
+  }
+
+  @media (max-width: 767px) {
+    .timeline {
+      min-height: 0;
+      padding: 28px 20px 24px;
+    }
+
+    .tl-top {
+      align-items: flex-start;
+    }
+
+    .tl-eyebrow {
+      font-size: 9px;
+    }
+
+    .tl-title {
+      font-size: 29px;
+    }
+
+    .tl-years button {
+      padding: 9px 11px;
+    }
+
+    .tl-track {
+      margin-top: 15px;
+      padding-top: 24px;
+      /* let the dates run to the card edge so it reads as scrollable */
+      margin-right: -20px;
+      padding-right: 20px;
+    }
+
+    .tl-tab {
+      flex-basis: 92px;
+    }
+
+    .tl-panel-title {
+      font-size: 30px;
+    }
+
+    .tl-summary {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .tl-meta {
+      gap: 4px 16px;
+      font-size: 10px;
+    }
+
+    .tl-bottom {
+      align-items: flex-end;
+      font-size: 9px;
+    }
+
+    .tl-note {
+      max-width: 160px;
+    }
+
+    .tl-steps {
+      gap: 11px;
+    }
+  }
+</style>
+
+<script>
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  function initTimeline(root: HTMLElement) {
+    const tabs = Array.from(root.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+    const panels = tabs.map((tab) => document.getElementById(tab.getAttribute('aria-controls') ?? '')!);
+    const yearButtons = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-year-button]'));
+    const track = root.querySelector<HTMLElement>('[data-track]')!;
+    const tablist = root.querySelector<HTMLElement>('[role="tablist"]')!;
+    const prev = root.querySelector<HTMLButtonElement>('[data-step="-1"]')!;
+    const next = root.querySelector<HTMLButtonElement>('[data-step="1"]')!;
+    const counter = root.querySelector<HTMLElement>('[data-counter]')!;
+    const live = root.querySelector<HTMLElement>('[data-live]')!;
+    const total = tabs.length;
+    const pad = (n: number) => String(n).padStart(2, '0');
+    const yearOf = (i: number) => tabs[i].dataset.tabYear!;
+
+    let selected = Math.max(
+      0,
+      tabs.findIndex((tab) => tab.getAttribute('aria-selected') === 'true'),
+    );
+
+    // Scroll the track, never the page, so the selected date is in view.
+    function reveal(tab: HTMLElement, instant = false) {
+      const bounds = track.getBoundingClientRect();
+      const box = tab.getBoundingClientRect();
+      const behavior: ScrollBehavior = instant || reducedMotion.matches ? 'auto' : 'smooth';
+      if (box.left < bounds.left) {
+        track.scrollBy({ left: box.left - bounds.left, behavior });
+      } else if (box.right > bounds.right) {
+        track.scrollBy({ left: box.right - bounds.right, behavior });
+      }
+    }
+
+    // Every change of selection (click, arrow keys, year, previous/next) updates
+    // the live region with the position and title. The position counts all
+    // entries, like the visible 04 / 10 counter and previous/next; "overall" keeps
+    // it apart from the tab position a screen reader gives within the year.
+    // A focused tab's name is its visible date and category plus the year.
+    function select(index: number, options: { focus?: boolean } = {}) {
+      if (index < 0 || index >= total) return;
+      selected = index;
+      const year = yearOf(index);
+
+      tabs.forEach((tab, i) => {
+        const active = i === index;
+        tab.setAttribute('aria-selected', String(active));
+        tab.tabIndex = active ? 0 : -1;
+        tab.hidden = yearOf(i) !== year;
+        panels[i].toggleAttribute('data-active', active);
+      });
+      yearButtons.forEach((button) => {
+        button.setAttribute('aria-pressed', String(button.dataset.yearButton === year));
+      });
+      prev.setAttribute('aria-disabled', String(index === 0));
+      next.setAttribute('aria-disabled', String(index === total - 1));
+      counter.textContent = `${pad(index + 1)} / ${pad(total)}`;
+
+      if (options.focus) tabs[index].focus({ preventScroll: true });
+      reveal(tabs[index]);
+      const title = panels[index].querySelector('h3')?.textContent ?? '';
+      live.textContent = `Entry ${index + 1} of ${total} overall: ${title}`;
+    }
+
+    tabs.forEach((tab, i) =>
+      tab.addEventListener('click', () => {
+        if (i !== selected) select(i);
+      }),
+    );
+
+    tablist.addEventListener('keydown', (event) => {
+      const year = yearOf(selected);
+      const visible = tabs.map((_, i) => i).filter((i) => yearOf(i) === year);
+      let position = visible.indexOf(selected);
+      switch (event.key) {
+        case 'ArrowRight':
+          position = (position + 1) % visible.length;
+          break;
+        case 'ArrowLeft':
+          position = (position - 1 + visible.length) % visible.length;
+          break;
+        case 'Home':
+          position = 0;
+          break;
+        case 'End':
+          position = visible.length - 1;
+          break;
+        default:
+          return;
+      }
+      event.preventDefault();
+      select(visible[position], { focus: true });
+    });
+
+    yearButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const first = tabs.findIndex((_, i) => yearOf(i) === button.dataset.yearButton);
+        if (first !== -1 && yearOf(selected) !== button.dataset.yearButton) {
+          track.scrollTo({ left: 0 });
+          select(first);
+        }
+      });
+    });
+
+    [prev, next].forEach((button) => {
+      button.addEventListener('click', () => {
+        if (button.getAttribute('aria-disabled') === 'true') return;
+        select(selected + Number(button.dataset.step));
+      });
+    });
+
+    // Start with the selected date in view on narrow screens.
+    reveal(tabs[selected], true);
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-timeline]').forEach(initTimeline);
+</script>

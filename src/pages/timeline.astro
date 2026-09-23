@@ -1,0 +1,32 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Timeline from '../components/Timeline.astro';
+---
+<PageLayout
+  title="Timeline"
+  heading="Follow the developments"
+  description="A dated timeline of research, reported misuse, public warnings, and policy responses on AI safety and security, with a link to each original source."
+  intro="Browse the dated public record. Select a year or event, then follow the source to examine the original account."
+>
+  <Timeline framed />
+  <p class="timeline-alt">
+    Prefer a list? <a href="/latest">Read every entry in the archive</a>, newest first.
+  </p>
+</PageLayout>
+
+<style>
+  .timeline-alt {
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--ink-64);
+  }
+
+  .timeline-alt a {
+    color: var(--ink);
+    border-bottom: 1px solid var(--grey-track);
+  }
+
+  .timeline-alt a:hover {
+    border-bottom-color: currentColor;
+  }
+</style>

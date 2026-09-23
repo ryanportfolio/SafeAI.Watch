@@ -1,0 +1,65 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { formatLong, lastUpdated } from '../data/record';
+---
+<PageLayout
+  title="About"
+  heading="An open record of AI risk"
+  description="How SafeAI.watch selects and reads its sources: what each entry records, how evidence is attributed, and the limits of the record."
+  intro="SafeAI.watch brings together public research, reported incidents, warnings, and policy responses. Each entry keeps its source and the limits of its evidence in view."
+>
+  <div class="prose">
+    <section id="method" aria-labelledby="method-heading">
+      <h2 id="method-heading">How entries are read</h2>
+      <p>
+        Start with what happened and who reported it. Identify what the available evidence supports,
+        then record the questions that remain unresolved. Publication dates describe when the linked
+        source appeared.
+      </p>
+    </section>
+
+    <section id="sources" aria-labelledby="sources-heading">
+      <h2 id="sources-heading">Evidence and attribution</h2>
+      <p>
+        Company reports describe the company's findings. Preprints may change before peer review.
+        Essays and interviews present arguments and forecasts. Reporting offers an account that readers
+        can compare with original material.
+      </p>
+      <p>
+        Capabilities evaluated under controlled conditions, warnings about future harm, and observed
+        incidents are different categories. A serious warning can justify scrutiny while its probability
+        remains uncertain.
+      </p>
+    </section>
+
+    <section id="scope" aria-labelledby="scope-heading">
+      <h2 id="scope-heading">Scope of the record</h2>
+      <p>
+        The record is a selection of sources published through{' '}
+        <time datetime={lastUpdated}>{formatLong(lastUpdated)}</time>, initially focused on AI and
+        biological risk. It makes no claim to cover every development or to monitor events in real time.
+      </p>
+      <p>
+        The featured GZERO World interview is linked editorial coverage. It is not an endorsement of this
+        project. Illustrations are conceptual artwork and contain no measured results.
+      </p>
+    </section>
+
+    <section id="further" aria-labelledby="further-heading">
+      <h2 id="further-heading">Reading further</h2>
+      <p>
+        <a href="/latest">Browse the source archive</a> or <a href="/timeline">follow the timeline</a>.
+        Source links let readers examine the original context, revisions, and later developments.
+      </p>
+    </section>
+
+    <section id="typefaces" aria-labelledby="typefaces-heading">
+      <h2 id="typefaces-heading">Typefaces</h2>
+      <p>
+        The site is set in Geist and Geist Mono by Vercel and Newsreader by Production Type. All three
+        are served from this site under the SIL Open Font License 1.1. Licence texts: <a href="/licenses/OFL-Geist.txt">Geist</a>,{' '}
+        <a href="/licenses/OFL-Geist-Mono.txt">Geist Mono</a>, <a href="/licenses/OFL-Newsreader.txt">Newsreader</a>.
+      </p>
+    </section>
+  </div>
+</PageLayout>

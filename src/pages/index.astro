@@ -1,0 +1,1558 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Mark from '../components/Mark.astro';
+import SectionHead from '../components/SectionHead.astro';
+import SectionJump from '../components/SectionJump.astro';
+import Timeline from '../components/Timeline.astro';
+import VisualSlot from '../components/VisualSlot.astro';
+import { events, formatLong, formatShort, lastUpdated, type RecordEvent } from '../data/record';
+
+import researchArt from '../assets/art/research.png';
+import warningsArt from '../assets/art/warnings.png';
+import oversightArt from '../assets/art/oversight.png';
+
+/** Look up a record entry by its source URL; fail the build if it is missing. */
+const entry = (url: string): RecordEvent => {
+  const found = events.find((event) => event.url === url);
+  if (!found) throw new Error(`index.astro: no record entry for ${url}`);
+  return found;
+};
+
+const interview = entry('https://www.pbs.org/video/could-ai-build-a-bioweapon-ugzlxh/');
+
+const sequence = [
+  {
+    label: 'The development',
+    heading: ['What', 'happened'],
+    body: 'Start with the dated event: a paper appeared, a company reported misuse, or a policymaker proposed a safeguard. Name the source and describe its claim.',
+  },
+  {
+    label: 'The evidence',
+    heading: ['What the', 'evidence shows'],
+    body: 'Distinguish a controlled evaluation from a real incident. Look for methods, access to underlying material, independent scrutiny, and limits the authors acknowledge.',
+  },
+  {
+    label: 'The open questions',
+    heading: ['What remains', 'uncertain'],
+    body: 'A warning may be serious while its likelihood remains unclear. Record contested interpretations, missing evidence, and the gap between a possible capability and observed harm.',
+  },
+];
+
+const coverage = [
+  {
+    label: 'Research',
+    title: 'Safety research',
+    body: 'Evaluations, methods, and findings about model capabilities and safeguards.',
+  },
+  {
+    label: 'Incidents',
+    title: 'Security incidents',
+    body: 'Reported misuse and failures, with attribution and limits on what is known.',
+  },
+  {
+    label: 'Warnings',
+    title: 'Public warnings',
+    body: 'Arguments and forecasts from researchers, builders, and other public voices.',
+  },
+  {
+    label: 'Governance',
+    title: 'Policy & oversight',
+    body: 'Proposals, safeguards, and institutions responding to AI risk.',
+  },
+];
+
+const faq = [
+  {
+    q: 'What counts as a source?',
+    a: [
+      'Entries link to research, original company reports, public statements, policy analysis, or identified reporting.',
+      "A company report describes the company's own findings. A preprint has not necessarily completed peer review. Those labels stay visible.",
+      'The source link lets readers examine the original context and judge the evidence themselves.',
+    ],
+  },
+  {
+    q: 'Does a warning establish harm?',
+    a: [
+      'Warnings describe possible harms, expectations, or arguments. They can motivate safeguards before an incident is observed.',
+      'An evaluation may show capability under particular conditions. It does not by itself show that the same harm occurred in the world.',
+    ],
+  },
+  {
+    q: 'How are disagreements handled?',
+    a: [
+      'Critical analysis belongs alongside warnings. Different authors can agree that a risk deserves attention while disagreeing about likelihood, evidence, or the best response.',
+      'We identify who is speaking and distinguish their interpretation from the underlying observation.',
+      'Read across sources before treating one account as settled.',
+    ],
+  },
+  {
+    q: 'How current is this record?',
+    a: [
+      `The newest entry was published on ${formatLong(lastUpdated)}. This is a selected public record, not a live monitoring service.`,
+      'The initial selection focuses on AI and biological risk, with research, reported misuse, public warnings, and policy responses.',
+      'Publication dates appear on entries. Readers can follow each link for revisions or later developments.',
+    ],
+  },
+];
+
+// Selected reading: our own card copy, with date, category and source taken
+// from the record entry each card links to.
+const reading = [
+  {
+    event: entry('https://arxiv.org/abs/2506.13798'),
+    title: 'When biological capability raises risk',
+    summary: 'A research preprint argues that model guidance can increase biological risk. Its dialogues do not demonstrate an attack.',
+    art: researchArt,
+  },
+  {
+    event: entry('https://thebulletin.org/2026/07/ai-executives-worry-about-their-technologies-aiding-bioterrorists-how-likely-is-that/'),
+    title: 'Examining the public warnings',
+    summary: 'The Bulletin of the Atomic Scientists examines executive warnings and the evidence behind them.',
+    art: warningsArt,
+  },
+  {
+    event: entry('https://www.rand.org/pubs/research_reports/RRA4999-1.html'),
+    title: 'Building layers of biosecurity',
+    summary: 'A RAND policy report proposes mutually reinforcing safeguards for the AI era.',
+    art: oversightArt,
+  },
+];
+
+// Conceptual diagram (viewBox 680 x 560). The curves start at the axis origin
+// and illustrate a relationship only; there is no measured data behind them.
+const AX = { x0: 129, x1: 676, y0: 520, y1: 6 };
+const START = { x: AX.x0, y: 505 };
+const END_X = 666;
+const CLAIMS_END = 57;
+const EVIDENCE_END = 443;
+
+const curve = (endY: number, shape: (t: number) => number) => {
+  const pts: string[] = [];
+  for (let i = 0; i <= 60; i++) {
+    const t = i / 60;
+    const x = START.x + (END_X - START.x) * t;
+    const y = START.y - (START.y - endY) * shape(t);
+    pts.push(`${x.toFixed(1)} ${y.toFixed(1)}`);
+  }
+  return `M${pts.join('L')}`;
+};
+
+const K = 4;
+const claimsPath = curve(CLAIMS_END, (t) => (Math.exp(K * t) - 1) / (Math.exp(K) - 1));
+const evidencePath = curve(EVIDENCE_END, (t) => Math.pow(t, 1.25));
+
+const xTicks = Array.from({ length: 21 }, (_, i) => ({
+  x: AX.x0 + ((AX.x1 - AX.x0) * i) / 20,
+  major: i % 5 === 0,
+}));
+const yTicks = Array.from({ length: 21 }, (_, i) => ({
+  y: AX.y0 - ((AX.y0 - AX.y1) * i) / 20,
+  major: i % 5 === 0,
+}));
+const pct = (v: number, of: number) => `${((v / of) * 100).toFixed(2)}%`;
+---
+<BaseLayout>
+  <!-- Hero -->
+  <section class="hero" data-section="Keeping watch on AI" aria-labelledby="hero-title">
+    <div class="hero-visual" style="--focus: 62% 48%">
+      <VisualSlot name="hero" />
+    </div>
+    <div class="wrap hero-inner">
+      <h1 id="hero-title">Keeping watch on AI</h1>
+      <p class="lead hero-lead">News, research, and warnings about AI safety and security. Follow the developments, examine the evidence, and hear from the people closest to the work.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="/latest">Explore latest</a>
+        <a class="button frame" href="/timeline">Browse timeline</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- Featured interview -->
+  <section class="interview" data-section="Featured interview" data-keywords="video pbs" aria-labelledby="interview-title">
+    <div class="wrap interview-grid">
+      <div class="interview-media">
+        <a
+          class="interview-thumb frame"
+          href={interview.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <span class="thumb-art">
+            {/* sizes = rendered width: gutters 24px / 120px below 1024; two columns above
+                ((100vw - 240px gutters - 48px gap) / 2 - 32px padding), capped at 537px.
+                1540w covers the 768px-wide one-column thumb at DPR 2. */}
+            <Picture
+              src={warningsArt}
+              alt=""
+              widths={[360, 560, 800, 1100, 1540]}
+              sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1023px) calc(100vw - 240px), min(537px, 50vw - 176px)"
+              formats={['webp']}
+              fallbackFormat="webp"
+              quality={80}
+              loading="lazy"
+            />
+            <span class="thumb-shade"></span>
+            <span class="thumb-play">
+              <svg width="14" height="16" viewBox="0 0 14 16"><path d="M1 1.5v13L13 8z" fill="currentColor" /></svg>
+            </span>
+          </span>
+          <span class="thumb-caption">
+            <span class="thumb-badge">26:46 · Watch at PBS ↗</span>
+            <span class="thumb-mark"><Mark size={16} /></span>
+          </span>
+        </a>
+      </div>
+      <div class="interview-copy">
+        <h2 id="interview-title" class="interview-title">Could AI build a bioweapon? A GZERO World interview examines the risks, the warnings, and the questions still open</h2>
+        <div class="interview-meta">
+          <p>Featured interview · <time datetime={interview.date}>{formatShort(interview.date)}</time></p>
+          <p class="interview-source">
+            GZERO World / PBS · <a href={interview.url} target="_blank" rel="noopener noreferrer">Watch at PBS <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens pbs.org in a new tab)</span></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- Why the record matters: conceptual diagram + introduction -->
+  <section class="manifesto" data-section="Why evidence matters" aria-label="Why evidence matters">
+    <div class="wrap manifesto-grid">
+      <figure class="diagram">
+        <svg
+          class="diagram-svg"
+          viewBox="0 0 680 560"
+          role="img"
+          aria-label="Conceptual diagram of claims, public evidence, and open questions. The curves illustrate a relationship and do not represent measured data."
+        >
+          <line class="axis" x1={AX.x0} y1={AX.y1} x2={AX.x0} y2={AX.y0} />
+          <line class="axis" x1={AX.x0} y1={AX.y0} x2={AX.x1} y2={AX.y0} />
+          {xTicks.map((t) => <line class="tick" x1={t.x} y1={AX.y0 + 4} x2={t.x} y2={AX.y0 + (t.major ? 12 : 8)} />)}
+          {yTicks.map((t) => <line class="tick" x1={AX.x0 - (t.major ? 12 : 8)} y1={t.y} x2={AX.x0 - 4} y2={t.y} />)}
+          <path class="curve curve-evidence" d={evidencePath} />
+          <path class="curve curve-claims" d={claimsPath} />
+          <circle class="dot-claims" cx={END_X} cy={CLAIMS_END} r="4.6" />
+          <circle class="dot-evidence" cx={END_X} cy={EVIDENCE_END} r="4.6" />
+          <g class="gap-arrow">
+            <line x1={END_X} y1={CLAIMS_END + 18} x2={END_X} y2={EVIDENCE_END - 18} />
+            <path d={`M${END_X - 4.1} ${CLAIMS_END + 22.1}L${END_X} ${CLAIMS_END + 18}L${END_X + 4.1} ${CLAIMS_END + 22.1}`} />
+            <path d={`M${END_X - 4.1} ${EVIDENCE_END - 22.1}L${END_X} ${EVIDENCE_END - 18}L${END_X + 4.1} ${EVIDENCE_END - 22.1}`} />
+          </g>
+        </svg>
+        <div class="diagram-labels" aria-hidden="true">
+          <span class="d-label d-claims" style={`right: ${pct(680 - END_X, 680)}; bottom: ${pct(560 - CLAIMS_END + 14, 560)}`}>Claims and capabilities<br />under discussion</span>
+          <span class="d-label d-evidence" style={`right: ${pct(680 - END_X, 680)}; top: ${pct(EVIDENCE_END + 14, 560)}`}>Evidence available<br />for public scrutiny</span>
+          <span class="d-label d-gap" style={`right: ${pct(680 - END_X + 10, 680)}; top: ${pct((CLAIMS_END + EVIDENCE_END) / 2, 560)}`}>Questions still open</span>
+          <span class="d-axis d-axis-y" style={`left: ${pct(AX.x0 - 22, 680)}; bottom: ${pct(560 - AX.y0, 560)}`}>Conceptual diagram</span>
+          <span class="d-axis d-axis-x" style={`left: ${pct(AX.x0, 680)}; top: ${pct(AX.y0 + 22, 560)}`}>Developments</span>
+        </div>
+      </figure>
+      <div class="manifesto-copy">
+        <p><span class="dropcap frame" aria-hidden="true"><span>P</span></span><span class="visually-hidden">P</span>ublic understanding of AI risk depends on evidence people can examine. Research, company reports, interviews, and policy proposals often describe different things: an evaluated capability, a possible future harm, or a reported incident. Those differences belong in the record.</p>
+        <p>SafeAI.watch follows the public record of AI safety and security, with links back to the people and institutions making each claim.</p>
+        <p>Read the source, check what was observed, and keep the unresolved questions in view. This diagram is conceptual, with no measured scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 From event to evidence -->
+  <section class="sequence" data-seq data-section="From event to evidence" aria-labelledby="sequence-title">
+    <div class="wrap block-head">
+      <SectionHead
+        num="01"
+        label="How we read the record"
+        id="sequence-title"
+        heading="From event to evidence"
+        lead="Every entry separates what happened, what the evidence supports, and what remains uncertain."
+      />
+    </div>
+    <div class="sequence-grid">
+      <ol class="sequence-steps">
+        {sequence.map((step, i) => (
+          <li class="sequence-step">
+            <article class="step-card frame" data-seq-step data-active={i === 0 ? '' : undefined}>
+              <p class="eyebrow step-label">{step.label}</p>
+              <h3 class="step-title">{step.heading[0]}<br />{step.heading[1]}</h3>
+              <p class="step-body">{step.body}</p>
+            </article>
+          </li>
+        ))}
+      </ol>
+      <div class="sequence-visual">
+        <div class="sequence-visual-pin" style="--focus: 50% 50%">
+          <VisualSlot name="sequence" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 The public record -->
+  <div class="record-band" data-section="The public record" data-keywords="timeline dates">
+    <div class="record-visual">
+      <VisualSlot name="record" tone="dark" />
+    </div>
+    <div class="record-inner">
+      <Timeline eyebrow="02 · The public record" id="home-timeline" />
+    </div>
+  </div>
+
+  <!-- 03 Four ways to follow the record -->
+  <section class="coverage" data-section="Four ways to follow the record" aria-labelledby="coverage-title">
+    <div class="wrap">
+      <SectionHead
+        num="03"
+        label="Areas of coverage"
+        id="coverage-title"
+        heading={'Four ways to\nfollow the record'}
+        lead="Research, reported incidents, public warnings, and the decisions shaping AI oversight."
+      />
+      <div class="coverage-grid">
+        <ul class="coverage-list">
+          {coverage.map((area) => (
+            <li class="coverage-card frame">
+              <p class="eyebrow">{area.label}</p>
+              <h3 class="coverage-title">{area.title}</h3>
+              <p class="coverage-body">{area.body}</p>
+            </li>
+          ))}
+        </ul>
+        <div class="coverage-panel">
+          <VisualSlot name="coverage" tone="dark" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 FAQ -->
+  <section class="faq" data-section="Reading with care" aria-labelledby="faq-title">
+    <div class="wrap">
+      <SectionHead
+        num="04"
+        label="FAQ"
+        id="faq-title"
+        heading="Reading with care"
+        lead="A few distinctions that help when reading about AI safety and security."
+      />
+      <div class="faq-list">
+        {faq.map((item) => (
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>{item.q}</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-a">
+              {item.a.map((para) => <p>{para}</p>)}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 From the research log -->
+  <section class="reading" data-section="From the research log" aria-labelledby="reading-title">
+    <div class="wrap">
+      <SectionHead num="05" label="Selected reading" id="reading-title" heading="From the research log">
+        <a class="button frame reading-all" href="/latest">Browse latest</a>
+      </SectionHead>
+      <ul class="reading-grid">
+        {reading.map((card) => (
+          <li>
+            <a class="reading-card" href={card.event.url} target="_blank" rel="noopener noreferrer">
+              <div class="reading-art">
+                <Picture
+                  src={card.art}
+                  alt=""
+                  widths={[400, 800]}
+                  sizes="(min-width: 1024px) 388px, (min-width: 768px) 50vw, calc(100vw - 48px)"
+                  formats={['webp']}
+                  fallbackFormat="webp"
+                  quality={80}
+                  loading="lazy"
+                />
+              </div>
+              <div class="reading-body">
+                <p class="eyebrow reading-meta">
+                  <span>{card.event.category}</span><span class="reading-dot" aria-hidden="true"></span><time datetime={card.event.date}>{formatShort(card.event.date)}</time>
+                </p>
+                <h3 class="reading-title">{card.title}</h3>
+                <p class="reading-summary">{card.summary}</p>
+                <p class="reading-source">{card.event.source}&nbsp;<span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Closing call to action -->
+  <section class="closing" data-section="Stay close to the evidence" aria-labelledby="closing-title">
+    <VisualSlot name="closing" tone="dark" />
+    <div class="closing-inner">
+      <h2 id="closing-title" class="closing-title">Stay close to <em>the evidence</em></h2>
+      <p class="closing-lead">Follow the developments, read the sources,<br /> and keep the open questions in view.</p>
+      <div class="closing-actions">
+        <a class="button button-cream" href="/latest">Explore latest</a>
+        <a class="button button-outline-light" href="/timeline">Browse timeline</a>
+      </div>
+    </div>
+  </section>
+
+  <SectionJump />
+</BaseLayout>
+
+<script>
+  // "From event to evidence": reading progress through the three step cards.
+  // Each card after the first travels from the bottom of the viewport to its
+  // resting line: its sticky top on wide screens, just under the pinned visual
+  // on narrow ones, under the nav on short landscape screens (visual pinned
+  // beside the cards). Half-way along that path it becomes the current card. On
+  // narrow screens the cards scroll on under the visual, so a card also takes
+  // over once the card before it reaches the resting line: the current card's
+  // text never sits under the visual or its fade.
+  //
+  // The progress (0 at the first card, 2 at the last, continuous) goes to the
+  // sequence visual. It follows the cards' travel, rescaled so each switch
+  // point lands exactly half-way between two steps (0.5, 1.5) whatever the
+  // card spacing: card, chip and layer change together at every size.
+  const section = document.querySelector<HTMLElement>('[data-seq]');
+  const steps = [...(section?.querySelectorAll<HTMLElement>('[data-seq-step]') ?? [])];
+  // the list items: they keep scrolling while a sticky card rests, so their travel stays linear
+  const rows = steps.map((step) => step.parentElement ?? step);
+  const pin = section?.querySelector<HTMLElement>('.sequence-visual-pin');
+  if (section && steps.length) {
+    let queued = false;
+    let current = -1;
+    const clamp01 = (v: number) => Math.min(1, Math.max(0, v));
+    const layout = (vh: number) => {
+      const card = getComputedStyle(steps[0]);
+      if (card.position === 'sticky') return { rest: parseFloat(card.top) || 0, under: false };
+      if (pin && getComputedStyle(pin).position === 'sticky') {
+        // short landscape: the visual is pinned beside the cards, which rest under the nav
+        if (pin.getBoundingClientRect().left >= steps[0].getBoundingClientRect().right) {
+          return { rest: parseFloat(getComputedStyle(pin).top) || 0, under: false };
+        }
+        const clear = parseFloat(getComputedStyle(section).getPropertyValue('--seq-clear-cards')) || 24;
+        return { rest: pin.offsetHeight + clear, under: true };
+      }
+      return { rest: vh * 0.25, under: false };
+    };
+    const update = () => {
+      queued = false;
+      const vh = window.innerHeight;
+      const { rest, under } = layout(vh);
+      const path = Math.max(1, vh - rest);
+      const n = steps.length;
+      // travel of each card: 0 at the viewport bottom, 1 on the resting line (not clamped)
+      const raw = rows.map((row) => (vh - row.getBoundingClientRect().top) / path);
+      // where along its travel each card takes over
+      const at = raw.map((r, i) => {
+        if (i === 0) return 0;
+        if (!under) return 0.5;
+        const spacing = raw[i - 1] - r;
+        return Math.min(0.5, Math.max(0.1, 1 - spacing));
+      });
+      let active = 0;
+      for (let i = 1; i < n; i++) if (raw[i] >= at[i]) active = i;
+      // summed travel, now and at each switch point (every card moves by the same amount)
+      const travel = (shift: number) => {
+        let sum = 0;
+        for (let i = 1; i < n; i++) sum += clamp01(raw[i] + shift);
+        return sum;
+      };
+      const now = travel(0);
+      const knotX = [0];
+      const knotY = [0];
+      for (let i = 1; i < n; i++) {
+        knotX.push(Math.max(travel(at[i] - raw[i]), knotX[i - 1] + 1e-4));
+        knotY.push(i - 0.5);
+      }
+      knotX.push(Math.max(n - 1, knotX[n - 1] + 1e-4));
+      knotY.push(n - 1);
+      let progress = n - 1;
+      for (let k = 1; k < knotX.length; k++) {
+        if (now < knotX[k]) {
+          const f = clamp01((now - knotX[k - 1]) / (knotX[k] - knotX[k - 1]));
+          progress = knotY[k - 1] + (knotY[k] - knotY[k - 1]) * f;
+          break;
+        }
+      }
+      // rounding safety: stay on the active card's side of its switch points
+      progress = Math.min(Math.max(progress, active === 0 ? 0 : active - 0.5), active === n - 1 ? n - 1 : active + 0.4999);
+      section.dataset.seqProgress = progress.toFixed(4);
+      section.dataset.seqActive = String(active);
+      if (active !== current) {
+        current = active;
+        steps.forEach((step, i) => step.toggleAttribute('data-active', i === active));
+      }
+      section.dispatchEvent(new CustomEvent('seq:progress', { detail: { progress, active } }));
+    };
+    const queue = () => {
+      if (!queued) {
+        queued = true;
+        requestAnimationFrame(update);
+      }
+    };
+    window.addEventListener('scroll', queue, { passive: true });
+    window.addEventListener('resize', queue);
+    // narrow layout: the pinned visual lets go when the last card reaches the resting line
+    const last = steps[steps.length - 1];
+    new ResizeObserver(() => {
+      section.style.setProperty('--seq-last', `${last.offsetHeight}px`);
+      queue();
+    }).observe(last);
+    update();
+  }
+</script>
+
+<style>
+  .wrap {
+    width: 100%;
+    max-width: 1512px;
+    margin: 0 auto;
+    padding-inline: var(--content-gutter);
+  }
+
+  .rule {
+    margin: 0;
+    border: 0;
+    border-top: 1px dashed var(--ink-10);
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 780px;
+  }
+
+  .hero-visual {
+    position: absolute;
+    inset: 0 0 0 42%;
+    z-index: -1;
+  }
+
+  .hero-inner {
+    padding-top: 180px;
+    padding-bottom: 200px;
+  }
+
+  .hero-inner > h1,
+  .hero-lead {
+    max-width: 720px;
+  }
+
+  .hero-lead {
+    max-width: 600px;
+    margin-top: 32px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 80px;
+  }
+
+  /* Featured interview */
+  .interview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+    padding-block: 80px;
+  }
+
+  .interview-media {
+    padding: 16px;
+  }
+
+  /*
+   * A dashed frame holding the artwork and, below it, a caption strip with the
+   * running time and the mark. Nothing sits on the artwork but the play button,
+   * so the label can never cover a detail of the art at any width.
+   */
+  .interview-thumb {
+    display: block;
+    max-width: 537px;
+  }
+
+  .thumb-art {
+    position: relative;
+    display: block;
+    aspect-ratio: 537 / 298;
+    overflow: hidden;
+    background: var(--card-dark-2);
+  }
+
+  .thumb-art :global(picture) {
+    display: contents;
+  }
+
+  .thumb-art :global(img) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-out);
+  }
+
+  .interview-thumb:hover :global(img) {
+    transform: scale(1.02);
+  }
+
+  .thumb-shade {
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 / 0.1);
+  }
+
+  .thumb-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding-left: 3px;
+    border-radius: var(--radius-full);
+    background: rgb(255 255 255 / 0.9);
+    color: var(--ink);
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s var(--ease-out);
+  }
+
+  .interview-thumb:hover .thumb-play {
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+
+  .thumb-caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 12px;
+    border-top: 1px dashed var(--ink-10);
+    background: var(--cream);
+    transition: background-color 0.2s var(--ease-out);
+  }
+
+  .interview-thumb:hover .thumb-caption {
+    background: #fff;
+  }
+
+  .thumb-badge {
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    line-height: 16px;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .thumb-mark {
+    display: flex;
+    flex: none;
+  }
+
+  .interview-title {
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+
+  .interview-meta {
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .interview-source {
+    color: var(--ink-64);
+  }
+
+  .interview-source a {
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s var(--ease-out), color 0.2s var(--ease-out);
+  }
+
+  .interview-source a:hover {
+    color: var(--ink);
+    border-bottom-color: currentColor;
+  }
+
+  /* Conceptual diagram + introduction */
+  .manifesto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 48px;
+    padding-block: 80px;
+  }
+
+  .diagram {
+    position: relative;
+    aspect-ratio: 680 / 560;
+  }
+
+  .diagram-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .axis {
+    stroke: var(--ink-34);
+    stroke-width: 1;
+    stroke-dasharray: 2 3;
+  }
+
+  .tick {
+    stroke: rgb(26 22 20 / 0.28);
+    stroke-width: 1;
+  }
+
+  .curve {
+    fill: none;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+  }
+
+  .curve-claims {
+    stroke: var(--chart-orange);
+  }
+
+  .curve-evidence {
+    stroke: var(--chart-olive);
+  }
+
+  .dot-claims {
+    fill: var(--chart-orange);
+  }
+
+  .dot-evidence {
+    fill: var(--chart-olive);
+  }
+
+  .gap-arrow line,
+  .gap-arrow path {
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 1.6;
+  }
+
+  .diagram-labels {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .d-label,
+  .d-axis {
+    position: absolute;
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    line-height: 1.3;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .d-label {
+    padding: 5px 9px;
+    text-align: right;
+    background: var(--cream);
+  }
+
+  .d-claims {
+    color: var(--chart-orange);
+  }
+
+  .d-evidence {
+    color: var(--chart-olive);
+  }
+
+  .d-gap {
+    background: var(--ink);
+    color: var(--cream);
+    font-weight: 600;
+    transform: translateY(-50%);
+  }
+
+  .d-axis {
+    color: var(--ink-64);
+  }
+
+  .d-axis-y {
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+    translate: 100% 0;
+  }
+
+  .manifesto-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--font-serif);
+    font-size: var(--text-lead);
+    line-height: var(--leading-lead);
+  }
+
+  .dropcap {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2lh;
+    margin: 0 12px 0 0;
+    padding: 0 8px;
+  }
+
+  .dropcap > span {
+    font-size: 50px;
+    line-height: 1;
+    color: var(--accent-dropcap);
+  }
+
+  /* From event to evidence */
+  .block-head {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .sequence-grid {
+    display: grid;
+    /* cards take 42% up to 460px: below about 1280px a fixed 460px left the visual too little room */
+    grid-template-columns: min(460px, 42%) minmax(0, 1fr);
+    gap: 64px;
+    max-width: 1512px;
+    margin: 0 auto;
+    padding: 0 36px 0 var(--content-gutter);
+  }
+
+  /*
+   * The visual reaches 36px into the column gap, room for its layer chips.
+   * The scene itself keeps the stack clear of the floating section controls.
+   */
+  .sequence-visual {
+    margin-left: -36px;
+  }
+
+  .sequence-steps {
+    display: grid;
+    gap: 64px;
+    padding-bottom: 64px;
+  }
+
+  .sequence-step {
+    min-height: 900px;
+  }
+
+  .step-card {
+    position: sticky;
+    top: 128px;
+    padding: 32px;
+    color: var(--ink);
+  }
+
+  /* The current step turns dark (set by the script below). */
+  .step-card {
+    transition:
+      background-color 0.3s var(--ease-out),
+      color 0.3s var(--ease-out);
+  }
+
+  .step-card[data-active] {
+    background: var(--ink);
+    color: var(--cream);
+    --tick: var(--ink);
+  }
+
+  .step-card[data-active] :is(.step-label, .step-body) {
+    color: var(--cream-60);
+  }
+
+  .step-title {
+    margin-top: 12px;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: var(--text-h3);
+    line-height: 1.1;
+  }
+
+  .step-body {
+    margin-top: 28px;
+    font-size: var(--text-ui);
+    line-height: var(--leading-ui);
+    color: var(--ink-64);
+  }
+
+  .sequence-visual-pin {
+    position: sticky;
+    top: 0;
+    height: 900px;
+    max-height: 100vh;
+  }
+
+  /* The public record */
+  .record-band {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .record-visual {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  .record-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 100px 40px;
+  }
+
+  .record-inner :global(.timeline) {
+    min-height: 740px;
+  }
+
+  /* Four ways to follow the record */
+  .coverage > .wrap,
+  .faq > .wrap,
+  .reading > .wrap {
+    padding-block: 80px;
+  }
+
+  .coverage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 64px;
+  }
+
+  .coverage-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .coverage-card {
+    padding: 32px;
+    transition:
+      background-color 0.2s var(--ease-out),
+      color 0.2s var(--ease-out);
+  }
+
+  .coverage-title {
+    margin-top: 12px;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: var(--text-h3);
+    line-height: 1.1;
+  }
+
+  .coverage-body {
+    max-width: 480px;
+    margin-top: 27px;
+    font-size: var(--text-ui);
+    line-height: var(--leading-ui);
+    color: var(--ink-64);
+    transition: color 0.2s var(--ease-out);
+  }
+
+  .coverage-card:hover {
+    background: var(--ink);
+    color: var(--cream);
+  }
+
+  .coverage-card:hover :is(.eyebrow, .coverage-body) {
+    color: var(--cream-60);
+  }
+
+  .coverage-panel {
+    position: relative;
+    min-height: 100%;
+  }
+
+  /* FAQ */
+  .faq-list {
+    margin-top: 64px;
+    border: 1px dashed var(--ink-10);
+  }
+
+  .faq-item + .faq-item {
+    border-top: 1px dashed var(--ink-10);
+  }
+
+  .faq-item {
+    transition: background-color 0.2s var(--ease-out);
+  }
+
+  .faq-item:hover,
+  .faq-item[open] {
+    background: rgb(255 255 255 / 0.22);
+  }
+
+  .faq-q {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px;
+    list-style: none;
+    cursor: pointer;
+    font-family: var(--font-serif);
+    font-size: var(--text-lead);
+    line-height: var(--leading-lead);
+    color: var(--ink-92);
+  }
+
+  .faq-q::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-icon {
+    position: relative;
+    flex: none;
+    width: 12px;
+    height: 12px;
+  }
+
+  .faq-icon::before,
+  .faq-icon::after {
+    content: '';
+    position: absolute;
+    background: var(--ink-92);
+    transition: transform 0.25s var(--ease-out);
+  }
+
+  .faq-icon::before {
+    left: 0;
+    top: 5.5px;
+    width: 12px;
+    height: 1px;
+  }
+
+  .faq-icon::after {
+    left: 5.5px;
+    top: 0;
+    width: 1px;
+    height: 12px;
+  }
+
+  .faq-item[open] .faq-icon::after {
+    transform: scaleY(0);
+  }
+
+  .faq-a {
+    display: grid;
+    gap: 16px;
+    padding: 0 24px 28px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--ink-70);
+  }
+
+  /* Smooth open/close where the browser supports animating details content */
+  @supports (interpolate-size: allow-keywords) {
+    .faq-item {
+      interpolate-size: allow-keywords;
+    }
+
+    .faq-item::details-content {
+      height: 0;
+      overflow: clip;
+      transition:
+        height 0.3s var(--ease-out),
+        content-visibility 0.3s allow-discrete;
+    }
+
+    .faq-item[open]::details-content {
+      height: auto;
+    }
+  }
+
+  /* From the research log */
+  .reading-all {
+    padding-inline: 16.5px;
+  }
+
+  .reading-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 64px;
+  }
+
+  .reading-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .reading-art {
+    aspect-ratio: 5 / 3;
+    overflow: hidden;
+    background: var(--card-light);
+  }
+
+  .reading-art :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-out);
+  }
+
+  .reading-card:hover .reading-art :global(img) {
+    transform: scale(1.03);
+  }
+
+  .reading-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 276px;
+    padding: 24px;
+    border: 1px dashed var(--ink-10);
+    border-top: 0;
+  }
+
+  .reading-meta {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .reading-dot {
+    width: 2px;
+    height: 2px;
+    border-radius: var(--radius-full);
+    background: var(--ink-20);
+  }
+
+  .reading-title {
+    margin-top: 16px;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: var(--text-lead);
+    line-height: var(--leading-lead);
+  }
+
+  .reading-summary {
+    margin-top: 23px;
+    font-size: var(--text-ui);
+    line-height: var(--leading-ui);
+    color: var(--ink-64);
+  }
+
+  .reading-source {
+    margin-top: auto;
+    padding-top: 24px;
+    font-size: var(--text-ui);
+    line-height: var(--leading-ui);
+    font-weight: 500;
+    color: var(--ink-64);
+    transition: color 0.2s var(--ease-out);
+  }
+
+  .reading-card:hover .reading-source {
+    color: var(--ink);
+  }
+
+  /* Closing call to action */
+  .closing {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    color: var(--cream);
+  }
+
+  .closing > :global(.visual-slot) {
+    z-index: -1;
+  }
+
+  .closing-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 240px 24px;
+    text-align: center;
+  }
+
+  .closing-title {
+    font-size: var(--text-h1);
+    line-height: var(--leading-h1);
+    letter-spacing: var(--tracking-h1);
+  }
+
+  .closing-title em {
+    font-style: italic;
+  }
+
+  .closing-lead {
+    margin-top: 40px;
+    font-family: var(--font-serif);
+    font-size: var(--text-lead);
+    line-height: var(--leading-lead);
+    color: var(--cream-85);
+  }
+
+  .closing-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  /* Narrow screens */
+  @media (max-width: 1023px) {
+    /*
+     * One column: the visual pins to the top of the viewport and the cards
+     * scroll up beneath it, so the layer being read stays in view next to its
+     * card. The pin and the cards share one grid cell; the cards start below it.
+     */
+    .sequence {
+      --seq-pin: min(46svh, 420px);
+      --seq-clear: 78px; /* the brand pill above the visual (nav 76px tall here, 62px below 768px) */
+      --seq-fade: 16px; /* fade under the pinned visual */
+      --seq-clear-cards: 24px; /* resting line: pin bottom + this, below the fade; read by the progress script */
+    }
+
+    .sequence-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
+      padding: 0 var(--content-gutter) 80px;
+    }
+
+    .sequence-steps,
+    .sequence-visual {
+      grid-area: 1 / 1;
+    }
+
+    .sequence-steps {
+      gap: 40px;
+      padding-top: calc(var(--seq-pin) + var(--seq-clear-cards));
+      padding-bottom: 0;
+    }
+
+    .sequence-step {
+      min-height: 0;
+    }
+
+    .step-card {
+      position: relative;
+      top: auto; /* the sticky offset would shift the card down 128px */
+    }
+
+    .sequence-visual {
+      position: relative;
+      z-index: 1;
+      margin-inline: calc(-1 * var(--content-gutter));
+      /* ends just above the last card, so the pin lets go with that card on the resting line */
+      margin-bottom: calc(var(--seq-last, 0px) + var(--seq-clear-cards));
+      pointer-events: none;
+    }
+
+    .sequence-visual-pin {
+      height: var(--seq-pin);
+      max-height: none;
+      background: var(--paper);
+    }
+
+    /* cards fade out as they pass under the pinned visual; the resting card sits clear of it */
+    .sequence-visual-pin::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: var(--seq-fade);
+      background: linear-gradient(var(--paper), transparent);
+    }
+
+    .sequence-visual-pin > :global(.visual-slot) {
+      top: var(--seq-clear);
+    }
+
+    .coverage-grid {
+      grid-template-columns: 1fr;
+    }
+
+    /* two columns left the artwork about 200px wide at 768px */
+    .interview-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    /* one column: the thumbnail spans the same measure as the headline under it */
+    .interview-media {
+      padding: 0;
+    }
+
+    .interview-thumb {
+      max-width: none;
+    }
+
+    .coverage-panel {
+      min-height: 560px;
+    }
+
+    .reading-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  /*
+   * Short and narrow (portrait under 600px tall): too short to pin the visual
+   * above a card, too narrow to set it beside one; it sits above the cards.
+   * Wider short screens pin it beside the cards (end of this sheet).
+   */
+  @media (max-width: 599px) and (max-height: 599px) {
+    .sequence-visual-pin {
+      position: relative;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .sequence {
+      --seq-clear: 64px;
+    }
+
+    .hero {
+      min-height: 720px;
+    }
+
+    .hero-visual {
+      inset: 50% 0 0 0;
+    }
+
+    .hero-inner {
+      padding-top: 80px;
+      padding-bottom: 320px;
+    }
+
+    .hero-lead {
+      margin-top: 24px;
+      font-size: 20px;
+    }
+
+    .hero-actions {
+      margin-top: 40px;
+    }
+
+    .interview-grid,
+    .manifesto-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .interview-title {
+      font-size: 28px;
+    }
+
+    .interview-meta {
+      font-size: 16px;
+    }
+
+    .manifesto-copy {
+      font-size: 20px;
+    }
+
+    .block-head {
+      padding-bottom: 48px;
+    }
+
+    .step-title,
+    .coverage-title {
+      font-size: 28px;
+    }
+
+    .record-inner {
+      padding: 80px var(--content-gutter);
+    }
+
+    .record-inner :global(.timeline) {
+      min-height: 0;
+    }
+
+    .coverage-panel {
+      display: none;
+    }
+
+    .faq-q {
+      padding: 24px;
+      font-size: 20px;
+    }
+
+    .faq-a {
+      font-size: 16px;
+    }
+
+    .reading-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .reading-title {
+      font-size: 20px;
+    }
+
+    .reading-body {
+      min-height: 0;
+    }
+
+    .closing-inner {
+      padding: 180px var(--content-gutter);
+    }
+
+    .closing-lead {
+      font-size: 20px;
+    }
+
+    .closing-lead br {
+      display: none;
+    }
+  }
+
+  /*
+   * Short screens (landscape phones, short windows): the hero fits the first
+   * screen instead of holding 720-780px, so the headline, lead and buttons
+   * sit near the top.
+   */
+  @media (min-width: 600px) and (max-height: 599px) {
+    .hero {
+      min-height: calc(100svh - 76px); /* nav 76px tall */
+    }
+
+    .hero-inner {
+      padding-top: 24px;
+      padding-bottom: 48px;
+    }
+
+    .hero-lead {
+      margin-top: 16px;
+    }
+
+    .hero-actions {
+      margin-top: 28px;
+    }
+  }
+
+  /*
+   * Short landscape below 1024px. Hero: text on the left, the visual beside it
+   * at the height of the first screen; the text clears the bottom bar (46px,
+   * inset 30px, 16px below 768px).
+   * Sequence: the cards scroll past the visual pinned beside them, between the
+   * nav and the bottom bar, so the layer being read stays in view.
+   */
+  @media (min-width: 600px) and (max-width: 1023px) and (max-height: 599px) {
+    .hero,
+    .sequence {
+      --seq-top: 76px; /* nav */
+      --seq-bottom: calc(46px + 30px + 8px); /* bottom bar plus air */
+    }
+
+    /* the burst sits between the nav and the bottom bar */
+    .hero-visual {
+      inset: 0 0 var(--seq-bottom) 58%;
+    }
+
+    .hero-inner {
+      padding-top: 16px;
+    }
+
+    /* one line, ending about where the visual starts */
+    .hero-inner > h1 {
+      font-size: min(var(--text-h1), 44px);
+    }
+
+    .hero-lead {
+      max-width: 64%;
+      margin-top: 12px;
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      margin-top: 20px;
+    }
+
+    .block-head {
+      padding-block: 48px 32px;
+    }
+
+    .sequence-grid {
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 24px;
+      /* the visual runs on into the right-hand gutter */
+      padding: 0 16px 48px var(--content-gutter);
+    }
+
+    .sequence-steps,
+    .sequence-visual {
+      grid-area: auto;
+    }
+
+    .sequence-steps {
+      gap: 32px;
+      padding-top: 0;
+    }
+
+    .step-card {
+      padding: 24px;
+    }
+
+    .step-title {
+      font-size: 28px;
+    }
+
+    .step-body {
+      margin-top: 16px;
+    }
+
+    .sequence-visual {
+      z-index: auto;
+      margin: 0;
+      pointer-events: auto;
+    }
+
+    .sequence-visual-pin {
+      position: sticky;
+      top: var(--seq-top);
+      height: calc(100svh - var(--seq-top) - var(--seq-bottom));
+      background: none;
+    }
+
+    .sequence-visual-pin::after {
+      display: none;
+    }
+
+    .sequence-visual-pin > :global(.visual-slot) {
+      top: 0;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 767px) and (max-height: 599px) {
+    .hero,
+    .sequence {
+      --seq-top: 62px;
+      --seq-bottom: calc(46px + 16px + 8px);
+    }
+
+    .hero {
+      min-height: calc(100svh - 62px);
+    }
+
+    .hero-inner {
+      padding-bottom: 32px;
+    }
+  }
+</style>

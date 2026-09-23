@@ -1,0 +1,186 @@
+---
+/*
+ * Mount point for a homepage visual.
+ *
+ * The slot fills its positioned parent, so the parent decides size and
+ * placement. Until a visual mounts, a static CSS pattern in the palette shows.
+ * `src/scripts/visuals/runtime.ts` loads the named scene when the slot nears
+ * the viewport, puts its canvas here and sets `data-visual-ready`, which
+ * hides the fallback. Without WebGL2 the fallback simply stays.
+ */
+interface Props {
+  /** Which visual belongs here: hero, sequence, coverage, record, closing. */
+  name: 'hero' | 'sequence' | 'coverage' | 'record' | 'closing';
+  /** Light slots sit on the paper background; dark slots are scene panels. */
+  tone?: 'light' | 'dark';
+}
+
+const { name, tone = 'light' } = Astro.props;
+---
+<div class="visual-slot" data-visual={name} data-tone={tone} aria-hidden="true">
+  <div class="visual-fallback"></div>
+  <slot />
+</div>
+
+<style>
+  .visual-slot {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  /*
+   * Dark slots: each scene's ground color, so nothing flashes while the
+   * fallback fades out over the canvas. Film grain for the fallbacks.
+   */
+  .visual-slot[data-tone='dark'] {
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.14 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background: var(--scene-dark);
+  }
+
+  .visual-slot[data-visual='record'] {
+    background: #161f29;
+  }
+
+  .visual-slot[data-visual='coverage'] {
+    background: #080c10;
+  }
+
+  .visual-slot[data-visual='closing'] {
+    background: #181a15;
+  }
+
+  .visual-slot > :global(canvas) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Scene annotations (hero label chip and its dashed leader), placed by the scene. */
+  .visual-slot > :global(.visual-label) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 9px 5px 8px;
+    border-radius: 2px;
+    background: rgb(242 242 236 / 0.92);
+    box-shadow: 0 0 0 1px var(--ink-06);
+    color: var(--ink-70);
+    font: 500 9px/1.2 var(--font-mono);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0;
+    will-change: transform, opacity;
+    transition:
+      background-color 0.3s var(--ease-out),
+      color 0.3s var(--ease-out);
+  }
+
+  /* The label of the layer being read turns ink, like its step card. */
+  .visual-slot > :global(.visual-label[data-active]) {
+    background: var(--ink);
+    box-shadow: none;
+    color: var(--cream);
+  }
+
+  .visual-slot > :global(.visual-label) > :global(.visual-label-dot) {
+    width: 7px;
+    height: 7px;
+    flex: none;
+    border-radius: 50%;
+  }
+
+  .visual-slot > :global(.visual-leader) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    border-top: 1px dashed var(--accent-orange);
+    transform-origin: 0 0;
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  .visual-fallback {
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.6s var(--ease-out);
+  }
+
+  .visual-slot[data-visual-ready] .visual-fallback {
+    opacity: 0;
+  }
+
+  /* Light: a dotted field that fades out from a focal point, with a warm core. */
+  [data-tone='light'] .visual-fallback {
+    background:
+      radial-gradient(circle at var(--focus, 50% 50%), rgb(255 119 51 / 0.1), transparent 34%),
+      radial-gradient(circle, rgb(26 22 20 / 0.2) 1.1px, transparent 1.6px) 0 0 / 24px 24px;
+    -webkit-mask-image: radial-gradient(ellipse 60% 60% at var(--focus, 50% 50%), #000 10%, transparent 75%);
+    mask-image: radial-gradient(ellipse 60% 60% at var(--focus, 50% 50%), #000 10%, transparent 75%);
+  }
+
+  /*
+   * Dark fallbacks: still versions of each scene, shown before the scene
+   * mounts and kept when WebGL2 is unavailable.
+   */
+
+  /* Record band: a scatter of points on slate, a warmer column in the middle. */
+  [data-visual='record'] > .visual-fallback {
+    background:
+      var(--grain),
+      radial-gradient(circle, rgb(150 158 168 / 0.5) 1.3px, transparent 1.9px) 0 0 / 97px 83px,
+      radial-gradient(circle, rgb(150 158 168 / 0.32) 1px, transparent 1.5px) 41px 29px / 61px 71px,
+      radial-gradient(circle, rgb(150 158 168 / 0.22) 2.6px, transparent 3.4px) 23px 57px / 173px 149px,
+      linear-gradient(90deg, transparent 16%, rgb(28 29 28) 36% 64%, transparent 84%);
+  }
+
+  /* Coverage panel: a still starburst, rays and points in a disc. */
+  [data-visual='coverage'] > .visual-fallback {
+    background:
+      var(--grain),
+      radial-gradient(circle at 50% 50%, rgb(236 236 226 / 0.5) 0 1.5px, transparent 3px),
+      radial-gradient(ellipse 55% 42% at 50% 50%, rgb(25 28 30), transparent),
+      radial-gradient(ellipse 70% 22% at 50% 0%, rgb(17 24 32), transparent);
+  }
+
+  [data-visual='coverage'] > .visual-fallback::before,
+  [data-visual='coverage'] > .visual-fallback::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    -webkit-mask-image: radial-gradient(circle closest-side at 50% 50%, #000 45%, transparent 92%);
+    mask-image: radial-gradient(circle closest-side at 50% 50%, #000 45%, transparent 92%);
+  }
+
+  [data-visual='coverage'] > .visual-fallback::before {
+    background: repeating-conic-gradient(from 2deg at 50% 50%, rgb(186 188 184 / 0.28) 0 0.3deg, transparent 0.3deg 5.3deg);
+  }
+
+  [data-visual='coverage'] > .visual-fallback::after {
+    background:
+      radial-gradient(circle, rgb(186 188 184 / 0.6) 2.2px, transparent 2.9px) 11px 5px / 43px 47px,
+      radial-gradient(circle, rgb(186 188 184 / 0.3) 4.5px, transparent 6px) 29px 31px / 89px 97px;
+  }
+
+  /* Closing: slate light in the middle, warm red glows in the corners. */
+  [data-visual='closing'] > .visual-fallback {
+    background:
+      var(--grain),
+      radial-gradient(ellipse 45% 55% at 50% 48%, rgb(26 36 44 / 0.9), transparent),
+      radial-gradient(circle at 0% 0%, rgb(52 22 22 / 0.85), transparent 34%),
+      radial-gradient(circle at 100% 100%, rgb(52 22 22 / 0.8), transparent 38%),
+      radial-gradient(circle at 0% 100%, rgb(40 22 34 / 0.6), transparent 28%);
+  }
+</style>
+
+<script>
+  import { mountVisuals } from '../scripts/visuals/runtime';
+  mountVisuals();
+</script>

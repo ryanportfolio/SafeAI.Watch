@@ -1,0 +1,379 @@
+---
+/*
+ * Floating section controls, bottom right on wide screens: next / previous
+ * section, and a small finder that jumps to a section by name. Works on any
+ * page whose sections carry `data-section="<name>"` (plus optional
+ * `data-keywords` for extra search terms).
+ */
+---
+<div class="jump" data-jump>
+  <div class="jump-arrows glass" role="group" aria-label="Jump between sections">
+    <button type="button" class="jump-button" data-jump-step="1" aria-label="Next section">
+      <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M5 1v8M1.5 5.5 5 9l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.2" /></svg>
+    </button>
+    <button type="button" class="jump-button" data-jump-step="-1" aria-label="Previous section">
+      <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M5 9V1M1.5 4.5 5 1l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.2" /></svg>
+    </button>
+  </div>
+
+  <div class="jump-find" data-jump-find>
+    <ul class="jump-results glass" id="jump-results" role="listbox" aria-label="Sections" data-jump-results hidden></ul>
+    <form class="jump-form glass" role="search" data-jump-form>
+      <label class="visually-hidden" for="jump-query">Find a section</label>
+      <input
+        id="jump-query"
+        class="jump-input"
+        type="text"
+        role="combobox"
+        placeholder="Find a section"
+        autocomplete="off"
+        spellcheck="false"
+        aria-autocomplete="list"
+        aria-expanded="false"
+        aria-controls="jump-results"
+        tabindex="-1"
+        data-jump-input
+      />
+      <button
+        type="button"
+        class="jump-button"
+        aria-label="Find a section"
+        aria-expanded="false"
+        aria-controls="jump-results"
+        data-jump-toggle
+      >
+        <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><circle cx="4.2" cy="4.2" r="3.1" fill="none" stroke="currentColor" stroke-width="1.2" /><path d="m6.5 6.5 2.8 2.8" stroke="currentColor" stroke-width="1.2" /></svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+<style>
+  .jump {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 40;
+    display: none;
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  @media (min-width: 1024px) {
+    .jump {
+      display: flex;
+    }
+  }
+
+  /*
+   * Below 1280px the controls stand upright, 32px wide instead of 108px, so
+   * they stay in the right-hand margin: the sequence visual beside the step
+   * cards then passes them at full size instead of shrinking as it scrolls in.
+   * The finder sits on top so its results open above it.
+   */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    .jump {
+      flex-direction: column-reverse;
+    }
+
+    .jump-arrows {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .jump-arrows,
+  .jump-form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px;
+    border-radius: 999px;
+  }
+
+  .jump-button {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-full);
+    background: var(--ink-06);
+    color: var(--ink);
+    cursor: pointer;
+    transition: background-color 0.2s var(--ease-out);
+  }
+
+  .jump-button:hover {
+    background: var(--ink-10);
+  }
+
+  .jump-find {
+    position: relative;
+  }
+
+  /* no gap beside the collapsed input: closed, the finder is a 32px circle */
+  .jump-form {
+    gap: 0;
+  }
+
+  .jump-input {
+    width: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0;
+    transition:
+      width 0.3s var(--ease-out),
+      opacity 0.2s var(--ease-out),
+      padding 0.3s var(--ease-out);
+  }
+
+  .jump-input::placeholder {
+    color: var(--ink-64);
+  }
+
+  /* the form carries the ring; the global paper halo would draw a box inside the pill */
+  .jump-input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  /* same ring as the global focus style: the controls float over dark scenes too */
+  .jump-form:focus-within {
+    outline: 2px solid var(--mark-blue);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--paper), var(--glass-shadow);
+  }
+
+  .jump-form:has(.jump-button:focus-visible) {
+    outline: none;
+    box-shadow: var(--glass-shadow);
+  }
+
+  [data-jump-find].is-open .jump-input {
+    width: 196px;
+    padding: 0 12px;
+    opacity: 1;
+  }
+
+  /* open, the 20px toggle keeps 24px target spacing from the input beside it */
+  [data-jump-find].is-open .jump-form {
+    gap: 4px;
+  }
+
+  .jump-results {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 10px);
+    min-width: 100%;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  .jump-results[hidden] {
+    display: none;
+  }
+
+  .jump-results :global([role='option']) {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 12px;
+    text-align: left;
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--ink-70);
+    cursor: pointer;
+  }
+
+  .jump-results :global([role='option']:not([aria-disabled]):hover),
+  .jump-results :global([role='option'][data-active]) {
+    background: var(--ink-06);
+    color: var(--ink);
+  }
+
+  .jump-results :global(.jump-empty) {
+    color: var(--ink-64);
+    cursor: default;
+  }
+
+  /*
+   * Where a jump lands: the section's heading takes focus, so the next Tab
+   * continues inside that section. The ring hugs the heading's text instead of
+   * spanning the column; a section without a heading takes focus silently.
+   */
+  :global(:is(h1, h2)[data-jump-target]) {
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  :global([data-jump-target]:not(h1, h2):focus) {
+    outline: none;
+    box-shadow: none;
+  }
+</style>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-jump]');
+  const sections = [...document.querySelectorAll<HTMLElement>('[data-section]')];
+
+  if (root && sections.length) {
+    const find = root.querySelector<HTMLElement>('[data-jump-find]')!;
+    const form = root.querySelector<HTMLFormElement>('[data-jump-form]')!;
+    const input = root.querySelector<HTMLInputElement>('[data-jump-input]')!;
+    const toggle = root.querySelector<HTMLButtonElement>('[data-jump-toggle]')!;
+    const results = root.querySelector<HTMLUListElement>('[data-jump-results]')!;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    // The first section counts as the top of the page, so "previous" from the
+    // second section returns to 0 and "next" from 0 moves on.
+    const top = (el: HTMLElement) =>
+      el === sections[0] ? 0 : Math.round(el.getBoundingClientRect().top + window.scrollY);
+
+    const go = (el: HTMLElement) => {
+      window.scrollTo({ top: top(el), behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+    };
+
+    // Next: first section starting below the current position. Previous: the
+    // last one starting above it. A few pixels of slack absorb rounding.
+    root.querySelectorAll<HTMLButtonElement>('[data-jump-step]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const y = window.scrollY;
+        const step = Number(button.dataset.jumpStep);
+        const target =
+          step > 0
+            ? sections.find((s) => top(s) > y + 4)
+            : [...sections].reverse().find((s) => top(s) < y - 4);
+        if (target) go(target);
+      });
+    });
+
+    // Finder: matches the typed text against each section's name and headings.
+    const index = sections.map((el) => ({
+      el,
+      name: el.dataset.section ?? '',
+      text: `${el.dataset.section} ${el.dataset.keywords ?? ''} ${[...el.querySelectorAll('h1, h2, h3, .eyebrow')].map((h) => h.textContent).join(' ')}`.toLowerCase(),
+    }));
+
+    type Entry = (typeof index)[number];
+    let matches = index;
+    /** Highlighted option (aria-activedescendant), -1 for none. */
+    let active = -1;
+    let options: HTMLLIElement[] = [];
+
+    const setActive = (i: number) => {
+      active = i;
+      options.forEach((option, k) => {
+        option.setAttribute('aria-selected', String(k === i));
+        option.toggleAttribute('data-active', k === i);
+      });
+      const current = options[i];
+      if (current) {
+        input.setAttribute('aria-activedescendant', current.id);
+        current.scrollIntoView({ block: 'nearest' });
+      } else input.removeAttribute('aria-activedescendant');
+    };
+
+    // Focus goes to the section's heading (or the section itself), so the next
+    // Tab continues inside it instead of returning to the finder. The scroll
+    // is already under way, so focusing must not scroll again.
+    const land = (el: HTMLElement) => {
+      const target = el.querySelector<HTMLElement>('h1, h2') ?? el;
+      if (!target.hasAttribute('tabindex')) target.tabIndex = -1;
+      target.dataset.jumpTarget = '';
+      target.focus({ preventScroll: true });
+    };
+
+    const choose = (entry: Entry) => {
+      setOpen(false);
+      go(entry.el);
+      land(entry.el);
+    };
+
+    const render = () => {
+      const q = input.value.trim().toLowerCase();
+      matches = q ? index.filter((entry) => entry.text.includes(q)) : index;
+      options = matches.map((entry, i) => {
+        const li = document.createElement('li');
+        li.id = `jump-option-${i}`;
+        li.setAttribute('role', 'option');
+        li.textContent = entry.name;
+        // keep focus in the input until the jump moves it
+        li.addEventListener('mousedown', (event) => event.preventDefault());
+        li.addEventListener('click', () => choose(entry));
+        return li;
+      });
+      const empty = Object.assign(document.createElement('li'), { className: 'jump-empty', textContent: 'No matching section' });
+      empty.setAttribute('role', 'option');
+      empty.setAttribute('aria-disabled', 'true');
+      results.replaceChildren(...(options.length ? options : [empty]));
+      setActive(q && options.length ? 0 : -1);
+    };
+
+    const setOpen = (open: boolean) => {
+      find.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      input.setAttribute('aria-expanded', String(open));
+      results.hidden = !open;
+      input.tabIndex = open ? 0 : -1;
+      if (open) {
+        render();
+        input.focus();
+      } else {
+        input.value = '';
+        setActive(-1);
+      }
+    };
+
+    // the highlighted option, else the first match
+    const picked = () => matches[active >= 0 ? active : 0] as Entry | undefined;
+
+    toggle.addEventListener('click', () => {
+      const target = picked();
+      if (!find.classList.contains('is-open')) setOpen(true);
+      else if (input.value.trim() && target) choose(target);
+      else setOpen(false);
+    });
+
+    input.addEventListener('input', render);
+
+    input.addEventListener('keydown', (event) => {
+      if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
+      event.preventDefault();
+      const n = options.length;
+      if (!n) return;
+      const step = event.key === 'ArrowDown' ? 1 : -1;
+      setActive(active < 0 ? (step > 0 ? 0 : n - 1) : (active + step + n) % n);
+    });
+
+    // Enter: jump to the highlighted option, else the first match; with no match the list stays open
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const target = picked();
+      if (target) choose(target);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && find.classList.contains('is-open')) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      if (find.classList.contains('is-open') && !find.contains(event.target as Node)) setOpen(false);
+    });
+  }
+</script>

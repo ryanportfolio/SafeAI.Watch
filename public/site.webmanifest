@@ -1,0 +1,30 @@
+{
+  "name": "SafeAI.watch",
+  "short_name": "SafeAI.watch",
+  "description": "A public record of AI safety and security, with the sources and the open questions kept in view.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "minimal-ui",
+  "background_color": "#d7d7d0",
+  "theme_color": "#d7d7d0",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,366 @@
+---
+import Mark from './Mark.astro';
+
+const primary = [
+  { href: '/latest', label: 'Latest' },
+  { href: '/timeline', label: 'Timeline' },
+  { href: '/about', label: 'About' },
+];
+
+const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const current = (href: string) => (path === href ? 'page' : undefined);
+---
+<header class="site-nav" data-site-nav>
+  <nav aria-label="Primary">
+    {/* First in source order so that, below 1024px, Tab goes from the menu button straight
+        into the menu it opens. Hidden on wider screens, where the links sit in the left pill. */}
+    <button
+      class="nav-toggle glass"
+      type="button"
+      aria-controls="site-menu"
+      aria-expanded="false"
+      aria-label="Open menu"
+      data-nav-toggle
+    >
+      <span class="burger" aria-hidden="true"><span></span></span>
+    </button>
+
+    <div class="nav-left glass" id="site-menu">
+      <ul>
+        {primary.map((item) => (
+          <li><a class="nav-link" href={item.href} aria-current={current(item.href)}>{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <a class="nav-brand glass" href="/" aria-label="SafeAI.watch home" aria-current={current('/')}>
+      <Mark size={16} />
+      <span class="nav-brand-name">SafeAI.watch</span>
+    </a>
+
+    <div class="nav-right glass">
+      <ul>
+        <li><a class="nav-link" href="/about">Our approach</a></li>
+        <li><a class="nav-cta" href="/latest">Explore latest</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .site-nav {
+    --nav-inset: 35px; /* pill edge to viewport edge */
+    --bar-inset: 30px; /* bottom bar on narrow screens */
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: 76px;
+    pointer-events: none;
+  }
+
+  .site-nav :is(.nav-left, .nav-brand, .nav-right, .nav-toggle) {
+    pointer-events: auto;
+  }
+
+  .nav-left,
+  .nav-right {
+    position: absolute;
+    top: var(--nav-inset);
+    padding: 6px;
+  }
+
+  .nav-left {
+    left: var(--nav-inset);
+  }
+
+  .nav-right {
+    right: var(--nav-inset);
+  }
+
+  .nav-left ul,
+  .nav-right ul {
+    display: flex;
+    gap: 8px;
+  }
+
+  .nav-link,
+  .nav-cta {
+    display: block;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-size: var(--text-ui);
+    font-weight: 500;
+    line-height: 21px;
+    white-space: nowrap;
+  }
+
+  .nav-link {
+    color: var(--ink-64);
+    transition:
+      color 0.2s var(--ease-out),
+      background-color 0.2s var(--ease-out);
+  }
+
+  .nav-link:hover,
+  .nav-link[aria-current='page'] {
+    color: var(--ink);
+    background-color: var(--ink-06);
+  }
+
+  .nav-cta {
+    background: var(--ink);
+    color: var(--cream);
+    opacity: 0.8;
+    transition: opacity 0.2s var(--ease-out);
+  }
+
+  .nav-cta:hover {
+    opacity: 1;
+  }
+
+  /* Center pill: mark + name, collapses to the mark once the page scrolls */
+  .nav-brand {
+    position: absolute;
+    top: var(--nav-inset);
+    left: 50%;
+    width: 385px;
+    height: 40px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    overflow: hidden;
+    transform: translateX(-50%);
+    color: var(--ink);
+    transition:
+      width 0.6s var(--ease-in-out),
+      gap 0.6s var(--ease-in-out);
+  }
+
+  .nav-brand :global(svg) {
+    flex: none;
+  }
+
+  .nav-brand-name {
+    display: block;
+    max-width: 120px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    transition:
+      max-width 0.6s var(--ease-in-out),
+      opacity 0.6s var(--ease-in-out);
+  }
+
+  .site-nav.is-compact .nav-brand {
+    width: 56px;
+    gap: 0;
+  }
+
+  .site-nav.is-compact .nav-brand-name {
+    max-width: 0;
+    opacity: 0;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  /* Narrow screens: brand pill on top, menu button and actions in a bottom bar */
+  @media (max-width: 1023px) {
+    .nav-right {
+      position: fixed;
+      top: auto;
+      right: var(--bar-inset);
+      bottom: var(--bar-inset);
+    }
+
+    .nav-toggle {
+      position: fixed;
+      left: var(--bar-inset);
+      bottom: var(--bar-inset);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 46px;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .burger,
+    .burger::before,
+    .burger::after,
+    .burger span {
+      display: block;
+    }
+
+    .burger {
+      position: relative;
+      width: 16px;
+      height: 16px;
+    }
+
+    .burger::before,
+    .burger::after,
+    .burger span {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 16px;
+      height: 1px;
+      background: var(--ink);
+      transition:
+        transform 0.2s var(--ease-out),
+        opacity 0.15s var(--ease-out);
+    }
+
+    .burger::before {
+      top: 4px;
+    }
+
+    .burger span {
+      top: 8px;
+    }
+
+    .burger::after {
+      top: 12px;
+    }
+
+    .site-nav.is-open .burger::before {
+      transform: translateY(4px) rotate(45deg) scaleX(0.75);
+    }
+
+    .site-nav.is-open .burger span {
+      opacity: 0;
+    }
+
+    .site-nav.is-open .burger::after {
+      transform: translateY(-4px) rotate(-45deg) scaleX(0.75);
+    }
+
+    /* the primary links become a panel above the menu button */
+    .nav-left {
+      position: fixed;
+      top: auto;
+      left: var(--bar-inset);
+      bottom: calc(var(--bar-inset) + 46px + 8px);
+      width: 196px;
+      border-radius: 24px;
+      /* denser than the pills: the panel sits over page text, so a heavier blur turns it into a wash */
+      background: rgb(236 236 232 / 0.94);
+      -webkit-backdrop-filter: blur(18px) saturate(1.4) brightness(1.08);
+      backdrop-filter: blur(18px) saturate(1.4) brightness(1.08);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px) scale(0.98);
+      transform-origin: bottom left;
+      transition:
+        opacity 0.2s var(--ease-out),
+        transform 0.2s var(--ease-out),
+        visibility 0s linear 0.2s;
+    }
+
+    .nav-left ul {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .nav-left .nav-link {
+      padding: 12px 20px;
+      border-radius: 18px;
+    }
+
+    .site-nav.is-open .nav-left {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      transition:
+        opacity 0.2s var(--ease-out),
+        transform 0.2s var(--ease-out),
+        visibility 0s;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .site-nav {
+      --nav-inset: 21px;
+      --bar-inset: 16px;
+      height: 62px;
+    }
+
+    .nav-brand {
+      width: calc(100% - 32px);
+      max-width: 385px;
+    }
+  }
+</style>
+
+<script>
+  const nav = document.querySelector<HTMLElement>('[data-site-nav]');
+  const toggle = nav?.querySelector<HTMLButtonElement>('[data-nav-toggle]');
+
+  if (nav && toggle) {
+    const setOpen = (open: boolean) => {
+      nav.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
+
+    toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      const target = event.target as Node;
+      if (nav.classList.contains('is-open') && !nav.contains(target)) setOpen(false);
+    });
+
+    // Tabbing out of the menu closes it, so the open panel never sits over the next focused link.
+    const menu = nav.querySelector<HTMLElement>('#site-menu');
+    nav.addEventListener('focusout', (event) => {
+      const next = event.relatedTarget as Node | null;
+      if (nav.classList.contains('is-open') && next && next !== toggle && !menu?.contains(next)) setOpen(false);
+    });
+
+    // Collapse the brand pill to the mark after the hero; expand it again at the footer.
+    const COMPACT_AFTER = 200;
+    let footerVisible = false;
+    const footer = document.querySelector('[data-site-footer]');
+    const update = () => {
+      nav.classList.toggle('is-compact', window.scrollY > COMPACT_AFTER && !footerVisible);
+    };
+
+    if (footer) {
+      new IntersectionObserver((entries) => {
+        footerVisible = entries.some((entry) => entry.isIntersecting);
+        update();
+      }).observe(footer);
+    }
+
+    let queued = false;
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (queued) return;
+        queued = true;
+        requestAnimationFrame(() => {
+          queued = false;
+          update();
+        });
+      },
+      { passive: true },
+    );
+    update();
+  }
+</script>

@@ -1,0 +1,82 @@
+[
+  {
+    "date": "2025-05-22",
+    "category": "Safeguards",
+    "title": "Anthropic activates ASL-3 protections",
+    "summary": "Anthropic introduced stronger safeguards for Claude Opus 4 because it could not confidently rule out relevant biological risk. A precautionary decision does not establish a demonstrated weapon.",
+    "source": "Anthropic · Company announcement",
+    "url": "https://www.anthropic.com/news/activating-asl3-protections"
+  },
+  {
+    "date": "2025-06-12",
+    "category": "Research",
+    "title": "Researchers argue models increase biological risk",
+    "summary": "Roger Brent and T. Greg McKelvey Jr examine model guidance and argue that it can increase biological risk. This research preprint presents model dialogues, not a demonstrated attack.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2506.13798"
+  },
+  {
+    "date": "2025-08-06",
+    "category": "Policy",
+    "title": "CSIS considers stronger biosecurity safeguards",
+    "summary": "A policy analysis considers how falling informational barriers could change biological risk and calls for stronger safeguards.",
+    "source": "CSIS · Policy analysis",
+    "url": "https://www.csis.org/analysis/opportunities-strengthen-us-biosecurity-ai-enabled-bioterrorism-what-policymakers-should"
+  },
+  {
+    "date": "2026-01-26",
+    "category": "Warning",
+    "title": "Dario Amodei sets out risks from powerful AI",
+    "summary": "The Anthropic CEO's essay considers risks including biological misuse. It presents forecasts and arguments about future capabilities.",
+    "source": "Dario Amodei · Public essay",
+    "url": "https://darioamodei.com/essay/the-adolescence-of-technology"
+  },
+  {
+    "date": "2026-05-13",
+    "category": "Reporting",
+    "title": "Nature examines the biological AI access debate",
+    "summary": "A science news feature considers AI, biological design, and the debate over access. The linked article may require a subscription.",
+    "source": "Nature · Science reporting",
+    "url": "https://www.nature.com/articles/d41586-026-01476-x"
+  },
+  {
+    "date": "2026-06-03",
+    "category": "Warning",
+    "title": "AI leaders join a call for biological safeguards",
+    "summary": "WIRED reports on a letter urging stronger safeguards against AI-assisted biological weapons, signed by AI leaders and scientists.",
+    "source": "WIRED · Reporting",
+    "url": "https://www.wired.com/story/openai-anthropic-letter-ai-biological-weapons/"
+  },
+  {
+    "date": "2026-07-27",
+    "category": "Analysis",
+    "title": "Examining the evidence behind executive warnings",
+    "summary": "The Bulletin of the Atomic Scientists critically examines warnings about AI-assisted bioterrorism and their likelihood.",
+    "source": "Bulletin of the Atomic Scientists · Analysis",
+    "url": "https://thebulletin.org/2026/07/ai-executives-worry-about-their-technologies-aiding-bioterrorists-how-likely-is-that/"
+  },
+  {
+    "date": "2026-08-18",
+    "category": "Policy",
+    "title": "RAND proposes a layered biosecurity strategy",
+    "summary": "A policy report describes nine mutually reinforcing mitigations for biosecurity in the AI era.",
+    "source": "RAND · Policy report",
+    "url": "https://www.rand.org/pubs/research_reports/RRA4999-1.html"
+  },
+  {
+    "date": "2026-09-10",
+    "category": "Reported misuse",
+    "title": "Anthropic publishes biological case studies",
+    "summary": "The company reports five biological case studies and explicitly does not assert that the researchers intended harm. These are company findings, not independently proved terrorist plots.",
+    "source": "Anthropic · Company report",
+    "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+  },
+  {
+    "date": "2026-09-18",
+    "category": "Interview",
+    "title": "Could AI build a bioweapon?",
+    "summary": "A GZERO World interview examines AI and biological risk. Watch the 26-minute programme at PBS and hear the discussion in its original context.",
+    "source": "GZERO World / PBS · Video interview",
+    "url": "https://www.pbs.org/video/could-ai-build-a-bioweapon-ugzlxh/"
+  }
+]

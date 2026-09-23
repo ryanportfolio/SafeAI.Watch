@@ -1,0 +1,57 @@
+---
+// Shared shell for the editorial subpages: display title, intro, content column.
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  /** Document title; rendered as "<title> | SafeAI.watch". */
+  title: string;
+  description: string;
+  /** Visible h1. Defaults to the document title. */
+  heading?: string;
+  intro?: string;
+}
+
+const { title, description, heading = title, intro } = Astro.props;
+---
+<BaseLayout title={title} description={description}>
+  <div class="page">
+    <header class="page-head">
+      <h1 class="page-title">{heading}</h1>
+      {intro && <p class="page-intro">{intro}</p>}
+    </header>
+    <slot />
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    width: min(1000px, 100% - 2 * var(--content-gutter));
+    margin: 0 auto;
+    padding: clamp(48px, 6vw, 88px) 0 clamp(80px, 8vw, 120px);
+  }
+
+  .page-title {
+    font-size: var(--text-display);
+    line-height: var(--leading-display);
+    letter-spacing: -0.015em;
+  }
+
+  .page-intro {
+    max-width: 760px;
+    margin-top: 30px;
+    font-size: 21px;
+    line-height: 1.6;
+    color: var(--ink-70);
+  }
+
+  .page-head {
+    margin-bottom: clamp(40px, 5vw, 60px);
+  }
+
+  @media (max-width: 767px) {
+    .page-intro {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  }
+</style>
