@@ -4,11 +4,11 @@
  *
  * Every point belongs to one of the four areas (the cards beside the panel,
  * in order). In the burst all areas share one center, as the record does.
- * Then the points leave their rays and settle into four loose clusters,
- * stacked in the same order as the cards, and one area at a time lights in
- * its accent color with its name. Hovering a card lights that area at once,
- * in either state. A few comets with dotted trails circle the burst; near
- * points grow and go out of focus; film grain over everything.
+ * Then the points leave their rays and settle into four loose clusters, each
+ * level with its card, and one area at a time lights in its accent color
+ * with its name. Hovering a card lights that area at once and names it, in
+ * either state. Comets with dotted trails circle the burst; near points grow
+ * and go out of focus; film grain over everything.
  */
 import type { SceneFactory } from './runtime';
 import { Shapes, rgb } from './shapes';
@@ -17,8 +17,8 @@ import { Backdrop, c255, clamp01, easeInOut, grainSeed, random, smooth, type Blo
 const AREAS = 4;
 const PER_AREA = 30; // 120 points
 const STUBS = 34;
-const COMETS = 3;
-const TRAIL = 16;
+const COMETS = 7;
+const TRAIL = 18;
 const CAMERA = 5;
 
 /* One cycle, in seconds. */
@@ -76,7 +76,7 @@ function build() {
       area: areas[i],
       burst: [d[0] * len, d[1] * len, d[2] * len],
       jitter: [gauss() * 0.3, gauss() * 0.11, gauss() * 0.3],
-      size: big ? 6 + 4 * r() : 2 + 3 * Math.pow(r(), 1.2),
+      size: big ? 7 + 5 * r() : 2.6 + 3.4 * Math.pow(r(), 1.2),
       delay: r(),
     });
   }
@@ -105,12 +105,12 @@ function build() {
   });
   const comets: Comet[] = [];
   for (let i = 0; i < COMETS; i++) {
-    // orbit plane from two perpendicular unit vectors
-    const t = r() * Math.PI;
+    // orbit plane from two perpendicular unit vectors; tilts spread over the half turn
+    const t = ((i + 0.3 * r()) / COMETS) * Math.PI;
     const p = r() * Math.PI * 2;
     const u: [number, number, number] = [Math.cos(p), 0, Math.sin(p)];
     const v: [number, number, number] = [-Math.sin(p) * Math.cos(t), Math.sin(t), Math.cos(p) * Math.cos(t)];
-    comets.push({ radius: 0.7 + 0.35 * r(), speed: (0.45 + 0.3 * r()) * (i % 2 ? -1 : 1), phase: r() * Math.PI * 2, u, v });
+    comets.push({ radius: 0.75 + 0.25 * r(), speed: (0.4 + 0.3 * r()) * (i % 2 ? -1 : 1), phase: (i / COMETS) * Math.PI * 2 + r(), u, v });
   }
   return { nodes, stubs, links, comets };
 }
@@ -118,7 +118,7 @@ function build() {
 const coverage: SceneFactory = ({ gl, slot, redraw }) => {
   const { nodes, stubs, links, comets } = build();
   const n = nodes.length;
-  const shapes = new Shapes(gl, n + STUBS + links.length + 4, n + COMETS * (TRAIL + 1) + 4);
+  const shapes = new Shapes(gl, n + STUBS + links.length + 4, n + COMETS * (TRAIL + 2) + 6);
   const backdrop = new Backdrop(gl);
 
   const css = getComputedStyle(slot);
@@ -159,6 +159,7 @@ const coverage: SceneFactory = ({ gl, slot, redraw }) => {
   let chipArea = -1;
   let chipW = 0;
   let chipH = 0;
+  let anchor = -1;
 
   const sx = new Float32Array(n);
   const sy = new Float32Array(n);
@@ -166,7 +167,8 @@ const coverage: SceneFactory = ({ gl, slot, redraw }) => {
   const mix = new Float32Array(n);
   const order = nodes.map((_, i) => i);
   const col: [number, number, number] = [0, 0, 0];
-  const clusterY = [0, 0, 0, 0];
+  // cluster centres in camera space (units of R): level with the cards, left and right in turn
+  const clusterY = [0.45, 0.15, -0.15, -0.45];
   const clusterX = [-0.28, 0.3, -0.26, 0.28];
 
   let W = 1;
@@ -181,6 +183,7 @@ const coverage: SceneFactory = ({ gl, slot, redraw }) => {
   let lit = -1;
   let glow = 0;
   let last = -1;
+  let gone = false;
 
   const blobs: Blob[] = [
     { x: 0.5, y: 0.5, rx: 0.55, ry: 0.42, rgb: CENTER, a: 1 },
@@ -189,6 +192,25 @@ const coverage: SceneFactory = ({ gl, slot, redraw }) => {
     { x: 0.9, y: 0.42, rx: 0.32, ry: 0.55, rgb: MAROON, a: 0 },
   ];
 
+  // Each cluster sits level with its card's centre while the cards stand beside the
+  // panel; in the one-column layout (cards above it) or without cards, even quarters.
+  function place() {
+    const s = slot.getBoundingClientRect();
+    const ys = cards.map((card) => {
+      const b = card.getBoundingClientRect();
+      return b.height > 0 && b.right <= s.left + 1 ? b.top + b.height / 2 - s.top : -1;
+    });
+    const beside = ys.length === AREAS && ys.every((y, k) => y > 0 && y < H && (k === 0 || y > ys[k - 1]));
+    for (let k = 0; k < AREAS; k++) {
+      // fallback: quarters of the middle 84% so the top and bottom clusters keep clear of the edges
+      const cy = beside ? ys[k] : H / 2 - (0.5 - (k + 0.5) / AREAS) * H * 0.84;
+      clusterY[k] = (H / 2 - Math.min(H - 40, Math.max(40, cy))) / R;
+    }
+  }
+  document.fonts?.ready.then(() => {
+    if (!gone) place();
+  });
+
   return {
     resize(w, h, ratio) {
       W = w;
@@ -196,8 +218,7 @@ const coverage: SceneFactory = ({ gl, slot, redraw }) => {
       dpr = ratio;
       R = Math.min(w, h) * 0.47;
       sizeScale = Math.pow(R / 250, 0.6);
-      // clusters stacked like the cards: quarter by quarter down the panel
-      for (let k = 0; k < AREAS; k++) clusterY[k] = ((0.5 - (k + 0.5) / AREAS) * h * 0.84) / R;
+      place();
     },
 
     pointer(x, y) {
@@ -236,9 +257,11 @@ const coverage: SceneFactory = ({ gl, slot, redraw }) => {
         lit = target;
         glow = target >= 0 ? 1 : 0;
       } else if (target === lit) {
-        glow = Math.min(1, glow + dt * 2.5);
+        // nothing lit means nothing dimmed
+        glow = lit >= 0 ? Math.min(1, glow + dt * (pinned >= 0 ? 6 : 2.5)) : 0;
       } else {
-        glow = Math.max(0, glow - dt * 3.5);
+        // a hovered card crossfades fast (about 0.3 s) so its name follows the pointer
+        glow = Math.max(0, glow - dt * (pinned >= 0 ? 10 : 3.5));
         if (glow === 0) lit = target;
       }
 
@@ -253,37 +276,57 @@ const coverage: SceneFactory = ({ gl, slot, redraw }) => {
       const oy = H * 0.5 * dpr;
       let px = 0;
       let py = 0;
-      const project = (x: number, y: number, z: number) => {
-        const x1 = x * cyaw + z * syaw;
+      let rx = 0;
+      let ry = 0;
+      let rz = 0;
+      // turn into camera space
+      const rotate = (x: number, y: number, z: number) => {
         const z1 = -x * syaw + z * cyaw;
-        const y2 = y * cp - z1 * sp;
-        const z2 = y * sp + z1 * cp;
-        const s = CAMERA / (CAMERA - z2);
-        px = ox + x1 * Rd * s;
-        py = oy - y2 * Rd * s;
-        return z2;
+        rx = x * cyaw + z * syaw;
+        ry = y * cp - z1 * sp;
+        rz = y * sp + z1 * cp;
+      };
+      // camera space to device px
+      const persp = (x: number, y: number, z: number) => {
+        const s = CAMERA / (CAMERA - z);
+        px = ox + x * Rd * s;
+        py = oy - y * Rd * s;
+        return z;
+      };
+      const project = (x: number, y: number, z: number) => {
+        rotate(x, y, z);
+        return persp(rx, ry, rz);
       };
 
       let meanX = 0;
       let meanY = 0;
       let meanN = 0;
+      let minX = Infinity;
+      let maxX = -Infinity;
       for (let i = 0; i < n; i++) {
         const node = nodes[i];
         const p = clamp01((phase - node.delay * 0.4) / 0.6);
         const m = gathering ? easeInOut(p) : 1 - easeInOut(p);
         mix[i] = m;
+        // the burst turns as a whole; each cluster turns in place beside its card
         const b = node.burst;
+        rotate(b[0], b[1], b[2]);
+        const bx = rx;
+        const by = ry;
+        const bz = rz;
         const j = node.jitter;
-        const cx = clusterX[node.area] + j[0];
-        const cy = clusterY[node.area] + j[1];
-        const cz = j[2];
-        sz[i] = project(cx + (b[0] - cx) * m, cy + (b[1] - cy) * m, cz + (b[2] - cz) * m);
+        rotate(j[0], j[1], j[2]);
+        const cx = clusterX[node.area] + rx;
+        const cy = clusterY[node.area] + ry;
+        sz[i] = persp(cx + (bx - cx) * m, cy + (by - cy) * m, rz + (bz - rz) * m);
         sx[i] = px;
         sy[i] = py;
         if (node.area === lit) {
           meanX += px;
           meanY += py;
           meanN++;
+          minX = Math.min(minX, px);
+          maxX = Math.max(maxX, px);
         }
       }
 
@@ -293,19 +336,26 @@ const coverage: SceneFactory = ({ gl, slot, redraw }) => {
       backdrop.field(BASE, blobs, 0.45, dpr);
 
       const lw = dpr;
-      // rays from the center, fading as points leave them
+      const hole = 4 * dpr;
+      // rays from just off the center, fading as points leave them
+      const ray = (x: number, y: number, c: readonly number[], a0: number, a1: number) => {
+        const dx = x - ox;
+        const dy = y - oy;
+        const d = Math.hypot(dx, dy);
+        if (d > hole) shapes.line(ox + (dx / d) * hole, oy + (dy / d) * hole, x, y, lw, c, a0, a1);
+      };
       for (let i = 0; i < n; i++) {
         const v = smooth(0.3, 1, mix[i]);
         if (v < 0.002) continue;
         const on = nodes[i].area === lit ? glow : 0;
         const c = on > 0 ? accents[lit] : DOT;
         const a = v * (1 - 0.5 * glow + 0.9 * on);
-        shapes.line(ox, oy, sx[i], sy[i], lw, c, 0.26 * a, (0.1 + 0.2 * on) * a);
+        ray(sx[i], sy[i], c, 0.26 * a, (0.1 + 0.2 * on) * a);
       }
       if (burst > 0.002) {
         for (const [x, y, z] of stubs) {
           project(x, y, z);
-          shapes.line(ox, oy, px, py, lw, DOT, 0.2 * burst * (1 - 0.4 * glow), 0.04 * burst);
+          ray(px, py, DOT, 0.2 * burst * (1 - 0.4 * glow), 0.04 * burst);
         }
       }
       // cluster links appear as the burst lets go
@@ -316,6 +366,15 @@ const coverage: SceneFactory = ({ gl, slot, redraw }) => {
         const al = v * (0.2 + 0.25 * on) * (1 - 0.5 * glow + 0.5 * on);
         shapes.line(sx[a], sy[a], sx[b], sy[b], lw, on > 0 ? accents[lit] : DOT, al, al);
       }
+      // the burst's source: a small soft light where the rays meet
+      if (burst > 0.01) {
+        shapes.glow(ox, oy, 8 * dpr, HEAD, 0.55 * burst);
+        shapes.circle(ox, oy, 1.6 * dpr, HEAD, 0.9 * burst);
+      }
+      // a soft accent light under the lit cluster
+      if (lit >= 0 && meanN > 0 && glow * cloud > 0.01) {
+        shapes.glow(meanX / meanN, meanY / meanN, 0.5 * Rd, accents[lit], 0.08 * glow * cloud);
+      }
       shapes.flush();
 
       // points back to front, near ones larger and out of focus
@@ -324,39 +383,48 @@ const coverage: SceneFactory = ({ gl, slot, redraw }) => {
         const z = sz[i];
         const near = smooth(0.3, 0.95, z);
         const s = CAMERA / (CAMERA - z);
-        const r = nodes[i].size * sizeScale * s * s * (1 + near * 1.3) * dpr;
+        const r = nodes[i].size * sizeScale * s * s * (1 + near * 0.8) * dpr;
         const on = nodes[i].area === lit ? glow : 0;
         const c = accents[lit] ?? DOT;
         col[0] = DOT[0] + (c[0] - DOT[0]) * on;
         col[1] = DOT[1] + (c[1] - DOT[1]) * on;
         col[2] = DOT[2] + (c[2] - DOT[2]) * on;
-        const a = (0.62 + 0.3 * clamp01(z * 0.5 + 0.5)) * (1 - near * 0.5) * (1 - 0.55 * glow + 0.55 * on);
-        if (near > 0.05) shapes.circle(sx[i], sy[i], r, col, a * 0.75, -r * near * 1.2);
+        const a = (0.72 + 0.26 * clamp01(z * 0.5 + 0.5)) * (1 - near * 0.55) * (1 - 0.55 * glow + 0.55 * on);
+        if (near > 0.05) shapes.circle(sx[i], sy[i], r, col, a * 0.8, -r * near * 1.2);
         else shapes.circle(sx[i], sy[i], r, col, a);
       }
 
-      // comets with dotted trails, while the burst holds
+      // comets with dotted trails, while the burst holds: a cream head in a soft
+      // halo, the trail thinning and fading behind it
       if (burst > 0.01) {
+        const fade = burst * (1 - 0.4 * glow);
         for (const c of comets) {
           for (let s = TRAIL; s >= 0; s--) {
-            const ang = (still ? 1.7 : time) * c.speed + c.phase - Math.sign(c.speed) * s * 0.04;
+            const ang = (still ? 1.7 : time) * c.speed + c.phase - Math.sign(c.speed) * s * 0.045;
             const ca = Math.cos(ang) * c.radius;
             const sa = Math.sin(ang) * c.radius;
             project(c.u[0] * ca + c.v[0] * sa, c.u[1] * ca + c.v[1] * sa, c.u[2] * ca + c.v[2] * sa);
             const f = 1 - s / TRAIL;
-            const r = (s === 0 ? 2.6 : 0.8 + 1.4 * f) * sizeScale * dpr;
-            shapes.circle(px, py, r, s === 0 ? HEAD : DOT, burst * (s === 0 ? 0.95 : 0.1 + 0.55 * f * f) * (1 - 0.4 * glow));
+            if (s === 0) {
+              shapes.glow(px, py, 9 * sizeScale * dpr, HEAD, 0.3 * fade);
+              shapes.circle(px, py, 3 * sizeScale * dpr, HEAD, 0.97 * fade);
+            } else {
+              shapes.circle(px, py, (1.2 + 1.2 * f) * sizeScale * dpr, DOT, (0.15 + 0.6 * f * f) * fade);
+            }
           }
         }
       }
       shapes.flush();
       backdrop.grain(0.045, grainSeed(time, still), dpr);
 
-      // the lit area's name beside its cluster, once the clusters have formed
-      const chipAlpha = glow * smooth(0.55, 0.9, cloud);
+      // the lit area's name: beside its cluster once clustered; for a hovered card
+      // also in the burst, just outside the rim above or below its outermost point
+      const shown = lit >= 0 && lit === pinned ? 1 : smooth(0.55, 0.9, cloud);
+      const chipAlpha = glow * shown;
       if (chipAlpha > 0.01 && lit >= 0 && meanN > 0) {
         if (chipArea !== lit) {
           chipArea = lit;
+          anchor = -1;
           chipText.textContent = names[lit];
           chipDot.style.background = `rgb(${accents[lit].map((v) => Math.round(v * 255)).join(' ')})`;
           chipW = chip.offsetWidth;
@@ -365,8 +433,32 @@ const coverage: SceneFactory = ({ gl, slot, redraw }) => {
         const mx = meanX / meanN / dpr;
         const my = meanY / meanN / dpr;
         const side = mx < W / 2 ? 1 : -1;
-        let x = side > 0 ? mx + R * 0.42 : mx - R * 0.42 - chipW;
+        // just past the cluster's outer edge, on the side toward the open middle
+        let x = side > 0 ? maxX / dpr + 14 : minX / dpr - 14 - chipW;
         let y = my - chipH / 2;
+        if (burst > 0.01) {
+          // keep the anchor while it stays far out and in front; else take the next best
+          if (anchor >= 0 && (Math.abs(sy[anchor] - oy) < 0.55 * Rd || sz[anchor] < -0.4)) anchor = -1;
+          if (anchor < 0) {
+            let best = 0;
+            for (let i = 0; i < n; i++) {
+              if (nodes[i].area !== lit || sz[i] < -0.3) continue;
+              const v = Math.abs(sy[i] - oy) * (1 - 0.35 * Math.abs(sx[i] - ox) / Rd);
+              if (v > best) {
+                best = v;
+                anchor = i;
+              }
+            }
+          }
+          if (anchor >= 0) {
+            const bx = sx[anchor] / dpr - chipW / 2;
+            const by = sy[anchor] < oy ? H / 2 - R - 18 - chipH : H / 2 + R + 18;
+            x = bx + (x - bx) * cloud;
+            y = by + (y - by) * cloud;
+          }
+        } else {
+          anchor = -1;
+        }
         x = Math.min(Math.max(x, 12), W - chipW - 12);
         y = Math.min(Math.max(y, 12), H - chipH - 12);
         chip.style.transform = `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, 0)`;
@@ -377,6 +469,7 @@ const coverage: SceneFactory = ({ gl, slot, redraw }) => {
     },
 
     dispose(contextLost) {
+      gone = true;
       for (const { card, enter, leave } of handlers) {
         card.removeEventListener('pointerenter', enter);
         card.removeEventListener('pointerleave', leave);
