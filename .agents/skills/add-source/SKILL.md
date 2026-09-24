@@ -17,7 +17,12 @@ approval through the normal mechanism when the sandbox blocks a fetch or push.
   person's own post. Coverage, explainers and compilations are leads, never the link.
 - One URL per entry. Every quote and figure in an entry must appear in that linked source.
 - Separate what happened, what the evidence shows, and what remains uncertain.
-- No invented incidents, numbers, dates, or quotes. Unverifiable claims are dropped and reported.
+- No invented incidents, numbers, dates, or quotes.
+- Read the material critically. It is a lead, not an authority. Expect retellings to drift from
+  what their sources say, and check every claim you intend to use against the source itself.
+- Publish only what a fetched source supports. A claim you cannot confirm stays off the site and
+  goes in the PR as unverified, however striking it is. Hedged wording is not a substitute for a
+  source. Take what is relevant, useful and confirmed, and leave the rest.
 - Allegations stay allegations. No self-harm method detail. Name who reported what.
 - Sensitive technical material (biological, chemical, weapons, exploit detail): fetch to a
   file and extract only the passages needed; never read whole pages; never copy operational
@@ -45,9 +50,11 @@ approval through the normal mechanism when the sandbox blocks a fetch or push.
    it: ACCURATE, OVERSTATED, MISLEADING, WRONG, UNVERIFIED. Distortions in the input become
    notes in the PR, not entries. Save the full check to
    `.tmp/add-source/<slug>/source-check.md`.
-5. **Select and draft entries.** Add an entry only for a dated, primary, citable event that
-   fits one of the four categories. Check `events.json` for the same URL or the same event;
-   update an existing entry instead of duplicating it. Draft per
+5. **Select and draft entries.** Be selective. Add an entry only for a dated, primary, citable
+   event that fits one of the four categories and tells a general reader something the record
+   does not already hold. Background color, restated common knowledge, and claims that rest on
+   one interested party's say-so do not earn entries. Check `events.json` for the same URL or
+   the same event; update an existing entry instead of duplicating it. Draft per
    [entries.md](references/entries.md).
 6. **Place and highlight.** Decide where each entry belongs beyond the record using
    [placement.md](references/placement.md): featured interview, selected reading, scope
