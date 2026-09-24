@@ -1,0 +1,81 @@
+---
+/*
+ * Homepage section header: numbered mono label, serif h2 on the left,
+ * and a lead paragraph (or the default slot, e.g. a button) on the right.
+ */
+interface Props {
+  /** Two-digit section number, e.g. "01". */
+  num: string;
+  label: string;
+  /** Heading text; "\n" marks a deliberate line break. */
+  heading: string;
+  lead?: string;
+  id: string;
+}
+
+const { num, label, heading, lead, id } = Astro.props;
+const lines = heading.split('\n');
+---
+<header class="section-head">
+  <p class="eyebrow section-label">
+    <span>{num}</span><span class="section-dot" aria-hidden="true"></span><span>{label}</span>
+  </p>
+  <div class="section-row">
+    <h2 id={id}>
+      {lines.map((line, i) => (
+        <Fragment>{i > 0 && <br />}{line}</Fragment>
+      ))}
+    </h2>
+    {lead && <p class="section-lead">{lead}</p>}
+    {Astro.slots.has('default') && <div class="section-aside"><slot /></div>}
+  </div>
+</header>
+
+<style>
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .section-dot {
+    width: 2px;
+    height: 2px;
+    border-radius: var(--radius-full);
+    background: var(--ink-20);
+  }
+
+  .section-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 16px 48px;
+    margin-top: 24px;
+  }
+
+  .section-lead {
+    font-family: var(--font-serif);
+    font-size: var(--text-lead);
+    line-height: var(--leading-lead);
+  }
+
+  .section-aside {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: 767px) {
+    .section-row {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .section-lead {
+      font-size: 20px;
+    }
+
+    .section-aside {
+      justify-content: flex-start;
+    }
+  }
+</style>

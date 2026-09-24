@@ -1,0 +1,450 @@
+---
+/*
+ * Mount point for a homepage visual.
+ *
+ * The slot fills its positioned parent, so the parent decides size and
+ * placement. Until a visual mounts, a still of the same scene shows: an inline
+ * SVG built here at build time from a small seeded generator (no client JS).
+ * `src/scripts/visuals/runtime.ts` loads the named scene when the slot nears
+ * the viewport, puts its canvas here and sets `data-visual-ready`, which fades
+ * the canvas in and the still out. Without WebGL2 the still simply stays.
+ */
+interface Props {
+  /** Which visual belongs here: hero, sequence, coverage, record, closing. */
+  name: 'hero' | 'sequence' | 'coverage' | 'record' | 'closing';
+  /** Light slots sit on the paper background; dark slots are scene panels. */
+  tone?: 'light' | 'dark';
+}
+
+const { name, tone = 'light' } = Astro.props;
+
+function random(seed: number) {
+  return () => {
+    seed = (seed + 0x6d2b79f5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+const f = (v: number) => String(Math.round(v * 10) / 10);
+const golden = Math.PI * (3 - Math.sqrt(5));
+
+/**
+ * A radial burst seen from slightly above: rays on a golden-angle sphere,
+ * most ending on an outer shell. viewBox units: burst radius = 100.
+ */
+function burst(seed: number, rays: number, stubs: number) {
+  const r = random(seed);
+  const cp = Math.cos(-0.3);
+  const sp = Math.sin(-0.3);
+  const ends: { x: number; y: number; z: number; len: number }[] = [];
+  for (let i = 0; i < rays + stubs; i++) {
+    const stub = i >= rays;
+    const k = stub ? r() * rays : i;
+    const y = 1 - (2 * (k + 0.5)) / rays;
+    const s = Math.sqrt(Math.max(0, 1 - y * y));
+    const a = k * golden + (stub ? r() * 6 : 0.6);
+    const x = Math.cos(a) * s;
+    const z = Math.sin(a) * s;
+    const y2 = y * cp - z * sp;
+    const z2 = y * sp + z * cp;
+    const len = stub ? 0.25 + 0.4 * r() : r() < 0.8 ? 0.88 + 0.12 * r() : 0.45 + 0.35 * r();
+    const persp = 5 / (5 - z2 * len);
+    ends.push({ x: x * len * persp * 100, y: -y2 * len * persp * 100, z: z2, len: stub ? -1 : len });
+  }
+  return { r, ends };
+}
+
+function heroArt() {
+  const { r, ends } = burst(20260922, 64, 18);
+  const path = ends.map((e) => `M0 0L${f(e.x)} ${f(e.y)}`).join('');
+  const weights = [0.34, 0.24, 0.19, 0.23];
+  const nodes = ends
+    .filter((e, i) => e.len > 0 && i % 5 !== 4)
+    .map((e) => {
+      let u = r();
+      let c = 0;
+      while (c < 3 && (u -= weights[c]) > 0) c++;
+      const big = r() < 0.08;
+      const s = (5 / (5 - e.z)) ** 2;
+      return { ...e, c, rad: (big ? 3.6 + 1.4 * r() : 1.3 + 2 * r() ** 1.3) * s * 0.9 };
+    })
+    .sort((a, b) => a.z - b.z);
+  const dots = nodes
+    .map((n) => `<circle class="c${n.c}" cx="${f(n.x)}" cy="${f(n.y)}" r="${f(n.rad)}"${n.z < -0.25 ? ' opacity=".72"' : ''}/>`)
+    .join('');
+  return `<svg class="fallback-art" viewBox="-100 -100 200 200" overflow="visible"><defs><radialGradient id="vf-hero-ray" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="100"><stop offset="0" class="s0"/><stop offset="1" class="s1"/></radialGradient></defs><path d="${path}" fill="none" stroke="url(#vf-hero-ray)" stroke-width="1" vector-effect="non-scaling-stroke"/>${dots}</svg>`;
+}
+
+function coverageArt() {
+  const { r, ends } = burst(20260923, 64, 30);
+  const path = ends.map((e) => `M${f(e.x * 0.04)} ${f(e.y * 0.04)}L${f(e.x)} ${f(e.y)}`).join('');
+  const dots = ends
+    .filter((e) => e.len > 0)
+    .map((e) => {
+      const big = r() < 0.09;
+      const rad = (big ? 2.6 + 1.8 * r() : 1 + 1.2 * r() ** 1.2) * (5 / (5 - e.z));
+      // near points out of focus: larger and fainter
+      const near = e.z > 0.45;
+      return `<circle cx="${f(e.x)}" cy="${f(e.y)}" r="${f(near ? rad * 1.6 : rad)}" opacity="${near ? '.3' : f(0.62 + 0.3 * r())}"/>`;
+    })
+    .join('');
+  return `<svg class="fallback-art" viewBox="-100 -100 200 200" overflow="visible"><defs><radialGradient id="vf-cov-ray" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="100"><stop offset="0" class="s0"/><stop offset="1" class="s1"/></radialGradient></defs><path d="${path}" fill="none" stroke="url(#vf-cov-ray)" stroke-width="1" vector-effect="non-scaling-stroke"/><g class="dots">${dots}</g></svg>`;
+}
+
+/** Scattered points with short links, denser in the side margins; percent coordinates stretch with the band. */
+function recordArt() {
+  const r = random(20260924);
+  const pts: [number, number][] = [];
+  for (let i = 0; i < 60; i++) {
+    if (i < 36) {
+      const x = 0.5 + r() * 7;
+      pts.push([i % 2 ? 100 - x : x, 3 + r() * 94]);
+    } else if (i < 48) {
+      pts.push([8 + r() * 84, i % 2 ? 1 + r() * 7 : 92 + r() * 7]);
+    } else pts.push([8 + r() * 84, 8 + r() * 84]);
+  }
+  const d = (a: [number, number], b: [number, number]) => Math.hypot((a[0] - b[0]) * 1.5, a[1] - b[1]);
+  const seen = new Set<string>();
+  const links: string[] = [];
+  for (let i = 0; i < pts.length && links.length < 40; i++) {
+    let best = -1;
+    pts.forEach((q, j) => {
+      if (j !== i && !seen.has(`${Math.min(i, j)}:${Math.max(i, j)}`) && (best < 0 || d(pts[i], q) < d(pts[i], pts[best]))) best = j;
+    });
+    if (best < 0 || d(pts[i], pts[best]) > 16) continue;
+    seen.add(`${Math.min(i, best)}:${Math.max(i, best)}`);
+    links.push(`<line x1="${f(pts[i][0])}%" y1="${f(pts[i][1])}%" x2="${f(pts[best][0])}%" y2="${f(pts[best][1])}%"/>`);
+  }
+  const dots = pts
+    .map(([x, y]) => {
+      const big = r() < 0.12;
+      return `<circle cx="${f(x)}%" cy="${f(y)}%" r="${f(big ? 3 + 2 * r() : 1.3 + 1.5 * r())}" opacity="${big ? '.3' : f(0.55 + 0.4 * r())}"/>`;
+    })
+    .join('');
+  return `<svg class="fallback-net" width="100%" height="100%"><g class="links">${links.join('')}</g><g class="dots">${dots}</g></svg>`;
+}
+
+/** The layer stack at its first reading state: record below, the event plane in ink, two outlines above. */
+function sequenceArt() {
+  const plane = [
+    [-90, 3],
+    [-16, -52],
+    [84, -19],
+    [24, 52],
+  ];
+  const at = (dy: number, dx = 0) => plane.map(([x, y]) => `${f(x + dx)},${f(y + dy)}`).join(' ');
+  return `<svg class="fallback-art" viewBox="-100 -100 200 200" overflow="visible"><polygon class="p-read" points="${at(40, 4)}"/><polygon class="p-ink" points="${at(14)}"/><polygon class="p-open" points="${at(-26, -6)}"/><polygon class="p-open" points="${at(-50, -10)}"/><circle class="c1" cx="10" cy="14" r="2.6"/><circle class="c1 ring" cx="10" cy="14" r="6"/><circle class="c0" cx="-38" cy="44" r="1.6"/><circle class="c0" cx="30" cy="62" r="1.6"/><circle class="c0" cx="46" cy="36" r="1.6"/></svg>`;
+}
+
+const art = { hero: heroArt, coverage: coverageArt, record: recordArt, sequence: sequenceArt, closing: () => '' }[name]();
+---
+<div class="visual-slot" data-visual={name} data-tone={tone} aria-hidden="true">
+  <div class="visual-fallback" set:html={art}></div>
+  <slot />
+</div>
+
+<style>
+  .visual-slot {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    container-type: size;
+  }
+
+  /*
+   * Dark slots: each scene's ground color, so nothing flashes while the
+   * fallback fades out over the canvas. Film grain for the fallbacks.
+   */
+  .visual-slot[data-tone='dark'] {
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.14 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background: var(--scene-dark);
+  }
+
+  .visual-slot[data-visual='record'] {
+    background: #161f29;
+  }
+
+  .visual-slot[data-visual='coverage'] {
+    background: #080c10;
+  }
+
+  .visual-slot[data-visual='closing'] {
+    background: #181a15;
+  }
+
+  /* The canvas fades in once its first frame is drawn, over the still. */
+  .visual-slot > :global(canvas) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-out);
+  }
+
+  .visual-slot[data-visual-ready] > :global(canvas) {
+    opacity: 1;
+  }
+
+  /* Scene annotations (label chips and their dashed leaders), placed by the scene. */
+  .visual-slot > :global(.visual-label) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 9px 5px 8px;
+    border-radius: 2px;
+    background: rgb(242 242 236 / 0.92);
+    box-shadow: 0 0 0 1px var(--ink-06);
+    color: var(--ink-70);
+    font: 500 9px/1.2 var(--font-mono);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0;
+    will-change: transform, opacity;
+    transition:
+      background-color 0.3s var(--ease-out),
+      color 0.3s var(--ease-out);
+  }
+
+  /* The label of the layer being read turns ink, like its step card. */
+  .visual-slot > :global(.visual-label[data-active]) {
+    background: var(--ink);
+    box-shadow: none;
+    color: var(--cream);
+  }
+
+  .visual-slot > :global(.visual-label) > :global(.visual-label-dot) {
+    width: 7px;
+    height: 7px;
+    flex: none;
+    border-radius: 50%;
+  }
+
+  /* The scene sets `--leader` to its chip's colour; without it the leader is a quiet ink. */
+  .visual-slot > :global(.visual-leader) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    border-top: 1px dashed var(--leader, var(--ink-34));
+    transform-origin: 0 0;
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  .visual-fallback {
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.6s var(--ease-out);
+  }
+
+  /*
+   * Once the scene draws, the still leaves at once (120 ms), so the canvas
+   * fades in over the bare ground instead of over a different frame.
+   */
+  .visual-slot[data-visual-ready] .visual-fallback {
+    opacity: 0;
+    transition-duration: 0.12s;
+    transition-delay: 0s;
+  }
+
+  /*
+   * Hero: the live scene opens on its gather, not on the burst the still
+   * shows, so the still waits 1.2 s before it appears. It shows at once when
+   * the runtime reports no scene (no WebGL2, failed load, lost context).
+   */
+  [data-visual='hero'] > .visual-fallback {
+    animation: fallback-late 0.4s var(--ease-out) 1.2s both;
+  }
+
+  /* The still was showing when the scene arrived: the scene opens on the same burst, so cross-fade. */
+  .visual-slot[data-visual-handoff][data-visual-ready] > .visual-fallback {
+    animation: fallback-out 0.4s var(--ease-out) both;
+  }
+
+  @keyframes fallback-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .visual-slot[data-visual-ready] > .visual-fallback,
+  .visual-slot[data-visual-still] > .visual-fallback {
+    animation: none;
+  }
+
+  @keyframes fallback-late {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .visual-slot > :global(canvas),
+    .visual-slot .visual-fallback,
+    .visual-slot[data-visual-ready] .visual-fallback,
+    .visual-slot[data-visual-handoff][data-visual-ready] > .visual-fallback {
+      transition: none;
+      animation: none;
+    }
+  }
+
+  /*
+   * Stills: the SVG square is centred on the scene's burst (`--fx`, `--fy`)
+   * and sized to its radius (`--fr`), using the same layout as the live scene.
+   */
+  .visual-fallback :global(.fallback-art) {
+    position: absolute;
+    left: calc(var(--fx) - var(--fr));
+    top: calc(var(--fy) - var(--fr));
+    width: calc(2 * var(--fr));
+    height: calc(2 * var(--fr));
+  }
+
+  .visual-fallback :global(.c0) {
+    fill: var(--ink);
+  }
+
+  .visual-fallback :global(.c1) {
+    fill: var(--accent-orange);
+  }
+
+  .visual-fallback :global(.c2) {
+    fill: var(--accent-amber);
+  }
+
+  .visual-fallback :global(.c3) {
+    fill: var(--accent-olive);
+  }
+
+  /* Hero: the burst beside the copy; centred below it when the slot spans the width. */
+  [data-visual='hero'] > .visual-fallback {
+    --fx: 55%;
+    --fy: 50%;
+    --fr: min(29cqw, 30.7cqh);
+  }
+
+  @media (max-width: 767px) {
+    [data-visual='hero'] > .visual-fallback {
+      --fx: 50%;
+      --fy: 52%;
+      --fr: min(33cqw, 38cqh);
+    }
+  }
+
+  [data-visual='hero'] > .visual-fallback :global(.s0) {
+    stop-color: var(--ink);
+    stop-opacity: 0.07;
+  }
+
+  [data-visual='hero'] > .visual-fallback :global(.s1) {
+    stop-color: var(--ink);
+    stop-opacity: 0.5;
+  }
+
+  /* Sequence: the layer stack, event plane in ink. */
+  [data-visual='sequence'] > .visual-fallback {
+    --fx: 50%;
+    --fy: 50%;
+    --fr: min(40cqw, 36cqh);
+  }
+
+  [data-visual='sequence'] > .visual-fallback :global(polygon) {
+    fill: none;
+    stroke: var(--ink-34);
+    stroke-width: 1;
+    stroke-dasharray: 5 4;
+    vector-effect: non-scaling-stroke;
+  }
+
+  [data-visual='sequence'] > .visual-fallback :global(.p-read) {
+    fill: rgb(244 244 231 / 0.3);
+  }
+
+  [data-visual='sequence'] > .visual-fallback :global(.p-ink) {
+    fill: var(--ink);
+    stroke: none;
+  }
+
+  [data-visual='sequence'] > .visual-fallback :global(.ring) {
+    fill: none;
+    stroke: var(--accent-orange);
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+  }
+
+  /*
+   * Dark fallbacks: still versions of each scene, shown before the scene
+   * mounts and kept when WebGL2 is unavailable.
+   */
+
+  /* Record band: a scattered network on slate, a warmer column in the middle. */
+  [data-visual='record'] > .visual-fallback {
+    background:
+      var(--grain),
+      linear-gradient(90deg, transparent 16%, rgb(28 29 28) 36% 64%, transparent 84%);
+  }
+
+  [data-visual='record'] > .visual-fallback :global(.fallback-net) {
+    position: absolute;
+    inset: 0;
+  }
+
+  [data-visual='record'] > .visual-fallback :global(.dots) {
+    fill: rgb(150 158 168);
+  }
+
+  [data-visual='record'] > .visual-fallback :global(.links) {
+    stroke: rgb(150 158 168 / 0.28);
+    stroke-width: 1;
+  }
+
+  /* Coverage panel: a still grey starburst. */
+  [data-visual='coverage'] > .visual-fallback {
+    --fx: 50%;
+    --fy: 50%;
+    --fr: min(47cqw, 47cqh);
+    background:
+      var(--grain),
+      radial-gradient(ellipse 55% 42% at 50% 50%, rgb(25 28 30), transparent),
+      radial-gradient(ellipse 70% 22% at 50% 0%, rgb(17 24 32), transparent);
+  }
+
+  [data-visual='coverage'] > .visual-fallback :global(.s0) {
+    stop-color: rgb(186 188 184);
+    stop-opacity: 0.26;
+  }
+
+  [data-visual='coverage'] > .visual-fallback :global(.s1) {
+    stop-color: rgb(186 188 184);
+    stop-opacity: 0.08;
+  }
+
+  [data-visual='coverage'] > .visual-fallback :global(.dots) {
+    fill: rgb(186 188 184);
+  }
+
+  /* Closing: slate light in the middle, warm red glows in the corners. */
+  [data-visual='closing'] > .visual-fallback {
+    background:
+      var(--grain),
+      radial-gradient(ellipse 45% 55% at 50% 48%, rgb(26 36 44 / 0.9), transparent),
+      radial-gradient(circle at 0% 0%, rgb(52 22 22 / 0.85), transparent 34%),
+      radial-gradient(circle at 100% 100%, rgb(52 22 22 / 0.8), transparent 38%),
+      radial-gradient(circle at 0% 100%, rgb(40 22 34 / 0.6), transparent 28%);
+  }
+</style>
+
+<script>
+  import { mountVisuals } from '../scripts/visuals/runtime';
+  mountVisuals();
+</script>

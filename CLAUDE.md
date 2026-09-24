@@ -4,13 +4,20 @@
 
 You are a Senior Software Engineer. LLMs are probabilistic; code is deterministic. Bridge that gap.
 
-<!-- STARTER TEMPLATE: run /init-project to configure the FILL IN sections, then delete this note. -->
-
 - Questions → plain chat text, numbered if multiple.
 
 ## What this project is
 
-<!-- FILL IN (via /init-project): two or three sentences — what this is and who it serves; a short "won't compromise on" list; optional glossary of terms the team uses. Cap ~10 lines: this file loads every turn, and direction earns its weight only while it stays short. A model that knows what the product refuses to compromise on tests for it without being told. -->
+SafeAI.watch: a public editorial site tracking AI safety and security (research, reported incidents, public warnings, policy responses) for general readers. Early stage; first coverage slice is AI and biological risk.
+
+Won't compromise on:
+
+- Every entry links its original source.
+- Each entry separates what happened, what the evidence shows, and what remains uncertain.
+- No fabricated incidents, numbers, or quotes. Illustrations are conceptual and carry no data.
+- No third-party trackers or analytics.
+- The design is core. Keep the prototype's identity (colors, structure, layout, typography, motion); never redesign it into something else. Within that identity, improve everything, and fix anything broken or illogical rather than copying it. The 3D visuals get reinvented (our own, then `/wow-loop`).
+- No Antimetal code, assets, names, or trackers. Rebuild the prototype's design in our own code, art, and licensed fonts (see `.claude/reference/tech-stack.md`).
 
 ## Default prose mode: caveman ultra
 
@@ -26,9 +33,7 @@ Caveman includes automatic Unslop for session replies. Use `writing` for outward
 
 ## CRITICAL: Verification
 
-<!-- FILL IN (via /init-project): what can this sandbox verify? Installs/builds/type-checks meaningful? Can the user reach a dev server you start? What is the AUTHORITATIVE signal (CI, deploy log, local tests)? -->
-
-Defaults until configured:
+Sessions run on the user's Windows machine: a local dev server you start is reachable by the user, and headed-Chrome checks are real. Authoritative signal: Vercel preview/production deploy of the PR once the build exists; until then, local build plus browser check. Astro static build: `npm run build` (output `dist/`), `npm run preview` to serve it; commands in `.claude/reference/commands.md`.
 
 - Inspect logs / run scripts / read code yourself before claiming anything works.
 - Never claim visual/UI verification you didn't actually perform.
@@ -67,9 +72,9 @@ Defaults until configured:
 
 ## Environment & deploy target
 
-<!-- FILL IN (via /init-project): where the app runs (host, DB, secrets); install policy (can sessions run npm/pip for app-runtime deps?); migration policy; anything that ALWAYS requires user action. -->
-
-Defaults until configured: ask before installing app-runtime dependencies; provide migrations as copy/paste-ready artifacts rather than running them blind.
+- Host: Vercel (project not yet linked). No database, no secrets yet.
+- Stack: Astro (see `.claude/reference/tech-stack.md`). Ask before adding app-runtime dependencies outside it.
+- User action required: Vercel project creation, domain/DNS for safeai.watch, any env vars.
 
 ## Project reference library
 

@@ -1,0 +1,134 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { eventsNewestFirst, formatLong } from '../data/record';
+---
+<PageLayout
+  title="Latest"
+  heading="The latest record"
+  description="Research, incidents, public warnings, and policy on AI safety and security, newest first, each linked to its original source."
+  intro="Research, reported incidents, public warnings, and policy on AI safety and security, newest first. The record began with AI and biological risk."
+>
+  <ol class="archive">
+    {eventsNewestFirst.map((event) => (
+      <li class="archive-row">
+        <p class="archive-meta">
+          <time datetime={event.date}>{formatLong(event.date)}</time>
+          <span class="archive-category">{event.category}</span>
+        </p>
+        <article class="archive-body">
+          <h2 class="archive-title">
+            <a href={event.url} target="_blank" rel="noopener noreferrer">
+              {event.title}<span class="archive-arrow" aria-hidden="true">&nbsp;↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+            </a>
+          </h2>
+          <dl class="archive-parts">
+            <dt>What happened</dt>
+            <dd>{event.happened}</dd>
+            <dt>Evidence</dt>
+            <dd>{event.evidence}</dd>
+            <dt>Uncertain</dt>
+            <dd>{event.uncertain}</dd>
+          </dl>
+          <p class="archive-source">{event.source}</p>
+        </article>
+      </li>
+    ))}
+  </ol>
+</PageLayout>
+
+<style>
+  .archive-row {
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr);
+    gap: 36px;
+    padding: 32px 0;
+    border-top: 1px dashed var(--grey-rule);
+  }
+
+  .archive-meta,
+  .archive-source {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--grey-muted);
+  }
+
+  .archive-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 6px;
+  }
+
+  .archive-category {
+    font-size: var(--text-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+  }
+
+  .archive-body {
+    max-width: 780px;
+  }
+
+  .archive-title {
+    margin-bottom: 14px;
+    font-size: 29px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .archive-title a {
+    border-bottom: 1px solid var(--grey-track);
+    transition:
+      color 0.2s var(--ease-out),
+      border-color 0.2s var(--ease-out);
+  }
+
+  .archive-title a:hover {
+    color: var(--link-blue);
+    border-bottom-color: currentColor;
+  }
+
+  .archive-parts {
+    margin-bottom: 17px;
+  }
+
+  .archive-parts dt {
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--grey-label);
+  }
+
+  .archive-parts dd {
+    margin-inline-start: 0;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .archive-parts dd:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 767px) {
+    .archive-row {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 12px;
+      padding: 28px 0;
+    }
+
+    .archive-meta {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 4px 14px;
+      padding-top: 0;
+    }
+
+    .archive-title {
+      font-size: 25px;
+    }
+  }
+</style>

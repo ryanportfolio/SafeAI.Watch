@@ -1,0 +1,80 @@
+---
+import '@fontsource-variable/geist-mono';
+import '../styles/global.css';
+import tokensCss from '../styles/tokens.css?raw';
+
+/*
+ * The @font-face rules for the two preloaded families go inline in the head, not in the
+ * bundled stylesheet. Chrome reuses a cached external stylesheet's parsed rules, font
+ * sources included, on the next same-origin page, so that page never requests the fonts
+ * and its preloads go unclaimed ("preloaded using link preload but not used" on every
+ * navigation after the first). An inline rule is parsed per document and claims them.
+ * About 2.5 KB of CSS per page (under 0.6 KB gzipped).
+ */
+import geistFaces from '@fontsource-variable/geist?inline';
+import serifFaces from '@fontsource-variable/newsreader/opsz.css?inline';
+import geistLatin from '@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url';
+import serifLatin from '@fontsource-variable/newsreader/files/newsreader-latin-opsz-normal.woff2?url';
+
+import SiteNav from '../components/SiteNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const SITE_NAME = 'SafeAI.watch';
+const DEFAULT_DESCRIPTION =
+  'News, research, and warnings about AI safety and security, with the sources and the open questions kept in view.';
+
+const { title, description = DEFAULT_DESCRIPTION } = Astro.props;
+const pageTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+// Site default share image, built by scripts/brand/build-brand.mjs.
+const ogImage = new URL('/og-image.png', Astro.site);
+// Browser chrome colour: the paper token, read from the same source the manifest's
+// theme_color comes from (scripts/brand/build-brand.mjs reads tokens.css too).
+const themeColor = tokensCss.match(/--paper:\s*(#[0-9a-f]{6})/i)?.[1];
+if (!themeColor) throw new Error('BaseLayout: --paper not found as six-digit hex in tokens.css');
+const OG_IMAGE_ALT =
+  'SafeAI.watch: "Keeping watch on AI" in serif type beside a blue line drawing of a research flow.';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content={themeColor} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={OG_IMAGE_ALT} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:alt" content={OG_IMAGE_ALT} />
+    <link rel="preload" href={geistLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={serifLatin} as="font" type="font/woff2" crossorigin />
+    <style is:inline set:html={geistFaces + serifFaces}></style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteNav />
+    <main id="main">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

@@ -22,3 +22,9 @@ build/
 Thumbs.db
 .DS_Store
 debug.log
+
+# Playwright MCP snapshots and console logs
+.playwright-mcp/
+
+# Astro
+.astro/

@@ -1,0 +1,350 @@
+@import './tokens.css';
+
+/*
+ * Newsreader italic, subset by scripts/brand/build-brand.mjs (npm run brand) to lowercase
+ * letters and light punctuation at weight 400, opsz axis kept. It sets the two italic words
+ * of the homepage closing heading; the full latin italic would cost 147 KB for them.
+ */
+@font-face {
+  font-family: 'Newsreader Variable';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/newsreader-italic-subset.woff2') format('woff2');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+/*
+ * Focus ring: the mark blue, with a paper halo filling the 2px gap inside it.
+ * On paper the halo matches the page, so the ring looks as before; on dark
+ * scenes the halo carries the contrast the blue alone lacks.
+ */
+:focus-visible {
+  outline: 2px solid var(--mark-blue);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--paper);
+}
+
+.glass:focus-visible {
+  box-shadow: 0 0 0 2px var(--paper), var(--glass-shadow);
+}
+
+h1,
+.h1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--text-h1);
+  line-height: var(--leading-h1);
+  letter-spacing: var(--tracking-h1);
+}
+
+h2,
+.h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--text-h2);
+  line-height: var(--leading-h2);
+  letter-spacing: var(--tracking-h2);
+}
+
+.lead {
+  font-family: var(--font-serif);
+  font-size: var(--text-lead);
+  line-height: var(--leading-lead);
+  color: var(--ink-70);
+}
+
+/* Geist Mono uppercase label */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ink-64);
+}
+
+/* Dashed outline with solid corner ticks (secondary buttons, cards, footer cells) */
+.frame {
+  position: relative;
+  border: 1px dashed var(--ink-10);
+  --tick: var(--ink);
+  --tick-len: 7px;
+}
+
+.frame::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--tick), var(--tick)) left top / var(--tick-len) 1px,
+    linear-gradient(var(--tick), var(--tick)) left top / 1px var(--tick-len),
+    linear-gradient(var(--tick), var(--tick)) right top / var(--tick-len) 1px,
+    linear-gradient(var(--tick), var(--tick)) right top / 1px var(--tick-len),
+    linear-gradient(var(--tick), var(--tick)) left bottom / var(--tick-len) 1px,
+    linear-gradient(var(--tick), var(--tick)) left bottom / 1px var(--tick-len),
+    linear-gradient(var(--tick), var(--tick)) right bottom / var(--tick-len) 1px,
+    linear-gradient(var(--tick), var(--tick)) right bottom / 1px var(--tick-len);
+  background-repeat: no-repeat;
+}
+
+/* Pill buttons. Primary = ink fill; .frame adds the dashed outline with ticks. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 46px;
+  padding: 12.5px 24.5px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-ui);
+  line-height: var(--leading-ui);
+  font-weight: 500;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s var(--ease-out),
+    color 0.2s var(--ease-out),
+    border-color 0.2s var(--ease-out);
+}
+
+.button-primary {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.button-primary:hover {
+  background: var(--card-dark);
+}
+
+.button.frame {
+  min-height: 48px;
+}
+
+.button.frame:hover {
+  background: var(--ink-06);
+}
+
+/* On dark scenes */
+.button-cream {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.button-cream:hover {
+  background: #fff;
+}
+
+.button-outline-light {
+  min-height: 48px;
+  padding-inline: 16.5px;
+  border: 1px dashed var(--cream-40);
+  color: var(--cream);
+}
+
+.button-outline-light:hover {
+  border-color: var(--cream);
+}
+
+/* Frosted glass pill surface */
+.glass {
+  position: relative;
+  isolation: isolate;
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-filter);
+  backdrop-filter: var(--glass-filter);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass::before,
+.glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* hairline light edge, masked to a 0.5px ring */
+.glass::before {
+  padding: 0.5px;
+  background: var(--glass-edge);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+}
+
+.glass::after {
+  background: var(--glass-sheen);
+}
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 100;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  background: var(--ink);
+  color: var(--cream);
+  font-size: var(--text-ui);
+  font-weight: 500;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/*
+ * Below 1024px the nav's menu button and actions form a fixed bar at the bottom. Keyboard
+ * focus scrolls respect scroll-padding, so a focused link near the bottom edge stops above
+ * the bar instead of under it. Bar: 46px tall, inset 30px (16px below 768px), plus 8px air.
+ */
+@media (max-width: 1023px) {
+  html {
+    scroll-padding-bottom: calc(46px + 30px + 8px);
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    scroll-padding-bottom: calc(46px + 16px + 8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* Long-form text on the editorial subpages (About, Privacy) */
+.prose {
+  max-width: 780px;
+}
+
+.prose section + section {
+  margin-top: 48px;
+}
+
+.prose h2 {
+  margin-bottom: 18px;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  /* clear the sticky nav when reached through an anchor link */
+  scroll-margin-top: 100px;
+}
+
+.prose section[id] {
+  scroll-margin-top: 100px;
+}
+
+.prose p {
+  line-height: 1.7;
+}
+
+.prose p + p {
+  margin-top: 1em;
+}
+
+.prose a {
+  border-bottom: 1px solid var(--grey-track);
+  transition: border-color 0.2s var(--ease-out);
+}
+
+.prose a:hover {
+  border-bottom-color: currentColor;
+}
+
+@media (max-width: 767px) {
+  .prose h2 {
+    font-size: 27px;
+  }
+}

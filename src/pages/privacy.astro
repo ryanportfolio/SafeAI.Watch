@@ -1,0 +1,38 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+<PageLayout
+  title="Privacy"
+  description="SafeAI.watch has no accounts, analytics, or site cookies. Its static pages are served by Vercel."
+  intro="SafeAI.watch has no accounts, newsletter form, analytics service, advertising, or payment flow. The site sets no cookies."
+>
+  <div class="prose">
+    <section aria-labelledby="site-heading">
+      <h2 id="site-heading">What the site does</h2>
+      <p>
+        Every page is a static file, built in advance and served as is. Fonts, images, and scripts load
+        from this site; pages make no requests to other services. The timeline runs in your browser, and
+        your selections are not stored after you leave the page.
+      </p>
+    </section>
+
+    <section aria-labelledby="hosting-heading">
+      <h2 id="hosting-heading">Hosting</h2>
+      <p>
+        The site is hosted on Vercel. To deliver pages and protect its service, Vercel processes the
+        technical details of each request, such as your IP address, the page requested, and your browser
+        type, and may keep them in standard server logs.{' '}
+        <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Vercel's privacy policy<span class="visually-hidden"> (opens in a new tab)</span></a>{' '}
+        describes how it handles that data.
+      </p>
+    </section>
+
+    <section aria-labelledby="links-heading">
+      <h2 id="links-heading">Links to other publishers</h2>
+      <p>
+        Links to research, reporting, and videos take you to other publishers. Those sites apply their
+        own privacy practices, which this page does not cover.
+      </p>
+    </section>
+  </div>
+</PageLayout>

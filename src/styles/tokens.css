@@ -1,0 +1,96 @@
+/*
+ * Design tokens. Values measured from the running prototype at 1440px.
+ * Change the palette or type here, never inline in components.
+ */
+:root {
+  /* Palette */
+  --paper: #d7d7d0; /* page background, rgb(215 215 208) */
+  --ink: #1a1614; /* text, primary button, rgb(26 22 20) */
+  --cream: #f4f4e7; /* text on ink, rgb(244 244 231) */
+  --card-dark: #292623; /* dark cards, rgb(41 38 35) */
+  --card-dark-2: #2a2724; /* dark card inner surface, rgb(42 39 36) */
+  --scene-dark: #0d1418; /* dark WebGL scene backdrop, rgb(13 20 24) */
+
+  /* Ink tints (ink over paper) */
+  --ink-92: rgb(26 22 20 / 0.92);
+  --ink-70: rgb(26 22 20 / 0.7); /* lead paragraphs */
+  /* nav links, eyebrow labels. Prototype used 0.6 (4.13:1 on paper); 0.64 reaches 4.66:1 (WCAG AA). */
+  --ink-64: rgb(26 22 20 / 0.64);
+  --ink-10: rgb(26 22 20 / 0.1); /* dashed outlines */
+  --ink-06: rgb(26 22 20 / 0.06); /* hover wash */
+  --cream-60: rgb(244 244 231 / 0.6);
+  --cream-40: rgb(244 244 231 / 0.4); /* dashed outlines on dark */
+
+  /* Solid greys */
+  --grey-muted: #605b55; /* secondary body text; prototype #706a63 was 3.69:1 on paper, this is 4.65:1 */
+  --grey-label: #6a665f; /* section labels, rgb(106 102 95) */
+  --grey-dash: #9d9b94; /* strong dashed rule, rgb(157 155 148) */
+  --grey-rule: #b8b2a8; /* dashed rules between archive rows */
+  --grey-track: #b4b0a8; /* timeline track line and idle dots */
+  --grey-text: #615b54; /* body copy on light cards */
+
+  /* Light card (timeline) */
+  --card-light: #f3f1eb; /* rgb(243 241 235) */
+  --card-grid: rgb(133 149 166 / 0.15); /* 28px grid lines on the light card */
+
+  /* Accents */
+  --accent-orange: #ff7733; /* hero burst, rgb(255 119 51) */
+  --accent-amber: #e5a700; /* hero burst, rgb(229 167 0) */
+  --accent-olive: #a89a1a; /* hero burst, rgb(168 154 26) */
+  --mark-blue: #253e77; /* crosshair mark stroke */
+  --link-blue: #1c4190; /* artwork blue, rgb(28 65 144) */
+  --accent-blue: #6a86c2; /* artwork blue lifted for dark scenes (coverage: governance), rgb(106 134 194) */
+  --accent-dropcap: #ce4918; /* homepage drop cap; 3.16:1 on paper for its 50px glyph (prototype #de4e1a was 2.79:1) */
+  --chart-orange: #bd4a28; /* conceptual diagram: claims curve, rgb(189 74 40) */
+  --chart-olive: #677331; /* conceptual diagram: evidence curve and label; 4.65:1 on cream (#6e7a34 was 4.21:1) */
+  --ink-34: rgb(26 22 20 / 0.34); /* diagram axes */
+  --ink-20: rgb(26 22 20 / 0.2); /* eyebrow separator dot */
+  --cream-85: rgb(244 244 231 / 0.85); /* lead text on dark */
+
+  /* Frosted glass (nav pills, floating controls) */
+  --glass-bg: rgb(232 232 232 / 0.67);
+  --glass-filter: blur(2.6px) saturate(1.8) brightness(1.1);
+  --glass-shadow: inset 0 0 10px rgb(0 0 0 / 0.08);
+  --glass-edge: linear-gradient(122deg, #fff 0%, rgb(255 255 255 / 0.45) 40%, rgb(255 255 255 / 0.05) 78%);
+  --glass-sheen: linear-gradient(122deg, rgb(255 255 255 / 0.16) 0%, rgb(255 255 255 / 0) 44%);
+
+  /* Fonts. --font-serif is the single swap point for a licensed Signifier. */
+  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-serif: 'Newsreader Variable', Georgia, 'Times New Roman', serif;
+
+  /* Type scale (desktop values; h1/h2 scale down with the viewport) */
+  --text-display: clamp(46px, 30px + 3.2vw, 76px); /* subpage titles: 46 @500, 76 @1440 */
+  --leading-display: 1.04;
+  --text-h1: clamp(40px, 16.67px + 3.646vw, 54px); /* 40 @390, 44 @768, 54 @1024+ */
+  --leading-h1: 1.1;
+  --tracking-h1: -0.037em; /* -2px at 54px */
+  --text-h2: clamp(34px, 10.67px + 3.646vw, 48px); /* 34 @390, 48 @1024+ */
+  --leading-h2: 1.1;
+  --tracking-h2: -0.021em; /* -1px at 48px */
+  --text-h3: 36px;
+  --text-lead: 24px; /* serif lead / footer links */
+  --leading-lead: 1.2;
+  --text-body: 16px;
+  --leading-body: 1.5;
+  --text-ui: 14px; /* nav + buttons */
+  --leading-ui: 1.5;
+  --text-eyebrow: 10px; /* mono uppercase labels */
+  --text-eyebrow-lg: 11px;
+  --tracking-eyebrow: 0.1em;
+
+  /* Layout */
+  --page-gutter: 30px;
+  --content-gutter: 120px;
+  --radius-pill: 82px;
+  --radius-full: 9999px;
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --page-gutter: 16px;
+    --content-gutter: 24px;
+  }
+}

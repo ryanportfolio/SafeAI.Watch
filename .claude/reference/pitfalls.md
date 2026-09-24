@@ -141,3 +141,35 @@ Python heredoc therefore produced a string literal split across two lines and a
 SyntaxError; a second heredoc "fix" did the same thing. Write files that need literal
 backslash sequences with the Edit or Write tool, or keep the sequence out of the command
 text (read it from a file).
+
+## Astro drops the space at a line break before an inline element (2026-09-22)
+
+In `.astro` markup, prose that wraps onto a new line directly before an inline element (`<a>`, `<time>`) or directly after one loses the space: `through\n<time>` builds as `through<time>`, rendering "through18 September". Keep the element on the same line as its neighbouring words, or write `{' '}` at the break. Check built pages by scanning `main.innerText` for `[a-z][0-9]` and `[a-z.,][A-Z][a-z]`.
+
+## Built CSS shortens hex tokens (2026-09-22)
+
+The build minifies custom property values: `--accent-orange: #ff7733` reaches the browser as `#f73`. Script that reads a token with `getComputedStyle(el).getPropertyValue(...)` and parses it as six-digit hex gets garbage (orange rendered dark blue in the hero scene). Parse three-digit hex too; `rgb()` in `src/scripts/visuals/shapes.ts` does.
+
+## Overriding `position: sticky` keeps its `top` (2026-09-22)
+
+A media query that turns a sticky element back into `position: relative` still applies the inherited `top: 128px`, now as a relative offset: the step cards below 1024px sat 128px lower than their box, so the last card overlapped the next section. Reset `top: auto` wherever sticky is switched off.
+
+## Playwright init scripts stack on a reused page (2026-09-22)
+
+`page.addInitScript` registrations persist for the page's lifetime. Running the same `browser_run_code_unsafe` check twice on one `playwright-iso` page wrapped `WebGL2RenderingContext.prototype.clear` twice, doubling the frame count (600 frames in 3 s, median interval 0.1 ms). Call `browser_close` before rerunning a check that installs init scripts, or guard the script with a window flag.
+
+## fontkit cannot apply variations to a WOFF2 (2026-09-22)
+
+`fontkit.create(woff2).getVariation({ wght: 500 })` builds a plain TTF reader over the WOFF2 stream and throws `Cannot read properties of undefined (reading 'tables')` on the first glyph lookup; setting `variationCoords` by hand fails later in `_getPhantomPoints`. Astro's bundled `fontkitten` has the same cmap bug and no GPOS, so its outlines lack kerning (Geist "SafeAI.watch" is 3.5% wider unkerned). Decompress to TTF with `wawoff2` first, then `getVariation`: `scripts/brand/build-brand.mjs` does this and its layout matches the browser (nav name 96.14px measured, 96.13px computed).
+
+## Line endings vary per file (2026-09-23)
+
+Files under `src/` do not share one line ending: some tools wrote CRLF, others LF (on 2026-09-23 `index.astro`, `sequence.ts`, `SectionJump.astro`, `Timeline.astro` were LF after edits that had assumed CRLF). A Node or sed script that replaces a multi-line needle finds nothing when the needle's endings differ from the file's (cost retries). Check first (`grep -c $'' <file>`), match the file's endings, or use the Edit tool. The Edit tool is itself one source of the drift: on 2026-09-23 one Edit turned all-CRLF `SectionJump.astro` (315/315 lines) and `index.astro` (1416/1416) into all-LF, so a CRLF needle chosen from a count taken before the edit missed. Recount after any Edit.
+
+## Font preload warnings on every navigation after the first (2026-09-23)
+
+Chrome logged "preloaded using link preload but not used within a few seconds" for both preloaded fonts on every page after the first, with preload hrefs, `as`, `type` and `crossorigin` all matching the `@font-face` URLs. Disabling the HTTP cache did not help. Cause: Chrome reuses the parsed contents of an unchanged external stylesheet across same-origin navigations, including font sources it already loaded, so the new page never requests the font and its preload goes unclaimed. Moving the preloaded faces' `@font-face` rules into an inline `<style>` (parsed per document) gave 0 warnings; removing the preloads did too. `BaseLayout.astro` inlines them via `?inline` imports. Reproduce with one browser context walking all five routes twice, 4.5 s after each load; a fresh context per page never shows it.
+
+## No formatter config: don't run Prettier (2026-09-23)
+
+The repo has no Prettier config, so `npx prettier --write` falls back to defaults and rewraps whole files to 80 columns, turning a small edit into a full-file diff (happened on `hero.ts`; reverted). Edit by hand or with the Edit tool; don't run a formatter unless one is configured.

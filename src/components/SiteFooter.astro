@@ -1,0 +1,200 @@
+---
+import Mark from './Mark.astro';
+import { formatShort, lastUpdated } from '../data/record';
+
+interface Props {
+  /** ISO date the record was last updated. Defaults to the newest entry's date. */
+  updated?: string;
+}
+
+const { updated = lastUpdated } = Astro.props;
+
+const columns = [
+  {
+    label: 'Coverage',
+    links: [{ href: '/about#scope', label: 'Our scope' }],
+  },
+  {
+    label: 'SafeAI.watch',
+    links: [
+      { href: '/timeline', label: 'Timeline' },
+      { href: '/latest', label: 'Latest' },
+    ],
+  },
+  {
+    label: 'Reading',
+    links: [
+      { href: '/about#sources', label: 'Sources' },
+      { href: '/about#method', label: 'Our method' },
+    ],
+  },
+  {
+    label: 'About the project',
+    links: [
+      { href: '/about', label: 'About this project' },
+      { href: '/privacy', label: 'Privacy' },
+    ],
+  },
+];
+---
+<footer class="site-footer" data-site-footer>
+  <div class="footer-grid">
+    {columns.map((column) => (
+      <nav class="footer-cell frame" aria-label={column.label}>
+        <p class="eyebrow footer-label">{column.label}</p>
+        <ul class="footer-links">
+          {column.links.map((link) => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+    ))}
+
+    <div class="footer-cell footer-about frame">
+      <div class="footer-badges">
+        <span class="badge badge-dark">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Updated <time datetime={updated}>{formatShort(updated)}</time>
+        </span>
+        <span class="badge badge-light">Public sources</span>
+      </div>
+      <p class="eyebrow footer-tagline">
+        A public record of AI safety and security<br />
+        Read the evidence and its limits
+      </p>
+      <Mark size={72} class="footer-mark" />
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding: 0 var(--page-gutter) 18px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 2fr);
+    gap: 9px;
+  }
+
+  .footer-cell {
+    position: relative;
+    min-height: 220px;
+    padding: 78px 19.5px 19.5px;
+  }
+
+  .footer-label {
+    position: absolute;
+    top: 20px;
+    left: 19.5px;
+    right: 19.5px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .footer-links a {
+    font-family: var(--font-serif);
+    font-size: var(--text-lead);
+    line-height: var(--leading-lead);
+    color: var(--ink);
+    transition: color 0.2s var(--ease-out);
+  }
+
+  .footer-links a:hover {
+    color: var(--ink-64);
+  }
+
+  .footer-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 19.5px 19.5px;
+  }
+
+  .footer-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 8px;
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow-lg);
+    line-height: 13px;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+  }
+
+  .badge-dark {
+    background: var(--ink);
+    color: var(--cream);
+    font-weight: 600;
+  }
+
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cream);
+  }
+
+  .badge-light {
+    background: rgb(255 255 255 / 0.2);
+    color: var(--ink-64);
+  }
+
+  .footer-tagline {
+    padding-right: 96px;
+    line-height: 13px;
+  }
+
+  .footer-about :global(.footer-mark) {
+    position: absolute;
+    right: 19.5px;
+    bottom: 19.5px;
+  }
+
+  @media (max-width: 1023px) {
+    .site-footer {
+      /* clear the fixed bottom bar */
+      padding-bottom: calc(46px + 2 * 30px);
+    }
+
+    .footer-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-about {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .site-footer {
+      padding-bottom: calc(46px + 2 * 16px + 8px);
+    }
+
+    .footer-cell {
+      min-height: 180px;
+      padding-top: 64px;
+    }
+
+    .footer-about {
+      min-height: 200px;
+      padding-top: 20px;
+    }
+
+    .footer-links a {
+      font-size: 20px;
+    }
+  }
+</style>
