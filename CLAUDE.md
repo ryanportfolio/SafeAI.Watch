@@ -54,9 +54,9 @@ Sessions run on the user's Windows machine: a local dev server you start is reac
 - Restraint is a feature. New kernel rules, skills, and reference entries must earn their place. Prefer pruning stale content over accreting. More ≠ better. Complex ≠ complexity.
 - Don't restate what the harness already injects every turn (the available-skills list, the environment block, tool-doc behavior). It reloads for free; repeating it in the kernel is pure waste. Keep only the project's value-add. Always-loaded files (this kernel, indexes) = thin hooks; full detail lives in `.claude/reference/` subfiles, loaded on demand. See `/optimize-context`.
 
-## Subagents: direct-by-default, never Sonnet or Haiku
+## Subagents: always inherit the session model
 
-- Model floor: Opus, the latest Fable, or a newer, higher tier only. NEVER pass `model: 'sonnet'` or `model: 'haiku'`. Omitting `model` (inherit session) is fine when the session model meets the floor; bulk/mechanical work runs the floor model at low effort.
+- Omit `model` so subagents inherit the session model, unless the user names one.
 
 ## Git: push on completion
 
