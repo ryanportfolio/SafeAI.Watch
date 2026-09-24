@@ -5,8 +5,8 @@ import { eventsNewestFirst, formatLong } from '../data/record';
 <PageLayout
   title="Latest"
   heading="The latest record"
-  description="Research, reporting, and public warnings about AI safety and security, newest first, each linked to its original source."
-  intro="Research, reporting, and public warnings about AI safety and security. This first selection follows AI and biological risk."
+  description="Research, incidents, public warnings, and policy on AI safety and security, newest first, each linked to its original source."
+  intro="Research, reported incidents, public warnings, and policy on AI safety and security, newest first. The record began with AI and biological risk."
 >
   <ol class="archive">
     {eventsNewestFirst.map((event) => (
@@ -21,7 +21,14 @@ import { eventsNewestFirst, formatLong } from '../data/record';
               {event.title}<span class="archive-arrow" aria-hidden="true">&nbsp;↗</span><span class="visually-hidden"> (opens in a new tab)</span>
             </a>
           </h2>
-          <p class="archive-summary">{event.summary}</p>
+          <dl class="archive-parts">
+            <dt>What happened</dt>
+            <dd>{event.happened}</dd>
+            <dt>Evidence</dt>
+            <dd>{event.evidence}</dd>
+            <dt>Uncertain</dt>
+            <dd>{event.uncertain}</dd>
+          </dl>
           <p class="archive-source">{event.source}</p>
         </article>
       </li>
@@ -82,10 +89,27 @@ import { eventsNewestFirst, formatLong } from '../data/record';
     border-bottom-color: currentColor;
   }
 
-  .archive-summary {
+  .archive-parts {
     margin-bottom: 17px;
+  }
+
+  .archive-parts dt {
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--grey-label);
+  }
+
+  .archive-parts dd {
+    margin-inline-start: 0;
+    margin-bottom: 12px;
     font-size: 16px;
     line-height: 1.7;
+  }
+
+  .archive-parts dd:last-child {
+    margin-bottom: 0;
   }
 
   @media (max-width: 767px) {

@@ -25,17 +25,17 @@ const sequence = [
   {
     label: 'The development',
     heading: ['What', 'happened'],
-    body: 'Start with the dated event: a paper appeared, a company reported misuse, or a policymaker proposed a safeguard. Name the source and describe its claim.',
+    body: 'Start with the dated event, such as a paper, a company incident report, or a government order. Name the source and state its claim.',
   },
   {
     label: 'The evidence',
     heading: ['What the', 'evidence shows'],
-    body: 'Distinguish a controlled evaluation from a real incident. Look for methods, access to underlying material, independent scrutiny, and limits the authors acknowledge.',
+    body: 'Separate a controlled test from a real incident. Check the methods, the underlying data, any outside review, and the limits the authors state.',
   },
   {
     label: 'The open questions',
     heading: ['What remains', 'uncertain'],
-    body: 'A warning may be serious while its likelihood remains unclear. Record contested interpretations, missing evidence, and the gap between a possible capability and observed harm.',
+    body: 'A warning can be serious while its likelihood stays unclear. Record disputed readings, missing evidence, and the gap between what a model could do and observed harm.',
   },
 ];
 
@@ -43,22 +43,22 @@ const coverage = [
   {
     label: 'Research',
     title: 'Safety research',
-    body: 'Evaluations, methods, and findings about model capabilities and safeguards.',
+    body: 'Studies by labs and independent researchers that test what models can do and how well safeguards hold.',
   },
   {
     label: 'Incidents',
-    title: 'Security incidents',
-    body: 'Reported misuse and failures, with attribution and limits on what is known.',
+    title: 'Reported incidents',
+    body: 'Reported misuse, model failures, and lawsuits, with who reported them and what is still unknown.',
   },
   {
     label: 'Warnings',
     title: 'Public warnings',
-    body: 'Arguments and forecasts from researchers, builders, and other public voices.',
+    body: 'Open letters, statements, essays, interviews, resignations, and reporting on warnings about AI risk.',
   },
   {
     label: 'Governance',
     title: 'Policy & oversight',
-    body: 'Proposals, safeguards, and institutions responding to AI risk.',
+    body: 'Government actions, international declarations, company safety rules, and policy proposals.',
   },
 ];
 
@@ -66,32 +66,32 @@ const faq = [
   {
     q: 'What counts as a source?',
     a: [
-      'Entries link to research, original company reports, public statements, policy analysis, or identified reporting.',
-      "A company report describes the company's own findings. A preprint has not necessarily completed peer review. Those labels stay visible.",
-      'The source link lets readers examine the original context and judge the evidence themselves.',
+      'Entries link to research papers, company reports, public statements, government documents, court filings, or named news outlets.',
+      "A company report gives the company's own findings. A preprint may not have finished peer review. Every entry shows its source type.",
+      'Follow the link to read the original and judge the evidence yourself.',
     ],
   },
   {
     q: 'Does a warning establish harm?',
     a: [
-      'Warnings describe possible harms, expectations, or arguments. They can motivate safeguards before an incident is observed.',
-      'An evaluation may show capability under particular conditions. It does not by itself show that the same harm occurred in the world.',
+      'Warnings describe possible harms and the reasons for concern. They can prompt safeguards before any incident occurs.',
+      'An evaluation can show a capability under test conditions. That alone does not show the harm happened in the world.',
     ],
   },
   {
     q: 'How are disagreements handled?',
     a: [
-      'Critical analysis belongs alongside warnings. Different authors can agree that a risk deserves attention while disagreeing about likelihood, evidence, or the best response.',
-      'We identify who is speaking and distinguish their interpretation from the underlying observation.',
-      'Read across sources before treating one account as settled.',
+      'The record carries critical analysis next to warnings. Authors can agree a risk deserves attention and still disagree about its likelihood, the evidence, or the best response.',
+      'Each entry names who is speaking and keeps their reading apart from what was observed.',
+      'Read more than one source before treating an account as settled.',
     ],
   },
   {
     q: 'How current is this record?',
     a: [
-      `The newest entry was published on ${formatLong(lastUpdated)}. This is a selected public record, not a live monitoring service.`,
-      'The initial selection focuses on AI and biological risk, with research, reported misuse, public warnings, and policy responses.',
-      'Publication dates appear on entries. Readers can follow each link for revisions or later developments.',
+      `The record holds ${events.length} selected entries, and the newest is dated ${formatLong(lastUpdated)}. It does not track events as they happen.`,
+      'It covers AI safety and security: research and evaluations, reported incidents, public warnings and statements, and policy. The record began with AI and biological risk.',
+      'Each entry shows its publication date. Follow its link for revisions or later developments.',
     ],
   },
 ];
@@ -100,21 +100,21 @@ const faq = [
 // from the record entry each card links to.
 const reading = [
   {
-    event: entry('https://arxiv.org/abs/2506.13798'),
-    title: 'When biological capability raises risk',
-    summary: 'A research preprint argues that model guidance can increase biological risk. Its dialogues do not demonstrate an attack.',
+    event: entry('https://www.anthropic.com/institute/recursive-self-improvement'),
+    title: 'Counting the code Claude writes',
+    summary: "Anthropic reports that as of May 2026 Claude authored more than 80% of the code merged into Anthropic's codebase.",
     art: researchArt,
   },
   {
-    event: entry('https://thebulletin.org/2026/07/ai-executives-worry-about-their-technologies-aiding-bioterrorists-how-likely-is-that/'),
-    title: 'Examining the public warnings',
-    summary: 'The Bulletin of the Atomic Scientists examines executive warnings and the evidence behind them.',
+    event: entry('https://darioamodei.com/post/we-must-pace-the-frontier'),
+    title: 'A call to slow capability gains',
+    summary: "Anthropic's chief executive argues the industry must slow how fast it improves models, and commits his company to embedded third-party evaluators.",
     art: warningsArt,
   },
   {
     event: entry('https://www.rand.org/pubs/research_reports/RRA4999-1.html'),
     title: 'Building layers of biosecurity',
-    summary: 'A RAND policy report proposes mutually reinforcing safeguards for the AI era.',
+    summary: 'A RAND research report examines a network of nine mitigations and the areas where they reinforce one another.',
     art: oversightArt,
   },
 ];
@@ -160,7 +160,7 @@ const pct = (v: number, of: number) => `${((v / of) * 100).toFixed(2)}%`;
     </div>
     <div class="wrap hero-inner">
       <h1 id="hero-title">Keeping watch on AI</h1>
-      <p class="lead hero-lead">News, research, and warnings about AI safety and security. Follow the developments, examine the evidence, and hear from the people closest to the work.</p>
+      <p class="lead hero-lead">A dated record of AI safety and security research, incidents, warnings, and policy. Each entry links its original source and separates what happened from what remains uncertain.</p>
       <div class="hero-actions">
         <a class="button button-primary" href="/latest">Explore latest</a>
         <a class="button frame" href="/timeline">Browse timeline</a>
@@ -202,13 +202,13 @@ const pct = (v: number, of: number) => `${((v / of) * 100).toFixed(2)}%`;
             </span>
           </span>
           <span class="thumb-caption">
-            <span class="thumb-badge">26:46 · Watch at PBS ↗</span>
+            <span class="thumb-badge">26m 46s · Watch at PBS ↗</span>
             <span class="thumb-mark"><Mark size={16} /></span>
           </span>
         </a>
       </div>
       <div class="interview-copy">
-        <h2 id="interview-title" class="interview-title">Could AI build a bioweapon? A GZERO World interview examines the risks, the warnings, and the questions still open</h2>
+        <h2 id="interview-title" class="interview-title">Ian Bremmer interviews Annie Jacobsen on GZERO World about how AI is changing the risk of biological weapons</h2>
         <div class="interview-meta">
           <p>Featured interview · <time datetime={interview.date}>{formatShort(interview.date)}</time></p>
           <p class="interview-source">
@@ -254,9 +254,9 @@ const pct = (v: number, of: number) => `${((v / of) * 100).toFixed(2)}%`;
         </div>
       </figure>
       <div class="manifesto-copy">
-        <p><span class="dropcap frame" aria-hidden="true"><span>P</span></span><span class="visually-hidden">P</span>ublic understanding of AI risk depends on evidence people can examine. Research, company reports, interviews, and policy proposals often describe different things: an evaluated capability, a possible future harm, or a reported incident. Those differences belong in the record.</p>
-        <p>SafeAI.watch follows the public record of AI safety and security, with links back to the people and institutions making each claim.</p>
-        <p>Read the source, check what was observed, and keep the unresolved questions in view. This diagram is conceptual, with no measured scale.</p>
+        <p><span class="dropcap frame" aria-hidden="true"><span>P</span></span><span class="visually-hidden">P</span>ublic understanding of AI risk depends on evidence people can examine. Research, company reports, interviews, and policy proposals often describe different things: an evaluated capability, a possible future harm, or a reported incident. The record keeps them apart.</p>
+        <p>SafeAI.watch records public claims about AI safety and security and links each entry to the person or institution making it.</p>
+        <p>Read the source, check what was observed, and note what is still unresolved. The diagram is conceptual and has no measured scale.</p>
       </div>
     </div>
   </section>
@@ -310,7 +310,7 @@ const pct = (v: number, of: number) => `${((v / of) * 100).toFixed(2)}%`;
         label="Areas of coverage"
         id="coverage-title"
         heading={'Four ways to\nfollow the record'}
-        lead="Research, reported incidents, public warnings, and the decisions shaping AI oversight."
+        lead="Every entry in the record falls into one of four areas."
       />
       <div class="coverage-grid">
         <ul class="coverage-list">
@@ -397,7 +397,7 @@ const pct = (v: number, of: number) => `${((v / of) * 100).toFixed(2)}%`;
     <VisualSlot name="closing" tone="dark" />
     <div class="closing-inner">
       <h2 id="closing-title" class="closing-title">Stay close to <em>the evidence</em></h2>
-      <p class="closing-lead">Follow the developments, read the sources,<br /> and keep the open questions in view.</p>
+      <p class="closing-lead">Read the sources and keep the open questions in view.</p>
       <div class="closing-actions">
         <a class="button button-cream" href="/latest">Explore latest</a>
         <a class="button button-outline-light" href="/timeline">Browse timeline</a>

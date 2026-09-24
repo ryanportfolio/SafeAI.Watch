@@ -111,6 +111,7 @@ real project. It proves selective file adoption and preserved customization, not
 <!-- skill-capability-catalog:start -->
 | Skill | Coverage | Codex owner | Required capabilities | Shared contracts | Runtime exceptions |
 |---|---|---|---|---|---|
+| add-source | claude, codex | native | fresh-context-review | independence, evidence, authorization | None |
 | addskill | claude, codex | native | No additional gate | authorization, proportion | Codex authors through built-in skill-creator; Claude uses packaged authoring guidance. Both use addskill for the full lifecycle. |
 | adopt-repo | claude, codex | adapter | No additional gate | authorization | None |
 | advocate | claude, codex | adapter | fresh-context-review | independence | None |
