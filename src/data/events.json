@@ -354,8 +354,8 @@
     "category": "Warnings",
     "title": "Jacob Coxon resigns from Anthropic, saying neither Anthropic nor OpenAI is acting responsibly",
     "happened": "Jacob Coxon, who did pretraining research at OpenAI and Anthropic, posted that he had resigned from Anthropic and that \"Neither company is acting responsibly.\"",
-    "evidence": "Personal post. Anthropic's Evan Hubinger replied that he personally puts the chance AI kills all humans at \">10% within the next decade\" and believes Anthropic is \"trying its best.\"",
-    "uncertain": "Both are individual views. Hubinger wrote that Anthropic does \"not yet have a plan to solve alignment for superintelligence.\" Coxon's report that senior people \"express fear privately\" is his own.",
+    "evidence": "Personal post by a researcher who just left. It states his judgment of both companies and gives no specific examples.",
+    "uncertain": "One person's view. The post says both companies are \"racing straight to self-improving superintelligence\" but does not describe what he saw that led to that conclusion.",
     "source": "X · Personal post",
     "url": "https://x.com/hilbertspaess/status/2097476196791709843"
   },
