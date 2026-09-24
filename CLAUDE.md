@@ -51,7 +51,7 @@ Defaults until configured:
 
 ## Subagents: always inherit the session model
 
-- Omit `model` on every subagent spawn (Agent tool, Workflow `agent()`) so it inherits the session model. NEVER pass a model alias (`opus`, `fable`, `sonnet`, `haiku`): aliases are not pinned to the session's version, and `opus` has resolved to an older Opus than the session's.
+- Omit `model` so subagents inherit the session model, unless the user names one.
 
 ## Git: push on completion
 
