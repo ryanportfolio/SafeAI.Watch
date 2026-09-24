@@ -13,7 +13,13 @@ merging.
 ## Rules that do not bend
 
 - Every entry links its original source: the paper, filing, company post, statement, or the
-  person's own post. Coverage, explainers and compilations are leads, never the link.
+  person's own post. Coverage, explainers and compilations are never the source for a claim
+  about an event; they are leads to the source that is.
+- An explainer, essay or interview may be its own entry only when the publication is itself
+  the event: a named publisher, a dated page, and enough reach or standing that the
+  publishing is worth recording. Its `evidence` must say plainly that it is an argument. When
+  the material was the input to this run, the default is no entry; if you add one anyway, say
+  so in the PR and make the case there.
 - One URL per entry. Every quote and figure in an entry must appear in that linked source.
 - Separate what happened, what the evidence shows, and what remains uncertain.
 - No invented incidents, numbers, dates, or quotes.
