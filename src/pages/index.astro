@@ -100,21 +100,21 @@ const faq = [
 // from the record entry each card links to.
 const reading = [
   {
-    event: entry('https://arxiv.org/abs/2506.13798'),
-    title: 'When biological capability raises risk',
-    summary: 'A research preprint argues that model guidance can increase biological risk. Its dialogues do not demonstrate an attack.',
+    event: entry('https://www.anthropic.com/institute/recursive-self-improvement'),
+    title: 'Counting the code Claude writes',
+    summary: "Anthropic reports that as of May 2026 Claude authored more than 80% of the code merged into Anthropic's codebase.",
     art: researchArt,
   },
   {
-    event: entry('https://thebulletin.org/2026/07/ai-executives-worry-about-their-technologies-aiding-bioterrorists-how-likely-is-that/'),
-    title: 'Examining the public warnings',
-    summary: 'The Bulletin of the Atomic Scientists examines executive warnings and the evidence behind them.',
+    event: entry('https://darioamodei.com/post/we-must-pace-the-frontier'),
+    title: 'A call to slow capability gains',
+    summary: "Anthropic's chief executive argues the industry must slow how fast it improves models, and commits his company to embedded third-party evaluators.",
     art: warningsArt,
   },
   {
     event: entry('https://www.rand.org/pubs/research_reports/RRA4999-1.html'),
     title: 'Building layers of biosecurity',
-    summary: 'A RAND policy report proposes mutually reinforcing safeguards for the AI era.',
+    summary: 'A RAND research report examines a network of nine mitigations and the areas where they reinforce one another.',
     art: oversightArt,
   },
 ];
@@ -202,13 +202,13 @@ const pct = (v: number, of: number) => `${((v / of) * 100).toFixed(2)}%`;
             </span>
           </span>
           <span class="thumb-caption">
-            <span class="thumb-badge">26:46 · Watch at PBS ↗</span>
+            <span class="thumb-badge">26m 46s · Watch at PBS ↗</span>
             <span class="thumb-mark"><Mark size={16} /></span>
           </span>
         </a>
       </div>
       <div class="interview-copy">
-        <h2 id="interview-title" class="interview-title">Could AI build a bioweapon? A GZERO World interview examines the risks, the warnings, and the questions still open</h2>
+        <h2 id="interview-title" class="interview-title">Ian Bremmer interviews Annie Jacobsen on GZERO World about how AI is changing the risk of biological weapons</h2>
         <div class="interview-meta">
           <p>Featured interview · <time datetime={interview.date}>{formatShort(interview.date)}</time></p>
           <p class="interview-source">
