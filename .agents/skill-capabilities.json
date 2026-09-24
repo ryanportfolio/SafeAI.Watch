@@ -9,6 +9,38 @@
     "scope": "Preserve the requested outcome, constraints and runtime capability limits."
   },
   "skills": {
+    "add-source": {
+      "coverage": [
+        "claude",
+        "codex"
+      ],
+      "owners": {
+        "claude": "source",
+        "codex": "native"
+      },
+      "entrypoints": [
+        "add-source"
+      ],
+      "requiredTools": [
+        "fresh-context-review"
+      ],
+      "sharedContracts": [
+        "independence",
+        "evidence",
+        "authorization"
+      ],
+      "resources": [
+        ".claude/skills/add-source/references/sourcing.md",
+        ".claude/skills/add-source/references/entries.md",
+        ".claude/skills/add-source/references/placement.md",
+        ".claude/skills/add-source/scripts/transcript.mjs",
+        ".agents/skills/add-source/references/sourcing.md",
+        ".agents/skills/add-source/references/entries.md",
+        ".agents/skills/add-source/references/placement.md",
+        ".agents/skills/add-source/scripts/transcript.mjs"
+      ],
+      "exceptions": []
+    },
     "addskill": {
       "coverage": [
         "claude",
