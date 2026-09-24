@@ -29,6 +29,20 @@ approval through the normal mechanism when the sandbox blocks a fetch or push.
 - Publish only what a fetched source supports. A claim you cannot confirm stays off the site and
   goes in the PR as unverified, however striking it is. Hedged wording is not a substitute for a
   source. Take what is relevant, useful and confirmed, and leave the rest.
+- The site shares what is useful and true. It is not a critique engine. Verification decides what
+  gets published and how it is worded; it does not earn commentary on the page. `uncertain`
+  carries what is genuinely open: the limits the source states, and plain factual limits that
+  hold whether or not it admits them, such as allegations being untested, a defendant's response
+  being absent, a figure being self-reported, or a finding resting on one account. What does not
+  belong is argument with the source. Saying what kind of evidence something is ("a company's own
+  account", "an argument") is description and belongs. Distortions you found go in the PR, where
+  the reader can see what was rejected.
+- Criticizing a source needs a higher bar than repeating one, because a wrong correction costs
+  more credibility than a missing one. Before writing that a source is wrong: read the passage it
+  actually relies on, not a keyword match; check whether a looser reading of its words is fair;
+  and be sure the disagreement is not just compression. Never assert a negative wider than what
+  you checked. "None of the sources I checked says X" is provable, and name them. "No published
+  source says X" and "X did not happen" are not.
 - Allegations stay allegations. No self-harm method detail. Name who reported what.
 - Sensitive technical material (biological, chemical, weapons, exploit detail): fetch to a
   file and extract only the passages needed; never read whole pages; never copy operational
