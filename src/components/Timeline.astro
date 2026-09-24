@@ -84,7 +84,14 @@ const pad = (n: number) => String(n).padStart(2, '0');
           <span>{event.category}</span>
         </p>
         <h3 class="tl-panel-title">{event.title}</h3>
-        <p class="tl-summary">{event.summary}</p>
+        <dl class="tl-parts">
+          <dt>What happened</dt>
+          <dd>{event.happened}</dd>
+          <dt>Evidence</dt>
+          <dd>{event.evidence}</dd>
+          <dt>Uncertain</dt>
+          <dd>{event.uncertain}</dd>
+        </dl>
         <a class="tl-source" href={event.url} target="_blank" rel="noopener noreferrer">
           {event.source} <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
         </a>
@@ -308,12 +315,29 @@ const pad = (n: number) => String(n).padStart(2, '0');
     letter-spacing: -0.015em;
   }
 
-  .tl-summary {
+  .tl-parts {
     max-width: 690px;
     margin-bottom: 22px;
+  }
+
+  .tl-parts dt {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--grey-label);
+  }
+
+  .tl-parts dd {
+    margin-inline-start: 0;
+    margin-bottom: 10px;
     font-size: 16px;
     line-height: 1.6;
     color: var(--grey-text);
+  }
+
+  .tl-parts dd:last-child {
+    margin-bottom: 0;
   }
 
   .tl-source {
@@ -375,7 +399,9 @@ const pad = (n: number) => String(n).padStart(2, '0');
     }
 
     .tl-top {
+      flex-wrap: wrap;
       align-items: flex-start;
+      row-gap: 16px;
     }
 
     .tl-eyebrow {
@@ -406,7 +432,11 @@ const pad = (n: number) => String(n).padStart(2, '0');
       font-size: 30px;
     }
 
-    .tl-summary {
+    .tl-parts dt {
+      font-size: 10px;
+    }
+
+    .tl-parts dd {
       font-size: 15px;
       line-height: 1.5;
     }
@@ -453,16 +483,33 @@ const pad = (n: number) => String(n).padStart(2, '0');
       tabs.findIndex((tab) => tab.getAttribute('aria-selected') === 'true'),
     );
 
+    // Where a smooth scroll of the track is heading, so quick key presses
+    // measure against the destination instead of a half-finished animation.
+    let scrollTarget: number | null = null;
+    let settle = 0;
+    track.addEventListener('scrollend', () => {
+      scrollTarget = null;
+    });
+
     // Scroll the track, never the page, so the selected date is in view.
     function reveal(tab: HTMLElement, instant = false) {
       const bounds = track.getBoundingClientRect();
       const box = tab.getBoundingClientRect();
       const behavior: ScrollBehavior = instant || reducedMotion.matches ? 'auto' : 'smooth';
-      if (box.left < bounds.left) {
-        track.scrollBy({ left: box.left - bounds.left, behavior });
-      } else if (box.right > bounds.right) {
-        track.scrollBy({ left: box.right - bounds.right, behavior });
-      }
+      const start = box.left - bounds.left + track.scrollLeft;
+      const end = start + box.width;
+      const current = scrollTarget ?? track.scrollLeft;
+      const max = track.scrollWidth - track.clientWidth;
+      let left = current;
+      if (start < current) left = start;
+      else if (end > current + bounds.width) left = end - bounds.width;
+      left = Math.min(Math.max(0, Math.round(left)), max);
+      if (left === Math.round(current)) return;
+      scrollTarget = behavior === 'smooth' ? left : null;
+      window.clearTimeout(settle);
+      // fallback for browsers without scrollend
+      if (scrollTarget !== null) settle = window.setTimeout(() => (scrollTarget = null), 800);
+      track.scrollTo({ left, behavior });
     }
 
     // Every change of selection (click, arrow keys, year, previous/next) updates
@@ -529,6 +576,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
       button.addEventListener('click', () => {
         const first = tabs.findIndex((_, i) => yearOf(i) === button.dataset.yearButton);
         if (first !== -1 && yearOf(selected) !== button.dataset.yearButton) {
+          scrollTarget = null;
           track.scrollTo({ left: 0 });
           select(first);
         }
