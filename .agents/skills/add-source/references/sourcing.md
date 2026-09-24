@@ -8,7 +8,7 @@
 | Web page | `curl -sL -A "Mozilla/5.0 ..." -o <file> <url>`, then grep or extract the passages needed. Never read a whole page into context. |
 | PDF | curl to file, then `pdftotext` or a PDF reader; grep the text. |
 | X post | `https://api.fxtwitter.com/<user>/status/<id>` returns the text and `created_at`. |
-| Blocked page | Try a web fetch tool if the session exposes one, then `https://web.archive.org/web/2026*/<url>`. Log the route. Reporting about a source may confirm a fact exists but is never the entry's link unless the original cannot be fetched at all, and then the `source` label says so. |
+| Blocked page | Try a web fetch tool if the session exposes one, then `https://web.archive.org/web/2026*/<url>`. Log the route. Reporting about a source may point you to it, but never becomes the entry's link. An original you cannot reach through any route stays out of the record; say so in the PR. Reporting is itself a primary source only when the reporting is the event, as with an investigation whose findings exist nowhere else; then the outlet is the publisher and the `source` type says `Reporting`. |
 
 Known behavior (re-check; sites change):
 

@@ -183,6 +183,11 @@
       "name": "dare",
       "label": "DARE",
       "group": "discipline"
+    },
+    {
+      "name": "add-source",
+      "label": "Add source",
+      "group": "specialist"
     }
   ]
 }
