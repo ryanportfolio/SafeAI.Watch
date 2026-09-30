@@ -1,0 +1,749 @@
+{
+  "duration": 127.7,
+  "chapters": [
+    {
+      "id": "c1",
+      "title": "Both on one line",
+      "start": 0
+    },
+    {
+      "id": "c2",
+      "title": "Labels",
+      "start": 26.6
+    },
+    {
+      "id": "c3",
+      "title": "Tests that reached out",
+      "start": 32.6
+    },
+    {
+      "id": "c4",
+      "title": "Warnings and the fork",
+      "start": 55.1
+    },
+    {
+      "id": "c5",
+      "title": "What is working",
+      "start": 71.9
+    },
+    {
+      "id": "c6",
+      "title": "Dusk",
+      "start": 101.7
+    },
+    {
+      "id": "c7",
+      "title": "Hold both at once",
+      "start": 116.5
+    }
+  ],
+  "beats": [
+    {
+      "id": "B1",
+      "start": 0,
+      "end": 8,
+      "type": "benefit",
+      "statement": {
+        "text": "Half of blind or low-vision AI-description users use it daily",
+        "at": 1,
+        "rows": [
+          "B18"
+        ],
+        "quote": false,
+        "italic": [
+          "daily"
+        ]
+      },
+      "precision": {
+        "text": "21% say its errors hurt them · self-reported · AFB, Aug 2026",
+        "at": 4.5,
+        "rows": [
+          "B18"
+        ]
+      },
+      "extra": [
+        {
+          "text": "BENEFITS",
+          "at": 1.6,
+          "owner": true,
+          "role": "key"
+        }
+      ]
+    },
+    {
+      "id": "B2",
+      "start": 8,
+      "end": 14.5,
+      "type": "happened",
+      "statement": {
+        "text": "The FBI’s crime report added its first section on AI",
+        "at": 8.5,
+        "rows": [
+          "H27"
+        ],
+        "quote": false,
+        "italic": [
+          "first"
+        ]
+      },
+      "precision": {
+        "text": "22,364 AI-related complaints of 1,008,597 · 2025, victim-reported",
+        "at": 12,
+        "rows": [
+          "H27"
+        ]
+      },
+      "extra": [
+        {
+          "text": "FBI · INTERNET CRIME REPORT",
+          "at": 8.8,
+          "rows": [
+            "H27"
+          ],
+          "role": "label"
+        },
+        {
+          "text": "REPORTED INCIDENTS",
+          "at": 9.1,
+          "rows": [
+            "S20"
+          ],
+          "role": "key"
+        }
+      ]
+    },
+    {
+      "id": "B3",
+      "start": 14.5,
+      "end": 26.6,
+      "type": "perspective",
+      "statement": {
+        "text": "It can give you a positive infinity of new benefits at the same time that it presents almost a negative infinity of risk in the same object",
+        "at": 15.1,
+        "rows": [
+          "Q1"
+        ],
+        "quote": true,
+        "italic": []
+      },
+      "precision": {
+        "text": "Tristan Harris · Center for Humane Technology · with Krista Tippett, July 2026",
+        "at": 22.9,
+        "rows": [
+          "Q1"
+        ]
+      }
+    },
+    {
+      "id": "B4",
+      "start": 26.6,
+      "end": 32.6,
+      "type": "owner",
+      "statement": {
+        "text": "A label turns everything a person thinks into one word",
+        "at": 27.4,
+        "owner": true,
+        "quote": false,
+        "italic": [
+          "word"
+        ]
+      },
+      "precision": {
+        "text": "People are people, not camps",
+        "at": 30.9,
+        "owner": true
+      },
+      "extra": [
+        {
+          "text": "DOOMER",
+          "at": 27.5,
+          "owner": true,
+          "role": "chip"
+        },
+        {
+          "text": "ACCELERATIONIST",
+          "at": 27.5,
+          "owner": true,
+          "role": "chip"
+        }
+      ]
+    },
+    {
+      "id": "B5a",
+      "start": 32.6,
+      "end": 40.8,
+      "type": "happened",
+      "statement": {
+        "text": "AI agents targeted real people and organisations during a cyber test",
+        "at": 33.2,
+        "rows": [
+          "H40"
+        ],
+        "quote": false,
+        "italic": [
+          "during a cyber test"
+        ]
+      },
+      "precision": {
+        "text": "10 of 122 runs · internet open on purpose, classifiers off",
+        "at": 37.6,
+        "rows": [
+          "H40"
+        ]
+      },
+      "extra": [
+        {
+          "text": "UK AI SECURITY INSTITUTE · AUG 2026",
+          "at": 33.6,
+          "rows": [
+            "H40"
+          ],
+          "role": "label"
+        },
+        {
+          "text": "19 ACTIONS",
+          "at": 36.4,
+          "rows": [
+            "H40"
+          ],
+          "role": "count"
+        },
+        {
+          "text": "MYTHOS 5 · GPT-5.6 SOL",
+          "at": 36.8,
+          "rows": [
+            "H40"
+          ],
+          "role": "label"
+        },
+        {
+          "text": "CONTROLLED TEST",
+          "at": 33.7,
+          "rows": [
+            "S31"
+          ],
+          "role": "key"
+        }
+      ]
+    },
+    {
+      "id": "B5b",
+      "start": 40.8,
+      "end": 48.8,
+      "type": "happened",
+      "statement": {
+        "text": "A human maintainer caught and refused to approve the malicious code",
+        "at": 41.3,
+        "rows": [
+          "H42"
+        ],
+        "quote": true,
+        "italic": []
+      },
+      "precision": {
+        "text": "The attempts failed, with no real-world harm found · some margins were narrow",
+        "at": 45.1,
+        "rows": [
+          "H41"
+        ]
+      }
+    },
+    {
+      "id": "B6",
+      "start": 48.8,
+      "end": 55.1,
+      "type": "shown-in-test",
+      "statement": {
+        "text": "Public testers broke every tested model at least once",
+        "at": 49.3,
+        "rows": [
+          "T72"
+        ],
+        "quote": false,
+        "italic": [
+          "every"
+        ]
+      },
+      "precision": {
+        "text": "13 models · results differed sharply between models",
+        "at": 52.6,
+        "rows": [
+          "T72"
+        ]
+      },
+      "extra": [
+        {
+          "text": "US CAISI · GRAY SWAN · UK AISI · MAR 2026",
+          "at": 49.7,
+          "rows": [
+            "T72",
+            "P41"
+          ],
+          "role": "label"
+        }
+      ]
+    },
+    {
+      "id": "B7",
+      "start": 55.1,
+      "end": 63.9,
+      "type": "warning",
+      "statement": {
+        "text": "Although the future remains uncertain and debated, the severity of these risks is extraordinary",
+        "at": 55.7,
+        "rows": [
+          "W2"
+        ],
+        "quote": true,
+        "italic": []
+      },
+      "precision": {
+        "text": "Yoshua Bengio, co-chair of the UN scientific panel on AI · Sept 2026",
+        "at": 60.2,
+        "rows": [
+          "W2"
+        ]
+      },
+      "extra": [
+        {
+          "text": "BENGIO · UN SECURITY COUNCIL",
+          "at": 56.7,
+          "rows": [
+            "W2"
+          ],
+          "role": "note"
+        },
+        {
+          "text": "PUBLIC WARNINGS",
+          "at": 56.7,
+          "rows": [
+            "S20"
+          ],
+          "role": "key"
+        }
+      ]
+    },
+    {
+      "id": "B8",
+      "start": 63.9,
+      "end": 71.9,
+      "type": "warning",
+      "statement": {
+        "text": "fundamentally transforming both offensive and defensive cyber capabilities",
+        "at": 64.9,
+        "rows": [
+          "W31"
+        ],
+        "quote": true,
+        "italic": []
+      },
+      "precision": {
+        "text": "A forecast · Five Eyes cyber agency heads, June 2026",
+        "at": 67.9,
+        "rows": [
+          "W31"
+        ]
+      },
+      "extra": [
+        {
+          "text": "GOOGLE · FIRST ZERO-DAY IT BELIEVES AI BUILT · MAY 2026",
+          "at": 66.1,
+          "rows": [
+            "H23"
+          ],
+          "role": "label"
+        },
+        {
+          "text": "MOZILLA · 271 AI-FOUND FIREFOX BUGS FIXED · APR 2026",
+          "at": 66.1,
+          "rows": [
+            "P24"
+          ],
+          "role": "label"
+        },
+        {
+          "text": "SAFEGUARDS",
+          "at": 66.3,
+          "owner": true,
+          "role": "key"
+        }
+      ]
+    },
+    {
+      "id": "B9",
+      "start": 71.9,
+      "end": 80,
+      "type": "progress",
+      "statement": {
+        "text": "Training cut covert actions from 13% to 0.4% in tests",
+        "at": 72.4,
+        "rows": [
+          "P32"
+        ],
+        "quote": false,
+        "italic": [
+          "in tests"
+        ]
+      },
+      "precision": {
+        "text": "OpenAI o3, 26 evaluations · Apollo Research with OpenAI · preprint, 2025",
+        "at": 76.5,
+        "rows": [
+          "P32"
+        ]
+      },
+      "extra": [
+        {
+          "text": "13%",
+          "at": 73,
+          "rows": [
+            "P32"
+          ],
+          "role": "count"
+        },
+        {
+          "text": "0.4%",
+          "at": 74.8,
+          "rows": [
+            "P32"
+          ],
+          "role": "count"
+        }
+      ]
+    },
+    {
+      "id": "B10",
+      "start": 80,
+      "end": 88.2,
+      "type": "progress",
+      "statement": {
+        "text": "OpenAI gave independent reviewers six days on site with its incident data",
+        "at": 80.5,
+        "rows": [
+          "P34"
+        ],
+        "quote": false,
+        "italic": [
+          "independent"
+        ]
+      },
+      "precision": {
+        "text": "After a test breach of Hugging Face · unpaid · OpenAI could redact",
+        "at": 84.5,
+        "rows": [
+          "H37",
+          "P34",
+          "P35"
+        ]
+      },
+      "extra": [
+        {
+          "text": "METR · REDWOOD RESEARCH · AUG 2026",
+          "at": 81.4,
+          "rows": [
+            "P34"
+          ],
+          "role": "label"
+        }
+      ]
+    },
+    {
+      "id": "B11",
+      "start": 88.2,
+      "end": 94.7,
+      "type": "policy",
+      "statement": {
+        "text": "Several laws require incident reports or independent audits",
+        "at": 88.7,
+        "rows": [
+          "L37",
+          "L30",
+          "L23"
+        ],
+        "quote": false,
+        "italic": [
+          "require"
+        ]
+      },
+      "precision": {
+        "text": "California and New York: incident reports · Illinois: independent audits",
+        "at": 91.7,
+        "rows": [
+          "L37",
+          "L30",
+          "L23"
+        ]
+      },
+      "extra": [
+        {
+          "text": "CALIFORNIA · JAN 2026",
+          "at": 89.3,
+          "rows": [
+            "L37"
+          ],
+          "role": "buoy"
+        },
+        {
+          "text": "EU · MAY REQUEST MODEL ACCESS · AUG 2026",
+          "at": 89.6,
+          "rows": [
+            "L14"
+          ],
+          "role": "buoy"
+        },
+        {
+          "text": "NEW YORK · JAN 2027",
+          "at": 89.9,
+          "rows": [
+            "L30"
+          ],
+          "role": "buoy"
+        },
+        {
+          "text": "ILLINOIS · JAN 2027",
+          "at": 90.2,
+          "rows": [
+            "L23"
+          ],
+          "role": "buoy"
+        },
+        {
+          "text": "EU HIGH-RISK RULES DELAYED TO DEC 2027",
+          "at": 92.7,
+          "rows": [
+            "L17"
+          ],
+          "role": "label"
+        },
+        {
+          "text": "POLICY & OVERSIGHT",
+          "at": 89.3,
+          "rows": [
+            "S20"
+          ],
+          "role": "key"
+        }
+      ]
+    },
+    {
+      "id": "B12",
+      "start": 94.7,
+      "end": 101.7,
+      "type": "policy",
+      "statement": {
+        "text": "Testing institutes from nine countries and the EU finished shared guidance",
+        "at": 95.2,
+        "rows": [
+          "L19"
+        ],
+        "quote": false,
+        "italic": [
+          "shared"
+        ]
+      },
+      "precision": {
+        "text": "First best-practice guidance, not binding · Seoul, July 2026",
+        "at": 99,
+        "rows": [
+          "L19"
+        ]
+      },
+      "extra": [
+        {
+          "text": "AUSTRALIA",
+          "at": 95.6,
+          "rows": [
+            "L19"
+          ],
+          "role": "station"
+        },
+        {
+          "text": "CANADA",
+          "at": 95.7,
+          "rows": [
+            "L19"
+          ],
+          "role": "station"
+        },
+        {
+          "text": "EU",
+          "at": 95.7,
+          "rows": [
+            "L19"
+          ],
+          "role": "station"
+        },
+        {
+          "text": "FRANCE",
+          "at": 95.8,
+          "rows": [
+            "L19"
+          ],
+          "role": "station"
+        },
+        {
+          "text": "JAPAN",
+          "at": 95.8,
+          "rows": [
+            "L19"
+          ],
+          "role": "station"
+        },
+        {
+          "text": "KENYA",
+          "at": 95.9,
+          "rows": [
+            "L19"
+          ],
+          "role": "station"
+        },
+        {
+          "text": "KOREA",
+          "at": 96,
+          "rows": [
+            "L19"
+          ],
+          "role": "station"
+        },
+        {
+          "text": "SINGAPORE",
+          "at": 96,
+          "rows": [
+            "L19"
+          ],
+          "role": "station"
+        },
+        {
+          "text": "UK",
+          "at": 96.1,
+          "rows": [
+            "L19"
+          ],
+          "role": "station"
+        },
+        {
+          "text": "US",
+          "at": 96.1,
+          "rows": [
+            "L19"
+          ],
+          "role": "station"
+        }
+      ]
+    },
+    {
+      "id": "B13",
+      "start": 101.7,
+      "end": 107.7,
+      "type": "benefit",
+      "statement": {
+        "text": "AlphaFold2 can predict the structure of virtually all known proteins",
+        "at": 102.5,
+        "rows": [
+          "B4"
+        ],
+        "quote": false,
+        "italic": [
+          "predict"
+        ]
+      },
+      "precision": {
+        "text": "Predicted structures, not experimental ones",
+        "at": 106,
+        "rows": [
+          "B4"
+        ]
+      },
+      "extra": [
+        {
+          "text": "NOBEL PRIZE IN CHEMISTRY · 2024",
+          "at": 103.1,
+          "rows": [
+            "B4"
+          ],
+          "role": "label"
+        }
+      ]
+    },
+    {
+      "id": "B14",
+      "start": 107.7,
+      "end": 116.5,
+      "type": "unknown",
+      "statement": {
+        "text": "no existing study provides a reliable probability of severe loss of control",
+        "at": 108.3,
+        "rows": [
+          "W7"
+        ],
+        "quote": true,
+        "italic": []
+      },
+      "precision": {
+        "text": "UN scientific panel on AI, Sept 2026 · uncertainty does not mean systems stay controllable",
+        "at": 112.3,
+        "rows": [
+          "W7"
+        ]
+      }
+    },
+    {
+      "id": "B15",
+      "start": 116.5,
+      "end": 120,
+      "type": "owner",
+      "statement": {
+        "text": "Hold both at once",
+        "at": 116.9,
+        "owner": true,
+        "quote": false,
+        "italic": [
+          "both"
+        ]
+      }
+    },
+    {
+      "id": "B16",
+      "start": 120,
+      "end": 127.7,
+      "type": "site",
+      "statement": {
+        "text": "Stay close to the evidence",
+        "at": 121.4,
+        "rows": [
+          "S25"
+        ],
+        "quote": false,
+        "italic": [
+          "the evidence"
+        ]
+      },
+      "precision": {
+        "text": "A public record of AI safety and security",
+        "at": 123.7,
+        "rows": [
+          "S13"
+        ]
+      },
+      "extra": [
+        {
+          "text": "SafeAI.watch",
+          "at": 122.4,
+          "rows": [
+            "S9",
+            "S10"
+          ],
+          "role": "wordmark"
+        },
+        {
+          "text": "Read the evidence and its limits",
+          "at": 123.7,
+          "rows": [
+            "S13"
+          ],
+          "role": "tagline"
+        }
+      ]
+    }
+  ]
+}

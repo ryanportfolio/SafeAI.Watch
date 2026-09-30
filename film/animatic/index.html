@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>SafeAI.watch film: animatic</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #22221f; color: #d7d7d0; font: 13px/1.4 ui-monospace, Consolas, monospace; }
+  body { display: flex; flex-direction: column; padding: 16px; box-sizing: border-box; gap: 12px; }
+  #wrap { flex: 1; min-height: 0; display: grid; place-items: center; }
+  #stage { position: relative; background: #d7d7d0; }
+  #film { display: block; width: 100%; height: 100%; }
+  #transport { display: grid; grid-template-columns: auto auto 1fr auto; gap: 12px; align-items: center; }
+  button { background: #33332f; color: #f4f4e7; border: 1px solid #55554f; border-radius: 4px; padding: 6px 12px; font: inherit; cursor: pointer; }
+  #scrub { position: relative; height: 28px; }
+  #range { position: absolute; inset: 0; width: 100%; margin: 0; }
+  .tick { position: absolute; top: 0; bottom: 0; width: 1px; background: #a89a1a; pointer-events: none; }
+  .tick span { position: absolute; top: -2px; left: 4px; font-size: 10px; color: #9d9b94; white-space: nowrap; }
+  #time { min-width: 150px; text-align: right; }
+  #status { color: #9d9b94; }
+</style>
+</head>
+<body>
+  <div id="wrap"><div id="stage"><canvas id="film" width="1920" height="1080" aria-label="SafeAI.watch film animatic" role="img"></canvas></div></div>
+  <div id="transport">
+    <button id="play" type="button">Play</button>
+    <span id="status">loading</span>
+    <div id="scrub"><input id="range" type="range" min="0" max="100000" value="0" aria-label="Scrub"></div>
+    <span id="time">0.0 / 0.0</span>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
