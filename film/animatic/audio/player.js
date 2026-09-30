@@ -11,7 +11,7 @@ export function createSound({ data, button, initial = false, getT, isPlaying }) 
 
   function label() {
     button.setAttribute('aria-pressed', String(on));
-    button.textContent = !on ? 'Sound off' : failed ? 'Sound failed' : buffer ? 'Sound on' : 'Sound: rendering';
+    button.textContent = !on ? 'Sound off' : failed ? `Sound failed: ${failed.message || failed}` : buffer ? 'Sound on' : 'Sound: rendering';
   }
 
   function render() {

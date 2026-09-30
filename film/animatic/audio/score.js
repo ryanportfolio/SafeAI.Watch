@@ -269,13 +269,21 @@ export async function renderFilmAudio(data, { stem = 'mix', sampleRate = SAMPLE_
   };
   build(1);
   score.auto(M, stem);
-  for (let k = 1; k < data.duration; k++) {
-    ctx.suspend(k).then(() => {
-      for (let i = retired.length - 1; i >= 0; i--) if (retired[i][0] < k) { retired[i][1].disconnect(); retired.splice(i, 1); }
-      build(k + 1);
-      ctx.resume();
-    });
+  // Browsers without OfflineAudioContext.suspend (Firefox) build every voice up front: same
+  // output, slower render.
+  let staged = true;
+  for (let k = 1; k < data.duration && staged; k++) {
+    try {
+      ctx.suspend(k).then(() => {
+        for (let i = retired.length - 1; i >= 0; i--) if (retired[i][0] < k) { retired[i][1].disconnect(); retired.splice(i, 1); }
+        build(k + 1);
+        ctx.resume();
+      }, () => {});
+    } catch {
+      staged = false;
+    }
   }
+  if (!staged) build(Infinity);
   const rendered = await ctx.startRendering();
   const buffer = new AudioBuffer({ numberOfChannels: 2, length, sampleRate });
   for (let c = 0; c < 2; c++) buffer.copyToChannel(rendered.getChannelData(c).subarray(pre, pre + length), c);
