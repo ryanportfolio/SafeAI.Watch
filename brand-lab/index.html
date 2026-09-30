@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SafeAI.watch logo lab</title>
+<style>
+  :root { --paper: #d7d7d0; --ink: #1a1614; --dark: #181a15; --cream: #efece4; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.5 system-ui, sans-serif; }
+  header { padding: 40px 48px 8px; }
+  h1 { font-size: 22px; font-weight: 600; margin: 0 0 4px; }
+  header p { margin: 0; color: rgb(26 22 20 / .64); max-width: 70ch; }
+  .dir { display: grid; grid-template-columns: 220px 1fr; gap: 32px; padding: 32px 48px; border-top: 1px dashed rgb(26 22 20 / .2); }
+  .meta h2 { font-size: 18px; margin: 0 0 6px; }
+  .meta p { margin: 0 0 10px; color: rgb(26 22 20 / .72); font-size: 14px; }
+  .meta a { color: var(--ink); font-size: 13px; }
+  .row { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 16px; }
+  .tile { border-radius: 6px; padding: 28px; display: flex; align-items: center; justify-content: center; min-height: 180px; }
+  .light { background: #e6e5de; }
+  .darkt { background: var(--dark); }
+  .darkt img { filter: invert(1) hue-rotate(180deg) brightness(1.05); }
+  .tile img { max-width: 100%; max-height: 120px; }
+  .favs { display: flex; gap: 18px; align-items: end; }
+  .favs img { image-rendering: auto; }
+  .cap { font: 11px ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; color: rgb(26 22 20 / .56); margin-top: 6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>SafeAI.watch logo lab: five directions</h1>
+  <p>Each row shows the horizontal lockup, the stacked lockup and the favicon at 16, 32 and 64 px, on paper. The dark tiles are a quick inversion for comparison only; each direction's full board has its designed dark version, one-color versions, a site header mock-up and motion.</p>
+</header>
+<main id="dirs"></main>
+<script>
+const DIRS = [
+  { id: 'A-same-shape', name: 'A · Same shape', idea: 'One bent band drawn twice and turned 180° to lock into an S: ink half and orange half, benefit and danger from the same shape.' },
+  { id: 'B-the-point', name: 'B · The point', idea: 'The full stop is the one drawn element: half Newsreader round point, half Geist Mono square point, in orange. It takes the shape of each word it faces.' },
+  { id: 'C-evidence-line', name: 'C · Evidence line', idea: 'One stroke that loses ink in three steps: solid for what happened, dashed for what the evidence shows, dotted for what remains uncertain.' },
+  { id: 'D-footnote', name: 'D · Footnote', idea: 'The name with a blue superscript 1, a footnote call: every entry links its source. The stacked lockup carries the note itself.' },
+  { id: 'E-ledger', name: 'E · Ledger', idea: 'One letter per ruled cell, like a record filled in by hand; the cell holding the full stop is orange and the name pivots on it.' },
+];
+const main = document.getElementById('dirs');
+for (const d of DIRS) {
+  const base = `directions/${d.id}/`;
+  main.insertAdjacentHTML('beforeend', `
+  <section class="dir">
+    <div class="meta"><h2>${d.name}</h2><p>${d.idea}</p><a href="${base}board.html">Open full board</a> · <a href="${base}README.md">README</a></div>
+    <div>
+      <div class="row">
+        <div><div class="tile light"><img src="${base}lockup-horizontal.svg" alt=""></div><div class="cap">Horizontal</div></div>
+        <div><div class="tile light"><img src="${base}lockup-stacked.svg" alt=""></div><div class="cap">Stacked</div></div>
+        <div><div class="tile light favs"><img src="${base}favicon.svg" width="16" height="16" alt=""><img src="${base}favicon.svg" width="32" height="32" alt=""><img src="${base}favicon.svg" width="64" height="64" alt=""></div><div class="cap">Favicon 16 · 32 · 64</div></div>
+      </div>
+      <div class="row" style="margin-top:16px">
+        <div><div class="tile darkt"><img src="${base}lockup-horizontal.svg" alt=""></div><div class="cap">Quick dark inversion</div></div>
+      </div>
+    </div>
+  </section>`);
+}
+</script>
+</body>
+</html>
