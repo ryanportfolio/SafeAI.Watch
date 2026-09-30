@@ -3,6 +3,7 @@
 import { createFilm } from './engine/film.js';
 import { FONTS } from './engine/captions.js';
 import { qt, clamp } from './engine/util.js';
+import { createSound } from './audio/player.js';
 
 const q = new URLSearchParams(location.search);
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches || q.has('rm');
@@ -59,6 +60,8 @@ async function main() {
   let dragging = false; // the scrubber follows playback unless the viewer is dragging it
   const chapterAt = (x) => film.chapters.filter((c) => c.start <= x).at(-1)?.title ?? '';
   const beatAt = (x) => film.beats.filter((b) => b.start <= x).at(-1)?.id ?? '';
+  // sound version: off unless the viewer turns it on or opens ?sound=1 (audio/player.js)
+  const sound = createSound({ data, button: $('sound'), initial: q.get('sound') === '1', getT: () => t, isPlaying: () => playing });
 
   function render() {
     film.frame(t);
@@ -67,8 +70,8 @@ async function main() {
     if (!dragging) range.value = String(Math.round((t / D) * 100000));
     dirty = false;
   }
-  const seek = (x) => { t = qt(clamp(x, 0, D)); dirty = true; };
-  const setPlaying = (p) => { playing = p; playBtn.textContent = playing ? 'Pause' : 'Play'; last = performance.now(); if (playing && t >= D) seek(0); };
+  const seek = (x) => { t = qt(clamp(x, 0, D)); dirty = true; sound.seek(t); };
+  const setPlaying = (p) => { playing = p; playBtn.textContent = playing ? 'Pause' : 'Play'; last = performance.now(); if (playing && t >= D) seek(0); sound.setPlaying(playing, t); };
 
   range.addEventListener('input', () => seek((range.value / 100000) * D));
   range.addEventListener('pointerdown', () => { dragging = true; });
@@ -89,7 +92,7 @@ async function main() {
     const dt = Math.min(0.1, (now - last) / 1000);
     last = now;
     if (playing) {
-      t = qt(t + dt);
+      t = qt(sound.clock() ?? t + dt); // the heard audio drives the clock while sound plays
       if (t >= D) { t = D; setPlaying(false); }
       dirty = true;
     }
@@ -109,6 +112,7 @@ async function main() {
     duration: D,
     beats: film.beats,
     reducedMotion: RM,
+    get sound() { return sound.state; },
     ready: true,
   };
 }

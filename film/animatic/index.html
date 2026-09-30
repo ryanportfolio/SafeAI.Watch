@@ -11,7 +11,7 @@
   #wrap { flex: 1; min-height: 0; display: grid; place-items: center; }
   #stage { position: relative; background: #d7d7d0; }
   #film { display: block; width: 100%; height: 100%; }
-  #transport { display: grid; grid-template-columns: auto auto 1fr auto; gap: 12px; align-items: center; }
+  #transport { display: grid; grid-template-columns: auto auto auto 1fr auto; gap: 12px; align-items: center; }
   button { background: #33332f; color: #f4f4e7; border: 1px solid #55554f; border-radius: 4px; padding: 6px 12px; font: inherit; cursor: pointer; }
   #scrub { position: relative; height: 28px; }
   #range { position: absolute; inset: 0; width: 100%; margin: 0; }
@@ -25,6 +25,7 @@
   <div id="wrap"><div id="stage"><canvas id="film" width="1920" height="1080" aria-label="SafeAI.watch film animatic" role="img"></canvas></div></div>
   <div id="transport">
     <button id="play" type="button">Play</button>
+    <button id="sound" type="button" aria-pressed="false">Sound off</button>
     <span id="status">loading</span>
     <div id="scrub"><input id="range" type="range" min="0" max="100000" value="0" aria-label="Scrub"></div>
     <span id="time">0.0 / 0.0</span>
