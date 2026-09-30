@@ -1,8 +1,9 @@
 #!/usr/bin/env node
-// Lints the About film caption timeline (film/beats.json) against film/facts.md.
+// Lints the About film caption timeline (film/beats.json) against film/facts.md and,
+// on the default files, against film/SCRIPT.md (every on-screen string must be in the script).
 // Rules: film/BRIEF.md, "Direction", graft 2. No dependencies.
 //
-// Usage: node scripts/film/lint-beats.mjs [beats.json] [facts.md]
+// Usage: node scripts/film/lint-beats.mjs [beats.json] [facts.md] [SCRIPT.md]
 // Exits 1 on any failure; warnings never fail.
 
 import { readFileSync } from 'node:fs';
@@ -94,6 +95,41 @@ export function parseFacts(md) {
   return rows;
 }
 
+// ---------- SCRIPT.md ----------
+
+// Collects every string the script allows on screen: each Caption and Small line of the
+// numbered tables (row IDs in a trailing parenthesis dropped, quote marks and *emphasis*
+// removed, a caption joined by " · " also split into its parts), and every entry of the
+// "Other strings on screen" table (whole and comma-split, a trailing note in parentheses dropped).
+export function parseScript(md) {
+  const allowed = new Set();
+  const add = (raw) => {
+    const t = normalize(raw.replace(/\*/g, '')).replace(/^"(.*)"$/, '$1').trim();
+    if (t) allowed.add(t);
+  };
+  const dropNote = (x) => x.replace(/\s*\([^()]*\)\s*$/, '');
+  let mode = null;
+  for (const raw of md.split(/\r?\n/)) {
+    const line = raw.trim();
+    if (!line.startsWith('|')) { mode = null; continue; }
+    const cells = splitRow(line);
+    if (cells.every((c) => /^:?-{3,}:?$/.test(c))) continue;
+    if (cells[0] === '#' && cells[1] === 'Caption') { mode = 'beats'; continue; }
+    if (cells[0] === 'Where' && cells[1] === 'Text') { mode = 'other'; continue; }
+    if (mode === 'beats') {
+      const [, caption = '', small = ''] = cells;
+      add(caption);
+      if (caption.includes(' · ')) caption.split(' · ').forEach(add);
+      add(dropNote(small));
+    } else if (mode === 'other') {
+      const text = dropNote(cells[1] ?? '');
+      add(text);
+      text.split(', ').forEach(add);
+    }
+  }
+  return allowed;
+}
+
 // ---------- helpers ----------
 
 export const normalize = (s) =>
@@ -115,7 +151,7 @@ const isNum = (x) => typeof x === 'number' && Number.isFinite(x);
 
 // ---------- lint ----------
 
-export function lintBeats(film, facts) {
+export function lintBeats(film, facts, script = null) {
   const failures = [];
   const warnings = [];
   const fail = (where, msg) => failures.push(`${where}: ${msg}`);
@@ -202,6 +238,9 @@ export function lintBeats(film, facts) {
         }
       }
 
+      // Rule 8: script sync. Every on-screen string is in SCRIPT.md, so script and film cannot drift.
+      if (script && text && !script.has(normalize(text))) fail(where, `text is not in SCRIPT.md (captions, small lines or Other strings on screen): ${JSON.stringify(text)}`);
+
       // Rule 5: display punctuation.
       if (text.includes(EM_DASH)) fail(where, 'contains an em dash (U+2014)');
       const periodRule = !isQuote && (kind === 'statement' || (kind === 'extra' && (item.role === 'label' || item.role === 'heading')));
@@ -252,6 +291,8 @@ function main(argv) {
   const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..');
   const beatsPath = argv[0] ? resolve(argv[0]) : resolve(root, 'film/beats.json');
   const factsPath = argv[1] ? resolve(argv[1]) : resolve(root, 'film/facts.md');
+  // The script check runs on the default files, or when a script path is passed third.
+  const scriptPath = argv[2] ? resolve(argv[2]) : argv[0] ? null : resolve(root, 'film/SCRIPT.md');
 
   let film;
   let facts;
@@ -268,7 +309,17 @@ function main(argv) {
     return 1;
   }
 
-  const { beatsChecked, failures, warnings } = lintBeats(film, facts);
+  let script = null;
+  if (scriptPath) {
+    try {
+      script = parseScript(readFileSync(scriptPath, 'utf8'));
+    } catch (err) {
+      console.error(`FAIL could not read ${scriptPath}: ${err.message}`);
+      return 1;
+    }
+  }
+
+  const { beatsChecked, failures, warnings } = lintBeats(film, facts, script);
   for (const f of failures) console.log(`FAIL ${f}`);
   for (const w of warnings) console.log(`WARN ${w}`);
   const plural = (n, w) => `${n} ${w}${n === 1 ? '' : 's'}`;

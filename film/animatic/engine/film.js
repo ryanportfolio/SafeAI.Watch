@@ -71,7 +71,7 @@ export function createFilm(data, { canvas, reducedMotion = false, doc = document
 
   function frame(tIn) {
     const t = qt(clamp(tIn, 0, duration));
-    let pal, pr;
+    let pal, pr, tChart = t;
     const r = reducedMotion ? null : frontR(t);
     if (r != null) {
       // day chart under, night chart over, masked by a soft radial front from the fog corner
@@ -99,8 +99,9 @@ export function createFilm(data, { canvas, reducedMotion = false, doc = document
         pctx.drawImage(pic2, 0, 0);
       }
       pal = palette(tp, cues);
+      tChart = tp;
     }
-    drawText(tctx, data, t, pal, { pr, rm: reducedMotion, carets: CARETS, faint: FAINT, steps: STEPS, cues, anchorFor });
+    drawText(tctx, data, t, pal, { pr, tChart, rm: reducedMotion, carets: CARETS, faint: FAINT, steps: STEPS, cues, anchorFor });
     out.drawImage(pic, 0, 0);
     out.drawImage(txt, 0, 0);
     return t;

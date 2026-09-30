@@ -347,10 +347,10 @@ function drawEcho(ctx, beat, t, pal) {
 }
 
 function drawLabels(ctx, beat, t, pal, opts, env) {
-  (beat.extra || []).forEach((e, i) => {
+  (beat.extra || []).forEach((e) => {
     if (['key', 'region', 'heading', 'echo', 'wordmark'].includes(e.role)) return;
-    const an = env.anchorFor(beat.id, i);
-    if (!an) return;
+    const an = env.anchorFor(beat.id, e);
+    if (!an) { if (env.strict) throw new Error(`no anchor for ${beat.id} ${e.role} ${e.text}`); return; }
     const a = windowAlpha(t, e.at, beat.end, 0.4, EXIT);
     if (a <= 0) return;
     const q = env.pr.point(an.w.x, an.w.y);
@@ -397,11 +397,14 @@ function scrim(ctx, pal) {
 export function drawText(ctx, data, t, pal, env) {
   ctx.clearRect(0, 0, STAGE_W, STAGE_H);
   scrim(ctx, pal);
-  drawKey(ctx, data.beats, t, pal, pal.close);
+  // text bound to the chart (key, tags, region names) follows the picture's clock: in reduced
+  // motion that is the beat's designed still; captions keep live timing either way
+  const tc = env.tChart ?? t;
+  drawKey(ctx, data.beats, tc, pal, pal.close);
   const beat = data.beats.find((b) => t >= b.start && t < b.end) || data.beats.at(-1);
   const opts = { rm: env.rm, caret: env.carets[beat.id], endcard: beat.type === 'site', faint: !!env.faint?.[beat.id] };
-  drawLabels(ctx, beat, t, pal, opts, env);
-  drawLabelsChapter(ctx, t, pal, env);
+  drawLabels(ctx, beat, tc, pal, opts, env);
+  drawLabelsChapter(ctx, tc, pal, env);
   drawEcho(ctx, beat, t, pal);
   const L = drawStatement(ctx, beat, t, pal, opts);
   drawHeading(ctx, beat, t, pal, env, L);

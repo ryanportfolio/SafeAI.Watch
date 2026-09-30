@@ -1,5 +1,5 @@
 {
-  "duration": 146,
+  "duration": 145.9,
   "chapters": [
     {
       "id": "c1",
@@ -14,12 +14,12 @@
     {
       "id": "c3",
       "title": "Keeping it pointed the right way",
-      "start": 73.8
+      "start": 71.8
     },
     {
       "id": "c4",
       "title": "A better answer",
-      "start": 122.5
+      "start": 122.4
     }
   ],
   "beats": [
@@ -174,11 +174,11 @@
     {
       "id": "B6",
       "start": 32.1,
-      "end": 37.8,
+      "end": 37.6,
       "type": "progress",
       "script": 8,
       "statement": {
-        "text": "AI can now read software and find its weak spots",
+        "text": "AI can read software and find its weak spots",
         "at": 33.1,
         "rows": [
           "P24"
@@ -188,7 +188,7 @@
       },
       "precision": {
         "text": "Mozilla, May 2026",
-        "at": 36.6,
+        "at": 36.4,
         "rows": [
           "P24"
         ]
@@ -196,13 +196,13 @@
     },
     {
       "id": "B7",
-      "start": 37.8,
-      "end": 46.3,
+      "start": 37.6,
+      "end": 46.1,
       "type": "progress",
       "script": 9,
       "statement": {
         "text": "Mozilla used it to fix hundreds of Firefox security flaws in a month",
-        "at": 38.3,
+        "at": 38.1,
         "rows": [
           "P24"
         ],
@@ -211,7 +211,7 @@
       },
       "precision": {
         "text": "423 fixed in April 2026, 271 of them found by an AI model",
-        "at": 42.6,
+        "at": 42.4,
         "rows": [
           "P24"
         ]
@@ -219,7 +219,7 @@
       "extra": [
         {
           "text": "MOZILLA · FIREFOX SECURITY FIXES",
-          "at": 38.6,
+          "at": 38.4,
           "rows": [
             "P24"
           ],
@@ -227,7 +227,7 @@
         },
         {
           "text": "BENEFITS",
-          "at": 38.6,
+          "at": 38.4,
           "owner": true,
           "role": "key"
         }
@@ -235,13 +235,13 @@
     },
     {
       "id": "B8",
-      "start": 46.3,
-      "end": 54.5,
+      "start": 46.1,
+      "end": 54.3,
       "type": "happened",
       "script": 10,
       "statement": {
         "text": "Google caught criminals with attack code it believes AI wrote",
-        "at": 46.8,
+        "at": 46.6,
         "rows": [
           "H23"
         ],
@@ -250,7 +250,7 @@
       },
       "precision": {
         "text": "Google Threat Intelligence Group, May 2026 · its early find may have stopped the attack",
-        "at": 50.3,
+        "at": 50.1,
         "rows": [
           "H23"
         ]
@@ -258,7 +258,7 @@
       "extra": [
         {
           "text": "GOOGLE · CRIMINAL ATTACK CODE",
-          "at": 47.1,
+          "at": 46.9,
           "rows": [
             "H23"
           ],
@@ -266,7 +266,7 @@
         },
         {
           "text": "REPORTED INCIDENTS",
-          "at": 47.1,
+          "at": 46.9,
           "rows": [
             "S20"
           ],
@@ -276,63 +276,44 @@
     },
     {
       "id": "B9",
-      "start": 54.5,
-      "end": 62.3,
+      "start": 54.3,
+      "end": 61.3,
       "type": "owner",
       "script": 12,
       "statement": {
-        "text": "AI that predicts proteins or describes the world for blind people splits the same way",
-        "at": 55.3,
+        "text": "AI that describes the world for blind people splits the same way",
+        "at": 55.1,
         "owner": true,
         "quote": false,
         "italic": []
       },
       "precision": {
-        "text": "AlphaFold, SecureBio, American Foundation for the Blind",
-        "at": 60.1,
+        "text": "American Foundation for the Blind, August 2026",
+        "at": 59.1,
         "rows": [
-          "B4",
-          "T5",
           "B18"
         ]
       },
       "extra": [
         {
-          "text": "PROTEINS · ALPHAFOLD, SECUREBIO",
-          "at": 55.9,
-          "rows": [
-            "B4",
-            "T5"
-          ],
-          "role": "label"
-        },
-        {
           "text": "SIGHT · AMERICAN FOUNDATION FOR THE BLIND",
-          "at": 55.9,
+          "at": 55.7,
           "rows": [
             "B18"
           ],
           "role": "label"
-        },
-        {
-          "text": "CONTROLLED TEST",
-          "at": 55.9,
-          "rows": [
-            "S31"
-          ],
-          "role": "key"
         }
       ]
     },
     {
       "id": "B10",
-      "start": 62.3,
-      "end": 73.8,
+      "start": 61.3,
+      "end": 71.8,
       "type": "perspective",
       "script": 13,
       "statement": {
         "text": "It can give you a positive infinity of new benefits at the same time that it presents almost a negative infinity of risk",
-        "at": 63.5,
+        "at": 62.5,
         "rows": [
           "Q1"
         ],
@@ -341,7 +322,7 @@
       },
       "precision": {
         "text": "Tristan Harris, Center for Humane Technology, July 2026",
-        "at": 71.3,
+        "at": 69.3,
         "rows": [
           "Q1"
         ]
@@ -349,13 +330,13 @@
     },
     {
       "id": "B11",
-      "start": 73.8,
-      "end": 78.6,
+      "start": 71.8,
+      "end": 76.6,
       "type": "owner",
       "script": 14,
       "statement": {
         "text": "So how do we keep it on the right side?",
-        "at": 74.6,
+        "at": 72.6,
         "owner": true,
         "quote": false,
         "italic": []
@@ -363,13 +344,13 @@
     },
     {
       "id": "B12",
-      "start": 78.6,
-      "end": 88.6,
+      "start": 76.6,
+      "end": 87.9,
       "type": "happened",
       "script": 15,
       "statement": {
         "text": "In a government test, AI agents went onto the live internet and targeted real people",
-        "at": 80.1,
+        "at": 78.1,
         "rows": [
           "H40"
         ],
@@ -377,8 +358,8 @@
         "italic": []
       },
       "precision": {
-        "text": "UK AI Security Institute, August 2026 · internet access left open on purpose",
-        "at": 84.9,
+        "text": "UK AI Security Institute, August 2026 · internet access left open and safety filters switched off on purpose",
+        "at": 82.9,
         "rows": [
           "H40"
         ]
@@ -386,21 +367,29 @@
       "extra": [
         {
           "text": "We test it",
-          "at": 78.8,
+          "at": 76.8,
           "owner": true,
           "role": "heading"
+        },
+        {
+          "text": "CONTROLLED TEST",
+          "at": 77.1,
+          "rows": [
+            "S31"
+          ],
+          "role": "key"
         }
       ]
     },
     {
       "id": "B13",
-      "start": 88.6,
-      "end": 95.2,
+      "start": 87.9,
+      "end": 94.5,
       "type": "happened",
       "script": 16,
       "statement": {
         "text": "A human maintainer caught and refused to approve the malicious code",
-        "at": 89.2,
+        "at": 88.5,
         "rows": [
           "H42"
         ],
@@ -409,7 +398,7 @@
       },
       "precision": {
         "text": "Same report · no real-world harm found",
-        "at": 93,
+        "at": 92.3,
         "rows": [
           "H42",
           "H41"
@@ -418,13 +407,13 @@
     },
     {
       "id": "B14",
-      "start": 95.2,
-      "end": 104.2,
+      "start": 94.5,
+      "end": 104.3,
       "type": "progress",
       "script": 17,
       "statement": {
-        "text": "Government testers found holes in every version of one lab’s safety monitor, and each fix was tested again",
-        "at": 96.7,
+        "text": "Government testers probed one lab’s safety monitor and found holes in every version they tried",
+        "at": 96,
         "rows": [
           "P10"
         ],
@@ -432,8 +421,8 @@
         "italic": []
       },
       "precision": {
-        "text": "UK AI Security Institute, July 2026",
-        "at": 102.2,
+        "text": "UK AI Security Institute, July 2026 · each fix was tested again",
+        "at": 100.8,
         "rows": [
           "P10"
         ]
@@ -441,13 +430,13 @@
       "extra": [
         {
           "text": "We fix what tests find",
-          "at": 95.4,
+          "at": 94.7,
           "owner": true,
           "role": "heading"
         },
         {
           "text": "SAFEGUARDS",
-          "at": 98.7,
+          "at": 98,
           "owner": true,
           "role": "key"
         }
@@ -455,13 +444,13 @@
     },
     {
       "id": "B15",
-      "start": 104.2,
-      "end": 114.2,
+      "start": 104.3,
+      "end": 114.1,
       "type": "policy",
       "script": 18,
       "statement": {
-        "text": "The largest AI developers in California must now report serious safety incidents",
-        "at": 105.7,
+        "text": "The largest AI developers in California must report serious safety incidents",
+        "at": 105.8,
         "rows": [
           "L37"
         ],
@@ -470,7 +459,7 @@
       },
       "precision": {
         "text": "Transparency in Frontier Artificial Intelligence Act, in effect January 2026 · reports due within 15 days",
-        "at": 109.7,
+        "at": 109.6,
         "rows": [
           "L37"
         ]
@@ -478,13 +467,13 @@
       "extra": [
         {
           "text": "We make it law",
-          "at": 104.4,
+          "at": 104.5,
           "owner": true,
           "role": "heading"
         },
         {
           "text": "CALIFORNIA · INCIDENT-REPORT LAW",
-          "at": 106.5,
+          "at": 106.6,
           "rows": [
             "L37"
           ],
@@ -492,7 +481,7 @@
         },
         {
           "text": "POLICY & OVERSIGHT",
-          "at": 106.5,
+          "at": 106.6,
           "rows": [
             "S20"
           ],
@@ -502,13 +491,13 @@
     },
     {
       "id": "B16",
-      "start": 114.2,
-      "end": 122.5,
+      "start": 114.1,
+      "end": 122.4,
       "type": "unknown",
       "script": 19,
       "statement": {
         "text": "no existing study provides a reliable probability of severe loss of control",
-        "at": 115.8,
+        "at": 115.7,
         "rows": [
           "W7"
         ],
@@ -517,7 +506,7 @@
       },
       "precision": {
         "text": "UN Independent International Scientific Panel on AI, September 2026",
-        "at": 119.8,
+        "at": 119.7,
         "rows": [
           "W7"
         ]
@@ -525,7 +514,7 @@
       "extra": [
         {
           "text": "And we admit what we don’t know",
-          "at": 114.4,
+          "at": 114.3,
           "owner": true,
           "role": "heading"
         }
@@ -533,13 +522,13 @@
     },
     {
       "id": "B17",
-      "start": 122.5,
-      "end": 128.8,
+      "start": 122.4,
+      "end": 128.7,
       "type": "perspective",
       "script": 21,
       "statement": {
         "text": "clarity creates agency",
-        "at": 125.3,
+        "at": 125.2,
         "rows": [
           "Q12"
         ],
@@ -548,7 +537,7 @@
       },
       "precision": {
         "text": "Tristan Harris, TED, April 2025",
-        "at": 127.1,
+        "at": 127,
         "rows": [
           "Q12"
         ]
@@ -556,13 +545,13 @@
     },
     {
       "id": "B18",
-      "start": 128.8,
-      "end": 133.3,
+      "start": 128.7,
+      "end": 133.2,
       "type": "owner",
       "script": 22,
       "statement": {
         "text": "Use it, value it, and keep your eyes open",
-        "at": 129.4,
+        "at": 129.3,
         "owner": true,
         "quote": false,
         "italic": []
@@ -570,13 +559,13 @@
     },
     {
       "id": "B19",
-      "start": 133.3,
-      "end": 138.5,
+      "start": 133.2,
+      "end": 138.4,
       "type": "owner",
       "script": 23,
       "statement": {
         "text": "Hold both at once",
-        "at": 135.1,
+        "at": 135,
         "owner": true,
         "quote": false,
         "italic": []
@@ -584,7 +573,7 @@
       "extra": [
         {
           "text": "Is AI good or bad for us?",
-          "at": 133.5,
+          "at": 133.4,
           "owner": true,
           "role": "echo"
         }
@@ -592,13 +581,13 @@
     },
     {
       "id": "B20",
-      "start": 138.5,
-      "end": 146,
+      "start": 138.4,
+      "end": 145.9,
       "type": "site",
       "script": 24,
       "statement": {
         "text": "Stay close to the evidence",
-        "at": 139.7,
+        "at": 139.6,
         "rows": [
           "S25"
         ],
@@ -609,7 +598,7 @@
       },
       "precision": {
         "text": "A public record of AI safety and security",
-        "at": 142,
+        "at": 141.9,
         "rows": [
           "S13"
         ]
@@ -617,7 +606,7 @@
       "extra": [
         {
           "text": "SafeAI.watch",
-          "at": 140.7,
+          "at": 140.6,
           "rows": [
             "S9",
             "S10"

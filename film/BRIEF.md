@@ -30,7 +30,7 @@ Grafts:
 - **B13 benefit slot B → B4** (AlphaFold2, Nobel Prize in Chemistry 2024). Statement and precision from the row; the precision line notes predicted structures, not experiments, per its Limits.
 - **B15 closing OWNER line:** "Hold both at once".
 - **Dropped:** "The same capability can help people and harm them" (Q1 carries it).
-- **Chart key labels** `BENEFITS` and `SAFEGUARDS`: OWNER strings, flagged to the owner at review.
+- **Chart key labels** `BENEFITS` and `SAFEGUARDS`: OWNER strings, approved by the owner on 2026-09-30.
 - **P24 (B8 fork):** "271" is outside the row's quoted text; confirm it in the Mozilla source before use, else show only the 423 figure.
 - **Duration:** no target; the owner set no length. Timing follows the reading budget (currently 127.7 s).
 
@@ -57,4 +57,10 @@ Throughline: a question, the bad answer, the evidence, what it adds up to, what 
 
 Cut from v1: H27 (FBI), T72 (red-team competition), W31 (Five Eyes), P34 (METR reviewers), L19 (institutes network), W2 (Bengio). They stay in facts.md.
 
-No length target. Fix the v1 notes while rebuilding: captions over marks in the hero frame, the muddy mid-dusk grey (about 100 s in v1), the crowded label beat. Chart key labels `BENEFITS` and `SAFEGUARDS` still await owner OK.
+No length target. Fix the v1 notes while rebuilding: captions over marks in the hero frame, the muddy mid-dusk grey (about 100 s in v1), the crowded label beat. Chart key labels `BENEFITS` and `SAFEGUARDS` were approved by the owner on 2026-09-30.
+
+## Approvals after the script (2026-09-30)
+
+- Chart key labels `BENEFITS` and `SAFEGUARDS`: approved.
+- The second Tristan Harris quote (Q12, "clarity creates agency", SCRIPT.md line 21): approved, so the film carries two Harris lines.
+- `film/SCRIPT.md` is the source for every on-screen string; `npm run film:lint` fails when `film/beats.json` drifts from it, and runs before every site build.

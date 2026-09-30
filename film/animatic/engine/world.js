@@ -41,12 +41,13 @@ const CONTOURS = [70, 140].map((o) => { const pts = []; for (let y = SHEET.y0; y
 // Each is one neutral ring splitting into a benefit light (north) and a hazard (south).
 const bez = (a, c, b, n = 40) => Array.from({ length: n + 1 }, (_, i) => { const u = i / n, v = 1 - u; return { x: v * v * a.x + 2 * v * u * c.x + u * u * b.x, y: v * v * a.y + 2 * v * u * c.y + u * u * b.y }; });
 const add = (p, a, b = 0) => ({ x: p.x + U.x * a + N.x * b, y: p.y + U.y * a + N.y * b });
-export const FORKS = [0.2, 0.4, 0.6].map((s, i) => {
+// Two forks on the one current: code (P24 / H23) and sight (B18).
+export const FORKS = [0.2, 0.45].map((s) => {
   const F = stream(0, s);
   const up = add(F, 150, -250), dn = add(F, 150, 250);
   return {
     F, up, dn,
-    hazard: i === 1 ? 'test' : 'harm', // the protein fork's hazard is a test result: drawn as a test, in ink
+    hazard: 'harm',
     north: bez(F, add(F, 30, -150), up),
     south: bez(F, add(F, 30, 150), dn),
   };
@@ -78,7 +79,7 @@ const CH_BUOYS = [chan(0.3, -1), chan(0.72, 1)];
 
 const FOG = [{ x: 3150, y: 380, r: 720, p: 0 }, { x: 2880, y: 240, r: 520, p: 1.7 }, { x: 3380, y: 760, r: 520, p: 3.1 }, { x: 3330, y: 170, r: 420, p: 4.4 }, { x: 2720, y: 560, r: 340, p: 5.2 }];
 const FOG_DROP = { x: 3150, y: 470 };
-const END_FROM = FORKS[1].F; // the middle fork's neutral ring becomes the crosshair
+const END_FROM = FORKS[1].F; // the sight fork's neutral ring becomes the crosshair
 
 // ---------- the labels chapter: soundings, the sentence, the region names ----------
 // A chart keeps names off the soundings because a name printed over the water hides the
@@ -246,7 +247,7 @@ export function cameraKeys(c) {
   const s = c.s;
   const k = (id, pose, dur = 1.4, lead = 0.3, drift) => ({ at: Math.max(0, c.s(id) - lead), dur, pose, drift });
   const fork = (i) => ({ cx: FORKS[i].F.x + 110, cy: FORKS[i].F.y + 50, zoom: 0.95, pitch: 0.15 });
-  const mid = { cx: 1760, cy: 930, zoom: 0.62, pitch: 0.12 };
+  const mid = { cx: 1560, cy: 1080, zoom: 0.72, pitch: 0.12 };
   return [
     { at: 0, dur: 0.001, pose: FULL },
     k(ID.label, { cx: STAGE_SLOT.cx, cy: STAGE_SLOT.y + 110, zoom: 0.62, pitch: 0 }, 1.8, 0),
@@ -267,14 +268,15 @@ export function cameraKeys(c) {
 
 // ---------- label anchors (world points + chip offset in stage px) ----------
 
+// Tag anchors, keyed by beat and the tag's role (one tag per role per beat), so adding or
+// reordering other extras in beats.json never moves a tag.
 const ANCHORS = {
-  [ID.mozilla + ':0']: { w: FORKS[0].up, dx: 36, dy: -24, col: 'amber' },
-  [ID.google + ':0']: { w: FORKS[0].dn, dx: 36, dy: 24, col: 'orange' },
-  [ID.forks + ':0']: { w: FORKS[1].up, dx: 36, dy: -24, col: 'amber' },
-  [ID.forks + ':1']: { w: FORKS[2].up, dx: 36, dy: -24, col: 'amber' },
-  [ID.law + ':0']: { w: CH_BUOYS[0], dx: 36, dy: 30 },
+  [ID.mozilla + ':label']: { w: FORKS[0].up, dx: 36, dy: -24, col: 'amber' },
+  [ID.google + ':label']: { w: FORKS[0].dn, dx: 36, dy: 24, col: 'orange' },
+  [ID.forks + ':label']: { w: FORKS[1].F, dx: 40, dy: -30 },
+  [ID.law + ':buoy']: { w: CH_BUOYS[0], dx: 36, dy: 30 },
 };
-export const anchorFor = (beatId, i) => ANCHORS[`${beatId}:${i}`] || null;
+export const anchorFor = (beatId, extra) => ANCHORS[`${beatId}:${extra.role}`] || null;
 
 // ---------- drawing ----------
 
@@ -356,10 +358,9 @@ export function drawWorld(ctx, t, pr, pal, c, { still = false } = {}) {
   }
 
   // forks: one neutral ring, two branches drawn at the same speed, colour only at the ends.
-  // The first (code) is built caption by caption; the other two (proteins, sight) arrive together.
+  // The first (code) is built caption by caption; the second (sight) arrives in one beat.
   const forkTimes = [
     { ring: c.s(ID.reads) + 0.3, br: c.s(ID.reads) + 0.9, up: c.s(ID.mozilla) + 0.2, dn: c.s(ID.google) + 0.2 },
-    { ring: c.s(ID.forks) + 0.1, br: c.s(ID.forks) + 0.4, up: c.s(ID.forks) + 1.6, dn: c.s(ID.forks) + 1.6 },
     { ring: c.s(ID.forks) + 0.1, br: c.s(ID.forks) + 0.4, up: c.s(ID.forks) + 1.6, dn: c.s(ID.forks) + 1.6 },
   ];
   // "Use it, value it, and keep your eyes open": the lights and hazards glow together

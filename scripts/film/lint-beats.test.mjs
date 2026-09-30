@@ -5,7 +5,7 @@ import { mkdtempSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseFacts, lintBeats } from './lint-beats.mjs';
+import { parseFacts, lintBeats, parseScript } from './lint-beats.mjs';
 
 const FACTS_MD = `# Facts
 
@@ -227,4 +227,46 @@ test('CLI exits 1 on failure, 0 on pass, and prints a summary', () => {
   assert.equal(ko.status, 1);
   assert.match(ko.stdout, /FAIL B1 statement: display text ends in a period/);
   assert.match(ko.stdout, /1 failure,/);
+});
+
+const SCRIPT_MD = `# Script
+
+| # | Caption | Small line | Picture |
+|---|---|---|---|
+| 1 | Is AI good or bad for us? | | Blank chart |
+| 13 | "It can give you a positive infinity" | Tristan Harris, July 2026 (Q1) | Current |
+| 24 | Stay close to *the evidence* · SafeAI.watch | A public record of AI safety and security (S25, S13) | End card |
+
+## Other strings on screen
+
+| Where | Text | Source |
+|---|---|---|
+| Labels chapter | DOOMER, ACCELERATIONIST | usage |
+| Tag | GOOGLE'S TAG | H23 |
+| Before line 23 | Is AI good or bad for us? (faint echo) | OWNER |
+`;
+
+test('parseScript collects captions, small lines, split end-card parts and the appendix', () => {
+  const s = parseScript(SCRIPT_MD);
+  for (const x of ['Is AI good or bad for us?', 'It can give you a positive infinity', 'Tristan Harris, July 2026', 'Stay close to the evidence', 'SafeAI.watch', 'A public record of AI safety and security', 'DOOMER', 'ACCELERATIONIST', "GOOGLE'S TAG"]) {
+    assert.ok(s.has(x), x);
+  }
+  assert.ok(!s.has('Blank chart'), 'picture column is not on screen');
+  assert.ok(!s.has('Is AI good or bad for us? (faint echo)'), 'trailing note is dropped');
+});
+
+test('script sync: a string missing from SCRIPT.md fails; curly apostrophes match straight ones', () => {
+  const script = parseScript(SCRIPT_MD);
+  const f = base();
+  f.beats[0].statement = { text: 'Is AI good or bad for us?', at: 1, owner: true };
+  delete f.beats[0].precision;
+  f.beats[0].extra = [{ text: 'GOOGLE’S TAG', at: 1, rows: ['B18'], role: 'label' }];
+  f.beats[1].statement = { text: 'A line the script never had', at: 11, owner: true };
+  delete f.beats[1].precision;
+  f.beats[1].extra = [];
+  const r = lintBeats(f, facts, script);
+  assert.ok(r.failures.some((x) => /B2 statement: text is not in SCRIPT\.md/.test(x)), r.failures.join('\n'));
+  assert.ok(!r.failures.some((x) => /B1 .*not in SCRIPT\.md/.test(x)), r.failures.join('\n'));
+  // without a script the rule is off
+  assert.ok(!lintBeats(f, facts).failures.some((x) => /SCRIPT\.md/.test(x)));
 });

@@ -56,6 +56,7 @@ async function main() {
   let playing = q.has('play');
   let last = performance.now();
   let dirty = true;
+  let dragging = false; // the scrubber follows playback unless the viewer is dragging it
   const chapterAt = (x) => film.chapters.filter((c) => c.start <= x).at(-1)?.title ?? '';
   const beatAt = (x) => film.beats.filter((b) => b.start <= x).at(-1)?.id ?? '';
 
@@ -63,18 +64,23 @@ async function main() {
     film.frame(t);
     timeEl.textContent = `${t.toFixed(1)} / ${D.toFixed(1)}`;
     status.textContent = `${beatAt(t)} · ${chapterAt(t)}${RM ? ' · reduced motion' : ''}`;
-    if (document.activeElement !== range) range.value = String(Math.round((t / D) * 100000));
+    if (!dragging) range.value = String(Math.round((t / D) * 100000));
     dirty = false;
   }
   const seek = (x) => { t = qt(clamp(x, 0, D)); dirty = true; };
   const setPlaying = (p) => { playing = p; playBtn.textContent = playing ? 'Pause' : 'Play'; last = performance.now(); if (playing && t >= D) seek(0); };
 
   range.addEventListener('input', () => seek((range.value / 100000) * D));
+  range.addEventListener('pointerdown', () => { dragging = true; });
+  addEventListener('pointerup', () => { dragging = false; });
+  addEventListener('pointercancel', () => { dragging = false; });
   playBtn.addEventListener('click', () => setPlaying(!playing));
   addEventListener('keydown', (e) => {
     if (e.code === 'Space') { e.preventDefault(); setPlaying(!playing); }
-    else if (e.key === 'ArrowRight') seek(t + 1);
-    else if (e.key === 'ArrowLeft') seek(t - 1);
+    // arrows always step 1 s; preventDefault stops a focused range from applying its own step
+    else if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { e.preventDefault(); seek(t + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { e.preventDefault(); seek(t - 1); }
+    else if (e.key === 'Home' || e.key === 'End' || e.key === 'PageUp' || e.key === 'PageDown') { e.preventDefault(); }
     else if (e.key === ']') { const n = film.chapters.find((c) => c.start > t + 0.01); if (n) seek(n.start); }
     else if (e.key === '[') { const p = film.chapters.filter((c) => c.start < t - 0.3).at(-1); seek(p ? p.start : 0); }
   });
