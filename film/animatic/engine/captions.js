@@ -5,6 +5,7 @@
 import { clamp, lerp, easeOut, easeIn, easeInOut, windowAlpha, rgba } from './util.js';
 import { dot, ring, glow, seg, frame } from './draw.js';
 import { STAGE_W, STAGE_H } from './camera.js';
+import { labelsState, laneY, SIGHT_FROM } from './world.js';
 
 export const FONTS = {
   serif: 'Newsreader',
@@ -259,38 +260,54 @@ function drawKey(ctx, beats, t, pal, close) {
   }
 }
 
-// The one-word answers: two identical chips that cover the whole map, one half each; they
-// arrive in the same frame and lift in the same frame to reveal the chart.
-function drawChips(ctx, beat, t, pal, opts, env) {
-  const chips = (beat.extra || []).map((e, i) => ({ e, i })).filter((x) => x.e.role === 'chip');
-  if (!chips.length) return;
-  const lift = env.cues.lift;
-  // project both halves, then give both chips one shared size so they stay identical
-  const rects = chips.map(({ i }) => {
-    const an = env.anchorFor(beat.id, i);
-    if (!an?.rect) return null;
-    const [x0, y0, x1, y1] = an.rect;
-    const a0 = env.pr.point(x0, y0), a1 = env.pr.point(x1, y1);
-    return { cx: (a0.x + a1.x) / 2, w: Math.abs(a1.x - a0.x), T: Math.min(a0.y, a1.y), B: Math.max(a0.y, a1.y) };
-  });
-  if (rects.some((r) => !r)) return;
-  const CW = Math.min(...rects.map((r) => r.w)) - 16, CT = Math.min(...rects.map((r) => r.T)) + 8, CB = Math.max(...rects.map((r) => r.B)) - 8;
-  for (const [n, { e }] of chips.entries()) {
-    const aIn = easeOut((t - e.at) / (opts.rm ? 0.4 : 0.7));
-    const aOut = 1 - easeIn((t - lift) / (opts.rm ? 0.4 : 1.0));
-    const a = clamp(aIn * aOut);
-    if (a <= 0) continue;
-    const dy = opts.rm ? 0 : (1 - aIn) * -12 + (1 - aOut) * -28;
-    const L = rects[n].cx - CW / 2, R = rects[n].cx + CW / 2, T = CT, B = CB;
-    ctx.fillStyle = rgba(pal.chip, a);
-    ctx.beginPath(); ctx.roundRect(L, T + dy, R - L, B - T, 2); ctx.fill();
-    ctx.strokeStyle = rgba(pal.ink, 0.25 * a); ctx.lineWidth = 1.2; ctx.stroke();
-    monoFont(ctx, 40);
-    ctx.fillStyle = rgba(pal.ink, 0.85 * a);
-    ctx.textBaseline = 'middle';
-    const s = e.text.toUpperCase();
-    ctx.fillText(s, (L + R) / 2 - ctx.measureText(s).width / 2, (T + B) / 2 - 90 + dy);
-    ctx.textBaseline = 'alphabetic';
+// ---------- the labels chapter on the text layer ----------
+// Region names are Newsreader roman capitals, widely tracked: charts name open water in
+// spaced serif capitals, and Newsreader keeps them in the film's statement face (mono reads as UI).
+
+// Characters of a line of type laid along a gentle arc on the water, one group, no per-letter stagger.
+function drawOnLane(ctx, pr, slot, text, adv, len, size, trackW, spread, alpha, pal) {
+  if (alpha <= 0) return;
+  ctx.save();
+  ctx.fillStyle = rgba(pal.ink, 0.85 * alpha);
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.letterSpacing = '0px';
+  let x = slot.cx - len / 2;
+  for (let i = 0; i < text.length; i++) {
+    const cxw = x + (adv[i] - trackW) / 2;
+    x += adv[i];
+    if (text[i] === ' ') continue;
+    const wx = slot.cx + (cxw - slot.cx) * spread;
+    const p = pr.point(wx, laneY(slot, wx)), p2 = pr.point(wx + 10, laneY(slot, wx + 10));
+    ctx.font = `400 ${(size * p.s).toFixed(2)}px ${FONTS.serif}`;
+    ctx.setTransform(1, 0, 0, 1, p.x, p.y);
+    ctx.rotate(Math.atan2(p2.y - p.y, p2.x - p.x));
+    ctx.fillText(text[i], 0, 0);
+  }
+  ctx.restore();
+}
+
+function drawLabelsChapter(ctx, t, pal, env) {
+  const L = env.cues.L, pr = env.pr;
+  const st = labelsState(L, t);
+  const motion = env.rm ? 0 : 1;
+  for (const ln of st.lines) drawOnLane(ctx, pr, ln, L.text, ln.adv, ln.len, ln.size, 0, 1, ln.alpha, pal);
+  const nameSpread = (land, spread) => 1 + motion * (0.18 * (1 - land) + 0.35 * spread);
+  for (const ln of st.lines) {
+    const n = ln.name;
+    drawOnLane(ctx, pr, ln.slot, n.text, n.adv, n.len, n.size, n.track * n.size, nameSpread(ln.land, st.spread), ln.nameA, pal);
+  }
+  const f = L.stageName;
+  drawOnLane(ctx, pr, L.stage, f.text, f.adv, f.len, f.size, f.track * f.size, nameSpread(st.firstLand, 0), st.first, pal);
+  // people hear the word: sight lines from the margins stop at the name, none reach the sentence
+  if (st.sight > 0) {
+    const inside = (w) => Math.abs(w.x - L.stage.cx) < f.len / 2 + 40 && Math.abs(w.y - laneY(L.stage, w.x)) < 110;
+    for (const m of SIGHT_FROM) {
+      let k = 0;
+      while (k < 1 && !inside({ x: lerp(m.x, L.stage.cx, k), y: lerp(m.y, L.stage.y, k) })) k += 0.01;
+      const end = { x: lerp(m.x, L.stage.cx, k * st.sight), y: lerp(m.y, L.stage.y, k * st.sight) };
+      seg(ctx, pr.point(m.x, m.y), pr.point(end.x, end.y), { color: pal.ink, alpha: 0.4 * st.sight, width: 1.3, dash: [5, 6] });
+    }
   }
 }
 
@@ -333,12 +350,13 @@ function drawEndCard(ctx, beat, t, pal) {
 function scrim(ctx, pal) {
   const a = 1 - pal.close;
   if (a <= 0) return;
-  const g = ctx.createLinearGradient(0, 560, 0, STAGE_H);
+  // the chart fades into the page above the captions, so nothing runs behind a line of text
+  const g = ctx.createLinearGradient(0, 600, 0, 900);
   g.addColorStop(0, rgba(pal.ground, 0));
-  g.addColorStop(0.45, rgba(pal.ground, 0.78 * a));
-  g.addColorStop(1, rgba(pal.ground, 0.9 * a));
+  g.addColorStop(0.62, rgba(pal.ground, 0.9 * a));
+  g.addColorStop(1, rgba(pal.ground, a));
   ctx.fillStyle = g;
-  ctx.fillRect(0, 560, STAGE_W, STAGE_H - 560);
+  ctx.fillRect(0, 600, STAGE_W, STAGE_H - 600);
 }
 
 export function drawText(ctx, data, t, pal, env) {
@@ -348,7 +366,7 @@ export function drawText(ctx, data, t, pal, env) {
   const beat = data.beats.find((b) => t >= b.start && t < b.end) || data.beats.at(-1);
   const opts = { rm: env.rm, caret: env.carets[beat.id], endcard: beat.type === 'site', faint: !!env.faint?.[beat.id] };
   drawLabels(ctx, beat, t, pal, opts, env);
-  drawChips(ctx, beat, t, pal, opts, env);
+  drawLabelsChapter(ctx, t, pal, env);
   const L = drawStatement(ctx, beat, t, pal, opts);
   drawPrecision(ctx, beat, t, pal, opts, L);
   if (opts.endcard) drawEndCard(ctx, beat, t, pal);

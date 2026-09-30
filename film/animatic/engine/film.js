@@ -5,13 +5,13 @@ import { clamp, qt, easeInOut, smooth } from './util.js';
 import { makeCamera, projector, STAGE_W, STAGE_H } from './camera.js';
 import { palette, DUSK_LEN } from './palette.js';
 import { makeCues, cameraKeys, drawWorld, anchorFor } from './world.js';
-import { drawText } from './captions.js';
+import { drawText, FONTS } from './captions.js';
 import { rgba } from './util.js';
 
 // Graft 1 (blue caret): statements whose limit is inserted by the caret.
-const CARETS = { B5: 'on a benchmark', B8: 'during a cyber test', B10: 'in tests' };
-// The question returns faintly before the answer, so the answer visibly replies to it.
-const FAINT = { B13: true };
+const CARETS = { B9: 'on a benchmark', B12: 'during a cyber test', B14: 'in tests' };
+// Statements drawn faint (none in this cut).
+const FAINT = {};
 // Dusk sweeps in from the fog corner as a soft front, so no frame is a flat mid-grey.
 const FRONT = { x: STAGE_W, y: 0, soft: 700, reach: 2900 };
 const CAPTION_AT = { x: 520, y: 860 };
@@ -27,7 +27,14 @@ export function createFilm(data, { canvas, reducedMotion = false, doc = document
   const out = canvas.getContext('2d', { alpha: false });
   const pic = layer(doc), pic2 = layer(doc), txt = layer(doc);
   const pctx = pic.getContext('2d', { alpha: false }), pctx2 = pic2.getContext('2d'), tctx = txt.getContext('2d');
-  const cues = makeCues(data);
+  // measure type in world units for the lines laid on the water (fonts are loaded before this)
+  const measure = (text, size, track) => {
+    tctx.font = `400 ${size}px ${FONTS.serif}`;
+    tctx.letterSpacing = '0px';
+    const adv = [...text].map((ch) => tctx.measureText(ch).width + track * size);
+    return { adv, len: adv.reduce((a, b) => a + b, 0) - track * size };
+  };
+  const cues = makeCues(data, measure);
   const cam = makeCamera(cameraKeys(cues));
   const duration = data.duration;
   const beats = data.beats;

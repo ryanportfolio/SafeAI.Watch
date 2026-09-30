@@ -51,7 +51,9 @@ export const FORKS = [0.2, 0.4, 0.6].map((s, i) => {
     south: bez(F, add(F, 30, 150), dn),
   };
 });
-const FORK_BEAT = ['B3', 'B4', 'B5'];
+// Beat ids by role in the story, so a renumbered beats.json only touches this map.
+export const ID = { q: 'B1', honest: 'B2', label: 'B3', hear: 'B4', camps: 'B5', people: 'B6', sight: 'B7', code: 'B8', bio: 'B9', harris: 'B10', test: 'B11', agents: 'B12', caught: 'B13', train: 'B14', laws: 'B15', fog: 'B16', hold: 'B17', end: 'B18' };
+const FORK_BEAT = [ID.sight, ID.code, ID.bio];
 
 // Test basin (harbor): 122 soundings, 14 per row (H40 denominator, site record #34)
 const BASIN = { x0: 520, y0: 240, x1: 1200, y1: 650 };
@@ -77,54 +79,185 @@ const FOG = [{ x: 3150, y: 380, r: 720, p: 0 }, { x: 2880, y: 240, r: 520, p: 1.
 const FOG_DROP = { x: 3150, y: 470 };
 const END_FROM = FORKS[1].F; // the middle fork's neutral ring becomes the crosshair
 
+// ---------- the labels chapter: soundings, the sentence, the region names ----------
+// A chart keeps names off the soundings because a name printed over the water hides the
+// depths beneath it. The water starts dense with soundings (many readings, no data). An honest
+// answer is a sentence laid on the water; a region name lands over it and knocks out the
+// sentence and the soundings under its letters. Then the same sentence many times over, and a
+// run of names (read in order from beats.json) until no sentence is left; then they lift.
+
+// Lines of type on the water are gentle arcs (the current is not charted yet).
+export const laneY = (slot, x) => slot.y + 22 * Math.sin((x - slot.cx) * 0.0012);
+export const laneSlope = (slot, x) => 22 * 0.0012 * Math.cos((x - slot.cx) * 0.0012);
+
+// Soundings: many small, varied depth marks in ink at low alpha. Conceptual; no numerals,
+// because a number on screen needs a source row. Kept out of the caption band and the key.
+export const SOUNDINGS = (() => {
+  const r = mulberry32(777), out = [];
+  const keep = (x, y) => x > shoreX(y) + 90 && x < SHEET.x1 - 70 && y > SHEET.y0 + 60 && y < SHEET.y1 - 60
+    && !(y > 1480 && x < 2900) && !(x > 2800 && y > 1560)
+    && !(x > BASIN.x0 - 70 && x < BASIN.x1 + 70 && y > BASIN.y0 - 60 && y < BASIN.y1 + 60)
+    && !FORKS.some((f) => [f.F, f.up, f.dn].some((q) => Math.hypot(q.x - x, q.y - y) < 80));
+  for (let n = 0; n < 6000 && out.length < 820; n++) {
+    const x = SHEET.x0 + r() * (SHEET.x1 - SHEET.x0), y = SHEET.y0 + r() * (SHEET.y1 - SHEET.y0);
+    const kind = Math.floor(r() * 5), rot = r() * Math.PI, a = 0.22 + 0.2 * r(), tone = r();
+    if (!keep(x, y) || out.some((o) => Math.abs(o.x - x) < 40 && Math.abs(o.y - y) < 40)) continue;
+    out.push({ x, y, kind, rot, a, tone: tone < 0.07 ? 'amber' : tone < 0.14 ? 'orange' : 'ink' });
+  }
+  return out;
+})();
+
+const STAGE = { cx: 1950, y: 760, sent: 70, name: 150, track: 0.4 }; // one sentence, one name
+const LGRID = { x0: 1250, x1: 2700, y0: 300, y1: 1340, sent: 48, name: 104, track: 0.28 };
+const inE = (t, a, d) => easeOut((t - a) / d), outE = (t, a, d) => easeIn((t - a) / d);
+
+// Layout (world units) and timing for the chapter, from beats.json and the loaded fonts.
+function labelsLayout(c, measure) {
+  const ex = (id, role) => (c.B[id].extra || []).filter((e) => e.role === role);
+  const sent = ex(ID.honest, 'sentence')[0], first = ex(ID.label, 'region')[0];
+  const names = ex(ID.camps, 'region'); // the run of labels, in order
+  const n = names.length, rows = Math.ceil(n / 2);
+  // slot order snakes across the two columns so neither direction owns a side of the sheet
+  const slots = [];
+  for (let r = 0; r < rows; r++) {
+    const y = rows === 1 ? (LGRID.y0 + LGRID.y1) / 2 : lerp(LGRID.y0, LGRID.y1, r / (rows - 1));
+    const cols = r % 2 ? [LGRID.x1, LGRID.x0] : [LGRID.x0, LGRID.x1];
+    for (const cx of cols) if (slots.length < n) slots.push({ cx, y });
+  }
+  const home = slots.reduce((b, s, i) => (Math.hypot(s.cx - STAGE.cx, s.y - STAGE.y) < Math.hypot(slots[b].cx - STAGE.cx, slots[b].y - STAGE.y) ? i : b), 0);
+  return {
+    text: sent.text,
+    stage: { cx: STAGE.cx, y: STAGE.y, sent: measure(sent.text, STAGE.sent, 0), size: STAGE.sent },
+    stageName: { text: first.text, at: first.at, size: STAGE.name, track: STAGE.track, ...measure(first.text, STAGE.name, STAGE.track) },
+    gridSent: measure(sent.text, LGRID.sent, 0),
+    slots: slots.map((s, i) => ({ ...s, name: { text: names[i].text, at: names[i].at, size: LGRID.name, track: LGRID.track, ...measure(names[i].text, LGRID.name, LGRID.track) } })),
+    home,
+    tS1: sent.at, tSight: c.s(ID.hear) + 0.4, tSplit: c.s(ID.camps), tLift: c.s(ID.people) + 0.2, tEnd: c.s(ID.sight) + 0.2,
+    tFork: c.s(ID.sight) + 1.8, // once the first sourced fork lands, the conceptual colour steps back to ink
+  };
+}
+
+// State of every element at t. Shared by the picture (knockout) and the text layer.
+export function labelsState(L, t) {
+  const end = 1 - outE(t, L.tEnd, 1.0);
+  const spread = easeInOut((t - L.tLift) / 1.6);
+  const first = inE(t, L.stageName.at, 0.9) * (1 - outE(t, L.tSplit, 0.7));
+  const morph = easeInOut((t - L.tSplit) / 0.9); // the one sentence moves into its slot in the grid
+  const copies = inE(t, L.tSplit + 0.3, 0.8);
+  const lines = [];
+  L.slots.forEach((s, i) => {
+    const land = inE(t, s.name.at, 0.8);
+    // on the lift the names clear first, then the sentences come back: no frame holds both
+    const name = land * (1 - clamp(spread * 1.7));
+    const cover = land * (1 - smooth((spread - 0.45) / 0.55));
+    const isHome = i === L.home;
+    let alpha = (isHome ? 1 : copies) * (1 - cover) * end;
+    let cx = s.cx, y = s.y, size = 48, len = L.gridSent.len, adv = L.gridSent.adv;
+    if (isHome) {
+      alpha = (t < L.tSplit ? inE(t, L.tS1, 0.8) * (1 - first) : 1 - cover) * end;
+      cx = lerp(L.stage.cx, s.cx, morph); y = lerp(L.stage.y, s.y, morph);
+      size = lerp(L.stage.size, 48, morph);
+      const k = size / L.stage.size;
+      len = L.stage.sent.len * k; adv = L.stage.sent.adv.map((a) => a * k);
+    }
+    if (!isHome && t < L.tSplit) alpha = 0;
+    lines.push({ cx, y, size, len, adv, alpha, name: s.name, nameA: name, land, slot: s });
+  });
+  return {
+    lines, spread, first, firstLand: inE(t, L.stageName.at, 0.9),
+    sight: inE(t, L.tSight, 1.0) * (1 - outE(t, L.tSplit, 0.6)),
+    colour: inE(t, L.tLift + 0.4, 1.2) * (1 - outE(t, L.tFork, 2.0)),
+  };
+}
+
+function knock(o, st, L) {
+  let k = 1;
+  const band = (slot, cx, len, half) => Math.abs(o.x - cx) < len / 2 + 40 && Math.abs(o.y - laneY({ ...slot, cx }, o.x)) < half;
+  for (const ln of st.lines) {
+    if (ln.alpha > 0 && band(ln, ln.cx, ln.len, ln.size * 0.9)) k *= 1 - ln.alpha;
+    if (ln.nameA > 0 && band(ln.slot, ln.slot.cx, ln.name.len, 72)) k *= 1 - ln.nameA;
+  }
+  if (st.first > 0 && band(L.stage, L.stage.cx, L.stageName.len, 100)) k *= 1 - st.first;
+  return k;
+}
+
+function drawSoundings(ctx, t, P, pal, c) {
+  const st = labelsState(c.L, t);
+  const cIn = st.colour;
+  for (const o of SOUNDINGS) {
+    const a = o.a * knock(o, st, c.L);
+    if (a <= 0.01) continue;
+    const q = P(o);
+    if (o.tone !== 'ink' && cIn > 0) {
+      if (o.tone === 'amber') { glow(ctx, q, 9, pal.amber, Math.min(1, 0.7 * cIn * a * 2)); dot(ctx, q, 2.4, pal.amber, cIn * Math.min(1, a * 2.4)); }
+      else { dot(ctx, q, 2.2, pal.orange, cIn * Math.min(1, a * 2.4)); ring(ctx, q, 6, { color: pal.orange, alpha: cIn * Math.min(1, a * 2), width: 1, dash: [1.5, 2.5] }); }
+      if (cIn >= 1) continue;
+    }
+    const aa = a * (o.tone === 'ink' ? 1 : 1 - cIn);
+    const cs = Math.cos(o.rot) * 3.2, sn = Math.sin(o.rot) * 3.2;
+    switch (o.kind) {
+      case 0: dot(ctx, q, 1.6, pal.ink, aa); break;
+      case 1: seg(ctx, { x: q.x - 3, y: q.y }, { x: q.x + 3, y: q.y }, { color: pal.ink, alpha: aa, width: 1 }); seg(ctx, { x: q.x, y: q.y - 3 }, { x: q.x, y: q.y + 3 }, { color: pal.ink, alpha: aa, width: 1 }); break;
+      case 2: seg(ctx, { x: q.x - cs, y: q.y - sn }, { x: q.x + cs, y: q.y + sn }, { color: pal.ink, alpha: aa, width: 1.1 }); break;
+      case 3: ring(ctx, q, 2.6, { color: pal.ink, alpha: aa, width: 1 }); break;
+      default: dot(ctx, { x: q.x - 2.2, y: q.y }, 1.2, pal.ink, aa); dot(ctx, { x: q.x + 2.2, y: q.y }, 1.2, pal.ink, aa);
+    }
+  }
+}
+
+// Sight lines for "people hear the word": from the chart margins to the word, stopping at it.
+export const SIGHT_FROM = [{ x: SHEET.x0, y: 380 }, { x: SHEET.x0, y: 1150 }, { x: 900, y: SHEET.y0 }, { x: 1750, y: SHEET.y0 }, { x: 2650, y: SHEET.y0 }, { x: SHEET.x1, y: 260 }, { x: SHEET.x1, y: 900 }, { x: SHEET.x1, y: 1500 }];
+export const STAGE_SLOT = STAGE;
+
+
 // ---------- cues from beats.json ----------
 
-export function makeCues(data) {
+export function makeCues(data, measure) {
   const B = Object.fromEntries(data.beats.map((b) => [b.id, b]));
   const s = (id) => B[id].start, a = (id) => B[id].statement.at, e = (id) => B[id].end;
-  return {
+  const c = {
     B, s, a, e,
-    lift: e('B2') - 1.2, // the label chips lift and the record is revealed
-    dusk: s('B12') - 0.2, // dusk sweeps in from the fog while no caption is on screen
-    close: s('B16'),
+    dusk: s(ID.fog) - 0.2, // dusk sweeps in from the fog while no caption is on screen
+    close: s(ID.end),
   };
+  c.L = labelsLayout(c, measure);
+  c.lift = c.L.tLift; // the names lift and the record is revealed
+  return c;
 }
 
 // ---------- camera path ----------
 
-const FULL = { cx: 1800, cy: 1000, zoom: 0.5, pitch: 0 };
+const FULL = { cx: 1800, cy: 1000, zoom: 0.46, pitch: 0 }; // whole sheet inside the frame, clear margins
 export function cameraKeys(c) {
   const k = (id, pose, dur = 1.4, lead = 0.3, drift) => ({ at: Math.max(0, c.s(id) - lead), dur, pose, drift });
-  const fork = (i) => ({ cx: FORKS[i].F.x + 110, cy: FORKS[i].F.y - 10, zoom: 0.95, pitch: 0.15 });
+  const fork = (i) => ({ cx: FORKS[i].F.x + 110, cy: FORKS[i].F.y + 50, zoom: 0.95, pitch: 0.15 });
   return [
-    { at: 0, dur: 0.001, pose: { cx: 1800, cy: 1000, zoom: 0.56, pitch: 0 } },
-    k('B2', FULL, 1.6),
-    { at: c.lift + 0.2, dur: 1.8, pose: fork(0) },
-    k('B4', fork(1), 1.5),
-    k('B5', fork(2), 1.5),
-    k('B6', { ...FULL, pitch: 0.12 }, 1.6, 0.2),
-    k('B7', { cx: 880, cy: 470, zoom: 1.05, pitch: 0.25 }, 1.5),
-    k('B8', { cx: 820, cy: 450, zoom: 1.15, pitch: 0.28 }, 1.2),
-    k('B9', { cx: 450, cy: 450, zoom: 1.6, pitch: 0.28 }, 1.4),
-    k('B10', { cx: 1060, cy: 440, zoom: 1.3, pitch: 0.12 }, 1.4),
-    k('B11', { cx: 1640, cy: 470, zoom: 1.0, pitch: 0.15 }, 1.3),
-    k('B12', { cx: 1850, cy: 960, zoom: 0.5, pitch: 0.35 }, 2.4, 0.2),
-    k('B13', { cx: 1800, cy: 980, zoom: 0.5, pitch: 0.2 }, 2.0, 0.2),
-    k('B16', { cx: END_FROM.x, cy: END_FROM.y + 60, zoom: 1.4, pitch: 0 }, 1.5, 0),
+    { at: 0, dur: 0.001, pose: FULL },
+    k(ID.honest, { cx: STAGE_SLOT.cx, cy: STAGE_SLOT.y + 110, zoom: 0.62, pitch: 0 }, 1.8, 0),
+    k(ID.camps, FULL, 1.2, 0),
+    k(ID.sight, fork(0), 1.8),
+    k(ID.code, fork(1), 1.5),
+    k(ID.bio, fork(2), 1.5),
+    k(ID.harris, { ...FULL, pitch: 0.12 }, 1.6, 0.2),
+    k(ID.test, { cx: 880, cy: 470, zoom: 1.05, pitch: 0.25 }, 1.5),
+    k(ID.agents, { cx: 820, cy: 450, zoom: 1.15, pitch: 0.28 }, 1.2),
+    k(ID.caught, { cx: 450, cy: 450, zoom: 1.6, pitch: 0.28 }, 1.4),
+    k(ID.train, { cx: 1060, cy: 440, zoom: 1.3, pitch: 0.12 }, 1.4),
+    k(ID.laws, { cx: 1640, cy: 470, zoom: 1.0, pitch: 0.15 }, 1.3),
+    k(ID.fog, { cx: 1850, cy: 960, zoom: 0.5, pitch: 0.35 }, 2.4, 0.2),
+    k(ID.hold, { cx: 1800, cy: 980, zoom: 0.5, pitch: 0.2 }, 2.0, 0.2),
+    k(ID.end, { cx: END_FROM.x, cy: END_FROM.y + 60, zoom: 1.4, pitch: 0 }, 1.5, 0),
   ];
 }
 
 // ---------- label anchors (world points + chip offset in stage px) ----------
 
 const ANCHORS = {
-  'B8:0': { w: TICKS[3], dx: -40, dy: -60, alignRight: true },
-  'B10:0': { w: { x: MEASURE.x, y: MEASURE.y + 13 * MEASURE.unit }, dx: 34, dy: 0 },
-  'B10:1': { w: { x: MEASURE.x, y: MEASURE.y + 0.4 * MEASURE.unit }, dx: 34, dy: 0 },
-  'B11:0': { w: CH_BUOYS[0], dx: 36, dy: 30 },
-  'B11:1': { w: CH_BUOYS[1], dx: 36, dy: -30 },
-  // label chips cover the whole map, one half each, identical size
-  'B2:0': { rect: [SHEET.x0, SHEET.y0, 1800, SHEET.y1] },
-  'B2:1': { rect: [1800, SHEET.y0, SHEET.x1, SHEET.y1] },
+  [ID.agents + ':0']: { w: TICKS[3], dx: -40, dy: -60, alignRight: true },
+  [ID.train + ':0']: { w: { x: MEASURE.x, y: MEASURE.y + 13 * MEASURE.unit }, dx: 34, dy: 0 },
+  [ID.train + ':1']: { w: { x: MEASURE.x, y: MEASURE.y + 0.4 * MEASURE.unit }, dx: 34, dy: 0 },
+  [ID.laws + ':0']: { w: CH_BUOYS[0], dx: -30, dy: 40, alignRight: true },
+  [ID.laws + ':1']: { w: CH_BUOYS[1], dx: 36, dy: -34 },
 };
 FORKS.forEach((f, i) => {
   ANCHORS[`${FORK_BEAT[i]}:0`] = { w: f.up, dx: 36, dy: -24, col: 'amber' };
@@ -199,9 +332,11 @@ export function drawWorld(ctx, t, pr, pal, c, { still = false } = {}) {
     if (sheetIn >= 1) frame(ctx, corners, { color: ink, alpha: 1, width: 1.5, tick: 18, dashAlpha: 0 });
   }
 
-  // the current is revealed when the label chips lift: the main line draws, the rest follow
-  const mainIn = easeInOut((t - c.lift) / 1.6);
-  const restIn = easeInOut((t - (c.lift + 0.4)) / 1.4);
+  drawSoundings(ctx, t, P, pal, c);
+
+  // the current is revealed when the names lift: the main line draws, the rest follow
+  const mainIn = easeInOut((t - (c.lift + 0.3)) / 1.6);
+  const restIn = easeInOut((t - (c.lift + 0.7)) / 1.4);
   for (const st of STREAMS) {
     const on = st.k === 0 ? mainIn : restIn;
     if (on <= 0) continue;
@@ -222,21 +357,21 @@ export function drawWorld(ctx, t, pr, pal, c, { still = false } = {}) {
   });
 
   // harbor (H40): breakwater, 122 soundings; ten turn orange together
-  const bIn = rise(t, c.s('B7') + 0.2, 0.7);
+  const bIn = rise(t, c.s(ID.test) + 0.2, 0.7);
   if (bIn > 0) {
     const bc = [{ x: BASIN.x0, y: BASIN.y0 }, { x: BASIN.x1, y: BASIN.y0 }, { x: BASIN.x1, y: BASIN.y1 }, { x: BASIN.x0, y: BASIN.y1 }].map((w) => P(w));
     frame(ctx, bc, { color: ink, alpha: bIn, width: 1.5, tick: 16, dashAlpha: 0.6, gapSide: 3, gap: [0.35, 0.6] });
-    const turn = easeInOut((t - (c.a('B8') + 0.8)) / 0.5);
+    const turn = easeInOut((t - (c.a(ID.agents) + 0.8)) / 0.5);
     GRID.forEach((w, i) => {
       const hot = ORANGE.includes(i);
       dot(ctx, P(w), (hot ? lerp(2.6, 4, turn) : 2.6) * sc0, hot && turn > 0 ? mixCol(ink, pal.orange, turn) : ink, bIn * (hot ? 1 : 0.55));
     });
     // the bundle leaves through the open side and fans into 19 ticks on the coast
-    const bundle = easeInOut((t - (c.a('B8') + 2.0)) / 1.2);
+    const bundle = easeInOut((t - (c.a(ID.agents) + 2.0)) / 1.2);
     if (bundle > 0) {
       const u1 = clamp(bundle * 2), u2 = clamp(bundle * 2 - 1);
       ORANGE.forEach((i) => path(ctx, partial([P(GRID[i]), P(GATE)], u1), { color: pal.orange, alpha: 0.75, width: 1.5, dash: [6, 5], offset: -march * 10 }));
-      const stopAt = c.a('B9') + 0.3;
+      const stopAt = c.a(ID.caught) + 0.3;
       TICKS.forEach((w, j) => {
         const off = j === STOP_TICK ? -Math.min(march, stopAt) * 10 : -march * 10;
         path(ctx, partial([P(GATE), P(w)], u2), { color: pal.orange, alpha: 0.7, width: 1.5, dash: [6, 5], offset: off });
@@ -244,7 +379,7 @@ export function drawWorld(ctx, t, pr, pal, c, { still = false } = {}) {
       });
     }
     // the catch (H42): a short solid ink bar across one line near the shore; its dashes stop
-    const bar = rise(t, c.a('B9') + 0.3, 0.4);
+    const bar = rise(t, c.a(ID.caught) + 0.3, 0.4);
     if (bar > 0) {
       const w = TICKS[STOP_TICK], g = GATE, k = 0.82;
       const m = { x: lerp(g.x, w.x, k), y: lerp(g.y, w.y, k) };
@@ -255,7 +390,7 @@ export function drawWorld(ctx, t, pr, pal, c, { still = false } = {}) {
   }
 
   // training in tests (P32): the 13% sounding retracts to 0.4%; the long one stays as a trace
-  const tm = c.a('B10');
+  const tm = c.a(ID.train);
   const mIn = rise(t, tm + 0.5, 0.5);
   if (mIn > 0) {
     const r = easeInOut((t - (tm + 1.6)) / 1.0);
@@ -270,11 +405,11 @@ export function drawWorld(ctx, t, pr, pal, c, { still = false } = {}) {
   }
 
   // laws (L37, L14): the blue channel draws out of the harbor, two buoys drop
-  const t11 = c.s('B11');
+  const t11 = c.s(ID.laws);
   const chIn = easeInOut((t - (t11 + 0.1)) / 1.4);
   if (chIn > 0) {
     for (const side of [-1, 1]) path(ctx, partial([P(chan(0, side)), P(chan(1, side))], chIn), { color: pal.blue, alpha: 0.9, width: 1.6, dash: [9, 7] });
-    const xs = c.B.B11.extra.filter((e) => e.role === 'buoy');
+    const xs = c.B[ID.laws].extra.filter((e) => e.role === 'buoy');
     CH_BUOYS.forEach((w, i) => {
       const b = rise(t, xs[i].at - 0.2, 0.4);
       if (b > 0) { dot(ctx, P(w), 5.5 * sc0, pal.blue, b); ring(ctx, P(w), 10 * sc0, { color: pal.blue, alpha: b * 0.6, width: 1.3, cp }); }
@@ -282,7 +417,7 @@ export function drawWorld(ctx, t, pr, pal, c, { still = false } = {}) {
   }
 
   // fog: gathers at the far edge once the current is revealed, deepens for the unknown
-  const fogIn = easeInOut((t - (c.lift + 0.8)) / 3) * (0.55 + 0.45 * easeInOut((t - c.s('B12')) / 2));
+  const fogIn = easeInOut((t - (c.lift + 0.8)) / 3) * (0.55 + 0.45 * easeInOut((t - c.s(ID.fog)) / 2));
   if (fogIn > 0) {
     const fogCol = mixCol([236, 236, 230], [52, 64, 78], pal.dusk);
     FOG.forEach((f) => {
@@ -292,7 +427,7 @@ export function drawWorld(ctx, t, pr, pal, c, { still = false } = {}) {
   }
 
   // the unknown (W7): a sounding drops into the fog and finds no bottom (no ring)
-  drop(ctx, P(FOG_DROP), c.a('B12') + 0.2, t, pal.ink, pal, sc0, { hang: true });
+  drop(ctx, P(FOG_DROP), c.a(ID.fog) + 0.2, t, pal.ink, pal, sc0, { hang: true });
 
   ctx.restore();
   endMark(ctx, t, pr, pal, c);
