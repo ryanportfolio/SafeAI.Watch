@@ -87,8 +87,8 @@ const END_FROM = FORKS[1].F; // the middle fork's neutral ring becomes the cross
 // run of names (read in order from beats.json) until no sentence is left; then they lift.
 
 // Lines of type on the water are gentle arcs (the current is not charted yet).
-export const laneY = (slot, x) => slot.y + 22 * Math.sin((x - slot.cx) * 0.0012);
-export const laneSlope = (slot, x) => 22 * 0.0012 * Math.cos((x - slot.cx) * 0.0012);
+// a line of type on the water: a gentle arc, optionally tilted to follow the water
+export const laneY = (slot, x) => slot.y + (x - slot.cx) * Math.tan(slot.ang || 0) + 22 * Math.sin((x - slot.cx) * 0.0012);
 
 // Soundings: many small, varied depth marks in ink at low alpha. Conceptual; no numerals,
 // because a number on screen needs a source row. Kept out of the caption band and the key.
@@ -107,31 +107,44 @@ export const SOUNDINGS = (() => {
   return out;
 })();
 
-const STAGE = { cx: 1950, y: 760, sent: 70, name: 150, track: 0.4 }; // one sentence, one name
-const LGRID = { x0: 1250, x1: 2700, y0: 300, y1: 1340, sent: 48, name: 104, track: 0.28 };
+const STAGE = { cx: 1950, y: 760, ang: 0, sent: 70, name: 150, track: 0.4 }; // one sentence, one name at a time
 const inE = (t, a, d) => easeOut((t - a) / d), outE = (t, a, d) => easeIn((t - a) / d);
+
+// Step 5: the sentence copies sit loosely in two staggered columns; the names do not follow
+// them. Each name is placed like a chart crowded with place names: its own size (a calm
+// range), angle and offset, overlapping its sentence and its neighbours unevenly.
+const SENT_SLOTS = [
+  { cx: 1180, y: 290, ang: -0.03 }, { cx: 2760, y: 250, ang: 0.03 }, { cx: 2660, y: 520, ang: -0.02 }, { cx: 1260, y: 560, ang: 0.02 },
+  { cx: 1130, y: 820, ang: -0.04 }, { cx: 2720, y: 800, ang: 0.03 }, { cx: 2800, y: 1070, ang: -0.03 }, { cx: 1220, y: 1090, ang: 0.03 },
+  { cx: 1160, y: 1340, ang: -0.02 }, { cx: 2690, y: 1330, ang: 0.02 },
+];
+// absolute places (world units) in landing order; they cover the water unevenly, not in columns
+const NAME_PLACE = [
+  { cx: 900, y: 330, ang: -0.1, size: 128 }, { cx: 2450, y: 200, ang: 0.05, size: 104 }, { cx: 3050, y: 560, ang: 0.12, size: 124 },
+  { cx: 1650, y: 470, ang: -0.07, size: 132 }, { cx: 820, y: 900, ang: 0.06, size: 116 }, { cx: 2250, y: 820, ang: -0.08, size: 100 },
+  { cx: 3000, y: 1130, ang: 0.09, size: 110 }, { cx: 1500, y: 1150, ang: -0.05, size: 118 }, { cx: 700, y: 1380, ang: 0.14, size: 140 },
+  { cx: 2350, y: 1400, ang: -0.1, size: 126 },
+];
+const SENT_SIZE = 48, NAME_TRACK = 0.3;
 
 // Layout (world units) and timing for the chapter, from beats.json and the loaded fonts.
 function labelsLayout(c, measure) {
   const ex = (id, role) => (c.B[id].extra || []).filter((e) => e.role === role);
-  const sent = ex(ID.honest, 'sentence')[0], first = ex(ID.label, 'region')[0];
+  const sent = ex(ID.honest, 'sentence')[0];
+  const staged = [...ex(ID.label, 'region'), ...ex(ID.hear, 'region')]; // one name, then another, same place
   const names = ex(ID.camps, 'region'); // the run of labels, in order
-  const n = names.length, rows = Math.ceil(n / 2);
-  // slot order snakes across the two columns so neither direction owns a side of the sheet
-  const slots = [];
-  for (let r = 0; r < rows; r++) {
-    const y = rows === 1 ? (LGRID.y0 + LGRID.y1) / 2 : lerp(LGRID.y0, LGRID.y1, r / (rows - 1));
-    const cols = r % 2 ? [LGRID.x1, LGRID.x0] : [LGRID.x0, LGRID.x1];
-    for (const cx of cols) if (slots.length < n) slots.push({ cx, y });
-  }
+  const slots = names.map((nm, i) => {
+    const s = SENT_SLOTS[i % SENT_SLOTS.length], p = NAME_PLACE[i % NAME_PLACE.length];
+    const nameSlot = { cx: p.cx, y: p.y, ang: p.ang };
+    return { ...s, nameSlot, name: { text: nm.text, at: nm.at, size: p.size, track: NAME_TRACK, ...measure(nm.text, p.size, NAME_TRACK) } };
+  });
   const home = slots.reduce((b, s, i) => (Math.hypot(s.cx - STAGE.cx, s.y - STAGE.y) < Math.hypot(slots[b].cx - STAGE.cx, slots[b].y - STAGE.y) ? i : b), 0);
   return {
     text: sent.text,
-    stage: { cx: STAGE.cx, y: STAGE.y, sent: measure(sent.text, STAGE.sent, 0), size: STAGE.sent },
-    stageName: { text: first.text, at: first.at, size: STAGE.name, track: STAGE.track, ...measure(first.text, STAGE.name, STAGE.track) },
-    gridSent: measure(sent.text, LGRID.sent, 0),
-    slots: slots.map((s, i) => ({ ...s, name: { text: names[i].text, at: names[i].at, size: LGRID.name, track: LGRID.track, ...measure(names[i].text, LGRID.name, LGRID.track) } })),
-    home,
+    stage: { cx: STAGE.cx, y: STAGE.y, ang: 0, sent: measure(sent.text, STAGE.sent, 0), size: STAGE.sent },
+    stageNames: staged.map((n) => ({ text: n.text, at: n.at, size: STAGE.name, track: STAGE.track, ...measure(n.text, STAGE.name, STAGE.track) })),
+    gridSent: measure(sent.text, SENT_SIZE, 0),
+    slots, home,
     tS1: sent.at, tSight: c.s(ID.hear) + 0.4, tSplit: c.s(ID.camps), tLift: c.s(ID.people) + 0.2, tEnd: c.s(ID.sight) + 0.2,
     tFork: c.s(ID.sight) + 1.8, // once the first sourced fork lands, the conceptual colour steps back to ink
   };
@@ -141,8 +154,14 @@ function labelsLayout(c, measure) {
 export function labelsState(L, t) {
   const end = 1 - outE(t, L.tEnd, 1.0);
   const spread = easeInOut((t - L.tLift) / 1.6);
-  const first = inE(t, L.stageName.at, 0.9) * (1 - outE(t, L.tSplit, 0.7));
-  const morph = easeInOut((t - L.tSplit) / 0.9); // the one sentence moves into its slot in the grid
+  // staged names: each crossfades into the next in the same place (0.8 s), all clear at the split
+  const staged = L.stageNames.map((n, i) => {
+    const next = L.stageNames[i + 1];
+    const a = inE(t, n.at, 0.9) * (next ? 1 - outE(t, next.at, 0.8) : 1) * (1 - outE(t, L.tSplit, 0.7));
+    return { item: n, a, land: inE(t, n.at, 0.9) };
+  });
+  const first = Math.max(0, ...staged.map((s) => s.a));
+  const morph = easeInOut((t - L.tSplit) / 0.9); // the one sentence moves into its place among the copies
   const copies = inE(t, L.tSplit + 0.3, 0.8);
   const lines = [];
   L.slots.forEach((s, i) => {
@@ -152,19 +171,19 @@ export function labelsState(L, t) {
     const cover = land * (1 - smooth((spread - 0.45) / 0.55));
     const isHome = i === L.home;
     let alpha = (isHome ? 1 : copies) * (1 - cover) * end;
-    let cx = s.cx, y = s.y, size = 48, len = L.gridSent.len, adv = L.gridSent.adv;
+    let cx = s.cx, y = s.y, ang = s.ang, size = SENT_SIZE, len = L.gridSent.len, adv = L.gridSent.adv;
     if (isHome) {
       alpha = (t < L.tSplit ? inE(t, L.tS1, 0.8) * (1 - first) : 1 - cover) * end;
-      cx = lerp(L.stage.cx, s.cx, morph); y = lerp(L.stage.y, s.y, morph);
-      size = lerp(L.stage.size, 48, morph);
+      cx = lerp(L.stage.cx, s.cx, morph); y = lerp(L.stage.y, s.y, morph); ang = lerp(0, s.ang, morph);
+      size = lerp(L.stage.size, SENT_SIZE, morph);
       const k = size / L.stage.size;
       len = L.stage.sent.len * k; adv = L.stage.sent.adv.map((a) => a * k);
     }
     if (!isHome && t < L.tSplit) alpha = 0;
-    lines.push({ cx, y, size, len, adv, alpha, name: s.name, nameA: name, land, slot: s });
+    lines.push({ cx, y, ang, size, len, adv, alpha, name: s.name, nameA: name, land, slot: s.nameSlot });
   });
   return {
-    lines, spread, first, firstLand: inE(t, L.stageName.at, 0.9),
+    lines, spread, first, staged,
     sight: inE(t, L.tSight, 1.0) * (1 - outE(t, L.tSplit, 0.6)),
     colour: inE(t, L.tLift + 0.4, 1.2) * (1 - outE(t, L.tFork, 2.0)),
   };
@@ -175,11 +194,12 @@ function knock(o, st, L) {
   const band = (slot, cx, len, half) => Math.abs(o.x - cx) < len / 2 + 40 && Math.abs(o.y - laneY({ ...slot, cx }, o.x)) < half;
   for (const ln of st.lines) {
     if (ln.alpha > 0 && band(ln, ln.cx, ln.len, ln.size * 0.9)) k *= 1 - ln.alpha;
-    if (ln.nameA > 0 && band(ln.slot, ln.slot.cx, ln.name.len, 72)) k *= 1 - ln.nameA;
+    if (ln.nameA > 0 && band(ln.slot, ln.slot.cx, ln.name.len, ln.name.size * 0.5 + 12)) k *= 1 - ln.nameA;
   }
-  if (st.first > 0 && band(L.stage, L.stage.cx, L.stageName.len, 100)) k *= 1 - st.first;
+  for (const s of st.staged) if (s.a > 0 && band(L.stage, L.stage.cx, s.item.len, 100)) k *= 1 - s.a;
   return k;
 }
+
 
 function drawSoundings(ctx, t, P, pal, c) {
   const st = labelsState(c.L, t);
@@ -253,7 +273,8 @@ export function cameraKeys(c) {
 // ---------- label anchors (world points + chip offset in stage px) ----------
 
 const ANCHORS = {
-  [ID.agents + ':0']: { w: TICKS[3], dx: -40, dy: -60, alignRight: true },
+  [ID.agents + ':0']: { w: { x: BASIN.x0 + 150, y: BASIN.y0 }, dx: 0, dy: -44 },
+  [ID.agents + ':1']: { w: TICKS[3], dx: -40, dy: -60, alignRight: true },
   [ID.train + ':0']: { w: { x: MEASURE.x, y: MEASURE.y + 13 * MEASURE.unit }, dx: 34, dy: 0 },
   [ID.train + ':1']: { w: { x: MEASURE.x, y: MEASURE.y + 0.4 * MEASURE.unit }, dx: 34, dy: 0 },
   [ID.laws + ':0']: { w: CH_BUOYS[0], dx: -30, dy: 40, alignRight: true },

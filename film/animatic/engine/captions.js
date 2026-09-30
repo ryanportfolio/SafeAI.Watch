@@ -297,8 +297,10 @@ function drawLabelsChapter(ctx, t, pal, env) {
     const n = ln.name;
     drawOnLane(ctx, pr, ln.slot, n.text, n.adv, n.len, n.size, n.track * n.size, nameSpread(ln.land, st.spread), ln.nameA, pal);
   }
-  const f = L.stageName;
-  drawOnLane(ctx, pr, L.stage, f.text, f.adv, f.len, f.size, f.track * f.size, nameSpread(st.firstLand, 0), st.first, pal);
+  for (const s of st.staged) drawOnLane(ctx, pr, L.stage, s.item.text, s.item.adv, s.item.len, s.item.size, s.item.track * s.item.size, nameSpread(s.land, 0), s.a, pal);
+  // the sight lines stop at whichever name is on the water, weighted by how present it is
+  const wsum = st.staged.reduce((a, s) => a + s.a, 0) || 1;
+  const f = { len: st.staged.reduce((a, s) => a + s.item.len * s.a, 0) / wsum };
   // people hear the word: sight lines from the margins stop at the name, none reach the sentence
   if (st.sight > 0) {
     const inside = (w) => Math.abs(w.x - L.stage.cx) < f.len / 2 + 40 && Math.abs(w.y - laneY(L.stage, w.x)) < 110;

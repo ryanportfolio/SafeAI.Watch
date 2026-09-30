@@ -1,5 +1,5 @@
 {
-  "duration": 131.6,
+  "duration": 135.3,
   "chapters": [
     {
       "id": "c1",
@@ -14,27 +14,27 @@
     {
       "id": "c3",
       "title": "The record: one capability, both ways",
-      "start": 36.4
+      "start": 37.9
     },
     {
       "id": "c4",
       "title": "Both sides are one object",
-      "start": 61.8
+      "start": 63.8
     },
     {
       "id": "c5",
       "title": "So people test it, catch it, set rules",
-      "start": 74.5
+      "start": 76.5
     },
     {
       "id": "c6",
       "title": "Some of it is still fog",
-      "start": 109.3
+      "start": 113
     },
     {
       "id": "c7",
       "title": "The better answer: hold both",
-      "start": 120.3
+      "start": 124
     }
   ],
   "beats": [
@@ -100,7 +100,7 @@
     {
       "id": "B4",
       "start": 18,
-      "end": 23,
+      "end": 24.5,
       "type": "owner",
       "statement": {
         "text": "Then people hear the word, not the person",
@@ -110,16 +110,24 @@
         "italic": [
           "person"
         ]
-      }
+      },
+      "extra": [
+        {
+          "text": "ACCELERATIONIST",
+          "at": 21.1,
+          "owner": true,
+          "role": "region"
+        }
+      ]
     },
     {
       "id": "B5",
-      "start": 23,
-      "end": 31.6,
+      "start": 24.5,
+      "end": 33.1,
       "type": "owner",
       "statement": {
         "text": "The same view gets sorted into opposite camps",
-        "at": 23.5,
+        "at": 25,
         "owner": true,
         "quote": false,
         "italic": [
@@ -129,67 +137,67 @@
       "extra": [
         {
           "text": "It helps me every day, and some of what it can do worries me",
-          "at": 23.2,
+          "at": 24.7,
           "owner": true,
           "role": "sentence"
         },
         {
           "text": "DOOMER",
-          "at": 25,
+          "at": 26.5,
           "owner": true,
           "role": "region"
         },
         {
           "text": "ACCELERATIONIST",
-          "at": 25.4,
+          "at": 26.9,
           "owner": true,
           "role": "region"
         },
         {
           "text": "DECEL",
-          "at": 25.8,
+          "at": 27.3,
           "owner": true,
           "role": "region"
         },
         {
           "text": "E/ACC",
-          "at": 26.2,
+          "at": 27.7,
           "owner": true,
           "role": "region"
         },
         {
           "text": "LUDDITE",
-          "at": 26.6,
+          "at": 28.1,
           "owner": true,
           "role": "region"
         },
         {
           "text": "TECHNO-OPTIMIST",
-          "at": 27,
+          "at": 28.5,
           "owner": true,
           "role": "region"
         },
         {
           "text": "SAFETYIST",
-          "at": 27.4,
+          "at": 28.9,
           "owner": true,
           "role": "region"
         },
         {
           "text": "AI BOOSTER",
-          "at": 27.8,
+          "at": 29.3,
           "owner": true,
           "role": "region"
         },
         {
           "text": "EA",
-          "at": 28.2,
+          "at": 29.7,
           "owner": true,
           "role": "region"
         },
         {
           "text": "AI BRO",
-          "at": 28.6,
+          "at": 30.1,
           "owner": true,
           "role": "region"
         }
@@ -197,12 +205,12 @@
     },
     {
       "id": "B6",
-      "start": 31.6,
-      "end": 36.4,
+      "start": 33.1,
+      "end": 37.9,
       "type": "owner",
       "statement": {
         "text": "People are people, not camps",
-        "at": 32.1,
+        "at": 33.6,
         "owner": true,
         "quote": false,
         "italic": []
@@ -210,12 +218,12 @@
     },
     {
       "id": "B7",
-      "start": 36.4,
-      "end": 44.6,
+      "start": 37.9,
+      "end": 46.1,
       "type": "benefit",
       "statement": {
         "text": "Many blind and low-vision users use AI descriptions daily, and errors hurt some",
-        "at": 37.3,
+        "at": 38.8,
         "rows": [
           "B18"
         ],
@@ -226,23 +234,23 @@
       },
       "precision": {
         "text": "Self-reported survey · American Foundation for the Blind, Aug 2026",
-        "at": 41.6,
+        "at": 43.1,
         "rows": [
           "B18"
         ]
       },
       "extra": [
         {
-          "text": "51% USE IT DAILY",
-          "at": 38.3,
+          "text": "51% OF BLIND OR LOW-VISION USERS · DAILY",
+          "at": 39.8,
           "rows": [
             "B18"
           ],
           "role": "label"
         },
         {
-          "text": "21% REPORT HARM FROM AN ERROR",
-          "at": 38.3,
+          "text": "21% OF THEM REPORT HARM FROM AN ERROR",
+          "at": 39.8,
           "rows": [
             "B18"
           ],
@@ -250,13 +258,13 @@
         },
         {
           "text": "BENEFITS",
-          "at": 38.3,
+          "at": 39.8,
           "owner": true,
           "role": "key"
         },
         {
           "text": "REPORTED INCIDENTS",
-          "at": 38.3,
+          "at": 39.8,
           "rows": [
             "S20"
           ],
@@ -266,12 +274,12 @@
     },
     {
       "id": "B8",
-      "start": 44.6,
-      "end": 53.5,
+      "start": 46.1,
+      "end": 55.5,
       "type": "happened",
       "statement": {
         "text": "The skill that finds software flaws to fix can also build attacks",
-        "at": 45.5,
+        "at": 47,
         "rows": [
           "P24",
           "H23"
@@ -282,8 +290,8 @@
         ]
       },
       "precision": {
-        "text": "Mozilla: 271 found with Claude Mythos Preview · Google believes AI built the exploit",
-        "at": 49.5,
+        "text": "271 of the bugs found with the AI model Claude Mythos Preview · Google’s own assessment",
+        "at": 51,
         "rows": [
           "P24",
           "H23"
@@ -291,16 +299,16 @@
       },
       "extra": [
         {
-          "text": "MOZILLA · 423 SECURITY FIXES · APR 2026",
-          "at": 46.5,
+          "text": "MOZILLA · 423 FIREFOX SECURITY BUGS FIXED · APR 2026",
+          "at": 48,
           "rows": [
             "P24"
           ],
           "role": "label"
         },
         {
-          "text": "GOOGLE · FIRST ZERO-DAY IT BELIEVES AI BUILT · MAY 2026",
-          "at": 46.5,
+          "text": "GOOGLE · FIRST CRIMINAL ATTACK CODE IT BELIEVES AI BUILT · MAY 2026",
+          "at": 48,
           "rows": [
             "H23"
           ],
@@ -310,24 +318,24 @@
     },
     {
       "id": "B9",
-      "start": 53.5,
-      "end": 61.8,
+      "start": 55.5,
+      "end": 63.8,
       "type": "shown-in-test",
       "statement": {
-        "text": "AI predicts protein structures and outscores expert virologists on a benchmark",
-        "at": 54.4,
+        "text": "AI predicts protein structures and outscores expert virologists on a test",
+        "at": 56.4,
         "rows": [
           "B4",
           "T5"
         ],
         "quote": false,
         "italic": [
-          "on a benchmark"
+          "on a test"
         ]
       },
       "precision": {
         "text": "Predicted structures, not experiments · test answers, not lab work",
-        "at": 58.8,
+        "at": 60.8,
         "rows": [
           "B4",
           "T5"
@@ -335,16 +343,16 @@
       },
       "extra": [
         {
-          "text": "ALPHAFOLD2 · NOBEL PRIZE IN CHEMISTRY 2024",
-          "at": 55.4,
+          "text": "ALPHAFOLD2, AN AI MODEL · NOBEL PRIZE IN CHEMISTRY 2024",
+          "at": 57.4,
           "rows": [
             "B4"
           ],
           "role": "label"
         },
         {
-          "text": "SECUREBIO · VIROLOGY TROUBLESHOOTING TEST · SEPT 2026",
-          "at": 55.4,
+          "text": "SECUREBIO · TEST OF VIRUS-LAB TROUBLESHOOTING · SEPT 2026",
+          "at": 57.4,
           "rows": [
             "T5"
           ],
@@ -352,7 +360,7 @@
         },
         {
           "text": "CONTROLLED TEST",
-          "at": 55.4,
+          "at": 57.4,
           "rows": [
             "S31"
           ],
@@ -362,12 +370,12 @@
     },
     {
       "id": "B10",
-      "start": 61.8,
-      "end": 74.5,
+      "start": 63.8,
+      "end": 76.5,
       "type": "perspective",
       "statement": {
         "text": "It can give you a positive infinity of new benefits at the same time that it presents almost a negative infinity of risk in the same object",
-        "at": 63,
+        "at": 65,
         "rows": [
           "Q1"
         ],
@@ -376,7 +384,7 @@
       },
       "precision": {
         "text": "Tristan Harris · Center for Humane Technology · with Krista Tippett, July 2026",
-        "at": 70.8,
+        "at": 72.8,
         "rows": [
           "Q1"
         ]
@@ -384,12 +392,12 @@
     },
     {
       "id": "B11",
-      "start": 74.5,
-      "end": 78.5,
+      "start": 76.5,
+      "end": 80.5,
       "type": "owner",
       "statement": {
         "text": "So people test it",
-        "at": 75.5,
+        "at": 77.5,
         "owner": true,
         "quote": false,
         "italic": [
@@ -399,12 +407,12 @@
     },
     {
       "id": "B12",
-      "start": 78.5,
-      "end": 86.6,
+      "start": 80.5,
+      "end": 89.1,
       "type": "happened",
       "statement": {
         "text": "AI agents targeted real people and organisations during a cyber test",
-        "at": 79,
+        "at": 81,
         "rows": [
           "H40"
         ],
@@ -414,31 +422,39 @@
         ]
       },
       "precision": {
-        "text": "10 of 122 runs · UK AI Security Institute, Aug 2026",
-        "at": 83.4,
+        "text": "Internet access left open on purpose · UK AI Security Institute, Aug 2026",
+        "at": 85.4,
         "rows": [
           "H40"
         ]
       },
       "extra": [
         {
-          "text": "19 ACTIONS",
-          "at": 82.2,
+          "text": "10 OF 122 TEST RUNS",
+          "at": 82,
           "rows": [
             "H40"
           ],
           "role": "count"
+        },
+        {
+          "text": "19 ACTIONS ON THE LIVE INTERNET",
+          "at": 84.2,
+          "rows": [
+            "H40"
+          ],
+          "role": "label"
         }
       ]
     },
     {
       "id": "B13",
-      "start": 86.6,
-      "end": 93.7,
+      "start": 89.1,
+      "end": 96.2,
       "type": "happened",
       "statement": {
         "text": "A human maintainer caught and refused to approve the malicious code",
-        "at": 87.2,
+        "at": 89.7,
         "rows": [
           "H42"
         ],
@@ -446,8 +462,8 @@
         "italic": []
       },
       "precision": {
-        "text": "No real-world harm found · some margins were narrow",
-        "at": 91,
+        "text": "No real-world harm found · some attempts nearly succeeded",
+        "at": 93.5,
         "rows": [
           "H41"
         ]
@@ -455,12 +471,12 @@
     },
     {
       "id": "B14",
-      "start": 93.7,
-      "end": 101.4,
+      "start": 96.2,
+      "end": 105.1,
       "type": "progress",
       "statement": {
         "text": "Training cut covert actions from 13% to 0.4% in tests",
-        "at": 94.3,
+        "at": 96.8,
         "rows": [
           "P32"
         ],
@@ -470,24 +486,24 @@
         ]
       },
       "precision": {
-        "text": "OpenAI o3 · Apollo Research with OpenAI · preprint, 2025",
-        "at": 98.4,
+        "text": "OpenAI’s o3 model · Apollo Research with OpenAI · paper not yet peer reviewed, 2025",
+        "at": 100.9,
         "rows": [
           "P32"
         ]
       },
       "extra": [
         {
-          "text": "13%",
-          "at": 94.9,
+          "text": "13% BEFORE TRAINING",
+          "at": 97.4,
           "rows": [
             "P32"
           ],
           "role": "count"
         },
         {
-          "text": "0.4%",
-          "at": 96.7,
+          "text": "0.4% AFTER",
+          "at": 99.2,
           "rows": [
             "P32"
           ],
@@ -495,7 +511,7 @@
         },
         {
           "text": "SAFEGUARDS",
-          "at": 96.9,
+          "at": 99.4,
           "owner": true,
           "role": "key"
         }
@@ -503,12 +519,12 @@
     },
     {
       "id": "B15",
-      "start": 101.4,
-      "end": 109.3,
+      "start": 105.1,
+      "end": 113,
       "type": "policy",
       "statement": {
         "text": "Laws require incident reports and let regulators ask to test models",
-        "at": 102,
+        "at": 105.7,
         "rows": [
           "L37",
           "L14"
@@ -520,7 +536,7 @@
       },
       "precision": {
         "text": "California, in effect Jan 2026 · EU powers from 2 Aug 2026",
-        "at": 105.8,
+        "at": 109.5,
         "rows": [
           "L37",
           "L14"
@@ -529,15 +545,15 @@
       "extra": [
         {
           "text": "CALIFORNIA · INCIDENT REPORTS WITHIN 15 DAYS",
-          "at": 102.8,
+          "at": 106.5,
           "rows": [
             "L37"
           ],
           "role": "buoy"
         },
         {
-          "text": "EU · MAY REQUEST MODEL ACCESS",
-          "at": 103.1,
+          "text": "EU · MAY REQUEST ACCESS TO TEST AI MODELS",
+          "at": 106.8,
           "rows": [
             "L14"
           ],
@@ -545,7 +561,7 @@
         },
         {
           "text": "POLICY & OVERSIGHT",
-          "at": 102.8,
+          "at": 106.5,
           "rows": [
             "S20"
           ],
@@ -555,12 +571,12 @@
     },
     {
       "id": "B16",
-      "start": 109.3,
-      "end": 120.3,
+      "start": 113,
+      "end": 124,
       "type": "unknown",
       "statement": {
         "text": "no existing study provides a reliable probability of severe loss of control",
-        "at": 112.1,
+        "at": 115.8,
         "rows": [
           "W7"
         ],
@@ -569,7 +585,7 @@
       },
       "precision": {
         "text": "UN scientific panel on AI, Sept 2026 · uncertainty does not mean it stays controllable",
-        "at": 116.1,
+        "at": 119.8,
         "rows": [
           "W7"
         ]
@@ -577,12 +593,12 @@
     },
     {
       "id": "B17",
-      "start": 120.3,
-      "end": 123.9,
+      "start": 124,
+      "end": 127.6,
       "type": "owner",
       "statement": {
         "text": "Hold both at once",
-        "at": 120.7,
+        "at": 124.4,
         "owner": true,
         "quote": false,
         "italic": [
@@ -592,12 +608,12 @@
     },
     {
       "id": "B18",
-      "start": 123.9,
-      "end": 131.6,
+      "start": 127.6,
+      "end": 135.3,
       "type": "site",
       "statement": {
         "text": "Stay close to the evidence",
-        "at": 125.3,
+        "at": 129,
         "rows": [
           "S25"
         ],
@@ -608,7 +624,7 @@
       },
       "precision": {
         "text": "A public record of AI safety and security",
-        "at": 127.6,
+        "at": 131.3,
         "rows": [
           "S13"
         ]
@@ -616,7 +632,7 @@
       "extra": [
         {
           "text": "SafeAI.watch",
-          "at": 126.3,
+          "at": 130,
           "rows": [
             "S9",
             "S10"
@@ -625,7 +641,7 @@
         },
         {
           "text": "Read the evidence and its limits",
-          "at": 127.6,
+          "at": 131.3,
           "rows": [
             "S13"
           ],

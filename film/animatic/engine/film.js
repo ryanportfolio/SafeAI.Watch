@@ -9,7 +9,7 @@ import { drawText, FONTS } from './captions.js';
 import { rgba } from './util.js';
 
 // Graft 1 (blue caret): statements whose limit is inserted by the caret.
-const CARETS = { B9: 'on a benchmark', B12: 'during a cyber test', B14: 'in tests' };
+const CARETS = { B9: 'on a test', B12: 'during a cyber test', B14: 'in tests' };
 // Statements drawn faint (none in this cut).
 const FAINT = {};
 // Dusk sweeps in from the fog corner as a soft front, so no frame is a flat mid-grey.
