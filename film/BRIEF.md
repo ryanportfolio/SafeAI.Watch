@@ -32,8 +32,29 @@ Grafts:
 - **Dropped:** "The same capability can help people and harm them" (Q1 carries it).
 - **Chart key labels** `BENEFITS` and `SAFEGUARDS`: OWNER strings, flagged to the owner at review.
 - **P24 (B8 fork):** "271" is outside the row's quoted text; confirm it in the Mozilla source before use, else show only the 423 figure.
-- **Duration:** about 93 s with the longer Harris hold; trim only if the lint passes without cutting reading time.
+- **Duration:** no target; the owner set no length. Timing follows the reading budget (currently 127.7 s).
 
 ## Rules carried from DIRECTOR-BRIEF.md
 
 Every string and number from `facts.md` or approved `OWNER` lines. No periods in display text, no em dashes. Silent. 16:9. Deterministic `frame(t)` with `seek` and `?t=`; reduced-motion version; flash limits. Headed Chrome on the real GPU for any visual check, offscreen; screenshots under `D:\screenshots\SafeAI.Watch\film\`.
+
+## Story spine v2 (owner-approved 2026-09-30, replaces the beat order above)
+
+Owner feedback on animatic v1: the animation is great, but the story was a list of random topics with no throughline. v1 was a catalogue sorted by evidence type. v2 is one argument, each beat answering the one before. Visual language, palette, chart grammar and grafts stay; the beat sheet changes. Fewer facts, one story.
+
+Throughline: a question, the bad answer, the evidence, what it adds up to, what is being done, what is unknown, a better answer.
+
+1. **The question.** OWNER: "Is AI good or bad for us?" over the blank chart.
+2. **The one-word answers.** Two identical chips, `DOOMER` and `ACCELERATIONIST`, cover the whole map as the ready-made answers. OWNER: "A label turns everything a person thinks into one word". The chips lift and reveal the chart: from here the film reads the record, not the labels.
+3. **Three forks on one current: the same capability, both ways.** Each fork is one neutral ring on the current splitting into a benefit light and a hazard mark, both branches drawn at the same speed. The three forks sit along the one current so the chart visibly accumulates the pattern.
+   - Sight: B18. Benefit and harm from the same AFB report (51% of blind or low-vision AI-description users use it daily; 61 of them, 21%, reported harm from an error). Self-reported survey, advocacy body.
+   - Code: P24 (Mozilla, 423 security fixes in April, 271 found with Claude Mythos Preview) and H23 (Google GTIG, first zero-day it believes was developed with AI, in criminal hands).
+   - Biology: B4 (AlphaFold2, Nobel Prize in Chemistry 2024, used by over two million people) and T5 (SecureBio: models surpassed expert virologists on a wet-lab troubleshooting benchmark; a benchmark, not lab work; headline only).
+4. **The synthesis, now earned.** Harris Q1 verbatim, long hold. The whole current with its three forks in view.
+5. **So how do we keep it safe?** One chapter, one idea: people test it, catch problems, and set rules. Short OWNER lead-in allowed (for example "So people test it"). Beats: H40 with H42 in the harbor (in a government cyber test, agents targeted real people; a human maintainer caught the code; caret "during a cyber test"); P32 (training cut covert actions 13% to 0.4%, caret "in tests"); L37 with L14 as the blue channel (laws requiring incident reports; EU powers from 2 Aug 2026). Keep precision lines short.
+6. **What nobody knows.** W7 in the fog.
+7. **The better answer.** OWNER "Hold both at once", then OWNER "People are people, not camps", then the end card (S25, S9/S10, S13). Optionally the question returns faintly for one beat before "Hold both at once" so the answer visibly replies to it.
+
+Cut from v1: H27 (FBI), T72 (red-team competition), W31 (Five Eyes), P34 (METR reviewers), L19 (institutes network), W2 (Bengio). They stay in facts.md.
+
+No length target. Fix the v1 notes while rebuilding: captions over marks in the hero frame, the muddy mid-dusk grey (about 100 s in v1), the crowded label beat. Chart key labels `BENEFITS` and `SAFEGUARDS` still await owner OK.
