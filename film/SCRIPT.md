@@ -22,7 +22,7 @@ All are `OWNER`. No invented example sentence: the readings on the water stand f
 | 9 | Mozilla used it to fix hundreds of Firefox security flaws in a month | 423 fixed in April 2026, 271 of them found by an AI model (P24) | One branch: a light on the coast |
 | 10 | Google caught criminals with attack code it believes AI wrote | Google Threat Intelligence Group, May 2026 · its early find may have stopped the attack (H23) | Other branch: a hazard mark |
 | 12 | AI that predicts proteins or describes the world for blind people splits the same way | AlphaFold, SecureBio, American Foundation for the Blind (B4, T5, B18) | Two more forks appear along the current, no numbers |
-| 13 | "It can give you a positive infinity of new benefits at the same time that it presents almost a negative infinity of risk in the same object" | Tristan Harris, Center for Humane Technology, July 2026 (Q1) | The whole current, three forks in view |
+| 13 | "It can give you a positive infinity of new benefits at the same time that it presents almost a negative infinity of risk" | Tristan Harris, Center for Humane Technology, July 2026 (Q1) | The whole current, three forks in view |
 
 Line 12 is `OWNER`, supported by the pairings rows named in its small line.
 
