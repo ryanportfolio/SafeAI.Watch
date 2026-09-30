@@ -18,10 +18,10 @@ All are `OWNER`. No invented example sentence: the readings on the water stand f
 
 | # | Caption | Small line | Picture |
 |---|---|---|---|
-| 8 | AI can now read software and find its weak spots | Mozilla, May 2026 (P24) | The line reaches a fork |
+| 8 | AI can read software and find its weak spots | Mozilla, May 2026 (P24) | The line reaches a fork |
 | 9 | Mozilla used it to fix hundreds of Firefox security flaws in a month | 423 fixed in April 2026, 271 of them found by an AI model (P24) | One branch: a light on the coast |
 | 10 | Google caught criminals with attack code it believes AI wrote | Google Threat Intelligence Group, May 2026 · its early find may have stopped the attack (H23) | Other branch: a hazard mark |
-| 12 | AI that predicts proteins or describes the world for blind people splits the same way | AlphaFold, SecureBio, American Foundation for the Blind (B4, T5, B18) | Two more forks appear along the current, no numbers |
+| 12 | AI that describes the world for blind people splits the same way | American Foundation for the Blind, August 2026 (B18) | A second fork appears along the current: a light for daily use, a hazard for harm from errors, no numbers |
 | 13 | "It can give you a positive infinity of new benefits at the same time that it presents almost a negative infinity of risk" | Tristan Harris, Center for Humane Technology, July 2026 (Q1) | The whole current, three forks in view |
 
 Line 12 is `OWNER`, supported by the pairings rows named in its small line.
@@ -32,12 +32,12 @@ Line 12 is `OWNER`, supported by the pairings rows named in its small line.
 |---|---|---|---|
 | 14 | So how do we keep it on the right side? | | The camera moves to the harbor |
 | 15a | We test it | | Heading; the harbor wall draws in |
-| 15 | In a government test, AI agents went onto the live internet and targeted real people | UK AI Security Institute, August 2026 · internet access left open on purpose (H40) | Lines cross the harbor wall and reach the coast |
+| 15 | In a government test, AI agents went onto the live internet and targeted real people | UK AI Security Institute, August 2026 · internet access left open and safety filters switched off on purpose (H40) | Lines cross the harbor wall and reach the coast |
 | 16 | "A human maintainer caught and refused to approve the malicious code" | Same report · no real-world harm found (H42, H41) | One line stops at a short bar on the shore |
 | 17a | We fix what tests find | | Heading |
-| 17 | Government testers found holes in every version of one lab's safety monitor, and each fix was tested again | UK AI Security Institute, July 2026 (P10) | Test marks inside the harbor, then olive rings as fixes land |
+| 17 | Government testers probed one lab's safety monitor and found holes in every version they tried | UK AI Security Institute, July 2026 · each fix was tested again (P10) | Test marks inside the harbor, then olive rings as fixes land |
 | 18a | We make it law | | Heading |
-| 18 | The largest AI developers in California must now report serious safety incidents | Transparency in Frontier Artificial Intelligence Act, in effect January 2026 · reports due within 15 days (L37) | A blue channel draws in from the coast |
+| 18 | The largest AI developers in California must report serious safety incidents | Transparency in Frontier Artificial Intelligence Act, in effect January 2026 · reports due within 15 days (L37) | A blue channel draws in from the coast |
 | 19a | And we admit what we don't know | | Heading; fog rolls in |
 | 19 | "no existing study provides a reliable probability of severe loss of control" | UN Independent International Scientific Panel on AI, September 2026 (W7) | A sounding line drops into the fog and finds no bottom |
 
@@ -57,6 +57,20 @@ Lines 22 and 23 are `OWNER`. The opening question returns faintly over the full 
 ## Notes for the owner
 
 - Numbers on screen: one ("hundreds", with 423 in the small line). Every other figure moved to small lines or left the film.
-- Two Harris lines (13 and 21). The brief allowed one; line 21 can become an `OWNER` line if you want only one.
+- Two Harris lines (13 and 21): the owner approved keeping both.
 - Cut from v4: the blind-users and AlphaFold beats as full scenes (now a single glimpse in line 12), the anti-scheming training result, the EU access powers, and "So people test it".
 - Line 22 comes from your own words: use the tools, appreciate their power, benefit from them, while staying aware.
+
+## Other strings on screen
+
+Every string the viewer can see beyond the captions and small lines above, with its source. Approved by the owner on 2026-09-30.
+
+| Where | Text | Source |
+|---|---|---|
+| Labels chapter | DOOMER, ACCELERATIONIST, DECEL, E/ACC, LUDDITE, TECHNO-OPTIMIST, SAFETYIST, AI BOOSTER, EA, AI BRO | `recon/labels.md` (usage rows); `OWNER` |
+| Chart key | BENEFITS, REPORTED INCIDENTS, CONTROLLED TEST, SAFEGUARDS, POLICY & OVERSIGHT | S20, S31; BENEFITS and SAFEGUARDS `OWNER` |
+| Tag at line 9 | MOZILLA · FIREFOX SECURITY FIXES | P24 |
+| Tag at line 10 | GOOGLE · CRIMINAL ATTACK CODE | H23 |
+| Tag at line 12 | SIGHT · AMERICAN FOUNDATION FOR THE BLIND | B18 |
+| Tag at line 18 | CALIFORNIA · INCIDENT-REPORT LAW | L37 |
+| Before line 23 | Is AI good or bad for us? (faint echo) | `OWNER` |
