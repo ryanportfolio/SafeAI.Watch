@@ -4,12 +4,12 @@
 import { clamp, qt, easeInOut, smooth } from './util.js';
 import { makeCamera, projector, STAGE_W, STAGE_H } from './camera.js';
 import { palette, DUSK_LEN } from './palette.js';
-import { makeCues, cameraKeys, drawWorld, anchorFor } from './world.js';
+import { makeCues, cameraKeys, drawWorld, anchorFor, STEPS } from './world.js';
 import { drawText, FONTS } from './captions.js';
 import { rgba } from './util.js';
 
 // Graft 1 (blue caret): statements whose limit is inserted by the caret.
-const CARETS = { B9: 'on a test', B12: 'during a cyber test', B14: 'in tests' };
+const CARETS = {}; // the script states each limit in the caption itself
 // Statements drawn faint (none in this cut).
 const FAINT = {};
 // Dusk sweeps in from the fog corner as a soft front, so no frame is a flat mid-grey.
@@ -100,7 +100,7 @@ export function createFilm(data, { canvas, reducedMotion = false, doc = document
       }
       pal = palette(tp, cues);
     }
-    drawText(tctx, data, t, pal, { pr, rm: reducedMotion, carets: CARETS, faint: FAINT, cues, anchorFor });
+    drawText(tctx, data, t, pal, { pr, rm: reducedMotion, carets: CARETS, faint: FAINT, steps: STEPS, cues, anchorFor });
     out.drawImage(pic, 0, 0);
     out.drawImage(txt, 0, 0);
     return t;

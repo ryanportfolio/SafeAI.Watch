@@ -291,19 +291,15 @@ function drawLabelsChapter(ctx, t, pal, env) {
   const L = env.cues.L, pr = env.pr;
   const st = labelsState(L, t);
   const motion = env.rm ? 0 : 1;
-  for (const ln of st.lines) drawOnLane(ctx, pr, ln, L.text, ln.adv, ln.len, ln.size, 0, 1, ln.alpha, pal);
+  // names land as one group (spacing settles), and on the lift drift apart as one group
   const nameSpread = (land, spread) => 1 + motion * (0.18 * (1 - land) + 0.35 * spread);
-  for (const ln of st.lines) {
-    const n = ln.name;
-    drawOnLane(ctx, pr, ln.slot, n.text, n.adv, n.len, n.size, n.track * n.size, nameSpread(ln.land, st.spread), ln.nameA, pal);
-  }
+  for (const n of st.names) drawOnLane(ctx, pr, n.slot, n.name.text, n.name.adv, n.name.len, n.name.size, n.name.track * n.name.size, nameSpread(n.land, st.spread), n.a, pal);
   for (const s of st.staged) drawOnLane(ctx, pr, L.stage, s.item.text, s.item.adv, s.item.len, s.item.size, s.item.track * s.item.size, nameSpread(s.land, 0), s.a, pal);
-  // the sight lines stop at whichever name is on the water, weighted by how present it is
-  const wsum = st.staged.reduce((a, s) => a + s.a, 0) || 1;
-  const f = { len: st.staged.reduce((a, s) => a + s.item.len * s.a, 0) / wsum };
-  // people hear the word: sight lines from the margins stop at the name, none reach the sentence
+  // people hear the word: sight lines from the chart margins stop at whichever name is there
   if (st.sight > 0) {
-    const inside = (w) => Math.abs(w.x - L.stage.cx) < f.len / 2 + 40 && Math.abs(w.y - laneY(L.stage, w.x)) < 110;
+    const wsum = st.staged.reduce((a, s) => a + s.a, 0) || 1;
+    const half = st.staged.reduce((a, s) => a + s.item.len * s.a, 0) / wsum / 2;
+    const inside = (w) => Math.abs(w.x - L.stage.cx) < half + 40 && Math.abs(w.y - laneY(L.stage, w.x)) < 110;
     for (const m of SIGHT_FROM) {
       let k = 0;
       while (k < 1 && !inside({ x: lerp(m.x, L.stage.cx, k), y: lerp(m.y, L.stage.y, k) })) k += 0.01;
@@ -313,9 +309,46 @@ function drawLabelsChapter(ctx, t, pal, env) {
   }
 }
 
+// The four-step chapter: each heading sits on the caption margin above its evidence, with a
+// four-tick rule that fills one step at a time so the headings read as one progression.
+const HEAD = { size: 40, gap: 30, tick: 34, tickGap: 10 };
+function drawHeading(ctx, beat, t, pal, env, L) {
+  const h = (beat.extra || []).find((e) => e.role === 'heading');
+  if (!h) return;
+  const step = env.steps.indexOf(beat.id);
+  const out = 1 - easeIn((t - (beat.end - EXIT)) / EXIT);
+  const a = easeOut((t - h.at) / 0.5) * out;
+  if (a <= 0) return;
+  // the statement block's top edge: the heading sits above it, clear of it
+  const lines = L ? L.full.lines : 1;
+  const top = ST.base - (lines - 1) * ST.size * ST.lead - ST.size * 0.8;
+  const base = top - HEAD.gap;
+  font(ctx, false, HEAD.size);
+  ctx.fillStyle = rgba(pal.ink, 0.72 * a);
+  ctx.fillText(h.text, ST.x, base);
+  const y = base - HEAD.size - 8;
+  for (let i = 0; i < env.steps.length; i++) {
+    const x = ST.x + i * (HEAD.tick + HEAD.tickGap);
+    const on = i < step ? 1 : i === step ? easeOut((t - h.at) / 0.6) : 0;
+    seg(ctx, { x, y }, { x: x + HEAD.tick, y }, { color: pal.ink, alpha: (0.18 + 0.62 * on) * a, width: 3, cap: 'butt' });
+  }
+}
+
+// Before "Hold both at once", the opening question returns faintly over the chart, then fades
+// as the answer arrives. Not a caption to read: low alpha, no build.
+function drawEcho(ctx, beat, t, pal) {
+  const e = (beat.extra || []).find((x) => x.role === 'echo');
+  if (!e) return;
+  const a = easeOut((t - e.at) / 0.8) * (1 - easeIn((t - beat.statement.at) / 0.9));
+  if (a <= 0) return;
+  font(ctx, false, ST.size);
+  ctx.fillStyle = rgba(pal.ink, 0.3 * a);
+  ctx.fillText(e.text, STAGE_W / 2 - ctx.measureText(e.text).width / 2, 430);
+}
+
 function drawLabels(ctx, beat, t, pal, opts, env) {
   (beat.extra || []).forEach((e, i) => {
-    if (['key', 'chip', 'wordmark', 'tagline'].includes(e.role)) return;
+    if (['key', 'region', 'heading', 'echo', 'wordmark'].includes(e.role)) return;
     const an = env.anchorFor(beat.id, i);
     if (!an) return;
     const a = windowAlpha(t, e.at, beat.end, 0.4, EXIT);
@@ -353,12 +386,12 @@ function scrim(ctx, pal) {
   const a = 1 - pal.close;
   if (a <= 0) return;
   // the chart fades into the page above the captions, so nothing runs behind a line of text
-  const g = ctx.createLinearGradient(0, 600, 0, 900);
+  const g = ctx.createLinearGradient(0, 540, 0, 880);
   g.addColorStop(0, rgba(pal.ground, 0));
   g.addColorStop(0.62, rgba(pal.ground, 0.9 * a));
   g.addColorStop(1, rgba(pal.ground, a));
   ctx.fillStyle = g;
-  ctx.fillRect(0, 600, STAGE_W, STAGE_H - 600);
+  ctx.fillRect(0, 540, STAGE_W, STAGE_H - 540);
 }
 
 export function drawText(ctx, data, t, pal, env) {
@@ -369,7 +402,9 @@ export function drawText(ctx, data, t, pal, env) {
   const opts = { rm: env.rm, caret: env.carets[beat.id], endcard: beat.type === 'site', faint: !!env.faint?.[beat.id] };
   drawLabels(ctx, beat, t, pal, opts, env);
   drawLabelsChapter(ctx, t, pal, env);
+  drawEcho(ctx, beat, t, pal);
   const L = drawStatement(ctx, beat, t, pal, opts);
+  drawHeading(ctx, beat, t, pal, env, L);
   drawPrecision(ctx, beat, t, pal, opts, L);
   if (opts.endcard) drawEndCard(ctx, beat, t, pal);
 }
