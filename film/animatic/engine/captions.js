@@ -185,7 +185,7 @@ function drawStatement(ctx, beat, t, pal, opts) {
     if (a <= 0) return;
     const col = k.inserted ? pal.blue : isEnd ? pal.cream : pal.ink;
     font(ctx, k.italic, size);
-    ctx.fillStyle = rgba(col, a);
+    ctx.fillStyle = rgba(col, a * (opts.faint ? 0.45 : 1));
     let w = k.w;
     if (st.quote && i === 0) { font(ctx, false, size); ctx.fillText('“', x - L.full.qOpen, y + dy); font(ctx, k.italic, size); }
     ctx.fillText(w, x, y + dy);
@@ -226,7 +226,7 @@ function drawPrecision(ctx, beat, t, pal, opts, L) {
   lines.forEach((ln, i) => ctx.fillText(ln, ST.x, ST.base + (serif ? 68 : PR.gap) + i * (serif ? 50 : PR.lead)));
 }
 
-const KEY_ORDER = ['BENEFITS', 'REPORTED INCIDENTS', 'CONTROLLED TEST', 'PUBLIC WARNINGS', 'SAFEGUARDS', 'POLICY & OVERSIGHT'];
+const KEY_ORDER = ['BENEFITS', 'REPORTED INCIDENTS', 'CONTROLLED TEST', 'SAFEGUARDS', 'POLICY & OVERSIGHT'];
 const KEY_BOX = { x: 1488, y: 800, w: 372, row: 36 };
 function keySymbol(ctx, label, p, pal, a) {
   switch (label) {
@@ -259,31 +259,37 @@ function drawKey(ctx, beats, t, pal, close) {
   }
 }
 
-// B4: two identical chips over anonymous clusters; same size, same frame in, same frame out.
+// The one-word answers: two identical chips that cover the whole map, one half each; they
+// arrive in the same frame and lift in the same frame to reveal the chart.
 function drawChips(ctx, beat, t, pal, opts, env) {
   const chips = (beat.extra || []).map((e, i) => ({ e, i })).filter((x) => x.e.role === 'chip');
   if (!chips.length) return;
-  monoFont(ctx, 26);
-  const tw = Math.max(...chips.map(({ e }) => ctx.measureText(e.text.toUpperCase()).width));
-  const lift = env.cues.chips[1];
-  for (const { e, i } of chips) {
+  const lift = env.cues.lift;
+  // project both halves, then give both chips one shared size so they stay identical
+  const rects = chips.map(({ i }) => {
     const an = env.anchorFor(beat.id, i);
-    if (!an) continue;
-    const q = env.pr.point(an.w.x, an.w.y);
-    const d = env.clusterRadius * env.pr.pose.zoom * 2;
-    const w = Math.max(tw + 60, d + 30), h = Math.max(64, d * 0.8 + 30);
-    const aIn = opts.rm ? easeOut((t - e.at) / 0.4) : easeOut((t - e.at) / 0.6);
-    const aOut = opts.rm ? 1 - easeIn((t - lift) / 0.4) : 1 - easeIn((t - lift) / 0.8);
+    if (!an?.rect) return null;
+    const [x0, y0, x1, y1] = an.rect;
+    const a0 = env.pr.point(x0, y0), a1 = env.pr.point(x1, y1);
+    return { cx: (a0.x + a1.x) / 2, w: Math.abs(a1.x - a0.x), T: Math.min(a0.y, a1.y), B: Math.max(a0.y, a1.y) };
+  });
+  if (rects.some((r) => !r)) return;
+  const CW = Math.min(...rects.map((r) => r.w)) - 16, CT = Math.min(...rects.map((r) => r.T)) + 8, CB = Math.max(...rects.map((r) => r.B)) - 8;
+  for (const [n, { e }] of chips.entries()) {
+    const aIn = easeOut((t - e.at) / (opts.rm ? 0.4 : 0.7));
+    const aOut = 1 - easeIn((t - lift) / (opts.rm ? 0.4 : 1.0));
     const a = clamp(aIn * aOut);
     if (a <= 0) continue;
-    const dy = opts.rm ? 0 : (1 - aIn) * -10 + (1 - aOut) * -22;
+    const dy = opts.rm ? 0 : (1 - aIn) * -12 + (1 - aOut) * -28;
+    const L = rects[n].cx - CW / 2, R = rects[n].cx + CW / 2, T = CT, B = CB;
     ctx.fillStyle = rgba(pal.chip, a);
-    ctx.beginPath(); ctx.roundRect(q.x - w / 2, q.y - h / 2 + dy, w, h, 2); ctx.fill();
-    monoFont(ctx, 26);
+    ctx.beginPath(); ctx.roundRect(L, T + dy, R - L, B - T, 2); ctx.fill();
+    ctx.strokeStyle = rgba(pal.ink, 0.25 * a); ctx.lineWidth = 1.2; ctx.stroke();
+    monoFont(ctx, 40);
     ctx.fillStyle = rgba(pal.ink, 0.85 * a);
     ctx.textBaseline = 'middle';
     const s = e.text.toUpperCase();
-    ctx.fillText(s, q.x - ctx.measureText(s).width / 2, q.y + dy + 1);
+    ctx.fillText(s, (L + R) / 2 - ctx.measureText(s).width / 2, (T + B) / 2 - 90 + dy);
     ctx.textBaseline = 'alphabetic';
   }
 }
@@ -297,7 +303,7 @@ function drawLabels(ctx, beat, t, pal, opts, env) {
     if (a <= 0) return;
     const q = env.pr.point(an.w.x, an.w.y);
     const lx = q.x + (an.dx || 0), ly = q.y + (an.dy || 0);
-    const colName = e.role === 'station' || e.role === 'buoy' ? 'blue' : ROW_COL[(e.rows || [''])[0][0]] || TYPE_COL[beat.type];
+    const colName = an.col || (e.role === 'station' || e.role === 'buoy') && 'blue' || ROW_COL[(e.rows || [''])[0][0]] || TYPE_COL[beat.type];
     const dotCol = e.role === 'station' || e.role === 'note' ? null : pal[colName];
     const r = chipLabel(ctx, e.text, lx, ly, { alpha: a, pal, dotCol, alignRight: an.alignRight, plain: e.role === 'station' || e.role === 'note', textCol: e.role === 'station' ? pal.blue : null });
     // leader to the nearest point of the chip, drawn after it so it ends at the chip's edge
@@ -340,7 +346,7 @@ export function drawText(ctx, data, t, pal, env) {
   scrim(ctx, pal);
   drawKey(ctx, data.beats, t, pal, pal.close);
   const beat = data.beats.find((b) => t >= b.start && t < b.end) || data.beats.at(-1);
-  const opts = { rm: env.rm, caret: env.carets[beat.id], endcard: beat.type === 'site' };
+  const opts = { rm: env.rm, caret: env.carets[beat.id], endcard: beat.type === 'site', faint: !!env.faint?.[beat.id] };
   drawLabels(ctx, beat, t, pal, opts, env);
   drawChips(ctx, beat, t, pal, opts, env);
   const L = drawStatement(ctx, beat, t, pal, opts);

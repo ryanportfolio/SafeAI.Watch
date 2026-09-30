@@ -1,15 +1,20 @@
 // The film as a pure function of t. frame(t) paints the picture layer, paints the text layer,
 // and composites both into the output canvas. No dt, no Math.random(), no state carried
 // between frames: seek(t) and a fresh ?t= load produce the same pixels.
-import { clamp, qt, easeInOut } from './util.js';
+import { clamp, qt, easeInOut, smooth } from './util.js';
 import { makeCamera, projector, STAGE_W, STAGE_H } from './camera.js';
-import { palette } from './palette.js';
-import { makeCues, cameraKeys, drawWorld, anchorFor, clusterRadius } from './world.js';
+import { palette, DUSK_LEN } from './palette.js';
+import { makeCues, cameraKeys, drawWorld, anchorFor } from './world.js';
 import { drawText } from './captions.js';
 import { rgba } from './util.js';
 
 // Graft 1 (blue caret): statements whose limit is inserted by the caret.
-const CARETS = { B5a: 'during a cyber test', B9: 'in tests' };
+const CARETS = { B5: 'on a benchmark', B8: 'during a cyber test', B10: 'in tests' };
+// The question returns faintly before the answer, so the answer visibly replies to it.
+const FAINT = { B13: true };
+// Dusk sweeps in from the fog corner as a soft front, so no frame is a flat mid-grey.
+const FRONT = { x: STAGE_W, y: 0, soft: 700, reach: 2900 };
+const CAPTION_AT = { x: 520, y: 860 };
 const DISSOLVE = 0.4; // reduced motion: designed stills per beat, 0.4 s dissolves
 
 function layer(doc) {
@@ -21,7 +26,7 @@ function layer(doc) {
 export function createFilm(data, { canvas, reducedMotion = false, doc = document }) {
   const out = canvas.getContext('2d', { alpha: false });
   const pic = layer(doc), pic2 = layer(doc), txt = layer(doc);
-  const pctx = pic.getContext('2d', { alpha: false }), pctx2 = pic2.getContext('2d', { alpha: false }), tctx = txt.getContext('2d');
+  const pctx = pic.getContext('2d', { alpha: false }), pctx2 = pic2.getContext('2d'), tctx = txt.getContext('2d');
   const cues = makeCues(data);
   const cam = makeCamera(cameraKeys(cues));
   const duration = data.duration;
@@ -30,8 +35,8 @@ export function createFilm(data, { canvas, reducedMotion = false, doc = document
   // Reduced motion: each beat holds one designed still, taken once the beat has settled.
   const stillTime = (b) => (b === beats.length - 1 ? duration : beats[b].end - 0.6);
 
-  function paintPicture(ctx, t, still) {
-    const pal = palette(t, cues);
+  function paintPicture(ctx, t, still, duskOverride = null) {
+    const pal = palette(t, cues, duskOverride);
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.fillStyle = rgba(pal.ground, 1);
     ctx.fillRect(0, 0, STAGE_W, STAGE_H);
@@ -49,10 +54,32 @@ export function createFilm(data, { canvas, reducedMotion = false, doc = document
     return { pal, pr };
   }
 
+  // radius of the dusk front at t; null outside the sweep
+  function frontR(t) {
+    const u = (t - cues.dusk) / DUSK_LEN;
+    if (u <= 0 || u >= 1) return null;
+    return -FRONT.soft + easeInOut(u) * (FRONT.reach + FRONT.soft);
+  }
+  const coverAt = (r, p) => smooth((r - Math.hypot(p.x - FRONT.x, p.y - FRONT.y)) / FRONT.soft);
+
   function frame(tIn) {
     const t = qt(clamp(tIn, 0, duration));
     let pal, pr;
-    if (!reducedMotion) {
+    const r = reducedMotion ? null : frontR(t);
+    if (r != null) {
+      // day chart under, night chart over, masked by a soft radial front from the fog corner
+      ({ pr } = paintPicture(pctx, t, false, 0));
+      paintPicture(pctx2, t, false, 1);
+      const g = pctx2.createRadialGradient(FRONT.x, FRONT.y, Math.max(0, r), FRONT.x, FRONT.y, Math.max(1, r + FRONT.soft));
+      g.addColorStop(0, 'rgba(0,0,0,1)');
+      g.addColorStop(1, 'rgba(0,0,0,0)');
+      pctx2.globalCompositeOperation = 'destination-in';
+      pctx2.fillStyle = r + FRONT.soft <= 0 ? 'rgba(0,0,0,0)' : g;
+      pctx2.fillRect(0, 0, STAGE_W, STAGE_H);
+      pctx2.globalCompositeOperation = 'source-over';
+      pctx.drawImage(pic2, 0, 0);
+      pal = palette(t, cues, coverAt(r + FRONT.soft, CAPTION_AT));
+    } else if (!reducedMotion) {
       ({ pal, pr } = paintPicture(pctx, t, false));
     } else {
       const b = beatIndex(t);
@@ -66,7 +93,7 @@ export function createFilm(data, { canvas, reducedMotion = false, doc = document
       }
       pal = palette(tp, cues);
     }
-    drawText(tctx, data, t, pal, { pr, rm: reducedMotion, carets: CARETS, cues, anchorFor, clusterRadius });
+    drawText(tctx, data, t, pal, { pr, rm: reducedMotion, carets: CARETS, faint: FAINT, cues, anchorFor });
     out.drawImage(pic, 0, 0);
     out.drawImage(txt, 0, 0);
     return t;

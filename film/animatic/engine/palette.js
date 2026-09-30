@@ -17,12 +17,12 @@ export const TOKENS = {
   chip: [242, 242, 236], // K47 chip label fill
 };
 
-export const DUSK_LEN = 4;
+export const DUSK_LEN = 2.6;
 export const CLOSE_LEN = 1.5;
 
 // dusk: 0 = day paper, 1 = slate. close: 0..1 into the closing ground.
-export function palette(t, cues) {
-  const dusk = easeInOut((t - cues.dusk) / DUSK_LEN);
+export function palette(t, cues, duskOverride = null) {
+  const dusk = duskOverride ?? easeInOut((t - cues.dusk) / DUSK_LEN);
   const close = easeInOut((t - cues.close) / CLOSE_LEN);
   const T = TOKENS;
   const ground = mixRgb(mixRgb(T.paper, T.slate, dusk), T.closing, close);
