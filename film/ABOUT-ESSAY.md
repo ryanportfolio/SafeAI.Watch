@@ -6,9 +6,9 @@ Structure and techniques drawn from the Harris voice study (`recon/harris-voice/
 
 ## Is AI good or bad for us?
 
-You may have used AI this week and read something about it that worried you. Both can be true at once, and for most people they are. Public arguments about AI rarely leave room for that. They sort people into camps with one-word names: doomer, accelerationist, Luddite, techno-optimist. Once a label is attached, people hear the word instead of the person.
+Half of blind and low-vision people who use AI to describe images use it every day. One in five say its errors have hurt them. Same tool, same people, same survey. Public arguments about AI rarely hold both facts at once. They sort people into camps with one-word names: doomer, accelerationist, Luddite, techno-optimist, and once a label sticks, people hear the word instead of the person.
 
-The split has an ordinary cause. Look closely at the benefits and the risks fade from view; look at the risks and the benefits fade. Tristan Harris of the Center for Humane Technology described it in 2026: "Your mind is not holding both of those things at the same time." Each camp is a habit of looking at one side.
+Tristan Harris of the Center for Humane Technology, borrowing an image from his co-founder Aza Raskin, compares it to looking through one eye at a time: one shows the benefits, the other the risks, and it is hard to open both at once. A label skips the effort. It names the eye someone happened to look through and treats that as the whole person.
 
 ## The same skill, pointed both ways
 
@@ -16,7 +16,7 @@ AI can now read software and find its weak spots. In April 2026, Mozilla fixed 4
 
 This is one capability. A model that finds a flaw fast enough for a defender to fix it can also find one fast enough for an attacker to use it.
 
-The same split shows up wherever these tools reach people. In a 2025 survey by the American Foundation for the Blind, 51% of blind and low-vision people who use AI to describe images used it every day, and 21% said an error had harmed them. Speaking at Davos in 2026, Harris put it in one line: "You can't separate the promise from the peril."
+Speaking at Davos in 2026, Harris put it in one line: "You can't separate the promise from the peril."
 
 ## Keeping it on the right side
 

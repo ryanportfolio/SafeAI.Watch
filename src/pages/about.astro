@@ -5,7 +5,7 @@ import FilmPlayer from '../components/FilmPlayer.astro';
 // Source of each linked claim: film/facts.md rows (and the Davos episode from
 // film/recon/harris-voice/podcast.md, E8). The essay text is film/ABOUT-ESSAY.md, verbatim.
 const src = {
-  q2: 'https://centerforhumanetechnology.substack.com/p/can-ai-be-built-in-service-of-life',
+  eyes: 'https://www.youtube.com/watch?v=90irsXaKxZA&t=1774s',
   p24: 'https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/',
   h23: 'https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access',
   b18: 'https://afb.org/research-and-initiatives/ai-series/innovation-access',
@@ -30,10 +30,10 @@ const ext = { target: '_blank', rel: 'noopener noreferrer' };
     <section id="question" aria-labelledby="question-heading">
       <h2 id="question-heading">Is AI good or bad for us?</h2>
       <p>
-        You may have used AI this week and read something about it that worried you. Both can be true at once, and for most people they are. Public arguments about AI rarely leave room for that. They sort people into camps with one-word names: doomer, accelerationist, Luddite, techno-optimist. Once a label is attached, people hear the word instead of the person.
+        <a href={src.b18} {...ext}>Half of blind and low-vision people who use AI to describe images use it every day<span class="visually-hidden"> (opens in a new tab)</span></a>. One in five say its errors have hurt them. Same tool, same people, same survey. Public arguments about AI rarely hold both facts at once. They sort people into camps with one-word names: doomer, accelerationist, Luddite, techno-optimist, and once a label sticks, people hear the word instead of the person.
       </p>
       <p>
-        The split has an ordinary cause. Look closely at the benefits and the risks fade from view; look at the risks and the benefits fade. Tristan Harris of the Center for Humane Technology <a href={src.q2} {...ext}>described it in 2026<span class="visually-hidden"> (opens in a new tab)</span></a>: "Your mind is not holding both of those things at the same time." Each camp is a habit of looking at one side.
+        Tristan Harris of the Center for Humane Technology, <a href={src.eyes} {...ext}>borrowing an image from his co-founder Aza Raskin<span class="visually-hidden"> (opens in a new tab)</span></a>, compares it to looking through one eye at a time: one shows the benefits, the other the risks, and it is hard to open both at once. A label skips the effort. It names the eye someone happened to look through and treats that as the whole person.
       </p>
     </section>
 
@@ -46,7 +46,7 @@ const ext = { target: '_blank', rel: 'noopener noreferrer' };
         This is one capability. A model that finds a flaw fast enough for a defender to fix it can also find one fast enough for an attacker to use it.
       </p>
       <p>
-        The same split shows up wherever these tools reach people. In <a href={src.b18} {...ext}>a 2025 survey by the American Foundation for the Blind<span class="visually-hidden"> (opens in a new tab)</span></a>, 51% of blind and low-vision people who use AI to describe images used it every day, and 21% said an error had harmed them. <a href={src.davos} {...ext}>Speaking at Davos in 2026<span class="visually-hidden"> (opens in a new tab)</span></a>, Harris put it in one line: "You can't separate the promise from the peril."
+        <a href={src.davos} {...ext}>Speaking at Davos in 2026<span class="visually-hidden"> (opens in a new tab)</span></a>, Harris put it in one line: "You can't separate the promise from the peril."
       </p>
     </section>
 
