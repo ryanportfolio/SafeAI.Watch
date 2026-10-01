@@ -38,7 +38,7 @@ const ogImage = new URL('/og-image.png', Astro.site);
 const themeColor = tokensCss.match(/--paper:\s*(#[0-9a-f]{6})/i)?.[1];
 if (!themeColor) throw new Error('BaseLayout: --paper not found as six-digit hex in tokens.css');
 const OG_IMAGE_ALT =
-  'SafeAI.watch: "Keeping watch on AI" in serif type beside a blue line drawing of a research flow.';
+  'SafeAI.watch: "Keeping watch on AI" in serif type beside the SafeAI.watch mark: contour lines forming an S-shaped valley, with an orange survey marker on its floor.';
 ---
 <!doctype html>
 <html lang="en">

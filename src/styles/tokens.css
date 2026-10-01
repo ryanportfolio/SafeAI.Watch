@@ -37,7 +37,7 @@
   --accent-orange: #ff7733; /* hero burst, rgb(255 119 51) */
   --accent-amber: #e5a700; /* hero burst, rgb(229 167 0) */
   --accent-olive: #a89a1a; /* hero burst, rgb(168 154 26) */
-  --mark-blue: #253e77; /* crosshair mark stroke */
+  --mark-blue: #253e77; /* focus ring outline */
   --link-blue: #1c4190; /* artwork blue, rgb(28 65 144) */
   --accent-blue: #6a86c2; /* artwork blue lifted for dark scenes (coverage: governance), rgb(106 134 194) */
   --accent-dropcap: #ce4918; /* homepage drop cap; 3.16:1 on paper for its 50px glyph (prototype #de4e1a was 2.79:1) */
