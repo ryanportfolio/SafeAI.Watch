@@ -13,9 +13,10 @@
 //     [--out-dir D:/videos/SafeAI.Watch] [--name safeai-watch-film-animatic-draft]
 //     [--wav .tmp/film/audio/score.wav] [--tmp .tmp/film/export] [--encode-only]
 // Writes <name>-with-sound.mp4 and <name>-silent.mp4, plus two browser reference stills in --tmp
-// for check-export.mjs (which deletes the segments with --clean once the checks pass). ffmpeg: FFMPEG env var, else ffmpeg on PATH.
+// for check-export.mjs (which deletes the segments with --clean once the checks pass). --encode-only
+// takes the fps from the capture's export.json and records the --wav it muxes there. ffmpeg: FFMPEG env var, else ffmpeg on PATH.
 import { spawn, spawnSync } from 'node:child_process';
-import { mkdirSync, writeFileSync, rmSync, existsSync, statSync } from 'node:fs';
+import { mkdirSync, writeFileSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { launchPlacedChrome } from '../lib/launch-chrome.mjs';
@@ -23,13 +24,18 @@ import { launchPlacedChrome } from '../lib/launch-chrome.mjs';
 const ROOT = resolve(fileURLToPath(new URL('../../', import.meta.url)));
 const arg = (k, d) => { const i = process.argv.indexOf(`--${k}`); return i > 0 ? process.argv[i + 1] : d; };
 const FFMPEG = process.env.FFMPEG || 'ffmpeg';
-const FPS = Number(arg('fps', 60));
+const REUSE = process.argv.includes('--encode-only'); // re-encode from the segments already in --tmp
+const TMP = resolve(ROOT, arg('tmp', '.tmp/film/export'));
+// --encode-only reuses a capture: its fps comes from the capture's export.json, and an explicit
+// --fps must agree with it (the segments hold frames at that rate)
+const PREV = REUSE ? JSON.parse(readFileSync(join(TMP, 'export.json'), 'utf8')) : null;
+if (REUSE && arg('fps') !== undefined && Number(arg('fps')) !== PREV.fps) throw new Error(`--fps ${arg('fps')} differs from the capture's ${PREV.fps} fps in ${join(TMP, 'export.json')}`);
+const FPS = REUSE ? PREV.fps : Number(arg('fps', 60));
 const WORKERS = Number(arg('workers', 6));
 const CRF = arg('crf', '17');
 const OUT_DIR = resolve(ROOT, arg('out-dir', 'D:/videos/SafeAI.Watch'));
 const NAME = arg('name', 'safeai-watch-film-animatic-draft');
 const WAV = resolve(ROOT, arg('wav', '.tmp/film/audio/score.wav'));
-const TMP = resolve(ROOT, arg('tmp', '.tmp/film/export'));
 const BASE = arg('url', `http://localhost:${process.env.PORT || 4329}`);
 const REF_TIMES = [58.6, 141.5]; // browser stills kept for the colour check
 if (!existsSync(WAV)) throw new Error(`no score at ${WAV}: run node film/animatic/audio/render-wav.mjs`);
@@ -41,7 +47,6 @@ const run = (args) => {
   if (r.status !== 0) throw new Error(`ffmpeg failed: ${args.join(' ')}`);
 };
 
-const REUSE = process.argv.includes('--encode-only'); // re-encode from the segments already in --tmp
 const browser = REUSE ? null : await launchPlacedChrome({ place: 'offscreen', channel: 'chrome' });
 const t0 = Date.now();
 let total;
@@ -84,7 +89,11 @@ if (!REUSE) try {
 } finally {
   await browser.close();
 }
-else console.log('--encode-only: reusing the captured segments');
+else {
+  // the encode below muxes WAV; record it so check-export.mjs reads the same score and cues
+  writeFileSync(join(TMP, 'export.json'), JSON.stringify({ ...PREV, wav: WAV }, null, 1));
+  console.log(`--encode-only: reusing the segments captured at ${FPS} fps`);
+}
 console.log(`captured in ${((Date.now() - t0) / 1000).toFixed(0)} s`);
 
 // One H.264 encode from the lossless segments. RGB -> BT.709 limited range set explicitly;

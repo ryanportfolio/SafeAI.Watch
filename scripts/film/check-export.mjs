@@ -9,7 +9,7 @@
 // FFPROBE env vars, else on PATH.
 import { spawnSync } from 'node:child_process';
 import { readFileSync, readdirSync, rmSync } from 'node:fs';
-import { resolve, join } from 'node:path';
+import { resolve, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(fileURLToPath(new URL('../../', import.meta.url)));
@@ -21,7 +21,10 @@ const TMP = resolve(ROOT, arg('tmp', '.tmp/film/export'));
 const SOUND = join(DIR, `${NAME}-with-sound.mp4`), SILENT = join(DIR, `${NAME}-silent.mp4`);
 const EXP = JSON.parse(readFileSync(join(TMP, 'export.json'), 'utf8'));
 const FPS = EXP.fps, FRAMES = EXP.frames, DUR = EXP.duration, W = 1920, H = 1080, FR = 1 / FPS;
-const cues = JSON.parse(readFileSync(resolve(ROOT, '.tmp/film/audio/cues.json'), 'utf8'));
+// the score the exporter muxed (export.json records it) and the cue metadata render-wav.mjs wrote
+// beside it
+const WAV = resolve(ROOT, EXP.wav || '.tmp/film/audio/score.wav');
+const cues = JSON.parse(readFileSync(join(dirname(WAV), 'cues.json'), 'utf8'));
 
 const results = [];
 const report = (name, value, pass) => { results.push(pass); console.log(`${pass === null ? 'INFO' : pass ? 'PASS' : 'FAIL'}  ${name}: ${value}`); };
@@ -62,8 +65,9 @@ const silentHash = (f) => sh(FFMPEG, ['-v', 'error', '-i', f, '-map', '0:v:0', '
 const sameVideo = silentHash(SOUND) === silentHash(SILENT);
 report('silent video stream identical to the sound version', sameVideo ? 'byte-identical packets' : 'packets differ', sameVideo);
 
-// lossless segments: the browser's frames, in order
-const segs = readdirSync(TMP).filter((n) => /^seg-\d+\.mkv$/.test(n)).sort();
+// lossless segments: the browser's frames, in order. segments.txt lists this export's segments;
+// stale seg-*.mkv files left by an earlier run with more workers are not part of it
+const segs = readFileSync(join(TMP, 'segments.txt'), 'utf8').split(/\r?\n/).map((l) => /^file '(.+)'$/.exec(l.trim())?.[1]).filter(Boolean);
 const segCounts = segs.map((n) => Number(probe(join(TMP, n), ['-select_streams', 'v:0', '-count_packets', '-show_entries', 'stream=nb_read_packets']).streams[0].nb_read_packets));
 report('lossless intermediate', `${segs.length} FFV1 segments, ${segCounts.reduce((x, y) => x + y, 0)} frames (${segCounts.join(' + ')})`, segCounts.reduce((x, y) => x + y, 0) === FRAMES);
 
@@ -159,7 +163,7 @@ function lag(x, y, t, sr = 48000, max = 2400) {
   }
   return best / sr;
 }
-const wav = pcm(resolve(ROOT, '.tmp/film/audio/score.wav'));
+const wav = pcm(WAV);
 for (const c of CUES) {
   const n0 = Math.round(c.t * FPS), [bx, by, bw, bh] = c.box;
   const ref = mp4.get(n0 - 6);
