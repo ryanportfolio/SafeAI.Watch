@@ -1,0 +1,305 @@
+---
+// The silent About film: a 16:9 canvas in the page column, its transport, and (on narrow
+// screens) the captions set as text. src/scripts/film/player.js drives it from film/beats.json.
+import beats from '../../film/beats.json';
+
+const D = beats.duration;
+const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
+const pct = (s: number) => `${((s / D) * 100).toFixed(3)}%`;
+
+// Transcript: every caption, small line and on-screen label from beats.json, in screen order.
+type Line = { text: string; at: number; role: string; quote?: boolean; italic?: string[] };
+const transcript = beats.beats.map((b) => {
+  const lines: Line[] = [{ ...b.statement, role: 'statement' }];
+  if (b.precision) lines.push({ ...b.precision, role: 'precision' });
+  for (const e of b.extra || []) lines.push(e);
+  return lines.sort((x, y) => x.at - y.at); // stable: same-time labels keep their beats.json order
+});
+// italic runs from beats.json, as the film sets them
+const runs = (l: Line) => {
+  const out: { s: string; em: boolean }[] = [];
+  let rest = l.text;
+  for (const run of l.italic || []) {
+    const i = rest.indexOf(run);
+    if (i < 0) continue;
+    out.push({ s: rest.slice(0, i), em: false }, { s: run, em: true });
+    rest = rest.slice(i + run.length);
+  }
+  out.push({ s: rest, em: false });
+  return out.filter((r) => r.s);
+};
+const LABEL = new Set(['region', 'label', 'key', 'buoy']);
+---
+<figure class="film" data-film>
+  <div class="film-stage frame">
+    <canvas class="film-canvas" width="1920" height="1080" role="img" aria-label="Silent film with on-screen captions: Is AI good or bad for us?" aria-describedby="film-transcript-summary" aria-details="film-transcript"></canvas>
+  </div>
+
+  <div class="film-transport">
+    <button class="button button-primary film-play" type="button" aria-label="Play film" data-film-play>
+      <svg class="film-icon film-icon-play" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1l9 5-9 5z" fill="currentColor" /></svg>
+      <svg class="film-icon film-icon-pause" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1h3v10H2zM7 1h3v10H7z" fill="currentColor" /></svg>
+      <span data-film-play-label>Play</span>
+    </button>
+    <div class="film-scrub">
+      <input class="film-range" type="range" min="0" max={D} step="any" value="0" aria-label="Film position" data-film-range />
+      {beats.chapters.map((c) => (
+        <span class="film-tick" style={`left: ${pct(c.start)}`} aria-hidden="true">
+          <span class="film-tick-label">{c.title}</span>
+        </span>
+      ))}
+    </div>
+    <span class="film-time" data-film-time>0:00 / {fmt(D)}</span>
+  </div>
+
+  <div class="film-captions" data-film-captions>
+    <p class="film-cap-head" data-cap-head></p>
+    <p class="film-cap-statement" data-cap-statement></p>
+    <p class="film-cap-precision" data-cap-precision></p>
+  </div>
+
+  <details class="film-transcript" id="film-transcript">
+    <summary class="film-transcript-summary eyebrow" id="film-transcript-summary">Transcript</summary>
+    <ol class="film-transcript-list">
+      {transcript.map((lines) => (
+        <li>
+          {lines.map((l) => (
+            <p class={`film-tx film-tx-${LABEL.has(l.role) ? 'label' : l.role}`}>
+              {l.quote && '“'}{runs(l).map((r) => (r.em ? <em>{r.s}</em> : r.s))}{l.quote && '”'}
+            </p>
+          ))}
+        </li>
+      ))}
+    </ol>
+  </details>
+</figure>
+
+<script>
+  import '../scripts/film/player.js';
+</script>
+
+<style>
+  .film {
+    margin: 0 0 clamp(56px, 7vw, 88px);
+  }
+
+  .film-stage {
+    aspect-ratio: 16 / 9;
+    background: var(--paper);
+  }
+
+  .film-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  /* Captions as page text: only on narrow players, where the canvas type would be too small */
+  .film-captions {
+    display: none;
+  }
+
+  .film.is-narrow .film-captions {
+    display: block;
+    padding-top: 20px;
+  }
+
+  .film-captions p {
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-out);
+  }
+
+  .film-captions p:empty {
+    display: none;
+  }
+
+  .film-captions p.is-on {
+    opacity: 1;
+  }
+
+  .film-cap-head {
+    margin-bottom: 6px;
+    font-family: var(--font-serif);
+    font-size: 16px;
+    line-height: 1.3;
+    color: var(--ink-70);
+  }
+
+  .film-cap-statement {
+    font-family: var(--font-serif);
+    font-size: 21px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .film-cap-precision {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--ink-64);
+  }
+
+  /* Full text of the film, every width; closed it is one mono line under the transport */
+  .film-transcript {
+    margin-top: 20px;
+  }
+
+  .film-transcript-summary {
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  .film-transcript-summary:hover {
+    color: var(--ink);
+  }
+
+  .film-transcript-list {
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .film-transcript-list li + li {
+    margin-top: 14px;
+  }
+
+  .film-tx {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .film-tx-heading,
+  .film-tx-precision {
+    color: var(--ink-64);
+  }
+
+  .film-tx-precision {
+    font-size: 13px;
+  }
+
+  .film-tx-label {
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    color: var(--ink-64);
+  }
+
+  .film-transport {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 20px;
+    margin-top: 16px;
+    visibility: hidden;
+  }
+
+  .film.is-ready .film-transport {
+    visibility: visible;
+  }
+
+  .film-play {
+    min-width: 112px;
+  }
+
+  .film-icon-pause,
+  .film.is-playing .film-icon-play {
+    display: none;
+  }
+
+  .film.is-playing .film-icon-pause {
+    display: block;
+  }
+
+  .film-scrub {
+    position: relative;
+    height: 46px;
+  }
+
+  .film-range {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .film-range::-webkit-slider-runnable-track {
+    height: 1px;
+    background: var(--ink-34);
+  }
+
+  .film-range::-webkit-slider-thumb {
+    width: 13px;
+    height: 13px;
+    margin-top: -6px;
+    border-radius: 50%;
+    background: var(--ink);
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .film-range::-moz-range-track {
+    height: 1px;
+    background: var(--ink-34);
+  }
+
+  .film-range::-moz-range-thumb {
+    width: 13px;
+    height: 13px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--ink);
+  }
+
+  .film-tick {
+    position: absolute;
+    top: calc(50% - 5px);
+    width: 1px;
+    height: 11px;
+    background: var(--ink-34);
+    pointer-events: none;
+  }
+
+  .film-tick-label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    line-height: 1;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--ink-64);
+  }
+
+  .film-time {
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow-lg);
+    letter-spacing: var(--tracking-eyebrow);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    color: var(--ink-64);
+  }
+
+  /* chapter names only where they fit; the ticks and the slider's value text stay */
+  .film.is-narrow .film-tick-label {
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+    .film-transport {
+      gap: 14px;
+    }
+
+    .film-play {
+      min-width: 0;
+      padding-inline: 18px;
+    }
+  }
+</style>

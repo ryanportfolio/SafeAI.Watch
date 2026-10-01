@@ -1,71 +1,88 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import { events, formatLong, lastUpdated } from '../data/record';
+import FilmPlayer from '../components/FilmPlayer.astro';
+
+// Source of each linked claim: film/facts.md rows (and the Davos episode from
+// film/recon/harris-voice/podcast.md, E8). The essay text is film/ABOUT-ESSAY.md, verbatim.
+const src = {
+  q2: 'https://centerforhumanetechnology.substack.com/p/can-ai-be-built-in-service-of-life',
+  p24: 'https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/',
+  h23: 'https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access',
+  b18: 'https://afb.org/research-and-initiatives/ai-series/innovation-access',
+  davos: 'https://centerforhumanetechnology.substack.com/p/the-race-to-build-god-ais-existential',
+  h40: 'https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing',
+  p10: 'https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors',
+  l37: 'https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB53',
+  w7: 'https://www.un.org/independent-international-scientific-panel-ai/sites/default/files/2026-09/Thematic%20Brief_AI%20Agents%2C%20Misalignment%20and%20the%20Risk%20of%20Losing%20Human%20Control_Evidence%20from%20the%20OpenAI-Hugging%20Face%20Incident_Independent%20International%20Scientific%20Panel%20on%20AI_Advance%20Unedited%20Version%201_21%20Sept%202026.pdf',
+  q12: 'https://www.ted.com/talks/tristan_harris_why_ai_is_our_ultimate_test_and_greatest_invitation/transcript',
+};
+const ext = { target: '_blank', rel: 'noopener noreferrer' };
 ---
 <PageLayout
   title="About"
   heading="An open record of AI risk"
-  description="How SafeAI.watch chooses and reads its sources, and what its record of AI safety and security covers."
+  description="SafeAI.watch keeps a dated record of AI safety and security: research, reported incidents, public warnings and policy."
   intro="SafeAI.watch collects public research, reported incidents, warnings, and policy on AI safety and security. Each entry links its source and states the limits of its evidence."
 >
+  <FilmPlayer />
+
   <div class="prose">
-    <section id="method" aria-labelledby="method-heading">
-      <h2 id="method-heading">How entries are read</h2>
+    <section id="question" aria-labelledby="question-heading">
+      <h2 id="question-heading">Is AI good or bad for us?</h2>
       <p>
-        Each entry starts with what happened and who reported it. It then says what the evidence
-        supports and what remains unresolved. The date on an entry is the date its linked source
-        was published.
+        Ask people that and most answer with a sentence, often a mixed one: it helps them with some things and worries them about others. Public arguments about AI tend to shrink that sentence into a label: doomer, accelerationist, Luddite, techno-optimist. Once a label is attached, people hear the word instead of the person.
+      </p>
+      <p>
+        The split has an ordinary cause. Look closely at the benefits and the risks fade from view; look at the risks and the benefits fade. Tristan Harris of the Center for Humane Technology <a href={src.q2} {...ext}>described it in 2026<span class="visually-hidden"> (opens in a new tab)</span></a>: "Your mind is not holding both of those things at the same time." Each camp is a habit of looking at one side.
       </p>
     </section>
 
-    <section id="sources" aria-labelledby="sources-heading">
-      <h2 id="sources-heading">Evidence and attribution</h2>
+    <section id="both-ways" aria-labelledby="both-ways-heading">
+      <h2 id="both-ways-heading">The same skill, pointed both ways</h2>
       <p>
-        Company reports give the company's own findings. Preprints may change before peer review.
-        Court filings contain allegations a court has not yet tested. Essays and interviews present
-        arguments and forecasts. News reports give an account readers can check against the original
-        material.
+        AI can now read software and find its weak spots. In April 2026, <a href={src.p24} {...ext}>Mozilla fixed 423 security bugs in Firefox<span class="visually-hidden"> (opens in a new tab)</span></a>, and an AI model found 271 of them. In May, <a href={src.h23} {...ext}>Google's threat intelligence team found criminals holding attack code<span class="visually-hidden"> (opens in a new tab)</span></a> it believes was built with AI; its early find may have stopped the attack.
       </p>
       <p>
-        A capability shown in a controlled test, a warning about future harm, and an observed incident
-        are different kinds of evidence. A serious warning can justify scrutiny while its likelihood
-        remains uncertain.
+        This is one capability. A model that finds a flaw fast enough for a defender to fix it can also find one fast enough for an attacker to use it.
+      </p>
+      <p>
+        The same split shows up wherever these tools reach people. In <a href={src.b18} {...ext}>a 2025 survey by the American Foundation for the Blind<span class="visually-hidden"> (opens in a new tab)</span></a>, 51% of blind and low-vision people who use AI to describe images used it every day, and 21% said an error had harmed them. <a href={src.davos} {...ext}>Speaking at Davos in 2026<span class="visually-hidden"> (opens in a new tab)</span></a>, Harris put it in one line: "You can't separate the promise from the peril."
       </p>
     </section>
 
-    <section id="scope" aria-labelledby="scope-heading">
-      <h2 id="scope-heading">Scope of the record</h2>
+    <section id="safeguards" aria-labelledby="safeguards-heading">
+      <h2 id="safeguards-heading">Keeping it on the right side</h2>
       <p>
-        The record covers AI safety and security: research and evaluations, reported incidents,
-        public warnings and statements, and policy. It began with AI and biological risk.
+        We use these tools too, and the benefits are real. That is why the work of keeping them safe matters, and much of that work is steady and unglamorous.
       </p>
       <p>
-        It holds {events.length} entries, a selection of sources published through{' '}
-        <time datetime={lastUpdated}>{formatLong(lastUpdated)}</time>. It does not cover every
-        development or track events as they happen.
+        People test it. In <a href={src.h40} {...ext}>a 2026 test by the UK AI Security Institute<span class="visually-hidden"> (opens in a new tab)</span></a>, with internet access left open and safety filters switched off on purpose, AI agents went onto the live internet and targeted real people. A human maintainer caught the malicious code before it was approved, and the institute found no real-world harm.
       </p>
       <p>
-        The featured GZERO World interview is linked editorial coverage. It is not an endorsement of this
-        project. Illustrations are conceptual artwork and contain no measured results.
+        People fix what the tests find. The same institute <a href={src.p10} {...ext}>probed one lab's safety monitor and found holes in every version it tested<span class="visually-hidden"> (opens in a new tab)</span></a>, and each round of fixes was attacked again.
       </p>
-    </section>
-
-    <section id="further" aria-labelledby="further-heading">
-      <h2 id="further-heading">Reading further</h2>
       <p>
-        <a href="/latest">Browse the source archive</a> or <a href="/timeline">follow the timeline</a>.
-        Each source link leads to the original, where readers can check its context, revisions, and
-        later developments.
+        Lawmakers write it into law. Since January 2026, the largest AI developers in California <a href={src.l37} {...ext}>must report serious safety incidents within 15 days<span class="visually-hidden"> (opens in a new tab)</span></a>.
+      </p>
+      <p>
+        And some questions stay open. <a href={src.w7} {...ext}>A UN scientific panel wrote in September 2026<span class="visually-hidden"> (opens in a new tab)</span></a> that "no existing study provides a reliable probability of severe loss of control."
       </p>
     </section>
 
-    <section id="typefaces" aria-labelledby="typefaces-heading">
-      <h2 id="typefaces-heading">Typefaces</h2>
+    <section id="what-you-can-do" aria-labelledby="what-you-can-do-heading">
+      <h2 id="what-you-can-do-heading">What you can do</h2>
       <p>
-        The site is set in Geist and Geist Mono by Vercel and Newsreader by Production Type. All three
-        are served from this site under the SIL Open Font License 1.1. Licence texts: <a href="/licenses/OFL-Geist.txt">Geist</a>,{' '}
-        <a href="/licenses/OFL-Geist-Mono.txt">Geist Mono</a>, <a href="/licenses/OFL-Newsreader.txt">Newsreader</a>.
+        Nobody reading this has to solve AI. A more useful question than whether to feel hopeful or afraid is what has to happen next, and who is doing it. Read the source behind a claim. Notice which side you have stopped looking at. <a href={src.q12} {...ext}>Harris's shorthand<span class="visually-hidden"> (opens in a new tab)</span></a> for why this matters: "clarity creates agency."
+      </p>
+      <p id="record">
+        SafeAI.watch keeps a dated record of AI safety and security: research, reported incidents, public warnings and policy. Every entry links its original source and separates what happened, what the evidence shows, and what remains uncertain. The aim is to help you hold both at once.
       </p>
     </section>
   </div>
 </PageLayout>
+
+<style>
+  #record {
+    scroll-margin-top: 100px;
+  }
+</style>

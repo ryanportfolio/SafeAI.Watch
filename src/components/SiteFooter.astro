@@ -12,7 +12,7 @@ const { updated = lastUpdated } = Astro.props;
 const columns = [
   {
     label: 'Coverage',
-    links: [{ href: '/about#scope', label: 'Our scope' }],
+    links: [{ href: '/about#record', label: 'Our scope' }],
   },
   {
     label: 'SafeAI.watch',
@@ -24,8 +24,8 @@ const columns = [
   {
     label: 'Reading',
     links: [
-      { href: '/about#sources', label: 'Sources' },
-      { href: '/about#method', label: 'Our method' },
+      { href: '/latest', label: 'Sources' },
+      { href: '/about#record', label: 'Our method' },
     ],
   },
   {
@@ -65,6 +65,9 @@ const columns = [
       <Mark size={88} class="footer-mark" />
     </div>
   </div>
+  <p class="eyebrow footer-fonts">
+    Set in Geist and Geist Mono by Vercel and Newsreader by Production Type, served from this site under the SIL Open Font License 1.1. Licence texts: <a href="/licenses/OFL-Geist.txt">Geist</a>, <a href="/licenses/OFL-Geist-Mono.txt">Geist Mono</a>, <a href="/licenses/OFL-Newsreader.txt">Newsreader</a>
+  </p>
 </footer>
 
 <style>
@@ -169,6 +172,22 @@ const columns = [
   .footer-tagline {
     padding-right: 112px; /* the 88px mark plus a 24px gap */
     line-height: 13px;
+  }
+
+  .footer-fonts {
+    margin-top: 14px;
+    padding-inline: 19.5px;
+    line-height: 1.6;
+  }
+
+  .footer-fonts a {
+    color: var(--ink);
+    border-bottom: 1px solid var(--grey-track);
+    transition: border-color 0.2s var(--ease-out);
+  }
+
+  .footer-fonts a:hover {
+    border-bottom-color: currentColor;
   }
 
   .footer-about :global(.footer-mark) {

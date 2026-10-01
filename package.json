@@ -5,10 +5,12 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "npm run film:lint",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "brand": "node scripts/brand/build-brand.mjs"
+    "brand": "node scripts/brand/build-brand.mjs",
+    "film:lint": "node scripts/film/lint-beats.mjs"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.3.0",

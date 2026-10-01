@@ -1,0 +1,619 @@
+{
+  "duration": 147.9,
+  "chapters": [
+    {
+      "id": "c1",
+      "title": "The question",
+      "start": 0
+    },
+    {
+      "id": "c2",
+      "title": "One skill, both directions",
+      "start": 32.1
+    },
+    {
+      "id": "c3",
+      "title": "Keeping it pointed the right way",
+      "start": 71.8
+    },
+    {
+      "id": "c4",
+      "title": "A better answer",
+      "start": 122.4
+    }
+  ],
+  "beats": [
+    {
+      "id": "B1",
+      "start": 0,
+      "end": 5.5,
+      "type": "owner",
+      "script": 1,
+      "statement": {
+        "text": "Is AI good or bad for us?",
+        "at": 1.6,
+        "owner": true,
+        "quote": false,
+        "italic": []
+      }
+    },
+    {
+      "id": "B2",
+      "start": 5.5,
+      "end": 12,
+      "type": "owner",
+      "script": 3,
+      "statement": {
+        "text": "A label squeezes everything a person thinks into one word",
+        "at": 6,
+        "owner": true,
+        "quote": false,
+        "italic": []
+      },
+      "extra": [
+        {
+          "text": "DOOMER",
+          "at": 7,
+          "owner": true,
+          "role": "region"
+        }
+      ]
+    },
+    {
+      "id": "B3",
+      "start": 12,
+      "end": 18.5,
+      "type": "owner",
+      "script": 4,
+      "statement": {
+        "text": "Then people hear the word instead of the person",
+        "at": 12.5,
+        "owner": true,
+        "quote": false,
+        "italic": []
+      },
+      "extra": [
+        {
+          "text": "ACCELERATIONIST",
+          "at": 15.1,
+          "owner": true,
+          "role": "region"
+        }
+      ]
+    },
+    {
+      "id": "B4",
+      "start": 18.5,
+      "end": 27.3,
+      "type": "owner",
+      "script": 5,
+      "statement": {
+        "text": "The same view can end up with opposite labels",
+        "at": 19,
+        "owner": true,
+        "quote": false,
+        "italic": []
+      },
+      "extra": [
+        {
+          "text": "DOOMER",
+          "at": 20.4,
+          "owner": true,
+          "role": "region"
+        },
+        {
+          "text": "ACCELERATIONIST",
+          "at": 20.4,
+          "owner": true,
+          "role": "region"
+        },
+        {
+          "text": "DECEL",
+          "at": 21.6,
+          "owner": true,
+          "role": "region"
+        },
+        {
+          "text": "E/ACC",
+          "at": 22,
+          "owner": true,
+          "role": "region"
+        },
+        {
+          "text": "LUDDITE",
+          "at": 22.4,
+          "owner": true,
+          "role": "region"
+        },
+        {
+          "text": "TECHNO-OPTIMIST",
+          "at": 22.8,
+          "owner": true,
+          "role": "region"
+        },
+        {
+          "text": "SAFETYIST",
+          "at": 23.2,
+          "owner": true,
+          "role": "region"
+        },
+        {
+          "text": "AI BOOSTER",
+          "at": 23.6,
+          "owner": true,
+          "role": "region"
+        },
+        {
+          "text": "EA",
+          "at": 24,
+          "owner": true,
+          "role": "region"
+        },
+        {
+          "text": "AI BRO",
+          "at": 24.4,
+          "owner": true,
+          "role": "region"
+        }
+      ]
+    },
+    {
+      "id": "B5",
+      "start": 27.3,
+      "end": 32.1,
+      "type": "owner",
+      "script": 6,
+      "statement": {
+        "text": "People are people, not camps",
+        "at": 27.8,
+        "owner": true,
+        "quote": false,
+        "italic": []
+      }
+    },
+    {
+      "id": "B6",
+      "start": 32.1,
+      "end": 37.6,
+      "type": "progress",
+      "script": 8,
+      "statement": {
+        "text": "AI can read software and find its weak spots",
+        "at": 33.1,
+        "rows": [
+          "P24"
+        ],
+        "quote": false,
+        "italic": []
+      },
+      "precision": {
+        "text": "Mozilla, May 2026",
+        "at": 36.4,
+        "rows": [
+          "P24"
+        ]
+      }
+    },
+    {
+      "id": "B7",
+      "start": 37.6,
+      "end": 46.1,
+      "type": "progress",
+      "script": 9,
+      "statement": {
+        "text": "Mozilla used it to fix hundreds of Firefox security flaws in a month",
+        "at": 38.1,
+        "rows": [
+          "P24"
+        ],
+        "quote": false,
+        "italic": []
+      },
+      "precision": {
+        "text": "423 fixed in April 2026, 271 of them found by an AI model",
+        "at": 42.4,
+        "rows": [
+          "P24"
+        ]
+      },
+      "extra": [
+        {
+          "text": "MOZILLA · FIREFOX SECURITY FIXES",
+          "at": 38.4,
+          "rows": [
+            "P24"
+          ],
+          "role": "label"
+        },
+        {
+          "text": "BENEFITS",
+          "at": 38.4,
+          "owner": true,
+          "role": "key"
+        }
+      ]
+    },
+    {
+      "id": "B8",
+      "start": 46.1,
+      "end": 54.3,
+      "type": "happened",
+      "script": 10,
+      "statement": {
+        "text": "Google caught criminals with attack code it believes AI wrote",
+        "at": 46.6,
+        "rows": [
+          "H23"
+        ],
+        "quote": false,
+        "italic": []
+      },
+      "precision": {
+        "text": "Google Threat Intelligence Group, May 2026 · its early find may have stopped the attack",
+        "at": 50.1,
+        "rows": [
+          "H23"
+        ]
+      },
+      "extra": [
+        {
+          "text": "GOOGLE · CRIMINAL ATTACK CODE",
+          "at": 46.9,
+          "rows": [
+            "H23"
+          ],
+          "role": "label"
+        },
+        {
+          "text": "REPORTED INCIDENTS",
+          "at": 46.9,
+          "rows": [
+            "S20"
+          ],
+          "role": "key"
+        }
+      ]
+    },
+    {
+      "id": "B9",
+      "start": 54.3,
+      "end": 61.3,
+      "type": "owner",
+      "script": 12,
+      "statement": {
+        "text": "AI that describes the world for blind people splits the same way",
+        "at": 55.1,
+        "owner": true,
+        "quote": false,
+        "italic": []
+      },
+      "precision": {
+        "text": "American Foundation for the Blind, August 2026",
+        "at": 59.1,
+        "rows": [
+          "B18"
+        ]
+      },
+      "extra": [
+        {
+          "text": "SIGHT · AMERICAN FOUNDATION FOR THE BLIND",
+          "at": 55.7,
+          "rows": [
+            "B18"
+          ],
+          "role": "label"
+        }
+      ]
+    },
+    {
+      "id": "B10",
+      "start": 61.3,
+      "end": 71.8,
+      "type": "perspective",
+      "script": 13,
+      "statement": {
+        "text": "It can give you a positive infinity of new benefits at the same time that it presents almost a negative infinity of risk",
+        "at": 62.5,
+        "rows": [
+          "Q1"
+        ],
+        "quote": true,
+        "italic": []
+      },
+      "precision": {
+        "text": "Tristan Harris, Center for Humane Technology, July 2026",
+        "at": 69.3,
+        "rows": [
+          "Q1"
+        ]
+      }
+    },
+    {
+      "id": "B11",
+      "start": 71.8,
+      "end": 76.6,
+      "type": "owner",
+      "script": 14,
+      "statement": {
+        "text": "So how do we keep it on the right side?",
+        "at": 72.6,
+        "owner": true,
+        "quote": false,
+        "italic": []
+      }
+    },
+    {
+      "id": "B12",
+      "start": 76.6,
+      "end": 87.9,
+      "type": "happened",
+      "script": 15,
+      "statement": {
+        "text": "In a government test, AI agents went onto the live internet and targeted real people",
+        "at": 78.1,
+        "rows": [
+          "H40"
+        ],
+        "quote": false,
+        "italic": []
+      },
+      "precision": {
+        "text": "UK AI Security Institute, August 2026 · internet access left open and safety filters switched off on purpose",
+        "at": 82.9,
+        "rows": [
+          "H40"
+        ]
+      },
+      "extra": [
+        {
+          "text": "We test it",
+          "at": 76.8,
+          "owner": true,
+          "role": "heading"
+        },
+        {
+          "text": "CONTROLLED TEST",
+          "at": 77.1,
+          "rows": [
+            "S31"
+          ],
+          "role": "key"
+        }
+      ]
+    },
+    {
+      "id": "B13",
+      "start": 87.9,
+      "end": 94.5,
+      "type": "happened",
+      "script": 16,
+      "statement": {
+        "text": "A human maintainer caught and refused to approve the malicious code",
+        "at": 88.5,
+        "rows": [
+          "H42"
+        ],
+        "quote": true,
+        "italic": []
+      },
+      "precision": {
+        "text": "Same report · no real-world harm found",
+        "at": 92.3,
+        "rows": [
+          "H42",
+          "H41"
+        ]
+      }
+    },
+    {
+      "id": "B14",
+      "start": 94.5,
+      "end": 104.3,
+      "type": "progress",
+      "script": 17,
+      "statement": {
+        "text": "Government testers probed one lab’s safety monitor and found holes in every version they tried",
+        "at": 96,
+        "rows": [
+          "P10"
+        ],
+        "quote": false,
+        "italic": []
+      },
+      "precision": {
+        "text": "UK AI Security Institute, July 2026 · each fix was tested again",
+        "at": 100.8,
+        "rows": [
+          "P10"
+        ]
+      },
+      "extra": [
+        {
+          "text": "We fix what tests find",
+          "at": 94.7,
+          "owner": true,
+          "role": "heading"
+        },
+        {
+          "text": "SAFEGUARDS",
+          "at": 98,
+          "owner": true,
+          "role": "key"
+        }
+      ]
+    },
+    {
+      "id": "B15",
+      "start": 104.3,
+      "end": 114.1,
+      "type": "policy",
+      "script": 18,
+      "statement": {
+        "text": "The largest AI developers in California must report serious safety incidents",
+        "at": 105.8,
+        "rows": [
+          "L37"
+        ],
+        "quote": false,
+        "italic": []
+      },
+      "precision": {
+        "text": "Transparency in Frontier Artificial Intelligence Act, in effect January 2026 · reports due within 15 days",
+        "at": 109.6,
+        "rows": [
+          "L37"
+        ]
+      },
+      "extra": [
+        {
+          "text": "We make it law",
+          "at": 104.5,
+          "owner": true,
+          "role": "heading"
+        },
+        {
+          "text": "CALIFORNIA · INCIDENT-REPORT LAW",
+          "at": 106.6,
+          "rows": [
+            "L37"
+          ],
+          "role": "buoy"
+        },
+        {
+          "text": "POLICY & OVERSIGHT",
+          "at": 106.6,
+          "rows": [
+            "S20"
+          ],
+          "role": "key"
+        }
+      ]
+    },
+    {
+      "id": "B16",
+      "start": 114.1,
+      "end": 122.4,
+      "type": "unknown",
+      "script": 19,
+      "statement": {
+        "text": "no existing study provides a reliable probability of severe loss of control",
+        "at": 115.7,
+        "rows": [
+          "W7"
+        ],
+        "quote": true,
+        "italic": []
+      },
+      "precision": {
+        "text": "UN Independent International Scientific Panel on AI, September 2026",
+        "at": 119.7,
+        "rows": [
+          "W7"
+        ]
+      },
+      "extra": [
+        {
+          "text": "And we admit what we don’t know",
+          "at": 114.3,
+          "owner": true,
+          "role": "heading"
+        }
+      ]
+    },
+    {
+      "id": "B17",
+      "start": 122.4,
+      "end": 128.7,
+      "type": "perspective",
+      "script": 21,
+      "statement": {
+        "text": "clarity creates agency",
+        "at": 125.2,
+        "rows": [
+          "Q12"
+        ],
+        "quote": true,
+        "italic": []
+      },
+      "precision": {
+        "text": "Tristan Harris, TED, April 2025",
+        "at": 127,
+        "rows": [
+          "Q12"
+        ]
+      }
+    },
+    {
+      "id": "B18",
+      "start": 128.7,
+      "end": 133.2,
+      "type": "owner",
+      "script": 22,
+      "statement": {
+        "text": "Use it, value it, and keep your eyes open",
+        "at": 129.3,
+        "owner": true,
+        "quote": false,
+        "italic": []
+      }
+    },
+    {
+      "id": "B19",
+      "start": 133.2,
+      "end": 138.4,
+      "type": "owner",
+      "script": 23,
+      "statement": {
+        "text": "Hold both at once",
+        "at": 135,
+        "owner": true,
+        "quote": false,
+        "italic": []
+      },
+      "extra": [
+        {
+          "text": "Is AI good or bad for us?",
+          "at": 133.4,
+          "owner": true,
+          "role": "echo"
+        }
+      ]
+    },
+    {
+      "id": "B20",
+      "start": 138.4,
+      "end": 147.9,
+      "type": "site",
+      "script": 24,
+      "statement": {
+        "text": "Stay close to the evidence",
+        "at": 141.6,
+        "rows": [
+          "S25"
+        ],
+        "quote": false,
+        "italic": [
+          "the evidence"
+        ]
+      },
+      "precision": {
+        "text": "A public record of AI safety and security",
+        "at": 143.9,
+        "rows": [
+          "S13"
+        ]
+      },
+      "extra": [
+        {
+          "text": "SafeAI.watch",
+          "at": 142.6,
+          "rows": [
+            "S9",
+            "S10"
+          ],
+          "role": "wordmark"
+        }
+      ]
+    }
+  ]
+}
