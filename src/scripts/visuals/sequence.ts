@@ -5,7 +5,7 @@
  * three translucent planes, one per step card: what happened (the event and
  * the sources that reported it), what the evidence shows (methods, findings
  * and limits linked to the event) and what remains uncertain (open questions
- * around a crosshair). A vertical spine runs from one source up through all
+ * around the site's triangulation mark). A vertical spine runs from one source up through all
  * three layers.
  *
  * The page script in index.astro reports reading progress on the section:
@@ -346,13 +346,8 @@ const sequence: SceneFactory = ({ gl, slot, redraw }) => {
     [1, 1],
     [-1, 1],
   ];
-  /** Crosshair tick directions in the plane. */
-  const TICKS: [number, number][] = [
-    [0, -1],
-    [1, 0],
-    [0, 1],
-    [-1, 0],
-  ];
+  /** Corners of the site's triangulation mark in the plane, unit circumradius. */
+  const MARKER = [-90, 30, 150].map((deg): [number, number] => [Math.cos((deg * Math.PI) / 180), Math.sin((deg * Math.PI) / 180)]);
   const cornerX = [0, 0, 0, 0];
   const cornerY = [0, 0, 0, 0];
 
@@ -477,11 +472,11 @@ const sequence: SceneFactory = ({ gl, slot, redraw }) => {
         ring(u, y, v, r, 18, true, 1.3 * lw, amber, 0.95 * o);
         dot(u, y, v, 1.6, amber, o);
       }
-      // the crosshair: the site's mark, lying on the open questions
-      ring(su, y, sv, 0.12, 28, false, 1.3 * lw, lineCol, 0.9 * vis);
-      for (const [du, dv] of TICKS) {
-        seg(su + du * 0.06, y, sv + dv * 0.06, su + du * 0.2, y, sv + dv * 0.2, 1.3 * lw, lineCol, 0.9 * vis);
-      }
+      // the triangulation mark from the site's logo, lying on the open questions
+      MARKER.forEach(([du, dv], i) => {
+        const [eu, ev] = MARKER[(i + 1) % 3];
+        seg(su + du * 0.16, y, sv + dv * 0.16, su + eu * 0.16, y, sv + ev * 0.16, 1.3 * lw, lineCol, 0.9 * vis);
+      });
       dot(su, y, sv, 2.6, amber, vis);
     }
   };
