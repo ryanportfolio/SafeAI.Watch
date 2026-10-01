@@ -13,6 +13,13 @@ export const FONTS = {
   mono: 'Geist Mono',
 };
 
+// The site registers the same font files under its own family names; it calls this before
+// createFilm so the film reuses those faces instead of loading them twice.
+export function setFonts(fonts) {
+  Object.assign(FONTS, fonts);
+  memo.clear();
+}
+
 const ST = { size: 62, lead: 1.12, track: -0.02, x: 120, maxW: 1320, base: 872 };
 const PR = { size: 26, lead: 36, maxW: 1320, gap: 60 };
 const MONO = { size: 21, track: 0.1 };
@@ -405,6 +412,8 @@ export function drawText(ctx, data, t, pal, env) {
   const opts = { rm: env.rm, caret: env.carets[beat.id], endcard: beat.type === 'site', faint: !!env.faint?.[beat.id] };
   drawLabels(ctx, beat, tc, pal, opts, env);
   drawLabelsChapter(ctx, tc, pal, env);
+  // narrow players set the reading captions as page text under the film (env.captions false)
+  if (env.captions === false) { if (opts.endcard) drawEndCard(ctx, beat, t, pal); return; }
   drawEcho(ctx, beat, t, pal);
   const L = drawStatement(ctx, beat, t, pal, opts);
   drawHeading(ctx, beat, t, pal, env, L);

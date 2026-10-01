@@ -5,7 +5,7 @@ import { clamp, qt, easeInOut, smooth } from './util.js';
 import { makeCamera, projector, STAGE_W, STAGE_H } from './camera.js';
 import { palette, DUSK_LEN } from './palette.js';
 import { makeCues, cameraKeys, drawWorld, anchorFor, STEPS } from './world.js';
-import { drawText, FONTS } from './captions.js';
+import { drawText, FONTS, setFonts } from './captions.js';
 import { rgba } from './util.js';
 
 // Graft 1 (blue caret): statements whose limit is inserted by the caret.
@@ -23,7 +23,9 @@ function layer(doc) {
   return c;
 }
 
-export function createFilm(data, { canvas, reducedMotion = false, doc = document }) {
+export function createFilm(data, { canvas, reducedMotion = false, doc = document, fonts = null }) {
+  if (fonts) setFonts(fonts);
+  let captions = true; // false: the page sets the reading captions as text outside the canvas
   const out = canvas.getContext('2d', { alpha: false });
   const pic = layer(doc), pic2 = layer(doc), txt = layer(doc);
   const pctx = pic.getContext('2d', { alpha: false }), pctx2 = pic2.getContext('2d'), tctx = txt.getContext('2d');
@@ -101,11 +103,11 @@ export function createFilm(data, { canvas, reducedMotion = false, doc = document
       pal = palette(tp, cues);
       tChart = tp;
     }
-    drawText(tctx, data, t, pal, { pr, tChart, rm: reducedMotion, carets: CARETS, faint: FAINT, steps: STEPS, cues, anchorFor });
+    drawText(tctx, data, t, pal, { pr, tChart, captions, rm: reducedMotion, carets: CARETS, faint: FAINT, steps: STEPS, cues, anchorFor });
     out.drawImage(pic, 0, 0);
     out.drawImage(txt, 0, 0);
     return t;
   }
 
-  return { duration, chapters: data.chapters, beats, frame, reducedMotion };
+  return { duration, chapters: data.chapters, beats, frame, reducedMotion, setCaptions(on) { captions = on; } };
 }
