@@ -375,8 +375,9 @@ function drawEndCard(ctx, beat, t, pal) {
     const a = easeOut((t - e.at) / 0.5);
     if (a <= 0) return;
     if (e.role === 'wordmark') {
-      ctx.font = `500 34px ${FONTS.sans}`;
-      ctx.letterSpacing = '-0.34px';
+      // the site's wordmark face (header lockup): Newsreader 420, whose serifed I keeps "SafeAI" from reading "SafeAl"
+      ctx.font = `420 38px ${FONTS.serif}`;
+      ctx.letterSpacing = '-0.23px';
       ctx.fillStyle = rgba(pal.cream, a);
       ctx.fillText(e.text, STAGE_W / 2 - ctx.measureText(e.text).width / 2, 640);
     } else if (e.role === 'tagline') {
