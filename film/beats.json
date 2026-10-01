@@ -1,5 +1,5 @@
 {
-  "duration": 145.9,
+  "duration": 147.9,
   "chapters": [
     {
       "id": "c1",
@@ -582,12 +582,12 @@
     {
       "id": "B20",
       "start": 138.4,
-      "end": 145.9,
+      "end": 147.9,
       "type": "site",
       "script": 24,
       "statement": {
         "text": "Stay close to the evidence",
-        "at": 139.6,
+        "at": 141.6,
         "rows": [
           "S25"
         ],
@@ -598,7 +598,7 @@
       },
       "precision": {
         "text": "A public record of AI safety and security",
-        "at": 141.9,
+        "at": 143.9,
         "rows": [
           "S13"
         ]
@@ -606,7 +606,7 @@
       "extra": [
         {
           "text": "SafeAI.watch",
-          "at": 140.6,
+          "at": 142.6,
           "rows": [
             "S9",
             "S10"

@@ -3,6 +3,7 @@
 //
 // Usage (repo root): node film/animatic/audio/check-wav.mjs [--dir .tmp/film/audio] [--shots <dir>]
 // Needs score.wav + cues.json (mix), score-hits.wav (hits stem), score-pads.wav (pads stem),
+// score-floor.wav (floor stem: the chain with no notes),
 // and ffmpeg on PATH for loudness, true peak and the spectrograms.
 import { readFileSync, mkdirSync, existsSync } from 'node:fs';
 import { resolve, join } from 'node:path';
@@ -131,9 +132,14 @@ if (existsSync(join(DIR, 'score-hits.wav'))) {
   for (const o of bad) console.log(`      ${f(o.t, 2)} s ${o.what}: ${f(o.off, 1)} ms`);
 }
 
-// 3. clicks: second-difference spikes far above their local context
+// 3. clicks: second-difference spikes far above their local context, outside the scheduled note
+// onsets (score.md: "no sample-to-sample jump above a set threshold outside scheduled onsets").
+// With no noise bed under the music, a bright attack stands far above its quiet context, so the
+// first 40 ms of every scheduled note are attacks, not clicks; they are counted separately.
 {
-  let spikes = 0, worst = 0, maxJump = 0;
+  let spikes = 0, worst = 0, maxJump = 0, atOnset = 0;
+  const on = new Uint8Array(mix.n);
+  for (const t of cues.onsets || []) for (let i = Math.max(0, Math.round((t - 0.002) * sr)); i < Math.min(mix.n, Math.round((t + 0.04) * sr)); i++) on[i] = 1;
   const W = Math.round(0.01 * sr);
   for (const x of [L, R]) {
     const d2 = new Float32Array(mix.n);
@@ -146,10 +152,10 @@ if (existsSync(join(DIR, 'score-hits.wav'))) {
       // local rms from the window before this sample (excluding it)
       const loc = Math.sqrt(Math.max(acc - d2[i] * d2[i], 0) / (W - 1));
       const ratio = Math.abs(d2[i]) / (loc + 1e-7);
-      if (Math.abs(d2[i]) > 0.002 && ratio > 12) { spikes++; worst = Math.max(worst, ratio); }
+      if (Math.abs(d2[i]) > 0.002 && ratio > 12) { if (on[i]) atOnset++; else { spikes++; worst = Math.max(worst, ratio); } }
     }
   }
-  report('clicks (|2nd difference| > 12x its 10 ms context and > 0.002)', `${spikes} spikes; largest sample-to-sample step ${f(maxJump, 4)} (${f(db(maxJump), 1)} dBFS)`, spikes === 0);
+  report('clicks (|2nd difference| > 12x its 10 ms context and > 0.002, outside note onsets)', `${spikes} spikes outside onsets (${atOnset} inside the first 40 ms of ${(cues.onsets || []).length} scheduled notes); largest sample-to-sample step ${f(maxJump, 4)} (${f(db(maxJump), 1)} dBFS)`, spikes === 0);
 }
 
 // 4. stereo: low end mono below 120 Hz (FFT cross-spectrum over the bins under 120 Hz, so no
@@ -215,6 +221,33 @@ if (existsSync(join(DIR, 'score-pads.wav'))) {
   }
   const least = rows.reduce((a, b) => (a.move < b.move ? a : b));
   report('pad spectral centroid moves (each pad >= 3 s)', `${rows.length} pads; smallest range ${f(least.move, 1)}% (${least.id}, ${f(least.lo, 0)}-${f(least.hi, 0)} Hz); median ${f(rows.map((r) => r.move).sort((a, b) => a - b)[rows.length >> 1], 1)}%`, least.move >= 10);
+}
+
+// 6b. noise floor: the chain with every note removed, read at the mix's make-up gain. The owner
+// rejected the old noise bed (a waterfall under the captions); nothing may sound between notes.
+const rms1s = (chs, n) => {
+  const out = [];
+  for (let s0 = 0; s0 + sr <= n; s0 += sr / 10) {
+    let a = 0;
+    for (const x of chs) for (let i = s0; i < s0 + sr; i++) a += x[i] * x[i];
+    out.push({ t: s0 / sr, db: db(Math.sqrt(a / (chs.length * sr))) });
+  }
+  return out;
+};
+if (existsSync(join(DIR, 'score-floor.wav'))) {
+  const fl = readWav(join(DIR, 'score-floor.wav'));
+  const g = cues.report?.gainDb ?? 0;
+  const loudest = Math.max(...rms1s(fl.chans, fl.n).map((w) => w.db)) + g;
+  report('noise floor (floor stem, loudest 1 s window at mix gain)', `${loudest < -150 ? 'digital silence' : f(loudest, 1) + ' dBFS'} (limit -60)`, loudest <= -60);
+}
+{
+  // the music's own quiet: 1 s windows inside the film (after the first 0.5 s, before the last 2 s)
+  const body = rms1s([L, R], mix.n).filter((w) => w.t >= 0.5 && w.t + 1 <= mix.n / sr - 2).sort((a, b) => a.db - b.db);
+  report('quietest 1 s windows inside the film (mix)', `${f(body[0].db, 1)} dBFS at ${f(body[0].t, 1)} s; 10th percentile ${f(body[Math.floor(body.length * 0.1)].db, 1)}, median ${f(body[body.length >> 1].db, 1)} dBFS`, null);
+  // hiss band: the mix high-passed at 2 kHz, where the old noise bed sat
+  const hp = (x) => { const y = new Float32Array(x.length); const c = Math.exp((-2 * Math.PI * 2000) / sr); let px = 0, py = 0; for (let i = 0; i < x.length; i++) { py = c * (py + x[i] - px); px = x[i]; y[i] = py; } return y; };
+  const hb = rms1s([hp(L), hp(R)], mix.n).filter((w) => w.t >= 0.5 && w.t + 1 <= mix.n / sr - 2).map((w) => w.db).sort((a, b) => a - b);
+  report('energy above 2 kHz (1 s windows inside the film)', `quietest ${f(hb[0], 1)}, median ${f(hb[hb.length >> 1], 1)} dBFS`, null);
 }
 
 // 7. the ending decays into silence rather than cutting

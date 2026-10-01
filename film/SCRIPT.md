@@ -49,7 +49,7 @@ Lines 14, 15a, 17a, 18a and 19a are `OWNER`: four short headings, each followed 
 |---|---|---|---|
 | 21 | "clarity creates agency" | Tristan Harris, TED, April 2025 (Q12) | Dusk; the chart holds still |
 | 22 | Use it, value it, and keep your eyes open | | The lights and hazards glow together |
-| 23 | Hold both at once | | Every line draws in to the crosshair |
+| 23 | Hold both at once | | Every line draws in to the map sheet of the mark (G3, Valley · Marker) |
 | 24 | Stay close to *the evidence* · SafeAI.watch | A public record of AI safety and security (S25, S13) | End card |
 
 Lines 22 and 23 are `OWNER`. The opening question returns faintly over the full chart before line 23.

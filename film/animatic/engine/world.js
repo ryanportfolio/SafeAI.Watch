@@ -6,8 +6,9 @@
 // 122 runs, 10 runs, 19 actions (H40); 13% to 0.4% (P32). The current, forks, fog and the
 // ring shapes carry no data.
 import { clamp, lerp, rise, easeOut, easeIn, easeInOut, smooth, mulberry32, windowAlpha } from './util.js';
-import { path, seg, dot, ring, glow, poly, partial, frame, crosshair } from './draw.js';
+import { path, seg, dot, ring, glow, poly, partial, frame } from './draw.js';
 import { STAGE_W } from './camera.js';
+import { G3 } from './logo-g3.js';
 
 const TAU = Math.PI * 2;
 export const SHEET = { x0: 80, y0: 80, x1: 3520, y1: 1920 };
@@ -79,7 +80,7 @@ const CH_BUOYS = [chan(0.3, -1), chan(0.72, 1)];
 
 const FOG = [{ x: 3150, y: 380, r: 720, p: 0 }, { x: 2880, y: 240, r: 520, p: 1.7 }, { x: 3380, y: 760, r: 520, p: 3.1 }, { x: 3330, y: 170, r: 420, p: 4.4 }, { x: 2720, y: 560, r: 340, p: 5.2 }];
 const FOG_DROP = { x: 3150, y: 470 };
-const END_FROM = FORKS[1].F; // the sight fork's neutral ring becomes the crosshair
+const END_FROM = FORKS[1].F; // the sight fork's neutral ring becomes the map sheet of the mark
 
 // ---------- the labels chapter: soundings, the sentence, the region names ----------
 // A chart keeps names off the soundings because a name printed over the water hides the
@@ -233,7 +234,7 @@ export function makeCues(data, measure) {
   const c = {
     B, s, a, e,
     dusk: s(ID.clarity) - 0.2, // dusk sweeps in from the fog while no caption is on screen
-    close: s(ID.end) - 0.8, // every line draws in to the crosshair as Hold both at once leaves
+    close: endTimes(s(ID.end)).close, // every line draws in to the map sheet as Hold both at once leaves
   };
   c.L = labelsLayout(c, measure);
   c.lift = c.L.tLift; // the names lift and the record is revealed
@@ -460,27 +461,115 @@ export function drawWorld(ctx, t, pr, pal, c, { still = false } = {}) {
   endMark(ctx, t, pr, pal, c);
 }
 
-// End card: the middle fork's neutral ring (where benefit and harm share one point)
-// becomes the crosshair mark (K54) at the top of the card.
-export const END_MARK = { x: STAGE_W / 2, y: 330, size: 150 };
+// End card: the sight fork's neutral ring (where benefit and harm share one point) opens into
+// the map sheet of the SafeAI.watch mark (G3 "Valley · Marker", engine/logo-g3.js), cream on the
+// closing ground. The chart's lines draw in to the sheet's edges and the neatline forms; the
+// contours rise from the valley floor outward, one level at a time, each drawing both ways from
+// its point nearest the marker; the corner ticks settle; last, the orange marker lands on the
+// valley floor as a sounding that finds bottom (the fog's sounding found none). The score's
+// motif resolves on the landing (audio/score.js reads these times).
+export const END_MARK = { x: STAGE_W / 2, y: 300, size: 260 };
+export function endTimes(s0) {
+  const close = s0 - 0.8;
+  return {
+    close, // the chart fades; its lines start to draw in to the sheet
+    sheet: close + 1.4, // the lines have reached the sheet; the neatline is drawn
+    rise: close + 1.2, // the lowest contour starts; each level after it STEP later
+    step: 0.2, draw: 1.0,
+    ticks: close + 2.6, // corner ticks grow out and settle
+    drop: close + 2.75, // the sounding line starts to fall
+    marker: close + 3.4, // the marker lands
+  };
+}
+let PATHS = null; // Path2D per contour, built on first use (needs a browser)
 function endMark(ctx, t, pr, pal, c) {
-  const u = easeInOut((t - c.close) / 1.5);
+  const E = endTimes(c.s(ID.end));
+  const u = easeInOut((t - E.close) / 1.5);
   if (u <= 0) return;
   const from = pr.point(END_FROM.x, END_FROM.y);
   const p = { x: lerp(from.x, END_MARK.x, u), y: lerp(from.y, END_MARK.y, u) };
-  // the current's lines draw inward to the point as the chart fades
-  const lines = 1 - easeInOut((t - c.close - 0.6) / 0.9);
+  const size = lerp(24, END_MARK.size, u), k = size / G3.sheet, h = size / 2;
+  const col = mixCol(pal.ink, pal.cream, u);
+  // the current's lines draw in to the sheet: each end runs to the point of the sheet's edge
+  // that faces it, and is gone once it arrives
+  const lines = 1 - easeInOut((t - E.close - 0.6) / 0.9);
   if (lines > 0) {
-    const k = easeInOut((t - c.close) / 1.2);
+    const kk = easeInOut((t - E.close) / (E.sheet - E.close));
     for (const st of STREAMS) {
       if (st.k % 2) continue;
       for (const w of [st.pts[0], st.pts.at(-1)]) {
         const q = pr.point(w.x, w.y);
-        path(ctx, [{ x: lerp(q.x, p.x, k), y: lerp(q.y, p.y, k) }, p], { color: pal.ink, alpha: 0.5 * lines, width: 1.2, dash: [10, 8] });
+        const dx = q.x - p.x, dy = q.y - p.y, m = Math.max(Math.abs(dx), Math.abs(dy)) || 1;
+        const e = { x: p.x + (dx / m) * h, y: p.y + (dy / m) * h };
+        path(ctx, [{ x: lerp(q.x, e.x, kk), y: lerp(q.y, e.y, kk) }, e], { color: pal.ink, alpha: 0.5 * lines, width: 1.2, dash: [10, 8] });
       }
     }
   }
-  crosshair(ctx, p, lerp(30, END_MARK.size, u), mixCol(pal.ink, pal.cream, u), 1);
+  const x0 = p.x - h, y0 = p.y - h;
+  ctx.save();
+  ctx.translate(x0, y0);
+  ctx.scale(k, k);
+  ctx.strokeStyle = `rgb(${col[0]},${col[1]},${col[2]})`;
+  // neatline: the sheet's edge, solid once the lines have arrived
+  const neat = easeOut((t - (E.sheet - 0.5)) / 0.6);
+  ctx.lineWidth = Math.max(G3.neat, 1 / k);
+  ctx.globalAlpha = 0.35 + 0.65 * neat;
+  ctx.strokeRect(0, 0, G3.sheet, G3.sheet);
+  // corner ticks: grow out from the corners and settle at 4 units
+  const tk = easeOut((t - E.ticks) / 0.6) * G3.tick, S = G3.sheet;
+  if (tk > 0.01) {
+    ctx.globalAlpha = 1;
+    ctx.beginPath();
+    for (const [cx, cy, sx, sy] of [[0, 0, -1, -1], [S, 0, 1, -1], [S, S, 1, 1], [0, S, -1, 1]]) {
+      ctx.moveTo(cx, cy); ctx.lineTo(cx + sx * tk, cy);
+      ctx.moveTo(cx, cy); ctx.lineTo(cx, cy + sy * tk);
+    }
+    ctx.stroke();
+  }
+  // contours, cut flush at the sheet edge
+  ctx.beginPath(); ctx.rect(0, 0, S, S); ctx.clip();
+  ctx.lineWidth = G3.stroke;
+  ctx.globalAlpha = 1;
+  PATHS ??= G3.lines.map((l) => new Path2D(l.d));
+  G3.lines.forEach((l, i) => {
+    const v = easeInOut((t - (E.rise + l.li * E.step)) / E.draw);
+    if (v <= 0) return;
+    if (v >= 1) { ctx.setLineDash([]); ctx.stroke(PATHS[i]); return; }
+    // the visible run grows both ways from the point nearest the marker
+    const half = v * (l.closed ? l.len / 2 : Math.max(l.at, l.len - l.at));
+    ctx.setLineDash([2 * half, l.closed ? Math.max(0.001, l.len - 2 * half) : 4 * l.len]);
+    ctx.lineDashOffset = half - l.at;
+    ctx.stroke(PATHS[i]);
+  });
+  ctx.setLineDash([]);
+  ctx.restore();
+  // the marker: a sounding line falls onto the valley floor; on contact the triangulation mark
+  // settles around the point and one ring spreads
+  const m = { x: x0 + G3.marker.x * k, y: y0 + G3.marker.y * k };
+  const fall = easeIn((t - E.drop) / (E.marker - E.drop));
+  if (fall > 0 && t < E.marker + 0.6) {
+    const top = m.y - 34 * k;
+    const fade = 1 - smooth((t - E.marker) / 0.6);
+    seg(ctx, { x: m.x, y: top }, { x: m.x, y: lerp(top, m.y, fall) }, { color: col, alpha: 0.6 * fade, width: 1.5, dash: [5, 5] });
+  }
+  if (t >= E.marker) {
+    const land = easeOut((t - E.marker) / 0.35);
+    const sc = lerp(1.35, 1, land);
+    ctx.save();
+    ctx.translate(m.x, m.y);
+    ctx.scale(k * sc, k * sc);
+    ctx.translate(-G3.marker.x, -G3.marker.y);
+    ctx.globalAlpha = land;
+    ctx.strokeStyle = rgbOf(pal.orange);
+    ctx.lineWidth = G3.marker.triStroke;
+    ctx.lineJoin = 'round';
+    ctx.stroke(new Path2D(G3.marker.tri));
+    ctx.restore();
+    dot(ctx, m, G3.marker.dot * k, pal.orange, 1);
+    const v = (t - E.marker) / 1.1;
+    if (v < 1) ring(ctx, m, (4 + 14 * easeOut(v)) * k, { color: pal.orange, alpha: 0.5 * (1 - v), width: 1.2 });
+  }
 }
+const rgbOf = (c) => `rgb(${c[0]},${c[1]},${c[2]})`;
 
 function mixCol(a, b, t) { return [0, 1, 2].map((i) => Math.round(lerp(a[i], b[i], clamp(t)))); }

@@ -103,21 +103,3 @@ export function frame(ctx, corners, { color, alpha = 1, width = 1.5, tick = 14, 
     }
   }
 }
-
-// Crosshair mark (K54): circles r15 and r5 in a 40 box, four tick arms, 2px at 40.
-export function crosshair(ctx, c, size, color, alpha = 1) {
-  if (alpha <= 0) return;
-  const k = size / 40;
-  ctx.save();
-  ctx.strokeStyle = rgba(color, alpha);
-  ctx.lineWidth = Math.max(1.5, 2 * k);
-  ctx.beginPath(); ctx.arc(c.x, c.y, 15 * k, 0, Math.PI * 2); ctx.stroke();
-  ctx.beginPath(); ctx.arc(c.x, c.y, 5 * k, 0, Math.PI * 2); ctx.stroke();
-  ctx.beginPath();
-  ctx.moveTo(c.x - 20 * k, c.y); ctx.lineTo(c.x - 10 * k, c.y);
-  ctx.moveTo(c.x + 10 * k, c.y); ctx.lineTo(c.x + 20 * k, c.y);
-  ctx.moveTo(c.x, c.y - 20 * k); ctx.lineTo(c.x, c.y - 10 * k);
-  ctx.moveTo(c.x, c.y + 10 * k); ctx.lineTo(c.x, c.y + 20 * k);
-  ctx.stroke();
-  ctx.restore();
-}

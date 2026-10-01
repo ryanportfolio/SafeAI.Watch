@@ -28,7 +28,8 @@ function biquad(ctx, type, f, q = 0.7071, gain = 0) {
 
 // Stereo impulse: sparse early reflections, then two independently seeded noise tails whose
 // brightness falls with time (a one-pole low-pass that closes as the tail decays).
-export function makeImpulse(ctx, { seed = 1978, len = 4.6, rt60 = 3.4, pre = 0.024 } = {}) {
+// Short and quiet on purpose: a longer, louder tail washed over the whole film (owner, 2026-09-30).
+export function makeImpulse(ctx, { seed = 1978, len = 2.6, rt60 = 1.8, pre = 0.024 } = {}) {
   const sr = ctx.sampleRate, n = Math.floor(len * sr);
   const buf = ctx.createBuffer(2, n, sr);
   for (let ch = 0; ch < 2; ch++) {
@@ -97,10 +98,9 @@ export function makeMix(ctx) {
   const bell = g(1); bell.connect(music);
   const read = g(1), readTone = biquad(ctx, 'lowpass', 16000, 0.5), readGain = g(1);
   read.connect(readTone).connect(readGain).connect(music);
-  const air = g(1); air.connect(pre);
 
   // reverb: sends are high-passed at 200 Hz so the low end stays dry and mono
-  const verb = g(1), verbOut = g(0.55);
+  const verb = g(1), verbOut = g(0.3);
   const conv = ctx.createConvolver();
   conv.normalize = true;
   conv.buffer = makeImpulse(ctx);
@@ -113,7 +113,7 @@ export function makeMix(ctx) {
   low.channelInterpretation = 'speakers';
   low.connect(pre);
 
-  return { ctx, pre, master, music, pad, padTone, padDuck, arp, bell, read, readTone, readGain, air, verb, low };
+  return { ctx, pre, master, music, pad, padTone, padDuck, arp, bell, read, readTone, readGain, verb, low };
 }
 
 // Short exponential dip on a gain (a scheduled sidechain): down by db at t, back over rec.
@@ -222,15 +222,17 @@ function limit(chans, sr, ceiling) {
 // little, so the second pass re-gains and re-limits.
 export function finish(chans, sr = 48000) {
   const ceil = 10 ** (CEILING_DBTP / 20);
-  let gr = 1;
+  let gr = 1, total = 1;
   for (let pass = 0; pass < 3; pass++) {
     const lufs = integratedLoudness(chans, sr);
     const gain = 10 ** ((TARGET_LUFS - lufs) / 20);
     if (Math.abs(TARGET_LUFS - lufs) < 0.05 && pass > 0) break;
     for (const x of chans) for (let i = 0; i < x.length; i++) x[i] *= gain;
+    total *= gain;
     gr = limit(chans, sr, ceil);
   }
-  return { lufs: integratedLoudness(chans, sr), truePeakDb: 20 * Math.log10(truePeak(chans)), maxReductionDb: 20 * Math.log10(gr) };
+  // gainDb: the make-up gain applied, so a raw stem can be read at the level it has in the mix
+  return { lufs: integratedLoudness(chans, sr), truePeakDb: 20 * Math.log10(truePeak(chans)), maxReductionDb: 20 * Math.log10(gr), gainDb: 20 * Math.log10(total) };
 }
 
 // 24-bit PCM stereo WAV.

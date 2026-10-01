@@ -3,7 +3,7 @@
 // one buffer. Runs the render in headed Chrome (parked offscreen) against the animatic server.
 //
 // Usage (repo root, server running: node film/animatic/serve.mjs):
-//   node film/animatic/audio/render-wav.mjs [--stem mix|hits|pads] [--out <file.wav>]
+//   node film/animatic/audio/render-wav.mjs [--stem mix|hits|pads|floor] [--out <file.wav>]
 // Default out: .tmp/film/audio/score.wav (stems: score-<stem>.wav). Also writes cues.json
 // (hit times, pad segments, loudness report) next to it. Needs playwright or playwright-core.
 import { mkdirSync, writeFileSync, openSync, writeSync, closeSync } from 'node:fs';
@@ -31,7 +31,7 @@ try {
     const r = await renderFilmAudio(data, { stem: stemName });
     const b = r.buffer;
     window.__wav = encodeWav([b.getChannelData(0), b.getChannelData(1)], b.sampleRate);
-    return { bytes: window.__wav.length, sampleRate: b.sampleRate, channels: b.numberOfChannels, seconds: b.duration, hits: r.hits, pads: r.pads, sections: data.chapters, report: r.report };
+    return { bytes: window.__wav.length, sampleRate: b.sampleRate, channels: b.numberOfChannels, seconds: b.duration, hits: r.hits, pads: r.pads, onsets: r.onsets, sections: data.chapters, report: r.report };
   }, stem);
   const fd = openSync(out, 'w');
   const CHUNK = 3 * 1024 * 1024;

@@ -80,18 +80,18 @@ export function tanhCurve(k = 2.5) {
   return c;
 }
 
-// Pad: per note, a triangle in the centre and two saws detuned +-7 cents spread wide, through
+// Pad: per note, a triangle in the centre and one saw detuned 7 cents to one side, through
 // a low-pass whose cutoff rises through the attack and breathes on a slow LFO, so the timbre
 // keeps moving for the whole chord.
 // One filter set per chord (left saws, right saws, centre triangles), sharing one sweep and one
 // LFO; each note keeps its own slow pitch drift.
-export function pad(ctx, M, rng, { t0, t1, notes, gain = 0.05, cut = 1600, a = 2.2, r = 2.6, spread = 0.7, send = 0.45 }) {
+export function pad(ctx, M, rng, { t0, t1, notes, gain = 0.05, cut = 1600, a = 2.2, r = 2.6, spread = 0.7, send = 0.2 }) {
   const end = t1 + r * 1.25;
   const vg = ctx.createGain();
   const lfo = ctx.createOscillator();
   lfo.frequency.value = 0.06 + 0.1 * rng();
   const lg = ctx.createGain();
-  lg.gain.value = cut * (0.2 + 0.12 * rng());
+  lg.gain.value = cut * (0.32 + 0.12 * rng());
   lfo.connect(lg);
   lfo.start(t0);
   lfo.stop(end);
@@ -109,7 +109,8 @@ export function pad(ctx, M, rng, { t0, t1, notes, gain = 0.05, cut = 1600, a = 2
     const side = i % 2 ? 1 : -1;
     // top notes slightly softer, so an open voicing stays dark
     const w = 1 - 0.08 * i;
-    const voices = [['triangle', 0, 1, 1.0], ['sawtooth', -7, 1 - side, 0.42], ['sawtooth', 7, 1 + side, 0.42]];
+    // two voices a note: the triangle in the centre and one saw, 7 cents off, to one side
+    const voices = [['triangle', 0, 1, 1.0], ['sawtooth', 7 * side, 1 + side, 0.42]];
     for (const [type, det, lane, lvl] of voices) {
       const o = osc(ctx, type, f, t0, end, M.wow);
       o.detune.value = det + (rng() - 0.5) * 2;
@@ -129,7 +130,7 @@ export function pad(ctx, M, rng, { t0, t1, notes, gain = 0.05, cut = 1600, a = 2
 
 // FM bell: sine carrier, sine modulator at a non-integer ratio, index falling from bright to
 // soft, plus a quiet pure partial an octave down for body. Tuned to the key.
-export function bell(ctx, M, rng, { t, note, vel = 1, dec = 3.2, ratio = 3.5, index = 2.2, pan = 0, send = 0.4, out = M.bell, body = 0.22 }) {
+export function bell(ctx, M, rng, { t, note, vel = 1, dec = 3.2, ratio = 3.5, index = 2.2, pan = 0, send = 0.3, out = M.bell, body = 0.22 }) {
   const f = hz(note);
   const end = t + dec * 1.3;
   const car = osc(ctx, 'sine', f, t, end, M.wow);
@@ -177,7 +178,7 @@ export function point(ctx, M, rng, { t, note, vel = 1, pan = 0, dec = 0.8 }) {
 }
 
 // Pluck for the pulse: two saws a few cents apart, a resonant low-pass that closes quickly.
-export function pluck(ctx, M, rng, { t, note, vel = 1, cut = 1800, dec = 0.9, pan = 0, send = 0.3 }) {
+export function pluck(ctx, M, rng, { t, note, vel = 1, cut = 1800, dec = 0.9, pan = 0, send = 0.2 }) {
   const f = hz(note);
   const end = t + dec * 1.3;
   const lp = lowpass(ctx, cut, 1.6);
@@ -258,44 +259,4 @@ export function felt(ctx, M, rng, { t, notes, vel = 1, dec = 1.6 }) {
   s.gain.value = 0.35;
   g.connect(s).connect(M.verb);
   return M.retire(end, g);
-}
-
-// Air: seeded noise, band-limited high, with slow wow on the level. Each side is 55% a shared
-// bed and 45% its own, so it is wide but stays positively correlated (mono-safe).
-export function air(ctx, M, rng, { t0, t1, level = 0.004 }) {
-  const len = ctx.sampleRate * 4;
-  const buf = ctx.createBuffer(2, len, ctx.sampleRate);
-  const bed = () => { const d = new Float32Array(len); let y = 0; for (let i = 0; i < len; i++) { y = 0.97 * y + (rng() * 2 - 1); d[i] = y * 0.12; } return d; };
-  const shared = bed();
-  for (let ch = 0; ch < 2; ch++) {
-    const d = buf.getChannelData(ch), own = bed();
-    for (let i = 0; i < len; i++) d[i] = 0.78 * shared[i] + 0.63 * own[i];
-    // loop seam: fade the ends into each other
-    const fl = 2400;
-    for (let i = 0; i < fl; i++) { const w = i / fl; d[i] = d[i] * w + d[len - fl + i] * (1 - w); }
-  }
-  const src = ctx.createBufferSource();
-  src.buffer = buf;
-  src.loop = true;
-  src.loopEnd = (len - 2400) / ctx.sampleRate;
-  const hp = ctx.createBiquadFilter();
-  hp.type = 'highpass';
-  hp.frequency.value = 1800;
-  const lp = ctx.createBiquadFilter();
-  lp.type = 'lowpass';
-  lp.frequency.value = 9000;
-  const g = ctx.createGain();
-  env(g.gain, { t0, a: 1.5, peak: level, t1, r: 2 });
-  // wow multiplies the level by 1 +- 0.18 after the envelope, so it can never leave a step
-  const wow = ctx.createGain();
-  const w = ctx.createOscillator();
-  w.frequency.value = 0.23;
-  const wg = ctx.createGain();
-  wg.gain.value = 0.18;
-  w.connect(wg).connect(wow.gain);
-  w.start(t0);
-  w.stop(t1 + 2.6);
-  src.connect(hp).connect(lp).connect(g).connect(wow).connect(M.air);
-  src.start(t0);
-  src.stop(t1 + 2.6);
 }

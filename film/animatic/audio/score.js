@@ -5,9 +5,9 @@
 //
 // Reference cue: Jon Hopkins, "Abandon Window" (Immunity, 2013). Key D major, 60 BPM base.
 // Motif: A4 D5 B4 E5, a question that ends open on the 2nd; it returns resolved (E5 -> D5)
-// on the end card. The sections and their reasons are in film/BRIEF.md, "## Sound".
+// on the end card, as the orange marker of the mark lands. The sections and their reasons are in film/BRIEF.md, "## Sound".
 import { mulberry32, easeOut, easeIn, easeInOut, smooth } from '../engine/util.js';
-import { ID } from '../engine/world.js';
+import { ID, endTimes } from '../engine/world.js';
 import { makeMix, duck, finish, LOOKAHEAD } from './mix.js';
 import * as V from './synth.js';
 
@@ -72,8 +72,8 @@ export function buildScore(data) {
     glow: s(ID.useit) + 0.3,
     echo: x(ID.hold, 'echo'),
     hold: a(ID.hold),
-    crosshair: s(ID.end) + 0.7, // c.close = end - 0.8, 1.5 s ease
-    endLine: a(ID.end),
+    sheet: endTimes(s(ID.end)).sheet, // the chart's lines reach the map sheet
+    marker: endTimes(s(ID.end)).marker, // the orange marker lands
     wordmark: x(ID.end, 'wordmark'),
   };
 
@@ -92,7 +92,7 @@ export function buildScore(data) {
     if (g.id === ID.useit) { t1 = s(ID.hold); rel = 0.9; } // the stopdown: the pad reverbs out
     if (g.id === ID.hold) { t0 = T.hold; att = 0.3; }
     if (g.id === ID.end) { t1 = T.wordmark + 1.3; rel = 3.0; att = 1.6; }
-    add('pad', 'pad', { t0, t1, notes: g.pad, gain: 0.05 * g.lvl, cut: g.cut * 1.35, a: att, r: rel });
+    add('pad', 'pad', { t0, t1, notes: g.pad, gain: 0.032 * g.lvl, cut: g.cut * 0.8, a: att, r: rel });
   });
 
   // ---- bass: absent in the opening, enters with People are people; no bottom under the fog ----
@@ -108,7 +108,7 @@ export function buildScore(data) {
     [s(ID.useit), s(ID.hold), 'A2', 0.9, 0.8],
     [T.hold, T.wordmark + 1.3, 'D2', 1.2, 3.0],
   ];
-  for (const [t0, t1, note, att = 1.2, rel = 1.0] of BASS) add('bass', 'bass', { t0, t1, note, gain: 0.055, a: att, r: rel });
+  for (const [t0, t1, note, att = 1.2, rel = 1.0] of BASS) add('bass', 'bass', { t0, t1, note, gain: 0.032, a: att, r: rel });
 
   // ---- the motif ----
   const motif = (t0, step, notes, { vel = 1, pan = 0.12, dec = 3.2, hitAt = [] } = {}) => notes.forEach((note, i) => {
@@ -159,7 +159,7 @@ export function buildScore(data) {
   const steps = [[ID.test, 'We test it'], [ID.fix, 'We fix what tests find'], [ID.law, 'We make it law'], [ID.unknown, 'And we admit']];
   steps.forEach(([id, name], i) => add('bell', 'hit', { t: x(id, 'heading'), note: MOTIF[i], vel: 0.8, dec: i === 3 ? 5 : 3.4, pan: (i % 2 ? 1 : -1) * 0.1 }, ['step', `heading: ${name}`]));
   add('felt', 'hit', { t: T.catch, notes: ['D3', 'A3'], vel: 1 }, ['the catch', 'bar across the line (H42)']);
-  add('bell', 'hit', { t: T.drop, note: 'A5', vel: 0.5, dec: 5, index: 1.1, send: 0.85 }, ['sounding drops', 'line into the fog, no bottom']);
+  add('bell', 'hit', { t: T.drop, note: 'A5', vel: 0.5, dec: 5, index: 1.1, send: 0.6 }, ['sounding drops', 'line into the fog, no bottom']);
 
   // ---- close: the motif's opening returns, both ends glow, stopdown, the one big moment ----
   add('bell', 'hit', { t: T.clarity, note: 'A4', vel: 0.7, pan: -0.1 }, ['clarity', 'Harris line appears']);
@@ -170,13 +170,13 @@ export function buildScore(data) {
   add('low', 'hit', { t: T.hold, note: 'D2', vel: 1.0, dec: 3.0, octave: 0.45 }, ['the big moment', 'caption: Hold both at once']);
   for (const [note, pan] of [['B4', 0.2], ['D5', 0], ['F#5', -0.2]]) add('bell', 'hit', { t: T.hold, note, vel: 0.95, dec: 5, pan });
 
-  // ---- end card: the motif resolved, E falls to D on the wordmark ----
-  const r0 = T.wordmark - 2.0;
+  // ---- end card: the motif resolved, E falls to D as the orange marker lands ----
+  const r0 = T.marker - 2.0; // = T.sheet: the motif starts as the lines reach the sheet
   motif(r0, 0.5, [...MOTIF, RESOLVE], {
     vel: 0.9, dec: 3.0, pan: 0.1,
-    hitAt: [[T.crosshair, 'motif (resolving)', 'crosshair arrives'], [T.endLine, 'motif (resolving)', 'caption: Stay close to the evidence'], [T.wordmark, 'motif resolved', 'wordmark SafeAI.watch']],
+    hitAt: [[T.sheet, 'motif (resolving)', 'lines reach the map sheet'], [T.marker, 'motif resolved', 'orange marker lands']],
   });
-  add('bell', 'bell', { t: T.wordmark, note: 'D4', vel: 0.55, dec: 4.4, send: 0.6 });
+  add('bell', 'bell', { t: T.marker, note: 'D4', vel: 0.55, dec: 4.4, send: 0.4 });
 
   // ---- the pulse: three passages, each a whole number of eighths from cut to cut ----
   const PULSE = [
@@ -199,8 +199,6 @@ export function buildScore(data) {
       add('pluck', 'arp', { t, note: noteName(m), vel, cut: p.cut[0] + (p.cut[1] - p.cut[0]) * u, pan: (k % 2 ? 0.28 : -0.28) + (rng() - 0.5) * 0.1 });
     }
   }
-
-  add('air', 'air', { t0: 0, t1: D - 2.0, level: 0.09 });
 
   // ---- automation: the erase in the labels chapter, ducks under hits, the final fade ----
   const auto = (M, stem) => {
@@ -230,6 +228,8 @@ const STEMS = {
   mix: () => true,
   hits: (e) => e.tag === 'hit',
   pads: (e) => e.tag === 'pad',
+  // no notes at all: the bus, reverb, saturation and automation alone, i.e. the noise floor
+  floor: () => false,
 };
 
 // Render the score. stem 'mix' is finished to -14 LUFS / -1.2 dBTP; the analysis stems
@@ -288,6 +288,7 @@ export async function renderFilmAudio(data, { stem = 'mix', sampleRate = SAMPLE_
   const buffer = new AudioBuffer({ numberOfChannels: 2, length, sampleRate });
   for (let c = 0; c < 2; c++) buffer.copyToChannel(rendered.getChannelData(c).subarray(pre, pre + length), c);
   const report = stem === 'mix' ? finish([buffer.getChannelData(0), buffer.getChannelData(1)], sampleRate) : null;
-  return { buffer, hits: score.hits, pads: score.pads, report };
+  // onsets: every scheduled note start in this stem, so the click check can tell an attack from a click
+  return { buffer, hits: score.hits, pads: score.pads, onsets: queue.map(([e]) => e.t ?? e.t0), report };
 }
 
