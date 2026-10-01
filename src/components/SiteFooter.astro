@@ -72,6 +72,20 @@ const columns = [
     padding: 0 var(--page-gutter) 18px;
   }
 
+  @media (min-width: 1024px) {
+    .site-footer {
+      /* clear the fixed jump and search controls (SectionJump: 24px inset), so they never cover the footer mark */
+      padding-bottom: 80px;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    .site-footer {
+      /* below 1280px the controls stand upright, about 102px tall */
+      padding-bottom: 140px;
+    }
+  }
+
   .footer-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 2fr);
