@@ -28,12 +28,13 @@
 </head>
 <body>
 <header>
-  <h1>SafeAI.watch logo lab: five directions</h1>
+  <h1>SafeAI.watch logo lab: six directions</h1>
   <p>Each row shows the horizontal lockup, the stacked lockup and the favicon at 16, 32 and 64 px, on paper. The dark tiles are a quick inversion for comparison only; each direction's full board has its designed dark version, one-color versions, a site header mock-up and motion.</p>
 </header>
 <main id="dirs"></main>
 <script>
 const DIRS = [
+  { id: 'F-topographic', prefix: 'F2-', name: 'F · Topographic', idea: 'An S found in surveyed ground: contours of one height field, two summits and a saddle, one orange point where you stand. Shown: F2, three contours, with a Newsreader wordmark; the board has F1 to F4.' },
   { id: 'A-same-shape', name: 'A · Same shape', idea: 'One bent band drawn twice and turned 180° to lock into an S: ink half and orange half, benefit and danger from the same shape.' },
   { id: 'B-the-point', name: 'B · The point', idea: 'The full stop is the one drawn element: half Newsreader round point, half Geist Mono square point, in orange. It takes the shape of each word it faces.' },
   { id: 'C-evidence-line', name: 'C · Evidence line', idea: 'One stroke that loses ink in three steps: solid for what happened, dashed for what the evidence shows, dotted for what remains uncertain.' },
@@ -43,17 +44,18 @@ const DIRS = [
 const main = document.getElementById('dirs');
 for (const d of DIRS) {
   const base = `directions/${d.id}/`;
+  const f = base + (d.prefix || '');
   main.insertAdjacentHTML('beforeend', `
   <section class="dir">
     <div class="meta"><h2>${d.name}</h2><p>${d.idea}</p><a href="${base}board.html">Open full board</a> · <a href="${base}README.md">README</a></div>
     <div>
       <div class="row">
-        <div><div class="tile light"><img src="${base}lockup-horizontal.svg" alt=""></div><div class="cap">Horizontal</div></div>
-        <div><div class="tile light"><img src="${base}lockup-stacked.svg" alt=""></div><div class="cap">Stacked</div></div>
-        <div><div class="tile light favs"><img src="${base}favicon.svg" width="16" height="16" alt=""><img src="${base}favicon.svg" width="32" height="32" alt=""><img src="${base}favicon.svg" width="64" height="64" alt=""></div><div class="cap">Favicon 16 · 32 · 64</div></div>
+        <div><div class="tile light"><img src="${f}lockup-horizontal.svg" alt=""></div><div class="cap">Horizontal</div></div>
+        <div><div class="tile light"><img src="${f}lockup-stacked.svg" alt=""></div><div class="cap">Stacked</div></div>
+        <div><div class="tile light favs"><img src="${f}favicon.svg" width="16" height="16" alt=""><img src="${f}favicon.svg" width="32" height="32" alt=""><img src="${f}favicon.svg" width="64" height="64" alt=""></div><div class="cap">Favicon 16 · 32 · 64</div></div>
       </div>
       <div class="row" style="margin-top:16px">
-        <div><div class="tile darkt"><img src="${base}lockup-horizontal.svg" alt=""></div><div class="cap">Quick dark inversion</div></div>
+        <div><div class="tile darkt"><img src="${f}lockup-horizontal.svg" alt=""></div><div class="cap">Quick dark inversion</div></div>
       </div>
     </div>
   </section>`);
