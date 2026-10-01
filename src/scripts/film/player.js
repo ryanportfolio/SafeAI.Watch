@@ -162,7 +162,9 @@ async function mount(root) {
 
   function tick(now) {
     raf = 0;
-    const dt = Math.min(0.1, (now - last) / 1000);
+    // the first frame's timestamp can precede the performance.now() that sync() stored; a
+    // negative step would put t below 0, outside every chapter
+    const dt = clamp((now - last) / 1000, 0, 0.1);
     last = now;
     t = qt(t + dt);
     if (t >= D) { t = D; want = false; }

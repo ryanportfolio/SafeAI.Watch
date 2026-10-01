@@ -6,10 +6,33 @@ import beats from '../../film/beats.json';
 const D = beats.duration;
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 const pct = (s: number) => `${((s / D) * 100).toFixed(3)}%`;
+
+// Transcript: every caption, small line and on-screen label from beats.json, in screen order.
+type Line = { text: string; at: number; role: string; quote?: boolean; italic?: string[] };
+const transcript = beats.beats.map((b) => {
+  const lines: Line[] = [{ ...b.statement, role: 'statement' }];
+  if (b.precision) lines.push({ ...b.precision, role: 'precision' });
+  for (const e of b.extra || []) lines.push(e);
+  return lines.sort((x, y) => x.at - y.at); // stable: same-time labels keep their beats.json order
+});
+// italic runs from beats.json, as the film sets them
+const runs = (l: Line) => {
+  const out: { s: string; em: boolean }[] = [];
+  let rest = l.text;
+  for (const run of l.italic || []) {
+    const i = rest.indexOf(run);
+    if (i < 0) continue;
+    out.push({ s: rest.slice(0, i), em: false }, { s: run, em: true });
+    rest = rest.slice(i + run.length);
+  }
+  out.push({ s: rest, em: false });
+  return out.filter((r) => r.s);
+};
+const LABEL = new Set(['region', 'label', 'key', 'buoy']);
 ---
 <figure class="film" data-film>
   <div class="film-stage frame">
-    <canvas class="film-canvas" width="1920" height="1080" role="img" aria-label="Silent film with on-screen captions: Is AI good or bad for us?"></canvas>
+    <canvas class="film-canvas" width="1920" height="1080" role="img" aria-label="Silent film with on-screen captions: Is AI good or bad for us?" aria-describedby="film-transcript-summary" aria-details="film-transcript"></canvas>
   </div>
 
   <div class="film-transport">
@@ -34,6 +57,21 @@ const pct = (s: number) => `${((s / D) * 100).toFixed(3)}%`;
     <p class="film-cap-statement" data-cap-statement></p>
     <p class="film-cap-precision" data-cap-precision></p>
   </div>
+
+  <details class="film-transcript" id="film-transcript">
+    <summary class="film-transcript-summary eyebrow" id="film-transcript-summary">Transcript</summary>
+    <ol class="film-transcript-list">
+      {transcript.map((lines) => (
+        <li>
+          {lines.map((l) => (
+            <p class={`film-tx film-tx-${LABEL.has(l.role) ? 'label' : l.role}`}>
+              {l.quote && '“'}{runs(l).map((r) => (r.em ? <em>{r.s}</em> : r.s))}{l.quote && '”'}
+            </p>
+          ))}
+        </li>
+      ))}
+    </ol>
+  </details>
 </figure>
 
 <script>
@@ -99,6 +137,51 @@ const pct = (s: number) => `${((s / D) * 100).toFixed(3)}%`;
     margin-top: 8px;
     font-size: 13px;
     line-height: 1.45;
+    color: var(--ink-64);
+  }
+
+  /* Full text of the film, every width; closed it is one mono line under the transport */
+  .film-transcript {
+    margin-top: 20px;
+  }
+
+  .film-transcript-summary {
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  .film-transcript-summary:hover {
+    color: var(--ink);
+  }
+
+  .film-transcript-list {
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .film-transcript-list li + li {
+    margin-top: 14px;
+  }
+
+  .film-tx {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .film-tx-heading,
+  .film-tx-precision {
+    color: var(--ink-64);
+  }
+
+  .film-tx-precision {
+    font-size: 13px;
+  }
+
+  .film-tx-label {
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
     color: var(--ink-64);
   }
 
