@@ -34,7 +34,7 @@ const current = (href: string) => (path === href ? 'page' : undefined);
     </div>
 
     <a class="nav-brand glass" href="/" aria-label="SafeAI.watch home" aria-current={current('/')}>
-      <Mark size={16} />
+      <Mark size={20} />
       <span class="nav-brand-name">SafeAI.watch</span>
     </a>
 
@@ -142,14 +142,17 @@ const current = (href: string) => (path === href ? 'page' : undefined);
     flex: none;
   }
 
+  /* The wordmark face from the logo: Newsreader 420. Its serifed capital I keeps
+     "SafeAI" from reading "SafeAl", which Geist's plain I does. */
   .nav-brand-name {
     display: block;
     max-width: 120px;
     overflow: hidden;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: -0.01em;
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 420;
+    line-height: 20px;
+    letter-spacing: -0.006em;
     white-space: nowrap;
     transition:
       max-width 0.6s var(--ease-in-out),

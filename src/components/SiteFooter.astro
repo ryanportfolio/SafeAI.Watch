@@ -62,7 +62,7 @@ const columns = [
         A public record of AI safety and security<br />
         Read the evidence and its limits
       </p>
-      <Mark size={72} class="footer-mark" />
+      <Mark size={88} class="footer-mark" />
     </div>
   </div>
 </footer>
@@ -70,6 +70,20 @@ const columns = [
 <style>
   .site-footer {
     padding: 0 var(--page-gutter) 18px;
+  }
+
+  @media (min-width: 1024px) {
+    .site-footer {
+      /* clear the fixed jump and search controls (SectionJump: 24px inset), so they never cover the footer mark */
+      padding-bottom: 80px;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    .site-footer {
+      /* below 1280px the controls stand upright, about 102px tall */
+      padding-bottom: 140px;
+    }
   }
 
   .footer-grid {
@@ -153,7 +167,7 @@ const columns = [
   }
 
   .footer-tagline {
-    padding-right: 96px;
+    padding-right: 112px; /* the 88px mark plus a 24px gap */
     line-height: 13px;
   }
 
