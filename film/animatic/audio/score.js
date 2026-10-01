@@ -6,8 +6,8 @@
 // Reference cue: Jon Hopkins, "Abandon Window" (Immunity, 2013). Key D major, 60 BPM base.
 // Motif: A4 D5 B4 E5, a question that ends open on the 2nd; it returns resolved (E5 -> D5)
 // on the end card, as the orange marker of the mark lands. The sections and their reasons are in film/BRIEF.md, "## Sound".
-import { mulberry32, easeOut, easeIn, easeInOut, smooth } from '../engine/util.js';
-import { ID, endTimes } from '../engine/world.js';
+import { mulberry32, easeOut, easeIn, easeInOut, smooth } from '../../../src/scripts/film/engine/util.js';
+import { ID, endTimes } from '../../../src/scripts/film/engine/world.js';
 import { makeMix, duck, finish, LOOKAHEAD } from './mix.js';
 import * as V from './synth.js';
 

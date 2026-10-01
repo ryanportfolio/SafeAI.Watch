@@ -1,8 +1,8 @@
 // Animatic shell: loads beats.json and the site's fonts, then drives frame(t) from a transport.
 // Only this file touches the clock; the film itself is engine/film.js.
-import { createFilm } from './engine/film.js';
-import { FONTS } from './engine/captions.js';
-import { qt, clamp } from './engine/util.js';
+import { createFilm } from '../../src/scripts/film/engine/film.js';
+import { FONTS } from '../../src/scripts/film/engine/captions.js';
+import { qt, clamp } from '../../src/scripts/film/engine/util.js';
 import { createSound } from './audio/player.js';
 
 const q = new URLSearchParams(location.search);

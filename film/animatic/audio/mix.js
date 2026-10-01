@@ -12,7 +12,7 @@ export const LOOKAHEAD = 0.006;
 // and a true-peak limiter holds the peaks at -1.2 dBTP. Pure functions of the buffer: the same
 // render always finishes the same way.
 import { tanhCurve } from './synth.js';
-import { mulberry32 } from '../engine/util.js';
+import { mulberry32 } from '../../../src/scripts/film/engine/util.js';
 
 export const TARGET_LUFS = -14;
 export const CEILING_DBTP = -1.2; // 0.2 dB under the -1 dBTP rule for the encoder's margin
