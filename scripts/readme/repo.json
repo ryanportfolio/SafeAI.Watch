@@ -1,0 +1,16 @@
+{
+  "description": "A dated, sourced public record of AI safety and security: research, reported incidents, public warnings and policy. Each entry separates what happened from what remains uncertain.",
+  "homepage": "https://safeai.watch",
+  "topics": [
+    "ai-safety",
+    "ai-security",
+    "ai-risk",
+    "ai-governance",
+    "ai-incidents",
+    "ai-policy",
+    "biosecurity",
+    "astro",
+    "static-site",
+    "timeline"
+  ]
+}

@@ -1,0 +1,31 @@
+# README gate: the README and its art are generated from src/data/events.json by
+# scripts/readme/build.mjs. This fails when they are out of date or a check fails.
+name: README
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  readme:
+    name: README
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 'lts/*'
+      - name: README and art match the record
+        run: node scripts/readme/build.mjs --check
+      - name: About panel file is valid
+        if: github.event_name == 'pull_request'
+        run: node scripts/readme/meta.mjs --lint
+      - name: About panel and README links are live
+        if: github.event_name == 'push'
+        run: node scripts/readme/meta.mjs --check
+        env:
+          GH_TOKEN: ${{ github.token }}

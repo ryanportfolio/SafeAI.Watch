@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img" aria-label="Keeping watch on AI. A burst chart of the SafeAI.watch record: 51 dated, sourced entries from Mar 2023 to Sep 2026, one dot each: 15 warnings, 15 incidents, 11 governance, 10 research. Distance from the centre is the entry's date; dashed rings mark January 1. The record is a selection, so density shows what it covers, not how often things happen.">
+<title>Keeping watch on AI. A burst chart of the SafeAI.watch record: 51 dated, sourced entries from Mar 2023 to Sep 2026, one dot each: 15 warnings, 15 incidents, 11 governance, 10 research. Distance from the centre is the entry's date; dashed rings mark January 1. The record is a selection, so density shows what it covers, not how often things happen.</title>
+<style>text{font-kerning:normal}.serif{font-family:Newsreader,Georgia,'Times New Roman',Times,serif}.sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif}.mono{font-family:ui-monospace,'SF Mono','Cascadia Mono',Menlo,Consolas,'Liberation Mono',monospace;letter-spacing:.08em}
+@keyframes d0{0%,3.8%{opacity:0}5.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d0{animation:d0 16s linear infinite}
+@keyframes d1{0%,4.7%{opacity:0}6.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d1{animation:d1 16s linear infinite}
+@keyframes d2{0%,5.6%{opacity:0}7.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d2{animation:d2 16s linear infinite}
+@keyframes d3{0%,6.6%{opacity:0}8.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d3{animation:d3 16s linear infinite}
+@keyframes d4{0%,7.6%{opacity:0}9.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d4{animation:d4 16s linear infinite}
+@keyframes d5{0%,8.5%{opacity:0}10.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d5{animation:d5 16s linear infinite}
+@keyframes d6{0%,9.5%{opacity:0}11.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d6{animation:d6 16s linear infinite}
+@keyframes d7{0%,10.4%{opacity:0}12.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d7{animation:d7 16s linear infinite}
+@keyframes d8{0%,11.4%{opacity:0}13.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d8{animation:d8 16s linear infinite}
+@keyframes d9{0%,12.3%{opacity:0}14.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d9{animation:d9 16s linear infinite}
+@keyframes d10{0%,13.3%{opacity:0}15.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d10{animation:d10 16s linear infinite}
+@keyframes d11{0%,14.2%{opacity:0}16.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d11{animation:d11 16s linear infinite}
+@keyframes d12{0%,15.2%{opacity:0}17.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d12{animation:d12 16s linear infinite}
+@keyframes d13{0%,16.1%{opacity:0}18.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d13{animation:d13 16s linear infinite}
+@keyframes d14{0%,17%{opacity:0}19.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d14{animation:d14 16s linear infinite}
+@keyframes d15{0%,18%{opacity:0}20.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d15{animation:d15 16s linear infinite}
+@keyframes d16{0%,19%{opacity:0}21.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d16{animation:d16 16s linear infinite}
+@keyframes d17{0%,19.9%{opacity:0}22.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d17{animation:d17 16s linear infinite}
+@keyframes d18{0%,20.8%{opacity:0}23%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d18{animation:d18 16s linear infinite}
+@keyframes d19{0%,21.8%{opacity:0}24%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d19{animation:d19 16s linear infinite}
+@keyframes d20{0%,22.8%{opacity:0}24.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d20{animation:d20 16s linear infinite}
+@keyframes d21{0%,23.7%{opacity:0}25.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d21{animation:d21 16s linear infinite}
+@keyframes d22{0%,24.7%{opacity:0}26.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d22{animation:d22 16s linear infinite}
+@keyframes d23{0%,25.6%{opacity:0}27.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d23{animation:d23 16s linear infinite}
+@keyframes d24{0%,26.6%{opacity:0}28.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d24{animation:d24 16s linear infinite}
+@keyframes d25{0%,27.5%{opacity:0}29.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d25{animation:d25 16s linear infinite}
+@keyframes d26{0%,28.4%{opacity:0}30.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d26{animation:d26 16s linear infinite}
+@keyframes d27{0%,29.4%{opacity:0}31.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d27{animation:d27 16s linear infinite}
+@keyframes d28{0%,30.3%{opacity:0}32.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d28{animation:d28 16s linear infinite}
+@keyframes d29{0%,31.3%{opacity:0}33.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d29{animation:d29 16s linear infinite}
+@keyframes d30{0%,32.2%{opacity:0}34.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d30{animation:d30 16s linear infinite}
+@keyframes d31{0%,33.2%{opacity:0}35.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d31{animation:d31 16s linear infinite}
+@keyframes d32{0%,34.2%{opacity:0}36.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d32{animation:d32 16s linear infinite}
+@keyframes d33{0%,35.1%{opacity:0}37.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d33{animation:d33 16s linear infinite}
+@keyframes d34{0%,36%{opacity:0}38.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d34{animation:d34 16s linear infinite}
+@keyframes d35{0%,37%{opacity:0}39.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d35{animation:d35 16s linear infinite}
+@keyframes d36{0%,37.9%{opacity:0}40.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d36{animation:d36 16s linear infinite}
+@keyframes d37{0%,38.9%{opacity:0}41.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d37{animation:d37 16s linear infinite}
+@keyframes d38{0%,39.8%{opacity:0}42%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d38{animation:d38 16s linear infinite}
+@keyframes d39{0%,40.8%{opacity:0}43%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d39{animation:d39 16s linear infinite}
+@keyframes d40{0%,41.8%{opacity:0}43.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d40{animation:d40 16s linear infinite}
+@keyframes d41{0%,42.7%{opacity:0}44.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d41{animation:d41 16s linear infinite}
+@keyframes d42{0%,43.6%{opacity:0}45.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d42{animation:d42 16s linear infinite}
+@keyframes d43{0%,44.6%{opacity:0}46.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d43{animation:d43 16s linear infinite}
+@keyframes d44{0%,45.6%{opacity:0}47.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d44{animation:d44 16s linear infinite}
+@keyframes d45{0%,46.5%{opacity:0}48.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d45{animation:d45 16s linear infinite}
+@keyframes d46{0%,47.4%{opacity:0}49.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d46{animation:d46 16s linear infinite}
+@keyframes d47{0%,48.4%{opacity:0}50.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d47{animation:d47 16s linear infinite}
+@keyframes d48{0%,49.3%{opacity:0}51.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d48{animation:d48 16s linear infinite}
+@keyframes d49{0%,50.3%{opacity:0}52.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d49{animation:d49 16s linear infinite}
+@keyframes d50{0%,51.2%{opacity:0}53.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d50{animation:d50 16s linear infinite}
+@keyframes call{0%,51.2%{opacity:0}53.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.call{animation:call 16s linear infinite}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<rect x="0" y="0" width="880" height="460" rx="0" fill="#d7d7d0"/>
+<rect x="6" y="6" width="868" height="448" fill="none" stroke="#9d9b94" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M6 18V6H18" fill="none" stroke="#1a1614" stroke-width="1.4"/><path d="M874 18V6H862" fill="none" stroke="#1a1614" stroke-width="1.4"/><path d="M6 442V454H18" fill="none" stroke="#1a1614" stroke-width="1.4"/><path d="M874 442V454H862" fill="none" stroke="#1a1614" stroke-width="1.4"/>
+<g transform="translate(44 45) scale(.6875)"><path d="M4.5 1H27.5A3.5 3.5 0 0 1 31 4.5V27.5A3.5 3.5 0 0 1 27.5 31H4.5A3.5 3.5 0 0 1 1 27.5V4.5A3.5 3.5 0 0 1 4.5 1ZM15.88 2.58C15.51 2.59 15.15 2.62 14.78 2.67C14.42 2.72 14.06 2.79 13.7 2.88C13.35 2.97 12.99 3.08 12.65 3.21C12.31 3.34 11.97 3.5 11.65 3.67C11.32 3.84 11.01 4.03 10.71 4.24C10.41 4.45 10.12 4.68 9.85 4.93C9.58 5.17 9.32 5.44 9.09 5.72C8.85 6 8.64 6.3 8.45 6.62C8.26 6.93 8.09 7.26 7.95 7.59C7.81 7.93 7.69 8.28 7.61 8.64C7.52 8.99 7.46 9.36 7.43 9.72C7.4 10.09 7.4 10.46 7.43 10.82C7.46 11.19 7.52 11.55 7.6 11.91C7.68 12.26 7.8 12.62 7.93 12.95C8.07 13.29 8.24 13.62 8.43 13.94C8.61 14.25 8.83 14.55 9.06 14.84C9.29 15.12 9.54 15.39 9.81 15.64C10.08 15.88 10.37 16.11 10.68 16.31C10.98 16.51 11.31 16.68 11.64 16.84C11.97 17 12.32 17.13 12.66 17.26C13 17.4 13.35 17.52 13.7 17.64C14.04 17.77 14.39 17.89 14.74 18.01C15.09 18.13 15.43 18.26 15.78 18.38C16.13 18.5 16.48 18.62 16.82 18.75C17.17 18.87 17.52 18.99 17.86 19.14C18.19 19.28 18.54 19.42 18.83 19.63C19.12 19.84 19.4 20.09 19.6 20.38C19.8 20.66 19.96 21.01 20.03 21.35C20.1 21.69 20.1 22.07 20.02 22.41C19.94 22.75 19.77 23.09 19.57 23.38C19.37 23.67 19.09 23.92 18.81 24.14C18.52 24.36 18.19 24.53 17.85 24.67C17.52 24.81 17.16 24.91 16.8 24.97C16.45 25.04 16.07 25.06 15.71 25.06C15.35 25.05 14.98 25 14.62 24.92C14.27 24.84 13.92 24.72 13.59 24.56C13.26 24.41 12.95 24.2 12.67 23.98C12.38 23.76 12.15 23.47 11.88 23.22C11.61 22.97 11.36 22.68 11.06 22.5C10.76 22.32 10.41 22.18 10.07 22.14C9.74 22.1 9.35 22.15 9.04 22.27C8.72 22.4 8.41 22.63 8.2 22.89C7.99 23.16 7.84 23.51 7.79 23.85C7.73 24.18 7.78 24.56 7.88 24.9C7.97 25.24 8.17 25.57 8.36 25.87C8.55 26.18 8.79 26.47 9.03 26.75C9.26 27.03 9.52 27.29 9.79 27.54C10.06 27.79 10.35 28.02 10.65 28.23C10.95 28.44 11.26 28.64 11.59 28.81C11.91 28.98 12.25 29.12 12.59 29.25C12.94 29.38 13.29 29.48 13.65 29.56C14.01 29.65 14.37 29.71 14.73 29.75C15.1 29.79 15.47 29.81 15.83 29.81C16.2 29.82 16.57 29.8 16.93 29.76C17.3 29.72 17.66 29.66 18.02 29.59C18.38 29.51 18.74 29.41 19.08 29.29C19.43 29.18 19.78 29.04 20.11 28.89C20.44 28.73 20.77 28.56 21.08 28.36C21.39 28.17 21.69 27.96 21.98 27.73C22.26 27.5 22.53 27.25 22.79 26.98C23.04 26.72 23.28 26.44 23.49 26.14C23.7 25.84 23.9 25.53 24.07 25.2C24.24 24.88 24.38 24.54 24.5 24.19C24.62 23.85 24.71 23.49 24.77 23.13C24.84 22.77 24.87 22.4 24.88 22.03C24.89 21.67 24.87 21.3 24.82 20.94C24.78 20.57 24.7 20.21 24.6 19.86C24.5 19.51 24.37 19.16 24.22 18.83C24.07 18.5 23.89 18.17 23.69 17.86C23.49 17.56 23.27 17.26 23.03 16.99C22.79 16.71 22.53 16.45 22.25 16.21C21.97 15.97 21.68 15.75 21.37 15.56C21.06 15.36 20.72 15.2 20.39 15.05C20.06 14.89 19.71 14.77 19.37 14.64C19.02 14.5 18.68 14.38 18.33 14.26C17.98 14.13 17.64 14.01 17.29 13.89C16.94 13.77 16.59 13.65 16.25 13.52C15.9 13.4 15.55 13.28 15.2 13.16C14.86 13.03 14.51 12.91 14.18 12.76C13.85 12.6 13.5 12.45 13.23 12.23C12.95 12 12.69 11.73 12.52 11.43C12.36 11.12 12.24 10.75 12.23 10.41C12.21 10.07 12.29 9.7 12.42 9.38C12.56 9.06 12.79 8.75 13.04 8.5C13.28 8.25 13.6 8.04 13.92 7.87C14.23 7.7 14.59 7.57 14.94 7.48C15.29 7.4 15.66 7.35 16.02 7.34C16.38 7.33 16.75 7.36 17.11 7.43C17.47 7.5 17.82 7.6 18.15 7.75C18.48 7.9 18.79 8.1 19.08 8.32C19.37 8.54 19.61 8.83 19.88 9.07C20.15 9.31 20.4 9.6 20.7 9.78C21 9.95 21.36 10.09 21.7 10.13C22.03 10.16 22.42 10.11 22.73 9.98C23.04 9.85 23.36 9.62 23.57 9.35C23.77 9.09 23.93 8.73 23.98 8.39C24.03 8.06 23.99 7.68 23.89 7.34C23.8 7 23.61 6.68 23.41 6.37C23.22 6.06 22.98 5.77 22.74 5.5C22.5 5.22 22.24 4.96 21.97 4.72C21.69 4.48 21.4 4.25 21.1 4.04C20.8 3.84 20.48 3.65 20.15 3.49C19.82 3.32 19.48 3.18 19.13 3.06C18.79 2.94 18.43 2.85 18.07 2.77C17.71 2.7 17.35 2.64 16.98 2.61C16.62 2.58 16.25 2.57 15.88 2.58Z" fill="#1a1614" fill-rule="evenodd"/></g>
+<text class="serif" x="74" y="62" font-size="19" fill="#1a1614">SafeAI.watch</text>
+<text class="serif" x="42" y="146" font-size="47" fill="#1a1614" letter-spacing="-.5">Keeping watch on AI</text>
+<text class="serif" x="44" y="190" font-size="17.5" fill="#605b55">A dated record of AI safety and security</text>
+<text class="serif" x="44" y="215" font-size="17.5" fill="#605b55">research, incidents, warnings, and policy. Each</text>
+<text class="serif" x="44" y="240" font-size="17.5" fill="#605b55">entry links its original source and separates</text>
+<text class="serif" x="44" y="265" font-size="17.5" fill="#605b55">what happened from what remains uncertain.</text>
+<text class="mono" x="44" y="310" font-size="10" fill="#605b55">51 ENTRIES · 30 PUBLISHERS · MAR 2023 TO SEP 2026</text>
+<text class="mono" x="44" y="326" font-size="10" fill="#605b55">ONE DOT PER ENTRY · FARTHER OUT = NEWER</text>
+<text class="mono" x="44" y="342" font-size="10" fill="#605b55">A SELECTION · DENSITY SHOWS COVERAGE, NOT FREQUENCY</text>
+<circle cx="48" cy="396.5" r="4.2" fill="#677331"/><text class="mono" x="58" y="400" font-size="10.5" fill="#1a1614">RESEARCH <tspan fill="#605b55">10</tspan></text>
+<circle cx="218" cy="396.5" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/><text class="mono" x="228" y="400" font-size="10.5" fill="#1a1614">WARNINGS <tspan fill="#605b55">15</tspan></text>
+<circle cx="48" cy="422.5" r="4.2" fill="#1a1614"/><text class="mono" x="58" y="426" font-size="10.5" fill="#1a1614">GOVERNANCE <tspan fill="#605b55">11</tspan></text>
+<circle cx="218" cy="422.5" r="4.2" fill="#bd4a28"/><text class="mono" x="228" y="426" font-size="10.5" fill="#1a1614">INCIDENTS <tspan fill="#605b55">15</tspan></text>
+<circle cx="652" cy="222" r="46" fill="none" stroke="#9d9b94" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>
+<circle cx="652" cy="222" r="87.1" fill="none" stroke="#9d9b94" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>
+<circle cx="652" cy="222" r="128.1" fill="none" stroke="#9d9b94" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>
+<line class="d0" x1="652" y1="222" x2="661.9" y2="212.1" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d1" x1="652" y1="222" x2="658.5" y2="201.3" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d3" x1="652" y1="222" x2="706.2" y2="193.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d16" x1="652" y1="222" x2="720" y2="123" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d23" x1="652" y1="222" x2="780.5" y2="197" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d25" x1="652" y1="222" x2="763.9" y2="133" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d26" x1="652" y1="222" x2="711.1" y2="89.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d30" x1="652" y1="222" x2="792.8" y2="166.5" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d31" x1="652" y1="222" x2="751.4" y2="107.7" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d39" x1="652" y1="222" x2="688.4" y2="70.3" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d40" x1="652" y1="222" x2="784.4" y2="139.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d41" x1="652" y1="222" x2="731.2" y2="87.4" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d46" x1="652" y1="222" x2="803.3" y2="181.4" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d48" x1="652" y1="222" x2="768" y2="115.7" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d50" x1="652" y1="222" x2="706" y2="73.5" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d5" x1="652" y1="222" x2="723" y2="293" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d10" x1="652" y1="222" x2="755.7" y2="254.7" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d13" x1="652" y1="222" x2="705.4" y2="322.4" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d17" x1="652" y1="222" x2="752.4" y2="291" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d18" x1="652" y1="222" x2="675.4" y2="342.4" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d21" x1="652" y1="222" x2="731.7" y2="322.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d28" x1="652" y1="222" x2="789.2" y2="283" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d32" x1="652" y1="222" x2="707.6" y2="363.1" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d33" x1="652" y1="222" x2="766.9" y2="321.9" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d35" x1="652" y1="222" x2="802.5" y2="258.1" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d36" x1="652" y1="222" x2="734" y2="353.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d38" x1="652" y1="222" x2="786.2" y2="301" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d44" x1="652" y1="222" x2="692.5" y2="373" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d45" x1="652" y1="222" x2="757.7" y2="337.3" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d49" x1="652" y1="222" x2="799.9" y2="275.8" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d2" x1="652" y1="222" x2="624.3" y2="249.7" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d6" x1="652" y1="222" x2="621" y2="320.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d9" x1="652" y1="222" x2="557.1" y2="272.5" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d11" x1="652" y1="222" x2="590.3" y2="311.8" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d12" x1="652" y1="222" x2="542.6" y2="243.3" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d20" x1="652" y1="222" x2="553.6" y2="300.3" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d22" x1="652" y1="222" x2="599.4" y2="340.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d24" x1="652" y1="222" x2="520.3" y2="273.9" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d29" x1="652" y1="222" x2="553.5" y2="335.4" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d34" x1="652" y1="222" x2="616.1" y2="371.6" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d43" x1="652" y1="222" x2="519.6" y2="304.8" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d4" x1="652" y1="222" x2="584.7" y2="154.7" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d7" x1="652" y1="222" x2="551.6" y2="190.3" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d8" x1="652" y1="222" x2="602.1" y2="128.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d14" x1="652" y1="222" x2="556.6" y2="156.4" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d15" x1="652" y1="222" x2="629.8" y2="107.7" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d19" x1="652" y1="222" x2="575.1" y2="125.3" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d27" x1="652" y1="222" x2="519.1" y2="162.9" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d37" x1="652" y1="222" x2="594.9" y2="77.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d42" x1="652" y1="222" x2="534.1" y2="119.5" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d47" x1="652" y1="222" x2="499.4" y2="185.4" stroke="#b4b0a8" stroke-width=".8"/>
+<circle class="d0" data-cat="Warnings" cx="661.9" cy="212.1" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d1" data-cat="Warnings" cx="658.5" cy="201.3" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d3" data-cat="Warnings" cx="706.2" cy="193.2" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d16" data-cat="Warnings" cx="720" cy="123" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d23" data-cat="Warnings" cx="780.5" cy="197" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d25" data-cat="Warnings" cx="763.9" cy="133" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d26" data-cat="Warnings" cx="711.1" cy="89.2" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d30" data-cat="Warnings" cx="792.8" cy="166.5" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d31" data-cat="Warnings" cx="751.4" cy="107.7" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d39" data-cat="Warnings" cx="688.4" cy="70.3" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d40" data-cat="Warnings" cx="784.4" cy="139.2" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d41" data-cat="Warnings" cx="731.2" cy="87.4" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d46" data-cat="Warnings" cx="803.3" cy="181.4" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d48" data-cat="Warnings" cx="768" cy="115.7" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d50" data-cat="Warnings" cx="706" cy="73.5" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d5" data-cat="Incidents" cx="723" cy="293" r="4.2" fill="#bd4a28"/>
+<circle class="d10" data-cat="Incidents" cx="755.7" cy="254.7" r="4.2" fill="#bd4a28"/>
+<circle class="d13" data-cat="Incidents" cx="705.4" cy="322.4" r="4.2" fill="#bd4a28"/>
+<circle class="d17" data-cat="Incidents" cx="752.4" cy="291" r="4.2" fill="#bd4a28"/>
+<circle class="d18" data-cat="Incidents" cx="675.4" cy="342.4" r="4.2" fill="#bd4a28"/>
+<circle class="d21" data-cat="Incidents" cx="731.7" cy="322.2" r="4.2" fill="#bd4a28"/>
+<circle class="d28" data-cat="Incidents" cx="789.2" cy="283" r="4.2" fill="#bd4a28"/>
+<circle class="d32" data-cat="Incidents" cx="707.6" cy="363.1" r="4.2" fill="#bd4a28"/>
+<circle class="d33" data-cat="Incidents" cx="766.9" cy="321.9" r="4.2" fill="#bd4a28"/>
+<circle class="d35" data-cat="Incidents" cx="802.5" cy="258.1" r="4.2" fill="#bd4a28"/>
+<circle class="d36" data-cat="Incidents" cx="734" cy="353.2" r="4.2" fill="#bd4a28"/>
+<circle class="d38" data-cat="Incidents" cx="786.2" cy="301" r="4.2" fill="#bd4a28"/>
+<circle class="d44" data-cat="Incidents" cx="692.5" cy="373" r="4.2" fill="#bd4a28"/>
+<circle class="d45" data-cat="Incidents" cx="757.7" cy="337.3" r="4.2" fill="#bd4a28"/>
+<circle class="d49" data-cat="Incidents" cx="799.9" cy="275.8" r="4.2" fill="#bd4a28"/>
+<circle class="d2" data-cat="Governance" cx="624.3" cy="249.7" r="4.2" fill="#1a1614"/>
+<circle class="d6" data-cat="Governance" cx="621" cy="320.2" r="4.2" fill="#1a1614"/>
+<circle class="d9" data-cat="Governance" cx="557.1" cy="272.5" r="4.2" fill="#1a1614"/>
+<circle class="d11" data-cat="Governance" cx="590.3" cy="311.8" r="4.2" fill="#1a1614"/>
+<circle class="d12" data-cat="Governance" cx="542.6" cy="243.3" r="4.2" fill="#1a1614"/>
+<circle class="d20" data-cat="Governance" cx="553.6" cy="300.3" r="4.2" fill="#1a1614"/>
+<circle class="d22" data-cat="Governance" cx="599.4" cy="340.2" r="4.2" fill="#1a1614"/>
+<circle class="d24" data-cat="Governance" cx="520.3" cy="273.9" r="4.2" fill="#1a1614"/>
+<circle class="d29" data-cat="Governance" cx="553.5" cy="335.4" r="4.2" fill="#1a1614"/>
+<circle class="d34" data-cat="Governance" cx="616.1" cy="371.6" r="4.2" fill="#1a1614"/>
+<circle class="d43" data-cat="Governance" cx="519.6" cy="304.8" r="4.2" fill="#1a1614"/>
+<circle class="d4" data-cat="Research" cx="584.7" cy="154.7" r="4.2" fill="#677331"/>
+<circle class="d7" data-cat="Research" cx="551.6" cy="190.3" r="4.2" fill="#677331"/>
+<circle class="d8" data-cat="Research" cx="602.1" cy="128.2" r="4.2" fill="#677331"/>
+<circle class="d14" data-cat="Research" cx="556.6" cy="156.4" r="4.2" fill="#677331"/>
+<circle class="d15" data-cat="Research" cx="629.8" cy="107.7" r="4.2" fill="#677331"/>
+<circle class="d19" data-cat="Research" cx="575.1" cy="125.3" r="4.2" fill="#677331"/>
+<circle class="d27" data-cat="Research" cx="519.1" cy="162.9" r="4.2" fill="#677331"/>
+<circle class="d37" data-cat="Research" cx="594.9" cy="77.2" r="4.2" fill="#677331"/>
+<circle class="d42" data-cat="Research" cx="534.1" cy="119.5" r="4.2" fill="#677331"/>
+<circle class="d47" data-cat="Research" cx="499.4" cy="185.4" r="4.2" fill="#677331"/>
+<rect x="623.2" y="170.2" width="57.7" height="11.5" fill="#d7d7d0"/><text class="mono" x="652" y="179.4" font-size="9.5" text-anchor="middle" fill="#605b55">JAN 2024</text>
+<rect x="623.2" y="129.1" width="57.7" height="11.5" fill="#d7d7d0"/><text class="mono" x="652" y="138.3" font-size="9.5" text-anchor="middle" fill="#605b55">JAN 2025</text>
+<rect x="623.2" y="88.1" width="57.7" height="11.5" fill="#d7d7d0"/><text class="mono" x="652" y="97.3" font-size="9.5" text-anchor="middle" fill="#605b55">JAN 2026</text>
+<circle cx="652" cy="222" r="2.4" fill="#1a1614"/>
+<g class="call"><path d="M706 68.5 L706 45" stroke="#1a1614" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+<rect x="582" y="23" width="248" height="22" fill="#d7d7d0" stroke="#9d9b94" stroke-width="1"/>
+<circle cx="593" cy="34" r="3.4" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<text class="mono" x="602" y="37.5" font-size="10" fill="#1a1614">LATEST · SEP 24, 2026 · WARNINGS</text></g>
+</svg>

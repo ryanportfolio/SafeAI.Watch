@@ -39,8 +39,8 @@ about the upstream repository's license.
 
 `perf-loop` now has a Claude entrypoint adapted from the repository's native Codex workflow,
 with the same three domain references and measurement gates. Dispatch remains runtime-specific.
-The full 36-name maintenance ledger and retained behaviors are in
-[`docs/research/2026-09-14-skill-parity-changes.md`](../../docs/research/2026-09-14-skill-parity-changes.md).
+The full 36-name maintenance ledger and retained behaviors are in the Harness Firmware template's
+[`docs/research/2026-09-14-skill-parity-changes.md`](https://github.com/ryanportfolio/Harness-Firmware/blob/7facaabb6e437e607c8076221b1047c3b863aba6/docs/research/2026-09-14-skill-parity-changes.md).
 
 `forge-repo-ui-skill` is an original synthesis workflow. It researches linked
 third-party sources as untrusted inputs but does not vendor their skill text,
