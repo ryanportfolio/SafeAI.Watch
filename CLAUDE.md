@@ -73,9 +73,9 @@ Sessions run on the user's Windows machine: a local dev server you start is reac
 
 ## Environment & deploy target
 
-- Host: Vercel (project not yet linked). No database, no secrets yet.
+- Host: Vercel, Git-connected: pushes to `main` deploy to Production, PRs get a Preview deploy. Live at https://safeai.watch/ (detail: `.claude/reference/deployment.md`). No database, no secrets yet.
 - Stack: Astro (see `.claude/reference/tech-stack.md`). Ask before adding app-runtime dependencies outside it.
-- User action required: Vercel project creation, domain/DNS for safeai.watch, any env vars.
+- User action required: any env vars.
 
 ## Project reference library
 
