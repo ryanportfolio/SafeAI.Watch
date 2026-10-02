@@ -1,107 +1,43 @@
-import fs from "node:fs";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import { absolute, frontmatter, read, readJson } from "./lib.mjs";
+// Every number the README shows, computed from src/data/events.json at build
+// time. Nothing here is typed by hand; a panel that prints a number must read it
+// from this object, and the verifier compares the drawn values against it.
+import { read } from './lib.mjs';
 
-function directories(relativeRoot) {
-  return fs.readdirSync(absolute(relativeRoot), { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => entry.name)
-    .filter((name) => fs.existsSync(absolute(`${relativeRoot}/${name}/SKILL.md`)))
-    .sort();
+export const CATEGORIES = ['Warnings', 'Incidents', 'Governance', 'Research'];
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+export function monthYear(iso) {
+  const [y, m] = iso.split('-');
+  return `${MONTHS[Number(m) - 1]} ${y}`;
 }
 
-function sameMembers(actual, expected, label) {
-  if (actual.length !== expected.length || actual.some((name, index) => name !== expected[index])) {
-    throw new Error(`${label} drift\nactual: ${actual.join(", ")}\nexpected: ${expected.join(", ")}`);
+export function longDate(iso) {
+  const [y, m, d] = iso.split('-');
+  return `${MONTHS[Number(m) - 1]} ${Number(d)}, ${y}`;
+}
+
+export function loadFacts() {
+  const events = JSON.parse(read('src/data/events.json'));
+  if (!Array.isArray(events) || events.length === 0) throw new Error('src/data/events.json has no entries; refusing to draw an empty record.');
+  for (const [i, e] of events.entries()) {
+    if (!CATEGORIES.includes(e.category)) throw new Error(`events.json entry ${i + 1} has unknown category ${e.category}`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(e.date)) throw new Error(`events.json entry ${i + 1} has a bad date ${e.date}`);
   }
-}
-
-function normalizedBytes(text) {
-  return Buffer.byteLength(text.replaceAll("\r\n", "\n"));
-}
-
-export function expectedCodexNames(canonicalNames, modes = {}, overrides = {}) {
-  const enabled = name => modes[name] !== "disabled" && overrides[name] !== "off";
-  const names = new Set(canonicalNames.filter(enabled));
-  for (const [name, mode] of Object.entries(modes)) if (mode === "native" && enabled(name)) names.add(name);
-  return [...names].sort();
-}
-
-export function collectFacts() {
-  const inventory = readJson("scripts/readme/items.json");
-  const groupIds = inventory.groups.map((group) => group.id);
-  sameMembers([...groupIds].sort(), ["core", "discipline", "specialist"], "skill groups");
-
-  const canonicalNames = directories(".claude/skills");
-  const codexNames = directories(".agents/skills");
-  const inventoryNames = inventory.skills.map((skill) => skill.name).sort();
-  sameMembers(inventoryNames, canonicalNames, "README skill inventory");
-  const modes = fs.existsSync(absolute(".agents/skill-modes.json")) ? readJson(".agents/skill-modes.json").skills : {};
-  let overrides = {};
-  try {
-    overrides = readJson(".claude/settings.json").skillOverrides ?? {};
-  } catch (error) {
-    if (error.code !== "ENOENT") throw error;
-  }
-  sameMembers(codexNames, expectedCodexNames(canonicalNames, modes, overrides), "Codex skill inventory");
-
-  const tierCounts = Object.fromEntries(groupIds.map((group) => [group, 0]));
-  const skills = inventory.skills.map((item) => {
-    if (!groupIds.includes(item.group)) throw new Error(`${item.name}: unknown group ${item.group}`);
-    tierCounts[item.group] += 1;
-    const relativePath = `.claude/skills/${item.name}/SKILL.md`;
-    const text = read(relativePath);
-    const metadata = frontmatter(text, relativePath);
-    if (metadata.name && metadata.name !== item.name) throw new Error(`${relativePath}: name ${metadata.name} does not match directory`);
-    return {
-      ...item,
-      description: metadata.description,
-      bytes: normalizedBytes(text),
-    };
-  });
-
-  const requiredCounts = { core: 8, discipline: 12, specialist: 15 };
-  for (const [group, expected] of Object.entries(requiredCounts)) {
-    if (tierCounts[group] !== expected) throw new Error(`${group}: expected ${expected}, found ${tierCounts[group]}`);
-  }
-
-  const referenceFileCount = fs.readdirSync(absolute(".claude/reference"), { withFileTypes: true })
-    .filter((entry) => entry.isFile() && entry.name.endsWith(".md"))
-    .length;
-  const kernelBytes = normalizedBytes(read("CLAUDE.md"));
-  const catalogBytes = skills.reduce(
-    (total, skill) => total + Buffer.byteLength(skill.name) + Buffer.byteLength(skill.description),
-    0,
-  );
-  const catalogChars = skills.reduce((total, skill) => total + skill.name.length + skill.description.length, 0);
-  const onDemandBytes = skills.reduce((total, skill) => total + skill.bytes, 0);
-  const residentBytes = kernelBytes + catalogBytes;
-
-  const runtimeNames = ["Claude Code", "Codex"];
-
+  // Stable date order; ties keep file order.
+  const ordered = events.map((e, i) => ({ ...e, i })).sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : a.i - b.i));
+  const byCategory = Object.fromEntries(CATEGORIES.map((c) => [c, ordered.filter((e) => e.category === c).length]));
+  // Publisher is the part of `source` before " · " (e.g. "RAND · Research report").
+  const publishers = new Set(events.map((e) => e.source.split(' · ')[0].trim())).size;
+  const years = {};
+  for (const e of ordered) years[e.date.slice(0, 4)] = (years[e.date.slice(0, 4)] || 0) + 1;
   return {
-    skillCount: canonicalNames.length,
-    codexSkillCount: codexNames.length,
-    codexNativeCount: codexNames.filter(name => modes[name] === "native").length,
-    codexAdapterCount: codexNames.filter(name => modes[name] !== "native").length,
-    runtimeNames,
-    runtimeCount: runtimeNames.length,
-    referenceFileCount,
-    tierCounts,
-    canonicalNames,
-    inventoryNames,
-    groups: inventory.groups,
-    skills,
-    kernelBytes,
-    catalogBytes,
-    catalogChars,
-    onDemandBytes,
-    residentBytes,
-    lazyRatio: onDemandBytes / residentBytes,
+    events: ordered,
+    entries: events.length,
+    byCategory,
+    publishers,
+    years,
+    first: ordered[0].date,
+    last: ordered.at(-1).date,
+    latest: ordered.at(-1),
   };
-}
-
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  process.stdout.write(`${JSON.stringify(collectFacts(), null, 2)}\n`);
 }

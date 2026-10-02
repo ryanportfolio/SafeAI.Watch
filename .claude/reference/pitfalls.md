@@ -114,23 +114,15 @@ intermittently resets to the parent workspace directory. Symptoms observed:
 package from the wrong directory, and `git add` failing with "fatal: not a git
 repository". Start compound commands with `cd <repo> &&` or use `git -C`.
 
-## README panels embed repo metrics (2026-09-16, amended 2026-09-19)
+## README art is generated from the record (2026-09-16, rewritten 2026-10-02)
 
-`assets/readme/skills-*.svg` print the total on-demand skill size and
-`assets/readme/boot-*.svg` print the always-loaded context weight, so an edit to any
-`SKILL.md`, to `CLAUDE.md`, to `skillOverrides` in `.claude/settings.json`, or to the
-`.claude/reference/` file set makes them stale and
-`scripts/readme/verify.mjs` fails CI on main. Run `node scripts/readme/build.mjs` before
-opening a PR that touches those paths, and commit only the panels whose content changed
-(autocrlf marks the rest modified). `gh pr merge` does not block on a red check here (no
-required checks), so read `gh pr checks <n>` before merging; #132 landed red this way.
-Same root cause: `node .claude/scripts/check-skill-capabilities.mjs` reports "Capability
-catalog stale" on a CRLF checkout while CI (LF) passes; `--write` then produces a
-line-ending-only diff. Trust CI for that check, not the local run.
-Adding or removing a skill also breaks the pinned counts: `requiredCounts` in
-`scripts/readme/facts.mjs` and three `skillCount`/`tierCounts` assertions in
-`scripts/readme/readme.test.mjs` (the fixture there copies every skill into both runtimes,
-so its Codex count equals the Claude count). `build.mjs` throws until they match.
+`README.md` and `assets/readme/masthead-*.svg` are built from `src/data/events.json` by
+`scripts/readme/build.mjs`: the masthead draws one dot per entry and prints the counts, the
+date range and the newest entry. Any change to `events.json` makes them stale, and the
+`README` workflow (`build.mjs --check`) fails until `node scripts/readme/build.mjs` is run
+and its output committed. The check compares ignoring line endings, so a CRLF checkout
+does not count as stale. `gh pr merge` does not block on a red check here (no required
+checks), so read `gh pr checks <n>` before merging; #132 landed red this way.
 
 ## Bash tool collapses doubled backslashes in heredocs (2026-09-19)
 

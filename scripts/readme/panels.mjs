@@ -1,242 +1,201 @@
-import { collectFacts } from "./facts.mjs";
-import { MONO, SANS, THEMES, esc, writeText } from "./lib.mjs";
-
-const facts = collectFacts();
-/* Project README contract: a repository circuit, with two independently owned
- * runtime lanes connected to committed memory. Setup precedes explanatory art.
- * Counts come from the filesystem and ownership registry. No performance claims.
- * Four variants must read at 880px and a real 390px viewport, in both themes.
- * SVGs require no scripts, hover, fonts, or external requests; motion loops and
- * reduced motion preserves every label. Plain Markdown carries usage and links.
+/*
+ * README panels, generated from src/data/events.json.
+ *
+ * CONSTRAINT CONTRACT (read before editing the art)
+ * - Conceit: the homepage burst, rebuilt from the record. One dot per entry, no more
+ *   and no fewer. Category picks the quadrant and the colour; the entry's date picks
+ *   its distance from the centre, on a linear scale from the first entry to the latest.
+ *   The burst thickening at its edge is the record's real pace, not a style.
+ * - Dashed rings mark January 1 of each year after the first entry. Nothing else in
+ *   the burst carries meaning, and nothing decorative may look like data: dots are
+ *   one size, spokes one weight.
+ * - Every number printed (entries, per-category counts, publishers, date range, the
+ *   latest entry) comes from facts.mjs; verify.mjs recounts the drawn dots.
+ * - Survives 390px: the narrow variant is its own stacked composition.
+ * - Survives both themes: each panel paints the site's own card (paper in light,
+ *   the dark card in dark), so colours never depend on GitHub's background.
+ * - Survives no scripts, no hover, no web fonts: system font stacks only, the brand
+ *   mark is a path, and the draw-in loops (16 s) because nothing can trigger it.
+ *   Authored state is the finished burst; prefers-reduced-motion turns animation off
+ *   and leaves the finished burst.
+ * - Site copy is reused verbatim where it exists (headline, lede); no claims beyond it.
  */
-const fmtKiB = (bytes) => `${(bytes / 1024).toFixed(1)} KiB`;
+import { CATEGORIES, longDate, monthYear } from './facts.mjs';
+import { ASSETS, MONO, SANS, SERIF, THEMES, esc, r1, svg, wrap, write } from './lib.mjs';
 
-function svg({ width, height, title, label, themeName, body, extraCss = "" }) {
-  const theme = THEMES[themeName];
-  const narrowCss = width === 390
-    ? ".eyebrow{font-size:14px}.subhead{font-size:20px}.label{font-size:15px}.copy{font-size:15px}.small{font-size:14px;letter-spacing:.15px}"
-    : "";
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-label="${esc(label)}">
-<title>${esc(title)}</title>
-<style>
-text{font-family:${SANS};fill:${theme.ink}}.mono{font-family:${MONO}}.ink{fill:${theme.ink}}.mute{fill:${theme.mute}}.accent{fill:${theme.accent}}.soft{fill:${theme.soft}}.panel{fill:none;stroke:${theme.rule};stroke-width:1}.wire{fill:none;stroke:${theme.rule};stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.wire.active{stroke:${theme.accent}}.dash{stroke-dasharray:7 7}.tag{fill:${theme.soft};stroke:${theme.accent};stroke-width:1}.cell{fill:none;stroke:${theme.rule};stroke-width:1}.grid{stroke:${theme.rule};stroke-width:1;opacity:.28}.signal{fill:${theme.accent};stroke:${theme.accent}}.evidence{fill:${theme.soft};stroke:${theme.ink};stroke-width:1}.eyebrow{font:600 12px ${MONO};letter-spacing:1.8px}.headline{font:700 46px ${SANS};letter-spacing:-1.5px}.subhead{font:500 18px ${SANS}}.label{font:700 13px ${MONO};letter-spacing:.7px}.copy{font:400 14px ${SANS}}.small{font:500 12px ${MONO};letter-spacing:.25px}.count{font:700 34px ${MONO}}
-@keyframes scanY{0%{transform:translateY(0)}92%,100%{transform:translateY(var(--scan-distance))}}
-${narrowCss}
-${extraCss}
-@media (prefers-reduced-motion:reduce){*{animation:none!important}.feedback-pulse,.scan-bar,.boot-cursor,.runtime-packet{display:none!important}.boot-ready{opacity:1!important}}
-</style>
-${body}
-</svg>
-`;
-}
+// The S mark from src/assets/brand/mark-small.svg (32 x 32), drawn as a path.
+import fs from 'node:fs';
+import path from 'node:path';
+import { ROOT } from './lib.mjs';
+const MARK_D = /\sd="([^"]+)"/.exec(fs.readFileSync(path.join(ROOT, 'src/assets/brand/mark-small.svg'), 'utf8'))[1];
 
-function grid(width, height, step = 44) {
-  const lines = [];
-  for (let x = step; x < width; x += step) lines.push(`<path class="grid" d="M${x} 0V${height}"/>`);
-  for (let y = step; y < height; y += step) lines.push(`<path class="grid" d="M0 ${y}H${width}"/>`);
-  return `<g aria-hidden="true">${lines.join("")}</g>`;
-}
+export const HEADLINE = 'Keeping watch on AI';
+export const LEDE = 'A dated record of AI safety and security research, incidents, warnings, and policy. Each entry links its original source and separates what happened from what remains uncertain.';
 
-function arrowDefs(theme) {
-  return `<defs><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="${theme.rule}"/></marker></defs>`;
-}
+/** How to read the burst, printed under the stats. */
+export const KEY = 'ONE DOT PER ENTRY · FARTHER OUT = NEWER';
 
-function feedback(themeName, narrow) {
-  const width = narrow ? 390 : 880;
-  const height = narrow ? 1030 : 560;
-  const theme = THEMES[themeName];
-  const stages = [
-    ["RECALL", "load repo facts"],
-    ["WORK", "use routed playbook"],
-    ["VERIFY", "capture evidence"],
-    ["REFINE", "turn friction into a fix"],
-    ["REVIEWED CHANGE", "commit useful lesson"],
-    ["NEXT TASK", "recall stronger repo"],
-  ];
-  const positions = narrow
-    ? [
-        { x: 24, y: 142 }, { x: 198, y: 142 }, { x: 198, y: 268 },
-        { x: 24, y: 268 }, { x: 24, y: 394 }, { x: 198, y: 394 },
-      ]
-    : [
-        { x: 40, y: 158 }, { x: 300, y: 158 }, { x: 560, y: 158 },
-        { x: 560, y: 326 }, { x: 300, y: 326 }, { x: 40, y: 326 },
-      ];
-  const nodeWidth = narrow ? 168 : 220;
-  const nodeHeight = narrow ? 88 : 96;
-  const center = ({ x, y }) => ({ x: x + nodeWidth / 2, y: y + nodeHeight / 2 });
-  const centers = positions.map(center);
-  const segments = centers.map((point, index) => {
-    const next = centers[(index + 1) % centers.length];
-    let d;
-    if(index === centers.length - 1) {
-      d = narrow ? 'M366 438H376V122H108V140' : 'M40 374H20V206H38';
-    } else if (point.y === next.y) {
-      const direction = Math.sign(next.x-point.x);
-      d = `M${point.x+direction*nodeWidth/2} ${point.y}H${next.x-direction*(nodeWidth/2+2)}`;
-    } else {
-      const direction = Math.sign(next.y-point.y);
-      d = `M${point.x} ${point.y+direction*nodeHeight/2}V${next.y-direction*(nodeHeight/2+2)}`;
-    }
-    return `<path class="wire" marker-end="url(#arrow)" d="${d}"/>`;
-  }).join("");
-  const nodes = stages.map(([name, description], index) => {
-    const { x, y } = positions[index];
-    return `<g transform="translate(${x} ${y})"><rect class="cell" width="${nodeWidth}" height="${nodeHeight}"/><text class="small mute" x="${nodeWidth - 12}" y="22" text-anchor="end">0${index + 1}</text><text class="label" x="14" y="43">${name}</text><text class="copy mute" x="14" y="${narrow ? 68 : 72}">${description}</text></g>`;
-  }).join("");
-  const evidence = narrow
-    ? `<g transform="translate(238 236)"><rect class="evidence" width="112" height="28"/><path class="wire active" d="M10 14l7 7 13-15"/><text class="small" x="38" y="19">EVIDENCE</text></g>`
-    : `<g transform="translate(616 270)"><rect class="evidence" width="132" height="30"/><path class="wire active" d="M10 15l7 7 13-15"/><text class="small" x="40" y="20">EVIDENCE</text></g>`;
-  const branch = narrow
-    ? `<path class="wire dash" marker-end="url(#arrow)" d="M108 482V574"/><g transform="translate(24 582)"><rect class="cell" width="168" height="88"/><text class="small mute" x="156" y="22" text-anchor="end">OPTIONAL</text><text class="label" x="14" y="43">HUMAN REVIEW</text><text class="copy mute" x="14" y="68">keep local or sync</text></g><path class="wire dash" marker-end="url(#arrow)" d="M108 670V730"/><g transform="translate(24 738)"><rect class="cell" width="168" height="88"/><text class="label" x="14" y="43">SYNC</text><text class="copy mute" x="14" y="68">generic change only</text></g><path class="wire dash" marker-end="url(#arrow)" d="M192 782H212"/><g transform="translate(220 738)"><rect class="cell" width="146" height="88"/><text class="label" x="14" y="43">FUTURE REPOS</text><text class="copy mute" x="14" y="68">start stronger</text></g><text class="small mute" x="24" y="872">SOLID: LOCAL LOOP</text><text class="small mute" x="24" y="902">DOTTED: HUMAN-GATED SYNC</text><text class="small mute" x="24" y="956">KEEP LOCAL remains the default.</text>`
-    : `<path class="wire dash" marker-end="url(#arrow)" d="M410 422V484H518"/><g transform="translate(526 446)"><rect class="cell" width="142" height="70"/><text class="small mute" x="12" y="21">OPTIONAL GATE</text><text class="label" x="12" y="45">HUMAN REVIEW</text><text class="small mute" x="12" y="62">KEEP LOCAL / SYNC</text></g><path class="wire dash" marker-end="url(#arrow)" d="M668 481H698"/><g transform="translate(706 446)"><rect class="cell" width="134" height="70"/><text class="label" x="12" y="31">FUTURE REPOS</text><text class="small mute" x="12" y="53">generic changes only</text></g><text class="small mute" x="40" y="530">SOLID: LOCAL LOOP · DOTTED: HUMAN-GATED SYNC</text>`;
-  const keyframes = centers.map((point, index) => {
-    const start = ((index / centers.length) * 100).toFixed(2);
-    const end = ((((index + 1) / centers.length) * 100) - 1).toFixed(2);
-    return `${start}%,${end}%{transform:translate(${point.x}px,${point.y}px)}`;
-  }).join("");
-  const header = narrow
-    ? `<text class="eyebrow mute" x="24" y="34">THE FEEDBACK CIRCUIT</text><text class="subhead" x="24" y="70">Verified lessons improve</text><text class="subhead" x="24" y="96">the next task.</text>`
-    : `<text class="eyebrow mute" x="40" y="42">THE FEEDBACK CIRCUIT</text><text class="headline" x="40" y="94" style="font-size:42px">Verified lessons improve the next task.</text><text class="subhead mute" x="40" y="124">Propagation stays optional and human-reviewed.</text>`;
-  return svg({
-    width, height, title: "Harness Firmware feedback circuit",
-    label: "Recall, work, verify, refine, and a reviewed repository change form a local loop. A separate human-approved sync can carry generic changes into future repositories.",
-    themeName,
-    extraCss: `@keyframes feedbackPulse{${keyframes}}.feedback-pulse{animation:feedbackPulse 12s steps(1,end) infinite}`,
-    body: `${grid(width, height)}${arrowDefs(theme)}${header}${segments}${nodes}${evidence}${branch}<circle class="signal feedback-pulse" cx="0" cy="0" r="7"/>`,
-  });
-}
+const LOOP = 16; // seconds
+const DRAW_START = 0.6;
+const DRAW_END = 8.2;
+const HOLD_END = 13.4;
+const FADE_END = 14.2;
 
-function boot(themeName, narrow) {
-  const width = narrow ? 390 : 880;
-  const height = narrow ? 600 : 430;
-  const rows = [
-    ["RULE KERNEL", `${fmtKiB(facts.kernelBytes)} loaded`],
-    ["SKILL INDEX", `${facts.skillCount} workflows ready`],
-    ["PROJECT MEMORY", `${facts.referenceFileCount} files mounted`],
-    ["RUNTIME BOUNDARY", `${facts.runtimeCount} targets declared`],
-    ["VALIDATION", "template checks wired"],
-  ];
-  const startY = narrow ? 250 : 184;
-  const rowGap = narrow ? 56 : 48;
-  const xDot = narrow ? 30 : 48;
-  const xLabel = narrow ? 50 : 66;
-  const xValue = narrow ? 366 : 612;
-  const rowsMarkup = rows.map(([name, value], index) => {
-    const y = startY + index * rowGap;
-    return `<g><circle class="evidence" cx="${xDot}" cy="${y - 5}" r="4"/><text class="small" x="${xLabel}" y="${y}">${name}</text><text class="small mute" x="${xValue}" y="${y}" text-anchor="end">${value}</text><path class="wire" d="M${narrow ? 24 : 40} ${y + 18}H${xValue}"/></g>`;
-  }).join("");
-  const cursorFrames = rows.map((_, index) => {
-    const start = ((index / rows.length) * 84).toFixed(1);
-    const end = ((((index + 1) / rows.length) * 84) - 1).toFixed(1);
-    return `${start}%,${end}%{transform:translateY(${index * rowGap}px)}`;
-  }).join("");
-  const title = narrow
-    ? `<text class="eyebrow mute" x="24" y="38">REPOSITORY FIRMWARE</text><text class="headline" x="24" y="88" style="font-size:38px">Harness</text><text class="headline" x="24" y="130" style="font-size:38px">Firmware</text><text class="copy mute" x="24" y="170">Instructions, memory, and verification</text><text class="copy mute" x="24" y="194">for Claude Code and Codex.</text>`
-    : `<text class="eyebrow mute" x="40" y="46">REPOSITORY FIRMWARE</text><text class="headline" x="40" y="100">Harness Firmware</text><text class="subhead mute" x="40" y="132">Instructions, project memory, and verification for Claude Code and Codex.</text>`;
-  const ready = narrow
-    ? `<g class="boot-ready"><rect class="tag" x="24" y="548" width="342" height="30" rx="6"/><text class="label accent" x="195" y="569" text-anchor="middle">READY · ${facts.skillCount}/${facts.skillCount}</text></g>`
-    : `<g class="boot-ready"><rect class="tag" x="660" y="174" width="180" height="174" rx="8"/><text class="small mute" x="680" y="204">BOOT STATUS</text><text class="count accent" x="680" y="252">READY</text><text class="small" x="680" y="286">${facts.skillCount} Claude skills</text><text class="small" x="680" y="312">${facts.codexSkillCount} Codex skills</text></g>`;
-  return svg({
-    width, height, title: "Harness Firmware boot trace",
-    label: `Harness Firmware boots with ${facts.skillCount} skills, ${facts.referenceFileCount} project-memory files, and ${facts.runtimeCount} runtime boundaries ready.`,
-    themeName,
-    extraCss: `@keyframes bootCursor{${cursorFrames}84%,100%{transform:translateY(${(rows.length - 1) * rowGap}px)}}.boot-cursor{animation:bootCursor 12s steps(1,end) infinite}`,
-    body: `${grid(width, height)}${title}${rowsMarkup}<circle class="signal boot-cursor" cx="${xDot}" cy="${startY - 5}" r="7"/>${ready}`,
-  });
-}
+const QUADRANT = { Warnings: -90, Incidents: 0, Governance: 90, Research: 180 }; // start angle, clockwise from 12 o'clock is -90
 
-function runtime(themeName, narrow) {
-  const width = narrow ? 390 : 880;
-  const height = narrow ? 630 : 430;
-  const x = narrow ? 24 : 40;
-  const cardWidth = narrow ? 342 : 382;
-  const card = (left, top, name, kernel, count, detail) => `<g transform="translate(${left} ${top})"><rect class="cell" width="${cardWidth}" height="150"/><text class="label accent" x="20" y="30">${name}</text><text class="subhead" x="20" y="66">${kernel}</text><text class="copy" x="20" y="98">${count}</text><text class="copy mute" x="20" y="126">${detail}</text></g>`;
-  const memoryY = narrow ? 488 : 318;
-  const body = `${grid(width,height)}
-<text class="eyebrow mute" x="${x}" y="36">TWO RUNTIMES · SHARED MEMORY</text>
-<text class="subhead" x="${x}" y="72">Two runtimes. One project.</text>
-${card(x,108,'CLAUDE CODE','CLAUDE.md + hooks',`${facts.skillCount} canonical workflows`,'.claude/skills/')}
-${card(narrow ? x : 458,narrow ? 294 : 108,'CODEX','AGENTS.md',`${facts.codexSkillCount} skills · ${facts.codexNativeCount} native · ${facts.codexAdapterCount} adapters`,'.agents/skills/')}
-<path class="wire active" d="${narrow ? 'M195 258V294 M195 444V488' : 'M231 258V292H649V258 M440 292V318'}"/>
-<rect class="tag" x="${x}" y="${memoryY}" width="${width-2*x}" height="90"/>
-<text class="label" x="${x+20}" y="${memoryY+28}">COMMITTED PROJECT MEMORY</text>
-<text class="copy" x="${x+20}" y="${memoryY+54}">.claude/reference/ · ${facts.referenceFileCount} topics</text>
-<text class="copy mute" x="${x+20}" y="${memoryY+76}">Facts, decisions, commands, and pitfalls</text>`;
-  return svg({width,height,title:'Harness Firmware runtime ownership',
-    label:`${facts.skillCount} Claude Code workflows and ${facts.codexSkillCount} Codex skills, including ${facts.codexNativeCount} native and ${facts.codexAdapterCount} adapters, share committed project memory.`,themeName,body});
-}
+const pct = (s) => r1((s / LOOP) * 100);
 
-function wrapLabel(label, max = 14) {
-  if (label.length <= max) return [label];
-  const words = label.split(" ");
-  if (words.length === 1) return [label.slice(0, max), label.slice(max, max * 2)];
-  const midpoint = Math.ceil(words.length / 2);
-  return [words.slice(0, midpoint).join(" "), words.slice(midpoint).join(" ")];
-}
-
-function skillsPanel(themeName, narrow) {
-  const width = narrow ? 390 : 880;
-  const height = narrow ? 1560 : 700;
-  const groups = facts.groups.map((group) => ({
-    ...group,
-    skills: facts.skills.filter((skill) => skill.group === group.id).sort((a, b) => a.name.localeCompare(b.name)),
-  }));
-  let markup = `${grid(width, height)}<text class="eyebrow mute" x="${narrow ? 24 : 40}" y="${narrow ? 36 : 42}">ON-DEMAND MEMORY MAP</text><text class="${narrow ? "subhead" : "headline"}" x="${narrow ? 24 : 40}" y="${narrow ? 72 : 92}"${narrow ? "" : " style=\"font-size:38px\""}>${facts.skillCount} workflows. Loaded when called.</text>`;
-  markup += narrow
-    ? `<text class="copy mute" x="24" y="104">Repository source estimate:</text><text class="small mute" x="24" y="132">${fmtKiB(facts.residentBytes)} kernel + index</text><text class="small mute" x="24" y="158">${fmtKiB(facts.onDemandBytes)} on-demand skill bodies</text>`
-    : `<text class="copy mute" x="40" y="122">Repository source estimate · ${fmtKiB(facts.residentBytes)} kernel + index · ${fmtKiB(facts.onDemandBytes)} on-demand skill bodies</text>`;
-  let footerY;
-  if (narrow) {
-    let y = 188;
-    for (const group of groups) {
-      markup += `<text class="label mute" x="24" y="${y + 22}" data-group-count="${group.skills.length}">${group.label.toUpperCase()} · ${group.skills.length}</text>`;
-      y += 40;
-      group.skills.forEach((skill, index) => {
-        const x = index % 2 === 0 ? 24 : 200;
-        if (index > 0 && index % 2 === 0) y += 62;
-        const lines = wrapLabel(skill.label, 14);
-        markup += `<g data-skill="${skill.name}" data-bottom="${y + 52}" transform="translate(${x} ${y})"><rect class="cell" width="166" height="52" rx="6"/><text class="small" x="12" y="${lines.length === 1 ? 31 : 22}">${esc(lines[0])}</text>${lines[1] ? `<text class="small" x="12" y="40">${esc(lines[1])}</text>` : ""}</g>`;
-      });
-      y += 88;
-    }
-    footerY = y + 12;
-    markup += `<text class="small mute" x="24" y="${footerY}">COUNTS VERIFIED AGAINST</text><text class="small mute" x="24" y="${footerY + 26}">.claude/skills/</text>`;
-  } else {
-    const starts = [158, 314, 470];
-    groups.forEach((group, groupIndex) => {
-      const y = starts[groupIndex];
-      const columns = group.id === "specialist" ? 7 : 8;
-      const cellWidth = group.id === "specialist" ? 108 : 96;
-      markup += `<text class="label mute" x="40" y="${y}" data-group-count="${group.skills.length}">${group.label.toUpperCase()} · ${group.skills.length}</text>`;
-      group.skills.forEach((skill, index) => {
-        const row = Math.floor(index / columns);
-        const column = index % columns;
-        const x = 40 + column * (cellWidth + 6);
-        const cellY = y + 18 + row * 66;
-        const lines = wrapLabel(skill.label, group.id === "specialist" ? 14 : 12);
-        markup += `<g data-skill="${skill.name}" data-bottom="${cellY + 54}" transform="translate(${x} ${cellY})"><rect class="cell" width="${cellWidth}" height="54" rx="6"/><text class="small" x="10" y="${lines.length === 1 ? 31 : 23}">${esc(lines[0])}</text>${lines[1] ? `<text class="small" x="10" y="40">${esc(lines[1])}</text>` : ""}</g>`;
-      });
+function placeDots(facts, R, r0) {
+  const t0 = Date.parse(facts.first);
+  const t1 = Date.parse(facts.last);
+  const span = Math.max(1, t1 - t0);
+  const radius = (iso) => r0 + (R - r0) * ((Date.parse(iso) - t0) / span);
+  const dots = [];
+  for (const cat of CATEGORIES) {
+    const list = facts.events.filter((e) => e.category === cat);
+    const gap = 9; // degrees kept clear at each quadrant edge
+    const from = QUADRANT[cat] + gap;
+    const width = 90 - 2 * gap;
+    // Golden-ratio spread inside the quadrant: even coverage with no angular order,
+    // so angle carries no meaning beyond the quadrant and only distance encodes time.
+    list.forEach((e, k) => {
+      const a = ((from + width * ((0.5 + k * 0.6180339887) % 1)) * Math.PI) / 180;
+      const r = radius(e.date);
+      dots.push({ e, cat, x: Math.cos(a) * r, y: Math.sin(a) * r });
     });
-    footerY = height - 22;
-    markup += `<text class="small mute" x="40" y="${footerY}">CELL AND GROUP COUNTS VERIFIED AGAINST .claude/skills/</text>`;
   }
-  const scanTop = narrow ? 188 : 158;
-  const scanDistance = narrow ? Math.max(0, footerY - scanTop - 60) : 430;
-  markup += `<g class="scan-bar" aria-hidden="true" style="--scan-distance:${scanDistance}px"><rect class="signal" x="${narrow ? 18 : 34}" y="${scanTop}" width="4" height="32" style="animation:scanY 12s linear infinite"/></g>`;
-  return svg({
-    width, height, title: "Harness Firmware skill memory map",
-    label: `A memory map of ${facts.skillCount} on-demand workflows grouped into ${facts.tierCounts.core} core, ${facts.tierCounts.discipline} discipline, and ${facts.tierCounts.specialist} specialist skills.`,
-    themeName, body: markup,
-  });
+  const rank = new Map(facts.events.map((e, i) => [e, i]));
+  for (const d of dots) d.rank = rank.get(d.e);
+  const rings = [];
+  for (let y = Number(facts.first.slice(0, 4)) + 1; y <= Number(facts.last.slice(0, 4)); y++) rings.push({ year: y, r: radius(`${y}-01-01`) });
+  return { dots, rings };
 }
 
-const panels = { boot, feedback, runtime, skills: skillsPanel };
-for (const [name, build] of Object.entries(panels)) {
-  for (const themeName of ["light", "dark"]) {
-    writeText(`assets/readme/${name}-${themeName}.svg`, build(themeName, false));
-    writeText(`assets/readme/${name}-narrow-${themeName}.svg`, build(themeName, true));
+function css(t, n) {
+  const rules = [];
+  for (let i = 0; i < n; i++) {
+    const at = DRAW_START + ((DRAW_END - DRAW_START) * i) / Math.max(1, n - 1);
+    rules.push(`@keyframes d${i}{0%,${pct(at)}%{opacity:0}${pct(at + 0.35)}%,${pct(HOLD_END)}%{opacity:1}${pct(FADE_END)}%,100%{opacity:0}}.d${i}{animation:d${i} ${LOOP}s linear infinite}`);
   }
+  rules.push(`@keyframes call{0%,${pct(DRAW_END)}%{opacity:0}${pct(DRAW_END + 0.4)}%,${pct(HOLD_END)}%{opacity:1}${pct(FADE_END)}%,100%{opacity:0}}.call{animation:call ${LOOP}s linear infinite}`);
+  return `text{font-kerning:normal}.serif{font-family:${SERIF}}.sans{font-family:${SANS}}.mono{font-family:${MONO};letter-spacing:.08em}
+${rules.join('\n')}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}`;
 }
 
-process.stdout.write(`Generated ${Object.keys(panels).length * 4} README SVG assets.\n`);
+function burst(t, facts, cx, cy, R, small) {
+  const { dots, rings } = placeDots(facts, R, small ? 10 : 14);
+  const out = [];
+  for (const ring of rings) {
+    out.push(`<circle cx="${cx}" cy="${cy}" r="${r1(ring.r)}" fill="none" stroke="${t.rule}" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>`);
+  }
+  for (const d of dots) {
+    const x = r1(cx + d.x);
+    const y = r1(cy + d.y);
+    out.push(`<g class="d${d.rank}" data-cat="${d.cat}"><line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="${t.spoke}" stroke-width=".8"/><circle cx="${x}" cy="${y}" r="${small ? 3.6 : 4.2}" fill="${t.cat[d.cat]}"/></g>`);
+  }
+  // Year labels sit at 12 o'clock, in the gap kept clear between the Research and
+  // Warnings quadrants, drawn last on a knockout so no spoke runs through them.
+  for (const ring of rings) {
+    const fs = small ? 8.5 : 9.5;
+    const w = 4 * fs * 0.68 + 6;
+    out.push(`<rect x="${r1(cx - w / 2)}" y="${r1(cy - ring.r - fs / 2 - 1)}" width="${r1(w)}" height="${fs + 2}" fill="${t.field}"/><text class="mono" x="${cx}" y="${r1(cy - ring.r + fs * 0.36)}" font-size="${fs}" text-anchor="middle" fill="${t.label}">${ring.year}</text>`);
+  }
+  out.push(`<circle cx="${cx}" cy="${cy}" r="2.4" fill="${t.ink}"/>`);
+  const latest = dots.find((d) => d.e === facts.latest);
+  return { svg: out.join('\n'), latest: { x: cx + latest.x, y: cy + latest.y, cat: latest.cat } };
+}
+
+function legend(t, facts, x, y, colW, rowH) {
+  return CATEGORIES.map((c, i) => {
+    const lx = x + (i % 2) * colW;
+    const ly = y + Math.floor(i / 2) * rowH;
+    return `<circle cx="${lx + 4}" cy="${ly - 3.5}" r="4.2" fill="${t.cat[c]}"/><text class="mono" x="${lx + 14}" y="${ly}" font-size="10.5" fill="${t.ink}">${c.toUpperCase()} <tspan fill="${t.mute}">${facts.byCategory[c]}</tspan></text>`;
+  }).join('\n');
+}
+
+function eyebrow(t, x, y) {
+  return `<g transform="translate(${x} ${y - 17}) scale(.6875)"><path d="${MARK_D}" fill="${t.ink}" fill-rule="evenodd"/></g>
+<text class="serif" x="${x + 30}" y="${y}" font-size="19" fill="${t.ink}">SafeAI.watch</text>`;
+}
+
+/*
+ * Label for the newest entry. The box hangs above the dot, right-aligned no further
+ * than `right`, and a short dashed leader drops from the box to the dot.
+ */
+function callout(t, facts, from, right, y) {
+  const label = `LATEST · ${longDate(facts.latest.date).toUpperCase()} · ${facts.latest.category.toUpperCase()}`;
+  // Mono advance is 0.6 em plus the .08 em letter-spacing set on .mono.
+  const w = Math.ceil(label.length * 10 * 0.68) + 30;
+  const bx = Math.min(right - w, from.x - w / 2);
+  const ex = Math.max(bx + 8, Math.min(from.x, bx + w - 8));
+  return `<g class="call"><path d="M${r1(from.x)} ${r1(from.y - 5)} L${r1(ex)} ${r1(y + 11)}" stroke="${t.cat[from.cat]}" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+<rect x="${r1(bx)}" y="${y - 11}" width="${w}" height="22" fill="${t.field}" stroke="${t.rule}" stroke-width="1"/>
+<circle cx="${r1(bx + 11)}" cy="${y}" r="3.4" fill="${t.cat[from.cat]}"/>
+<text class="mono" x="${r1(bx + 20)}" y="${y + 3.5}" font-size="10" fill="${t.ink}">${esc(label)}</text></g>`;
+}
+
+function frame(t, w, h) {
+  // The site's dashed card outline, with crop marks at the corners like its secondary button.
+  const m = 6;
+  const L = 12;
+  const corners = [[m, m, 1, 1], [w - m, m, -1, 1], [m, h - m, 1, -1], [w - m, h - m, -1, -1]]
+    .map(([x, y, sx, sy]) => `<path d="M${x} ${y + sy * L}V${y}H${x + sx * L}" fill="none" stroke="${t.ink}" stroke-width="1.4"/>`).join('');
+  return `<rect x="0" y="0" width="${w}" height="${h}" rx="0" fill="${t.field}"/>
+<rect x="${m}" y="${m}" width="${w - 2 * m}" height="${h - 2 * m}" fill="none" stroke="${t.rule}" stroke-width="1" stroke-dasharray="3 3"/>
+${corners}`;
+}
+
+export function masthead(t, facts, narrow) {
+  const label = `${HEADLINE}. A burst chart of the SafeAI.watch record: ${facts.entries} dated, sourced entries from ${monthYear(facts.first)} to ${monthYear(facts.last)}, one dot each: ${CATEGORIES.map((c) => `${facts.byCategory[c]} ${c.toLowerCase()}`).join(', ')}. Distance from the centre is the entry's date, so the record thickens toward ${facts.last.slice(0, 4)}.`;
+  const stats = `${facts.entries} ENTRIES · ${facts.publishers} PUBLISHERS · ${monthYear(facts.first).toUpperCase()} TO ${monthYear(facts.last).toUpperCase()}`;
+  if (!narrow) {
+    const W = 880, H = 460;
+    const ledeLines = wrap(LEDE, 380, 16.5);
+    const b = burst(t, facts, 652, 222, 158, false);
+    const statsY = 190 + ledeLines.length * 25 + 22;
+    const body = [
+      frame(t, W, H),
+      eyebrow(t, 44, 62),
+      `<text class="serif" x="42" y="146" font-size="47" fill="${t.ink}" letter-spacing="-.5">${esc(HEADLINE)}</text>`,
+      ...ledeLines.map((l, i) => `<text class="serif" x="44" y="${190 + i * 25}" font-size="17.5" fill="${t.mute}">${esc(l)}</text>`),
+      `<text class="mono" x="44" y="${statsY}" font-size="10" fill="${t.label}">${esc(stats)}</text>`,
+      `<text class="mono" x="44" y="${statsY + 17}" font-size="10" fill="${t.label}">${esc(KEY)}</text>`,
+      legend(t, facts, 44, 392, 170, 26),
+      b.svg,
+      callout(t, facts, b.latest, 846, 34),
+    ].join('\n');
+    return svg(W, H, label, css(t, facts.entries), body);
+  }
+  const W = 390, H = 760;
+  const ledeLines = wrap(LEDE, 320, 15.5);
+  const top = 120;
+  const after = top + 36 + ledeLines.length * 22; // baseline one line below the lede
+  const callY = after + 8; // callout box spans callY - 11 to callY + 11
+  const cy = callY + 52 + 140;
+  const b = burst(t, facts, W / 2, cy, 140, true);
+  const body = [
+    frame(t, W, H),
+    eyebrow(t, 32, 54),
+    `<text class="serif" x="30" y="${top}" font-size="35" fill="${t.ink}" letter-spacing="-.4">${esc(HEADLINE)}</text>`,
+    ...ledeLines.map((l, i) => `<text class="serif" x="32" y="${top + 36 + i * 22}" font-size="16" fill="${t.mute}">${esc(l)}</text>`),
+    b.svg,
+    callout(t, facts, b.latest, W - 22, callY),
+    `<text class="mono" x="32" y="${H - 100}" font-size="9" fill="${t.label}">${esc(stats)}</text>`,
+    `<text class="mono" x="32" y="${H - 85}" font-size="9" fill="${t.label}">${esc(KEY)}</text>`,
+    legend(t, facts, 32, H - 56, 170, 24),
+  ].join('\n');
+  return svg(W, H, label, css(t, facts.entries), body);
+}
+
+export function buildPanels(facts) {
+  const files = [];
+  for (const theme of ['light', 'dark']) {
+    for (const narrow of [false, true]) {
+      const name = `masthead${narrow ? '-narrow' : ''}-${theme}.svg`;
+      write(`${ASSETS}/${name}`, masthead(THEMES[theme], facts, narrow));
+      files.push(`${ASSETS}/${name}`);
+    }
+  }
+  return files;
+}
