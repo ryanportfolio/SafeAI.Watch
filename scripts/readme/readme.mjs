@@ -32,8 +32,11 @@ function pic(base, alt) {
 </picture>`;
 }
 
-/** Entry text is plain prose; escape the characters markdown would act on. */
-const md = (s) => String(s).replace(/([\\`*_[\]<>#|])/g, '\\$1');
+/**
+ * Entry text is plain prose; escape the characters markdown would act on. Line breaks
+ * fold to spaces, since each field must stay on one quoted line.
+ */
+const md = (s) => String(s).replace(/\s*\r?\n\s*/g, ' ').replace(/([\\`*_[\]<>#|&])/g, '\\$1');
 
 export function buildReadme(facts) {
   const raw = facts.latest;
@@ -120,7 +123,8 @@ export function checkReadme(md, facts, root = ROOT) {
   for (const m of md.matchAll(/(?:src|srcset)="([^"]+)"/g)) {
     if (!fs.existsSync(path.join(root, m[1]))) bad.push(`missing asset ${m[1]}`);
   }
-  for (const m of md.matchAll(/\]\((?!https?:|#)([^)]+)\)/g)) {
+  // (?<!\\) skips "\](", which escaped entry prose produces and markdown renders as text.
+  for (const m of md.matchAll(/(?<!\\)\]\((?!https?:|#)([^)]+)\)/g)) {
     if (!fs.existsSync(path.join(root, m[1]))) bad.push(`local link target missing: ${m[1]}`);
   }
   return bad;

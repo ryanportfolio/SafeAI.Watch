@@ -39,11 +39,12 @@ async function check() {
   const topics = [...(live.topics || [])].sort().join(',');
   if (topics !== [...meta.topics].sort().join(',')) bad.push(`topics on GitHub are [${topics}]`);
   const md = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
-  const links = [...new Set([...md.matchAll(/\]\((https?:\/\/[^)\s]+)\)|href="(https?:\/\/[^"]+)"/g)].map((m) => m[1] || m[2]))];
+  // Destinations may hold balanced parentheses (DOIs do); "\](" is escaped prose, not a link.
+  const links = [...new Set([...md.matchAll(/(?<!\\)\]\((https?:\/\/(?:[^()\s]|\([^()\s]*\))+)\)|href="(https?:\/\/[^"]+)"/g)].map((m) => m[1] || m[2]))];
   for (const url of links) {
     let status = 0;
     for (const method of ['HEAD', 'GET']) {
-      try { status = (await fetch(url, { method, redirect: 'follow' })).status; } catch { status = 0; }
+      try { status = (await fetch(url, { method, redirect: 'follow', signal: AbortSignal.timeout(20000) })).status; } catch { status = 0; }
       if (status && status < 400) break;
     }
     if (!status || status >= 400) bad.push(`README link ${url} answered ${status || 'no response'}`);
