@@ -173,3 +173,7 @@ Chrome logged "preloaded using link preload but not used within a few seconds" f
 ## No formatter config: don't run Prettier (2026-09-23)
 
 The repo has no Prettier config, so `npx prettier --write` falls back to defaults and rewraps whole files to 80 columns, turning a small edit into a full-file diff (happened on `hero.ts`; reverted). Edit by hand or with the Edit tool; don't run a formatter unless one is configured.
+
+## `npm run build` fails in a worktree nested inside the main checkout (2026-10-02)
+
+In a worktree under `C:\Users\Home\CoreWise\SafeAI.Watch\.claude\worktrees\`, `npm ci && npm run build` failed with `[vite] ... Tsconfig not found astro/tsconfigs/strict`, although `node_modules/astro/tsconfigs/strict.json` existed in the worktree. The same commit copied outside the repo tree (`git archive HEAD | tar -x -C <dir>`) built cleanly, and the main checkout above it has a `tsconfig.json` but no `node_modules`, so resolution reached the parent's config. Build-check a nested worktree from an archive copy outside the repo, or run `npm ci` in the main checkout first. CI and Vercel use a plain checkout and are unaffected. Don't change `tsconfig.json` for this.
