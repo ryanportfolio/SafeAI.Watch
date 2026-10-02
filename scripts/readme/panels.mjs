@@ -6,9 +6,12 @@
  *   and no fewer. Category picks the quadrant and the colour; the entry's date picks
  *   its distance from the centre, on a linear scale from the first entry to the latest.
  *   The burst thickening at its edge is the record's real pace, not a style.
- * - Dashed rings mark January 1 of each year after the first entry. Nothing else in
- *   the burst carries meaning, and nothing decorative may look like data: dots are
- *   one size, spokes one weight.
+ * - Dashed rings mark January 1 of each year after the first entry, labelled "JAN
+ *   <year>". Nothing else in the burst carries meaning, and nothing decorative may
+ *   look like data: dots are one size, spokes one weight, angle inside a quadrant is
+ *   an even spread with no order.
+ * - The record is a selection, so the art prints that density shows coverage, not
+ *   frequency (CAVEAT). A dense rim must never read as a trend claim.
  * - Every number printed (entries, per-category counts, publishers, date range, the
  *   latest entry) comes from facts.mjs; verify.mjs recounts the drawn dots.
  * - Survives 390px: the narrow variant is its own stacked composition.
@@ -21,7 +24,7 @@
  * - Site copy is reused verbatim where it exists (headline, lede); no claims beyond it.
  */
 import { CATEGORIES, longDate, monthYear } from './facts.mjs';
-import { ASSETS, MONO, SANS, SERIF, THEMES, esc, r1, svg, wrap, write } from './lib.mjs';
+import { ASSETS, MONO, SANS, SERIF, THEMES, esc, markPaint, r1, svg, wrap, write } from './lib.mjs';
 
 // The S mark from src/assets/brand/mark-small.svg (32 x 32), drawn as a path.
 import fs from 'node:fs';
@@ -34,6 +37,11 @@ export const LEDE = 'A dated record of AI safety and security research, incident
 
 /** How to read the burst, printed under the stats. */
 export const KEY = 'ONE DOT PER ENTRY · FARTHER OUT = NEWER';
+/*
+ * The record is curated, and most of it was gathered recently, so a dense rim is not
+ * evidence that events are speeding up. The art says so where the reader looks.
+ */
+export const CAVEAT = 'A SELECTION · DENSITY SHOWS COVERAGE, NOT FREQUENCY';
 
 const LOOP = 16; // seconds
 const DRAW_START = 0.6;
@@ -89,28 +97,34 @@ function burst(t, facts, cx, cy, R, small) {
   for (const ring of rings) {
     out.push(`<circle cx="${cx}" cy="${cy}" r="${r1(ring.r)}" fill="none" stroke="${t.rule}" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>`);
   }
-  for (const d of dots) {
-    const x = r1(cx + d.x);
-    const y = r1(cy + d.y);
-    out.push(`<g class="d${d.rank}" data-cat="${d.cat}"><line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="${t.spoke}" stroke-width=".8"/><circle cx="${x}" cy="${y}" r="${small ? 3.6 : 4.2}" fill="${t.cat[d.cat]}"/></g>`);
-  }
+  // All spokes first, then all dots, so a later spoke never crosses an earlier dot.
+  // Spoke and dot of one entry share its animation class.
+  const at = dots.map((d) => ({ d, x: r1(cx + d.x), y: r1(cy + d.y) }));
+  for (const { d, x, y } of at) out.push(`<line class="d${d.rank}" x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="${t.spoke}" stroke-width=".8"/>`);
+  for (const { d, x, y } of at) out.push(`<circle class="d${d.rank}" data-cat="${d.cat}" cx="${x}" cy="${y}" r="${small ? 3.6 : 4.2}" ${markPaint(t, d.cat)}/>`);
   // Year labels sit at 12 o'clock, in the gap kept clear between the Research and
-  // Warnings quadrants, drawn last on a knockout so no spoke runs through them.
+  // Warnings quadrants, drawn last on a knockout so no spoke runs through them. Each
+  // ring is January 1 of its year, and the label says so.
   for (const ring of rings) {
-    const fs = small ? 8.5 : 9.5;
-    const w = 4 * fs * 0.68 + 6;
-    out.push(`<rect x="${r1(cx - w / 2)}" y="${r1(cy - ring.r - fs / 2 - 1)}" width="${r1(w)}" height="${fs + 2}" fill="${t.field}"/><text class="mono" x="${cx}" y="${r1(cy - ring.r + fs * 0.36)}" font-size="${fs}" text-anchor="middle" fill="${t.label}">${ring.year}</text>`);
+    const fs = small ? 9 : 9.5;
+    const text = `JAN ${ring.year}`;
+    const w = text.length * fs * 0.68 + 6;
+    out.push(`<rect x="${r1(cx - w / 2)}" y="${r1(cy - ring.r - fs / 2 - 1)}" width="${r1(w)}" height="${fs + 2}" fill="${t.field}"/><text class="mono" x="${cx}" y="${r1(cy - ring.r + fs * 0.36)}" font-size="${fs}" text-anchor="middle" fill="${t.label}">${text}</text>`);
   }
   out.push(`<circle cx="${cx}" cy="${cy}" r="2.4" fill="${t.ink}"/>`);
   const latest = dots.find((d) => d.e === facts.latest);
   return { svg: out.join('\n'), latest: { x: cx + latest.x, y: cy + latest.y, cat: latest.cat } };
 }
 
+// The key's 2 x 2 grid mirrors the quadrants: Research top left, Warnings top right,
+// Governance bottom left, Incidents bottom right.
+const KEY_GRID = ['Research', 'Warnings', 'Governance', 'Incidents'];
+
 function legend(t, facts, x, y, colW, rowH) {
-  return CATEGORIES.map((c, i) => {
+  return KEY_GRID.map((c, i) => {
     const lx = x + (i % 2) * colW;
     const ly = y + Math.floor(i / 2) * rowH;
-    return `<circle cx="${lx + 4}" cy="${ly - 3.5}" r="4.2" fill="${t.cat[c]}"/><text class="mono" x="${lx + 14}" y="${ly}" font-size="10.5" fill="${t.ink}">${c.toUpperCase()} <tspan fill="${t.mute}">${facts.byCategory[c]}</tspan></text>`;
+    return `<circle cx="${lx + 4}" cy="${ly - 3.5}" r="4.2" ${markPaint(t, c)}/><text class="mono" x="${lx + 14}" y="${ly}" font-size="10.5" fill="${t.ink}">${c.toUpperCase()} <tspan fill="${t.mute}">${facts.byCategory[c]}</tspan></text>`;
   }).join('\n');
 }
 
@@ -120,18 +134,19 @@ function eyebrow(t, x, y) {
 }
 
 /*
- * Label for the newest entry. The box hangs above the dot, right-aligned no further
- * than `right`, and a short dashed leader drops from the box to the dot.
+ * Label for the newest entry. The box hangs above the dot, at `left` when given,
+ * otherwise centred on the dot and kept left of `right`; a short dashed leader
+ * drops from the box to the dot.
  */
-function callout(t, facts, from, right, y) {
+function callout(t, facts, from, right, y, left) {
   const label = `LATEST · ${longDate(facts.latest.date).toUpperCase()} · ${facts.latest.category.toUpperCase()}`;
   // Mono advance is 0.6 em plus the .08 em letter-spacing set on .mono.
   const w = Math.ceil(label.length * 10 * 0.68) + 30;
-  const bx = Math.min(right - w, from.x - w / 2);
+  const bx = left ?? Math.min(right - w, from.x - w / 2);
   const ex = Math.max(bx + 8, Math.min(from.x, bx + w - 8));
-  return `<g class="call"><path d="M${r1(from.x)} ${r1(from.y - 5)} L${r1(ex)} ${r1(y + 11)}" stroke="${t.cat[from.cat]}" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+  return `<g class="call"><path d="M${r1(from.x)} ${r1(from.y - 5)} L${r1(ex)} ${r1(y + 11)}" stroke="${t.edge[from.cat] || t.cat[from.cat]}" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
 <rect x="${r1(bx)}" y="${y - 11}" width="${w}" height="22" fill="${t.field}" stroke="${t.rule}" stroke-width="1"/>
-<circle cx="${r1(bx + 11)}" cy="${y}" r="3.4" fill="${t.cat[from.cat]}"/>
+<circle cx="${r1(bx + 11)}" cy="${y}" r="3.4" ${markPaint(t, from.cat)}/>
 <text class="mono" x="${r1(bx + 20)}" y="${y + 3.5}" font-size="10" fill="${t.ink}">${esc(label)}</text></g>`;
 }
 
@@ -147,28 +162,29 @@ ${corners}`;
 }
 
 export function masthead(t, facts, narrow) {
-  const label = `${HEADLINE}. A burst chart of the SafeAI.watch record: ${facts.entries} dated, sourced entries from ${monthYear(facts.first)} to ${monthYear(facts.last)}, one dot each: ${CATEGORIES.map((c) => `${facts.byCategory[c]} ${c.toLowerCase()}`).join(', ')}. Distance from the centre is the entry's date, so the record thickens toward ${facts.last.slice(0, 4)}.`;
+  const label = `${HEADLINE}. A burst chart of the SafeAI.watch record: ${facts.entries} dated, sourced entries from ${monthYear(facts.first)} to ${monthYear(facts.last)}, one dot each: ${CATEGORIES.map((c) => `${facts.byCategory[c]} ${c.toLowerCase()}`).join(', ')}. Distance from the centre is the entry's date; dashed rings mark January 1. The record is a selection, so density shows what it covers, not how often things happen.`;
   const stats = `${facts.entries} ENTRIES · ${facts.publishers} PUBLISHERS · ${monthYear(facts.first).toUpperCase()} TO ${monthYear(facts.last).toUpperCase()}`;
   if (!narrow) {
     const W = 880, H = 460;
-    const ledeLines = wrap(LEDE, 380, 16.5);
+    const ledeLines = wrap(LEDE, 420, 17.5);
     const b = burst(t, facts, 652, 222, 158, false);
-    const statsY = 190 + ledeLines.length * 25 + 22;
+    const statsY = 190 + ledeLines.length * 25 + 20;
     const body = [
       frame(t, W, H),
       eyebrow(t, 44, 62),
       `<text class="serif" x="42" y="146" font-size="47" fill="${t.ink}" letter-spacing="-.5">${esc(HEADLINE)}</text>`,
       ...ledeLines.map((l, i) => `<text class="serif" x="44" y="${190 + i * 25}" font-size="17.5" fill="${t.mute}">${esc(l)}</text>`),
       `<text class="mono" x="44" y="${statsY}" font-size="10" fill="${t.label}">${esc(stats)}</text>`,
-      `<text class="mono" x="44" y="${statsY + 17}" font-size="10" fill="${t.label}">${esc(KEY)}</text>`,
-      legend(t, facts, 44, 392, 170, 26),
+      `<text class="mono" x="44" y="${statsY + 16}" font-size="10" fill="${t.label}">${esc(KEY)}</text>`,
+      `<text class="mono" x="44" y="${statsY + 32}" font-size="10" fill="${t.label}">${esc(CAVEAT)}</text>`,
+      legend(t, facts, 44, 400, 170, 26),
       b.svg,
       callout(t, facts, b.latest, 846, 34),
     ].join('\n');
     return svg(W, H, label, css(t, facts.entries), body);
   }
-  const W = 390, H = 760;
-  const ledeLines = wrap(LEDE, 320, 15.5);
+  const W = 390, H = 790;
+  const ledeLines = wrap(LEDE, 320, 16);
   const top = 120;
   const after = top + 36 + ledeLines.length * 22; // baseline one line below the lede
   const callY = after + 8; // callout box spans callY - 11 to callY + 11
@@ -177,13 +193,14 @@ export function masthead(t, facts, narrow) {
   const body = [
     frame(t, W, H),
     eyebrow(t, 32, 54),
-    `<text class="serif" x="30" y="${top}" font-size="35" fill="${t.ink}" letter-spacing="-.4">${esc(HEADLINE)}</text>`,
+    `<text class="serif" x="30" y="${top}" font-size="33" fill="${t.ink}" letter-spacing="-.4">${esc(HEADLINE)}</text>`,
     ...ledeLines.map((l, i) => `<text class="serif" x="32" y="${top + 36 + i * 22}" font-size="16" fill="${t.mute}">${esc(l)}</text>`),
     b.svg,
-    callout(t, facts, b.latest, W - 22, callY),
-    `<text class="mono" x="32" y="${H - 100}" font-size="9" fill="${t.label}">${esc(stats)}</text>`,
-    `<text class="mono" x="32" y="${H - 85}" font-size="9" fill="${t.label}">${esc(KEY)}</text>`,
-    legend(t, facts, 32, H - 56, 170, 24),
+    callout(t, facts, b.latest, W - 22, callY, 32),
+    `<text class="mono" x="32" y="${H - 126}" font-size="9.5" fill="${t.label}">${esc(stats)}</text>`,
+    `<text class="mono" x="32" y="${H - 110}" font-size="9.5" fill="${t.label}">${esc(KEY)}</text>`,
+    `<text class="mono" x="32" y="${H - 94}" font-size="9.5" fill="${t.label}">${esc(CAVEAT)}</text>`,
+    legend(t, facts, 32, H - 58, 170, 24),
   ].join('\n');
   return svg(W, H, label, css(t, facts.entries), body);
 }

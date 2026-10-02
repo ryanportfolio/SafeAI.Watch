@@ -16,17 +16,25 @@ export const outDir = () => (process.env.README_OUT_DIR ? path.resolve(process.e
  * and cream on the dark card; the three accents are the site's hero burst colours.
  */
 export const THEMES = {
+  // On paper: the site's chart colours for data (--chart-orange, --chart-olive) and its
+  // AA grey for small labels (--grey-muted, 4.65:1). Amber has no darker token, so on
+  // paper its dots get a thin ink edge instead of an invented colour.
   light: {
-    field: '#d7d7d0', ink: '#1a1614', mute: '#605b55', label: '#6a665f',
+    field: '#d7d7d0', ink: '#1a1614', mute: '#605b55', label: '#605b55',
     rule: '#9d9b94', spoke: '#b4b0a8',
-    cat: { Incidents: '#ff7733', Warnings: '#e5a700', Research: '#a89a1a', Governance: '#1a1614' },
+    cat: { Incidents: '#bd4a28', Warnings: '#e5a700', Research: '#677331', Governance: '#1a1614' },
+    edge: { Warnings: '#1a1614' },
   },
   dark: {
     field: '#292623', ink: '#f4f4e7', mute: '#c9c8bc', label: '#a9a79c',
     rule: '#6f6b64', spoke: '#5b5752',
     cat: { Incidents: '#ff7733', Warnings: '#e5a700', Research: '#a89a1a', Governance: '#f4f4e7' },
+    edge: {},
   },
 };
+
+/** Fill (and edge, where the theme gives one) for a category mark. */
+export const markPaint = (t, cat) => `fill="${t.cat[cat]}"${t.edge[cat] ? ` stroke="${t.edge[cat]}" stroke-width=".9"` : ''}`;
 
 export const SERIF = "Newsreader,Georgia,'Times New Roman',Times,serif";
 export const SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif";

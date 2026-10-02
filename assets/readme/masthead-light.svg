@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img" aria-label="Keeping watch on AI. A burst chart of the SafeAI.watch record: 51 dated, sourced entries from Mar 2023 to Sep 2026, one dot each: 15 warnings, 15 incidents, 11 governance, 10 research. Distance from the centre is the entry's date, so the record thickens toward 2026.">
-<title>Keeping watch on AI. A burst chart of the SafeAI.watch record: 51 dated, sourced entries from Mar 2023 to Sep 2026, one dot each: 15 warnings, 15 incidents, 11 governance, 10 research. Distance from the centre is the entry's date, so the record thickens toward 2026.</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img" aria-label="Keeping watch on AI. A burst chart of the SafeAI.watch record: 51 dated, sourced entries from Mar 2023 to Sep 2026, one dot each: 15 warnings, 15 incidents, 11 governance, 10 research. Distance from the centre is the entry's date; dashed rings mark January 1. The record is a selection, so density shows what it covers, not how often things happen.">
+<title>Keeping watch on AI. A burst chart of the SafeAI.watch record: 51 dated, sourced entries from Mar 2023 to Sep 2026, one dot each: 15 warnings, 15 incidents, 11 governance, 10 research. Distance from the centre is the entry's date; dashed rings mark January 1. The record is a selection, so density shows what it covers, not how often things happen.</title>
 <style>text{font-kerning:normal}.serif{font-family:Newsreader,Georgia,'Times New Roman',Times,serif}.sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif}.mono{font-family:ui-monospace,'SF Mono','Cascadia Mono',Menlo,Consolas,'Liberation Mono',monospace;letter-spacing:.08em}
 @keyframes d0{0%,3.8%{opacity:0}5.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d0{animation:d0 16s linear infinite}
 @keyframes d1{0%,4.7%{opacity:0}6.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d1{animation:d1 16s linear infinite}
@@ -61,76 +61,127 @@
 <text class="serif" x="74" y="62" font-size="19" fill="#1a1614">SafeAI.watch</text>
 <text class="serif" x="42" y="146" font-size="47" fill="#1a1614" letter-spacing="-.5">Keeping watch on AI</text>
 <text class="serif" x="44" y="190" font-size="17.5" fill="#605b55">A dated record of AI safety and security</text>
-<text class="serif" x="44" y="215" font-size="17.5" fill="#605b55">research, incidents, warnings, and policy.</text>
-<text class="serif" x="44" y="240" font-size="17.5" fill="#605b55">Each entry links its original source and</text>
-<text class="serif" x="44" y="265" font-size="17.5" fill="#605b55">separates what happened from what remains</text>
-<text class="serif" x="44" y="290" font-size="17.5" fill="#605b55">uncertain.</text>
-<text class="mono" x="44" y="337" font-size="10" fill="#6a665f">51 ENTRIES · 30 PUBLISHERS · MAR 2023 TO SEP 2026</text>
-<text class="mono" x="44" y="354" font-size="10" fill="#6a665f">ONE DOT PER ENTRY · FARTHER OUT = NEWER</text>
-<circle cx="48" cy="388.5" r="4.2" fill="#e5a700"/><text class="mono" x="58" y="392" font-size="10.5" fill="#1a1614">WARNINGS <tspan fill="#605b55">15</tspan></text>
-<circle cx="218" cy="388.5" r="4.2" fill="#ff7733"/><text class="mono" x="228" y="392" font-size="10.5" fill="#1a1614">INCIDENTS <tspan fill="#605b55">15</tspan></text>
-<circle cx="48" cy="414.5" r="4.2" fill="#1a1614"/><text class="mono" x="58" y="418" font-size="10.5" fill="#1a1614">GOVERNANCE <tspan fill="#605b55">11</tspan></text>
-<circle cx="218" cy="414.5" r="4.2" fill="#a89a1a"/><text class="mono" x="228" y="418" font-size="10.5" fill="#1a1614">RESEARCH <tspan fill="#605b55">10</tspan></text>
+<text class="serif" x="44" y="215" font-size="17.5" fill="#605b55">research, incidents, warnings, and policy. Each</text>
+<text class="serif" x="44" y="240" font-size="17.5" fill="#605b55">entry links its original source and separates</text>
+<text class="serif" x="44" y="265" font-size="17.5" fill="#605b55">what happened from what remains uncertain.</text>
+<text class="mono" x="44" y="310" font-size="10" fill="#605b55">51 ENTRIES · 30 PUBLISHERS · MAR 2023 TO SEP 2026</text>
+<text class="mono" x="44" y="326" font-size="10" fill="#605b55">ONE DOT PER ENTRY · FARTHER OUT = NEWER</text>
+<text class="mono" x="44" y="342" font-size="10" fill="#605b55">A SELECTION · DENSITY SHOWS COVERAGE, NOT FREQUENCY</text>
+<circle cx="48" cy="396.5" r="4.2" fill="#677331"/><text class="mono" x="58" y="400" font-size="10.5" fill="#1a1614">RESEARCH <tspan fill="#605b55">10</tspan></text>
+<circle cx="218" cy="396.5" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/><text class="mono" x="228" y="400" font-size="10.5" fill="#1a1614">WARNINGS <tspan fill="#605b55">15</tspan></text>
+<circle cx="48" cy="422.5" r="4.2" fill="#1a1614"/><text class="mono" x="58" y="426" font-size="10.5" fill="#1a1614">GOVERNANCE <tspan fill="#605b55">11</tspan></text>
+<circle cx="218" cy="422.5" r="4.2" fill="#bd4a28"/><text class="mono" x="228" y="426" font-size="10.5" fill="#1a1614">INCIDENTS <tspan fill="#605b55">15</tspan></text>
 <circle cx="652" cy="222" r="46" fill="none" stroke="#9d9b94" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>
 <circle cx="652" cy="222" r="87.1" fill="none" stroke="#9d9b94" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>
 <circle cx="652" cy="222" r="128.1" fill="none" stroke="#9d9b94" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>
-<g class="d0" data-cat="Warnings"><line x1="652" y1="222" x2="661.9" y2="212.1" stroke="#b4b0a8" stroke-width=".8"/><circle cx="661.9" cy="212.1" r="4.2" fill="#e5a700"/></g>
-<g class="d1" data-cat="Warnings"><line x1="652" y1="222" x2="658.5" y2="201.3" stroke="#b4b0a8" stroke-width=".8"/><circle cx="658.5" cy="201.3" r="4.2" fill="#e5a700"/></g>
-<g class="d3" data-cat="Warnings"><line x1="652" y1="222" x2="706.2" y2="193.2" stroke="#b4b0a8" stroke-width=".8"/><circle cx="706.2" cy="193.2" r="4.2" fill="#e5a700"/></g>
-<g class="d16" data-cat="Warnings"><line x1="652" y1="222" x2="720" y2="123" stroke="#b4b0a8" stroke-width=".8"/><circle cx="720" cy="123" r="4.2" fill="#e5a700"/></g>
-<g class="d23" data-cat="Warnings"><line x1="652" y1="222" x2="780.5" y2="197" stroke="#b4b0a8" stroke-width=".8"/><circle cx="780.5" cy="197" r="4.2" fill="#e5a700"/></g>
-<g class="d25" data-cat="Warnings"><line x1="652" y1="222" x2="763.9" y2="133" stroke="#b4b0a8" stroke-width=".8"/><circle cx="763.9" cy="133" r="4.2" fill="#e5a700"/></g>
-<g class="d26" data-cat="Warnings"><line x1="652" y1="222" x2="711.1" y2="89.2" stroke="#b4b0a8" stroke-width=".8"/><circle cx="711.1" cy="89.2" r="4.2" fill="#e5a700"/></g>
-<g class="d30" data-cat="Warnings"><line x1="652" y1="222" x2="792.8" y2="166.5" stroke="#b4b0a8" stroke-width=".8"/><circle cx="792.8" cy="166.5" r="4.2" fill="#e5a700"/></g>
-<g class="d31" data-cat="Warnings"><line x1="652" y1="222" x2="751.4" y2="107.7" stroke="#b4b0a8" stroke-width=".8"/><circle cx="751.4" cy="107.7" r="4.2" fill="#e5a700"/></g>
-<g class="d39" data-cat="Warnings"><line x1="652" y1="222" x2="688.4" y2="70.3" stroke="#b4b0a8" stroke-width=".8"/><circle cx="688.4" cy="70.3" r="4.2" fill="#e5a700"/></g>
-<g class="d40" data-cat="Warnings"><line x1="652" y1="222" x2="784.4" y2="139.2" stroke="#b4b0a8" stroke-width=".8"/><circle cx="784.4" cy="139.2" r="4.2" fill="#e5a700"/></g>
-<g class="d41" data-cat="Warnings"><line x1="652" y1="222" x2="731.2" y2="87.4" stroke="#b4b0a8" stroke-width=".8"/><circle cx="731.2" cy="87.4" r="4.2" fill="#e5a700"/></g>
-<g class="d46" data-cat="Warnings"><line x1="652" y1="222" x2="803.3" y2="181.4" stroke="#b4b0a8" stroke-width=".8"/><circle cx="803.3" cy="181.4" r="4.2" fill="#e5a700"/></g>
-<g class="d48" data-cat="Warnings"><line x1="652" y1="222" x2="768" y2="115.7" stroke="#b4b0a8" stroke-width=".8"/><circle cx="768" cy="115.7" r="4.2" fill="#e5a700"/></g>
-<g class="d50" data-cat="Warnings"><line x1="652" y1="222" x2="706" y2="73.5" stroke="#b4b0a8" stroke-width=".8"/><circle cx="706" cy="73.5" r="4.2" fill="#e5a700"/></g>
-<g class="d5" data-cat="Incidents"><line x1="652" y1="222" x2="723" y2="293" stroke="#b4b0a8" stroke-width=".8"/><circle cx="723" cy="293" r="4.2" fill="#ff7733"/></g>
-<g class="d10" data-cat="Incidents"><line x1="652" y1="222" x2="755.7" y2="254.7" stroke="#b4b0a8" stroke-width=".8"/><circle cx="755.7" cy="254.7" r="4.2" fill="#ff7733"/></g>
-<g class="d13" data-cat="Incidents"><line x1="652" y1="222" x2="705.4" y2="322.4" stroke="#b4b0a8" stroke-width=".8"/><circle cx="705.4" cy="322.4" r="4.2" fill="#ff7733"/></g>
-<g class="d17" data-cat="Incidents"><line x1="652" y1="222" x2="752.4" y2="291" stroke="#b4b0a8" stroke-width=".8"/><circle cx="752.4" cy="291" r="4.2" fill="#ff7733"/></g>
-<g class="d18" data-cat="Incidents"><line x1="652" y1="222" x2="675.4" y2="342.4" stroke="#b4b0a8" stroke-width=".8"/><circle cx="675.4" cy="342.4" r="4.2" fill="#ff7733"/></g>
-<g class="d21" data-cat="Incidents"><line x1="652" y1="222" x2="731.7" y2="322.2" stroke="#b4b0a8" stroke-width=".8"/><circle cx="731.7" cy="322.2" r="4.2" fill="#ff7733"/></g>
-<g class="d28" data-cat="Incidents"><line x1="652" y1="222" x2="789.2" y2="283" stroke="#b4b0a8" stroke-width=".8"/><circle cx="789.2" cy="283" r="4.2" fill="#ff7733"/></g>
-<g class="d32" data-cat="Incidents"><line x1="652" y1="222" x2="707.6" y2="363.1" stroke="#b4b0a8" stroke-width=".8"/><circle cx="707.6" cy="363.1" r="4.2" fill="#ff7733"/></g>
-<g class="d33" data-cat="Incidents"><line x1="652" y1="222" x2="766.9" y2="321.9" stroke="#b4b0a8" stroke-width=".8"/><circle cx="766.9" cy="321.9" r="4.2" fill="#ff7733"/></g>
-<g class="d35" data-cat="Incidents"><line x1="652" y1="222" x2="802.5" y2="258.1" stroke="#b4b0a8" stroke-width=".8"/><circle cx="802.5" cy="258.1" r="4.2" fill="#ff7733"/></g>
-<g class="d36" data-cat="Incidents"><line x1="652" y1="222" x2="734" y2="353.2" stroke="#b4b0a8" stroke-width=".8"/><circle cx="734" cy="353.2" r="4.2" fill="#ff7733"/></g>
-<g class="d38" data-cat="Incidents"><line x1="652" y1="222" x2="786.2" y2="301" stroke="#b4b0a8" stroke-width=".8"/><circle cx="786.2" cy="301" r="4.2" fill="#ff7733"/></g>
-<g class="d44" data-cat="Incidents"><line x1="652" y1="222" x2="692.5" y2="373" stroke="#b4b0a8" stroke-width=".8"/><circle cx="692.5" cy="373" r="4.2" fill="#ff7733"/></g>
-<g class="d45" data-cat="Incidents"><line x1="652" y1="222" x2="757.7" y2="337.3" stroke="#b4b0a8" stroke-width=".8"/><circle cx="757.7" cy="337.3" r="4.2" fill="#ff7733"/></g>
-<g class="d49" data-cat="Incidents"><line x1="652" y1="222" x2="799.9" y2="275.8" stroke="#b4b0a8" stroke-width=".8"/><circle cx="799.9" cy="275.8" r="4.2" fill="#ff7733"/></g>
-<g class="d2" data-cat="Governance"><line x1="652" y1="222" x2="624.3" y2="249.7" stroke="#b4b0a8" stroke-width=".8"/><circle cx="624.3" cy="249.7" r="4.2" fill="#1a1614"/></g>
-<g class="d6" data-cat="Governance"><line x1="652" y1="222" x2="621" y2="320.2" stroke="#b4b0a8" stroke-width=".8"/><circle cx="621" cy="320.2" r="4.2" fill="#1a1614"/></g>
-<g class="d9" data-cat="Governance"><line x1="652" y1="222" x2="557.1" y2="272.5" stroke="#b4b0a8" stroke-width=".8"/><circle cx="557.1" cy="272.5" r="4.2" fill="#1a1614"/></g>
-<g class="d11" data-cat="Governance"><line x1="652" y1="222" x2="590.3" y2="311.8" stroke="#b4b0a8" stroke-width=".8"/><circle cx="590.3" cy="311.8" r="4.2" fill="#1a1614"/></g>
-<g class="d12" data-cat="Governance"><line x1="652" y1="222" x2="542.6" y2="243.3" stroke="#b4b0a8" stroke-width=".8"/><circle cx="542.6" cy="243.3" r="4.2" fill="#1a1614"/></g>
-<g class="d20" data-cat="Governance"><line x1="652" y1="222" x2="553.6" y2="300.3" stroke="#b4b0a8" stroke-width=".8"/><circle cx="553.6" cy="300.3" r="4.2" fill="#1a1614"/></g>
-<g class="d22" data-cat="Governance"><line x1="652" y1="222" x2="599.4" y2="340.2" stroke="#b4b0a8" stroke-width=".8"/><circle cx="599.4" cy="340.2" r="4.2" fill="#1a1614"/></g>
-<g class="d24" data-cat="Governance"><line x1="652" y1="222" x2="520.3" y2="273.9" stroke="#b4b0a8" stroke-width=".8"/><circle cx="520.3" cy="273.9" r="4.2" fill="#1a1614"/></g>
-<g class="d29" data-cat="Governance"><line x1="652" y1="222" x2="553.5" y2="335.4" stroke="#b4b0a8" stroke-width=".8"/><circle cx="553.5" cy="335.4" r="4.2" fill="#1a1614"/></g>
-<g class="d34" data-cat="Governance"><line x1="652" y1="222" x2="616.1" y2="371.6" stroke="#b4b0a8" stroke-width=".8"/><circle cx="616.1" cy="371.6" r="4.2" fill="#1a1614"/></g>
-<g class="d43" data-cat="Governance"><line x1="652" y1="222" x2="519.6" y2="304.8" stroke="#b4b0a8" stroke-width=".8"/><circle cx="519.6" cy="304.8" r="4.2" fill="#1a1614"/></g>
-<g class="d4" data-cat="Research"><line x1="652" y1="222" x2="584.7" y2="154.7" stroke="#b4b0a8" stroke-width=".8"/><circle cx="584.7" cy="154.7" r="4.2" fill="#a89a1a"/></g>
-<g class="d7" data-cat="Research"><line x1="652" y1="222" x2="551.6" y2="190.3" stroke="#b4b0a8" stroke-width=".8"/><circle cx="551.6" cy="190.3" r="4.2" fill="#a89a1a"/></g>
-<g class="d8" data-cat="Research"><line x1="652" y1="222" x2="602.1" y2="128.2" stroke="#b4b0a8" stroke-width=".8"/><circle cx="602.1" cy="128.2" r="4.2" fill="#a89a1a"/></g>
-<g class="d14" data-cat="Research"><line x1="652" y1="222" x2="556.6" y2="156.4" stroke="#b4b0a8" stroke-width=".8"/><circle cx="556.6" cy="156.4" r="4.2" fill="#a89a1a"/></g>
-<g class="d15" data-cat="Research"><line x1="652" y1="222" x2="629.8" y2="107.7" stroke="#b4b0a8" stroke-width=".8"/><circle cx="629.8" cy="107.7" r="4.2" fill="#a89a1a"/></g>
-<g class="d19" data-cat="Research"><line x1="652" y1="222" x2="575.1" y2="125.3" stroke="#b4b0a8" stroke-width=".8"/><circle cx="575.1" cy="125.3" r="4.2" fill="#a89a1a"/></g>
-<g class="d27" data-cat="Research"><line x1="652" y1="222" x2="519.1" y2="162.9" stroke="#b4b0a8" stroke-width=".8"/><circle cx="519.1" cy="162.9" r="4.2" fill="#a89a1a"/></g>
-<g class="d37" data-cat="Research"><line x1="652" y1="222" x2="594.9" y2="77.2" stroke="#b4b0a8" stroke-width=".8"/><circle cx="594.9" cy="77.2" r="4.2" fill="#a89a1a"/></g>
-<g class="d42" data-cat="Research"><line x1="652" y1="222" x2="534.1" y2="119.5" stroke="#b4b0a8" stroke-width=".8"/><circle cx="534.1" cy="119.5" r="4.2" fill="#a89a1a"/></g>
-<g class="d47" data-cat="Research"><line x1="652" y1="222" x2="499.4" y2="185.4" stroke="#b4b0a8" stroke-width=".8"/><circle cx="499.4" cy="185.4" r="4.2" fill="#a89a1a"/></g>
-<rect x="636.1" y="170.2" width="31.8" height="11.5" fill="#d7d7d0"/><text class="mono" x="652" y="179.4" font-size="9.5" text-anchor="middle" fill="#6a665f">2024</text>
-<rect x="636.1" y="129.1" width="31.8" height="11.5" fill="#d7d7d0"/><text class="mono" x="652" y="138.3" font-size="9.5" text-anchor="middle" fill="#6a665f">2025</text>
-<rect x="636.1" y="88.1" width="31.8" height="11.5" fill="#d7d7d0"/><text class="mono" x="652" y="97.3" font-size="9.5" text-anchor="middle" fill="#6a665f">2026</text>
+<line class="d0" x1="652" y1="222" x2="661.9" y2="212.1" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d1" x1="652" y1="222" x2="658.5" y2="201.3" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d3" x1="652" y1="222" x2="706.2" y2="193.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d16" x1="652" y1="222" x2="720" y2="123" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d23" x1="652" y1="222" x2="780.5" y2="197" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d25" x1="652" y1="222" x2="763.9" y2="133" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d26" x1="652" y1="222" x2="711.1" y2="89.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d30" x1="652" y1="222" x2="792.8" y2="166.5" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d31" x1="652" y1="222" x2="751.4" y2="107.7" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d39" x1="652" y1="222" x2="688.4" y2="70.3" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d40" x1="652" y1="222" x2="784.4" y2="139.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d41" x1="652" y1="222" x2="731.2" y2="87.4" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d46" x1="652" y1="222" x2="803.3" y2="181.4" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d48" x1="652" y1="222" x2="768" y2="115.7" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d50" x1="652" y1="222" x2="706" y2="73.5" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d5" x1="652" y1="222" x2="723" y2="293" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d10" x1="652" y1="222" x2="755.7" y2="254.7" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d13" x1="652" y1="222" x2="705.4" y2="322.4" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d17" x1="652" y1="222" x2="752.4" y2="291" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d18" x1="652" y1="222" x2="675.4" y2="342.4" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d21" x1="652" y1="222" x2="731.7" y2="322.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d28" x1="652" y1="222" x2="789.2" y2="283" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d32" x1="652" y1="222" x2="707.6" y2="363.1" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d33" x1="652" y1="222" x2="766.9" y2="321.9" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d35" x1="652" y1="222" x2="802.5" y2="258.1" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d36" x1="652" y1="222" x2="734" y2="353.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d38" x1="652" y1="222" x2="786.2" y2="301" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d44" x1="652" y1="222" x2="692.5" y2="373" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d45" x1="652" y1="222" x2="757.7" y2="337.3" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d49" x1="652" y1="222" x2="799.9" y2="275.8" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d2" x1="652" y1="222" x2="624.3" y2="249.7" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d6" x1="652" y1="222" x2="621" y2="320.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d9" x1="652" y1="222" x2="557.1" y2="272.5" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d11" x1="652" y1="222" x2="590.3" y2="311.8" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d12" x1="652" y1="222" x2="542.6" y2="243.3" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d20" x1="652" y1="222" x2="553.6" y2="300.3" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d22" x1="652" y1="222" x2="599.4" y2="340.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d24" x1="652" y1="222" x2="520.3" y2="273.9" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d29" x1="652" y1="222" x2="553.5" y2="335.4" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d34" x1="652" y1="222" x2="616.1" y2="371.6" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d43" x1="652" y1="222" x2="519.6" y2="304.8" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d4" x1="652" y1="222" x2="584.7" y2="154.7" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d7" x1="652" y1="222" x2="551.6" y2="190.3" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d8" x1="652" y1="222" x2="602.1" y2="128.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d14" x1="652" y1="222" x2="556.6" y2="156.4" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d15" x1="652" y1="222" x2="629.8" y2="107.7" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d19" x1="652" y1="222" x2="575.1" y2="125.3" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d27" x1="652" y1="222" x2="519.1" y2="162.9" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d37" x1="652" y1="222" x2="594.9" y2="77.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d42" x1="652" y1="222" x2="534.1" y2="119.5" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d47" x1="652" y1="222" x2="499.4" y2="185.4" stroke="#b4b0a8" stroke-width=".8"/>
+<circle class="d0" data-cat="Warnings" cx="661.9" cy="212.1" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d1" data-cat="Warnings" cx="658.5" cy="201.3" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d3" data-cat="Warnings" cx="706.2" cy="193.2" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d16" data-cat="Warnings" cx="720" cy="123" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d23" data-cat="Warnings" cx="780.5" cy="197" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d25" data-cat="Warnings" cx="763.9" cy="133" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d26" data-cat="Warnings" cx="711.1" cy="89.2" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d30" data-cat="Warnings" cx="792.8" cy="166.5" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d31" data-cat="Warnings" cx="751.4" cy="107.7" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d39" data-cat="Warnings" cx="688.4" cy="70.3" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d40" data-cat="Warnings" cx="784.4" cy="139.2" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d41" data-cat="Warnings" cx="731.2" cy="87.4" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d46" data-cat="Warnings" cx="803.3" cy="181.4" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d48" data-cat="Warnings" cx="768" cy="115.7" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d50" data-cat="Warnings" cx="706" cy="73.5" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d5" data-cat="Incidents" cx="723" cy="293" r="4.2" fill="#bd4a28"/>
+<circle class="d10" data-cat="Incidents" cx="755.7" cy="254.7" r="4.2" fill="#bd4a28"/>
+<circle class="d13" data-cat="Incidents" cx="705.4" cy="322.4" r="4.2" fill="#bd4a28"/>
+<circle class="d17" data-cat="Incidents" cx="752.4" cy="291" r="4.2" fill="#bd4a28"/>
+<circle class="d18" data-cat="Incidents" cx="675.4" cy="342.4" r="4.2" fill="#bd4a28"/>
+<circle class="d21" data-cat="Incidents" cx="731.7" cy="322.2" r="4.2" fill="#bd4a28"/>
+<circle class="d28" data-cat="Incidents" cx="789.2" cy="283" r="4.2" fill="#bd4a28"/>
+<circle class="d32" data-cat="Incidents" cx="707.6" cy="363.1" r="4.2" fill="#bd4a28"/>
+<circle class="d33" data-cat="Incidents" cx="766.9" cy="321.9" r="4.2" fill="#bd4a28"/>
+<circle class="d35" data-cat="Incidents" cx="802.5" cy="258.1" r="4.2" fill="#bd4a28"/>
+<circle class="d36" data-cat="Incidents" cx="734" cy="353.2" r="4.2" fill="#bd4a28"/>
+<circle class="d38" data-cat="Incidents" cx="786.2" cy="301" r="4.2" fill="#bd4a28"/>
+<circle class="d44" data-cat="Incidents" cx="692.5" cy="373" r="4.2" fill="#bd4a28"/>
+<circle class="d45" data-cat="Incidents" cx="757.7" cy="337.3" r="4.2" fill="#bd4a28"/>
+<circle class="d49" data-cat="Incidents" cx="799.9" cy="275.8" r="4.2" fill="#bd4a28"/>
+<circle class="d2" data-cat="Governance" cx="624.3" cy="249.7" r="4.2" fill="#1a1614"/>
+<circle class="d6" data-cat="Governance" cx="621" cy="320.2" r="4.2" fill="#1a1614"/>
+<circle class="d9" data-cat="Governance" cx="557.1" cy="272.5" r="4.2" fill="#1a1614"/>
+<circle class="d11" data-cat="Governance" cx="590.3" cy="311.8" r="4.2" fill="#1a1614"/>
+<circle class="d12" data-cat="Governance" cx="542.6" cy="243.3" r="4.2" fill="#1a1614"/>
+<circle class="d20" data-cat="Governance" cx="553.6" cy="300.3" r="4.2" fill="#1a1614"/>
+<circle class="d22" data-cat="Governance" cx="599.4" cy="340.2" r="4.2" fill="#1a1614"/>
+<circle class="d24" data-cat="Governance" cx="520.3" cy="273.9" r="4.2" fill="#1a1614"/>
+<circle class="d29" data-cat="Governance" cx="553.5" cy="335.4" r="4.2" fill="#1a1614"/>
+<circle class="d34" data-cat="Governance" cx="616.1" cy="371.6" r="4.2" fill="#1a1614"/>
+<circle class="d43" data-cat="Governance" cx="519.6" cy="304.8" r="4.2" fill="#1a1614"/>
+<circle class="d4" data-cat="Research" cx="584.7" cy="154.7" r="4.2" fill="#677331"/>
+<circle class="d7" data-cat="Research" cx="551.6" cy="190.3" r="4.2" fill="#677331"/>
+<circle class="d8" data-cat="Research" cx="602.1" cy="128.2" r="4.2" fill="#677331"/>
+<circle class="d14" data-cat="Research" cx="556.6" cy="156.4" r="4.2" fill="#677331"/>
+<circle class="d15" data-cat="Research" cx="629.8" cy="107.7" r="4.2" fill="#677331"/>
+<circle class="d19" data-cat="Research" cx="575.1" cy="125.3" r="4.2" fill="#677331"/>
+<circle class="d27" data-cat="Research" cx="519.1" cy="162.9" r="4.2" fill="#677331"/>
+<circle class="d37" data-cat="Research" cx="594.9" cy="77.2" r="4.2" fill="#677331"/>
+<circle class="d42" data-cat="Research" cx="534.1" cy="119.5" r="4.2" fill="#677331"/>
+<circle class="d47" data-cat="Research" cx="499.4" cy="185.4" r="4.2" fill="#677331"/>
+<rect x="623.2" y="170.2" width="57.7" height="11.5" fill="#d7d7d0"/><text class="mono" x="652" y="179.4" font-size="9.5" text-anchor="middle" fill="#605b55">JAN 2024</text>
+<rect x="623.2" y="129.1" width="57.7" height="11.5" fill="#d7d7d0"/><text class="mono" x="652" y="138.3" font-size="9.5" text-anchor="middle" fill="#605b55">JAN 2025</text>
+<rect x="623.2" y="88.1" width="57.7" height="11.5" fill="#d7d7d0"/><text class="mono" x="652" y="97.3" font-size="9.5" text-anchor="middle" fill="#605b55">JAN 2026</text>
 <circle cx="652" cy="222" r="2.4" fill="#1a1614"/>
-<g class="call"><path d="M706 68.5 L706 45" stroke="#e5a700" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+<g class="call"><path d="M706 68.5 L706 45" stroke="#1a1614" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
 <rect x="582" y="23" width="248" height="22" fill="#d7d7d0" stroke="#9d9b94" stroke-width="1"/>
-<circle cx="593" cy="34" r="3.4" fill="#e5a700"/>
+<circle cx="593" cy="34" r="3.4" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
 <text class="mono" x="602" y="37.5" font-size="10" fill="#1a1614">LATEST · SEP 24, 2026 · WARNINGS</text></g>
 </svg>

@@ -34,14 +34,14 @@ export function buildReadme(facts) {
   const raw = facts.latest;
   const e = { ...raw, title: md(raw.title), happened: md(raw.happened), evidence: md(raw.evidence), uncertain: md(raw.uncertain), source: md(raw.source) };
   const counts = CATEGORIES.map((c) => `${facts.byCategory[c]} ${c.toLowerCase()}`).join(', ');
-  const alt = `${HEADLINE}. ${facts.entries} dated, sourced entries drawn as a burst, one dot per entry: ${counts}. Farther from the centre is newer.`;
+  const alt = `${HEADLINE}. ${facts.entries} dated, sourced entries drawn as a burst, one dot per entry: ${counts}. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency.`;
   return `${MARKER}
 
 <a href="${SITE}">${pic('masthead', alt)}</a>
 
 **[SafeAI.watch](${SITE})** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. ${LEDE.split('. ').slice(1).join('. ')}
 
-The record holds ${facts.entries} entries from ${longDate(facts.first)} to ${longDate(facts.last)} (${counts}), drawn from ${facts.publishers} publishers. Read it on the site: [Latest](${SITE}/latest), [Timeline](${SITE}/timeline), [About](${SITE}/about).
+The record holds ${facts.entries} entries from ${longDate(facts.first)} to ${longDate(facts.last)} (${counts}), drawn from ${facts.publishers} publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](${SITE}/latest), [Timeline](${SITE}/timeline), [About](${SITE}/about).
 
 ## How an entry reads
 
@@ -66,19 +66,21 @@ npm ci
 npm run dev
 \`\`\`
 
-\`npm run build\` writes the static site to \`dist/\`, and \`npm run preview\` serves that build. The build first runs \`npm run film:lint\`, which checks the About page film's script against its facts.
+The dev server runs at http://localhost:4321. \`npm run build\` writes the static site to \`dist/\`, and \`npm run preview\` serves that build. The build first runs \`npm run film:lint\`, which checks the About page film's script against its facts.
 
 ## Add or correct an entry
 
-Entries live in [\`src/data/events.json\`](src/data/events.json). Each one has exactly these keys: \`date\` (the source's publication date, \`YYYY-MM-DD\`), \`category\` (${CATEGORIES.join(', ')}), \`title\`, \`happened\`, \`evidence\`, \`uncertain\`, \`source\` (publisher and source type, such as "RAND · Research report") and \`url\` (https only). [\`src/data/record.ts\`](src/data/record.ts) checks every entry at build time and fails the build on a missing, empty or extra key, an unknown category or a bad date.
+Entries live in [\`src/data/events.json\`](src/data/events.json). Each one has exactly these keys: \`date\` (the source's publication date, \`YYYY-MM-DD\`), \`category\` (one of ${CATEGORIES.map((c) => `\`"${c}"\``).join(', ')}), \`title\`, \`happened\`, \`evidence\`, \`uncertain\`, \`source\` (publisher and source type, such as "RAND · Research report") and \`url\` (https only). [\`src/data/record.ts\`](src/data/record.ts) checks every entry when the site builds and fails the build on a missing, empty or extra key, an unknown category, a date not written as \`YYYY-MM-DD\`, or a link that is not https. Run \`npm run build\` to check a change; CI runs the same build on every pull request.
 
-The art above is generated from the same file. After changing the record, run \`node scripts/readme/build.mjs\` and commit \`README.md\` and \`${ASSETS}/\` with it; CI fails while they are out of date.
+The art above is generated from the same file. After changing the record, run \`node scripts/readme/build.mjs\` and commit \`README.md\` and \`${ASSETS}/\` with it; CI fails while they are out of date. Changes land through pull requests, and a merge to \`main\` deploys the site.
+
+Spotted an error in an entry? [Open an issue](https://github.com/ryanportfolio/SafeAI.Watch/issues) with the entry's title and a source that shows the correction.
 
 ## What the project holds to
 
 - Every entry links its original source.
 - Each entry separates what happened, what the evidence shows and what remains uncertain.
-- No invented incidents, numbers or quotes. Illustrations are conceptual and carry no data.
+- No invented incidents, numbers or quotes. The site's illustrations are conceptual and carry no data; the chart at the top of this README is the exception, drawn from the record.
 - No third-party trackers or analytics.
 
 ## Layout
@@ -89,12 +91,13 @@ The art above is generated from the same file. After changing the record, run \`
 | \`src/data/\` | The record and its build-time checks |
 | \`src/scripts/visuals/\` | The homepage's WebGL visuals |
 | \`src/scripts/film/\`, \`film/\` | The About page film and its script |
+| \`scripts/film/\` | The film's script check (\`npm run film:lint\`) and video export |
 | \`scripts/brand/\` | The logo, icons and font subset (\`npm run brand\`) |
 | \`scripts/readme/\` | This README and its art |
 
 ## Licence
 
-Code is under the [MIT licence](LICENSE). The bundled fonts (Geist, Geist Mono, Newsreader) are under the SIL Open Font License; their texts are in [\`LICENSES/\`](LICENSES).
+Code is under the [MIT licence](LICENSE). Entries summarise and quote their sources; quoted material belongs to its authors. The bundled fonts (Geist, Geist Mono, Newsreader) are under the SIL Open Font License; their texts are in [\`LICENSES/\`](LICENSES).
 `;
 }
 
