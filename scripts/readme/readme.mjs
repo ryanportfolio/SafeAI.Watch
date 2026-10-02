@@ -18,6 +18,11 @@ export function nodeRange() {
   return min ? `${min[1]} or later` : engines;
 }
 
+/*
+ * A bare <picture>, never wrapped in <a>: on repository pages GitHub's sanitizer hoists
+ * the <img> out of an <a>-wrapped <picture> and drops every <source>, so readers would
+ * only ever get the light, wide variant (verified on the blob view, 2026-10-02).
+ */
 function pic(base, alt) {
   return `<picture>
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="${ASSETS}/${base}-narrow-dark.svg">
@@ -37,7 +42,7 @@ export function buildReadme(facts) {
   const alt = `${HEADLINE}. ${facts.entries} dated, sourced entries drawn as a burst, one dot per entry: ${counts}. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency.`;
   return `${MARKER}
 
-<a href="${SITE}">${pic('masthead', alt)}</a>
+${pic('masthead', alt)}
 
 **[SafeAI.watch](${SITE})** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. ${LEDE.split('. ').slice(1).join('. ')}
 
@@ -105,6 +110,7 @@ Code is under the [MIT licence](LICENSE). Entries summarise and quote their sour
 export function checkReadme(md, facts, root = ROOT) {
   const bad = [];
   if (!md.startsWith(MARKER)) bad.push('generated marker missing from line 1');
+  if (/<a\b[^>]*>\s*<picture>/.test(md)) bad.push('a <picture> is wrapped in <a>; GitHub drops its <source> variants');
   for (const need of ['## Run it locally', 'npm ci', 'npm run dev', '## Licence', '## Add or correct an entry']) {
     if (!md.includes(need)) bad.push(`required text missing: ${need}`);
   }
