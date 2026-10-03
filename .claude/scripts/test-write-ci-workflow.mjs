@@ -103,14 +103,68 @@ test("TypeScript project references typecheck in build mode", (t) => {
   ],
 }
 `;
+  const leaves = { "tsconfig.app.json": '{ "compilerOptions": { "noEmit": true }, "include": ["src"] }', "tsconfig.node.json": '{ "include": ["vite.config.ts"] }' };
   const ts = (typescript, extra = {}) =>
-    yamlFor(project(t, { "package.json": { devDependencies: { typescript }, scripts: { build: "vite build" } }, "tsconfig.json": refs, "package-lock.json": "{}", ...extra }));
+    yamlFor(project(t, { "package.json": { devDependencies: { typescript }, scripts: { build: "vite build" } }, "tsconfig.json": refs, "package-lock.json": "{}", ...leaves, ...extra }));
   // tsc accepts --noEmit with --build from 5.6.
   assert.match(ts("^5.9.3"), /- name: Typecheck\n {8}run: npx tsc -b --noEmit\n/);
   assert.match(ts("~7.0.2"), /run: npx tsc -b --noEmit\n/);
   // Older or unpinned minor versions reject the pair (TS5094), so plain build mode.
   for (const v of ["^5", "~5.5.4", "4.9.5", "latest"]) assert.match(ts(v), /run: npx tsc -b\n/, v);
   assert.match(ts("^5.6.0", { "pnpm-lock.yaml": "" }), /run: pnpm exec tsc -b --noEmit\n/);
+
+  // --noEmit reaches every project, and a project with inputs may not reference one that does not
+  // emit (TS6310, checked with TypeScript 5.9.3). A referenced project that references another,
+  // a root with inputs of its own, or a reference that cannot be read gets plain build mode.
+  const chain = { "tsconfig.app.json": '{ "compilerOptions": { "composite": true }, "references": [{ "path": "./lib" }] }', "lib/tsconfig.json": '{ "compilerOptions": { "composite": true } }' };
+  assert.match(ts("^5.9.3", chain), /run: npx tsc -b\n/);
+  const rootInputs = '{ "include": ["src"], "references": [{ "path": "./lib" }] }';
+  assert.match(ts("^5.9.3", { "tsconfig.json": rootInputs, "lib/tsconfig.json": "{}" }), /run: npx tsc -b\n/);
+  assert.match(ts("^5.9.3", { "tsconfig.json": '{ "references": [{ "path": "./lib" }] }', "lib/tsconfig.json": "{}" }), /run: npx tsc -b\n/, "no files key: default include");
+  const leafOnly = '{ "files": [], "references": [{ "path": "./lib" }] }';
+  assert.match(ts("^5.9.3", { "tsconfig.json": leafOnly, "lib/tsconfig.json": "{}" }), /run: npx tsc -b --noEmit\n/, "directory reference");
+  assert.match(ts("^5.9.3", { "tsconfig.json": leafOnly }), /run: npx tsc -b\n/, "missing reference");
+  // An empty include is no inputs too, so a leaf relying on --noEmit (TS5096 without it) keeps it.
+  for (const root of ['{ "files": [], "include": [], "references": [{ "path": "./lib" }] }', '{ "include": [], "references": [{ "path": "./lib" }] }']) {
+    assert.match(ts("^5.9.3", { "tsconfig.json": root, "lib/tsconfig.json": "{}" }), /run: npx tsc -b --noEmit\n/, root);
+  }
+  // Inputs inherited through extends count; an unreadable base gets plain build mode.
+  const extending = (base) => ({ "tsconfig.json": '{ "extends": "./tsconfig.base.json", "files": [], "references": [{ "path": "./lib" }] }', "lib/tsconfig.json": "{}", "tsconfig.base.json": base });
+  assert.match(ts("^5.9.3", extending('{ "include": ["src/**/*.ts"] }')), /run: npx tsc -b\n/);
+  assert.match(ts("^5.9.3", extending('{ "compilerOptions": { "strict": true } }')), /run: npx tsc -b --noEmit\n/);
+  const { "tsconfig.base.json": _, ...missingBase } = extending("");
+  assert.match(ts("^5.9.3", missingBase), /run: npx tsc -b\n/, "missing base");
+  // A package base is resolved by the project's own tsc --showConfig. Without TypeScript in
+  // node_modules it reads as unknown; a root that sets both keys itself needs no base at all.
+  const pkgRoot = { "tsconfig.json": '{ "extends": "@acme/tsconfig", "files": [], "references": [{ "path": "./lib" }] }', "lib/tsconfig.json": "{}" };
+  const pkgBase = { "node_modules/@acme/tsconfig/tsconfig.json": "{}" };
+  assert.match(ts("^5.9.3", { ...pkgRoot, ...pkgBase }), /run: npx tsc -b\n/, "package base without TypeScript installed");
+  const ownKeys = '{ "extends": "@acme/tsconfig", "files": [], "include": [], "references": [{ "path": "./lib" }] }';
+  assert.match(ts("^5.9.3", { ...pkgRoot, "tsconfig.json": ownKeys }), /run: npx tsc -b --noEmit\n/, "own files and include");
+  // A stand-in tsc that checks its arguments and prints a --showConfig result, or fails.
+  const tsc = (shown) => ({
+    "node_modules/typescript/bin/tsc": [
+      "const [p, config, flag] = process.argv.slice(2);",
+      'if (p !== "-p" || !config.endsWith("tsconfig.json") || flag !== "--showConfig") process.exit(3);',
+      shown === null ? "process.exit(1);" : `process.stdout.write(${JSON.stringify(JSON.stringify(shown))});`,
+    ].join("\n"),
+  });
+  const libRefs = [{ path: "./lib" }];
+  assert.match(ts("^5.9.3", { ...pkgRoot, ...pkgBase, ...tsc({ compilerOptions: {}, references: libRefs }) }), /run: npx tsc -b --noEmit\n/, "tsc shows no inputs");
+  assert.match(ts("^5.9.3", { ...pkgRoot, ...pkgBase, ...tsc({ files: ["./src/a.ts"], include: ["src"], references: libRefs }) }), /run: npx tsc -b\n/, "tsc shows inputs");
+  assert.match(ts("^5.9.3", { ...pkgRoot, ...pkgBase, ...tsc({ include: ["nothing/**/*.ts"], references: libRefs }) }), /run: npx tsc -b\n/, "an include pattern counts");
+  assert.match(ts("^5.9.3", { ...pkgRoot, ...pkgBase, ...tsc(null) }), /run: npx tsc -b\n/, "tsc fails");
+  // --showConfig omits the default include too, so neither key proves nothing without the root's own files.
+  const noFilesKey = '{ "extends": "@acme/tsconfig", "references": [{ "path": "./lib" }] }';
+  assert.match(ts("^5.9.3", { ...pkgRoot, "tsconfig.json": noFilesKey, ...pkgBase, ...tsc({ compilerOptions: {}, references: libRefs }) }), /run: npx tsc -b\n/, "default include");
+  // A typecheck script wins before tsc is ever run.
+  const scripted = { ...pkgRoot, ...pkgBase, "node_modules/typescript/bin/tsc": 'require("fs").writeFileSync("tsc-ran", ""); process.stdout.write("{}");' };
+  const scriptedRoot = project(t, { "package.json": { devDependencies: { typescript: "^5.9.3" }, scripts: { typecheck: "tsc -b" } }, ...scripted });
+  assert.match(yamlFor(scriptedRoot), /run: npm run typecheck\n/);
+  assert.equal(fs.existsSync(path.join(scriptedRoot, "tsc-ran")), false, "tsc not run for a typecheck script");
+  // A byte order mark at the start of a tsconfig is not a parse failure.
+  const bom = String.fromCharCode(0xfeff);
+  assert.match(ts("^5.9.3", { "tsconfig.json": bom + leafOnly, "lib/tsconfig.json": `${bom}{}` }), /run: npx tsc -b --noEmit\n/, "byte order mark");
 
   // An empty list, or references only inside a comment or string, keeps tsc --noEmit.
   const noRefs = (tsconfig) =>
@@ -209,6 +263,41 @@ test("Python tools count as installed only from what the install step installs",
   assert.match(reqDev, / {10}pip install -r requirements-dev\.txt\n {6}- name: Test\n {8}run: python -m pytest\n/);
   // A commented-out requirement is not installed.
   assert.match(yamlFor(project(t, { "requirements.txt": "requests  # pytest later\n", ...testFile })), / {10}pip install pytest\n/);
+
+  // A declaration with an environment marker may be skipped on the ubuntu runner, so it does not count.
+  const marked = 'pytest; sys_platform == "win32"';
+  assert.match(yamlFor(project(t, { "requirements.txt": `requests\n${marked}\n`, ...testFile })), / {10}pip install pytest\n/);
+  const pipMarked = yamlFor(project(t, { "pyproject.toml": `[project]\nname = "x"\ndependencies = [\n  "requests",\n  '${marked}',\n]\n`, ...testFile }));
+  assert.match(pipMarked, / {10}pip install -e \.\n {10}pip install pytest\n/);
+  const cfgMarked = yamlFor(project(t, { ...cfg(`test =\n    ${marked}\n    mypy\n`) }));
+  assert.match(cfgMarked, / {10}pip install -e "\.\[test\]"\n {10}pip install pytest\n/);
+  const uvMarked = yamlFor(project(t, { "pyproject.toml": py(`[dependency-groups]\ndev = ["pytest; sys_platform == 'win32'", "mypy"]\n`), "uv.lock": "", ...testFile }));
+  assert.match(uvMarked, /run: uv run --with pytest pytest\n/);
+  // A marker on a continued line, or written as a TOML escape, is still a marker.
+  assert.match(yamlFor(project(t, { "requirements.txt": 'pytest \\\n  ; sys_platform == "win32"\n', ...testFile })), / {10}pip install pytest\n/);
+  assert.doesNotMatch(yamlFor(project(t, { "requirements.txt": "pytest \\\n  >=8\n", ...testFile })), /pip install pytest/, "continued line without a marker");
+  const escaped = `[project]\nname = "x"\ndependencies = ["pytest\\u003b sys_platform == 'win32'"]\n`;
+  assert.match(yamlFor(project(t, { "pyproject.toml": escaped, ...testFile })), / {10}pip install pytest\n/);
+  assert.match(yamlFor(project(t, { "pyproject.toml": escaped, "uv.lock": "", ...testFile })), /run: uv run --with pytest pytest\n/);
+  // The same declaration without the marker still counts.
+  assert.doesNotMatch(yamlFor(project(t, { "requirements.txt": "requests\npytest\n", ...testFile })), /pip install pytest/);
+});
+
+test("requirements filenames are quoted for the shell", (t) => {
+  const testFile = { "tests/test_a.py": "def test_a():\n    pass\n" };
+  const y = yamlFor(project(t, { "requirements dev.txt": "pytest\n", "requirements-o'k.txt": "requests\n", ...testFile }));
+  assert.match(y, / {10}pip install -r 'requirements dev\.txt'\n/);
+  assert.ok(y.includes(`          pip install -r 'requirements-o'\\''k.txt'\n`), y);
+  assert.match(y, /- name: Test\n {8}run: python -m pytest\n/, "pytest from the quoted file counts as installed");
+  assert.match(yamlFor(project(t, { "requirements.txt": "requests\n", ...testFile })), /pip install -r requirements\.txt\n/, "plain names stay plain");
+});
+
+test("quoted requirements filenames reach pip as one argument", { skip: spawnSync("sh", ["-c", "true"]).status === 0 ? false : "no POSIX sh on this machine" }, (t) => {
+  for (const name of ["requirements dev.txt", "requirements-o'k $HOME.txt"]) {
+    const line = yamlFor(project(t, { [name]: "", "test_a.py": "" })).split("\n").find((l) => l.includes("pip install -r"));
+    const r = spawnSync("sh", ["-c", `set -- ${line.trim().slice("pip install -r ".length)}; printf '%s\\n' "$#" "$1"`], { encoding: "utf8" });
+    assert.equal(r.stdout, `1\n${name}\n`, line);
+  }
 });
 
 test("TOML section headers with a trailing comment or inner spaces read like plain ones", (t) => {
@@ -302,6 +391,7 @@ test("generated YAML parses", { skip: python ? false : "no Python with PyYAML on
   const fixtures = [
     { "package.json": { devDependencies: { typescript: "5" }, scripts: { test: "x" } }, "tsconfig.json": "{}", "yarn.lock": "", ".yarnrc.yml": "" },
     { "pyproject.toml": '[project]\nname = "x"\n[project.optional-dependencies]\ndev = ["pytest"]\n', "tests/test_a.py": "" },
+    { "requirements dev's.txt": "", "test_a.py": "" },
     { "go.mod": "go 1.22\n", "Cargo.toml": "", ".claude/scripts/sync-codex-skills.mjs": "" },
     { ".claude/scripts/sync-codex-skills.mjs": "" },
   ];
