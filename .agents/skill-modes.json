@@ -26,7 +26,6 @@
     "init-project": "native",
     "lab": "native",
     "long-horizon": "native",
-    "long-horizon-swarm": "disabled",
     "long-horizon-workflows": "disabled",
     "optimize-context": "native",
     "opus-fullreview": "native",
@@ -39,6 +38,10 @@
     "why": "native",
     "wow-loop": "native",
     "writing": "native",
-    "writing-plans": "native"
+    "writing-plans": "native",
+    "deep-plan": "native",
+    "merge": "disabled",
+    "servers": "native",
+    "wrapup": "native"
   }
 }
