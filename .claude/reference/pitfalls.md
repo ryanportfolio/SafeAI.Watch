@@ -95,16 +95,19 @@ with its own connection) cannot share that profile: the second gets
 ~10-minute deadlock between a verifier subagent and its main session.
 
 Fixes: the template ships `.mcp.json` defining `playwright-iso`
-(`@playwright/mcp@latest --isolated`, in-memory profile, N concurrent agents);
-or drive an independent Chrome via a repo-local `playwright-core` +
-`scripts/lib/launch-chrome.mjs`. Never point a verifier subagent and the main
+(`@playwright/mcp@latest --isolated`, in-memory profile), but that is one
+browser per session, shared by its subagents: the main session and every
+subagent drive the same page. Parallel subagents each drive an independent
+Chrome via a repo-local `playwright-core` + `scripts/lib/launch-chrome.mjs`
+(`launchPlacedChrome()`). Never point a verifier subagent and the main
 session at the shared plugin browser at the same time.
 
 Same shape, different tool (2026-09-09): the desktop app's Browser pane
 (`mcp__Claude_Browser__*`, `preview_start`) is one Chrome per app. A second
 session or subagent asking for it gets "Another task's Chrome owns browser
 slot". `--isolated` does not apply there; that string comes from the app, not
-from this repo. Use `playwright-iso` or `launchPlacedChrome()` instead.
+from this repo. Use `launchPlacedChrome()` instead, or `playwright-iso` from one
+agent at a time.
 
 ## Bash tool cwd resets between calls (2026-08-29)
 
