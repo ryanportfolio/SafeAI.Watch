@@ -56,8 +56,18 @@ the open original behind it, in this order:
    the event (gate 1).
 
 Search by the people, organizations and event names in the headline and standfirst, within
-two days of the article's date. Wayback captures may be used to read a page, never to get
-around a paywall, and never as the entry's link when the live original is reachable.
+two days of the article's date.
+
+5. Only when the paywalled piece is itself the original (an op-ed, an exclusive interview,
+   an investigation whose findings exist nowhere else, a feature that is the event) and
+   steps 1 to 4 found no open route: read a Wayback capture of that same URL to check the
+   facts. The entry links the original, its `source` type ends in `(paywalled)`, and
+   every quote and figure must appear in the captured text. Name the capture in the PR's
+   source log. No other paywall-bypass service. A capture without the body counts as no
+   route: claim nothing beyond the public headline, standfirst, byline and date.
+
+Never use a capture when an open original exists, and never link a capture when the live
+original is reachable.
 
 Example: Bloomberg, October 13, 2026, "Moderna founder calls for urgent regulation of AI
 agents" (paywalled). Find where the founder said it: an interview video, a conference
