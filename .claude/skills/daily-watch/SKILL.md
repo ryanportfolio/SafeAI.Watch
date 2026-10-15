@@ -1,6 +1,6 @@
 ---
 name: daily-watch
-description: "Daily unattended research run for SafeAI.watch: scan labs, evaluators, governments, courts, preprints, news and X for new AI safety and security events, keep only what clears the publish bar, and open or update one PR through the add-source workflow. Most days it publishes nothing. Use for /daily-watch or when the safeai-daily-watch scheduled task fires."
+description: "Daily unattended research run for SafeAI.watch: scan labs, evaluators, governments, courts, preprints, news, and X and Bluesky for early signals of new AI safety and security events, keep only what clears the publish bar, and open or update one PR through the add-source workflow. Most days it publishes nothing. Use for /daily-watch or when the safeai-daily-watch scheduled task fires."
 ---
 
 # Daily watch
@@ -26,7 +26,7 @@ Codex review; do not run `/codex-review` yourself.
 - Subagents inherit the session model; omit `model`.
 - Paths are absolute in every command (Bash cwd resets each call). Prefix `git show
   <rev>:<path>` with `MSYS_NO_PATHCONV=1`. Never use EnterWorktree or Agent `isolation`.
-- X searches go through `node ~/.claude/skills/twitter-search/search.mjs`, one at a time;
+- X keyword searches go through `node ~/.claude/skills/twitter-search/search.mjs`, one at a time;
   never curl the API, never run two searches at once.
 
 ## State
@@ -51,10 +51,10 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    and keep the PR whose `headRefName` starts with `daily-watch/`.
    The record to dedupe against is `origin/main`'s `events.json` plus that PR branch's, if
    one is open.
-2. **Scan.** Launch the four lanes in [watchlist.md](references/watchlist.md) as parallel
+2. **Scan.** Launch the five lanes in [watchlist.md](references/watchlist.md) as parallel
    research subagents in one message. Give each the window, its lane, the candidate format,
    the sensitive-material rule, and the state folder path; each writes
-   `runs/<date>/lane-<name>.jsonl`. Only the X lane uses the twitter script. Re-check
+   `runs/<date>/lane-<name>.jsonl`. Only the signals lane uses the twitter script. Re-check
    `held` candidates from `seen.jsonl` that are under seven days old.
 3. **Triage.** Merge the lanes. Drop anything already in the record (same URL, or the same
    event from any source) or already `skipped`/`published` in `seen.jsonl`. Judge the rest

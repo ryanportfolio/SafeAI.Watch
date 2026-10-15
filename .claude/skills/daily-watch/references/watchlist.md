@@ -1,6 +1,6 @@
 # Watchlist
 
-Four lanes, one research subagent each. Each searches the window with WebSearch and fetches
+Five lanes, one research subagent each. Each searches the window with WebSearch and fetches
 pages with curl to file (browser user-agent) or WebFetch with a narrow question, following
 add-source `references/sourcing.md`. Lanes read listing pages and search results, not whole
 articles; deep reading happens at drafting time.
@@ -51,25 +51,56 @@ triage applies the bar.
 - Leads only: every candidate from this lane needs a `primaryUrl` traced per bar.md, or
   `access` set to say why not. Run the paywall routine for paywalled leads.
 
-### research: Preprints and X
+### research: Preprints
 
 - arXiv new submissions in cs.AI, cs.CL, cs.CR, cs.LG matching safety terms (alignment,
   deception, scheming, sabotage, jailbreak, evaluation awareness, reward hacking, agent
   security, biosecurity, dangerous capabilities, control). Prefer papers from labs,
   government institutes and known evaluators.
-- X, through `node ~/.claude/skills/twitter-search/search.mjs`, run one search at a time
-  (free tier: one request every 5 seconds, shared with every session). Start with one page.
-  If the script fails with `402 Payment Required` ("Credits is not enough"), stop using
-  it for the run, note it in the report and PR body as a gap, and keep only X posts that
-  other lanes surfaced by URL.
-  - `--user` for: OpenAI, GoogleDeepMind, AISecurityInst, METR_Evals, PalisadeAI,
-    DarioAmodei, sama, demishassabis, janleike, EvanHub, ylecun, geoffreyhinton,
-    Yoshua_Bengio (checked October 15, 2026). Anthropic and Apollo Research: take the
-    current handle from their own sites and add it here once confirmed.
-  - Searches such as `"AI safety" (resign OR resigned OR warning) since:<start> min_faves:200 -filter:replies`
-    and `(incident OR breach OR misuse) (AI agent OR model) since:<start> min_faves:200`.
-  - A post is a primary source only for what its author says. Fetch its text with
-    `https://api.fxtwitter.com/<user>/status/<id>` before using it.
+
+### signals: X and other social posts
+
+Labs announce on their own sites, and the news lane catches what outlets cover, so this
+lane is not for official lab news. It looks for what surfaces on X first or only: a
+researcher resigning or warning in their own words, an insider's account, an evaluator's
+early result, a first-hand incident report, a jailbreak or misuse shown in public, and
+threads that point to a paper or filing other lanes missed. A post is a primary source
+only for what its author says; anything it reports about others is a lead to trace.
+
+Routes, in order. Each one that fails (404, 429, 402) is skipped for the run and named in
+the report; the lane carries on with the rest.
+
+1. **Accounts (free).** For each handle,
+   `curl -s "https://api.fxtwitter.com/2/profile/<handle>/statuses?count=20"`; retry a 404
+   up to three times, a second apart. Keep posts whose `created_timestamp` is inside the
+   window. Results include reposts: when `reposted_by` is set, `author.screen_name` is
+   the original poster, so attribute the post to them and treat the repost as a pointer.
+   Handles (all resolved October 15, 2026): researchers and former lab staff `janleike`,
+   `EvanHub`, `DKokotajlo`, `Miles_Brundage`, `JeffLadish`, `BethMayBarnes`,
+   `MariusHobbhahn`, `bshlgrs`, `sjgadler`, `hilbertspaess`, `hlntnr`, `ohlennart`,
+   `Yoshua_Bengio`, `geoffreyhinton`, `ESYudkowsky`; evaluators `METR_Evals`,
+   `PalisadeAI`, `apolloresearch`, `AISecurityInst`; commentary that often surfaces
+   items first `TheZvi`; public jailbreaks `elder_plinius` (a lead for misuse shown in
+   public; never copy jailbreak prompts or method detail).
+2. **Keyword search (paid, when credit allows).** `node
+   ~/.claude/skills/twitter-search/search.mjs "<query>" --latest`, one search at a time
+   (one request every 5 seconds, shared with every session), one page each, about ten
+   queries a run. On `402 Payment Required` ("Credits is not enough"), stop using it for
+   the run and note it. Queries such as:
+   - `(resigned OR "I left" OR "I quit" OR whistleblower) (OpenAI OR Anthropic OR DeepMind OR xAI OR Meta) since:<start> min_faves:100 -filter:replies`
+   - `(model OR agent) (sabotage OR "tried to" OR deceived OR "escaped" OR "deleted") (eval OR test OR production) since:<start> min_faves:100`
+   - `(jailbreak OR misuse OR breach OR incident) (AI agent OR LLM) since:<start> min_faves:200`
+   - `("AI safety" OR alignment) (warning OR "open letter" OR statement) since:<start> min_faves:200`
+3. **Web search (free).** WebSearch `site:x.com` with the same themes and the window's
+   month. It cannot filter by date or account, so check each hit's date before use.
+4. **Bluesky (free, official API).**
+   `curl -s "https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=<query>&sort=latest&since=<start>T00:00:00Z&limit=25"`
+   (the `public.api.bsky.app` host refuses search). Useful for researchers who moved
+   there; few labs post there.
+
+Before using any X post, fetch its text and exact date with
+`https://api.fxtwitter.com/<user>/status/<id>`; if that fails,
+`https://cdn.syndication.twimg.com/tweet-result?id=<id>&token=a`.
 
 Keep this list current: when a run finds a recurring source not listed here, name it in the
 PR body as a suggested addition.
