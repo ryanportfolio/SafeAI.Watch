@@ -172,3 +172,7 @@ The repo has no Prettier config, so `npx prettier --write` falls back to default
 ## `npm run build` fails in a worktree nested inside the main checkout (2026-10-02)
 
 In a worktree under `C:\Users\Home\CoreWise\SafeAI.Watch\.claude\worktrees\`, `npm ci && npm run build` failed with `[vite] ... Tsconfig not found astro/tsconfigs/strict`, although `node_modules/astro/tsconfigs/strict.json` existed in the worktree. The same commit copied outside the repo tree (`git archive HEAD | tar -x -C <dir>`) built cleanly, and the main checkout above it has a `tsconfig.json` but no `node_modules`, so resolution reached the parent's config. Build-check a nested worktree from an archive copy outside the repo, or run `npm ci` in the main checkout first. CI and Vercel use a plain checkout and are unaffected. Don't change `tsconfig.json` for this.
+
+## ai.mil and media.defense.gov refuse scripted fetches (2026-10-15)
+
+Both hosts reject curl and WebFetch on every path, so a source check there fails even when the page is live. Read the text from a Wayback capture of the same URL and say so in the source log; the entry still links the live official URL. The CDAO release also moved from `/Latest/News-Press/PR-View/` to `/News/PR-View/` with no redirect, so a 404 there may be a move, not a removal.
