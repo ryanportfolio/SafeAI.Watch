@@ -19,8 +19,9 @@ Codex review; do not run `/codex-review` yourself.
 
 - Every rule in `.claude/skills/add-source/SKILL.md` ("Rules that do not bend") applies to
   every entry this run drafts. Read it at the start of each run.
-- The routine edits only `src/data/events.json`. Homepage features, page copy and layout
-  stay as they are; suggest changes in the PR body instead.
+- The routine edits only `src/data/events.json` and the README files generated from it
+  (`README.md`, `assets/readme/*`). Homepage features, page copy and layout stay as they
+  are; suggest changes in the PR body instead.
 - At most three new entries per run. Fewer strong entries beat more weak ones.
 - Subagents inherit the session model; omit `model`.
 - Paths are absolute in every command (Bash cwd resets each call). Prefix `git show
@@ -71,11 +72,15 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    source checks under `<worktree>/.tmp/add-source/<slug>/`. Step 6 (placement) becomes
    suggestions in the PR body.
 7. **Verify.** add-source step 7: one fresh subagent per run re-fetches every source and
-   checks every claim and quote in the drafted entries; fix or drop what fails. Then
-   `npm run build` in the worktree. If the build fails and the cause is not in the
-   drafted entries, stop and report; do not touch other files to make it pass.
-8. **Deliver.** Commit `src/data/events.json` only, with the repo trailer, message in a
-   `.tmp` file and `git commit -F`. Push. With no open PR:
+   checks every claim and quote in the drafted entries; fix or drop what fails. Then, in
+   the worktree, `npm run build`, `node scripts/readme/build.mjs` (regenerates the README
+   and masthead from the record), `node scripts/readme/build.mjs --check` and
+   `node scripts/readme/meta.mjs --lint` (the PR-side README gate). The README CI job fails on stale output, and
+   `npm run build` does not catch it. If a check fails and the cause is not in the drafted
+   entries, stop and report; do not touch other files to make it pass.
+8. **Deliver.** Commit `src/data/events.json` and the regenerated `README.md` and
+   `assets/readme/*` only, with the repo trailer, message in a `.tmp` file and
+   `git commit -F`. Push. With no open PR:
    `gh pr create --head daily-watch/<date> --base main --body-file <file>`, title
    `Daily watch: <date>`. With an open PR: push to its branch and append a dated section to
    its body (`gh pr edit --body-file`). Body sections per run: window and lanes scanned;
