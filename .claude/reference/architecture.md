@@ -11,9 +11,18 @@
 ## The record
 
 - Data: `src/data/events.json`, an array of entries with exactly the keys `date`, `category`, `title`, `happened`, `keyPoints` (1 to 4 strings), `evidence`, `source`, `url`, plus an optional `uncertain`.
-- `src/data/record.ts` validates every entry at build time and throws on a missing, empty or extra key, a malformed date, a category outside `CATEGORIES` (Research, Incidents, Warnings, Governance) or a non-https `url`. Exports `events` (oldest first), `eventsNewestFirst`, `lastUpdated` (date of the newest entry) and the date formatters.
+- `src/data/record.ts` validates every entry at build time and throws on a missing, empty or extra key, an empty or overlong `keyPoints` list, a malformed date, a category outside `CATEGORIES` (Research, Incidents, Warnings, Governance) or a non-https `url`. Exports `events` (oldest first), `eventsNewestFirst`, `lastUpdated` (date of the newest entry) and the date formatters.
 - Consumers: `src/pages/index.astro` (`events`, `lastUpdated`), `src/pages/latest.astro` (`eventsNewestFirst`), `src/components/Timeline.astro` (used by `index.astro` and `timeline.astro`), `src/components/SiteFooter.astro` (`lastUpdated`).
 - `Timeline.astro` renders every tab and panel at build time; its client script only switches the selected one.
+
+```mermaid
+flowchart LR
+  J["events.json entry<br/>date, category, title, happened,<br/>keyPoints[1-4], evidence,<br/>uncertain (optional), source, url"] --> V["record.ts validate()"]
+  V --> T["Timeline.astro<br/>(index, timeline)"]
+  V --> L["latest.astro"]
+  J --> R["scripts/readme/build.mjs<br/>README entry sample"]
+  T & L --> P["What happened / Key points (list) /<br/>Evidence / Uncertain only if present"]
+```
 
 ## About film
 
