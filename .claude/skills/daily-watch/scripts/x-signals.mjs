@@ -1,6 +1,6 @@
 // Free-first X and Bluesky reads for the daily-watch signals lane.
 //
-//   node x-signals.mjs timelines --since 2026-10-14 [--handles a,b]
+//   node x-signals.mjs timelines --since 2026-10-14 [--handles a,b] [--pages 10]
 //   node x-signals.mjs post <url-or-id> [...]
 //   node x-signals.mjs search "<query>" --since 2026-10-14 [--no-x] [--no-bsky]
 //   --min-likes N drops posts with fewer likes on any command (default 0).
@@ -69,17 +69,34 @@ async function timelines() {
   const handles = flags.handles
     ? String(flags.handles).split(',').map((h) => h.trim()).filter(Boolean)
     : JSON.parse(fs.readFileSync(path.join(here, 'x-handles.json'), 'utf8')).handles;
+  const maxPages = Number(flags.pages ?? 10);
   let ok = 0;
   for (const h of handles) {
+    const seen = new Set();
+    let cursor = null;
+    let page = 0;
+    let reached = false;
     try {
-      const j = await getJson(`https://api.fxtwitter.com/2/profile/${encodeURIComponent(h)}/statuses?count=20`);
-      ok++;
-      for (const t of j.results ?? []) {
-        if (t.created_timestamp * 1000 < sinceMs) continue;
-        emit(fxPost(t, h));
+      // Page back with the bottom cursor until a page reaches past --since, or --pages runs out.
+      for (; page < maxPages; page++) {
+        const url = `https://api.fxtwitter.com/2/profile/${encodeURIComponent(h)}/statuses?count=20${cursor ? `&cursor=${encodeURIComponent(cursor)}` : ''}`;
+        const j = await getJson(url);
+        const results = j.results ?? [];
+        for (const t of results) {
+          if (seen.has(t.id)) continue;
+          seen.add(t.id);
+          if (t.created_timestamp * 1000 >= sinceMs) emit(fxPost(t, h));
+        }
+        // The last result is the oldest; a pinned post at the top can be older than the rest.
+        const oldest = (results.at(-1)?.created_timestamp ?? 0) * 1000;
+        cursor = j.cursor?.bottom;
+        if (!results.length || !cursor || oldest < sinceMs) { reached = true; break; }
+        await sleep(300);
       }
+      ok++;
+      if (!reached) gap(`fxtwitter timeline @${h}`, `stopped after ${maxPages} pages before reaching ${flags.since}`);
     } catch (err) {
-      gap(`fxtwitter timeline @${h}`, err.message);
+      gap(`fxtwitter timeline @${h}`, `${err.message} on page ${page + 1}`);
     }
     await sleep(300);
   }

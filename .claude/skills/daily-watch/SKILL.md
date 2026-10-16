@@ -38,17 +38,21 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
 
 | File | Holds |
 |---|---|
-| `last-run.json` | `{ "date": "YYYY-MM-DD", "windowEnd": "YYYY-MM-DD" }` of the last finished run |
-| `seen.jsonl` | One line per judged candidate: `leadUrl`, `primaryUrl`, `title`, `found`, `verdict` (`published`, `pr`, `held`, `skipped`), `reason` |
+| `last-run.json` | `{ "date": "YYYY-MM-DD" }` of the last finished run |
+| `seen.jsonl` | One line per judged candidate: `leadUrl`, `primaryUrl`, `title`, `eventDate`, `found`, `verdict` (`published`, `pr`, `held`, `skipped`), `reason`, and `pr` (number) for `pr` verdicts. Append only; the latest line for an event wins. |
 | `runs/<date>/` | Lane outputs (`lane-*.jsonl`, `x-raw.jsonl`, `x-gaps.jsonl`) and `report.md` for that run |
 | `runs/<date>/bin/` | This run's copy of the skill's `scripts/` folder |
 
 ## Workflow
 
-1. **Window and base.** `git -C C:/Users/Home/CoreWise/SafeAI.Watch fetch origin`. Window
-   start: the day before `last-run.json` `windowEnd`; on the first run, the newest `date`
-   in `origin/main:src/data/events.json`. Never reach back more than 14 days. Window end:
-   today. Check for an open routine PR:
+1. **Window and base.** `git -C C:/Users/Home/CoreWise/SafeAI.Watch fetch origin`. Every
+   run scans the same rolling window: the 30 days up to and including today, whatever the
+   last run covered and whatever dates the record already has entries for. Sources publish,
+   get indexed and get covered late, and a day with entries can still hold events the
+   record missed; the record and `seen.jsonl` keep repeats out. One exception: X account
+   timelines start three days before `last-run.json` `date` (the full 30 days on the first
+   run), because posts do not appear in a timeline after the fact. Check for an open
+   routine PR:
    `gh pr list --repo ryanportfolio/SafeAI.Watch --state open --json number,headRefName,url`
    and keep the PR whose `headRefName` starts with `daily-watch/`.
    The record to dedupe against is `origin/main`'s `events.json` plus that PR branch's, if
@@ -60,12 +64,22 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
 2. **Scan.** Launch the five lanes in [watchlist.md](references/watchlist.md) as parallel
    research subagents in one message. Give each the window, its lane, the candidate format,
    the sensitive-material rule, and the state folder path; each writes
-   `runs/<date>/lane-<name>.jsonl`. Only the signals lane runs `x-signals.mjs`. Re-check
-   `held` candidates from `seen.jsonl` that are under seven days old.
-3. **Triage.** Merge the lanes. Drop anything already in the record (same URL, or the same
-   event from any source) or already `skipped`/`published` in `seen.jsonl`. Judge the rest
-   against [bar.md](references/bar.md), including its paywall routine. Rank what passes and
-   keep the top three. Append every judged candidate to `seen.jsonl` with its verdict.
+   `runs/<date>/lane-<name>.jsonl`. Only the signals lane runs `x-signals.mjs`. Give each
+   lane the path to `seen.jsonl`: lanes may leave out events whose latest verdict is
+   `skipped` or `published`, and must still report `held` ones, since a new route may have
+   opened.
+3. **Triage.** Merge the lanes and dedupe across them. Then drop, matching by any URL
+   (lead or primary) and by event (the same happening from another source or outlet):
+   - anything already in the record;
+   - events whose latest `seen.jsonl` verdict is `skipped` or `published`;
+   - `pr` events whose PR is still open or was merged. A `pr` event whose PR was closed
+     without merging counts as `skipped` (the user declined it); do not re-propose it
+     unless a later development makes it a new event.
+   Re-judge `held` events: publish if a route opened, keep holding while the first hold is
+   under seven days old, then mark `skipped`. Judge the rest against
+   [bar.md](references/bar.md), including its paywall routine. Rank what passes and keep
+   the top three; the rest that pass stay `held` for the next run. Append every judged
+   candidate to `seen.jsonl` with its verdict.
 4. **Nothing passes.** Write `report.md`, update `last-run.json`, and stop. No worktree,
    branch, commit or PR.
 5. **Workspace.** If a routine PR is open, add a worktree on its branch:
@@ -93,8 +107,8 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    entries added (date, category, title, source, why it cleared the bar); held and skipped
    candidates worth the user's attention, with reasons; paywall routes tried; placement
    suggestions; checks run. End with the PR attribution line.
-9. **Close out.** Write `report.md` (window, counts per lane, verdicts, PR link) and update
-   `last-run.json`. Remove the worktree with `git worktree remove <path>` once the push
+9. **Close out.** Write `report.md` (window, counts per lane, verdicts, PR link) and write
+   today's date to `last-run.json`. Remove the worktree with `git worktree remove <path>` once the push
    succeeded (its `node_modules` is a real folder from `npm ci`, not a link). Close any
    browser you opened. End the run with a three-line summary: entries added, PR link or
    "no PR", notable held items.

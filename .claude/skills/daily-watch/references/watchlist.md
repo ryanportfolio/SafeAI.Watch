@@ -75,8 +75,10 @@ named in the report; the lane carries on with the rest. Save stdout to
 `runs/<date>/x-raw.jsonl` and stderr to `runs/<date>/x-gaps.jsonl`.
 
 1. **Accounts (free, fxtwitter).**
-   `node <skill-dir>/scripts/x-signals.mjs timelines --since <start>` reads the last 20
-   posts of every handle in `scripts/x-handles.json`, retrying fxtwitter's one-off 404s.
+   `node <skill-dir>/scripts/x-signals.mjs timelines --since <timeline start>` pages back
+   through every handle in `scripts/x-handles.json` until it passes that date (at most 10
+   pages of 20 posts per handle; a handle that hits the cap reports a gap), retrying
+   fxtwitter's one-off 404s. The timeline start is in SKILL.md step 1.
    Reposts come back with `repost: true` and `author` set to the original poster:
    attribute the post to that author and treat the repost as a pointer. The handles are
    researchers and former lab staff, evaluators (METR, Palisade, Apollo, UK AISI), one
@@ -84,7 +86,7 @@ named in the report; the lane carries on with the rest. Save stdout to
    misuse shown in public; never copy jailbreak prompts or method detail). Add a handle
    only after `timelines --handles <h>` returns posts for it.
 2. **Keyword search (X paid, Bluesky free).**
-   `node <skill-dir>/scripts/x-signals.mjs search "<query>" --since <start> --min-likes 20`
+   `node <skill-dir>/scripts/x-signals.mjs search "<query>" --since <window start> --min-likes 20`
    runs the query on X through the user's twitterapi.io script while it has credit (one
    request every 5 seconds, shared with every session, so never run two searches at once)
    and on Bluesky's official search API (X-only operators are stripped for Bluesky). On
