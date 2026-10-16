@@ -32,14 +32,19 @@ named in results are leads whatever their field.
    drug-discovery risk, protein design, biolabs; warnings from biotech, pharma and public
    health figures.
 2. **Calls for regulation or a pause** from people with standing outside AI: executives,
-   founders, scientists, officials, religious and military leaders.
+   founders, scientists, officials, religious and military leaders. These often surface on
+   TV interviews (Meet the Press, Face the Nation, 60 Minutes), earnings calls, papal and
+   state press conferences and economic forums, not in AI outlets: search
+   `"AI" warning interview <month>` and `"AI" "regulate" CEO <month>` as well as the theme.
 3. **Agent incidents and loss of control:** agents acting outside their task, escapes,
-   intrusions, self-replication, sabotage, deception.
+   intrusions, self-replication, sabotage, deception; also people using AI to break into
+   AI labs (bug bounty write-ups, security researchers' own blogs).
 4. **AI misuse and attacks:** cyberattacks, fraud, influence operations, deepfakes with
-   real-world effect.
+   real-world effect, AI in critical infrastructure (air traffic, power, hospitals).
 5. **Insiders:** resignations, firings, whistleblowers, leaked documents, testimony.
 6. **Government action** on AI safety in any country: laws, orders, hearings, court
-   rulings, international agreements.
+   rulings (including deepfake and AI imagery laws), international agreements, and
+   letters from legislators to agencies.
 
 ## Lanes
 
@@ -52,6 +57,8 @@ named in results are leads whatever their field.
 - Evaluators and safety groups: UK AI Security Institute, US CAISI (NIST), METR, Apollo
   Research, Redwood Research, Palisade Research, Epoch AI, FAR.AI, Center for AI Safety,
   Future of Life Institute, AI Impacts, SecureBio.
+- Lab leaders' own newsletters and blogs: Import AI (Jack Clark), Dario Amodei's essays,
+  Sam Altman's blog.
 
 ### gov: Governments, law and courts
 
@@ -60,14 +67,18 @@ named in results are leads whatever their field.
   Texas, Colorado) for AI safety laws.
 - EU AI Office and Commission, UK government (DSIT, AISI), China (Xinhua, CAC, State
   Council), UN, OECD, G7, Council of Europe; AI summits.
-- Courts: CourtListener for AI harm, liability and safety suits and rulings.
+- Courts: CourtListener for AI harm, liability and safety suits and rulings, including
+  appeals of state AI laws (deepfakes, chatbots, nudification).
 - Biosecurity policy: CSIS, RAND, NTI, Johns Hopkins Center for Health Security, Council on
   Strategic Risks.
 
 ### news: Incidents and reporting leads
 
 - Reuters, AP, Bloomberg, Financial Times, The New York Times, The Washington Post, WIRED,
-  The Verge, Axios, Politico, 404 Media, CNN, The Guardian, Nature and Science news.
+  The Verge, Axios, Politico, 404 Media, CNN, The Guardian, The Information, Nature and
+  Science news.
+- Journals: Nature and Science research papers (not only their news sections) on AI and
+  biology, biosecurity and AI safety; search `site:nature.com AI biosecurity <month>`.
 - AI Incident Database and company security disclosures (Hugging Face, GitHub, cloud
   providers) for real-world incidents.
 - Leads only: every candidate from this lane needs a `primaryUrl` traced per bar.md, or
