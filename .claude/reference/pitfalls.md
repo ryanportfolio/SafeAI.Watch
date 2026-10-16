@@ -184,3 +184,7 @@ Seen on the first daily-watch run; each cost a retry. press.un.org returns a bot
 ## Regex edits through a heredoc lost their backslashes (2026-10-15)
 
 A node patch script passed through a bash heredoc wrote `\b` into a JavaScript file as a literal backspace byte (0x08) and `\d` as a plain `d`, so an AI keyword filter silently dropped posts it should have kept. The file looked right in a quick read. Edit regex and other backslash-heavy code with the Edit tool, or write the patch script with the Write tool and build replacement lines with `String.raw`; then check the file for control bytes.
+
+## PR preview deploys are behind Vercel login (2026-10-15)
+
+The `*.vercel.app` preview URL for a PR redirects to `vercel.com/login` (Vercel deployment protection), so a browser check from a session cannot load it. Check the PR locally instead: `npm run build`, then `npx astro preview --port <port>` in the same checkout, and look there. Production (safeai.watch) is public.
