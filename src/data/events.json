@@ -114,10 +114,10 @@
     "category": "Governance",
     "title": "Pentagon awards frontier AI agreements to Anthropic, Google, OpenAI and xAI",
     "happened": "The Chief Digital and Artificial Intelligence Office announced contract awards to Anthropic, Google, OpenAI and xAI, \"each with a $200M ceiling,\" to develop agentic AI workflows across a variety of mission areas.",
-    "evidence": "Official award announcement. The $200M figure is a ceiling on each agreement, not money obligated or spent.",
-    "uncertain": "The announcement does not say what the workflows will do, how they will be evaluated, or what either side has committed to deliver.",
+    "evidence": "Official award announcement. The $200M figure is a ceiling on each award; the announcement does not say how much has been obligated.",
+    "uncertain": "The announcement names broad areas such as warfighting and intelligence but not specific workflows, how they will be evaluated, or what either side has committed to deliver.",
     "source": "Chief Digital and Artificial Intelligence Office · Press release",
-    "url": "https://www.ai.mil/Latest/News-Press/PR-View/Article/4242822/cdao-announces-partnerships-with-frontier-ai-companies-to-address-national-secu/"
+    "url": "https://www.ai.mil/News/PR-View/Article/4242822/cdao-announces-partnerships-with-frontier-ai-companies-to-address-national-secu/"
   },
   {
     "date": "2025-08-06",
@@ -223,9 +223,9 @@
     "date": "2026-01-12",
     "category": "Governance",
     "title": "Pentagon AI strategy orders faster adoption across the Department of War",
-    "happened": "The Department of War published an AI strategy, signed January 9, 2026, naming pace-setting projects including GenAI.mil and ordering \"any lawful use\" language in AI contracts within 180 days.",
-    "evidence": "Signed policy memorandum. It sets direction and deadlines, not results.",
-    "uncertain": "The memo says \"the risks of not moving fast enough outweigh the risks of imperfect alignment,\" and lists test, evaluation and certification among the blockers to remove.",
+    "happened": "The Department of War published an AI strategy, dated January 9, 2026, naming pace-setting projects including GenAI.mil and ordering \"any lawful use\" language in AI contracts within 180 days.",
+    "evidence": "Signed policy memorandum. It sets direction and deadlines, not results, and says \"the risks of not moving fast enough outweigh the risks of imperfect alignment.\"",
+    "uncertain": "Progress is reported monthly to department leadership, and the memo does not say whether results will be made public. Initiatives in its classified annex are not described.",
     "source": "Department of War · Strategy memorandum",
     "url": "https://media.defense.gov/2026/Jan/12/2003855671/-1/-1/0/ARTIFICIAL-INTELLIGENCE-STRATEGY-FOR-THE-DEPARTMENT-OF-WAR.PDF"
   },
@@ -254,20 +254,20 @@
     "category": "Warnings",
     "title": "Nature asks how worried to be about AI-designed bioweapons",
     "happened": "Nature published a news feature by Ewen Callaway, \"AI can design viruses, toxins and other bioweapons. How worried should we be?\"",
-    "evidence": "News feature. The standfirst reads \"Scientists are debating whether to limit biological AI software to ward off threats.\" Beyond an opening paragraph, the body is paywalled.",
-    "uncertain": "Without the body text, the arguments, sources and any figures behind the headline cannot be checked here.",
+    "evidence": "Based on interviews with more than 20 scientists and policy researchers. A cited National Academies report found \"numerous barriers\" to AI-designed pandemic pathogens but said existing tools might design a toxin.",
+    "uncertain": "Researchers disagree on whether to limit biological AI tools or focus on detection. Redesigned toxins that slip past screening \"might be so dissimilar to natural versions that they lose their function.\"",
     "source": "Nature · News feature (paywalled)",
     "url": "https://www.nature.com/articles/d41586-026-01476-x"
   },
   {
-    "date": "2026-06-03",
+    "date": "2026-06-04",
     "category": "Warnings",
     "title": "AI leaders sign a letter on screening synthetic DNA orders",
-    "happened": "WIRED reported on a public letter urging Congress to require companies selling synthetic DNA and RNA to screen customers and orders.",
-    "evidence": "Reporting on a letter. Signers include Demis Hassabis, Sam Altman, Dario Amodei and Mustafa Suleyman, along with scientists and gene synthesis executives. The Institute for Progress and the Foundation for American Innovation organized it.",
-    "uncertain": "The letter acknowledges \"a real possibility\" that knowledge barriers will \"meaningfully erode.\" WIRED describes a Senate screening bill as introduced earlier this year.",
-    "source": "WIRED · Reporting",
-    "url": "https://www.wired.com/story/openai-anthropic-letter-ai-biological-weapons/"
+    "happened": "An open letter calls for mandatory screening and recordkeeping for synthetic nucleic acid orders and the machines that make them, and says \"Congress should act this session.\"",
+    "evidence": "Signed open letter, an argument rather than new evidence. Signers include Demis Hassabis, Sam Altman, Dario Amodei and Mustafa Suleyman, along with scientists, biosecurity experts and gene synthesis executives.",
+    "uncertain": "The letter says the evidence on what AI means for present-day biosecurity threats \"is genuinely mixed.\" Affiliations are listed \"for informational purposes only\" and do not mean the institutions endorse it.",
+    "source": "ScreenDNA · Open letter",
+    "url": "https://screendna.org/"
   },
   {
     "date": "2026-06-04",
@@ -414,8 +414,8 @@
     "category": "Warnings",
     "title": "Anthropic alignment lead puts the chance AI kills all humans above 10%",
     "happened": "Evan Hubinger, who describes himself as Anthropic’s Alignment Science lead, posted that he personally puts the chance AI kills all humans above 10% within the next decade.",
-    "evidence": "Personal post agreeing with a post by Jacob Coxon. His profile says \"Opinions my own,\" so it is not an Anthropic position.",
-    "uncertain": "He added that Anthropic does \"not yet have a plan to solve alignment for superintelligence and are not clearly on track to.\"",
+    "evidence": "Personal post agreeing with Jacob Coxon; his profile says \"Opinions my own.\" He writes that Anthropic does \"not yet have a plan to solve alignment for superintelligence.\"",
+    "uncertain": "One researcher's personal estimate. The post gives no method or evidence for the figure or the timeframe.",
     "source": "X · Personal post",
     "url": "https://x.com/EvanHub/status/2097497037956891126"
   },
@@ -423,9 +423,9 @@
     "date": "2026-09-08",
     "category": "Research",
     "title": "OpenAI says a swarm of its agents resolved a Navier-Stokes prize statement",
-    "happened": "OpenAI said on the order of 10,000 concurrent agents produced a proof of finite-time singularity for the forced 3D Navier-Stokes equations, about 88 hours after launch, with a Lean formalization.",
-    "evidence": "Company announcement with a machine-checked proof. The page cites no outside review of the writeup or of the formal statement.",
-    "uncertain": "OpenAI says it does \"not intend to claim the Millennium Prize\" and recognizes earlier work by other mathematicians on the forced Euler case.",
+    "happened": "OpenAI said on the order of 10,000 concurrent agents produced a proof of finite-time singularity for the forced 3D Navier-Stokes equations, about 88 hours after launch. A Lean formalization took another 17 hours.",
+    "evidence": "Company announcement with a written proof and a machine-checked Lean formalization, produced by an internal OpenAI system. OpenAI says it does \"not intend to claim the Millennium Prize.\"",
+    "uncertain": "The page cites no outside review of the writeup, or of whether the Lean statement matches the official problem formulation.",
     "source": "OpenAI · Research announcement",
     "url": "https://openai.com/index/navier-stokes-solution/"
   },

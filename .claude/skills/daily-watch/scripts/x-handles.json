@@ -1,0 +1,54 @@
+{
+  "checked": "2026-10-15",
+  "groups": {
+    "people": {
+      "about": "Researchers, former lab staff, evaluators and one public jailbreaker. Every post is kept.",
+      "pages": 10,
+      "handles": [
+        "janleike",
+        "EvanHub",
+        "DKokotajlo",
+        "Miles_Brundage",
+        "JeffLadish",
+        "BethMayBarnes",
+        "MariusHobbhahn",
+        "bshlgrs",
+        "sjgadler",
+        "hilbertspaess",
+        "hlntnr",
+        "ohlennart",
+        "Yoshua_Bengio",
+        "geoffreyhinton",
+        "ESYudkowsky",
+        "METR_Evals",
+        "PalisadeAI",
+        "apolloresearch",
+        "AISecurityInst",
+        "TheZvi",
+        "elder_plinius",
+        "AISafetyMemes"
+      ]
+    },
+    "aggregators": {
+      "about": "High-volume breaking-news and AI-news accounts that often post a story first. Only posts matching the AI filter are kept; they post 100+ times a day, so they need more pages.",
+      "pages": 40,
+      "filter": true,
+      "handles": [
+        "Polymarket",
+        "Kalshi",
+        "DeItaone",
+        "FirstSquawk",
+        "unusual_whales",
+        "BNONews",
+        "spectatorindex",
+        "Techmeme",
+        "rowancheung",
+        "TheRundownAI",
+        "testingcatalog",
+        "AndrewCurran_",
+        "btibor91",
+        "kimmonismus"
+      ]
+    }
+  }
+}

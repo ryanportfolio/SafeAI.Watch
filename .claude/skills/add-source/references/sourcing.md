@@ -9,13 +9,15 @@
 | PDF | curl to file, then `pdftotext` or a PDF reader; grep the text. |
 | X post | `https://api.fxtwitter.com/<user>/status/<id>` returns the text and `created_at`. |
 | Blocked page | Try WebFetch with a narrow question, then `https://web.archive.org/web/2026*/<url>`. Log the route. Reporting about a source may point you to it, but never becomes the entry's link. An original you cannot reach through any route stays out of the record; say so in the PR. Reporting is itself a primary source only when the reporting is the event, as with an investigation whose findings exist nowhere else; then the outlet is the publisher and the `source` type says `Reporting`. |
+| Paywalled page | A lead first: look for the open original behind it (the statement, filing, report, post or recording) and link that. Only when the paywalled piece is itself the original (an op-ed, an exclusive interview, a feature that is the event) and no open route exists, read a Wayback capture of the same URL to check facts. Link the original, end the `source` type in `(paywalled)`, quote only text in the capture, and name the capture in the PR. No other paywall-bypass service. A capture without the body counts as no route. |
 
 Known behavior (re-check; sites change):
 
 - openai.com and deploymentsafety.openai.com: WebFetch often gets 403; curl with a browser
   user-agent usually works.
 - nature.com: WebFetch redirects to a login; curl reaches the public page (headline,
-  standfirst, byline, date). The body is paywalled, so claim nothing from it.
+  standfirst, byline, date). The body is paywalled; Wayback captures of news features have
+  held the full body (May 2026), so use the paywalled-page route before claiming anything from it.
 - wired.com, rand.org, thebulletin.org: WebFetch may be blocked; curl or Wayback works.
 - Pages that print no day (essays, statements): use the earliest Wayback capture or page
   metadata, and say which in the log.
