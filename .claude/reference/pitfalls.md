@@ -176,3 +176,11 @@ In a worktree under `C:\Users\Home\CoreWise\SafeAI.Watch\.claude\worktrees\`, `n
 ## ai.mil and media.defense.gov refuse scripted fetches (2026-10-15)
 
 Both hosts reject curl and WebFetch on every path, so a source check there fails even when the page is live. Read the text from a Wayback capture of the same URL and say so in the source log; the entry still links the live official URL. The CDAO release also moved from `/Latest/News-Press/PR-View/` to `/News/PR-View/` with no redirect, so a 404 there may be a move, not a removal.
+
+## Hosts that refuse scripted fetches during source checks (2026-10-15)
+
+Seen on the first daily-watch run; each cost a retry. press.un.org returns a bot challenge or 406 to curl and an image CAPTCHA to headed Chrome, and every Wayback capture is the challenge page: only WebFetch reached the body, so cross-check quotes against the speaker's own page or transcripts.un.org. mi5.gov.uk, committees.parliament.uk, congress.gov bill pages and leginfo.legislature.ca.gov return Cloudflare 403. theatlantic.com returns 403 to curl, gift links included, and WebFetch refuses it. web.archive.org returned 429 to every curl for minutes at a time and WebFetch refuses that domain; space out Wayback calls and retry later rather than in a loop.
+
+## Regex edits through a heredoc lost their backslashes (2026-10-15)
+
+A node patch script passed through a bash heredoc wrote `\b` into a JavaScript file as a literal backspace byte (0x08) and `\d` as a plain `d`, so an AI keyword filter silently dropped posts it should have kept. The file looked right in a quick read. Edit regex and other backslash-heavy code with the Edit tool, or write the patch script with the Write tool and build replacement lines with `String.raw`; then check the file for control bytes.
