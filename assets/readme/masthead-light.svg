@@ -109,11 +109,12 @@
 <text class="serif" x="42" y="146" font-size="47" fill="#1a1614" letter-spacing="-.5">Keeping watch on AI</text>
 <text class="serif" x="44" y="190" font-size="17.5" fill="#605b55">A dated record of AI safety and security</text>
 <text class="serif" x="44" y="215" font-size="17.5" fill="#605b55">research, incidents, warnings, and policy. Each</text>
-<text class="serif" x="44" y="240" font-size="17.5" fill="#605b55">entry links its original source and separates</text>
-<text class="serif" x="44" y="265" font-size="17.5" fill="#605b55">what happened from what remains uncertain.</text>
-<text class="mono" x="44" y="310" font-size="10" fill="#605b55">98 ENTRIES · 59 PUBLISHERS · MAR 2023 TO OCT 2026</text>
-<text class="mono" x="44" y="326" font-size="10" fill="#605b55">ONE DOT PER ENTRY · FARTHER OUT = NEWER</text>
-<text class="mono" x="44" y="342" font-size="10" fill="#605b55">A SELECTION · DENSITY SHOWS COVERAGE, NOT FREQUENCY</text>
+<text class="serif" x="44" y="240" font-size="17.5" fill="#605b55">entry links its original source, gives its key</text>
+<text class="serif" x="44" y="265" font-size="17.5" fill="#605b55">points, and separates what happened from what</text>
+<text class="serif" x="44" y="290" font-size="17.5" fill="#605b55">the evidence shows.</text>
+<text class="mono" x="44" y="335" font-size="10" fill="#605b55">98 ENTRIES · 59 PUBLISHERS · MAR 2023 TO OCT 2026</text>
+<text class="mono" x="44" y="351" font-size="10" fill="#605b55">ONE DOT PER ENTRY · FARTHER OUT = NEWER</text>
+<text class="mono" x="44" y="367" font-size="10" fill="#605b55">A SELECTION · DENSITY SHOWS COVERAGE, NOT FREQUENCY</text>
 <circle cx="48" cy="396.5" r="4.2" fill="#677331"/><text class="mono" x="58" y="400" font-size="10.5" fill="#1a1614">RESEARCH <tspan fill="#605b55">20</tspan></text>
 <circle cx="218" cy="396.5" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/><text class="mono" x="228" y="400" font-size="10.5" fill="#1a1614">WARNINGS <tspan fill="#605b55">27</tspan></text>
 <circle cx="48" cy="422.5" r="4.2" fill="#1a1614"/><text class="mono" x="58" y="426" font-size="10.5" fill="#1a1614">GOVERNANCE <tspan fill="#605b55">25</tspan></text>

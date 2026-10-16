@@ -13,7 +13,7 @@ SafeAI.watch: a public editorial site tracking AI safety and security (research,
 Won't compromise on:
 
 - Every entry links its original source.
-- Each entry separates what happened, what the evidence shows, and what remains uncertain.
+- Each entry gives the source's key points and separates what happened from what the evidence shows. It says what remains uncertain only when something material is open; no filler.
 - No fabricated incidents, numbers, or quotes. Illustrations are conceptual and carry no data.
 - No third-party trackers or analytics.
 - The design is core. Keep the prototype's identity (colors, structure, layout, typography, motion); never redesign it into something else. Within that identity, improve everything, and fix anything broken or illogical rather than copying it. The 3D visuals get reinvented (our own, then `/wow-loop`).

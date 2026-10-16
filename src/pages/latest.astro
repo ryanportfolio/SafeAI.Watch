@@ -24,10 +24,20 @@ import { eventsNewestFirst, formatLong } from '../data/record';
           <dl class="archive-parts">
             <dt>What happened</dt>
             <dd>{event.happened}</dd>
+            <dt>Key points</dt>
+            <dd>
+              <ul class="archive-points">
+                {event.keyPoints.map((point) => <li>{point}</li>)}
+              </ul>
+            </dd>
             <dt>Evidence</dt>
             <dd>{event.evidence}</dd>
-            <dt>Uncertain</dt>
-            <dd>{event.uncertain}</dd>
+            {event.uncertain && (
+              <>
+                <dt>Uncertain</dt>
+                <dd>{event.uncertain}</dd>
+              </>
+            )}
           </dl>
           <p class="archive-source">{event.source}</p>
         </article>
@@ -110,6 +120,25 @@ import { eventsNewestFirst, formatLong } from '../data/record';
 
   .archive-parts dd:last-child {
     margin-bottom: 0;
+  }
+
+  .archive-points li {
+    position: relative;
+    padding-left: 16px;
+  }
+
+  .archive-points li + li {
+    margin-top: 4px;
+  }
+
+  .archive-points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.85em;
+    width: 7px;
+    height: 1px;
+    background: var(--grey-label);
   }
 
   @media (max-width: 767px) {

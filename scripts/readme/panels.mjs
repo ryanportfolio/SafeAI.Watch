@@ -33,7 +33,7 @@ import { ROOT } from './lib.mjs';
 const MARK_D = /\sd="([^"]+)"/.exec(fs.readFileSync(path.join(ROOT, 'src/assets/brand/mark-small.svg'), 'utf8'))[1];
 
 export const HEADLINE = 'Keeping watch on AI';
-export const LEDE = 'A dated record of AI safety and security research, incidents, warnings, and policy. Each entry links its original source and separates what happened from what remains uncertain.';
+export const LEDE = 'A dated record of AI safety and security research, incidents, warnings, and policy. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.';
 
 /** How to read the burst, printed under the stats. */
 export const KEY = 'ONE DOT PER ENTRY · FARTHER OUT = NEWER';
