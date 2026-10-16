@@ -4,26 +4,26 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 51 dated, sourced entries drawn as a burst, one dot per entry: 15 warnings, 15 incidents, 11 governance, 10 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 98 dated, sourced entries drawn as a burst, one dot per entry: 27 warnings, 26 incidents, 25 governance, 20 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source and separates what happened from what remains uncertain.
 
-The record holds 51 entries from Mar 22, 2023 to Sep 24, 2026 (15 warnings, 15 incidents, 11 governance, 10 research), drawn from 30 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 98 entries from Mar 22, 2023 to Oct 15, 2026 (27 warnings, 26 incidents, 25 governance, 20 research), drawn from 59 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry keeps four things apart. The newest one, from Sep 24, 2026, filed under Warnings:
+Every entry keeps four things apart. The newest one, from Oct 15, 2026, filed under Warnings:
 
-> **80,000 Hours publishes an explainer on how AI could cause human extinction**
+> **Moderna co-founder Noubar Afeyan says sellers of AI agents should have to show they are safe**
 >
-> **What happened.** 80,000 Hours published a video and transcript presented by Luisa Rodriguez, setting out a step-by-step path from today’s AI agent incidents to human extinction or permanent disempowerment.
+> **What happened.** At a Bloomberg New Economy Forum panel in New Delhi, Moderna co-founder and chairman Noubar Afeyan said AI agents are "crossing a threshold" and urged people to "think carefully about regulating agents that are being commercialized."
 >
-> **Evidence.** An argument, not evidence. It cites real incidents, but the chain it builds from them is the author’s reasoning about what could follow.
+> **Evidence.** Video interview, so one founder's argument rather than evidence of harm. He compared agents with drugs before thalidomide and said those who sell agents should have to show they are safe.
 >
-> **Uncertain.** Rodriguez says she is "not sure which routes are most likely" and would "love for all of it to look silly in hindsight."
+> **Uncertain.** Afeyan did not name a regulator or set out a specific rule. He said agents someone builds for their own use "may be harder to regulate."
 >
-> **Source.** [80,000 Hours · Explainer video](https://80000hours.org/podcast/episodes/ai-extinction-explained/)
+> **Source.** [Bloomberg Television · Video interview](https://www.youtube.com/watch?v=wJ434nBl19s)
 
 ## Run it locally
 
