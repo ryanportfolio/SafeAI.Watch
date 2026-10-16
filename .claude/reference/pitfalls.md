@@ -172,3 +172,19 @@ The repo has no Prettier config, so `npx prettier --write` falls back to default
 ## `npm run build` fails in a worktree nested inside the main checkout (2026-10-02)
 
 In a worktree under `C:\Users\Home\CoreWise\SafeAI.Watch\.claude\worktrees\`, `npm ci && npm run build` failed with `[vite] ... Tsconfig not found astro/tsconfigs/strict`, although `node_modules/astro/tsconfigs/strict.json` existed in the worktree. The same commit copied outside the repo tree (`git archive HEAD | tar -x -C <dir>`) built cleanly, and the main checkout above it has a `tsconfig.json` but no `node_modules`, so resolution reached the parent's config. Build-check a nested worktree from an archive copy outside the repo, or run `npm ci` in the main checkout first. CI and Vercel use a plain checkout and are unaffected. Don't change `tsconfig.json` for this.
+
+## ai.mil and media.defense.gov refuse scripted fetches (2026-10-15)
+
+Both hosts reject curl and WebFetch on every path, so a source check there fails even when the page is live. Read the text from a Wayback capture of the same URL and say so in the source log; the entry still links the live official URL. The CDAO release also moved from `/Latest/News-Press/PR-View/` to `/News/PR-View/` with no redirect, so a 404 there may be a move, not a removal.
+
+## Hosts that refuse scripted fetches during source checks (2026-10-15)
+
+Seen on the first daily-watch run; each cost a retry. press.un.org returns a bot challenge or 406 to curl and an image CAPTCHA to headed Chrome, and every Wayback capture is the challenge page: only WebFetch reached the body, so cross-check quotes against the speaker's own page or transcripts.un.org. mi5.gov.uk, committees.parliament.uk, congress.gov bill pages and leginfo.legislature.ca.gov return Cloudflare 403. theatlantic.com returns 403 to curl, gift links included, and WebFetch refuses it. web.archive.org returned 429 to every curl for minutes at a time and WebFetch refuses that domain; space out Wayback calls and retry later rather than in a loop.
+
+## Regex edits through a heredoc lost their backslashes (2026-10-15)
+
+A node patch script passed through a bash heredoc wrote `\b` into a JavaScript file as a literal backspace byte (0x08) and `\d` as a plain `d`, so an AI keyword filter silently dropped posts it should have kept. The file looked right in a quick read. Edit regex and other backslash-heavy code with the Edit tool, or write the patch script with the Write tool and build replacement lines with `String.raw`; then check the file for control bytes.
+
+## PR preview deploys are behind Vercel login (2026-10-15)
+
+The `*.vercel.app` preview URL for a PR redirects to `vercel.com/login` (Vercel deployment protection), so a browser check from a session cannot load it. Check the PR locally instead: `npm run build`, then `npx astro preview --port <port>` in the same checkout, and look there. Production (safeai.watch) is public.
