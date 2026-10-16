@@ -108,9 +108,11 @@ async function timelines() {
         }
         // Stop once the account's own posts pass --since. Reposts carry the original post's
         // time, so a fresh repost of an old post says nothing about where the timeline is;
-        // a page of only reposts keeps paging. The last own post is the oldest (a pinned
-        // post at the top can be older than the rest).
-        const own = results.filter((t) => !t.reposted_by);
+        // a page of only reposts keeps paging. A first post on page 1 that is older than
+        // the next one is out of order (a pinned post) and does not count either.
+        let own = results.filter((t) => !t.reposted_by);
+        if (page === 0 && own.length > 1 && own[0].created_timestamp < own[1].created_timestamp) own = own.slice(1);
+        else if (page === 0 && own.length === 1 && results.length > 1 && results[0] === own[0]) own = [];
         const oldest = own.length ? own.at(-1).created_timestamp * 1000 : Infinity;
         cursor = j.cursor?.bottom;
         if (!results.length || !cursor || oldest < sinceMs) { reached = true; break; }
@@ -172,19 +174,19 @@ function twitterSearch(query) {
     if (!fs.existsSync(TWITTER_SCRIPT)) { gap('twitterapi.io search', 'twitter-search script not found'); return resolve(false); }
     const q = flags.since && !/since:/.test(query) ? `${query} since:${flags.since}` : query;
     execFile(process.execPath, [TWITTER_SCRIPT, q, '--latest', '--pages', String(searchPages)], { timeout: 60000 * (searchPages + 1), maxBuffer: 1 << 24 }, (err, stdout, stderr) => {
-      if (err) {
-        const line = String(stderr).split('\n').find((l) => /^Error:/.test(l)) || err.message;
-        gap('twitterapi.io search', line);
-        return resolve(false);
-      }
-      for (const line of stdout.split('\n')) {
+      // search.mjs prints each page as it arrives, so a failure on a later page still leaves
+      // earlier pages on stdout: keep those and report the failure.
+      if (err) gap('twitterapi.io search', String(stderr).split('\n').find((l) => /^Error:/.test(l)) || err.message);
+      let kept = 0;
+      for (const line of String(stdout).split('\n')) {
         if (!line.trim()) continue;
         try {
           const t = JSON.parse(line);
           emit({ platform: 'x', url: t.url, date: new Date(t.date).toISOString(), author: t.author, via: 'twitterapi.io', repost: false, likes: t.likes ?? t.likeCount ?? null, text: t.text });
+          kept++;
         } catch { /* skip non-JSON lines */ }
       }
-      resolve(true);
+      resolve(!err || kept > 0);
     });
   });
 }
