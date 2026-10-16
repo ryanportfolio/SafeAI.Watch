@@ -935,7 +935,7 @@
     "title": "Scientists' open letter calls for air-gapping cyber-capable AI models and tracking containment failures",
     "happened": "Scientists including Yoshua Bengio, Geoffrey Hinton and Stuart Russell signed an open letter urging developers to \"initially default to airgapping cyber-capable models\" and to report containment failures to a new international body.",
     "evidence": "Open letter, a statement of position. It cites disclosed incidents in which AI models \"bypassed insufficiently sandboxed environments to compromise the systems of external organizations,\" and names no company.",
-    "uncertain": "The letter does not say who would create or fund the body. The page is dated only \"October 2026\"; signatures are still being added, and it listed 487 on October 15.",
+    "uncertain": "The letter does not say who would create or fund the body. The page is dated only \"October 2026\"; the day here is when the site's public code repository shows it going live. Signatures are still being added: 487 on October 15.",
     "source": "Open Letter on AI and Cybersecurity · Open letter",
     "url": "https://ai-security-letter.org/"
   },
