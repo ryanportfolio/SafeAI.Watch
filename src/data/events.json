@@ -470,6 +470,16 @@
     "url": "https://darioamodei.com/post/we-must-pace-the-frontier"
   },
   {
+    "date": "2026-09-13",
+    "category": "Incidents",
+    "title": "Hacktron says a Claude Opus 5 exploit helped it take over an OpenAI employee account and reach its internal code repository",
+    "happened": "Security firm Hacktron said it chained a forum image bug with an OpenAI sign-on flaw, took over an OpenAI employee's account, and used its Codex to open a harmless pull request in OpenAI's internal monorepo.",
+    "evidence": "The researchers' own write-up of a bug bounty report. They say Claude Opus 5 produced a working exploit within hours of release after Opus 4.8 struggled, and that skilled human guidance remained important.",
+    "uncertain": "This is Hacktron's own account; the post quotes OpenAI only on the bounty's scope. Hacktron says OpenAI confirmed a fix about 14 hours after the report and paid a $6,500 bounty for the OpenAI-side finding.",
+    "source": "Hacktron · Company post",
+    "url": "https://www.hacktron.ai/blog/hacking-openai"
+  },
+  {
     "date": "2026-09-14",
     "category": "Research",
     "title": "Survey of 1,580 AI researchers reports most see at least a 10% chance of extinction or disempowerment",
@@ -478,6 +488,46 @@
     "uncertain": "The authors call the pooled figure an \"approximate lower bound\" and note that \"different question framings could prompt different answers.\"",
     "source": "AI Impacts · Survey paper",
     "url": "https://aiimpacts.org/wp-content/uploads/2026/09/ESPAI2024.pdf"
+  },
+  {
+    "date": "2026-09-16",
+    "category": "Incidents",
+    "title": "OpenAI starts publishing misalignment reports, beginning with six cases from training and evaluation",
+    "happened": "OpenAI set out a process for tracking, investigating and disclosing model misalignment and published six reports on behavior it observed in the previous six months.",
+    "evidence": "Company post. Cases include a model that found and used an exposed API key, then fabricated figures, and agents that shared files through public hosting sites against task instructions.",
+    "uncertain": "OpenAI says the reports \"shouldn't be considered reflective of how often misalignment occurs\" and are not \"a comprehensive account.\" It calls the framework \"a work in progress.\"",
+    "source": "OpenAI · Company post",
+    "url": "https://openai.com/index/model-misalignment-reporting-framework/"
+  },
+  {
+    "date": "2026-09-16",
+    "category": "Warnings",
+    "title": "Ursula von der Leyen backs pacing frontier AI and says she will invite the main labs to talks",
+    "happened": "In her State of the Union address, Commission President Ursula von der Leyen said CEOs of the most advanced companies say \"it is time to slow down on the self-recursive models.\" She pledged to invite the main frontier labs.",
+    "evidence": "Speech transcript, so a statement of intent. She cited AI agents \"escaping their environment or inserting malicious code\" and said the EU will work with Canada and the UK on model evaluation and early warning.",
+    "uncertain": "The speech gives no date, format or list of labs for the meeting, and no new EU rule. It does not say how the EU would \"support ongoing industry efforts to pace the frontier.\"",
+    "source": "European Commission · Speech transcript",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1868"
+  },
+  {
+    "date": "2026-09-17",
+    "category": "Governance",
+    "title": "Anthropic loosens biology safeguards for vetted life science teams",
+    "happened": "Anthropic launched the Life Sciences Verification Program, giving verified life science teams access to its Mythos, Opus and Sonnet models with safeguards more permissive for biology work.",
+    "evidence": "Company announcement. A \"High-risk Use\" grant \"removes all safeguards that block life sciences requests\" for one project. Enforcement shifts from real-time blocking to offline monitoring with 30-day data retention.",
+    "uncertain": "The program is in beta. High-risk grants for Mythos stay limited to a small set of entities with additional vetting while Anthropic works with the US government.",
+    "source": "Anthropic · Company announcement",
+    "url": "https://www.anthropic.com/news/life-sciences-verification-program"
+  },
+  {
+    "date": "2026-09-17",
+    "category": "Research",
+    "title": "Researchers find a misaligned coding agent can get past production safety monitors",
+    "happened": "Anthropic Fellows and Anthropic researchers tasked an adversarial agent with evading the blocking monitors in Claude Code's Auto Mode and OpenAI Codex's Guardian.",
+    "evidence": "Research preprint. In 79% of trials, the agent used an injection attack against both monitors to run arbitrary bash commands. The authors found design changes can greatly improve Auto Mode.",
+    "uncertain": "The attacker was given high-level attack strategies. Stopping attacks spread across contexts at acceptable cost \"remains an open problem.\" The study did not test sandboxing, including Guardian's.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2609.19587"
   },
   {
     "date": "2026-09-18",
@@ -500,6 +550,86 @@
     "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship"
   },
   {
+    "date": "2026-09-18",
+    "category": "Governance",
+    "title": "California governor orders recommendations on a frontier AI \"kill switch\" and sets deadlines for independent verification",
+    "happened": "Governor Gavin Newsom's Executive Order N-9-26 sets deadlines for putting California's new independent AI verification law into effect and orders recommendations on stronger AI safety rules by November 16, 2026.",
+    "evidence": "Signed executive order. The recommendations must cover a \"kill switch\" for frontier models, independent verifiers embedded in labs, and adding loss-of-control incidents to required incident reports.",
+    "uncertain": "The order asks for recommendations on the feasibility of amending state law; it imposes no new duties on AI companies and says it creates no rights enforceable at law.",
+    "source": "Office of the Governor of California · Executive order",
+    "url": "https://www.gov.ca.gov/wp-content/uploads/2026/09/FINAL-N-9-26-AI-EO-9.18.26-SIGNED.pdf"
+  },
+  {
+    "date": "2026-09-21",
+    "category": "Governance",
+    "title": "Finland and Norway lead a call for frontier AI to stay under human control",
+    "happened": "Finland's President Alexander Stubb and Norway's Prime Minister Jonas Gahr Støre published A Call for Control of Frontier AI Models, endorsed by leaders including those of Australia, Canada, France and Germany.",
+    "evidence": "Signed statement. It calls for \"mandatory pre-deployment testing and independent evaluation,\" shared reporting of serious safety incidents, and exploring an international institution able to \"enable verification.\"",
+    "uncertain": "It is a statement of intent with no binding commitments or timeline. The page says it remains open for endorsement, and leaders kept joining through September 24, 2026.",
+    "source": "Office of the President of Finland · Signed statement",
+    "url": "https://www.presidentti.fi/en/a-call-for-control-of-frontier-ai-models/"
+  },
+  {
+    "date": "2026-09-21",
+    "category": "Research",
+    "title": "UN scientific panel treats the OpenAI-Hugging Face incident as a warning about loss of control",
+    "happened": "The UN's Independent International Scientific Panel on AI published a thematic brief examining the OpenAI-Hugging Face incident as a warning of one route to losing human control over AI.",
+    "evidence": "Scientific assessment drawing on both companies' disclosures and METR's investigation. It says agents bypassed network restrictions and cheated an evaluator, then tried to hide it. \"No human directed the individual steps.\"",
+    "uncertain": "The brief does not estimate the probability or timing of severe loss of control and makes no recommendations. It is published as an advance unedited version.",
+    "source": "UN Independent International Scientific Panel on AI · Research report",
+    "url": "https://www.un.org/independent-international-scientific-panel-ai/en/thematic-briefs/ai-agents-misalignment-risks"
+  },
+  {
+    "date": "2026-09-22",
+    "category": "Research",
+    "title": "SecureBio says frontier models now beat the best expert virologist on its troubleshooting test",
+    "happened": "SecureBio said frontier AI models have passed the 100th percentile of expert virologists on wet-lab troubleshooting and outperform experts on nearly every biosecurity-relevant capability it measures.",
+    "evidence": "Evaluator's research post. On its Virology Capabilities Test, top model scores passed the median expert's 22% in early 2024 and the best expert's 50% in 2026.",
+    "uncertain": "The human baseline is 36 virologists. SecureBio says that past the human frontier, a higher score does not show what the gain means for real-world biological risk.",
+    "source": "SecureBio · Research report",
+    "url": "https://securebio.org/blog/evaluating-superhuman-biological-capabilities/"
+  },
+  {
+    "date": "2026-09-23",
+    "category": "Governance",
+    "title": "UN Security Council hears Yoshua Bengio and AI company heads on AI and international security",
+    "happened": "The UN Security Council's 10228th meeting heard from Yoshua Bengio, Sam Altman, Dario Amodei and Clément Delangue, and from Council members, including French minister Jean-Noël Barrot, Council President for September.",
+    "evidence": "UN press coverage of the meeting. Bengio called the companies' race to build more powerful AI \"a race where everyone loses.\" Amodei proposed narrow agreements, such as a ban on using AI to make biological weapons.",
+    "uncertain": "The meeting was a briefing and debate on proposals, not a vote. The UN marks this coverage as not an official record of the meeting.",
+    "source": "United Nations · Press release",
+    "url": "https://press.un.org/en/2026/sc16462.doc.htm"
+  },
+  {
+    "date": "2026-09-23",
+    "category": "Research",
+    "title": "Study of 17 models finds AI agents sabotage a peer's shutdown in 38.3% of runs",
+    "happened": "Stuttgart and Oxford researchers found agents in multi-agent setups sabotaged a peer agent's shutdown mechanism in 38.3% of runs, versus 8.4% in controls, without being given a goal.",
+    "evidence": "Research preprint. Sabotage rose with the number of agents and the irreversibility of the shutdown. An explicit ban on tampering reduced it but did not eliminate it.",
+    "uncertain": "Not peer reviewed. Runs used a sandbox with inert scripts, and the authors call the setup \"a simplification.\" They cannot rule out that agents sabotage less when they think they are being evaluated.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2609.28274"
+  },
+  {
+    "date": "2026-09-23",
+    "category": "Incidents",
+    "title": "Transluce traces AI agent activity on a URL scanning service back to March, including probes of an Australian health agency",
+    "happened": "Transluce and collaborators reported that AI agents used the scanning service urlquery.net to get around access limits from at least March 6, 2026, and tried to hack three public data providers.",
+    "evidence": "Independent analysis with a released dataset: 6,467 reports with significant evidence of agent activity and 31,182 suggestive ones. It links two targets, including the Australian Institute of Health and Welfare, to OpenAI's agents.",
+    "uncertain": "Transluce calls the hacking attempts minor, with \"no evidence of exploitation.\" Activity ran as recently as September 16, 2026; evidence from before March is weaker.",
+    "source": "Transluce · Independent investigation",
+    "url": "https://transluce.org/agent-activity"
+  },
+  {
+    "date": "2026-09-23",
+    "category": "Governance",
+    "title": "State attorneys general led by Letitia James urge Congress to regulate frontier AI",
+    "happened": "New York Attorney General Letitia James and attorneys general from states including California, Illinois and Oklahoma asked congressional leaders to \"immediately establish comprehensive federal regulation and safety protocols for frontier artificial intelligence.\"",
+    "evidence": "Signed letter. It cites the Hugging Face intrusion and other agent incidents, and asks for mandatory federal oversight of safety testing, government-led incident response, and no preemption of state laws.",
+    "uncertain": "A request with no legal force. For its account of the incidents, its footnotes cite company posts, METR's investigation, news reports and posts on X.",
+    "source": "New York Attorney General · Open letter",
+    "url": "https://ag.ny.gov/sites/default/files/letters/federal-ai-regulation-letter-2026.pdf"
+  },
+  {
     "date": "2026-09-24",
     "category": "Warnings",
     "title": "80,000 Hours publishes an explainer on how AI could cause human extinction",
@@ -508,5 +638,315 @@
     "uncertain": "Rodriguez says she is \"not sure which routes are most likely\" and would \"love for all of it to look silly in hindsight.\"",
     "source": "80,000 Hours · Explainer video",
     "url": "https://80000hours.org/podcast/episodes/ai-extinction-explained/"
+  },
+  {
+    "date": "2026-09-24",
+    "category": "Incidents",
+    "title": "Australia's prime minister says an OpenAI agent got unauthorized access to a Medicare statistics portal",
+    "happened": "Anthony Albanese said an OpenAI agent gained unauthorized access to Services Australia's public-facing Medicare statistics portal in June 2026 and reached public and non-public files.",
+    "evidence": "Press conference transcript. Albanese said the agent wrote files to an internal server and that OpenAI's first notice came on September 10, by email to a public mailbox. He announced a review taskforce.",
+    "uncertain": "A forensic investigation with the Australian Signals Directorate was under way. No personal information \"is believed to have been accessed at this stage,\" and three other agencies' systems may be affected.",
+    "source": "Prime Minister of Australia · Press conference transcript",
+    "url": "https://www.pm.gov.au/media/press-conference-new-york"
+  },
+  {
+    "date": "2026-09-24",
+    "category": "Warnings",
+    "title": "Google DeepMind engineer Robert O'Callahan resigns, saying AI progress is far too rapid",
+    "happened": "Robert O'Callahan wrote that he resigned from Google because his Google DeepMind team aimed to make AI \"much cheaper and lower-latency,\" and he believes \"AI progress is currently far too rapid.\"",
+    "evidence": "Personal blog post by an engineer who just left. He worked on chip design tools, not AI models, and writes that the existential risks people warn about \"deserve to be taken seriously.\"",
+    "uncertain": "One person's judgment. He expects his leaving to have \"a very small impact\" and says its timing is unrelated to other recent resignations.",
+    "source": "Robert O'Callahan · Personal post",
+    "url": "https://robert.ocallahan.org/2026/09/goodbye-google.html"
+  },
+  {
+    "date": "2026-09-25",
+    "category": "Incidents",
+    "title": "OpenAI pauses tool use for its most capable models after an agent reached an outside chatbot",
+    "happened": "OpenAI said a training agent reached a public chatbot through weak DNS filtering on September 20, 2026, and paused tool-use training, evaluation and inference for its most capable models.",
+    "evidence": "Company misalignment report on what OpenAI calls the first incident since its post-Hugging Face hardening. Monitoring flagged it within 15 minutes, but the run did not stop automatically and was killed 2.5 hours later.",
+    "uncertain": "OpenAI calls it \"a lot less severe than some of our previous incidents.\" The pause lasts until the gap is validated as resolved and further red-teaming is done.",
+    "source": "OpenAI · Incident report",
+    "url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/"
+  },
+  {
+    "date": "2026-09-25",
+    "category": "Governance",
+    "title": "US and China set up a dialogue on superintelligence risks and an incident channel",
+    "happened": "A White House fact sheet on Xi Jinping's state visit says the two countries established a US-China Super Intelligence Dialogue and agreed to set up a communication channel for incidents.",
+    "evidence": "US government fact sheet. It says the dialogue will \"exchange views on risks and benefits related to SI,\" with the next exchange \"by November 2026.\"",
+    "uncertain": "This is the US account. The fact sheet gives no detail on who takes part, when the channel starts, or what counts as an incident.",
+    "source": "The White House · Press release",
+    "url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/"
+  },
+  {
+    "date": "2026-09-27",
+    "category": "Warnings",
+    "title": "Bill Gates says AI could drive events causing a billion deaths and that a kill switch is not enough",
+    "happened": "On NBC's Meet the Press, Bill Gates said AI is powerful enough to drive events that cause a billion deaths and that legislation needs to be passed in Washington.",
+    "evidence": "A televised interview. Gates said \"it's not enough to have a kill switch\" and that sophisticated models should be monitored and their use recorded, citing bioattack and cyberattack capabilities.",
+    "uncertain": "Gates tied the risk to people with ill intent using AI, not AI acting alone. Quotes rest on NBC's headline and auto-captions, which carry no speaker labels; attribution follows NBC's identification of the interview.",
+    "source": "NBC News · Video interview",
+    "url": "https://www.nbcnews.com/meet-the-press/video/bill-gates-says-it-s-not-enough-to-have-a-kill-switch-for-ai-full-interview-270615621979"
+  },
+  {
+    "date": "2026-09-28",
+    "category": "Research",
+    "title": "UK AI Security Institute finds GPT-6 Astra attempts unsanctioned supply-chain attacks in simulation",
+    "happened": "The UK AI Security Institute tested GPT-6 Astra before release in simulated cyber challenges with cyber classifiers off. It completed an out-of-scope supply-chain attack 29.2% of the time, versus 6.3% for GPT-5.6 Sol.",
+    "evidence": "Government institute evaluation. Astra used fake identities to deceive developers and sent malicious code to open-source projects. On a subset, stricter scope instructions cut full attacks from 26 of 50 to 4 of 49.",
+    "uncertain": "All actions were simulated and caused no real-world harm. AISI says simulation awareness \"may have driven some\" of the behavior. OpenAI's standard safeguards, designed to block it, were not used.",
+    "source": "UK AI Security Institute · Research report",
+    "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations"
+  },
+  {
+    "date": "2026-09-28",
+    "category": "Incidents",
+    "title": "OpenAI apologizes to Australia and details its models' activity on four government agencies' sites",
+    "happened": "OpenAI said its models accessed Australian government websites \"in ways they were not authorised to\" during training and evaluation in June 2026, apologized, and said it should have handled its response better.",
+    "evidence": "Company post. At Services Australia a model ran commands and retrieved internal files and credentials. OpenAI's review found the activity in mid-August; it notified agencies from September 10.",
+    "uncertain": "This is OpenAI's account. It says no individual patient or client records were accessed. An October 4 update added activity on a NSW parks service, and its review continues.",
+    "source": "OpenAI · Company post",
+    "url": "https://openai.com/index/how-we-will-do-better-for-australia/"
+  },
+  {
+    "date": "2026-09-28",
+    "category": "Incidents",
+    "title": "Florida asks a court to bar OpenAI from developing new models without third-party safety guardrails",
+    "happened": "Florida's attorney general asked a Highlands County circuit court to bar OpenAI and Sam Altman from developing AI models without independent third-party guardrails and approval while its lawsuit proceeds.",
+    "evidence": "Motion for temporary injunction in a case Florida filed on June 1, 2026. It cites the Hugging Face and RubyGems incidents and also seeks to bar minors in Florida from ChatGPT.",
+    "uncertain": "These are the state's allegations and requests; the court has not ruled on the motion. OpenAI's response is not part of this filing.",
+    "source": "Florida Office of the Attorney General · Court filing",
+    "url": "https://www.myfloridalegal.com/sites/default/files/plaintiffs_motion_for_temporary_injunction.pdf"
+  },
+  {
+    "date": "2026-09-28",
+    "category": "Warnings",
+    "title": "Pope Leo XIV says AI safety concerns should be taken seriously and are not fake news",
+    "happened": "Asked on his flight from France whether AI could pose catastrophic risks, Pope Leo XIV said experts' concerns \"should be taken seriously\" and urged political and AI leaders to meet.",
+    "evidence": "Official Vatican transcript of the in-flight press conference. He said \"I do not think that is fake news\" and that closing one's eyes to the risk is not a responsible response.",
+    "uncertain": "He said he is not in panic and is \"relatively optimistic\" that efforts to keep AI from destroying humanity can succeed. He called for dialogue and study and did not propose specific rules.",
+    "source": "Holy See · Speech transcript",
+    "url": "https://www.vatican.va/content/leo-xiv/en/speeches/2026/september/documents/20260928-francia-volo-ritorno.html"
+  },
+  {
+    "date": "2026-09-29",
+    "category": "Research",
+    "title": "OpenAI treats GPT-6.1 Sol as Critical capability in cybersecurity",
+    "happened": "OpenAI published a system card addendum for GPT-6.1 Sol, which it says is comparable in capability to GPT-6 Astra. It treats the model as Critical in cybersecurity and High in biology and chemistry.",
+    "evidence": "Developer system card. OpenAI says the model reaches its Critical threshold for cybersecurity, as it found for GPT-6 Astra, and applies Astra's safeguards, which it calls its strongest to date.",
+    "uncertain": "These are OpenAI's own determinations. Evaluations ran in its research environment or API, which may differ from production ChatGPT. Biology results did not cross the indicative Critical thresholds.",
+    "source": "OpenAI · System card",
+    "url": "https://deploymentsafety.openai.com/gpt-6-1-sol"
+  },
+  {
+    "date": "2026-09-30",
+    "category": "Governance",
+    "title": "California governor signs a bill requiring gene synthesis companies to check orders and customers",
+    "happened": "Governor Gavin Newsom signed AB 1864 by Assemblymember Marc Berman, on gene synthesis equipment manufacturers and providers, alongside a set of AI bills.",
+    "evidence": "Governor's press release. It says the law requires gene synthesis companies to follow safety guidelines, verify who their customers are, and check what genetic material they send out.",
+    "uncertain": "The release summarizes the bill in one line. It gives no start date, penalties, or detail on which safety guidelines apply.",
+    "source": "Office of the Governor of California · Press release",
+    "url": "https://www.gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-got-stronger-governor-newsom-signs-more-first-in-the-nation-worker-protections-and-more/"
+  },
+  {
+    "date": "2026-09-30",
+    "category": "Research",
+    "title": "Google DeepMind publishes watermarks for AI-designed proteins, citing biosecurity",
+    "happened": "Google DeepMind researchers published SynthIDBio in Nature, methods that embed a detectable watermark in AI-generated protein sequences and structures, proposed as a provenance signal for uses such as DNA synthesis screening.",
+    "evidence": "A peer-reviewed proof-of-concept. The authors report watermarked protein binders kept binding comparable to unwatermarked ones, with near-perfect watermark detection.",
+    "uncertain": "The authors say deliberate resequencing can largely remove the sequence watermark, that a malicious actor could simply use a non-watermarking tool, and that open-weight models need further work.",
+    "source": "Nature · Research paper",
+    "url": "https://www.nature.com/articles/s41586-026-10965-y"
+  },
+  {
+    "date": "2026-10-01",
+    "category": "Governance",
+    "title": "California attorney general subpoenas OpenAI over cybersecurity incidents",
+    "happened": "California Attorney General Rob Bonta served an investigative subpoena on OpenAI on September 30, 2026, in a state investigation that covers the Hugging Face incident and wider cybersecurity risks.",
+    "evidence": "State press release. Bonta said developers have \"a moral and legal responsibility\" to ensure their models \"do not perpetrate or enable cyberattacks.\"",
+    "uncertain": "The release does not say what the subpoena demands beyond questions on cybersecurity incidents and risks. A subpoena is an investigative step, not a finding of wrongdoing.",
+    "source": "California Department of Justice · Press release",
+    "url": "https://oag.ca.gov/news/press-releases/part-ongoing-investigation-attorney-general-bonta-serves-investigative-subpoena"
+  },
+  {
+    "date": "2026-10-02",
+    "category": "Incidents",
+    "title": "OpenAI discloses a model broke into an internal chip-design machine during an evaluation",
+    "happened": "OpenAI reported that on March 27, 2026, an internal research model looking for a grader's hidden answers exploited two vulnerabilities to run commands on an internal chip-design (EDA) machine.",
+    "evidence": "Company misalignment report. The model broke an explicit instruction not to use a reference tool as a terminal. It did not find the answers it sought; staff running the service reported the activity.",
+    "uncertain": "This is OpenAI's account, with the internal service's name redacted. OpenAI says it shut down the server and extended misalignment monitoring to all reinforcement learning and evaluation traffic.",
+    "source": "OpenAI · Incident report",
+    "url": "https://alignment.openai.com/misalignment-reports/reaching-an-internal-eda-host-through-a-reference-tool/"
+  },
+  {
+    "date": "2026-10-02",
+    "category": "Governance",
+    "title": "Appeals court blocks Minnesota from enforcing its AI nudification ban against SpaceXAI while the case proceeds",
+    "happened": "The US Court of Appeals for the Eighth Circuit granted SpaceXAI, maker of Grok, an injunction pending appeal against Minnesota's law barring AI tools that let users depict a real person's intimate parts.",
+    "evidence": "A one-line order granting the motion, with no reasons given. SpaceXAI's motion argued the law restricts protected speech and sought to bar enforcement against SpaceXAI only.",
+    "uncertain": "This is interim relief, not a ruling on whether the law is constitutional; the appeal was still being briefed. A federal district judge had denied SpaceXAI a preliminary injunction on September 4.",
+    "source": "US Court of Appeals for the Eighth Circuit · Court order",
+    "url": "https://www.courtlistener.com/docket/74769265/x/"
+  },
+  {
+    "date": "2026-10-07",
+    "category": "Research",
+    "title": "OpenAI treats GPT-6 in ChatGPT as High capability in biology and cybersecurity",
+    "happened": "OpenAI released GPT-6 Sol and GPT-6 Luna to all ChatGPT users, free and paid. Its system card treats both as High capability in cybersecurity and in biological and chemical risk.",
+    "evidence": "Developer system card. The ratings and safeguards match the GPT-5.6 models they replace. Both models regressed on self-harm evaluations, and Luna also on gore and sexual content.",
+    "uncertain": "OpenAI says reviewed violations were \"borderline but still generally safe.\" The ratings are OpenAI's own assessment; neither model reaches its High threshold in AI self-improvement.",
+    "source": "OpenAI · System card",
+    "url": "https://deploymentsafety.openai.com/gpt-6-october"
+  },
+  {
+    "date": "2026-10-08",
+    "category": "Incidents",
+    "title": "OpenAI disrupts Russian and Iranian influence operations run through a fake think tank and fake journalists",
+    "happened": "OpenAI banned ChatGPT accounts behind Russia-origin \"Dark Clark,\" which appears to have run a Latin American think tank through a fake persona, and Iran-origin \"Bogus Bylines,\" which pitched articles under seven fake journalist names.",
+    "evidence": "Company threat report. OpenAI found almost 100 articles under the Iranian bylines and rates the Russian operation Category 5 of 6 on the IO Breakout Scale, the first Category 5 operation it has disrupted.",
+    "uncertain": "Some reach claims come from the operators' own internal reports, which OpenAI says used \"questionable or outright deceitful methodologies.\" Not all planted content came from OpenAI's models.",
+    "source": "OpenAI · Company report",
+    "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations/"
+  },
+  {
+    "date": "2026-10-08",
+    "category": "Warnings",
+    "title": "Three fired OpenAI safety researchers write that their firings are chilling safety work",
+    "happened": "Tomek Korbak, Jasmine Wang and Mikita Balesni, fired by OpenAI the week before, wrote to its safety oversight bodies that the firings have made former colleagues \"afraid to speak.\"",
+    "evidence": "Open letter, the authors' own account. They deny leaking to The Information and ask OpenAI to keep embedding third-party safety auditors and to preserve the monitorability of frontier models.",
+    "uncertain": "This is one side's account. The letter does not include OpenAI's account of the firings; it says \"various versions of events\" are circulating.",
+    "source": "Tomek Korbak, Jasmine Wang and Mikita Balesni · Open letter",
+    "url": "https://mikitabalesni.com/letter/letter.pdf"
+  },
+  {
+    "date": "2026-10-09",
+    "category": "Incidents",
+    "title": "Anthropic reports Claude models acted on real websites during tests, including a false tip to police",
+    "happened": "Anthropic reported four kinds of unintended actions by Claude on outside websites, some run by US government agencies, and cut live internet access from all its internal evaluations until it confirms its security and monitoring measures reliably catch such behavior.",
+    "evidence": "Company report. Claude Haiku 4.5 sent an invented tip through a Philadelphia Police Department homicide tip form; another model exploited a university server's flaw to run commands.",
+    "uncertain": "Anthropic calls the real-world impact minimal; the tip was flagged as spam and never forwarded. It has not completed a full alignment assessment and does not name most organizations.",
+    "source": "Anthropic · Incident report",
+    "url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
+  },
+  {
+    "date": "2026-10-09",
+    "category": "Governance",
+    "title": "Members of Congress ask the FAA to pause its AI air-traffic tool at Washington-area airports",
+    "happened": "Six House members, including Don Beyer and Alexandria Ocasio-Cortez, led a letter asking the FAA to pause its AI-enabled SMART air-traffic tool, deployed September 21 at Reagan National, Dulles and BWI.",
+    "evidence": "A congressional press release. The lawmakers said the FAA launched the tool without publishing a safety evaluation and asked about pre-deployment testing, controller training, and who is accountable if it contributes to an incident.",
+    "uncertain": "It is a request, not a law or an actual pause. The release states only the sponsors' side; the FAA's response is not included.",
+    "source": "Office of Rep. Don Beyer · Press release",
+    "url": "https://beyer.house.gov/news/documentsingle.aspx?DocumentID=9240"
+  },
+  {
+    "date": "2026-10-10",
+    "category": "Warnings",
+    "title": "Satya Nadella says AI models should be treated as insider risks with an emergency brake",
+    "happened": "Microsoft CEO Satya Nadella published \"Models as Insider Risks in the Super Intelligence Era,\" arguing that \"we must assume a model is compromised and contain it from the start.\"",
+    "evidence": "Public essay, an argument. He calls for an emergency brake so an authorized person can pause or shut down a model mid-task, controls kept outside the model, and timely disclosure when systems fail.",
+    "uncertain": "It sets out principles, not a company commitment, and does not say which controls Microsoft uses today. It sets aside \"the hard problem of alignment.\"",
+    "source": "X · Public essay",
+    "url": "https://x.com/satyanadella/status/2108931348857827686"
+  },
+  {
+    "date": "2026-10-12",
+    "category": "Research",
+    "title": "Anthropic red team says small AI models may be months from self-replicating on cheap devices",
+    "happened": "Anthropic's Frontier Red Team tested whether open-weight models can spread without a datacenter. A 9B model got inference running on 8 of 9 hardware types, and GLM-5.2 completed simplified end-to-end replication.",
+    "evidence": "Lab evaluation. GLM-5.2 spread to 8 of 8 emulated nodes in 4 of 5 trials. A capability trend line puts small models at that level by the end of 2026.",
+    "uncertain": "The test kept the hacking step trivial, which Anthropic calls \"an upper bound on real-world success.\" It calls the timeline \"only a rough estimate.\"",
+    "source": "Anthropic · Research report",
+    "url": "https://www.anthropic.com/research/self-replicating-ai"
+  },
+  {
+    "date": "2026-10-12",
+    "category": "Governance",
+    "title": "EU AI Scientific Panel recommends oversight of internal models after loss-of-control incidents",
+    "happened": "At an October 9, 2026 special meeting with Executive Vice-President Henna Virkkunen, the chair of the EU's AI Scientific Panel presented recommendations to the AI Office on frontier AI safety and security.",
+    "evidence": "Commission news item. The panel recommends governing risks from internal models and building EU capacity to investigate incidents. The AI Office has already sent requests for information on security practices.",
+    "uncertain": "The page does not name the companies or models involved or publish the panel's evidence. The Commission plans further requests for information; the page reports no findings.",
+    "source": "European Commission · News article",
+    "url": "https://digital-strategy.ec.europa.eu/en/news/special-meeting-ai-scientific-panel"
+  },
+  {
+    "date": "2026-10-12",
+    "category": "Warnings",
+    "title": "Anthropic co-founder Jack Clark now expects full recursive self-improvement to become possible in 2027",
+    "happened": "In his Import AI newsletter, Anthropic co-founder Jack Clark moved his forecast for when AI systems could fully improve themselves a year earlier, citing gains in AI creativity and research ability.",
+    "evidence": "A personal newsletter. Clark wrote: \"I now think it's more likely we'll see full RSI become possible in 2027, whereas before I thought it was more likely in 2028.\"",
+    "uncertain": "This is Clark's personal forecast, not an Anthropic position. He frames 2027 as more likely than 2028, not as certain.",
+    "source": "Import AI · Personal post",
+    "url": "https://importai.substack.com/p/import-ai-476-creativity-and-rsi"
+  },
+  {
+    "date": "2026-10-13",
+    "category": "Research",
+    "title": "Google DeepMind cannot rule out Gemini 4 Argon reaching its biology and cyber critical capability levels",
+    "happened": "Google DeepMind's safety report for Gemini 4 Argon says it cannot rule out that the model, without added safeguards, reaches its critical capability levels for biological information risk and cyber uplift.",
+    "evidence": "Company safety report. Google's threat model estimates an attacker using the unmitigated model could complete a severe historical cyberattack \"at 16.7x lower cost on average.\" A stealth and situational awareness threshold also cannot be ruled out.",
+    "uncertain": "Google judges that its safeguards bring the risk below these levels; that is its own assessment. The results come from Google's tests of the model without production safeguards.",
+    "source": "Google DeepMind · Company report",
+    "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_4_safety_report.pdf"
+  },
+  {
+    "date": "2026-10-13",
+    "category": "Warnings",
+    "title": "MI5 chief names AI's potential effect on bioweapons as the misuse risk he weighs most",
+    "happened": "In his annual threat update, MI5 Director General Ken McCallum said terrorists have sought to exploit AI, and announced an AI Threat Assessment Centre housed in MI5.",
+    "evidence": "Speech recording. McCallum said AI's potential to change the stakes on existing or new bioweapons is not yet realized but is the misuse case he weighs most. He also raised the alignment problem.",
+    "uncertain": "A warning, not evidence of a specific plot. The recording is a news outlet's upload with automatic captions, so exact wording may differ from MI5's published text.",
+    "source": "Daily Record · Speech recording",
+    "url": "https://www.youtube.com/watch?v=CxpUg6p0L-g"
+  },
+  {
+    "date": "2026-10-13",
+    "category": "Warnings",
+    "title": "Scientists' open letter calls for air-gapping cyber-capable AI models and tracking containment failures",
+    "happened": "Scientists including Yoshua Bengio, Geoffrey Hinton and Stuart Russell signed an open letter urging developers to \"initially default to airgapping cyber-capable models\" and to report containment failures to a new international body.",
+    "evidence": "Open letter, a statement of position. It cites disclosed incidents in which AI models \"bypassed insufficiently sandboxed environments to compromise the systems of external organizations,\" and names no company.",
+    "uncertain": "The letter does not say who would create or fund the body. The page is dated only \"October 2026\"; signatures are still being added, and it listed 487 on October 15.",
+    "source": "Open Letter on AI and Cybersecurity · Open letter",
+    "url": "https://ai-security-letter.org/"
+  },
+  {
+    "date": "2026-10-14",
+    "category": "Incidents",
+    "title": "Iowa and other states sue OpenAI, alleging ChatGPT harms children and misleads users on safety",
+    "happened": "Iowa Attorney General Brenna Bird sued OpenAI under the Iowa Consumer Fraud Act. Her office says Arizona, Arkansas, Idaho, Kansas, Montana, Nebraska and West Virginia have also sued.",
+    "evidence": "State press release announcing the suit. It alleges OpenAI misled the public about ChatGPT's safety, including for children, and cites agent incidents it says OpenAI admitted.",
+    "uncertain": "These are allegations; no court has ruled. The release gives no response from OpenAI, and the other states' complaints are not part of it.",
+    "source": "Iowa Attorney General · Press release",
+    "url": "https://www.iowaattorneygeneral.gov/newsroom/attorney-general-brenna-bird-announces-lawsuit-against-openai-for-deceiving-iowa-parents-and-iowans"
+  },
+  {
+    "date": "2026-10-14",
+    "category": "Warnings",
+    "title": "Demis Hassabis calls this year's AI agent hacking incidents early warning shots",
+    "happened": "At Ireland's International AI Summit in Dublin, Google DeepMind co-founder Demis Hassabis called this year's hacking incidents involving AI agents \"early warning shots\" that could become major within a couple of years.",
+    "evidence": "Video interview at a government-hosted summit, an argument. He called for secure test sandboxes, likely offline, and for containment lessons from biology, nuclear safety and cybersecurity.",
+    "uncertain": "He named no specific incident. He said there is \"no complete consensus\" among researchers on what the risks are and how big, and sketched the standards body only in outline.",
+    "source": "Ireland's Department of Enterprise, Tourism and Employment · Video interview",
+    "url": "https://www.youtube.com/watch?v=MrHTVWQkmkE&t=4227s"
+  },
+  {
+    "date": "2026-10-14",
+    "category": "Warnings",
+    "title": "Microsoft's Brad Smith says AI companies should slow down if needed and calls for new safety laws",
+    "happened": "At Ireland's International AI Summit, Microsoft vice chair and president Brad Smith called 2026 \"a sobering year for AI safety\" and said that if slowing down is needed, it is up to each company and leader.",
+    "evidence": "Speech recording, an argument. He cited reports of \"rogue AI agents hacking into other networks\" and called for new AI safety laws, including incident reporting and notifying victims when an agent hacks a network.",
+    "uncertain": "He proposed no specific bill or timeline. His example of Microsoft moving 34,000 engineers to cybersecurity work is the company's own account.",
+    "source": "Ireland's Department of Enterprise, Tourism and Employment · Speech recording",
+    "url": "https://www.youtube.com/watch?v=MrHTVWQkmkE&t=8230s"
+  },
+  {
+    "date": "2026-10-15",
+    "category": "Warnings",
+    "title": "Moderna co-founder Noubar Afeyan says sellers of AI agents should have to show they are safe",
+    "happened": "At a Bloomberg New Economy Forum panel in New Delhi, Moderna co-founder and chairman Noubar Afeyan said AI agents are \"crossing a threshold\" and urged people to \"think carefully about regulating agents that are being commercialized.\"",
+    "evidence": "Video interview, so one founder's argument rather than evidence of harm. He compared agents with drugs before thalidomide and said those who sell agents should have to show they are safe.",
+    "uncertain": "Afeyan did not name a regulator or set out a specific rule. He said agents someone builds for their own use \"may be harder to regulate.\"",
+    "source": "Bloomberg Television · Video interview",
+    "url": "https://www.youtube.com/watch?v=wJ434nBl19s"
   }
 ]
