@@ -22,7 +22,8 @@ Codex review; do not run `/codex-review` yourself.
 - The routine edits only `src/data/events.json` and the README files generated from it
   (`README.md`, `assets/readme/*`). Homepage features, page copy and layout stay as they
   are; suggest changes in the PR body instead.
-- At most three new entries per run. Fewer strong entries beat more weak ones.
+- No per-run limit: publish everything that clears the bar, and nothing that does not.
+  The bar decides, not the count.
 - Subagents inherit the session model; omit `model`.
 - Paths are absolute in every command (Bash cwd resets each call). Prefix `git show
   <rev>:<path>` with `MSYS_NO_PATHCONV=1`. Never use EnterWorktree or Agent `isolation`.
@@ -86,9 +87,11 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
      unless a later development makes it a new event.
    Re-judge `held` events: publish if a route opened, keep holding while the first hold is
    under seven days old, then mark `skipped`. Judge the rest against
-   [bar.md](references/bar.md), including its paywall routine. Rank what passes and keep
-   the top three; the rest that pass stay `held` for the next run. Append every judged
-   candidate to `seen.jsonl` with its verdict.
+   [bar.md](references/bar.md), including its paywall routine. Everything that passes
+   goes into this run's PR; there is no per-run limit. With more than about ten, draft
+   them in parallel subagents grouped by theme (add-source fan-out mode), each writing its
+   entries to its own file, then merge them into `events.json` in date order. Append
+   every judged candidate to `seen.jsonl` with its verdict.
 5. **Nothing passes.** Write `report.md`, update `last-run.json`, and stop. No worktree,
    branch, commit or PR.
 6. **Workspace.** If a routine PR is open, add a worktree on its branch:
