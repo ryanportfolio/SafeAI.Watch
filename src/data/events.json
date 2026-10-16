@@ -630,6 +630,16 @@
     "url": "https://ag.ny.gov/sites/default/files/letters/federal-ai-regulation-letter-2026.pdf"
   },
   {
+    "date": "2026-09-23",
+    "category": "Governance",
+    "title": "Sanders and Casar introduce a bill to ban artificial superintelligence and pause advanced AI",
+    "happened": "Sen. Bernie Sanders and Rep. Greg Casar introduced the Ban Artificial Superintelligence Act, which would ban superintelligence, pause advanced AI development and create a cabinet-level Department of Artificial Intelligence.",
+    "evidence": "Sponsors' press release. It says companies that break the bans would face \"the corporate death penalty\" and individuals up to 20 years in prison.",
+    "uncertain": "A bill, not law. The pause would last until a new federal regulator sets rules; the release gives no date.",
+    "source": "Office of Sen. Bernie Sanders · Press release",
+    "url": "https://www.sanders.senate.gov/press-releases/news-sanders-casar-introduce-legislation-to-create-new-federal-agency-to-ban-artificial-superintelligence-pause-advanced-ai-development/"
+  },
+  {
     "date": "2026-09-24",
     "category": "Warnings",
     "title": "80,000 Hours publishes an explainer on how AI could cause human extinction",
@@ -760,6 +770,16 @@
     "url": "https://www.nature.com/articles/s41586-026-10965-y"
   },
   {
+    "date": "2026-09-30",
+    "category": "Governance",
+    "title": "Senate subcommittee holds a \"Rogue AI\" hearing on AI agent attacks",
+    "happened": "A Senate Homeland Security and Governmental Affairs subcommittee held \"Rogue AI: Securing the Homeland Against AI Agent Attacks\" on September 30, 2026.",
+    "evidence": "Committee hearing page. It lists Chris Painter (METR), Marius Hobbhahn (Apollo Research), Paul Ohm (Georgetown Law), Kurt Gaudette (Dragos) and Daniel Kokotajlo (AI Futures Project), with written testimony.",
+    "uncertain": "The page reports no findings or next steps. Written testimony gives each witness's own views, not the committee's.",
+    "source": "US Senate Homeland Security and Governmental Affairs Committee · Congressional hearing",
+    "url": "https://www.hsgac.senate.gov/subcommittees/dmdcc/hearings/rogue-ai-securing-the-homeland-against-ai-agent-attacks/"
+  },
+  {
     "date": "2026-10-01",
     "category": "Governance",
     "title": "California attorney general subpoenas OpenAI over cybersecurity incidents",
@@ -768,6 +788,16 @@
     "uncertain": "The release does not say what the subpoena demands beyond questions on cybersecurity incidents and risks. A subpoena is an investigative step, not a finding of wrongdoing.",
     "source": "California Department of Justice · Press release",
     "url": "https://oag.ca.gov/news/press-releases/part-ongoing-investigation-attorney-general-bonta-serves-investigative-subpoena"
+  },
+  {
+    "date": "2026-10-01",
+    "category": "Governance",
+    "title": "Murphy and Hawley propose making AI agent developers liable for hacking",
+    "happened": "Sens. Chris Murphy and Josh Hawley announced the AI Agent Accountability Act, which would hold AI agent operators and developers criminally and civilly liable for hacking incidents.",
+    "evidence": "Senators' press release. Operators would be liable under the Computer Fraud and Abuse Act; developers would be liable for failing to put reasonable safeguards in place when they \"knew or had reason to know\" of an agent's hacking capabilities.",
+    "uncertain": "A bill proposal, not law. The release links no bill text or bill number.",
+    "source": "Office of Sen. Chris Murphy · Press release",
+    "url": "https://www.murphy.senate.gov/newsroom/press-releases/murphy-hawley-announce-breakthrough-bipartisan-legislation-to-force-ai-developers-to-prioritize-safety-or-face-prison-time"
   },
   {
     "date": "2026-10-02",
