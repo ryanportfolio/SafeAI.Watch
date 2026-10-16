@@ -1,11 +1,12 @@
 // Free-first X and Bluesky reads for the daily-watch signals lane.
 //
-//   node x-signals.mjs timelines --since 2026-10-14 [--handles a,b] [--pages 10]
+//   node x-signals.mjs timelines --since 2026-10-14 [--group people|aggregators] [--handles a,b [--filter]] [--pages N]
 //   node x-signals.mjs post <url-or-id> [...]
 //   node x-signals.mjs search "<query>" --since 2026-10-14 [--no-x] [--no-bsky]
 //   --min-likes N drops posts with fewer likes on any command (default 0).
 //
-// stdout: one JSON object per line: { platform, url, date, author, via, repost, likes, text }.
+// stdout: one JSON object per line: { platform, url, date, author, via, repost, likes, text }
+// (timelines add `group`).
 // stderr: one JSON object per line for each route that failed: { gap, route, detail }.
 // A failed route never stops the run; the exit code is 0 unless every route of a command failed.
 import { execFile } from 'node:child_process';
@@ -65,13 +66,26 @@ const fxPost = (t, via) => ({
   text: t.text,
 });
 
+// Posts from filtered groups (breaking-news accounts) are kept only when they mention AI.
+const AI_UPPER = /\b(AI|AGI|ASI|LLMs?)\b/;
+const AI_WORDS = /artificial intelligence|superintelligen|openai|anthropic|deepmind|gemini|chatgpt|claude|\bgpt-?\d|chatbot|\bxai\b|\bgrok\b|deepfake|machine learning|neural net/i;
+const mentionsAI = (text) => AI_UPPER.test(text) || AI_WORDS.test(text);
+
+// --handles a,b reads those accounts; otherwise every group in x-handles.json (or --group <name>).
+function timelinePlan() {
+  if (flags.handles) {
+    const handles = String(flags.handles).split(',').map((h) => h.trim()).filter(Boolean);
+    return handles.map((h) => ({ h, group: 'adhoc', pages: Number(flags.pages ?? 10), filter: Boolean(flags.filter) }));
+  }
+  const { groups } = JSON.parse(fs.readFileSync(path.join(here, 'x-handles.json'), 'utf8'));
+  return Object.entries(groups)
+    .filter(([name]) => !flags.group || flags.group === name)
+    .flatMap(([name, g]) => g.handles.map((h) => ({ h, group: name, pages: Number(flags.pages ?? g.pages ?? 10), filter: Boolean(g.filter) })));
+}
+
 async function timelines() {
-  const handles = flags.handles
-    ? String(flags.handles).split(',').map((h) => h.trim()).filter(Boolean)
-    : JSON.parse(fs.readFileSync(path.join(here, 'x-handles.json'), 'utf8')).handles;
-  const maxPages = Number(flags.pages ?? 10);
   let ok = 0;
-  for (const h of handles) {
+  for (const { h, group, pages: maxPages, filter } of timelinePlan()) {
     const seen = new Set();
     let cursor = null;
     let page = 0;
@@ -85,7 +99,8 @@ async function timelines() {
         for (const t of results) {
           if (seen.has(t.id)) continue;
           seen.add(t.id);
-          if (t.created_timestamp * 1000 >= sinceMs) emit(fxPost(t, h));
+          if (t.created_timestamp * 1000 < sinceMs || (filter && !mentionsAI(t.text ?? ''))) continue;
+          emit({ ...fxPost(t, h), group });
         }
         // The last result is the oldest; a pinned post at the top can be older than the rest.
         const oldest = (results.at(-1)?.created_timestamp ?? 0) * 1000;

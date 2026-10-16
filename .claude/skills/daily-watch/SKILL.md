@@ -67,8 +67,17 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    `runs/<date>/lane-<name>.jsonl`. Only the signals lane runs `x-signals.mjs`. Give each
    lane the path to `seen.jsonl`: lanes may leave out events whose latest verdict is
    `skipped` or `published`, and must still report `held` ones, since a new route may have
-   opened.
-3. **Triage.** Merge the lanes and dedupe across them. Then drop, matching by any URL
+   opened. Every lane also searches the shared themes in watchlist.md, AI and biology
+   first.
+3. **Recall check.** Before triage, test the lanes against the widest net. Take every
+   `aggregators` and `people` post in the window with at least 500 likes, plus every post
+   of any size that touches theme 1 (AI and biology). Each one must match a lane candidate,
+   an event already in the record or `seen.jsonl`, or get a one-line dismissal in
+   `report.md` (off topic, market chatter, duplicate). Anything left over is a miss: trace
+   it now as a candidate (find who said or did what, and the open original), and list
+   every miss in the report and PR body with the lane that should have caught it, so the
+   watchlist can be fixed.
+4. **Triage.** Merge the lanes and dedupe across them. Then drop, matching by any URL
    (lead or primary) and by event (the same happening from another source or outlet):
    - anything already in the record;
    - events whose latest `seen.jsonl` verdict is `skipped` or `published`;
@@ -80,25 +89,25 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    [bar.md](references/bar.md), including its paywall routine. Rank what passes and keep
    the top three; the rest that pass stay `held` for the next run. Append every judged
    candidate to `seen.jsonl` with its verdict.
-4. **Nothing passes.** Write `report.md`, update `last-run.json`, and stop. No worktree,
+5. **Nothing passes.** Write `report.md`, update `last-run.json`, and stop. No worktree,
    branch, commit or PR.
-5. **Workspace.** If a routine PR is open, add a worktree on its branch:
+6. **Workspace.** If a routine PR is open, add a worktree on its branch:
    `git -C C:/Users/Home/CoreWise/SafeAI.Watch worktree add -B <headRefName> C:/Users/Home/CoreWise/_wt/SafeAI.Watch/daily-<date> origin/<headRefName>`,
    then merge `origin/main` into it (no rebase, no force-push). Otherwise
    `worktree add -b daily-watch/<date> <same path> origin/main`. If the path already exists
    from a crashed run, remove that worktree first. Run `npm ci` there.
-6. **Draft.** For each kept candidate, run add-source workflow steps 2 to 5 (get the content,
+7. **Draft.** For each kept candidate, run add-source workflow steps 2 to 5 (get the content,
    trace and check claims, select and draft) with this run's sources as the material. Save
    source checks under `<worktree>/.tmp/add-source/<slug>/`. Step 6 (placement) becomes
    suggestions in the PR body.
-7. **Verify.** add-source step 7: one fresh subagent per run re-fetches every source and
+8. **Verify.** add-source step 7: one fresh subagent per run re-fetches every source and
    checks every claim and quote in the drafted entries; fix or drop what fails. Then, in
    the worktree, `npm run build`, `node scripts/readme/build.mjs` (regenerates the README
    and masthead from the record), `node scripts/readme/build.mjs --check` and
    `node scripts/readme/meta.mjs --lint` (the PR-side README gate). The README CI job fails on stale output, and
    `npm run build` does not catch it. If a check fails and the cause is not in the drafted
    entries, stop and report; do not touch other files to make it pass.
-8. **Deliver.** Commit `src/data/events.json` and the regenerated `README.md` and
+9. **Deliver.** Commit `src/data/events.json` and the regenerated `README.md` and
    `assets/readme/*` only, with the repo trailer, message in a `.tmp` file and
    `git commit -F`. Push. With no open PR:
    `gh pr create --head daily-watch/<date> --base main --body-file <file>`, title
@@ -107,7 +116,7 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    entries added (date, category, title, source, why it cleared the bar); held and skipped
    candidates worth the user's attention, with reasons; paywall routes tried; placement
    suggestions; checks run. End with the PR attribution line.
-9. **Close out.** Write `report.md` (window, counts per lane, verdicts, PR link) and write
+10. **Close out.** Write `report.md` (window, counts per lane, verdicts, PR link) and write
    today's date to `last-run.json`. Remove the worktree with `git worktree remove <path>` once the push
    succeeded (its `node_modules` is a real folder from `npm ci`, not a link). Close any
    browser you opened. End the run with a three-line summary: entries added, PR link or

@@ -19,6 +19,28 @@ One JSON object per line in `runs/<date>/lane-<name>.jsonl`:
 `primaryUrl` is null when the lane found only coverage. Report everything plausibly in scope;
 triage applies the bar.
 
+## Themes every lane searches
+
+Source lists alone miss stories that break outside them: a pharma founder at an economics
+forum, a politician at a rally, a central bank, an intelligence chief. On top of its own
+sources, every lane runs WebSearch for each theme below, phrased with the window's months
+(for example `AI bioweapon warning October 2026`), and reports what fits its lane. People
+named in results are leads whatever their field.
+
+1. **AI and biology (always first; the record began here).** AI and bioweapons, biosecurity,
+   pandemics, pathogens, viruses, toxins, DNA or gene synthesis screening, biomedical or
+   drug-discovery risk, protein design, biolabs; warnings from biotech, pharma and public
+   health figures.
+2. **Calls for regulation or a pause** from people with standing outside AI: executives,
+   founders, scientists, officials, religious and military leaders.
+3. **Agent incidents and loss of control:** agents acting outside their task, escapes,
+   intrusions, self-replication, sabotage, deception.
+4. **AI misuse and attacks:** cyberattacks, fraud, influence operations, deepfakes with
+   real-world effect.
+5. **Insiders:** resignations, firings, whistleblowers, leaked documents, testimony.
+6. **Government action** on AI safety in any country: laws, orders, hearings, court
+   rulings, international agreements.
+
 ## Lanes
 
 ### labs: AI labs and evaluators
@@ -76,15 +98,19 @@ named in the report; the lane carries on with the rest. Save stdout to
 
 1. **Accounts (free, fxtwitter).**
    `node <skill-dir>/scripts/x-signals.mjs timelines --since <timeline start>` pages back
-   through every handle in `scripts/x-handles.json` until it passes that date (at most 10
-   pages of 20 posts per handle; a handle that hits the cap reports a gap), retrying
-   fxtwitter's one-off 404s. The timeline start is in SKILL.md step 1.
+   through every handle in `scripts/x-handles.json` until it passes that date, retrying
+   fxtwitter's one-off 404s; a handle that hits its page cap reports a gap. The timeline
+   start is in SKILL.md step 1. Two groups:
+   - `people` (10 pages each, every post kept): researchers and former lab staff,
+     evaluators (METR, Palisade, Apollo, UK AISI), commentators who often surface items
+     first, and one public jailbreaker (a lead for misuse shown in public; never copy
+     jailbreak prompts or method detail).
+   - `aggregators` (40 pages each, only posts that mention AI kept): breaking-news and
+     AI-news accounts such as Polymarket, Kalshi, Walter Bloomberg and Techmeme. They post
+     a story within minutes, often before outlets do, so they are the lane's widest net.
    Reposts come back with `repost: true` and `author` set to the original poster:
-   attribute the post to that author and treat the repost as a pointer. The handles are
-   researchers and former lab staff, evaluators (METR, Palisade, Apollo, UK AISI), one
-   commentator who often surfaces items first, and one public jailbreaker (a lead for
-   misuse shown in public; never copy jailbreak prompts or method detail). Add a handle
-   only after `timelines --handles <h>` returns posts for it.
+   attribute the post to that author and treat the repost as a pointer. Add a handle only
+   after `timelines --handles <h>` returns posts for it.
 2. **Keyword search (X paid, Bluesky free).**
    `node <skill-dir>/scripts/x-signals.mjs search "<query>" --since <window start> --min-likes 20`
    runs the query on X through the user's twitterapi.io script while it has credit (one
@@ -92,6 +118,8 @@ named in the report; the lane carries on with the rest. Save stdout to
    and on Bluesky's official search API (X-only operators are stripped for Bluesky). On
    `402 Payment Required` ("Credits is not enough") it reports the gap and returns the
    Bluesky results; pass `--no-x` for the rest of the run. About ten queries a run, such as:
+   - `(AI OR "artificial intelligence" OR "AI agents") (bioweapon OR biosecurity OR pandemic OR pathogen OR virus OR biomedical OR "DNA synthesis") min_faves:100`
+   - `(AI OR "AI agents") ("urgent regulation" OR "must be regulated" OR pause OR "disaster" OR "catastrophe") min_faves:200`
    - `(resigned OR "I left" OR "I quit" OR whistleblower) (OpenAI OR Anthropic OR DeepMind OR xAI OR Meta) min_faves:100 -filter:replies`
    - `(model OR agent) (sabotage OR "tried to" OR deceived OR "escaped" OR "deleted") (eval OR test OR production) min_faves:100`
    - `(jailbreak OR misuse OR breach OR incident) (AI agent OR LLM) min_faves:200`
