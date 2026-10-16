@@ -41,7 +41,7 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
 |---|---|
 | `last-run.json` | `{ "date": "YYYY-MM-DD" }` of the last finished run |
 | `seen.jsonl` | One line per judged candidate: `leadUrl`, `primaryUrl`, `title`, `eventDate`, `found`, `verdict` (`published`, `pr`, `held`, `skipped`), `reason`, and `pr` (number) for `pr` verdicts. Append only; the latest line for an event wins. |
-| `runs/<date>/` | Lane outputs (`lane-*.jsonl`, `x-raw.jsonl`, `x-gaps.jsonl`) and `report.md` for that run |
+| `runs/<date>/` | Lane outputs (`lane-*.jsonl`, `x-raw.jsonl`, `x-gaps.jsonl`), this run's `verdicts.jsonl` (same fields as `seen.jsonl`, moved there only after delivery) and `report.md` |
 | `runs/<date>/bin/` | This run's copy of the skill's `scripts/` folder |
 | `tracked.jsonl` | Items still in motion (bills, suits, motions, investigations, rulemakings, order deadlines): `entryUrl`, `title`, `kind`, `jurisdiction`, `id` (bill or docket number, or null), `statusUrl` (official page to check), `status`, `statusDate`, `added`, `lastChecked`, `open` (false once final). Append only; the latest line for an `entryUrl` wins. |
 
@@ -86,7 +86,11 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    every miss in the report and PR body with the lane that should have caught it, so the
    watchlist can be fixed.
 4. **Triage.** Merge the lanes and dedupe across them. Then drop, matching by any URL
-   (lead or primary) and by event (the same happening from another source or outlet):
+   (lead or primary) and by event (the same happening from another source or outlet).
+   Follow-ups are the exception: a status change from the follow-ups lane is a new event
+   even when its source is a page the record already links (a docket, a bill's status
+   page), so match those by item and status step, not by URL, and prefer a URL specific to
+   the new step (the order, the vote record) where one exists. Drop:
    - anything already in the record;
    - events whose latest `seen.jsonl` verdict is `skipped` or `published`;
    - `pr` events whose PR is still open or was merged. A `pr` event whose PR was closed
@@ -97,10 +101,13 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    [bar.md](references/bar.md), including its paywall routine. Everything that passes
    goes into this run's PR; there is no per-run limit. With more than about ten, draft
    them in parallel subagents grouped by theme (add-source fan-out mode), each writing its
-   entries to its own file, then merge them into `events.json` in date order. Append
-   every judged candidate to `seen.jsonl` with its verdict.
-5. **Nothing passes.** Write `report.md`, update `last-run.json`, and stop. No worktree,
-   branch, commit or PR.
+   entries to its own file, then merge them into `events.json` in date order. Write every
+   judged candidate's verdict to this run's `runs/<date>/verdicts.jsonl`, not to
+   `seen.jsonl`: verdicts reach the ledger only in step 10, after delivery, so a run that
+   fails partway leaves nothing suppressed and the next run judges those candidates again.
+5. **Nothing passes.** Append `verdicts.jsonl` to `seen.jsonl`, write `report.md`, update
+   `last-run.json`, update `tracked.jsonl` for the items the follow-ups lane checked, and
+   stop. No worktree, branch, commit or PR.
 6. **Workspace.** If a routine PR is open, add a worktree on its branch:
    `git -C C:/Users/Home/CoreWise/SafeAI.Watch worktree add -B <headRefName> C:/Users/Home/CoreWise/_wt/SafeAI.Watch/daily-<date> origin/<headRefName>`,
    then merge `origin/main` into it (no rebase, no force-push). Otherwise
@@ -127,7 +134,10 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    candidates worth the user's attention, with reasons; paywall routes tried; placement
    suggestions; checks run. End with the PR attribution line.
 10. **Close out.** Write `report.md` (window, counts per lane, verdicts, follow-up changes,
-   PR link) and write today's date to `last-run.json`. Append to `tracked.jsonl`: a line
+   PR link) and write today's date to `last-run.json`. Only now, with the push and PR
+   confirmed, append `verdicts.jsonl` to `seen.jsonl`: entries in the PR as `pr` with its
+   number, entries dropped at verification as `held` or `skipped` with the reason, and the
+   rest as judged. If delivery failed, append nothing and say so in the report. Append to `tracked.jsonl`: a line
    for every new entry in the PR that bar.md says to track (with its official status page
    and current status), an updated line for every tracked item checked this run (status,
    `lastChecked`), and `open: false` for items whose outcome is now final. Drop items whose

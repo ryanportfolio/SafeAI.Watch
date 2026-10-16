@@ -4,6 +4,8 @@
 //   node x-signals.mjs post <url-or-id> [...]
 //   node x-signals.mjs search "<query>" --since 2026-10-14 [--no-x] [--no-bsky]
 //   --min-likes N drops posts with fewer likes on any command (default 0).
+//   --search-pages N pages each search route (default 3: X pages of about 20, Bluesky
+//   pages of 100); Bluesky reports a gap when results remain unread.
 //
 // stdout: one JSON object per line: { platform, url, date, author, via, repost, likes, text }
 // (timelines add `group`).
@@ -33,6 +35,7 @@ for (let i = 0; i < rest.length; i++) {
 }
 
 const minLikes = Number(flags['min-likes'] ?? 0);
+const searchPages = Number(flags['search-pages'] ?? 3);
 const emit = (o) => { if ((o.likes ?? 0) >= minLikes) console.log(JSON.stringify(o)); };
 const gap = (route, detail) => console.error(JSON.stringify({ gap: true, route, detail: String(detail).trim().slice(0, 300) }));
 const sinceMs = flags.since ? Date.parse(`${flags.since}T00:00:00Z`) : 0;
@@ -95,15 +98,20 @@ async function timelines() {
       for (; page < maxPages; page++) {
         const url = `https://api.fxtwitter.com/2/profile/${encodeURIComponent(h)}/statuses?count=20${cursor ? `&cursor=${encodeURIComponent(cursor)}` : ''}`;
         const j = await getJson(url);
-        const results = j.results ?? [];
+        if (!Array.isArray(j.results)) throw new Error('response has no results array');
+        const results = j.results;
         for (const t of results) {
           if (seen.has(t.id)) continue;
           seen.add(t.id);
           if (t.created_timestamp * 1000 < sinceMs || (filter && !mentionsAI(t.text ?? ''))) continue;
           emit({ ...fxPost(t, h), group });
         }
-        // The last result is the oldest; a pinned post at the top can be older than the rest.
-        const oldest = (results.at(-1)?.created_timestamp ?? 0) * 1000;
+        // Stop once the account's own posts pass --since. Reposts carry the original post's
+        // time, so a fresh repost of an old post says nothing about where the timeline is;
+        // a page of only reposts keeps paging. The last own post is the oldest (a pinned
+        // post at the top can be older than the rest).
+        const own = results.filter((t) => !t.reposted_by);
+        const oldest = own.length ? own.at(-1).created_timestamp * 1000 : Infinity;
         cursor = j.cursor?.bottom;
         if (!results.length || !cursor || oldest < sinceMs) { reached = true; break; }
         await sleep(300);
@@ -163,7 +171,7 @@ function twitterSearch(query) {
   return new Promise((resolve) => {
     if (!fs.existsSync(TWITTER_SCRIPT)) { gap('twitterapi.io search', 'twitter-search script not found'); return resolve(false); }
     const q = flags.since && !/since:/.test(query) ? `${query} since:${flags.since}` : query;
-    execFile(process.execPath, [TWITTER_SCRIPT, q, '--latest'], { timeout: 120000, maxBuffer: 1 << 24 }, (err, stdout, stderr) => {
+    execFile(process.execPath, [TWITTER_SCRIPT, q, '--latest', '--pages', String(searchPages)], { timeout: 60000 * (searchPages + 1), maxBuffer: 1 << 24 }, (err, stdout, stderr) => {
       if (err) {
         const line = String(stderr).split('\n').find((l) => /^Error:/.test(l)) || err.message;
         gap('twitterapi.io search', line);
@@ -182,27 +190,35 @@ function twitterSearch(query) {
 }
 
 async function bskySearch(query) {
-  const params = new URLSearchParams({ q: query, sort: 'latest', limit: '25' });
+  const params = new URLSearchParams({ q: query, sort: 'latest', limit: '100' });
   if (flags.since) params.set('since', `${flags.since}T00:00:00Z`);
+  let page = 0;
   try {
-    const j = await getJson(`https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?${params}`, { tries: 2, retryOn: [429, 500, 502, 503] });
-    for (const p of j.posts ?? []) {
-      const rkey = p.uri.split('/').pop();
-      emit({
-        platform: 'bluesky',
-        url: `https://bsky.app/profile/${p.author.handle}/post/${rkey}`,
-        date: new Date(p.record?.createdAt ?? p.indexedAt).toISOString(),
-        author: p.author.handle,
-        via: 'bluesky search',
-        repost: false,
-        likes: p.likeCount ?? null,
-        text: p.record?.text ?? '',
-      });
+    for (; page < searchPages; page++) {
+      const j = await getJson(`https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?${params}`, { tries: 2, retryOn: [429, 500, 502, 503] });
+      if (!Array.isArray(j.posts)) throw new Error('response has no posts array');
+      for (const p of j.posts) {
+        const rkey = p.uri.split('/').pop();
+        emit({
+          platform: 'bluesky',
+          url: `https://bsky.app/profile/${p.author.handle}/post/${rkey}`,
+          date: new Date(p.record?.createdAt ?? p.indexedAt).toISOString(),
+          author: p.author.handle,
+          via: 'bluesky search',
+          repost: false,
+          likes: p.likeCount ?? null,
+          text: p.record?.text ?? '',
+        });
+      }
+      if (!j.cursor || !j.posts.length) return true;
+      params.set('cursor', j.cursor);
+      await sleep(300);
     }
+    gap('bluesky search', `stopped after ${searchPages} pages of 100 with more results unread: "${query}"`);
     return true;
   } catch (err) {
-    gap('bluesky search', err.message);
-    return false;
+    gap('bluesky search', `${err.message} on page ${page + 1}`);
+    return page > 0;
   }
 }
 
@@ -210,7 +226,9 @@ async function search() {
   const query = args.join(' ');
   if (!query) throw new Error('search needs a query');
   const x = flags['no-x'] ? false : await twitterSearch(query);
-  const b = flags['no-bsky'] ? false : await bskySearch(query.replace(/\b(since|until|min_faves|min_retweets|from|filter):\S+/g, '').replace(/-filter:\S+/g, '').trim());
+  // Strip X-only operators for Bluesky; negated ones first so no lone "-" is left behind.
+  const bskyQuery = query.replace(/(^|\s)-(filter|from):\S+/g, ' ').replace(/\b(since|until|min_faves|min_retweets|from|filter):\S+/g, '').replace(/\s+/g, ' ').trim();
+  const b = flags['no-bsky'] ? false : await bskySearch(bskyQuery);
   return x || b;
 }
 
