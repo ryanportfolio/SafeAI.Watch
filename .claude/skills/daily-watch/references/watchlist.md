@@ -67,40 +67,41 @@ early result, a first-hand incident report, a jailbreak or misuse shown in publi
 threads that point to a paper or filing other lanes missed. A post is a primary source
 only for what its author says; anything it reports about others is a lead to trace.
 
-Routes, in order. Each one that fails (404, 429, 402) is skipped for the run and named in
-the report; the lane carries on with the rest.
+All reads go through `node <skill-dir>/scripts/x-signals.mjs`, which tries the free routes
+first and falls back on its own. It prints one JSON post per line (`platform`, `url`,
+`date`, `author`, `via`, `repost`, `likes`, `text`) and one `{"gap": true, ...}` line on
+stderr per route that failed (404, 429, 402). A failed route is skipped for the run and
+named in the report; the lane carries on with the rest. Save stdout to
+`runs/<date>/x-raw.jsonl` and stderr to `runs/<date>/x-gaps.jsonl`.
 
-1. **Accounts (free).** For each handle,
-   `curl -s "https://api.fxtwitter.com/2/profile/<handle>/statuses?count=20"`; retry a 404
-   up to three times, a second apart. Keep posts whose `created_timestamp` is inside the
-   window. Results include reposts: when `reposted_by` is set, `author.screen_name` is
-   the original poster, so attribute the post to them and treat the repost as a pointer.
-   Handles (all resolved October 15, 2026): researchers and former lab staff `janleike`,
-   `EvanHub`, `DKokotajlo`, `Miles_Brundage`, `JeffLadish`, `BethMayBarnes`,
-   `MariusHobbhahn`, `bshlgrs`, `sjgadler`, `hilbertspaess`, `hlntnr`, `ohlennart`,
-   `Yoshua_Bengio`, `geoffreyhinton`, `ESYudkowsky`; evaluators `METR_Evals`,
-   `PalisadeAI`, `apolloresearch`, `AISecurityInst`; commentary that often surfaces
-   items first `TheZvi`; public jailbreaks `elder_plinius` (a lead for misuse shown in
-   public; never copy jailbreak prompts or method detail).
-2. **Keyword search (paid, when credit allows).** `node
-   ~/.claude/skills/twitter-search/search.mjs "<query>" --latest`, one search at a time
-   (one request every 5 seconds, shared with every session), one page each, about ten
-   queries a run. On `402 Payment Required` ("Credits is not enough"), stop using it for
-   the run and note it. Queries such as:
-   - `(resigned OR "I left" OR "I quit" OR whistleblower) (OpenAI OR Anthropic OR DeepMind OR xAI OR Meta) since:<start> min_faves:100 -filter:replies`
-   - `(model OR agent) (sabotage OR "tried to" OR deceived OR "escaped" OR "deleted") (eval OR test OR production) since:<start> min_faves:100`
-   - `(jailbreak OR misuse OR breach OR incident) (AI agent OR LLM) since:<start> min_faves:200`
-   - `("AI safety" OR alignment) (warning OR "open letter" OR statement) since:<start> min_faves:200`
+1. **Accounts (free, fxtwitter).**
+   `node <skill-dir>/scripts/x-signals.mjs timelines --since <start>` reads the last 20
+   posts of every handle in `scripts/x-handles.json`, retrying fxtwitter's one-off 404s.
+   Reposts come back with `repost: true` and `author` set to the original poster:
+   attribute the post to that author and treat the repost as a pointer. The handles are
+   researchers and former lab staff, evaluators (METR, Palisade, Apollo, UK AISI), one
+   commentator who often surfaces items first, and one public jailbreaker (a lead for
+   misuse shown in public; never copy jailbreak prompts or method detail). Add a handle
+   only after `timelines --handles <h>` returns posts for it.
+2. **Keyword search (X paid, Bluesky free).**
+   `node <skill-dir>/scripts/x-signals.mjs search "<query>" --since <start> --min-likes 20`
+   runs the query on X through the user's twitterapi.io script while it has credit (one
+   request every 5 seconds, shared with every session, so never run two searches at once)
+   and on Bluesky's official search API (X-only operators are stripped for Bluesky). On
+   `402 Payment Required` ("Credits is not enough") it reports the gap and returns the
+   Bluesky results; pass `--no-x` for the rest of the run. About ten queries a run, such as:
+   - `(resigned OR "I left" OR "I quit" OR whistleblower) (OpenAI OR Anthropic OR DeepMind OR xAI OR Meta) min_faves:100 -filter:replies`
+   - `(model OR agent) (sabotage OR "tried to" OR deceived OR "escaped" OR "deleted") (eval OR test OR production) min_faves:100`
+   - `(jailbreak OR misuse OR breach OR incident) (AI agent OR LLM) min_faves:200`
+   - `("AI safety" OR alignment) (warning OR "open letter" OR statement) min_faves:200`
+   Bluesky may not honor `OR`; add two or three plain phrase queries with `--no-x`, such
+   as `"AI safety" resigned` or `"AI agent" incident`.
 3. **Web search (free).** WebSearch `site:x.com` with the same themes and the window's
-   month. It cannot filter by date or account, so check each hit's date before use.
-4. **Bluesky (free, official API).**
-   `curl -s "https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=<query>&sort=latest&since=<start>T00:00:00Z&limit=25"`
-   (the `public.api.bsky.app` host refuses search). Useful for researchers who moved
-   there; few labs post there.
+   month. It cannot filter by date or account, so read each hit's date with step 4.
 
-Before using any X post, fetch its text and exact date with
-`https://api.fxtwitter.com/<user>/status/<id>`; if that fails,
-`https://cdn.syndication.twimg.com/tweet-result?id=<id>&token=a`.
+4. **Before using any post,** fetch its exact text and date:
+   `node <skill-dir>/scripts/x-signals.mjs post <url-or-id> [...]` (fxtwitter, then X's
+   embed service as fallback). Bluesky posts: read them at their `bsky.app` URL.
 
 Keep this list current: when a run finds a recurring source not listed here, name it in the
 PR body as a suggested addition.

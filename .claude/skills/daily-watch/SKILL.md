@@ -26,8 +26,9 @@ Codex review; do not run `/codex-review` yourself.
 - Subagents inherit the session model; omit `model`.
 - Paths are absolute in every command (Bash cwd resets each call). Prefix `git show
   <rev>:<path>` with `MSYS_NO_PATHCONV=1`. Never use EnterWorktree or Agent `isolation`.
-- X keyword searches go through `node ~/.claude/skills/twitter-search/search.mjs`, one at a time;
-  never curl the API, never run two searches at once.
+- X and Bluesky reads go through `scripts/x-signals.mjs` (free routes first, paid X search
+  only while twitterapi.io has credit). Never curl the twitterapi.io API directly and never
+  run two searches at once.
 
 ## State
 
@@ -39,7 +40,8 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
 |---|---|
 | `last-run.json` | `{ "date": "YYYY-MM-DD", "windowEnd": "YYYY-MM-DD" }` of the last finished run |
 | `seen.jsonl` | One line per judged candidate: `leadUrl`, `primaryUrl`, `title`, `found`, `verdict` (`published`, `pr`, `held`, `skipped`), `reason` |
-| `runs/<date>/` | Lane outputs (`lane-*.jsonl`) and `report.md` for that run |
+| `runs/<date>/` | Lane outputs (`lane-*.jsonl`, `x-raw.jsonl`, `x-gaps.jsonl`) and `report.md` for that run |
+| `runs/<date>/bin/` | This run's copy of the skill's `scripts/` folder |
 
 ## Workflow
 
@@ -50,11 +52,15 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    `gh pr list --repo ryanportfolio/SafeAI.Watch --state open --json number,headRefName,url`
    and keep the PR whose `headRefName` starts with `daily-watch/`.
    The record to dedupe against is `origin/main`'s `events.json` plus that PR branch's, if
-   one is open.
+   one is open. Export the skill's scripts from `origin/main` into `runs/<date>/bin/`
+   (`x-signals.mjs`, `x-handles.json`, each via `MSYS_NO_PATHCONV=1 git show
+   origin/main:.claude/skills/daily-watch/scripts/<file> > <bin>/<file>`) and check each
+   file is non-empty. `<skill-dir>/scripts/` in [watchlist.md](references/watchlist.md)
+   means that `bin` folder.
 2. **Scan.** Launch the five lanes in [watchlist.md](references/watchlist.md) as parallel
    research subagents in one message. Give each the window, its lane, the candidate format,
    the sensitive-material rule, and the state folder path; each writes
-   `runs/<date>/lane-<name>.jsonl`. Only the signals lane uses the twitter script. Re-check
+   `runs/<date>/lane-<name>.jsonl`. Only the signals lane runs `x-signals.mjs`. Re-check
    `held` candidates from `seen.jsonl` that are under seven days old.
 3. **Triage.** Merge the lanes. Drop anything already in the record (same URL, or the same
    event from any source) or already `skipped`/`published` in `seen.jsonl`. Judge the rest
