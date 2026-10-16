@@ -87,10 +87,20 @@ const pad = (n: number) => String(n).padStart(2, '0');
         <dl class="tl-parts">
           <dt>What happened</dt>
           <dd>{event.happened}</dd>
+          <dt>Key points</dt>
+          <dd>
+            <ul class="tl-points">
+              {event.keyPoints.map((point) => <li>{point}</li>)}
+            </ul>
+          </dd>
           <dt>Evidence</dt>
           <dd>{event.evidence}</dd>
-          <dt>Uncertain</dt>
-          <dd>{event.uncertain}</dd>
+          {event.uncertain && (
+            <>
+              <dt>Uncertain</dt>
+              <dd>{event.uncertain}</dd>
+            </>
+          )}
         </dl>
         <a class="tl-source" href={event.url} target="_blank" rel="noopener noreferrer">
           {event.source} <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
@@ -338,6 +348,25 @@ const pad = (n: number) => String(n).padStart(2, '0');
 
   .tl-parts dd:last-child {
     margin-bottom: 0;
+  }
+
+  .tl-points li {
+    position: relative;
+    padding-left: 16px;
+  }
+
+  .tl-points li + li {
+    margin-top: 4px;
+  }
+
+  .tl-points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.8em;
+    width: 7px;
+    height: 1px;
+    background: var(--grey-label);
   }
 
   .tl-source {

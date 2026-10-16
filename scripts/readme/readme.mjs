@@ -40,7 +40,9 @@ const md = (s) => String(s).replace(/\s*\r?\n\s*/g, ' ').replace(/([\\`*_[\]<>#|
 
 export function buildReadme(facts) {
   const raw = facts.latest;
-  const e = { ...raw, title: md(raw.title), happened: md(raw.happened), evidence: md(raw.evidence), uncertain: md(raw.uncertain), source: md(raw.source) };
+  const e = { ...raw, title: md(raw.title), happened: md(raw.happened), evidence: md(raw.evidence), source: md(raw.source) };
+  const points = raw.keyPoints.map((p) => `> - ${md(p)}`).join('\n');
+  const uncertain = raw.uncertain ? `\n>\n> **Uncertain.** ${md(raw.uncertain)}` : '';
   const counts = CATEGORIES.map((c) => `${facts.byCategory[c]} ${c.toLowerCase()}`).join(', ');
   const alt = `${HEADLINE}. ${facts.entries} dated, sourced entries drawn as a burst, one dot per entry: ${counts}. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency.`;
   return `${MARKER}
@@ -53,15 +55,17 @@ The record holds ${facts.entries} entries from ${longDate(facts.first)} to ${lon
 
 ## How an entry reads
 
-Every entry keeps four things apart. The newest one, from ${longDate(e.date)}, filed under ${e.category}:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from ${longDate(e.date)}, filed under ${e.category}:
 
 > **${e.title}**
 >
 > **What happened.** ${e.happened}
 >
-> **Evidence.** ${e.evidence}
+> **Key points.**
 >
-> **Uncertain.** ${e.uncertain}
+${points}
+>
+> **Evidence.** ${e.evidence}${uncertain}
 >
 > **Source.** [${e.source}](${e.url})
 
@@ -78,7 +82,7 @@ The dev server runs at http://localhost:4321. \`npm run build\` writes the stati
 
 ## Add or correct an entry
 
-Entries live in [\`src/data/events.json\`](src/data/events.json). Each one has exactly these keys: \`date\` (the source's publication date, \`YYYY-MM-DD\`), \`category\` (one of ${CATEGORIES.map((c) => `\`"${c}"\``).join(', ')}), \`title\`, \`happened\`, \`evidence\`, \`uncertain\`, \`source\` (publisher and source type, such as "RAND · Research report") and \`url\` (https only). [\`src/data/record.ts\`](src/data/record.ts) checks every entry when the site builds and fails the build on a missing, empty or extra key, an unknown category, a date not written as \`YYYY-MM-DD\`, or a link that is not https. Run \`npm run build\` to check a change; CI runs the same build on every pull request.
+Entries live in [\`src/data/events.json\`](src/data/events.json). Each one has exactly these keys: \`date\` (the source's publication date, \`YYYY-MM-DD\`), \`category\` (one of ${CATEGORIES.map((c) => `\`"${c}"\``).join(', ')}), \`title\`, \`happened\`, \`keyPoints\` (a list of one to four short points), \`evidence\`, \`source\` (publisher and source type, such as "RAND · Research report") and \`url\` (https only), plus an optional \`uncertain\`. [\`src/data/record.ts\`](src/data/record.ts) checks every entry when the site builds and fails the build on a missing, empty or extra key, an empty or overlong \`keyPoints\` list, an unknown category, a date not written as \`YYYY-MM-DD\`, or a link that is not https. Run \`npm run build\` to check a change; CI runs the same build on every pull request.
 
 The art above is generated from the same file. After changing the record, run \`node scripts/readme/build.mjs\` and commit \`README.md\` and \`${ASSETS}/\` with it; CI fails while they are out of date. Changes land through pull requests, and a merge to \`main\` deploys the site.
 
@@ -87,7 +91,7 @@ Spotted an error in an entry? [Open an issue](https://github.com/ryanportfolio/S
 ## What the project holds to
 
 - Every entry links its original source.
-- Each entry separates what happened, what the evidence shows and what remains uncertain.
+- Each entry gives the source's key points and separates what happened from what the evidence shows, with what remains uncertain when something material is still open.
 - No invented incidents, numbers or quotes. The site's illustrations are conceptual and carry no data; the chart at the top of this README is the exception, drawn from the record.
 - No third-party trackers or analytics.
 

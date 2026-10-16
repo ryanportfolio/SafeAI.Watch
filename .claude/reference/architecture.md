@@ -10,7 +10,7 @@
 
 ## The record
 
-- Data: `src/data/events.json`, an array of entries with exactly the keys `date`, `category`, `title`, `happened`, `evidence`, `uncertain`, `source`, `url`.
+- Data: `src/data/events.json`, an array of entries with exactly the keys `date`, `category`, `title`, `happened`, `keyPoints` (1 to 4 strings), `evidence`, `source`, `url`, plus an optional `uncertain`.
 - `src/data/record.ts` validates every entry at build time and throws on a missing, empty or extra key, a malformed date, a category outside `CATEGORIES` (Research, Incidents, Warnings, Governance) or a non-https `url`. Exports `events` (oldest first), `eventsNewestFirst`, `lastUpdated` (date of the newest entry) and the date formatters.
 - Consumers: `src/pages/index.astro` (`events`, `lastUpdated`), `src/pages/latest.astro` (`eventsNewestFirst`), `src/components/Timeline.astro` (used by `index.astro` and `timeline.astro`), `src/components/SiteFooter.astro` (`lastUpdated`).
 - `Timeline.astro` renders every tab and panel at build time; its client script only switches the selected one.

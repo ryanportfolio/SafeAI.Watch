@@ -17,10 +17,12 @@ export interface RecordEvent {
   title: string;
   /** What happened, and who did it. */
   happened: string;
+  /** What the source says, finds, argues or requires: one to four points. */
+  keyPoints: string[];
   /** What kind of evidence this is, and what it shows. */
   evidence: string;
-  /** What remains open, preferably in the source's own terms. */
-  uncertain: string;
+  /** What remains open, when something material is; absent otherwise. */
+  uncertain?: string;
   /** Publisher and source type, e.g. "RAND · Research report". */
   source: string;
   url: string;
@@ -28,21 +30,15 @@ export interface RecordEvent {
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 
-const KEYS = [
-  'date',
-  'category',
-  'title',
-  'happened',
-  'evidence',
-  'uncertain',
-  'source',
-  'url',
-] as const;
+/** Required string fields. */
+const KEYS = ['date', 'category', 'title', 'happened', 'evidence', 'source', 'url'] as const;
+
+const MAX_KEY_POINTS = 4;
 
 /*
  * Every entry is checked at build time. A missing field, an empty string, a
- * stray key, an unknown category or a non-https link fails the build rather
- * than shipping a broken entry.
+ * stray key, an empty or overlong keyPoints list, an unknown category or a
+ * non-https link fails the build rather than shipping a broken entry.
  */
 function validate(raw: unknown, index: number): RecordEvent {
   const where = `events.json entry ${index + 1}`;
@@ -54,16 +50,27 @@ function validate(raw: unknown, index: number): RecordEvent {
     typeof event.title === 'string' && event.title.trim() ? `"${event.title}"` : where;
 
   const found = Object.keys(event).sort().join(',');
-  const wanted = [...KEYS].sort().join(',');
+  const strings = 'uncertain' in event ? [...KEYS, 'uncertain' as const] : [...KEYS];
+  const wanted = [...strings, 'keyPoints'].sort().join(',');
   if (found !== wanted) {
-    throw new Error(`${where} (${name}) has keys ${found}; expected ${wanted}.`);
+    throw new Error(`${where} (${name}) has keys ${found}; expected ${wanted} (uncertain is optional).`);
   }
 
-  for (const key of KEYS) {
+  for (const key of strings) {
     const value = event[key];
     if (typeof value !== 'string' || value.trim() === '') {
       throw new Error(`${where} (${name}) has an empty or non-string ${key}.`);
     }
+  }
+
+  const points = event.keyPoints;
+  if (
+    !Array.isArray(points) ||
+    points.length === 0 ||
+    points.length > MAX_KEY_POINTS ||
+    points.some((p) => typeof p !== 'string' || p.trim() === '')
+  ) {
+    throw new Error(`${where} (${name}) needs keyPoints: 1 to ${MAX_KEY_POINTS} non-empty strings.`);
   }
 
   const date = event.date as string;

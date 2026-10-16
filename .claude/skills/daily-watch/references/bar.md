@@ -41,7 +41,7 @@ or denied; a subpoena or investigation leads to charges, a settlement or a repor
 regulation is finalized; a deadline in an order arrives. Each such entry goes into
 `tracked.jsonl` (see SKILL.md) when it is published. Every run checks every tracked item
 before scanning, and any change of status that has an official source is a new dated entry
-of its own; the older entry's `uncertain` changes only if it is now wrong. A status that has
+of its own; the older entry changes only where it is now wrong. A status that has
 not changed is no entry. An item leaves the list once its outcome is final (law signed or
 vetoed, bill dead at the end of the session, case closed), with that final step recorded.
 

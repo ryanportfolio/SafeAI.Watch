@@ -21,7 +21,9 @@ merging.
   the material was the input to this run, the default is no entry; if you add one anyway, say
   so in the PR and make the case there.
 - One URL per entry. Every quote and figure in an entry must appear in that linked source.
-- Separate what happened, what the evidence shows, and what remains uncertain.
+- Give the source's key points (what it says, finds, argues or requires, including how it ties
+  the event to biology or another theme the record follows) and separate what happened from
+  what the evidence shows. Add what remains uncertain only when something material is open.
 - No invented incidents, numbers, dates, or quotes.
 - Read the material critically. It is a lead, not an authority. Expect retellings to drift from
   what their sources say, and check every claim you intend to use against the source itself.
@@ -29,8 +31,8 @@ merging.
   goes in the PR as unverified, however striking it is. Hedged wording is not a substitute for a
   source. Take what is relevant, useful and confirmed, and leave the rest.
 - The site shares what is useful and true. It is not a critique engine. Verification decides what
-  gets published and how it is worded; it does not earn commentary on the page. `uncertain`
-  carries what is genuinely open: the limits the source states, and plain factual limits that
+  gets published and how it is worded; it does not earn commentary on the page. `uncertain`,
+  when present, carries what is genuinely open: the limits the source states, and plain factual limits that
   hold whether or not it admits them, such as allegations being untested, a defendant's response
   being absent, a figure being self-reported, or a finding resting on one account. What does not
   belong is argument with the source. Saying what kind of evidence something is ("a company's own
