@@ -43,6 +43,7 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
 | `seen.jsonl` | One line per judged candidate: `leadUrl`, `primaryUrl`, `title`, `eventDate`, `found`, `verdict` (`published`, `pr`, `held`, `skipped`), `reason`, and `pr` (number) for `pr` verdicts. Append only; the latest line for an event wins. |
 | `runs/<date>/` | Lane outputs (`lane-*.jsonl`, `x-raw.jsonl`, `x-gaps.jsonl`) and `report.md` for that run |
 | `runs/<date>/bin/` | This run's copy of the skill's `scripts/` folder |
+| `tracked.jsonl` | Items still in motion (bills, suits, motions, investigations, rulemakings, order deadlines): `entryUrl`, `title`, `kind`, `jurisdiction`, `id` (bill or docket number, or null), `statusUrl` (official page to check), `status`, `statusDate`, `added`, `lastChecked`, `open` (false once final). Append only; the latest line for an `entryUrl` wins. |
 
 ## Workflow
 
@@ -62,8 +63,14 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    origin/main:.claude/skills/daily-watch/scripts/<file> > <bin>/<file>`) and check each
    file is non-empty. `<skill-dir>/scripts/` in [watchlist.md](references/watchlist.md)
    means that `bin` folder.
-2. **Scan.** Launch the five lanes in [watchlist.md](references/watchlist.md) as parallel
-   research subagents in one message. Give each the window, its lane, the candidate format,
+2. **Scan.** Launch the five lanes in [watchlist.md](references/watchlist.md) and one
+   follow-ups lane as parallel research subagents in one message. The follow-ups lane gets
+   every open item in `tracked.jsonl` and, for each, checks its `statusUrl`, the court
+   docket or legislature's status page, and a WebSearch for the item since `statusDate`.
+   It reports every change of status with its official source as a candidate (the outcome
+   is the event; date it by the source), notes unchanged items in one line each, and
+   writes `runs/<date>/lane-followups.jsonl`. The "Follow-ups" rules in
+   [bar.md](references/bar.md) apply. Give each scan lane the window, its lane, the candidate format,
    the sensitive-material rule, and the state folder path; each writes
    `runs/<date>/lane-<name>.jsonl`. Only the signals lane runs `x-signals.mjs`. Give each
    lane the path to `seen.jsonl`: lanes may leave out events whose latest verdict is
@@ -119,8 +126,12 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    entries added (date, category, title, source, why it cleared the bar); held and skipped
    candidates worth the user's attention, with reasons; paywall routes tried; placement
    suggestions; checks run. End with the PR attribution line.
-10. **Close out.** Write `report.md` (window, counts per lane, verdicts, PR link) and write
-   today's date to `last-run.json`. Remove the worktree with `git worktree remove <path>` once the push
+10. **Close out.** Write `report.md` (window, counts per lane, verdicts, follow-up changes,
+   PR link) and write today's date to `last-run.json`. Append to `tracked.jsonl`: a line
+   for every new entry in the PR that bar.md says to track (with its official status page
+   and current status), an updated line for every tracked item checked this run (status,
+   `lastChecked`), and `open: false` for items whose outcome is now final. Drop items whose
+   only entry was in a PR closed without merging. Remove the worktree with `git worktree remove <path>` once the push
    succeeded (its `node_modules` is a real folder from `npm ci`, not a link). Close any
    browser you opened. End the run with a three-line summary: entries added, PR link or
    "no PR", notable held items.

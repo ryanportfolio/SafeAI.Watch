@@ -21,11 +21,29 @@ missing entry costs less than a wrong one.
      risk, or a material change in safeguards;
    - a law, executive order, regulation, court ruling, official strategy, or international
      agreement, or a vote that decides one;
+   - a bill introduced in a national or state legislature that is aimed at AI safety or
+     security, or a legislative hearing on it with named witnesses. Say plainly in the entry
+     that a bill is a proposal and has not passed, and add it to the tracked list (see
+     "Follow-ups" below);
+   - a lawsuit, court motion, investigation or subpoena by a government or against an AI
+     developer, as an allegation; add it to the tracked list;
    - a warning from someone with standing (a lab head, a named safety lead resigning, a head
      of state or minister, a major scientific body), stated in their own words;
    - research from a credible group that a reader would want to know about (peer-reviewed,
      or a preprint from a lab, government institute, or established evaluator).
 5. **Checkable.** Every claim the entry would make can be checked against the linked source.
+
+## Follow-ups
+
+An entry about something still in motion has an outcome readers will want: a bill passes a
+committee, a chamber or fails; a suit is dismissed, settled or ruled on; a motion is granted
+or denied; a subpoena or investigation leads to charges, a settlement or a report; a
+regulation is finalized; a deadline in an order arrives. Each such entry goes into
+`tracked.jsonl` (see SKILL.md) when it is published. Every run checks every tracked item
+before scanning, and any change of status that has an official source is a new dated entry
+of its own; the older entry's `uncertain` changes only if it is now wrong. A status that has
+not changed is no entry. An item leaves the list once its outcome is final (law signed or
+vetoed, bill dead at the end of the session, case closed), with that final step recorded.
 
 ## Skip
 
