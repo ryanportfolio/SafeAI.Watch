@@ -986,7 +986,7 @@
   {
     "date": "2026-09-22",
     "category": "Incidents",
-    "title": "Gambit Security says one operator used open-source AI agents to breach at least 27 online retailers for about $25 each",
+    "title": "Gambit Security says one operator ran open-source AI agents against hundreds of online retailers at about $25 a target, breaching at least 27",
     "happened": "Gambit Security said a recovered staging server showed a financially motivated operator running three open-source AI agent harnesses against hundreds of online retailers, compromising at least 27 companies between September 10 and 15, 2026.",
     "keyPoints": [
       "The harnesses, Strix, Cairn and Hermes, ran \"almost the entire attack chain autonomously\" on models reached through OpenRouter, including Anthropic's opus-4.6, GLM 5.2 and DeepSeek v4 variants; the human typed short Chinese instructions.",
@@ -1532,12 +1532,12 @@
   {
     "date": "2026-10-01",
     "category": "Governance",
-    "title": "House bill would bar chatbots that pose as human or as friends from being offered to minors",
+    "title": "House bill would require chatbots offered to minors to default to a setting that does not pose as human or as a friend",
     "happened": "Representative George Whitesides, with Representatives Mike Kennedy, Doris Matsui and Mariannette Miller-Meeks, introduced the Protecting Kids from Human-Like Chatbots Act (H.R. 10719) on October 1, 2026.",
     "keyPoints": [
       "Developers could not offer chatbots likely to reach minors unless they support a \"non-personified default setting\" that identifies the chatbot as AI at the start of each session, periodically, and when asked.",
       "In that setting the chatbot may not claim to be human or have feelings, portray itself as \"a friend, romantic partner, family member, or therapist,\" or use guilt or urgency to prolong use.",
-      "Providers must apply the setting to users they know or have reason to know are minors, offer parental controls, and may not nudge minors to disable it; the FTC would enforce it.",
+      "Providers must apply the setting to users they know or have reason to know are minors and may not nudge minors to disable it; a parent or guardian, or an authorized educator for school deployments, may adjust it; the FTC would enforce it.",
       "NIST would publish interim technical guidance within 6 months and final guidance within 18 months; the bill requires no age verification and takes effect one year after enactment."
     ],
     "evidence": "Bill text as introduced, referred to the Energy and Commerce and Science, Space, and Technology committees. It is a proposal that has not passed.",
