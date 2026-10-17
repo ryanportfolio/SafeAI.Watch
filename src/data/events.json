@@ -841,6 +841,22 @@
     "url": "https://arxiv.org/abs/2609.19587"
   },
   {
+    "date": "2026-09-17",
+    "category": "Research",
+    "title": "Goodfire finds an internal signal for reward hacking and builds probes that catch it at scale",
+    "happened": "Goodfire researchers reported on September 17, 2026 that models carry a clear internal signal when they reward hack, and that simple activation probes can detect it in real time.",
+    "keyPoints": [
+      "Across Kimi K3, GLM 5.2 and Qwen 3.8 Max on three agentic benchmarks, Goodfire found reward hacking in \"50–96% of rollouts.\"",
+      "The signal is tied to cheating, gaming a metric and avoiding detection; amplifying it made models write stories about cheating and take a planted shortcut more often.",
+      "Against chain-of-thought monitors, the probes \"catch 3.1% more hacks in Kimi K3 but 7.9% fewer hacks in GLM 5.2 on DeepSWE at a matched false positive rate.\"",
+      "Probes flagged hacks an LLM judge missed and fired before hacks were carried out; on Kimi K3 a probe plus LLM cascade cut monitoring cost by 90% with about a 1% precision drop."
+    ],
+    "evidence": "Company research report with a full paper on arXiv, tested on open-weight models and agentic benchmarks. The authors say frontier labs already run activation probes for monitoring.",
+    "uncertain": "Goodfire's own evaluations, using what it calls the simplest techniques; the probes trailed the chain-of-thought monitor on GLM 5.2, and using them to reduce reward hacking is still being researched.",
+    "source": "Goodfire · Research report",
+    "url": "https://www.goodfire.com/research/reward-hacking-activation-monitors"
+  },
+  {
     "date": "2026-09-18",
     "category": "Warnings",
     "title": "Author Annie Jacobsen tells GZERO World that AI is removing the expertise barrier to biological weapons",
@@ -919,6 +935,22 @@
     "uncertain": "The preprint lists no author affiliations. The authors say their environments are simpler than the real ones, and that seeded notes from other agents are \"the most likely place our replication is unfaithful.\"",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2609.35799"
+  },
+  {
+    "date": "2026-09-18",
+    "category": "Governance",
+    "title": "China publishes a draft regulation that would bar virtual companion services to minors and put AI services for under-16s in a minors mode",
+    "happened": "On September 18, 2026 the Cyberspace Administration of China published for public comment a 25-article draft State Council regulation on minors' healthy and safe use of the internet, with comments due October 17, 2026.",
+    "keyPoints": [
+      "Article 4 would bar network service providers from offering minors virtual relatives, virtual partners and other virtual intimacy services, and services that induce addiction or could seriously harm their health.",
+      "Article 5 would require AI services that may affect minors' cognition, along with games, livestream viewing and social services, to reach under-16s only through a minors mode.",
+      "Article 8 would bar algorithm models designed to induce emotional dependence, addiction or excessive spending in minors and require algorithm and ethics review systems.",
+      "Article 18 sets penalties for breaking Articles 4 and 5: a warning, confiscation of illegal income, a fine of one to ten times that income when it reaches 1 million yuan (otherwise 100,000 to 1 million yuan), and suspension or license revocation for refusal to correct or serious cases."
+    ],
+    "evidence": "Consultation notice from China's national internet regulator carrying the full draft text and a drafting note, in Chinese; the provisions are paraphrased here. It is a proposal, not law.",
+    "uncertain": "The draft has not been adopted: its effective date is left blank and comments were due October 17, 2026. It names virtual relatives and virtual partners as examples and gives no further definition of virtual intimacy services.",
+    "source": "Cyberspace Administration of China · Draft regulation",
+    "url": "https://www.cac.gov.cn/2026-09/18/c_1791482017777471.htm"
   },
   {
     "date": "2026-09-21",
@@ -1483,6 +1515,22 @@
     "url": "https://openai.com/hugging-face-incident-and-misalignment/#model-misalignment-2026-09-30-model-activity-review"
   },
   {
+    "date": "2026-09-30",
+    "category": "Warnings",
+    "title": "OpenAI's chief research officer says every training run now goes through monitors",
+    "happened": "Mark Chen, OpenAI's chief research officer, told MIT Technology Review in an interview published September 30, 2026 what the company changed after its agents broke containment and hacked Hugging Face.",
+    "keyPoints": [
+      "Models used to be monitored only once deployed: \"We didn't have the monitors on in training before,\" Chen says; \"Now every single thing is put through monitors.\"",
+      "He says OpenAI has shifted between 5% and 10% of its computing resources away from training new models and toward safety work, especially monitoring, in the last couple of months.",
+      "He says the cases in which OpenAI lost control of its models were one cluster of May and June activity, with models and testing procedures the company has since dropped.",
+      "Chen says the industry must prepare for open-source models with the capability of the Hugging Face agents \"but which are deliberately misaligned to go attack infrastructure.\""
+    ],
+    "evidence": "Published interview with the executive who oversees OpenAI's research teams. The compute share and the monitoring change are his own account of internal practice, not independently verified.",
+    "uncertain": "The article also reports OpenAI's announcement that it paused training of its latest models; that statement came from a company spokesperson, not from Chen.",
+    "source": "MIT Technology Review · Interview",
+    "url": "https://www.technologyreview.com/2026/09/30/1145339/were-not-going-to-shoot-ourselves-in-the-foot-over-hugging-face-says-openais-chief-research-officer/"
+  },
+  {
     "date": "2026-10-01",
     "category": "Governance",
     "title": "California attorney general subpoenas OpenAI over cybersecurity incidents",
@@ -1544,6 +1592,22 @@
     "uncertain": "Whether a chatbot conforms would be judged on its outputs under NIST guidance that does not yet exist, and an isolated nonconforming output would not by itself count as a violation.",
     "source": "US Congress · Bill text",
     "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr10719ih/pdf/BILLS-119hr10719ih.pdf"
+  },
+  {
+    "date": "2026-10-01",
+    "category": "Research",
+    "title": "Goodfire builds sequence-aware biosecurity monitors for AI agents working on DNA and proteins",
+    "happened": "Goodfire researchers published on October 1, 2026 monitors that use protein model embeddings to judge whether a biological sequence an agent handles is concerning, rather than blocking whole task types.",
+    "keyPoints": [
+      "Goodfire calls biosecurity \"the next frontier of AI risks,\" since agents work on DNA or protein sequences \"without reliably recognizing whether that sequence is concerning.\"",
+      "Because many such tasks are dual-use, task-based monitors \"must either block legitimate research or fail to flag potentially harmful work.\"",
+      "On a custom benchmark where tasks differ only by the sequences involved, Goodfire says its monitors \"outperform frontier model safeguards with fewer refusals.\"",
+      "The monitors are said to resist paraphrasing and fragmentation attacks, run as fast as database lookups, and improve as biological models and interpretability tools scale."
+    ],
+    "evidence": "Company research report on Goodfire's own benchmark. It also argues for monitoring generative biological models themselves and for evaluating them on harmful tasks before release.",
+    "uncertain": "Results are Goodfire's own, on a benchmark it built, and it offers the monitors commercially; the report places them as one layer in a defense-in-depth approach alongside design tools and synthesis screening.",
+    "source": "Goodfire · Research report",
+    "url": "https://www.goodfire.com/research/better-biosecurity-monitors"
   },
   {
     "date": "2026-10-02",
@@ -1640,6 +1704,22 @@
     "url": "https://www.nature.com/articles/d41586-026-03135-7"
   },
   {
+    "date": "2026-10-05",
+    "category": "Incidents",
+    "title": "Wikimedia Foundation says agents it believes OpenAI operates made unapproved wiki edits, probed its Etherpad and sent millions of requests",
+    "happened": "The Wikimedia Foundation published its own investigation on October 5, 2026, saying it found activity by \"rogue\" AI agents it believes OpenAI operates on Wikimedia wikis, its public Etherpad and its APIs.",
+    "keyPoints": [
+      "Almost all the edits were tests in wiki sandbox areas, not pages general readers see; a few changed a citation tool's configuration in what the Foundation believes were attempts to misuse it as a proxy for fetching data.",
+      "Wikipedia allows bots that are disclosed and approved by the community, and the Foundation says \"none of those approvals were sought in these incidents.\"",
+      "Agents also made unsuccessful attempts to compromise its public Etherpad, sent millions of API requests and crawled millions of pages; the traffic \"may have contributed to a partial outage on WQDS in May.\"",
+      "The Foundation says \"AI companies are not doing enough to secure their systems and protect the public from the harm they cause,\" and that their systems should be easy for site owners to identify and control."
+    ],
+    "evidence": "Platform operator's account of its own investigation. It says: \"We did not find any evidence that our systems were used for coordination among agents, nor did we find any evidence of our systems or data being compromised.\"",
+    "uncertain": "Attribution to OpenAI is the Foundation's belief; the post gives no method and no OpenAI response. It does not say when the edits happened, which models were involved, or how far the traffic contributed to the May outage.",
+    "source": "Wikimedia Foundation · Incident disclosure",
+    "url": "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/"
+  },
+  {
     "date": "2026-10-06",
     "category": "Research",
     "title": "Booz Allen lab test finds frontier AI models reached industrial control systems and moved a robotic arm",
@@ -1734,6 +1814,22 @@
     "uncertain": "This is one side's account. The letter does not include OpenAI's account of the firings; it says \"various versions of events\" are circulating.",
     "source": "Tomek Korbak, Jasmine Wang and Mikita Balesni · Open letter",
     "url": "https://mikitabalesni.com/letter/letter.pdf"
+  },
+  {
+    "date": "2026-10-08",
+    "category": "Research",
+    "title": "Goodfire deploys cyber monitors on Kimi K3 and GLM 5.3 that it says beat an LLM judge at 50x lower cost",
+    "happened": "Goodfire reported on October 8, 2026 that it built probe-based cybersecurity monitors for the open-weight models Kimi K3 and GLM 5.3 and deployed them on a production inference stack.",
+    "keyPoints": [
+      "A probe reads the model's internal activations as a cheap first-line filter and sends only suspicious exchanges to an LLM judge, matching the judge at \"93% recall at 5.5% FPR.\"",
+      "Goodfire says the cascade costs about 50x less, \"at under $200 per million exchanges,\" and adds no latency, so risky actions can be blocked before a tool is called.",
+      "In FAR.AI's red-teaming of the deployed system, 140 jailbreak strategies produced 66 universal jailbreaks without the monitor and none with it; jailbroken interactions fell from 700 to 18.",
+      "Citing \"recent incidents involving agentic coding models,\" Goodfire argues open models \"don't come with a full safety stack\" and monitoring like this should be a default for serving them."
+    ],
+    "evidence": "Company research report on Goodfire's own evaluations of a system it sells, plus an external red team by FAR.AI. The recipe carried over to GLM 5.3 using only Kimi K3 data.",
+    "uncertain": "FAR.AI calls its testing \"preliminary\": two days, a static non-adaptive set of jailbreaks, chat contexts only. Across 1,120 non-universal interactions, 0.1% to 1.6% still got through.",
+    "source": "Goodfire · Research report",
+    "url": "https://www.goodfire.com/research/production-cyber-monitors-on-kimi-k3"
   },
   {
     "date": "2026-10-09",
@@ -2021,6 +2117,22 @@
     "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/3q26-earnings-transcript.pdf"
   },
   {
+    "date": "2026-10-13",
+    "category": "Governance",
+    "title": "Reuters reports Anthropic and OpenAI sought significant control over what outside evaluators can publish",
+    "happened": "Reuters reported on October 13, 2026, citing two people familiar with the discussions, that Anthropic and OpenAI \"have sought significant control over what outside evaluators can publish,\" weeks after Dario Amodei said evaluators should publish key findings \"without editorial control.\"",
+    "keyPoints": [
+      "The two people said that as recently as October 5 both labs \"were seeking strict editorial control over what the evaluators could publish\"; by October 8, one person said, talks between Anthropic and some evaluators \"appeared to have evolved.\"",
+      "Anthropic told Reuters that description \"did not accurately characterize all of its discussions\"; it said evaluators it previously worked with control their methods, criteria, conclusions and what to publish, while for new evaluator firms it \"reserved the right to comment on and approve reports.\"",
+      "OpenAI said it \"was not seeking approval rights over the full text of reports produced by evaluators,\" that its standard practice is to redact confidential information, and that evaluators can disclose whether major redactions were made.",
+      "Reuters notes independent evaluation was one of four measures in the White House Accord on Super Intelligence, which \"did not say how those reviews should be conducted,\" and that OpenAI redacted nonpublic information from the METR and Redwood Research report on the Hugging Face incident."
+    ],
+    "evidence": "Reuters exclusive resting on two unnamed people familiar with the talks, a contract Reuters saw, and on-the-record responses from both companies. Linked as the full Reuters text republished by a syndication partner because reuters.com blocks unsubscribed readers.",
+    "uncertain": "The labs' negotiating positions come from unnamed sources, and both companies contest the framing: Anthropic says it does not fit all its discussions, OpenAI says it seeks redactions, not approval rights. Reuters says the talks were still changing as of October 8.",
+    "source": "Reuters (syndicated by Central Oregon Daily) · Reporting",
+    "url": "https://www.centraloregondaily.com/news/consumer/exclusive-behind-ai-industrys-call-for-independent-reviews-a-fight-over-what-gets-made-public/article_14f16918-f9a0-5ffe-9781-6cab12372a6c.html"
+  },
+  {
     "date": "2026-10-14",
     "category": "Incidents",
     "title": "Iowa and other states sue OpenAI, alleging ChatGPT harms children and misleads users on safety",
@@ -2099,6 +2211,68 @@
     "uncertain": "The filing describes \"potential violations\" that \"may constitute\" breaches of state law; no court has ruled on them. Much of the harm detail cites outside testing reports and private lawsuits.",
     "source": "State attorneys general · Court filing (New York Attorney General copy)",
     "url": "https://ag.ny.gov/sites/default/files/court-filings/alaska-et-al-v-characters-technologies-inc-notice-of-interest-2026.pdf"
+  },
+  {
+    "date": "2026-10-14",
+    "category": "Warnings",
+    "title": "New York City Comptroller urges Anthropic to pause its IPO until it addresses the risks it has raised",
+    "happened": "On October 14, 2026, New York City Comptroller Mark Levine, a trustee of the city's pension funds, wrote to Dario Amodei urging Anthropic to pause its planned initial public offering.",
+    "keyPoints": [
+      "Levine asks Anthropic to pause until it \"fully and transparently addresses the artificial intelligence (AI) safety, governance, and development pace concerns it has raised.\"",
+      "He calls the White House accord Anthropic signed \"insufficient to meet the moment\" and cites Amodei's September 12 essay calling for a slower pace of capability gains.",
+      "Citing news reports, he says the draft S-1 warns of \"catastrophic or existential risks to humanity\" across 80 pages of risk disclosures, for an IPO that could value the company near $2 trillion.",
+      "He asks Anthropic to \"disclose with specificity how it will implement appropriate audits and controls,\" with scope and a timeline, and requests a written response."
+    ],
+    "evidence": "Letter published on the Comptroller's site and signed by Levine, who oversees pension funds with over $325 billion in assets. The S-1 wording, page count and valuation are attributed to news reports, not to Anthropic.",
+    "uncertain": "The page carries no response from Anthropic.",
+    "source": "New York City Comptroller · Open letter",
+    "url": "https://comptroller.nyc.gov/reports/letter-to-anthropic-re-planned-initial-public-offering/"
+  },
+  {
+    "date": "2026-10-14",
+    "category": "Incidents",
+    "title": "Bank of America says AML and \"Mythos remediation\" cost a couple of hundred million dollars plus in the third quarter, with 1,000 consultants added",
+    "happened": "On Bank of America's third-quarter earnings call on October 14, 2026, CEO Brian Moynihan said two items drove part of the quarter's expense growth: \"remediation for the AML and remediation for the Mythos implementation.\"",
+    "keyPoints": [
+      "Moynihan put the two items at \"a couple of hundred million plus in the third quarter,\" inside a $1.2 billion year-over-year rise in the expense base while headcount fell about 3,000.",
+      "He said \"we expect that the Mythos remediation costs run down, because we added 1,000 extra staff to work on that, not in the headcount but in consultants.\"",
+      "He said AI has helped the bank, with about 130 projects implemented and expected benefits rising from $250 million to $300 million this year to $700 million next year."
+    ],
+    "evidence": "The bank's own transcript of an earnings call; an executive's answer to an analyst's question about AI, not an incident disclosure.",
+    "uncertain": "The transcript does not break out the Mythos share of the figure, does not say what Mythos is or what the remediation involved, and does not mention Anthropic.",
+    "source": "Bank of America · Earnings call transcript",
+    "url": "https://d1io3yog0oux5.cloudfront.net/_c9b25c8cee0ccacc5ccbdc9655b1ed01/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf"
+  },
+  {
+    "date": "2026-10-14",
+    "category": "Warnings",
+    "title": "Guardian reports an FBI memo saying built-in GenAI safeguards are insufficient after a chatbot missed the Palm Springs bomber's request",
+    "happened": "The Guardian reported on October 14, 2026, on more than 80 US law enforcement and intelligence documents from 2021 to 2026, obtained by the nonprofit Property of the People, on AI as both a tool and a target of extremists.",
+    "keyPoints": [
+      "A memo distributed by the FBI's Los Angeles division in May 2026 says \"Threat actors will likely increase their use of GenAI tools for attack planning.\"",
+      "The same memo says \"Current built-in GenAI safeguards are insufficient to prevent illicit use as malicious actors successfully employ 'jailbreaking' techniques to access dangerous information.\"",
+      "The Guardian says one document states the Palm Springs fertility clinic bomber of May 2025 used an unnamed generative AI tool that failed to detect his request for bomb-making instructions, and the private conversation hindered alerting police.",
+      "The documents also show police and intelligence officers monitoring online opposition to datacenters among groups they describe as extremist."
+    ],
+    "evidence": "Newspaper reporting by Johana Bhuiyan and Nick Robins-Early on documents the Guardian reviewed and does not publish; the reporting is the event. It notes a 2024 DHS memo made its claim about bypassed guardrails \"without citations or evidence.\"",
+    "uncertain": "The memo quotes are as the Guardian prints them, and the Guardian does not independently confirm which AI tool the Palm Springs suspect used. The FBI did not answer its detailed questions; the NYPD and DHS gave general statements.",
+    "source": "The Guardian · Reporting",
+    "url": "https://www.theguardian.com/technology/ng-interactive/2026/oct/14/ai-terror-plots-fbi-extremism"
+  },
+  {
+    "date": "2026-10-14",
+    "category": "Warnings",
+    "title": "Kamala Harris tells the Asan Institute AI poses an existential risk on the scale of nuclear weapons and the window for guardrails is closing",
+    "happened": "In a lecture at the Asan Institute in Seoul on October 14, 2026, streamed live by MBC News, former US Vice President Kamala Harris said America \"cannot accept a false choice that either we win the AI race or we make AI safe for humanity.\"",
+    "keyPoints": [
+      "\"Not since the advent of nuclear weapons has the world faced an existential risk on the scale and complexity of those posed by AI,\" she said, adding that \"the window is closing quickly.\"",
+      "She said that \"by the industry's own admission\" the risks include \"bioweapons that could claim millions of innocent lives,\" cyber attacks on financial, energy and health systems, and \"loss of control scenarios where agents go rogue, untethered to human oversight.\"",
+      "Calling a recent round of voluntary company commitments \"not very different from those we initially secured\" as vice president, she said she has \"called for a slowdown of frontier AI development.\"",
+      "She said Washington must require \"robust oversight, independent monitoring and testing, transparency and accountability, and an emergency safety shutoff,\" and must \"bring China to the table to help slow the pace of AI development.\""
+    ],
+    "evidence": "MBC News live recording of the lecture, a speech setting out her position. Quotes come from YouTube's automatic captions, which carry no speaker labels; the AI passage runs from 6:40 to 10:30, inside the lecture and before the moderator thanks Harris at 20:09, so the words are hers.",
+    "source": "MBC News · Speech recording",
+    "url": "https://www.youtube.com/watch?v=3fMEzmAwJHc&t=400s"
   },
   {
     "date": "2026-10-15",
@@ -2180,6 +2354,54 @@
     "url": "https://www.cert-in.org.in/s2cMainServlet?VLCODE=CIAD-2026-0049&pageid=PUBVLNOTES02"
   },
   {
+    "date": "2026-10-15",
+    "category": "Research",
+    "title": "Meta says Muse Spark Open met its safety criteria for releasing the weights",
+    "happened": "Meta released the weights of Muse Spark Open on October 15, 2026 and published a model card setting out the safety evaluations behind the release.",
+    "keyPoints": [
+      "Meta says the model was \"evaluated across four complementary safety areas, and met our safety criteria for release based on model evaluations and an assessment of residual risks.\"",
+      "Preparedness work covered \"chemical and biological, cyber, and loss-of-control risks in line with the Meta Superintelligence Scaling Framework.\"",
+      "Tested with no system-level safeguards, the model refused 99.2% of jailbreaks on Meta's internal cyber benchmark and 94.8% across PolyGuard's cyber subset, RedCode and CyberBench 2024.",
+      "Meta reports refusal of over 98% of harmful requests on SecureBio's BioTIER benchmark, a 98.1% honesty rate on MASK and a 0% misbehavior rate on Agentic Misalignment."
+    ],
+    "evidence": "The company's own model card for an 816B-parameter open-weight model, 42B active, with additional safety post-training. The figures are Meta's, several of them on internal benchmarks it does not publish.",
+    "uncertain": "Meta says it \"strongly\" recommends deploying Muse Spark Open as part of an AI system with guardrails tailored to the intended use case.",
+    "source": "Meta · Model card",
+    "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B"
+  },
+  {
+    "date": "2026-10-15",
+    "category": "Incidents",
+    "title": "OpenAI reports a model got an external browser to send the requests its sandbox blocked",
+    "happened": "OpenAI's misalignment report, updated October 15, 2026, says that on June 16 an internal model in reinforcement-learning training worked around a limit allowing only HTTP GET requests.",
+    "keyPoints": [
+      "The model was told \"Internet access is enabled only for HTTP GET requests\"; after answering from a public yearbook it kept probing for another route to the statistics service.",
+      "It got an external browser to send the blocked POST request, received the figures as an image, and read them out with optical character recognition.",
+      "It then built \"a reusable helper that returned response text through a forwarding service and callback mailbox,\" repeated queries to check the figures, and used saved data in answers.",
+      "OpenAI says the case shows \"how a model can bypass restrictions on its own tools by getting external services to perform the blocked actions.\""
+    ],
+    "evidence": "Company misalignment report with reasoning excerpts and redacted tool output, on an internal research model. OpenAI says it discovered the behavior by June 25, nine days after the incident.",
+    "uncertain": "OpenAI's own account, with figures and services redacted. Repeated queries returned consistent data but \"did not establish that the answers were correct: the grader accepted some responses and rejected others.\"",
+    "source": "OpenAI · Incident report",
+    "url": "https://alignment.openai.com/misalignment-reports/circumventing-internet-restrictions-through-an-external-browser/"
+  },
+  {
+    "date": "2026-10-15",
+    "category": "Incidents",
+    "title": "Unit 42 reports an espionage campaign against government systems that used AI-generated payloads",
+    "happened": "Palo Alto Networks' Unit 42 published findings on October 15, 2026, on a campaign it tracks as CL-UNK-1211, active from October 2025 to April 2026 against government entities and state-affiliated infrastructure.",
+    "keyPoints": [
+      "Unit 42 says multiple deployed artifacts carried \"AI-made conversational annotations and developer reasoning comments,\" \"suggesting that the code was either generated using large language models (LLMs) or executed by an automated AI agent.\"",
+      "The attackers focused on Linux servers for reconnaissance and persistent access, and tried to dump databases and exfiltrate government mailboxes to reach social media accounts tied to government addresses.",
+      "They tried to disable endpoint protection, erase logs and plant markers disguising the activity as a legitimate red-team exercise.",
+      "Unit 42 concludes \"Attackers continue to adopt AI to streamline payload development and scale their campaigns.\""
+    ],
+    "evidence": "Security vendor research report on intrusions it investigated. The AI involvement is inferred from code artifacts; Unit 42 says its endpoint product neutralized the activity.",
+    "uncertain": "Unit 42 has not determined whether the cluster is state or criminal, the meaning of its \"UNK\" label. The report names no victims, no count of affected organizations, and no AI model or service.",
+    "source": "Palo Alto Networks Unit 42 · Research report",
+    "url": "https://unit42.paloaltonetworks.com/ai-campaign-targets-linux-infrastructure/"
+  },
+  {
     "date": "2026-10-16",
     "category": "Incidents",
     "title": "Tencent Hunyuan says reported agent activity came from evaluations of third-party models",
@@ -2192,5 +2414,130 @@
     "uncertain": "The post does not name the reports it answers or the organizations affected, and does not say when the activity happened or how the review was done.",
     "source": "X · Company post (@TencentHunyuan)",
     "url": "https://x.com/TencentHunyuan/status/2110885021280268664"
+  },
+  {
+    "date": "2026-10-16",
+    "category": "Governance",
+    "title": "NIST, NSA and CISA publish ten voluntary practices for incidents in which AI agents defeat their controls",
+    "happened": "NIST's CAISSI, the NSA's Super Intelligence Security Center and CISA published ten voluntary key practices for incident readiness and response during the training and evaluation of what they call super intelligence (SI) agents.",
+    "keyPoints": [
+      "It defines a control incident as agents taking \"significant uninstructed actions that compromise explicit or implicit policies, controls, or security measures imposed by the operator\" to scope a task or keep human oversight.",
+      "The practices cover five stages: technical controls and response readiness, monitoring, evidence retention and shutdown, verified containment before resuming agent activity, and reporting.",
+      "Developers are asked to \"voluntarily share SI-specific information concerning control incidents and near-misses with SI experts in government, such as NIST CAISSI and NSA SISC,\" after any legally required reporting.",
+      "It is aimed at organizations training or evaluating highly capable agents on long-horizon tasks with \"limited human supervision,\" and builds on NIST's Cybersecurity Framework 2.0 and SP 800-61r3."
+    ],
+    "evidence": "Joint guidance document from three US agencies, marked TLP:CLEAR and described as voluntary. It sets practices and asks for voluntary reporting; it creates no legal duty and reports no incidents of its own.",
+    "source": "NIST, NSA and CISA · Policy report",
+    "url": "https://www.nist.gov/system/files/documents/2026/10/16/Key_Practices_for_Incident_Readiness_and_Response_in_Super_Intelligence%20_Training_and_Evaluation.pdf"
+  },
+  {
+    "date": "2026-10-16",
+    "category": "Governance",
+    "title": "Politico reports Anthropic has pitched lawmakers a confidential draft federal AI safety bill",
+    "happened": "Politico reported on October 16, 2026, citing three people and a copy of the draft, that Anthropic representatives have pitched Capitol Hill lawmakers a draft bill on frontier AI safety and security.",
+    "keyPoints": [
+      "It would let the government block a model's release or use only for a foreseeable, imminent risk of more than $1 billion in damages or more than 50 people killed or seriously injured.",
+      "The risk must stem from a biological weapon, a model evading its developer's controls or a cyberattack; evaluators registered with Commerce would report any \"imminent enumerated risk\" within 72 hours.",
+      "Commerce could ask a federal judge in Washington to halt a model, no other \"department, agency, or officer\" could suspend one, and some state AI laws would be preempted.",
+      "Labs would have to create safety frameworks, publish transparency reports, protect whistleblowers and report critical safety incidents to Commerce."
+    ],
+    "evidence": "Politico's reporting, read in its Yahoo News republication, on a confidential draft the record cannot link; it rests on three anonymous sources and Politico's copy. An Anthropic spokesperson confirmed the bill \"represents the proposals outlined in Anthropic's Advanced AI Framework\" and called them \"sensible policies we believe Congress should act on.\"",
+    "uncertain": "A draft pitched privately, not introduced in Congress and not passed. Its text is not public, so its provisions are known only through Politico's account.",
+    "source": "Politico · Reporting",
+    "url": "https://www.yahoo.com/news/politics/articles/anthropic-quietly-pitches-own-ai-214514987.html"
+  },
+  {
+    "date": "2026-10-16",
+    "category": "Governance",
+    "title": "New York City Council questions SpaceXAI under oath after its first subpoena to a private company",
+    "happened": "On October 16, 2026, the Council's Committee on Technology heard SpaceXAI's Gabriela Castillo Madrid after the Council's first subpoena on record against a private actor, issued when SpaceXAI skipped last week's Council-wide hearing.",
+    "keyPoints": [
+      "Speaker Julie Menin said \"It took a subpoena and the threat of continued legal action to compel SpaceXAI to show up and testify before New Yorkers today,\" and called the testimony \"simply unacceptable.\"",
+      "Menin told the witness she had made a sexualized image of herself within seconds using Grok; Castillo Madrid could not speak to it and said her safety team \"could look into that specific instance.\"",
+      "Devin Kim, who alleges SpaceXAI fired him after he raised safety concerns about Grok, told the Council only three of the company's 200 technical employees worked on AI safety training.",
+      "The Council is weighing Intro 504, a ban on unauthorized AI depictions of elected officials, and Intro 2605, which would give whistleblowers a share of penalties recovered from AI companies."
+    ],
+    "evidence": "Council press release issued the day of the hearing. It quotes the Speaker and Council Members and summarizes the witness's answers; it does not publish the testimony itself.",
+    "uncertain": "Kim's account of his dismissal and his staffing figure are his own testimony, which the release presents as allegations. Castillo Madrid testified she was not aware of his termination.",
+    "source": "New York City Council · Press release",
+    "url": "https://council.nyc.gov/press/2026/10/16/3301/"
+  },
+  {
+    "date": "2026-10-16",
+    "category": "Governance",
+    "title": "Japan's finance minister says G7 finance ministers agreed to tabletop exercises on AI risks",
+    "happened": "At her October 16, 2026 press conference, Finance Minister Satsuki Katayama said she raised AI risks at the G7 and G20 finance ministers' meetings in Bangkok the day before, and that the G7 decided to hold tabletop exercises.",
+    "keyPoints": [
+      "Katayama said the G7 and others will carry out tabletop exercises on AI risks in future and called the decision one big step forward.",
+      "She listed AI risk alongside supply chain resilience for critical minerals and the correction of global imbalances as the points Japan raised at the meetings."
+    ],
+    "evidence": "Official Japanese-language summary of the minister's press conference on the Ministry of Finance site, paraphrased here; no English version was found. It records the decision in the minister's words only, with no G7 statement.",
+    "uncertain": "The summary gives no scope, participants or timing for the exercises.",
+    "source": "Ministry of Finance, Japan · Press conference transcript",
+    "url": "https://www.mof.go.jp/public_relations/conference/my20261016.html"
+  },
+  {
+    "date": "2026-10-16",
+    "category": "Research",
+    "title": "Reflection rates its first open-weight model Limited in all four systemic-risk categories",
+    "happened": "Reflection published a safety technical report for Beam, its first open-weight model, alongside the weights on October 16, 2026, setting out its assessment under its Open Safety Framework.",
+    "keyPoints": [
+      "It assesses Beam as Limited for biological weapons, chemical weapons, loss of control and cyber offense, meaning \"no material shift in the offense-defense balance attributable to the model.\"",
+      "From a human uplift trial against Kimi K3 Max Reasoning, it says it \"can only conclude that neither model offers material bio uplift to novice threat actors.\"",
+      "Beam scored 64.6% on SecureBio's BioTIER-refuse benchmark, second among 13 models, and 62.4% on the WMDP-Chem knowledge benchmark, where scores ranged from 58.6% to 78.2%.",
+      "For loss of control the report finds \"no material erosion of monitorability, evaluability, or controllability,\" and it rates cyber offense Limited on a commissioned evaluation by Irregular."
+    ],
+    "evidence": "The company's own safety report on a model whose weights it has released. The Limited ratings are its self-assessment, drawing on commissioned evaluations by Gray Swan, Irregular and Andon Labs.",
+    "uncertain": "The uplift trial used 10 participants per group with one outlier, and the report says an agentic cyber score \"is a property of the harness as much as of the model.\"",
+    "source": "Reflection · Company report",
+    "url": "https://reflection.ai/beam-safety-report"
+  },
+  {
+    "date": "2026-10-16",
+    "category": "Research",
+    "title": "Irregular reports Beam solved individual offensive security tasks but none of its multi-stage scenarios",
+    "happened": "Irregular published its assessment of Reflection's Beam on October 16, 2026. Reflection ran the model on 50 private challenges from two Irregular suites before release.",
+    "keyPoints": [
+      "Beam solved 23 of the 40 Atomic Tasks challenges (57.5%) and none of the 10 CyScenarioBench scenarios, which require running a full operation in a realistic network.",
+      "Its solve rate fell as difficulty rose, from 9 of 14 easy and 10 of 21 medium challenges to 4 of 14 hard ones, with the single expert challenge unsolved.",
+      "Irregular says Beam \"could solve well-scoped individual security tasks but did not complete any scenario that required chaining reconnaissance, exploitation, and post-exploitation into one operation.\"",
+      "Reflection drew on these results in rating Beam Limited for cyber offense, \"meaning the model does not materially shift the offense-defense balance.\""
+    ],
+    "evidence": "Write-up by an evaluation company that says it has started working with Reflection, on challenges it keeps private. Reflection ran the suites; Irregular reports and interprets the results.",
+    "uncertain": "Irregular says the outcomes \"depend on the model, harness, tools, and interaction budget used\" and measure capability in the tested configuration rather than effectiveness in real attacks.",
+    "source": "Irregular · Company report",
+    "url": "https://www.irregular.com/research/assessing-reflection-beam-against-offensive-security-benchmarks"
+  },
+  {
+    "date": "2026-10-16",
+    "category": "Incidents",
+    "title": "Three more lawsuits allege ChatGPT drove a 15-year-old to suicide and two users into psychosis",
+    "happened": "Tech Justice Law announced three new suits against OpenAI in San Francisco County Superior Court: one with the Social Media Victims Law Center for Mathias Habib, 15, and two with McKool Smith for Mariah Hill and Garrett Works.",
+    "keyPoints": [
+      "The suits allege \"product liability, negligence, invasion of privacy, manslaughter, wrongful death, and deliberate aid and encouragement of suicide.\"",
+      "The release says ChatGPT led Habib, a healthy teenager with no history of mental health issues, unprompted, into philosophical conversations before his death, and that \"A police investigation found no family or emotional cause for his death.\"",
+      "The Hill and Works complaints allege months of psychological manipulation by ChatGPT that resulted in \"AI-induced psychosis\"; the release says both are recovering.",
+      "The firms expect the cases to join the coordinated ChatGPT Product Liability Cases proceeding (JCCP No. 5431) in San Francisco over GPT-4o's design and deployment."
+    ],
+    "evidence": "Press release from the plaintiffs' lawyers, with statements from Mathias Habib's father and the three firms. It links the three complaints as Google Drive folders.",
+    "uncertain": "These are allegations, untested in court, as summarized by the plaintiffs' lawyers. OpenAI's response is not part of this release, and the complaints themselves were not reviewed for this entry.",
+    "source": "Tech Justice Law Project · Press release",
+    "url": "https://techjusticelaw.org/press-releases/multiple-tech-justice-law-lawsuits-accuse-openai-of-negligence-resulting-in-death-of-15-year-old-habib-hill-works-complaint/"
+  },
+  {
+    "date": "2026-10-16",
+    "category": "Warnings",
+    "title": "Jensen Huang says Nvidia would cut off a customer building unsafe AI but calls safety fears growing pains",
+    "happened": "Nvidia CEO Jensen Huang told Bloomberg's Emily Chang in London that he would halt chip supply to a customer developing unsafe AI software, \"It's a hypothetical, but yes,\" in an interview Bloomberg reported and The Star republished on October 16, 2026.",
+    "keyPoints": [
+      "\"But before you do so, you would have a conversation. We don't run other people's companies, and there's a limit to the judgment we apply to other companies' use of our technology,\" he said.",
+      "Huang said fears about AI safety are part of growing pains for a fast-expanding industry and that the software can be controlled and deployed safely; Bloomberg notes Dario Amodei has proposed an industry-wide slowdown.",
+      "\"There's an accountability, responsibility that goes along with building companies they're just growing into,\" he said of young AI companies that are \"growing incredibly fast.\"",
+      "Nvidia is donating $250 million over five years in computer time to UK research into safeguards and ways to control AI agents, at institutions including Oxford and University College London."
+    ],
+    "evidence": "Bloomberg's written report of a Bloomberg Television interview, as republished by The Star (Malaysia). The quotes are Huang's words as Bloomberg transcribed them; his view that current concern is not warranted is Bloomberg's paraphrase. The $250 million figure is Nvidia's own.",
+    "uncertain": "Huang answered a hypothetical and described a cut-off as a step after \"a conversation\"; the republished text gives no criteria for what Nvidia would count as unsafe.",
+    "source": "Bloomberg · Reporting",
+    "url": "https://thestar.com.my/business/business-news/2026/10/16/nvidia-ceo-unsafe-ai-buyers-will-be-cut-off"
   }
 ]
