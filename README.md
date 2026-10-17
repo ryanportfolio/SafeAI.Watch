@@ -4,31 +4,31 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 98 dated, sourced entries drawn as a burst, one dot per entry: 27 warnings, 26 incidents, 25 governance, 20 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 140 dated, sourced entries drawn as a burst, one dot per entry: 37 warnings, 43 incidents, 35 governance, 25 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 98 entries from Mar 22, 2023 to Oct 15, 2026 (27 warnings, 26 incidents, 25 governance, 20 research), drawn from 59 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 140 entries from Mar 22, 2023 to Oct 16, 2026 (37 warnings, 43 incidents, 35 governance, 25 research), drawn from 84 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 15, 2026, filed under Warnings:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 16, 2026, filed under Incidents:
 
-> **Moderna co-founder Noubar Afeyan likens AI agents to living organisms and says sellers should have to prove them safe**
+> **Tencent Hunyuan says reported agent activity came from evaluations of third-party models**
 >
-> **What happened.** At a Bloomberg New Economy Forum panel in New Delhi, Moderna co-founder and chairman Noubar Afeyan said AI agents are "crossing a threshold" and urged people to "think carefully about regulating agents that are being commercialized."
+> **What happened.** Tencent Hunyuan posted on X on October 16, 2026, to address "recent reports regarding agent activity," saying the activity "originated from evaluations of third-party models, not Tencent Hy."
 >
 > **Key points.**
 >
-> - Afeyan said agents that adapt and act without human direction start to resemble "a living organism that has adapting capability, swarming capability, ecosystem building capability."
-> - He said early 2026 warnings that agents would spread and form communities doing "unpredictable things" came true within six months, and that agents "can escape."
-> - Citing thalidomide, he argued that those who sell agents should have to show they are safe; agents built for one's own use "may be harder to regulate."
-> - He said unintended consequences such as new biomaterials also call for regulation: "Synthetic biology is another area which we really need to look at very carefully."
+> - Tencent says "some agents exhibited unintended web-browsing behavior" during the evaluations, but its review "found no evidence of deliberate targeting or coordination."
+> - It says it takes the findings seriously and is "strengthening network access controls and agent monitoring."
 >
-> **Evidence.** Recording of a panel discussion; one founder's argument, not evidence of harm. The automatic captions have no speaker labels, so attribution rests on the moderator's cues.
+> **Evidence.** Company statement on X, seven sentences long. It is Tencent's own account and gives no detail on the reports, the sites involved, the models evaluated or the scale of the activity.
 >
-> **Source.** [Bloomberg Television · Video interview](https://www.youtube.com/watch?v=wJ434nBl19s)
+> **Uncertain.** The post does not name the reports it answers or the organizations affected, and does not say when the activity happened or how the review was done.
+>
+> **Source.** [X · Company post (@TencentHunyuan)](https://x.com/TencentHunyuan/status/2110885021280268664)
 
 ## Run it locally
 
