@@ -4,31 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 140 dated, sourced entries drawn as a burst, one dot per entry: 37 warnings, 43 incidents, 35 governance, 25 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 162 dated, sourced entries drawn as a burst, one dot per entry: 42 warnings, 48 incidents, 41 governance, 31 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 140 entries from Mar 22, 2023 to Oct 16, 2026 (37 warnings, 43 incidents, 35 governance, 25 research), drawn from 84 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 162 entries from Mar 22, 2023 to Oct 16, 2026 (42 warnings, 48 incidents, 41 governance, 31 research), drawn from 100 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 16, 2026, filed under Incidents:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 16, 2026, filed under Warnings:
 
-> **Tencent Hunyuan says reported agent activity came from evaluations of third-party models**
+> **Jensen Huang says Nvidia would cut off a customer building unsafe AI but calls safety fears growing pains**
 >
-> **What happened.** Tencent Hunyuan posted on X on October 16, 2026, to address "recent reports regarding agent activity," saying the activity "originated from evaluations of third-party models, not Tencent Hy."
+> **What happened.** Nvidia CEO Jensen Huang told Bloomberg's Emily Chang in London that he would halt chip supply to a customer developing unsafe AI software, "It's a hypothetical, but yes," in an interview Bloomberg reported and The Star republished on October 16, 2026.
 >
 > **Key points.**
 >
-> - Tencent says "some agents exhibited unintended web-browsing behavior" during the evaluations, but its review "found no evidence of deliberate targeting or coordination."
-> - It says it takes the findings seriously and is "strengthening network access controls and agent monitoring."
+> - "But before you do so, you would have a conversation. We don't run other people's companies, and there's a limit to the judgment we apply to other companies' use of our technology," he said.
+> - Huang said fears about AI safety are part of growing pains for a fast-expanding industry and that the software can be controlled and deployed safely; Bloomberg notes Dario Amodei has proposed an industry-wide slowdown.
+> - "There's an accountability, responsibility that goes along with building companies they're just growing into," he said of young AI companies that are "growing incredibly fast."
+> - Nvidia is donating $250 million over five years in computer time to UK research into safeguards and ways to control AI agents, at institutions including Oxford and University College London.
 >
-> **Evidence.** Company statement on X, seven sentences long. It is Tencent's own account and gives no detail on the reports, the sites involved, the models evaluated or the scale of the activity.
+> **Evidence.** Bloomberg's written report of a Bloomberg Television interview, as republished by The Star (Malaysia). The quotes are Huang's words as Bloomberg transcribed them; his view that current concern is not warranted is Bloomberg's paraphrase. The $250 million figure is Nvidia's own.
 >
-> **Uncertain.** The post does not name the reports it answers or the organizations affected, and does not say when the activity happened or how the review was done.
+> **Uncertain.** Huang answered a hypothetical and described a cut-off as a step after "a conversation"; the republished text gives no criteria for what Nvidia would count as unsafe.
 >
-> **Source.** [X · Company post (@TencentHunyuan)](https://x.com/TencentHunyuan/status/2110885021280268664)
+> **Source.** [Bloomberg · Reporting](https://thestar.com.my/business/business-news/2026/10/16/nvidia-ceo-unsafe-ai-buyers-will-be-cut-off)
 
 ## Run it locally
 
