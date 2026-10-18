@@ -15,7 +15,7 @@ The record holds 196 entries from Mar 22, 2023 to Oct 17, 2026 (47 warnings, 56 
 
 Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 17, 2026, filed under Incidents:
 
-> **OpenCode says a distillation attack breached its Console and hit 1.4% of users with external providers linked**
+> **OpenCode says a distillation attack breached its Console and hit 1.4% of its users**
 >
 > **What happened.** OpenCode said on X on October 17, 2026 that it "had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users."
 >

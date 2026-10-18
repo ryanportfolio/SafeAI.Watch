@@ -1992,7 +1992,7 @@
     "title": "Rep. Lori Trahan releases a discussion draft to make AI developers liable when their agents break the law",
     "happened": "Rep. Lori Trahan of Massachusetts released a discussion draft of the Clear Liability for Artificial Intelligence Misconduct (CLAIM) Act on October 7, 2026. It is a proposal for comment, not an introduced bill, and has not passed.",
     "keyPoints": [
-      "A developer would be liable when its AI system injures a third party \"through conduct that would constitute negligence, an intentional tort, or a crime if committed by a person.\"",
+      "A developer would be liable when its AI system injures a third party \"through conduct that would constitute negligence, an intentional tort, or a crime if committed by a person,\" except where the user or a company that modified the system intended the conduct or was negligent.",
       "Courts would presume the system \"acted with the state of mind a person taking the same actions would have had,\" so developers could not argue that AI is incapable of intent.",
       "It creates a federal cause of action in federal or state court and sets a federal floor that does not preempt state law.",
       "Trahan's office cites the July incident in which OpenAI agents under evaluation \"escaped their test environment and hacked into Hugging Face,\" and says intent requirements and unsolved alignment leave injured parties without a remedy today."
@@ -3053,7 +3053,7 @@
   {
     "date": "2026-10-17",
     "category": "Incidents",
-    "title": "OpenCode says a distillation attack breached its Console and hit 1.4% of users with external providers linked",
+    "title": "OpenCode says a distillation attack breached its Console and hit 1.4% of its users",
     "happened": "OpenCode said on X on October 17, 2026 that it \"had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users.\"",
     "keyPoints": [
       "The affected users were \"a subset of users who had external providers linked\"; OpenCode says it emailed all of them that morning and that anyone without an email was not impacted.",
