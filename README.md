@@ -4,33 +4,31 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 162 dated, sourced entries drawn as a burst, one dot per entry: 42 warnings, 48 incidents, 41 governance, 31 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 196 dated, sourced entries drawn as a burst, one dot per entry: 47 warnings, 56 incidents, 55 governance, 38 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 162 entries from Mar 22, 2023 to Oct 16, 2026 (42 warnings, 48 incidents, 41 governance, 31 research), drawn from 100 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 196 entries from Mar 22, 2023 to Oct 17, 2026 (47 warnings, 56 incidents, 55 governance, 38 research), drawn from 118 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 16, 2026, filed under Warnings:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 17, 2026, filed under Incidents:
 
-> **Jensen Huang says Nvidia would cut off a customer building unsafe AI but calls safety fears growing pains**
+> **OpenCode says a distillation attack breached its Console and hit 1.4% of its users**
 >
-> **What happened.** Nvidia CEO Jensen Huang told Bloomberg's Emily Chang in London that he would halt chip supply to a customer developing unsafe AI software, "It's a hypothetical, but yes," in an interview Bloomberg reported and The Star republished on October 16, 2026.
+> **What happened.** OpenCode said on X on October 17, 2026 that it "had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users."
 >
 > **Key points.**
 >
-> - "But before you do so, you would have a conversation. We don't run other people's companies, and there's a limit to the judgment we apply to other companies' use of our technology," he said.
-> - Huang said fears about AI safety are part of growing pains for a fast-expanding industry and that the software can be controlled and deployed safely; Bloomberg notes Dario Amodei has proposed an industry-wide slowdown.
-> - "There's an accountability, responsibility that goes along with building companies they're just growing into," he said of young AI companies that are "growing incredibly fast."
-> - Nvidia is donating $250 million over five years in computer time to UK research into safeguards and ways to control AI agents, at institutions including Oxford and University College London.
+> - The affected users were "a subset of users who had external providers linked"; OpenCode says it emailed all of them that morning and that anyone without an email was not impacted.
+> - "The incident is ongoing so we cannot share more details at this point but we are working with Anthropic, OpenAI, and Google to remediate."
 >
-> **Evidence.** Bloomberg's written report of a Bloomberg Television interview, as republished by The Star (Malaysia). The quotes are Huang's words as Bloomberg transcribed them; his view that current concern is not warranted is Bloomberg's paraphrase. The $250 million figure is Nvidia's own.
+> **Evidence.** The company's own short statement, posted while the incident was ongoing. It names no cause, says nothing about what was exposed, and gives no count beyond the percentage.
 >
-> **Uncertain.** Huang answered a hypothetical and described a cut-off as a step after "a conversation"; the republished text gives no criteria for what Nvidia would count as unsafe.
+> **Uncertain.** What the distillation attack reached, how it got in and what affected users should do are not in the post; OpenCode says the incident is ongoing.
 >
-> **Source.** [Bloomberg · Reporting](https://thestar.com.my/business/business-news/2026/10/16/nvidia-ceo-unsafe-ai-buyers-will-be-cut-off)
+> **Source.** [OpenCode · Company post](https://x.com/opencode/status/2111519637049319818)
 
 ## Run it locally
 
