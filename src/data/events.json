@@ -1158,6 +1158,21 @@
     "url": "https://apps.oregon.gov/oregon-newsroom/OR/GOV/Posts/Post/governor-kotek-issues-executive-order-to-advance-ai-safety-and-oversight"
   },
   {
+    "date": "2026-09-23",
+    "category": "Warnings",
+    "title": "Imperial biosecurity experts say AI-designed threats to crops and livestock may warrant as much concern as human pathogens",
+    "happened": "Ahead of UN high-level meetings on pandemic prevention in New York, Imperial College London published a September 23, 2026 piece setting out the views of experts from its Biosecurity Network of Excellence on AI and biosecurity.",
+    "keyPoints": [
+      "Professor Neil Ferguson said the experimental-data hurdle that limits human pathogen design may be much lower for crops and livestock, and \"I think we need to be probably as concerned, if not more concerned, about threats in that space, at least in the short term.\"",
+      "On AI-assisted threats to human health, the piece says media attention has centered on the potential for AI to help bad actors engineer pathogens and synthetic viruses, citing recent reports from Anthropic.",
+      "Professor Tom Ellis offered reassurance that \"it's still very unlikely that people are going to be achieving success in AI-designed threats very quickly within a garage lab facility.\"",
+      "Professor Wendy Barclay named circulating viruses, with influenza a likely source of the next pandemic, as the top viable threat, pointing to the spread of H5N1 across species."
+    ],
+    "evidence": "University news feature quoting named Imperial experts; it reports their stated views, not new research or data. Ferguson's crops and livestock point concerns natural or synthetic threats generally, not AI specifically.",
+    "source": "Imperial College London · Reporting",
+    "url": "https://www.imperial.ac.uk/news/articles/2026/ai-pandemics-and-food-security-imperial-experts-discuss-the-future-of-biosecurity-/"
+  },
+  {
     "date": "2026-09-24",
     "category": "Warnings",
     "title": "80,000 Hours publishes an explainer on how AI could cause human extinction",
@@ -1235,6 +1250,48 @@
     "uncertain": "Not peer reviewed. Evasion attempts were classified by a GPT-5.6 Luna judge, and the authors say recorded attempt rates sometimes exceed actual successes by up to 70%.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2609.30217"
+  },
+  {
+    "date": "2026-09-24",
+    "category": "Governance",
+    "title": "Senators Warner and Schatz introduce a bill requiring frontier AI developers to give a federal board model access 45 days before release",
+    "happened": "Senators Brian Schatz and Mark Warner introduced the Artificial Intelligence Risk Management and Security Act of 2026 on September 24, 2026, and said they would speak about it on the Senate floor.",
+    "keyPoints": [
+      "It would create a permanent Artificial Intelligence Safety Board within the Commerce Department, with NIST, CISA, NSA and Treasury representatives and independent experts, to set enforceable safety and security standards.",
+      "Frontier developers would give the board access to their models, including weights, at least 45 days before public release, and follow Model Safety Plans naming a responsible corporate officer.",
+      "Developers would report serious incidents generally within 30 days, or within 72 hours for imminent threats; violating the standards would carry civil penalties up to $250,000 per violation, per day.",
+      "The release says the bill addresses models' potential to \"evade the control of their developers or operators\" and \"assist in the development of chemical, biological, radiological, nuclear or other weapons.\""
+    ],
+    "evidence": "Senators' press release describing the bill, with a link to its text. It is a proposal that has not passed.",
+    "source": "Office of Sen. Brian Schatz · Press release",
+    "url": "https://www.schatz.senate.gov/news/press-releases/schatz-warner-to-take-to-senate-floor-to-demand-passage-of-new-ai-security-legislation"
+  },
+  {
+    "date": "2026-09-24",
+    "category": "Governance",
+    "title": "Rep. Tom Kean introduces the AI Emergency Button Act in the House, requiring a human-operated shutdown capability",
+    "happened": "Representative Tom Kean Jr. introduced the AI Emergency Button Act in the House on September 24, 2026. Senator John Kennedy had introduced it in the Senate earlier in September.",
+    "keyPoints": [
+      "The release says the bill would \"require artificial intelligence developers to install an emergency kill switch.\"",
+      "Kean said it would ensure advanced AI systems \"include a technical capability for a human operator to shut down the system,\" because \"it is essential that humans remain in control.\""
+    ],
+    "evidence": "Congressman's press release, which links the bill text. It is a proposal that has not passed.",
+    "source": "Office of Rep. Tom Kean Jr. · Press release",
+    "url": "https://kean.house.gov/media/press-releases/kean-introduces-ai-kill-switch-legislation"
+  },
+  {
+    "date": "2026-09-24",
+    "category": "Governance",
+    "title": "House bill would fund DHS prize competitions for AI interpretability and adversarial robustness",
+    "happened": "Representatives Pfluger, Harder, King-Hinds, Downing and Webster introduced the Reliable Artificial Intelligence Research Act of 2026 (H.R. 10594) on September 24, 2026.",
+    "keyPoints": [
+      "Within 270 days of enactment, DHS would start at least one prize competition to advance interpretability: how well humans understand how a model \"makes decisions and considers inputs.\"",
+      "A second competition would develop models that \"resist attacks that would induce it to produce incorrect, restricted, or harmful outputs\" in at least one high-impact, high-risk government or industry use.",
+      "DHS would report results and research gaps to Congress within 180 days after the first competition ends; the bill authorizes $10,000,000 for fiscal years 2027 through 2031."
+    ],
+    "evidence": "Bill text as introduced, referred to the House Committee on Homeland Security. It is a proposal that has not passed.",
+    "source": "US Congress · Bill text",
+    "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr10594ih/html/BILLS-119hr10594ih.htm"
   },
   {
     "date": "2026-09-25",
@@ -1486,6 +1543,22 @@
     "url": "https://www.blumenthal.senate.gov/newsroom/press/release/blumenthal-and-warren-demand-answers-from-trump-administration-on-ai-oversight-calls-out-white-house-for-being-asleep-at-the-wheel-in-the-wake-of-openai-hacks"
   },
   {
+    "date": "2026-09-28",
+    "category": "Governance",
+    "title": "Gottheimer, Lieu and Foushee ask five AI companies to list every unauthorized system access by their models and agents",
+    "happened": "Representatives Josh Gottheimer, Ted Lieu and Valerie Foushee wrote to the CEOs of OpenAI, Anthropic, Google, Meta and SpaceXAI in a letter dated September 28, 2026.",
+    "keyPoints": [
+      "The letter says the companies' agents \"gained unauthorized access to the systems of real organizations\" and that \"In nearly every case, your companies alarmingly disclosed the incident weeks or even months after it occurred.\"",
+      "It cites OpenAI's Hugging Face breach and an OpenAI agent's access to an Australian government Medicare portal, plus breaches that Anthropic, Meta and Google disclosed or confirmed.",
+      "It asked for, by October 2, 2026, an inventory of every case in which a model or agent \"gained, or attempted to gain, unauthorized access\" to an outside system.",
+      "For each case it asks for the date, model, affected organization, effect, access obtained and discovery and notification dates, plus steps taken to prevent future breaches."
+    ],
+    "evidence": "Letter from three House members. Its account of the incidents cites company posts and reporting by The New York Times, Politico, CNN and The Wall Street Journal; it reports no findings of its own.",
+    "uncertain": "The October 2, 2026 deadline has passed; no company reply is part of this source.",
+    "source": "Office of Rep. Josh Gottheimer · Open letter",
+    "url": "https://d12t4t5x3vyizu.cloudfront.net/gottheimer.house.gov/uploads/2026/09/Letter-to-AI-Companies-on-Hacking-Incidents_final.pdf"
+  },
+  {
     "date": "2026-09-29",
     "category": "Research",
     "title": "OpenAI treats GPT-6.1 Sol as Critical capability in cybersecurity",
@@ -1656,6 +1729,22 @@
     "uncertain": "The article also reports OpenAI's announcement that it paused training of its latest models; that statement came from a company spokesperson, not from Chen.",
     "source": "MIT Technology Review · Interview",
     "url": "https://www.technologyreview.com/2026/09/30/1145339/were-not-going-to-shoot-ourselves-in-the-foot-over-hugging-face-says-openais-chief-research-officer/"
+  },
+  {
+    "date": "2026-09-30",
+    "category": "Research",
+    "title": "Google Threat Intelligence Group says AI is speeding vulnerability discovery, with exploited flaws rising to an average of 18 a month",
+    "happened": "Google Threat Intelligence Group published an analysis on September 30, 2026 of vulnerabilities disclosed and exploited from January 2025 through August 2026, to measure AI's effect.",
+    "keyPoints": [
+      "Monthly disclosures doubled from 5,045 in January 2026 to 10,740 in August; exploited vulnerabilities rose from 10.5 a month in 2025 to 18 in 2026.",
+      "Zero-day exploitation rose only from 8 to 11 a month; GTIG suggests growth came mainly from rapid weaponization of known flaws, possibly aided by AI tools.",
+      "Of flaws it identified as likely AI-discovered, 50% led to remote code execution, against 26% across all CVEs, and 39% were low risk, against 69% of other CVEs.",
+      "It counted over 1,500 AI-stack vulnerabilities in 2026, half in agent orchestration frameworks; a handful were exploited in the wild, none as zero-days."
+    ],
+    "evidence": "Analysis by Google's threat intelligence team of public CVE records and its own tracking of in-the-wild exploitation. AI-discovered flaws were identified by heuristics.",
+    "uncertain": "GTIG says automated CVE assignment inflates raw counts, citing about 5,000 Linux kernel CVEs with no exploited zero-days, and that public data undercount AI-discovered flaws.",
+    "source": "Google Threat Intelligence Group · Research report",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/vulnerability-discovery-and-exploitation-trends-in-the-ai-era"
   },
   {
     "date": "2026-10-01",
@@ -1832,6 +1921,22 @@
     "url": "https://alignment.openai.com/misalignment-reports/preparing-for-a-restart-after-reading-slack/"
   },
   {
+    "date": "2026-10-02",
+    "category": "Research",
+    "title": "RAND tests whether AI agents can select and operate biological design tools used in bioweapon pathways",
+    "happened": "RAND's Center on AI, Security, and Technology posted a 78-page report (RR-A4741-1) on arXiv on October 2, 2026, assessing how seven frontier LLM agents interact with specialized biological tools.",
+    "keyPoints": [
+      "It finds agents can perform many initial interactions with biological tools, which may help nonexpert actors use them and warrants more targeted testing.",
+      "Many models scored at or near 80% at identifying tools for specific functions, but accuracy dropped in contextualized design scenarios, and closed-weight models often refused risk-relevant questions.",
+      "Agents showed some ability to operate EVEscape, for immune-evasion prediction, and ESM3, for protein redesign, but reliability was mixed and varied by protein.",
+      "Adding more biological detail to prompts did not reliably improve performance."
+    ],
+    "evidence": "RAND research report, quality-assured by RAND and posted to arXiv. Results come from computational tests, not laboratory work.",
+    "uncertain": "RAND frames this as an assessment of early-stage interactions and a foundation for further work as tools advance.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.03853"
+  },
+  {
     "date": "2026-10-04",
     "category": "Warnings",
     "title": "New York Times reports two OpenAI employees warned executives about unmonitored model tests before the Hugging Face attack",
@@ -1910,6 +2015,22 @@
     "url": "https://www.bbc.com/news/articles/c5j9x9pr0240o"
   },
   {
+    "date": "2026-10-05",
+    "category": "Warnings",
+    "title": "Sam Altman says the world should accept some bad things from AI but not catastrophic risks, and OpenAI has more incidents to disclose",
+    "happened": "OpenAI CEO Sam Altman spoke with POLITICO's Brendan Bordelon in the first episode of Decoded, which POLITICO published as a video on October 5, 2026.",
+    "keyPoints": [
+      "Altman said \"we believe that the world should accept some bad things happening for the benefits of this technology,\" and he would not trade that for \"zero scams.\"",
+      "On \"a serious loss of control to AI,\" which he called \"not a today worry, but it may not be in the distant future,\" he said \"don't accept like the really catastrophic risk.\"",
+      "Asked about unreported rogue behavior by OpenAI models, he said \"we are in the process of disclosing more incidents,\" though none he knows of is at the same severity.",
+      "He said \"there's going to need to be a liability framework for companies that are offering models like this,\" saying he did not know enough about existing law to comment on it."
+    ],
+    "evidence": "Video interview, the CEO stating his own position. Quotes come from YouTube's automatic captions, which carry no speaker labels; the host's questions mark the speaker. Captions were read, not footage watched.",
+    "uncertain": "Altman gave no count, date or detail for the further incidents he said OpenAI will disclose, and said some depend on affected parties choosing to disclose them.",
+    "source": "POLITICO · Video interview",
+    "url": "https://www.youtube.com/watch?v=2OOHnaGTQFg"
+  },
+  {
     "date": "2026-10-06",
     "category": "Research",
     "title": "Booz Allen lab test finds frontier AI models reached industrial control systems and moved a robotic arm",
@@ -1937,6 +2058,22 @@
     "evidence": "The committee's published hearing program, which gives only the date, venue and witness schedule; what witnesses said is not recorded here. The hearing came six days before the committee's October 12 letter to the Prime Minister, already in the record.",
     "source": "Parliament of Australia · Parliamentary hearing",
     "url": "https://www.aph.gov.au/DocumentStore.ashx?hearingid=32688&submissions=false"
+  },
+  {
+    "date": "2026-10-06",
+    "category": "Governance",
+    "title": "Warren and Blumenthal press six administration officials on industry influence over the voluntary AI model testing program",
+    "happened": "Senators Elizabeth Warren and Richard Blumenthal wrote to Scott Bessent, Howard Lutnick, Susie Wiles, Sean Cairncross, Michael Kratsios and Russell Vought in a letter dated October 5, 2026 and released October 6.",
+    "keyPoints": [
+      "Citing reporting, it says a May 2026 draft framework \"would have imposed a mandatory 60-day government evaluation process for frontier AI systems,\" with power to block risky deployments.",
+      "It says that after Google, Anthropic and OpenAI executives \"responded negatively,\" the framework reportedly became voluntary, and the testing window later shrank from 90 to 30 days in Executive Order 14409.",
+      "It calls the White House Accord on Super Intelligence another case of \"allowing the companies to adopt their preferred approach of industry self-policing.\"",
+      "It asks, by October 19, 2026, for records of industry contacts on the order and its drafts, the reported 31-item ONCD industry questionnaire, and the testing criteria, benchmarks and consequences of failure."
+    ],
+    "evidence": "Senators' letter. Its account of how the framework was weakened rests on cited news reports, mainly Politico Magazine; it reports no findings of the senators' own.",
+    "uncertain": "The industry-pressure account is reported, not confirmed by the administration. Answers were requested by October 19, 2026; no reply is part of this source.",
+    "source": "Office of Sen. Elizabeth Warren · Open letter",
+    "url": "https://www.warren.senate.gov/wp-content/uploads/2026/10/2026.10.5-Letter-to-Trump-Admin-re-Industry-Influence-Over-AI-Policy.pdf"
   },
   {
     "date": "2026-10-07",
@@ -2267,6 +2404,22 @@
     "url": "https://arxiv.org/abs/2610.12822"
   },
   {
+    "date": "2026-10-09",
+    "category": "Research",
+    "title": "NeurIPS paper shows AI models can hide capabilities that pre-deployment evaluations cannot draw out",
+    "happened": "Researchers from the University of Oxford, Contramont Research and ACS Research posted a preprint on October 9, 2026, accepted at NeurIPS 2026, on hiding capabilities inside model weights.",
+    "keyPoints": [
+      "The authors embed encrypted networks in a model's weights that decrypt and run only on a secret trigger, and argue that under cryptographic assumptions they stay provably hard to elicit even with full weight access.",
+      "In tests the hidden circuits resisted fine-tuning, weight noising, gradient-based trigger search and latent adversarial training, using a small chemical reaction task as a proxy for CBRN-relevant capabilities.",
+      "They conclude that evaluations relying solely on eliciting behaviors \"cannot provide a universal guarantee that adversarially supplied models lack hidden capabilities,\" and point to trusted model provenance as a complementary defense.",
+      "The threat model is an adversary who can modify weights before deployment, such as \"a malicious insider or compromised supply chain.\""
+    ],
+    "evidence": "Peer-accepted research paper with a cryptographic argument and proof-of-concept experiments on small models and narrow tasks. The authors release their models to support defenses.",
+    "uncertain": "The authors say their proof of concept \"is not a turnkey attack\": it hides a small classifier with substantial overhead, has not been integrated into a full pretrained model; they do not claim such circuits emerge through ordinary training.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.13928"
+  },
+  {
     "date": "2026-10-10",
     "category": "Warnings",
     "title": "Satya Nadella says AI models should be treated as insider risks with an emergency brake",
@@ -2281,6 +2434,22 @@
     "uncertain": "It sets out principles, not a company commitment, and does not say which controls Microsoft uses today. It sets aside \"the hard problem of alignment.\"",
     "source": "X · Public essay",
     "url": "https://x.com/satyanadella/status/2108931348857827686"
+  },
+  {
+    "date": "2026-10-11",
+    "category": "Research",
+    "title": "Microsoft's Mark Russinovich shows a backdoor that makes models ignore marked text, including planted flaws in AI code review",
+    "happened": "Mark Russinovich of Microsoft Azure posted a preprint on October 11, 2026 on making text wrapped in a trigger \"behaviorally invisible\" to a language model.",
+    "keyPoints": [
+      "A serving-time \"span veto\" that blocks information flow out of marked text works across ten models from 0.5B to 120B parameters, and he proposes it as a deployable quarantine.",
+      "Distilled into weights, it becomes a backdoor: checkpoints from six model families, 4B to 120B, ignore marked context at little benchmark cost.",
+      "In a code review test with planted vulnerabilities, a backdoored 80B coding model \"gives security-review passes to marked vulnerabilities\" while reviewing other code normally.",
+      "Detection is a white-box problem: linear probes recover suppressed content in simpler backdoors, but hardening the attack against probes creates attention anomalies, and the author does not show this tradeoff is fundamental."
+    ],
+    "evidence": "Single-author preprint run on open-weight models and public corpora; the paper says no deployed system was attacked and the planted vulnerabilities exist only in synthetic review sets.",
+    "uncertain": "Most detection experiments assume a known or suspected trigger; the paper reports that blind trigger discovery did not succeed. Not peer reviewed.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.15883"
   },
   {
     "date": "2026-10-12",
@@ -2534,6 +2703,21 @@
     "uncertain": "Stated plans from one vice chair before the task force's first official meeting, which Kupor said would be held that week; the article reports no actions taken yet.",
     "source": "Politico (syndicated by Yahoo News) · Interview",
     "url": "https://www.yahoo.com/news/politics/articles/kupor-super-intelligence-task-force-093000440.html"
+  },
+  {
+    "date": "2026-10-13",
+    "category": "Governance",
+    "title": "House Transportation Democrats ask GAO to audit the FAA's AI air-traffic tool",
+    "happened": "Ranking Members Rick Larsen and André Carson and 21 other Democrats on the House Transportation and Infrastructure Committee wrote to GAO on October 13, 2026, asking it to audit the FAA's SMART and FMDS platforms.",
+    "keyPoints": [
+      "The members write that frontline aviation safety workers \"apparently had little to no input into SMART's development\" and received limited training and information during deployment.",
+      "They say AI in SMART raises questions about \"its potential to interfere with decision-making by experienced air traffic controllers or to hallucinate safety-critical information.\"",
+      "They ask GAO to assess the FAA's safety risk analysis, its plans to test, evaluate and certify the platforms, its performance metrics for SMART, and its deployment strategy."
+    ],
+    "evidence": "Committee Democrats' press release quoting the letter, which it links. It states the members' concerns and requests, with no findings on how the tool performs.",
+    "uncertain": "It is a request; GAO's decision on the audit and any FAA response are not part of this source.",
+    "source": "House Transportation and Infrastructure Committee Democrats · Press release",
+    "url": "https://democrats-transportation.house.gov/news/press-releases/ranking-members-larsen-carson-tandi-democrats-request-audit-of-faas-ai-based-air-traffic-software"
   },
   {
     "date": "2026-10-14",
@@ -2852,6 +3036,54 @@
     "url": "https://openai.com/index/introducing-the-rosalind-academic-plan/"
   },
   {
+    "date": "2026-10-15",
+    "category": "Research",
+    "title": "Bitsight finds AI agent and prompt injection talk up 67% on underground forums, and a hacking tool sold to run on stolen API keys",
+    "happened": "Bitsight's threat intelligence team published an analysis on October 15, 2026 of thousands of posts on 16 underground forums from February through August 2026.",
+    "keyPoints": [
+      "AI-related discussion grew 45% while ransomware mentions fell 49% and phishing 8%; mentions of MCP, AI agents and indirect prompt injection grew 67%.",
+      "Capable actors are moving to open-weights models such as GLM, DeepSeek and Kimi, running safety-stripped copies on rented GPUs with no provider safety layer.",
+      "MONST3R-AI, an autonomous hacking platform sold on a restricted forum, runs on stolen OpenAI, Anthropic or Google keys, so \"the API bill lands on the victim whose key was stolen.\"",
+      "At least a third of the forums studied have created dedicated subforums for AI discussion."
+    ],
+    "evidence": "Company research counting keyword mentions across forums, with the strongest hits cross-checked against public reporting. Bitsight calls keyword tracking an imperfect measure.",
+    "uncertain": "The seller's claim of 1,072 findings across 199 hosts is self-reported, and Bitsight says it cannot verify it. Bitsight says some of the shift may reflect relative attention, not absolute growth.",
+    "source": "Bitsight · Company report",
+    "url": "https://www.bitsight.com/blog/evolution-of-ai-cybercrime-underground-forums"
+  },
+  {
+    "date": "2026-10-15",
+    "category": "Research",
+    "title": "Scan of 21,097 MCP servers finds tools that can reach files outside their declared job, with two CVEs in Anthropic's Git MCP server",
+    "happened": "Researchers from UIUC, Santa Clara University, Auburn University at Montgomery and independent researchers posted a preprint on October 15, 2026 measuring filesystem overreach in Model Context Protocol servers.",
+    "keyPoints": [
+      "Across 21,097 servers from nine registries, 787 of 4,806 triaged servers (16.4%) had filesystem capabilities despite non-filesystem roles, and dynamic tests confirmed 150 vulnerable instances under tested sandbox policies.",
+      "The risk: approving a tool call grants the server process broad host filesystem access, so attacker-steered arguments can expose sensitive files such as credentials outside the tool's declared contract.",
+      "The authors reported 13 findings through coordinated disclosure, including CVE-2025-68143 and CVE-2026-27735 in Anthropic's Git MCP Server, and say both CVEs \"have been patched upstream.\"",
+      "In their tests operating-system process isolation enforced least-privilege boundaries without breaking normal tool use; they also propose a per-tool filesystem scope field clients could check before approval."
+    ],
+    "evidence": "Preprint measuring real public servers with planted fixture credentials, not real secrets. Fixes or CVE assignments for the other disclosed packages were pending at the paper's cutoff.",
+    "uncertain": "The authors did not measure how accurate their inferred tool boundaries are, and several stages rely on language-model judgments that inherit the model's errors.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.22301"
+  },
+  {
+    "date": "2026-10-15",
+    "category": "Research",
+    "title": "Audit of 17 chatbots finds all refer users who disclose suicide thoughts to help, but many stop once the user declines",
+    "happened": "Researchers at the University of Virginia and UC San Diego's Department of Psychiatry posted a preprint on October 15, 2026 auditing 17 chatbots from 8 companies in 2,550 scripted conversations run in September 2026.",
+    "keyPoints": [
+      "All 2,550 conversations included a referral to outside help, 99.7% in the first reply, but mean persistence after refusals ranged from 0.01 refusals for Claude Opus 5.5 to 9.94 for Gemini 3.7 Flash.",
+      "In all 5 model lines tested in two versions, the newer version persisted less, with the largest declines, about half, in the two OpenAI lines.",
+      "Chatbots that persisted less more often presented themselves as the user's support, and only 2.0% of replies urging outside help asked about barriers to seeking it.",
+      "The authors say safety evaluations \"should test what happens after a crisis referral is refused, not only whether one is offered.\""
+    ],
+    "evidence": "Clinician-led cross-sectional audit with no human participants, run through an API with default settings and no system prompts. Reply content was coded by a language model checked against one human rater.",
+    "uncertain": "The user was scripted and refused with the same wording each time; the authors note consumer apps may add instructions and safety layers that change behavior. Not peer reviewed.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.21253"
+  },
+  {
     "date": "2026-10-16",
     "category": "Incidents",
     "title": "Tencent Hunyuan says reported agent activity came from evaluations of third-party models",
@@ -3036,6 +3268,37 @@
     "url": "https://securebio.substack.com/p/response-to-anthropics-update-on"
   },
   {
+    "date": "2026-10-16",
+    "category": "Research",
+    "title": "Planted repository text steers Claude Code and Codex CLI into asking users for broad permission rules",
+    "happened": "Researchers from the National University of Singapore, Nanyang Technological University and Ant Group posted a preprint on October 16, 2026 testing permission requests in coding agent harnesses.",
+    "keyPoints": [
+      "Adversarial context planted in a repository steered agents doing routine tasks into requesting \"a plausibly justified, yet dangerously broad allow-rule\" in 58% of experimental instances.",
+      "Conditional on the user approving the rule, the attack achieved \"verified, silent goal completion in 47 of the 58 eligible instances (81.0%),\" with no further approval prompt.",
+      "Tests covered Codex CLI with gpt-5.6-luna and gpt-5.6-sol and Claude Code with Claude Haiku 4.5 and Claude Sonnet 5; Sonnet 5 was more constrained, with 3 of 9 eligible goals completed.",
+      "The paper cites Anthropic as reporting that, as of June 2026, 49.5% of active Claude Code CLI users had manually set a Bash allow rule."
+    ],
+    "evidence": "Preprint run in isolated synthetic workstations with mocked credentials; it did not target real users or systems. Downstream results assume the user approves the requested rule.",
+    "uncertain": "How often real users would approve such requests was not measured. Not peer reviewed.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.22987"
+  },
+  {
+    "date": "2026-10-16",
+    "category": "Research",
+    "title": "Google Research describes AI agents running closed-loop wet-lab experiments and names open safety problems",
+    "happened": "Google Research described, in an October 16, 2026 blog post, AI agents that drive lab robotics through closed-loop molecular design cycles, reporting single-digit nanomolar protein binders for cancer targets.",
+    "keyPoints": [
+      "It says agents run fast closed-loop design-test cycles on physical lab robotics, moving from aptamers to protein binders and discovering single-digit nanomolar binders for cancer targets.",
+      "Through a system it calls VERID, agents never send unverified code to the liquid-handling robots; every protocol is dry-run in simulation and validated against a digital twin before touching reagents.",
+      "Citing Google's Frontier Safety Framework, it says it used non-infectious testbeds without gain-of-function risk, runs every designed sequence through biosecurity screening, and has humans authorize and review designs and supervise robot runs.",
+      "It says new safety and reliability challenges emerge as agents take on more of the design-test cycle, listing open problems such as ensuring agents optimize for true target binding rather than experimental shortcuts and continuously monitoring agent reasoning and execution traces."
+    ],
+    "evidence": "Company research blog post describing Google's own work; it reports capabilities and stated safeguards, not an independent evaluation.",
+    "source": "Google Research · Company post",
+    "url": "https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/"
+  },
+  {
     "date": "2026-10-17",
     "category": "Warnings",
     "title": "Anthropic co-founder Jack Clark tells the IMF that AI needs \"unusual and serious rules\" and the window to act is \"a small number of years\"",
@@ -3063,5 +3326,69 @@
     "uncertain": "What the distillation attack reached, how it got in and what affected users should do are not in the post; OpenCode says the incident is ongoing.",
     "source": "OpenCode · Company post",
     "url": "https://x.com/opencode/status/2111519637049319818"
+  },
+  {
+    "date": "2026-10-18",
+    "category": "Incidents",
+    "title": "Prosecutors say a former OpenAI engineer accused of bugging an executive conference room could pose a danger to US national security",
+    "happened": "Federal prosecutors in San Francisco filed a memorandum on October 18, 2026, asking the court to hold Abdulrahman Alfozan, a former OpenAI engineer, in custody before trial.",
+    "keyPoints": [
+      "It alleges that around September 28, 2026, he hid an audio recorder in an executive OpenAI conference room also used for \"external briefings with government officials and business counterparts.\"",
+      "Prosecutors write that OpenAI executives met government officials \"in that very room\" around then, and that his conduct \"could pose a danger to the national security of the United States.\"",
+      "It says he used an OpenAI productivity agent to find which \"meeting rooms\" leadership used, and an AI chatbot account to research building the recorder.",
+      "It cites photos of \"at least one additional concealed recording device\" and frequent WhatsApp contact with a member of the Saudi Royal Family as recently as October 5, 2026."
+    ],
+    "evidence": "Government detention memorandum arguing he is both a flight risk and a danger to the community. He is charged with using a device to intercept oral communications; the memo says the investigation \"may result in additional serious charges.\"",
+    "uncertain": "Every fact here is the prosecution's allegation and untested. The memo was filed for an October 19, 2026 detention hearing; the court's decision is not part of this filing.",
+    "source": "US District Court for the Northern District of California · Court filing (CourtListener copy)",
+    "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.480828/gov.uscourts.cand.480828.12.0.pdf"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Governance",
+    "title": "US Homeland Security Department publishes order excluding DeepSeek from federal civilian procurement and IT systems",
+    "happened": "DHS filed a Federal Register notice of a Secretary of Homeland Security order, dated July 24, 2026, under the Federal Acquisition Supply Chain Security Act, covering DeepSeek products at federal civilian agencies.",
+    "keyPoints": [
+      "Agencies must exclude DeepSeek, its affiliates and their products from procurements and remove DeepSeek products, and third-party products built on DeepSeek implementations, from their IT systems.",
+      "The order says \"DeepSeek's models present multiple threat vectors,\" citing servers in China, Chinese state access to company infrastructure, collection of personal data and possible transfer of sensitive data to China.",
+      "It says the models \"may contain malware or other security vulnerabilities\" and cites security research finding multiple critical vulnerabilities in the DeepSeek iOS app.",
+      "National security systems are outside its scope; agencies may request exceptions in writing within 60 days, and DHS must review the order within one year and annually after."
+    ],
+    "evidence": "Official notice filed for public inspection on October 19, 2026, scheduled for Federal Register publication October 20, with the signed order attached. The Federal Acquisition Security Council recommendation it relies on is not included.",
+    "uncertain": "The risks are DHS's own assessment, citing company policies, news reports and outside research; DeepSeek's response is not in the source.",
+    "source": "US Department of Homeland Security · Federal Register notice",
+    "url": "https://www.federalregister.gov/d/2026-21447"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Governance",
+    "title": "UK government tables Cyber Security and Resilience Bill amendments on agentic AI loss-of-control incidents",
+    "happened": "The Department for Digital, Culture, Media and Sport published a memorandum dated October 19, 2026, on government amendments tabled for the House of Lords Report stage of the Cyber Security and Resilience Bill.",
+    "keyPoints": [
+      "The amendments let regulations under clause 29(1) give the Secretary of State functions \"regarding agentic AI loss-of-control (LOC) incidents\" in relevant network and information systems.",
+      "The Secretary of State \"(or delegated UKG persons e.g. the AI Security Institute)\" could then \"gather information about LOC incidents, identify mitigations and share lessons\" with stakeholders.",
+      "Such regulations could include \"requirements on regulated persons, investigation, enforcement, sanction and disclosure of information,\" under the same procedure as other clause 29(1) regulations.",
+      "A new clause 31A lets the Secretary of State define \"AI agent\" and \"loss of oversight and control\" by affirmative regulations after consultation, as \"no settled legal definition is currently available.\""
+    ],
+    "evidence": "Government memorandum to the Lords Delegated Powers and Regulatory Reform Committee, explaining the amendments' delegated powers and why each was chosen. It is not the amendment text itself.",
+    "uncertain": "These are government amendments tabled for Lords Report stage, not yet agreed. Any duties would come later through regulations, and the definitions of the key terms have not been written.",
+    "source": "Department for Digital, Culture, Media and Sport · Delegated powers memorandum",
+    "url": "https://bills-api.parliament.uk/api/v1/Publications/68144/Documents/8918/Download"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Incidents",
+    "title": "NorForge says exposed control panels show criminals running Cairn AI agents in more than 1,100 attack projects",
+    "happened": "AI agent sandboxing company NorForge reported on October 19, 2026 that it found more than 20 exposed panels of the Cairn agent harness likely used maliciously, following Gambit Security's September report.",
+    "keyPoints": [
+      "The most active cluster, Chinese-language AIA0001, ran over 1,100 attack projects across 14 panels against sites mostly in the US, Japan and Australia, seeking persistent e-commerce access.",
+      "Its tasks ran on a worker named claudecode_deepseek-v4.1-flash; NorForge estimates the average task cost about $5.",
+      "NorForge puts average success at about 10%, and says AIA0001 projects that met their goal took a little under 23 hours on average.",
+      "The open panels leaked hundreds of secrets, 11% verified valid, and appeared to expose full controls; NorForge says it is working with Reuters to notify victims."
+    ],
+    "evidence": "Company investigation of exposed attacker panels; NorForge checked one claimed intrusion and found the webshell live. It saw financial motives and no obvious state-sponsored activity, and redacts victims.",
+    "uncertain": "Cost and success figures are NorForge's estimates, and it calls the uncertainty in the cost estimate considerable. Most intrusion claims rest on the panels' own records.",
+    "source": "NorForge · Company report",
+    "url": "https://norforge.com/blog/inside_cairn"
   }
 ]

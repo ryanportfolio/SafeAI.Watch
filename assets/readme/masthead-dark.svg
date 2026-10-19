@@ -1,202 +1,223 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img" aria-label="Keeping watch on AI. A burst chart of the SafeAI.watch record: 196 dated, sourced entries from Mar 2023 to Oct 2026, one dot each: 47 warnings, 56 incidents, 55 governance, 38 research. Distance from the centre is the entry's date; dashed rings mark January 1. The record is a selection, so density shows what it covers, not how often things happen.">
-<title>Keeping watch on AI. A burst chart of the SafeAI.watch record: 196 dated, sourced entries from Mar 2023 to Oct 2026, one dot each: 47 warnings, 56 incidents, 55 governance, 38 research. Distance from the centre is the entry's date; dashed rings mark January 1. The record is a selection, so density shows what it covers, not how often things happen.</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img" aria-label="Keeping watch on AI. A burst chart of the SafeAI.watch record: 217 dated, sourced entries from Mar 2023 to Oct 2026, one dot each: 49 warnings, 58 incidents, 63 governance, 47 research. Distance from the centre is the entry's date; dashed rings mark January 1. The record is a selection, so density shows what it covers, not how often things happen.">
+<title>Keeping watch on AI. A burst chart of the SafeAI.watch record: 217 dated, sourced entries from Mar 2023 to Oct 2026, one dot each: 49 warnings, 58 incidents, 63 governance, 47 research. Distance from the centre is the entry's date; dashed rings mark January 1. The record is a selection, so density shows what it covers, not how often things happen.</title>
 <style>text{font-kerning:normal}.serif{font-family:Newsreader,Georgia,'Times New Roman',Times,serif}.sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif}.mono{font-family:ui-monospace,'SF Mono','Cascadia Mono',Menlo,Consolas,'Liberation Mono',monospace;letter-spacing:.08em}
 @keyframes d0{0%,3.8%{opacity:0}5.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d0{animation:d0 16s linear infinite}
 @keyframes d1{0%,4%{opacity:0}6.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d1{animation:d1 16s linear infinite}
 @keyframes d2{0%,4.2%{opacity:0}6.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d2{animation:d2 16s linear infinite}
-@keyframes d3{0%,4.5%{opacity:0}6.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d3{animation:d3 16s linear infinite}
-@keyframes d4{0%,4.7%{opacity:0}6.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d4{animation:d4 16s linear infinite}
-@keyframes d5{0%,5%{opacity:0}7.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d5{animation:d5 16s linear infinite}
-@keyframes d6{0%,5.2%{opacity:0}7.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d6{animation:d6 16s linear infinite}
-@keyframes d7{0%,5.5%{opacity:0}7.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d7{animation:d7 16s linear infinite}
-@keyframes d8{0%,5.7%{opacity:0}7.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d8{animation:d8 16s linear infinite}
-@keyframes d9{0%,5.9%{opacity:0}8.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d9{animation:d9 16s linear infinite}
-@keyframes d10{0%,6.2%{opacity:0}8.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d10{animation:d10 16s linear infinite}
-@keyframes d11{0%,6.4%{opacity:0}8.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d11{animation:d11 16s linear infinite}
-@keyframes d12{0%,6.7%{opacity:0}8.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d12{animation:d12 16s linear infinite}
-@keyframes d13{0%,6.9%{opacity:0}9.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d13{animation:d13 16s linear infinite}
-@keyframes d14{0%,7.2%{opacity:0}9.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d14{animation:d14 16s linear infinite}
-@keyframes d15{0%,7.4%{opacity:0}9.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d15{animation:d15 16s linear infinite}
-@keyframes d16{0%,7.6%{opacity:0}9.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d16{animation:d16 16s linear infinite}
-@keyframes d17{0%,7.9%{opacity:0}10.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d17{animation:d17 16s linear infinite}
-@keyframes d18{0%,8.1%{opacity:0}10.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d18{animation:d18 16s linear infinite}
-@keyframes d19{0%,8.4%{opacity:0}10.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d19{animation:d19 16s linear infinite}
-@keyframes d20{0%,8.6%{opacity:0}10.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d20{animation:d20 16s linear infinite}
-@keyframes d21{0%,8.9%{opacity:0}11.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d21{animation:d21 16s linear infinite}
-@keyframes d22{0%,9.1%{opacity:0}11.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d22{animation:d22 16s linear infinite}
-@keyframes d23{0%,9.4%{opacity:0}11.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d23{animation:d23 16s linear infinite}
-@keyframes d24{0%,9.6%{opacity:0}11.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d24{animation:d24 16s linear infinite}
-@keyframes d25{0%,9.8%{opacity:0}12%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d25{animation:d25 16s linear infinite}
-@keyframes d26{0%,10.1%{opacity:0}12.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d26{animation:d26 16s linear infinite}
-@keyframes d27{0%,10.3%{opacity:0}12.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d27{animation:d27 16s linear infinite}
-@keyframes d28{0%,10.6%{opacity:0}12.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d28{animation:d28 16s linear infinite}
-@keyframes d29{0%,10.8%{opacity:0}13%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d29{animation:d29 16s linear infinite}
-@keyframes d30{0%,11.1%{opacity:0}13.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d30{animation:d30 16s linear infinite}
-@keyframes d31{0%,11.3%{opacity:0}13.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d31{animation:d31 16s linear infinite}
-@keyframes d32{0%,11.5%{opacity:0}13.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d32{animation:d32 16s linear infinite}
-@keyframes d33{0%,11.8%{opacity:0}14%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d33{animation:d33 16s linear infinite}
-@keyframes d34{0%,12%{opacity:0}14.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d34{animation:d34 16s linear infinite}
-@keyframes d35{0%,12.3%{opacity:0}14.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d35{animation:d35 16s linear infinite}
-@keyframes d36{0%,12.5%{opacity:0}14.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d36{animation:d36 16s linear infinite}
-@keyframes d37{0%,12.8%{opacity:0}15%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d37{animation:d37 16s linear infinite}
-@keyframes d38{0%,13%{opacity:0}15.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d38{animation:d38 16s linear infinite}
-@keyframes d39{0%,13.2%{opacity:0}15.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d39{animation:d39 16s linear infinite}
-@keyframes d40{0%,13.5%{opacity:0}15.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d40{animation:d40 16s linear infinite}
-@keyframes d41{0%,13.7%{opacity:0}15.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d41{animation:d41 16s linear infinite}
-@keyframes d42{0%,14%{opacity:0}16.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d42{animation:d42 16s linear infinite}
-@keyframes d43{0%,14.2%{opacity:0}16.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d43{animation:d43 16s linear infinite}
-@keyframes d44{0%,14.5%{opacity:0}16.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d44{animation:d44 16s linear infinite}
-@keyframes d45{0%,14.7%{opacity:0}16.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d45{animation:d45 16s linear infinite}
-@keyframes d46{0%,15%{opacity:0}17.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d46{animation:d46 16s linear infinite}
-@keyframes d47{0%,15.2%{opacity:0}17.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d47{animation:d47 16s linear infinite}
-@keyframes d48{0%,15.4%{opacity:0}17.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d48{animation:d48 16s linear infinite}
-@keyframes d49{0%,15.7%{opacity:0}17.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d49{animation:d49 16s linear infinite}
-@keyframes d50{0%,15.9%{opacity:0}18.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d50{animation:d50 16s linear infinite}
-@keyframes d51{0%,16.2%{opacity:0}18.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d51{animation:d51 16s linear infinite}
-@keyframes d52{0%,16.4%{opacity:0}18.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d52{animation:d52 16s linear infinite}
-@keyframes d53{0%,16.7%{opacity:0}18.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d53{animation:d53 16s linear infinite}
-@keyframes d54{0%,16.9%{opacity:0}19.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d54{animation:d54 16s linear infinite}
-@keyframes d55{0%,17.1%{opacity:0}19.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d55{animation:d55 16s linear infinite}
-@keyframes d56{0%,17.4%{opacity:0}19.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d56{animation:d56 16s linear infinite}
-@keyframes d57{0%,17.6%{opacity:0}19.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d57{animation:d57 16s linear infinite}
-@keyframes d58{0%,17.9%{opacity:0}20.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d58{animation:d58 16s linear infinite}
-@keyframes d59{0%,18.1%{opacity:0}20.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d59{animation:d59 16s linear infinite}
-@keyframes d60{0%,18.4%{opacity:0}20.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d60{animation:d60 16s linear infinite}
-@keyframes d61{0%,18.6%{opacity:0}20.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d61{animation:d61 16s linear infinite}
-@keyframes d62{0%,18.9%{opacity:0}21%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d62{animation:d62 16s linear infinite}
-@keyframes d63{0%,19.1%{opacity:0}21.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d63{animation:d63 16s linear infinite}
-@keyframes d64{0%,19.3%{opacity:0}21.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d64{animation:d64 16s linear infinite}
-@keyframes d65{0%,19.6%{opacity:0}21.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d65{animation:d65 16s linear infinite}
-@keyframes d66{0%,19.8%{opacity:0}22%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d66{animation:d66 16s linear infinite}
-@keyframes d67{0%,20.1%{opacity:0}22.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d67{animation:d67 16s linear infinite}
-@keyframes d68{0%,20.3%{opacity:0}22.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d68{animation:d68 16s linear infinite}
-@keyframes d69{0%,20.6%{opacity:0}22.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d69{animation:d69 16s linear infinite}
-@keyframes d70{0%,20.8%{opacity:0}23%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d70{animation:d70 16s linear infinite}
-@keyframes d71{0%,21%{opacity:0}23.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d71{animation:d71 16s linear infinite}
-@keyframes d72{0%,21.3%{opacity:0}23.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d72{animation:d72 16s linear infinite}
-@keyframes d73{0%,21.5%{opacity:0}23.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d73{animation:d73 16s linear infinite}
-@keyframes d74{0%,21.8%{opacity:0}24%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d74{animation:d74 16s linear infinite}
-@keyframes d75{0%,22%{opacity:0}24.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d75{animation:d75 16s linear infinite}
-@keyframes d76{0%,22.3%{opacity:0}24.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d76{animation:d76 16s linear infinite}
-@keyframes d77{0%,22.5%{opacity:0}24.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d77{animation:d77 16s linear infinite}
-@keyframes d78{0%,22.7%{opacity:0}24.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d78{animation:d78 16s linear infinite}
-@keyframes d79{0%,23%{opacity:0}25.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d79{animation:d79 16s linear infinite}
-@keyframes d80{0%,23.2%{opacity:0}25.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d80{animation:d80 16s linear infinite}
-@keyframes d81{0%,23.5%{opacity:0}25.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d81{animation:d81 16s linear infinite}
-@keyframes d82{0%,23.7%{opacity:0}25.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d82{animation:d82 16s linear infinite}
-@keyframes d83{0%,24%{opacity:0}26.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d83{animation:d83 16s linear infinite}
-@keyframes d84{0%,24.2%{opacity:0}26.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d84{animation:d84 16s linear infinite}
-@keyframes d85{0%,24.5%{opacity:0}26.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d85{animation:d85 16s linear infinite}
-@keyframes d86{0%,24.7%{opacity:0}26.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d86{animation:d86 16s linear infinite}
-@keyframes d87{0%,24.9%{opacity:0}27.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d87{animation:d87 16s linear infinite}
-@keyframes d88{0%,25.2%{opacity:0}27.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d88{animation:d88 16s linear infinite}
-@keyframes d89{0%,25.4%{opacity:0}27.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d89{animation:d89 16s linear infinite}
-@keyframes d90{0%,25.7%{opacity:0}27.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d90{animation:d90 16s linear infinite}
-@keyframes d91{0%,25.9%{opacity:0}28.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d91{animation:d91 16s linear infinite}
-@keyframes d92{0%,26.2%{opacity:0}28.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d92{animation:d92 16s linear infinite}
-@keyframes d93{0%,26.4%{opacity:0}28.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d93{animation:d93 16s linear infinite}
-@keyframes d94{0%,26.6%{opacity:0}28.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d94{animation:d94 16s linear infinite}
-@keyframes d95{0%,26.9%{opacity:0}29.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d95{animation:d95 16s linear infinite}
-@keyframes d96{0%,27.1%{opacity:0}29.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d96{animation:d96 16s linear infinite}
-@keyframes d97{0%,27.4%{opacity:0}29.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d97{animation:d97 16s linear infinite}
-@keyframes d98{0%,27.6%{opacity:0}29.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d98{animation:d98 16s linear infinite}
-@keyframes d99{0%,27.9%{opacity:0}30.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d99{animation:d99 16s linear infinite}
-@keyframes d100{0%,28.1%{opacity:0}30.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d100{animation:d100 16s linear infinite}
-@keyframes d101{0%,28.4%{opacity:0}30.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d101{animation:d101 16s linear infinite}
-@keyframes d102{0%,28.6%{opacity:0}30.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d102{animation:d102 16s linear infinite}
-@keyframes d103{0%,28.8%{opacity:0}31%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d103{animation:d103 16s linear infinite}
-@keyframes d104{0%,29.1%{opacity:0}31.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d104{animation:d104 16s linear infinite}
-@keyframes d105{0%,29.3%{opacity:0}31.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d105{animation:d105 16s linear infinite}
-@keyframes d106{0%,29.6%{opacity:0}31.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d106{animation:d106 16s linear infinite}
-@keyframes d107{0%,29.8%{opacity:0}32%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d107{animation:d107 16s linear infinite}
-@keyframes d108{0%,30.1%{opacity:0}32.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d108{animation:d108 16s linear infinite}
-@keyframes d109{0%,30.3%{opacity:0}32.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d109{animation:d109 16s linear infinite}
-@keyframes d110{0%,30.5%{opacity:0}32.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d110{animation:d110 16s linear infinite}
-@keyframes d111{0%,30.8%{opacity:0}33%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d111{animation:d111 16s linear infinite}
-@keyframes d112{0%,31%{opacity:0}33.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d112{animation:d112 16s linear infinite}
-@keyframes d113{0%,31.3%{opacity:0}33.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d113{animation:d113 16s linear infinite}
-@keyframes d114{0%,31.5%{opacity:0}33.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d114{animation:d114 16s linear infinite}
-@keyframes d115{0%,31.8%{opacity:0}34%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d115{animation:d115 16s linear infinite}
-@keyframes d116{0%,32%{opacity:0}34.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d116{animation:d116 16s linear infinite}
-@keyframes d117{0%,32.2%{opacity:0}34.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d117{animation:d117 16s linear infinite}
-@keyframes d118{0%,32.5%{opacity:0}34.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d118{animation:d118 16s linear infinite}
-@keyframes d119{0%,32.7%{opacity:0}34.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d119{animation:d119 16s linear infinite}
-@keyframes d120{0%,33%{opacity:0}35.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d120{animation:d120 16s linear infinite}
-@keyframes d121{0%,33.2%{opacity:0}35.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d121{animation:d121 16s linear infinite}
-@keyframes d122{0%,33.5%{opacity:0}35.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d122{animation:d122 16s linear infinite}
-@keyframes d123{0%,33.7%{opacity:0}35.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d123{animation:d123 16s linear infinite}
-@keyframes d124{0%,34%{opacity:0}36.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d124{animation:d124 16s linear infinite}
-@keyframes d125{0%,34.2%{opacity:0}36.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d125{animation:d125 16s linear infinite}
-@keyframes d126{0%,34.4%{opacity:0}36.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d126{animation:d126 16s linear infinite}
-@keyframes d127{0%,34.7%{opacity:0}36.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d127{animation:d127 16s linear infinite}
-@keyframes d128{0%,34.9%{opacity:0}37.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d128{animation:d128 16s linear infinite}
-@keyframes d129{0%,35.2%{opacity:0}37.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d129{animation:d129 16s linear infinite}
-@keyframes d130{0%,35.4%{opacity:0}37.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d130{animation:d130 16s linear infinite}
-@keyframes d131{0%,35.7%{opacity:0}37.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d131{animation:d131 16s linear infinite}
-@keyframes d132{0%,35.9%{opacity:0}38.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d132{animation:d132 16s linear infinite}
-@keyframes d133{0%,36.1%{opacity:0}38.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d133{animation:d133 16s linear infinite}
-@keyframes d134{0%,36.4%{opacity:0}38.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d134{animation:d134 16s linear infinite}
-@keyframes d135{0%,36.6%{opacity:0}38.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d135{animation:d135 16s linear infinite}
-@keyframes d136{0%,36.9%{opacity:0}39.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d136{animation:d136 16s linear infinite}
-@keyframes d137{0%,37.1%{opacity:0}39.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d137{animation:d137 16s linear infinite}
-@keyframes d138{0%,37.4%{opacity:0}39.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d138{animation:d138 16s linear infinite}
-@keyframes d139{0%,37.6%{opacity:0}39.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d139{animation:d139 16s linear infinite}
-@keyframes d140{0%,37.9%{opacity:0}40%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d140{animation:d140 16s linear infinite}
-@keyframes d141{0%,38.1%{opacity:0}40.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d141{animation:d141 16s linear infinite}
-@keyframes d142{0%,38.3%{opacity:0}40.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d142{animation:d142 16s linear infinite}
-@keyframes d143{0%,38.6%{opacity:0}40.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d143{animation:d143 16s linear infinite}
-@keyframes d144{0%,38.8%{opacity:0}41%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d144{animation:d144 16s linear infinite}
-@keyframes d145{0%,39.1%{opacity:0}41.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d145{animation:d145 16s linear infinite}
-@keyframes d146{0%,39.3%{opacity:0}41.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d146{animation:d146 16s linear infinite}
-@keyframes d147{0%,39.6%{opacity:0}41.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d147{animation:d147 16s linear infinite}
-@keyframes d148{0%,39.8%{opacity:0}42%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d148{animation:d148 16s linear infinite}
-@keyframes d149{0%,40%{opacity:0}42.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d149{animation:d149 16s linear infinite}
-@keyframes d150{0%,40.3%{opacity:0}42.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d150{animation:d150 16s linear infinite}
-@keyframes d151{0%,40.5%{opacity:0}42.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d151{animation:d151 16s linear infinite}
-@keyframes d152{0%,40.8%{opacity:0}43%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d152{animation:d152 16s linear infinite}
-@keyframes d153{0%,41%{opacity:0}43.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d153{animation:d153 16s linear infinite}
-@keyframes d154{0%,41.3%{opacity:0}43.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d154{animation:d154 16s linear infinite}
-@keyframes d155{0%,41.5%{opacity:0}43.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d155{animation:d155 16s linear infinite}
-@keyframes d156{0%,41.7%{opacity:0}43.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d156{animation:d156 16s linear infinite}
-@keyframes d157{0%,42%{opacity:0}44.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d157{animation:d157 16s linear infinite}
-@keyframes d158{0%,42.2%{opacity:0}44.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d158{animation:d158 16s linear infinite}
-@keyframes d159{0%,42.5%{opacity:0}44.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d159{animation:d159 16s linear infinite}
-@keyframes d160{0%,42.7%{opacity:0}44.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d160{animation:d160 16s linear infinite}
-@keyframes d161{0%,43%{opacity:0}45.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d161{animation:d161 16s linear infinite}
-@keyframes d162{0%,43.2%{opacity:0}45.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d162{animation:d162 16s linear infinite}
-@keyframes d163{0%,43.5%{opacity:0}45.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d163{animation:d163 16s linear infinite}
-@keyframes d164{0%,43.7%{opacity:0}45.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d164{animation:d164 16s linear infinite}
-@keyframes d165{0%,43.9%{opacity:0}46.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d165{animation:d165 16s linear infinite}
-@keyframes d166{0%,44.2%{opacity:0}46.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d166{animation:d166 16s linear infinite}
-@keyframes d167{0%,44.4%{opacity:0}46.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d167{animation:d167 16s linear infinite}
-@keyframes d168{0%,44.7%{opacity:0}46.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d168{animation:d168 16s linear infinite}
-@keyframes d169{0%,44.9%{opacity:0}47.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d169{animation:d169 16s linear infinite}
-@keyframes d170{0%,45.2%{opacity:0}47.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d170{animation:d170 16s linear infinite}
-@keyframes d171{0%,45.4%{opacity:0}47.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d171{animation:d171 16s linear infinite}
-@keyframes d172{0%,45.6%{opacity:0}47.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d172{animation:d172 16s linear infinite}
-@keyframes d173{0%,45.9%{opacity:0}48.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d173{animation:d173 16s linear infinite}
-@keyframes d174{0%,46.1%{opacity:0}48.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d174{animation:d174 16s linear infinite}
-@keyframes d175{0%,46.4%{opacity:0}48.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d175{animation:d175 16s linear infinite}
-@keyframes d176{0%,46.6%{opacity:0}48.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d176{animation:d176 16s linear infinite}
-@keyframes d177{0%,46.9%{opacity:0}49.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d177{animation:d177 16s linear infinite}
-@keyframes d178{0%,47.1%{opacity:0}49.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d178{animation:d178 16s linear infinite}
-@keyframes d179{0%,47.4%{opacity:0}49.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d179{animation:d179 16s linear infinite}
-@keyframes d180{0%,47.6%{opacity:0}49.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d180{animation:d180 16s linear infinite}
-@keyframes d181{0%,47.8%{opacity:0}50%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d181{animation:d181 16s linear infinite}
-@keyframes d182{0%,48.1%{opacity:0}50.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d182{animation:d182 16s linear infinite}
-@keyframes d183{0%,48.3%{opacity:0}50.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d183{animation:d183 16s linear infinite}
-@keyframes d184{0%,48.6%{opacity:0}50.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d184{animation:d184 16s linear infinite}
-@keyframes d185{0%,48.8%{opacity:0}51%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d185{animation:d185 16s linear infinite}
-@keyframes d186{0%,49.1%{opacity:0}51.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d186{animation:d186 16s linear infinite}
-@keyframes d187{0%,49.3%{opacity:0}51.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d187{animation:d187 16s linear infinite}
-@keyframes d188{0%,49.5%{opacity:0}51.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d188{animation:d188 16s linear infinite}
-@keyframes d189{0%,49.8%{opacity:0}52%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d189{animation:d189 16s linear infinite}
-@keyframes d190{0%,50%{opacity:0}52.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d190{animation:d190 16s linear infinite}
-@keyframes d191{0%,50.3%{opacity:0}52.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d191{animation:d191 16s linear infinite}
-@keyframes d192{0%,50.5%{opacity:0}52.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d192{animation:d192 16s linear infinite}
-@keyframes d193{0%,50.8%{opacity:0}53%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d193{animation:d193 16s linear infinite}
-@keyframes d194{0%,51%{opacity:0}53.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d194{animation:d194 16s linear infinite}
-@keyframes d195{0%,51.2%{opacity:0}53.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d195{animation:d195 16s linear infinite}
+@keyframes d3{0%,4.4%{opacity:0}6.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d3{animation:d3 16s linear infinite}
+@keyframes d4{0%,4.6%{opacity:0}6.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d4{animation:d4 16s linear infinite}
+@keyframes d5{0%,4.8%{opacity:0}7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d5{animation:d5 16s linear infinite}
+@keyframes d6{0%,5.1%{opacity:0}7.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d6{animation:d6 16s linear infinite}
+@keyframes d7{0%,5.3%{opacity:0}7.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d7{animation:d7 16s linear infinite}
+@keyframes d8{0%,5.5%{opacity:0}7.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d8{animation:d8 16s linear infinite}
+@keyframes d9{0%,5.7%{opacity:0}7.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d9{animation:d9 16s linear infinite}
+@keyframes d10{0%,5.9%{opacity:0}8.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d10{animation:d10 16s linear infinite}
+@keyframes d11{0%,6.2%{opacity:0}8.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d11{animation:d11 16s linear infinite}
+@keyframes d12{0%,6.4%{opacity:0}8.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d12{animation:d12 16s linear infinite}
+@keyframes d13{0%,6.6%{opacity:0}8.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d13{animation:d13 16s linear infinite}
+@keyframes d14{0%,6.8%{opacity:0}9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d14{animation:d14 16s linear infinite}
+@keyframes d15{0%,7%{opacity:0}9.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d15{animation:d15 16s linear infinite}
+@keyframes d16{0%,7.3%{opacity:0}9.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d16{animation:d16 16s linear infinite}
+@keyframes d17{0%,7.5%{opacity:0}9.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d17{animation:d17 16s linear infinite}
+@keyframes d18{0%,7.7%{opacity:0}9.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d18{animation:d18 16s linear infinite}
+@keyframes d19{0%,7.9%{opacity:0}10.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d19{animation:d19 16s linear infinite}
+@keyframes d20{0%,8.1%{opacity:0}10.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d20{animation:d20 16s linear infinite}
+@keyframes d21{0%,8.4%{opacity:0}10.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d21{animation:d21 16s linear infinite}
+@keyframes d22{0%,8.6%{opacity:0}10.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d22{animation:d22 16s linear infinite}
+@keyframes d23{0%,8.8%{opacity:0}11%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d23{animation:d23 16s linear infinite}
+@keyframes d24{0%,9%{opacity:0}11.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d24{animation:d24 16s linear infinite}
+@keyframes d25{0%,9.2%{opacity:0}11.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d25{animation:d25 16s linear infinite}
+@keyframes d26{0%,9.5%{opacity:0}11.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d26{animation:d26 16s linear infinite}
+@keyframes d27{0%,9.7%{opacity:0}11.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d27{animation:d27 16s linear infinite}
+@keyframes d28{0%,9.9%{opacity:0}12.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d28{animation:d28 16s linear infinite}
+@keyframes d29{0%,10.1%{opacity:0}12.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d29{animation:d29 16s linear infinite}
+@keyframes d30{0%,10.3%{opacity:0}12.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d30{animation:d30 16s linear infinite}
+@keyframes d31{0%,10.6%{opacity:0}12.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d31{animation:d31 16s linear infinite}
+@keyframes d32{0%,10.8%{opacity:0}13%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d32{animation:d32 16s linear infinite}
+@keyframes d33{0%,11%{opacity:0}13.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d33{animation:d33 16s linear infinite}
+@keyframes d34{0%,11.2%{opacity:0}13.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d34{animation:d34 16s linear infinite}
+@keyframes d35{0%,11.4%{opacity:0}13.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d35{animation:d35 16s linear infinite}
+@keyframes d36{0%,11.7%{opacity:0}13.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d36{animation:d36 16s linear infinite}
+@keyframes d37{0%,11.9%{opacity:0}14.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d37{animation:d37 16s linear infinite}
+@keyframes d38{0%,12.1%{opacity:0}14.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d38{animation:d38 16s linear infinite}
+@keyframes d39{0%,12.3%{opacity:0}14.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d39{animation:d39 16s linear infinite}
+@keyframes d40{0%,12.5%{opacity:0}14.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d40{animation:d40 16s linear infinite}
+@keyframes d41{0%,12.8%{opacity:0}15%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d41{animation:d41 16s linear infinite}
+@keyframes d42{0%,13%{opacity:0}15.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d42{animation:d42 16s linear infinite}
+@keyframes d43{0%,13.2%{opacity:0}15.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d43{animation:d43 16s linear infinite}
+@keyframes d44{0%,13.4%{opacity:0}15.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d44{animation:d44 16s linear infinite}
+@keyframes d45{0%,13.6%{opacity:0}15.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d45{animation:d45 16s linear infinite}
+@keyframes d46{0%,13.9%{opacity:0}16.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d46{animation:d46 16s linear infinite}
+@keyframes d47{0%,14.1%{opacity:0}16.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d47{animation:d47 16s linear infinite}
+@keyframes d48{0%,14.3%{opacity:0}16.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d48{animation:d48 16s linear infinite}
+@keyframes d49{0%,14.5%{opacity:0}16.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d49{animation:d49 16s linear infinite}
+@keyframes d50{0%,14.7%{opacity:0}16.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d50{animation:d50 16s linear infinite}
+@keyframes d51{0%,15%{opacity:0}17.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d51{animation:d51 16s linear infinite}
+@keyframes d52{0%,15.2%{opacity:0}17.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d52{animation:d52 16s linear infinite}
+@keyframes d53{0%,15.4%{opacity:0}17.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d53{animation:d53 16s linear infinite}
+@keyframes d54{0%,15.6%{opacity:0}17.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d54{animation:d54 16s linear infinite}
+@keyframes d55{0%,15.8%{opacity:0}18%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d55{animation:d55 16s linear infinite}
+@keyframes d56{0%,16.1%{opacity:0}18.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d56{animation:d56 16s linear infinite}
+@keyframes d57{0%,16.3%{opacity:0}18.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d57{animation:d57 16s linear infinite}
+@keyframes d58{0%,16.5%{opacity:0}18.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d58{animation:d58 16s linear infinite}
+@keyframes d59{0%,16.7%{opacity:0}18.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d59{animation:d59 16s linear infinite}
+@keyframes d60{0%,16.9%{opacity:0}19.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d60{animation:d60 16s linear infinite}
+@keyframes d61{0%,17.2%{opacity:0}19.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d61{animation:d61 16s linear infinite}
+@keyframes d62{0%,17.4%{opacity:0}19.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d62{animation:d62 16s linear infinite}
+@keyframes d63{0%,17.6%{opacity:0}19.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d63{animation:d63 16s linear infinite}
+@keyframes d64{0%,17.8%{opacity:0}20%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d64{animation:d64 16s linear infinite}
+@keyframes d65{0%,18%{opacity:0}20.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d65{animation:d65 16s linear infinite}
+@keyframes d66{0%,18.3%{opacity:0}20.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d66{animation:d66 16s linear infinite}
+@keyframes d67{0%,18.5%{opacity:0}20.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d67{animation:d67 16s linear infinite}
+@keyframes d68{0%,18.7%{opacity:0}20.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d68{animation:d68 16s linear infinite}
+@keyframes d69{0%,18.9%{opacity:0}21.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d69{animation:d69 16s linear infinite}
+@keyframes d70{0%,19.1%{opacity:0}21.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d70{animation:d70 16s linear infinite}
+@keyframes d71{0%,19.4%{opacity:0}21.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d71{animation:d71 16s linear infinite}
+@keyframes d72{0%,19.6%{opacity:0}21.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d72{animation:d72 16s linear infinite}
+@keyframes d73{0%,19.8%{opacity:0}22%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d73{animation:d73 16s linear infinite}
+@keyframes d74{0%,20%{opacity:0}22.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d74{animation:d74 16s linear infinite}
+@keyframes d75{0%,20.2%{opacity:0}22.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d75{animation:d75 16s linear infinite}
+@keyframes d76{0%,20.5%{opacity:0}22.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d76{animation:d76 16s linear infinite}
+@keyframes d77{0%,20.7%{opacity:0}22.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d77{animation:d77 16s linear infinite}
+@keyframes d78{0%,20.9%{opacity:0}23.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d78{animation:d78 16s linear infinite}
+@keyframes d79{0%,21.1%{opacity:0}23.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d79{animation:d79 16s linear infinite}
+@keyframes d80{0%,21.3%{opacity:0}23.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d80{animation:d80 16s linear infinite}
+@keyframes d81{0%,21.6%{opacity:0}23.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d81{animation:d81 16s linear infinite}
+@keyframes d82{0%,21.8%{opacity:0}24%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d82{animation:d82 16s linear infinite}
+@keyframes d83{0%,22%{opacity:0}24.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d83{animation:d83 16s linear infinite}
+@keyframes d84{0%,22.2%{opacity:0}24.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d84{animation:d84 16s linear infinite}
+@keyframes d85{0%,22.4%{opacity:0}24.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d85{animation:d85 16s linear infinite}
+@keyframes d86{0%,22.7%{opacity:0}24.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d86{animation:d86 16s linear infinite}
+@keyframes d87{0%,22.9%{opacity:0}25.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d87{animation:d87 16s linear infinite}
+@keyframes d88{0%,23.1%{opacity:0}25.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d88{animation:d88 16s linear infinite}
+@keyframes d89{0%,23.3%{opacity:0}25.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d89{animation:d89 16s linear infinite}
+@keyframes d90{0%,23.5%{opacity:0}25.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d90{animation:d90 16s linear infinite}
+@keyframes d91{0%,23.8%{opacity:0}25.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d91{animation:d91 16s linear infinite}
+@keyframes d92{0%,24%{opacity:0}26.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d92{animation:d92 16s linear infinite}
+@keyframes d93{0%,24.2%{opacity:0}26.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d93{animation:d93 16s linear infinite}
+@keyframes d94{0%,24.4%{opacity:0}26.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d94{animation:d94 16s linear infinite}
+@keyframes d95{0%,24.6%{opacity:0}26.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d95{animation:d95 16s linear infinite}
+@keyframes d96{0%,24.9%{opacity:0}27%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d96{animation:d96 16s linear infinite}
+@keyframes d97{0%,25.1%{opacity:0}27.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d97{animation:d97 16s linear infinite}
+@keyframes d98{0%,25.3%{opacity:0}27.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d98{animation:d98 16s linear infinite}
+@keyframes d99{0%,25.5%{opacity:0}27.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d99{animation:d99 16s linear infinite}
+@keyframes d100{0%,25.7%{opacity:0}27.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d100{animation:d100 16s linear infinite}
+@keyframes d101{0%,26%{opacity:0}28.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d101{animation:d101 16s linear infinite}
+@keyframes d102{0%,26.2%{opacity:0}28.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d102{animation:d102 16s linear infinite}
+@keyframes d103{0%,26.4%{opacity:0}28.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d103{animation:d103 16s linear infinite}
+@keyframes d104{0%,26.6%{opacity:0}28.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d104{animation:d104 16s linear infinite}
+@keyframes d105{0%,26.8%{opacity:0}29%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d105{animation:d105 16s linear infinite}
+@keyframes d106{0%,27.1%{opacity:0}29.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d106{animation:d106 16s linear infinite}
+@keyframes d107{0%,27.3%{opacity:0}29.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d107{animation:d107 16s linear infinite}
+@keyframes d108{0%,27.5%{opacity:0}29.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d108{animation:d108 16s linear infinite}
+@keyframes d109{0%,27.7%{opacity:0}29.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d109{animation:d109 16s linear infinite}
+@keyframes d110{0%,27.9%{opacity:0}30.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d110{animation:d110 16s linear infinite}
+@keyframes d111{0%,28.2%{opacity:0}30.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d111{animation:d111 16s linear infinite}
+@keyframes d112{0%,28.4%{opacity:0}30.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d112{animation:d112 16s linear infinite}
+@keyframes d113{0%,28.6%{opacity:0}30.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d113{animation:d113 16s linear infinite}
+@keyframes d114{0%,28.8%{opacity:0}31%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d114{animation:d114 16s linear infinite}
+@keyframes d115{0%,29%{opacity:0}31.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d115{animation:d115 16s linear infinite}
+@keyframes d116{0%,29.3%{opacity:0}31.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d116{animation:d116 16s linear infinite}
+@keyframes d117{0%,29.5%{opacity:0}31.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d117{animation:d117 16s linear infinite}
+@keyframes d118{0%,29.7%{opacity:0}31.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d118{animation:d118 16s linear infinite}
+@keyframes d119{0%,29.9%{opacity:0}32.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d119{animation:d119 16s linear infinite}
+@keyframes d120{0%,30.1%{opacity:0}32.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d120{animation:d120 16s linear infinite}
+@keyframes d121{0%,30.4%{opacity:0}32.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d121{animation:d121 16s linear infinite}
+@keyframes d122{0%,30.6%{opacity:0}32.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d122{animation:d122 16s linear infinite}
+@keyframes d123{0%,30.8%{opacity:0}33%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d123{animation:d123 16s linear infinite}
+@keyframes d124{0%,31%{opacity:0}33.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d124{animation:d124 16s linear infinite}
+@keyframes d125{0%,31.2%{opacity:0}33.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d125{animation:d125 16s linear infinite}
+@keyframes d126{0%,31.5%{opacity:0}33.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d126{animation:d126 16s linear infinite}
+@keyframes d127{0%,31.7%{opacity:0}33.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d127{animation:d127 16s linear infinite}
+@keyframes d128{0%,31.9%{opacity:0}34.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d128{animation:d128 16s linear infinite}
+@keyframes d129{0%,32.1%{opacity:0}34.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d129{animation:d129 16s linear infinite}
+@keyframes d130{0%,32.3%{opacity:0}34.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d130{animation:d130 16s linear infinite}
+@keyframes d131{0%,32.6%{opacity:0}34.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d131{animation:d131 16s linear infinite}
+@keyframes d132{0%,32.8%{opacity:0}35%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d132{animation:d132 16s linear infinite}
+@keyframes d133{0%,33%{opacity:0}35.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d133{animation:d133 16s linear infinite}
+@keyframes d134{0%,33.2%{opacity:0}35.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d134{animation:d134 16s linear infinite}
+@keyframes d135{0%,33.4%{opacity:0}35.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d135{animation:d135 16s linear infinite}
+@keyframes d136{0%,33.7%{opacity:0}35.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d136{animation:d136 16s linear infinite}
+@keyframes d137{0%,33.9%{opacity:0}36.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d137{animation:d137 16s linear infinite}
+@keyframes d138{0%,34.1%{opacity:0}36.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d138{animation:d138 16s linear infinite}
+@keyframes d139{0%,34.3%{opacity:0}36.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d139{animation:d139 16s linear infinite}
+@keyframes d140{0%,34.5%{opacity:0}36.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d140{animation:d140 16s linear infinite}
+@keyframes d141{0%,34.8%{opacity:0}36.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d141{animation:d141 16s linear infinite}
+@keyframes d142{0%,35%{opacity:0}37.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d142{animation:d142 16s linear infinite}
+@keyframes d143{0%,35.2%{opacity:0}37.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d143{animation:d143 16s linear infinite}
+@keyframes d144{0%,35.4%{opacity:0}37.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d144{animation:d144 16s linear infinite}
+@keyframes d145{0%,35.6%{opacity:0}37.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d145{animation:d145 16s linear infinite}
+@keyframes d146{0%,35.9%{opacity:0}38%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d146{animation:d146 16s linear infinite}
+@keyframes d147{0%,36.1%{opacity:0}38.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d147{animation:d147 16s linear infinite}
+@keyframes d148{0%,36.3%{opacity:0}38.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d148{animation:d148 16s linear infinite}
+@keyframes d149{0%,36.5%{opacity:0}38.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d149{animation:d149 16s linear infinite}
+@keyframes d150{0%,36.7%{opacity:0}38.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d150{animation:d150 16s linear infinite}
+@keyframes d151{0%,37%{opacity:0}39.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d151{animation:d151 16s linear infinite}
+@keyframes d152{0%,37.2%{opacity:0}39.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d152{animation:d152 16s linear infinite}
+@keyframes d153{0%,37.4%{opacity:0}39.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d153{animation:d153 16s linear infinite}
+@keyframes d154{0%,37.6%{opacity:0}39.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d154{animation:d154 16s linear infinite}
+@keyframes d155{0%,37.8%{opacity:0}40%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d155{animation:d155 16s linear infinite}
+@keyframes d156{0%,38.1%{opacity:0}40.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d156{animation:d156 16s linear infinite}
+@keyframes d157{0%,38.3%{opacity:0}40.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d157{animation:d157 16s linear infinite}
+@keyframes d158{0%,38.5%{opacity:0}40.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d158{animation:d158 16s linear infinite}
+@keyframes d159{0%,38.7%{opacity:0}40.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d159{animation:d159 16s linear infinite}
+@keyframes d160{0%,38.9%{opacity:0}41.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d160{animation:d160 16s linear infinite}
+@keyframes d161{0%,39.2%{opacity:0}41.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d161{animation:d161 16s linear infinite}
+@keyframes d162{0%,39.4%{opacity:0}41.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d162{animation:d162 16s linear infinite}
+@keyframes d163{0%,39.6%{opacity:0}41.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d163{animation:d163 16s linear infinite}
+@keyframes d164{0%,39.8%{opacity:0}42%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d164{animation:d164 16s linear infinite}
+@keyframes d165{0%,40%{opacity:0}42.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d165{animation:d165 16s linear infinite}
+@keyframes d166{0%,40.3%{opacity:0}42.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d166{animation:d166 16s linear infinite}
+@keyframes d167{0%,40.5%{opacity:0}42.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d167{animation:d167 16s linear infinite}
+@keyframes d168{0%,40.7%{opacity:0}42.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d168{animation:d168 16s linear infinite}
+@keyframes d169{0%,40.9%{opacity:0}43.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d169{animation:d169 16s linear infinite}
+@keyframes d170{0%,41.1%{opacity:0}43.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d170{animation:d170 16s linear infinite}
+@keyframes d171{0%,41.4%{opacity:0}43.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d171{animation:d171 16s linear infinite}
+@keyframes d172{0%,41.6%{opacity:0}43.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d172{animation:d172 16s linear infinite}
+@keyframes d173{0%,41.8%{opacity:0}44%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d173{animation:d173 16s linear infinite}
+@keyframes d174{0%,42%{opacity:0}44.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d174{animation:d174 16s linear infinite}
+@keyframes d175{0%,42.2%{opacity:0}44.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d175{animation:d175 16s linear infinite}
+@keyframes d176{0%,42.5%{opacity:0}44.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d176{animation:d176 16s linear infinite}
+@keyframes d177{0%,42.7%{opacity:0}44.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d177{animation:d177 16s linear infinite}
+@keyframes d178{0%,42.9%{opacity:0}45.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d178{animation:d178 16s linear infinite}
+@keyframes d179{0%,43.1%{opacity:0}45.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d179{animation:d179 16s linear infinite}
+@keyframes d180{0%,43.3%{opacity:0}45.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d180{animation:d180 16s linear infinite}
+@keyframes d181{0%,43.6%{opacity:0}45.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d181{animation:d181 16s linear infinite}
+@keyframes d182{0%,43.8%{opacity:0}46%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d182{animation:d182 16s linear infinite}
+@keyframes d183{0%,44%{opacity:0}46.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d183{animation:d183 16s linear infinite}
+@keyframes d184{0%,44.2%{opacity:0}46.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d184{animation:d184 16s linear infinite}
+@keyframes d185{0%,44.4%{opacity:0}46.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d185{animation:d185 16s linear infinite}
+@keyframes d186{0%,44.7%{opacity:0}46.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d186{animation:d186 16s linear infinite}
+@keyframes d187{0%,44.9%{opacity:0}47.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d187{animation:d187 16s linear infinite}
+@keyframes d188{0%,45.1%{opacity:0}47.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d188{animation:d188 16s linear infinite}
+@keyframes d189{0%,45.3%{opacity:0}47.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d189{animation:d189 16s linear infinite}
+@keyframes d190{0%,45.5%{opacity:0}47.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d190{animation:d190 16s linear infinite}
+@keyframes d191{0%,45.8%{opacity:0}47.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d191{animation:d191 16s linear infinite}
+@keyframes d192{0%,46%{opacity:0}48.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d192{animation:d192 16s linear infinite}
+@keyframes d193{0%,46.2%{opacity:0}48.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d193{animation:d193 16s linear infinite}
+@keyframes d194{0%,46.4%{opacity:0}48.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d194{animation:d194 16s linear infinite}
+@keyframes d195{0%,46.6%{opacity:0}48.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d195{animation:d195 16s linear infinite}
+@keyframes d196{0%,46.9%{opacity:0}49%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d196{animation:d196 16s linear infinite}
+@keyframes d197{0%,47.1%{opacity:0}49.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d197{animation:d197 16s linear infinite}
+@keyframes d198{0%,47.3%{opacity:0}49.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d198{animation:d198 16s linear infinite}
+@keyframes d199{0%,47.5%{opacity:0}49.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d199{animation:d199 16s linear infinite}
+@keyframes d200{0%,47.7%{opacity:0}49.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d200{animation:d200 16s linear infinite}
+@keyframes d201{0%,48%{opacity:0}50.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d201{animation:d201 16s linear infinite}
+@keyframes d202{0%,48.2%{opacity:0}50.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d202{animation:d202 16s linear infinite}
+@keyframes d203{0%,48.4%{opacity:0}50.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d203{animation:d203 16s linear infinite}
+@keyframes d204{0%,48.6%{opacity:0}50.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d204{animation:d204 16s linear infinite}
+@keyframes d205{0%,48.8%{opacity:0}51%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d205{animation:d205 16s linear infinite}
+@keyframes d206{0%,49.1%{opacity:0}51.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d206{animation:d206 16s linear infinite}
+@keyframes d207{0%,49.3%{opacity:0}51.5%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d207{animation:d207 16s linear infinite}
+@keyframes d208{0%,49.5%{opacity:0}51.7%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d208{animation:d208 16s linear infinite}
+@keyframes d209{0%,49.7%{opacity:0}51.9%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d209{animation:d209 16s linear infinite}
+@keyframes d210{0%,49.9%{opacity:0}52.1%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d210{animation:d210 16s linear infinite}
+@keyframes d211{0%,50.2%{opacity:0}52.3%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d211{animation:d211 16s linear infinite}
+@keyframes d212{0%,50.4%{opacity:0}52.6%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d212{animation:d212 16s linear infinite}
+@keyframes d213{0%,50.6%{opacity:0}52.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d213{animation:d213 16s linear infinite}
+@keyframes d214{0%,50.8%{opacity:0}53%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d214{animation:d214 16s linear infinite}
+@keyframes d215{0%,51%{opacity:0}53.2%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d215{animation:d215 16s linear infinite}
+@keyframes d216{0%,51.2%{opacity:0}53.4%,83.8%{opacity:1}88.8%,100%{opacity:0}}.d216{animation:d216 16s linear infinite}
 @keyframes call{0%,51.2%{opacity:0}53.8%,83.8%{opacity:1}88.8%,100%{opacity:0}}.call{animation:call 16s linear infinite}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
 <rect x="0" y="0" width="880" height="460" rx="0" fill="#292623"/>
@@ -210,414 +231,456 @@
 <text class="serif" x="44" y="240" font-size="17.5" fill="#c9c8bc">entry links its original source, gives its key</text>
 <text class="serif" x="44" y="265" font-size="17.5" fill="#c9c8bc">points, and separates what happened from what</text>
 <text class="serif" x="44" y="290" font-size="17.5" fill="#c9c8bc">the evidence shows.</text>
-<text class="mono" x="44" y="335" font-size="10" fill="#a9a79c">196 ENTRIES · 118 PUBLISHERS · MAR 2023 TO OCT 2026</text>
+<text class="mono" x="44" y="335" font-size="10" fill="#a9a79c">217 ENTRIES · 131 PUBLISHERS · MAR 2023 TO OCT 2026</text>
 <text class="mono" x="44" y="351" font-size="10" fill="#a9a79c">ONE DOT PER ENTRY · FARTHER OUT = NEWER</text>
 <text class="mono" x="44" y="367" font-size="10" fill="#a9a79c">A SELECTION · DENSITY SHOWS COVERAGE, NOT FREQUENCY</text>
-<circle cx="48" cy="396.5" r="4.2" fill="#a89a1a"/><text class="mono" x="58" y="400" font-size="10.5" fill="#f4f4e7">RESEARCH <tspan fill="#c9c8bc">38</tspan></text>
-<circle cx="218" cy="396.5" r="4.2" fill="#e5a700"/><text class="mono" x="228" y="400" font-size="10.5" fill="#f4f4e7">WARNINGS <tspan fill="#c9c8bc">47</tspan></text>
-<circle cx="48" cy="422.5" r="4.2" fill="#f4f4e7"/><text class="mono" x="58" y="426" font-size="10.5" fill="#f4f4e7">GOVERNANCE <tspan fill="#c9c8bc">55</tspan></text>
-<circle cx="218" cy="422.5" r="4.2" fill="#ff7733"/><text class="mono" x="228" y="426" font-size="10.5" fill="#f4f4e7">INCIDENTS <tspan fill="#c9c8bc">56</tspan></text>
+<circle cx="48" cy="396.5" r="4.2" fill="#a89a1a"/><text class="mono" x="58" y="400" font-size="10.5" fill="#f4f4e7">RESEARCH <tspan fill="#c9c8bc">47</tspan></text>
+<circle cx="218" cy="396.5" r="4.2" fill="#e5a700"/><text class="mono" x="228" y="400" font-size="10.5" fill="#f4f4e7">WARNINGS <tspan fill="#c9c8bc">49</tspan></text>
+<circle cx="48" cy="422.5" r="4.2" fill="#f4f4e7"/><text class="mono" x="58" y="426" font-size="10.5" fill="#f4f4e7">GOVERNANCE <tspan fill="#c9c8bc">63</tspan></text>
+<circle cx="218" cy="422.5" r="4.2" fill="#ff7733"/><text class="mono" x="228" y="426" font-size="10.5" fill="#f4f4e7">INCIDENTS <tspan fill="#c9c8bc">58</tspan></text>
 <circle cx="652" cy="222" r="45.4" fill="none" stroke="#6f6b64" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>
-<circle cx="652" cy="222" r="85.8" fill="none" stroke="#6f6b64" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>
-<circle cx="652" cy="222" r="126.1" fill="none" stroke="#6f6b64" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>
+<circle cx="652" cy="222" r="85.7" fill="none" stroke="#6f6b64" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>
+<circle cx="652" cy="222" r="125.9" fill="none" stroke="#6f6b64" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>
 <line class="d0" x1="652" y1="222" x2="661.9" y2="212.1" stroke="#5b5752" stroke-width=".8"/>
 <line class="d1" x1="652" y1="222" x2="658.5" y2="201.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d3" x1="652" y1="222" x2="705.5" y2="193.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d16" x1="652" y1="222" x2="719" y2="124.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d23" x1="652" y1="222" x2="778.5" y2="197.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d25" x1="652" y1="222" x2="762.1" y2="134.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d26" x1="652" y1="222" x2="710.2" y2="91.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d30" x1="652" y1="222" x2="790.6" y2="167.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d31" x1="652" y1="222" x2="749.8" y2="109.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d39" x1="652" y1="222" x2="687.8" y2="72.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d40" x1="652" y1="222" x2="782.3" y2="140.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d41" x1="652" y1="222" x2="730" y2="89.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d46" x1="652" y1="222" x2="800.9" y2="182.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d50" x1="652" y1="222" x2="765.9" y2="117.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d51" x1="652" y1="222" x2="704.8" y2="76.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d55" x1="652" y1="222" x2="791.7" y2="155.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d74" x1="652" y1="222" x2="745.5" y2="97.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d76" x1="652" y1="222" x2="677.6" y2="68.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d86" x1="652" y1="222" x2="778" y2="130.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d87" x1="652" y1="222" x2="721.4" y2="82.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d91" x1="652" y1="222" x2="799.4" y2="171.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d92" x1="652" y1="222" x2="759.3" y2="108.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d99" x1="652" y1="222" x2="694.9" y2="72" stroke="#5b5752" stroke-width=".8"/>
-<line class="d105" x1="652" y1="222" x2="787.8" y2="145" stroke="#5b5752" stroke-width=".8"/>
-<line class="d117" x1="652" y1="222" x2="737.2" y2="90.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d119" x1="652" y1="222" x2="804.9" y2="188" stroke="#5b5752" stroke-width=".8"/>
-<line class="d126" x1="652" y1="222" x2="772.1" y2="121.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d128" x1="652" y1="222" x2="711.9" y2="77" stroke="#5b5752" stroke-width=".8"/>
-<line class="d132" x1="652" y1="222" x2="796.5" y2="160.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d138" x1="652" y1="222" x2="751.8" y2="100.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d143" x1="652" y1="222" x2="684.5" y2="68.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d145" x1="652" y1="222" x2="783" y2="135.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d148" x1="652" y1="222" x2="728.2" y2="84.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d153" x1="652" y1="222" x2="803" y2="177.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d154" x1="652" y1="222" x2="765.2" y2="112.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d159" x1="652" y1="222" x2="701.9" y2="72.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d163" x1="652" y1="222" x2="792.4" y2="150.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d164" x1="652" y1="222" x2="743.4" y2="93.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d165" x1="652" y1="222" x2="807.2" y2="194.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d167" x1="652" y1="222" x2="777" y2="125.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d169" x1="652" y1="222" x2="718.5" y2="79" stroke="#5b5752" stroke-width=".8"/>
-<line class="d170" x1="652" y1="222" x2="799.6" y2="166.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d173" x1="652" y1="222" x2="757.4" y2="104.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d190" x1="652" y1="222" x2="691.4" y2="69.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d191" x1="652" y1="222" x2="787.2" y2="140.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d192" x1="652" y1="222" x2="734.3" y2="87.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d194" x1="652" y1="222" x2="805.3" y2="183.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d5" x1="652" y1="222" x2="721.9" y2="291.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d10" x1="652" y1="222" x2="754.1" y2="254.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d13" x1="652" y1="222" x2="704.6" y2="320.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d17" x1="652" y1="222" x2="750.8" y2="289.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d18" x1="652" y1="222" x2="675" y2="340.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d21" x1="652" y1="222" x2="730.5" y2="320.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d28" x1="652" y1="222" x2="787" y2="282.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d32" x1="652" y1="222" x2="706.7" y2="360.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d33" x1="652" y1="222" x2="765.1" y2="320.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d35" x1="652" y1="222" x2="800.1" y2="257.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d36" x1="652" y1="222" x2="732.7" y2="351.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d38" x1="652" y1="222" x2="784.1" y2="299.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d44" x1="652" y1="222" x2="691.9" y2="370.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d45" x1="652" y1="222" x2="756" y2="335.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d47" x1="652" y1="222" x2="797" y2="274.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d49" x1="652" y1="222" x2="718.6" y2="361.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d56" x1="652" y1="222" x2="775.7" y2="315.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d58" x1="652" y1="222" x2="804.7" y2="247.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d65" x1="652" y1="222" x2="743.3" y2="347.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d66" x1="652" y1="222" x2="791" y2="291.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d70" x1="652" y1="222" x2="702.7" y2="368.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d75" x1="652" y1="222" x2="764.8" y2="328.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d79" x1="652" y1="222" x2="801.6" y2="264.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d81" x1="652" y1="222" x2="728.7" y2="357.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d82" x1="652" y1="222" x2="782.5" y2="306.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d84" x1="652" y1="222" x2="685.8" y2="373.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d89" x1="652" y1="222" x2="752.3" y2="341.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d90" x1="652" y1="222" x2="796.1" y2="281.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d98" x1="652" y1="222" x2="713.1" y2="365.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d103" x1="652" y1="222" x2="772.5" y2="321.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d104" x1="652" y1="222" x2="804.7" y2="254.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d108" x1="652" y1="222" x2="738.3" y2="352.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d112" x1="652" y1="222" x2="788.8" y2="297.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d115" x1="652" y1="222" x2="696.5" y2="371.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d116" x1="652" y1="222" x2="760.7" y2="334.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d120" x1="652" y1="222" x2="800.6" y2="271.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d125" x1="652" y1="222" x2="723.4" y2="361.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d130" x1="652" y1="222" x2="779.8" y2="313" stroke="#5b5752" stroke-width=".8"/>
-<line class="d131" x1="652" y1="222" x2="679.4" y2="376.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d136" x1="652" y1="222" x2="747.8" y2="346.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d139" x1="652" y1="222" x2="794.5" y2="288.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d140" x1="652" y1="222" x2="707.2" y2="369.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d156" x1="652" y1="222" x2="769.2" y2="327.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d157" x1="652" y1="222" x2="804.6" y2="261.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d162" x1="652" y1="222" x2="733.4" y2="357.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d168" x1="652" y1="222" x2="786.5" y2="304.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d172" x1="652" y1="222" x2="690.3" y2="374.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d174" x1="652" y1="222" x2="756.7" y2="340" stroke="#5b5752" stroke-width=".8"/>
-<line class="d175" x1="652" y1="222" x2="799.4" y2="278.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d176" x1="652" y1="222" x2="717.6" y2="365.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d177" x1="652" y1="222" x2="776.5" y2="319" stroke="#5b5752" stroke-width=".8"/>
-<line class="d179" x1="652" y1="222" x2="807.2" y2="250.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d180" x1="652" y1="222" x2="742.7" y2="351.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d182" x1="652" y1="222" x2="792.2" y2="294.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d189" x1="652" y1="222" x2="701" y2="372.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d195" x1="652" y1="222" x2="764.9" y2="332.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d3" x1="652" y1="222" x2="705.4" y2="193.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d16" x1="652" y1="222" x2="718.9" y2="124.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d23" x1="652" y1="222" x2="778.3" y2="197.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d25" x1="652" y1="222" x2="761.9" y2="134.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d26" x1="652" y1="222" x2="710.1" y2="91.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d30" x1="652" y1="222" x2="790.4" y2="167.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d31" x1="652" y1="222" x2="749.6" y2="109.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d39" x1="652" y1="222" x2="687.7" y2="73" stroke="#5b5752" stroke-width=".8"/>
+<line class="d40" x1="652" y1="222" x2="782.1" y2="140.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d41" x1="652" y1="222" x2="729.9" y2="89.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d46" x1="652" y1="222" x2="800.7" y2="182.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d50" x1="652" y1="222" x2="765.8" y2="117.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d51" x1="652" y1="222" x2="704.7" y2="76.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d55" x1="652" y1="222" x2="791.5" y2="155.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d74" x1="652" y1="222" x2="745.3" y2="98.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d75" x1="652" y1="222" x2="677.6" y2="68.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d77" x1="652" y1="222" x2="777.6" y2="130.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d90" x1="652" y1="222" x2="721.3" y2="82.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d91" x1="652" y1="222" x2="799.1" y2="171.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d95" x1="652" y1="222" x2="759.1" y2="109" stroke="#5b5752" stroke-width=".8"/>
+<line class="d96" x1="652" y1="222" x2="694.8" y2="72.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d104" x1="652" y1="222" x2="787.6" y2="145.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d110" x1="652" y1="222" x2="736.8" y2="91.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d124" x1="652" y1="222" x2="804.6" y2="188.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d126" x1="652" y1="222" x2="771.8" y2="121.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d129" x1="652" y1="222" x2="711.8" y2="77.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d135" x1="652" y1="222" x2="796.2" y2="160.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d137" x1="652" y1="222" x2="751.6" y2="101" stroke="#5b5752" stroke-width=".8"/>
+<line class="d141" x1="652" y1="222" x2="684.5" y2="68.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d147" x1="652" y1="222" x2="782.8" y2="135.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d152" x1="652" y1="222" x2="727.9" y2="84.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d155" x1="652" y1="222" x2="802.5" y2="177.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d159" x1="652" y1="222" x2="765" y2="112.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d164" x1="652" y1="222" x2="701.8" y2="72.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d165" x1="652" y1="222" x2="792.1" y2="150.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d170" x1="652" y1="222" x2="743.2" y2="93.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d175" x1="652" y1="222" x2="807" y2="194.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d176" x1="652" y1="222" x2="776.8" y2="126" stroke="#5b5752" stroke-width=".8"/>
+<line class="d177" x1="652" y1="222" x2="718.4" y2="79.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d179" x1="652" y1="222" x2="799.4" y2="166.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d181" x1="652" y1="222" x2="757.2" y2="104.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d182" x1="652" y1="222" x2="691.2" y2="69.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d185" x1="652" y1="222" x2="787" y2="140.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d205" x1="652" y1="222" x2="734.2" y2="87.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d206" x1="652" y1="222" x2="804.9" y2="183.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d207" x1="652" y1="222" x2="770" y2="117.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d211" x1="652" y1="222" x2="708.4" y2="74.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d5" x1="652" y1="222" x2="721.8" y2="291.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d10" x1="652" y1="222" x2="753.9" y2="254.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d13" x1="652" y1="222" x2="704.5" y2="320.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d17" x1="652" y1="222" x2="750.7" y2="289.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d18" x1="652" y1="222" x2="675" y2="340.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d21" x1="652" y1="222" x2="730.3" y2="320.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d28" x1="652" y1="222" x2="786.8" y2="282" stroke="#5b5752" stroke-width=".8"/>
+<line class="d32" x1="652" y1="222" x2="706.7" y2="360.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d33" x1="652" y1="222" x2="764.9" y2="320.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d35" x1="652" y1="222" x2="799.9" y2="257.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d36" x1="652" y1="222" x2="732.6" y2="350.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d38" x1="652" y1="222" x2="783.9" y2="299.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d44" x1="652" y1="222" x2="691.8" y2="370.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d45" x1="652" y1="222" x2="755.9" y2="335.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d47" x1="652" y1="222" x2="796.8" y2="274.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d49" x1="652" y1="222" x2="718.5" y2="361.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d56" x1="652" y1="222" x2="775.5" y2="315" stroke="#5b5752" stroke-width=".8"/>
+<line class="d58" x1="652" y1="222" x2="804.5" y2="247.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d65" x1="652" y1="222" x2="743.2" y2="347.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d66" x1="652" y1="222" x2="790.8" y2="291.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d70" x1="652" y1="222" x2="702.6" y2="368.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d76" x1="652" y1="222" x2="764.7" y2="328.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d83" x1="652" y1="222" x2="801.4" y2="264.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d85" x1="652" y1="222" x2="728.6" y2="357.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d86" x1="652" y1="222" x2="782.3" y2="306.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d88" x1="652" y1="222" x2="685.7" y2="373.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d93" x1="652" y1="222" x2="752.2" y2="341.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d94" x1="652" y1="222" x2="795.9" y2="281.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d103" x1="652" y1="222" x2="713" y2="365.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d108" x1="652" y1="222" x2="772.4" y2="321.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d109" x1="652" y1="222" x2="804.5" y2="254.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d114" x1="652" y1="222" x2="738.2" y2="352" stroke="#5b5752" stroke-width=".8"/>
+<line class="d118" x1="652" y1="222" x2="788.6" y2="297.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d121" x1="652" y1="222" x2="696.5" y2="371.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d122" x1="652" y1="222" x2="760.6" y2="334.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d127" x1="652" y1="222" x2="800.4" y2="271.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d134" x1="652" y1="222" x2="723.3" y2="361.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d139" x1="652" y1="222" x2="779.6" y2="312.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d140" x1="652" y1="222" x2="679.4" y2="376.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d145" x1="652" y1="222" x2="747.6" y2="346.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d148" x1="652" y1="222" x2="794.3" y2="288.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d149" x1="652" y1="222" x2="707.1" y2="368.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d167" x1="652" y1="222" x2="769" y2="327.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d168" x1="652" y1="222" x2="804.4" y2="261.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d174" x1="652" y1="222" x2="733.3" y2="356.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d180" x1="652" y1="222" x2="786.3" y2="304.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d184" x1="652" y1="222" x2="690.3" y2="374.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d186" x1="652" y1="222" x2="756.6" y2="339.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d187" x1="652" y1="222" x2="799.2" y2="278.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d188" x1="652" y1="222" x2="717.5" y2="365.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d189" x1="652" y1="222" x2="776.3" y2="318.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d191" x1="652" y1="222" x2="807" y2="250.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d192" x1="652" y1="222" x2="742.6" y2="350.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d197" x1="652" y1="222" x2="792" y2="294.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d204" x1="652" y1="222" x2="700.9" y2="371.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d212" x1="652" y1="222" x2="764.7" y2="332.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d213" x1="652" y1="222" x2="803.1" y2="267.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d216" x1="652" y1="222" x2="727.6" y2="360.7" stroke="#5b5752" stroke-width=".8"/>
 <line class="d2" x1="652" y1="222" x2="624.6" y2="249.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d6" x1="652" y1="222" x2="621.5" y2="318.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d9" x1="652" y1="222" x2="558.6" y2="271.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d11" x1="652" y1="222" x2="591.3" y2="310.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d12" x1="652" y1="222" x2="544.2" y2="243" stroke="#5b5752" stroke-width=".8"/>
-<line class="d20" x1="652" y1="222" x2="555.1" y2="299.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d22" x1="652" y1="222" x2="600.2" y2="338.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d24" x1="652" y1="222" x2="522.4" y2="273.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d29" x1="652" y1="222" x2="555" y2="333.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d34" x1="652" y1="222" x2="616.7" y2="369.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d43" x1="652" y1="222" x2="521.7" y2="303.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d52" x1="652" y1="222" x2="573.5" y2="355.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d57" x1="652" y1="222" x2="502.5" y2="262.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d60" x1="652" y1="222" x2="537.9" y2="326.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d61" x1="652" y1="222" x2="599" y2="367.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d67" x1="652" y1="222" x2="511.9" y2="288.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d68" x1="652" y1="222" x2="558.6" y2="346.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d71" x1="652" y1="222" x2="626.4" y2="375.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d72" x1="652" y1="222" x2="526.4" y2="313.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d73" x1="652" y1="222" x2="582.8" y2="361.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d80" x1="652" y1="222" x2="504.9" y2="272.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d83" x1="652" y1="222" x2="545" y2="334.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d93" x1="652" y1="222" x2="609.1" y2="371.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d94" x1="652" y1="222" x2="516.4" y2="298.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d96" x1="652" y1="222" x2="567.1" y2="352.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d97" x1="652" y1="222" x2="499.7" y2="255.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d100" x1="652" y1="222" x2="532.5" y2="322.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d102" x1="652" y1="222" x2="592.4" y2="366.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d106" x1="652" y1="222" x2="508.2" y2="283.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d107" x1="652" y1="222" x2="552.7" y2="342.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d109" x1="652" y1="222" x2="619.6" y2="374.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d113" x1="652" y1="222" x2="521.7" y2="308.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d118" x1="652" y1="222" x2="576.2" y2="359.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d121" x1="652" y1="222" x2="501.8" y2="266.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d123" x1="652" y1="222" x2="539.3" y2="331" stroke="#5b5752" stroke-width=".8"/>
-<line class="d127" x1="652" y1="222" x2="602.4" y2="370.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d134" x1="652" y1="222" x2="512.2" y2="293.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d137" x1="652" y1="222" x2="560.9" y2="350" stroke="#5b5752" stroke-width=".8"/>
-<line class="d141" x1="652" y1="222" x2="497.3" y2="249.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d142" x1="652" y1="222" x2="527.5" y2="317.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d147" x1="652" y1="222" x2="585.6" y2="364.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d149" x1="652" y1="222" x2="504.6" y2="277.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d150" x1="652" y1="222" x2="546.8" y2="339.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d155" x1="652" y1="222" x2="612.7" y2="374.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d158" x1="652" y1="222" x2="517" y2="303.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d160" x1="652" y1="222" x2="569.8" y2="356.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d161" x1="652" y1="222" x2="499.2" y2="260.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d166" x1="652" y1="222" x2="534" y2="326.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d171" x1="652" y1="222" x2="595.7" y2="369.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d181" x1="652" y1="222" x2="508.5" y2="287.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d183" x1="652" y1="222" x2="555" y2="346.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d184" x1="652" y1="222" x2="623.4" y2="377.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d185" x1="652" y1="222" x2="522.8" y2="312.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d186" x1="652" y1="222" x2="579.3" y2="362.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d193" x1="652" y1="222" x2="501.9" y2="271" stroke="#5b5752" stroke-width=".8"/>
-<line class="d4" x1="652" y1="222" x2="585.7" y2="155.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d7" x1="652" y1="222" x2="553.1" y2="190.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d8" x1="652" y1="222" x2="602.9" y2="129.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d14" x1="652" y1="222" x2="558.1" y2="157.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d15" x1="652" y1="222" x2="630.1" y2="109.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d19" x1="652" y1="222" x2="576.3" y2="126.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d27" x1="652" y1="222" x2="521.3" y2="163.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d37" x1="652" y1="222" x2="595.8" y2="79.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d42" x1="652" y1="222" x2="536" y2="121.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d48" x1="652" y1="222" x2="501.9" y2="186" stroke="#5b5752" stroke-width=".8"/>
-<line class="d53" x1="652" y1="222" x2="570" y2="90.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d54" x1="652" y1="222" x2="518.7" y2="143.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d59" x1="652" y1="222" x2="611.9" y2="72.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d62" x1="652" y1="222" x2="547.2" y2="107.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d63" x1="652" y1="222" x2="506.2" y2="169" stroke="#5b5752" stroke-width=".8"/>
-<line class="d64" x1="652" y1="222" x2="585.1" y2="81.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d69" x1="652" y1="222" x2="527.9" y2="128.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d77" x1="652" y1="222" x2="498.7" y2="196.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d78" x1="652" y1="222" x2="560.6" y2="96.3" stroke="#5b5752" stroke-width=".8"/>
-<line class="d85" x1="652" y1="222" x2="512.7" y2="152.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d88" x1="652" y1="222" x2="601.2" y2="74.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d95" x1="652" y1="222" x2="538.8" y2="114.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d101" x1="652" y1="222" x2="501.9" y2="179.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d110" x1="652" y1="222" x2="575" y2="86.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d111" x1="652" y1="222" x2="520.9" y2="137" stroke="#5b5752" stroke-width=".8"/>
-<line class="d114" x1="652" y1="222" x2="618.1" y2="69.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d122" x1="652" y1="222" x2="551.1" y2="102" stroke="#5b5752" stroke-width=".8"/>
-<line class="d124" x1="652" y1="222" x2="507" y2="162.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d129" x1="652" y1="222" x2="590.6" y2="77.6" stroke="#5b5752" stroke-width=".8"/>
-<line class="d133" x1="652" y1="222" x2="530.8" y2="122.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d135" x1="652" y1="222" x2="498.4" y2="189.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d144" x1="652" y1="222" x2="565.2" y2="91.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d146" x1="652" y1="222" x2="514.2" y2="145.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d151" x1="652" y1="222" x2="607.1" y2="71.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d152" x1="652" y1="222" x2="542.4" y2="108.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d178" x1="652" y1="222" x2="502.3" y2="172.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d187" x1="652" y1="222" x2="580.2" y2="81.4" stroke="#5b5752" stroke-width=".8"/>
-<line class="d188" x1="652" y1="222" x2="523.4" y2="130.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d6" x1="652" y1="222" x2="621.6" y2="318.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d9" x1="652" y1="222" x2="558.7" y2="271.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d11" x1="652" y1="222" x2="591.3" y2="310.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d12" x1="652" y1="222" x2="544.4" y2="242.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d20" x1="652" y1="222" x2="555.3" y2="299" stroke="#5b5752" stroke-width=".8"/>
+<line class="d22" x1="652" y1="222" x2="600.3" y2="338.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d24" x1="652" y1="222" x2="522.5" y2="273" stroke="#5b5752" stroke-width=".8"/>
+<line class="d29" x1="652" y1="222" x2="555.2" y2="333.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d34" x1="652" y1="222" x2="616.7" y2="369" stroke="#5b5752" stroke-width=".8"/>
+<line class="d43" x1="652" y1="222" x2="521.9" y2="303.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d52" x1="652" y1="222" x2="573.6" y2="355.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d57" x1="652" y1="222" x2="502.7" y2="262.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d60" x1="652" y1="222" x2="538.1" y2="326.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d61" x1="652" y1="222" x2="599.1" y2="367.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d67" x1="652" y1="222" x2="512.1" y2="288.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d68" x1="652" y1="222" x2="558.7" y2="345.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d71" x1="652" y1="222" x2="626.5" y2="375" stroke="#5b5752" stroke-width=".8"/>
+<line class="d72" x1="652" y1="222" x2="526.5" y2="313.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d73" x1="652" y1="222" x2="582.9" y2="360.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d80" x1="652" y1="222" x2="505.2" y2="272.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d81" x1="652" y1="222" x2="545.2" y2="334.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d82" x1="652" y1="222" x2="609.3" y2="371.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d84" x1="652" y1="222" x2="516.8" y2="298.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d87" x1="652" y1="222" x2="567.5" y2="352.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d97" x1="652" y1="222" x2="500" y2="255.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d98" x1="652" y1="222" x2="532.8" y2="322.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d99" x1="652" y1="222" x2="592.5" y2="365.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d101" x1="652" y1="222" x2="508.6" y2="283" stroke="#5b5752" stroke-width=".8"/>
+<line class="d102" x1="652" y1="222" x2="553" y2="342.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d105" x1="652" y1="222" x2="619.7" y2="374.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d107" x1="652" y1="222" x2="522.1" y2="308.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d112" x1="652" y1="222" x2="576.5" y2="358.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d113" x1="652" y1="222" x2="502.4" y2="266.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d115" x1="652" y1="222" x2="539.9" y2="330.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d119" x1="652" y1="222" x2="602.6" y2="370.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d125" x1="652" y1="222" x2="512.7" y2="293.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d128" x1="652" y1="222" x2="561.3" y2="349.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d131" x1="652" y1="222" x2="497.8" y2="249.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d132" x1="652" y1="222" x2="527.9" y2="317.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d136" x1="652" y1="222" x2="585.9" y2="364.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d143" x1="652" y1="222" x2="505.2" y2="277.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d146" x1="652" y1="222" x2="547.1" y2="338.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d150" x1="652" y1="222" x2="612.9" y2="373.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d151" x1="652" y1="222" x2="517.6" y2="303" stroke="#5b5752" stroke-width=".8"/>
+<line class="d158" x1="652" y1="222" x2="570" y2="356.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d160" x1="652" y1="222" x2="499.5" y2="260.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d161" x1="652" y1="222" x2="534.4" y2="326.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d166" x1="652" y1="222" x2="595.8" y2="369" stroke="#5b5752" stroke-width=".8"/>
+<line class="d169" x1="652" y1="222" x2="508.9" y2="287.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d171" x1="652" y1="222" x2="555.3" y2="346.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d172" x1="652" y1="222" x2="623.5" y2="376.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d173" x1="652" y1="222" x2="523.2" y2="312.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d178" x1="652" y1="222" x2="579.5" y2="361.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d183" x1="652" y1="222" x2="502.3" y2="270.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d193" x1="652" y1="222" x2="541.7" y2="334.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d198" x1="652" y1="222" x2="606.1" y2="372.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d199" x1="652" y1="222" x2="513.6" y2="297.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d200" x1="652" y1="222" x2="564" y2="352.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d201" x1="652" y1="222" x2="497.5" y2="253.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d208" x1="652" y1="222" x2="529.6" y2="321.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d214" x1="652" y1="222" x2="589.2" y2="367" stroke="#5b5752" stroke-width=".8"/>
+<line class="d215" x1="652" y1="222" x2="505.6" y2="281.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d4" x1="652" y1="222" x2="585.8" y2="155.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d7" x1="652" y1="222" x2="553.2" y2="190.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d8" x1="652" y1="222" x2="603" y2="129.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d14" x1="652" y1="222" x2="558.2" y2="157.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d15" x1="652" y1="222" x2="630.1" y2="109.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d19" x1="652" y1="222" x2="576.4" y2="127" stroke="#5b5752" stroke-width=".8"/>
+<line class="d27" x1="652" y1="222" x2="521.4" y2="163.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d37" x1="652" y1="222" x2="595.9" y2="79.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d42" x1="652" y1="222" x2="536.1" y2="121.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d48" x1="652" y1="222" x2="502.1" y2="186.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d53" x1="652" y1="222" x2="570.1" y2="91" stroke="#5b5752" stroke-width=".8"/>
+<line class="d54" x1="652" y1="222" x2="518.9" y2="143.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d59" x1="652" y1="222" x2="611.9" y2="72.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d62" x1="652" y1="222" x2="547.3" y2="107.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d63" x1="652" y1="222" x2="506.4" y2="169.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d64" x1="652" y1="222" x2="585.2" y2="82.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d69" x1="652" y1="222" x2="528.1" y2="128.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d78" x1="652" y1="222" x2="498.9" y2="196.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d79" x1="652" y1="222" x2="560.7" y2="96.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d89" x1="652" y1="222" x2="512.9" y2="152.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d92" x1="652" y1="222" x2="601.2" y2="74.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d100" x1="652" y1="222" x2="538.9" y2="114.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d106" x1="652" y1="222" x2="502.1" y2="179.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d111" x1="652" y1="222" x2="575.1" y2="86.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d116" x1="652" y1="222" x2="521.1" y2="137.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d117" x1="652" y1="222" x2="618.1" y2="69.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d120" x1="652" y1="222" x2="551.6" y2="102.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d123" x1="652" y1="222" x2="507.7" y2="162.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d130" x1="652" y1="222" x2="590.7" y2="77.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d133" x1="652" y1="222" x2="531" y2="122.4" stroke="#5b5752" stroke-width=".8"/>
+<line class="d138" x1="652" y1="222" x2="498.7" y2="189.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d142" x1="652" y1="222" x2="565.4" y2="91.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d144" x1="652" y1="222" x2="514.8" y2="146.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d153" x1="652" y1="222" x2="607.3" y2="71.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d154" x1="652" y1="222" x2="542.9" y2="109.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d156" x1="652" y1="222" x2="503" y2="172.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d157" x1="652" y1="222" x2="580.5" y2="82" stroke="#5b5752" stroke-width=".8"/>
+<line class="d162" x1="652" y1="222" x2="523.9" y2="130.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d163" x1="652" y1="222" x2="624.5" y2="67.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d190" x1="652" y1="222" x2="556" y2="97.1" stroke="#5b5752" stroke-width=".8"/>
+<line class="d194" x1="652" y1="222" x2="509.1" y2="155.6" stroke="#5b5752" stroke-width=".8"/>
+<line class="d195" x1="652" y1="222" x2="596.7" y2="74.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d196" x1="652" y1="222" x2="534.8" y2="116.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d202" x1="652" y1="222" x2="499.3" y2="182.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d203" x1="652" y1="222" x2="570.6" y2="86.9" stroke="#5b5752" stroke-width=".8"/>
+<line class="d209" x1="652" y1="222" x2="517.5" y2="139.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d210" x1="652" y1="222" x2="613.7" y2="69.1" stroke="#5b5752" stroke-width=".8"/>
 <circle class="d0" data-cat="Warnings" cx="661.9" cy="212.1" r="4.2" fill="#e5a700"/>
 <circle class="d1" data-cat="Warnings" cx="658.5" cy="201.4" r="4.2" fill="#e5a700"/>
-<circle class="d3" data-cat="Warnings" cx="705.5" cy="193.6" r="4.2" fill="#e5a700"/>
-<circle class="d16" data-cat="Warnings" cx="719" cy="124.5" r="4.2" fill="#e5a700"/>
-<circle class="d23" data-cat="Warnings" cx="778.5" cy="197.4" r="4.2" fill="#e5a700"/>
-<circle class="d25" data-cat="Warnings" cx="762.1" cy="134.4" r="4.2" fill="#e5a700"/>
-<circle class="d26" data-cat="Warnings" cx="710.2" cy="91.3" r="4.2" fill="#e5a700"/>
-<circle class="d30" data-cat="Warnings" cx="790.6" cy="167.4" r="4.2" fill="#e5a700"/>
-<circle class="d31" data-cat="Warnings" cx="749.8" cy="109.5" r="4.2" fill="#e5a700"/>
-<circle class="d39" data-cat="Warnings" cx="687.8" cy="72.8" r="4.2" fill="#e5a700"/>
-<circle class="d40" data-cat="Warnings" cx="782.3" cy="140.5" r="4.2" fill="#e5a700"/>
-<circle class="d41" data-cat="Warnings" cx="730" cy="89.5" r="4.2" fill="#e5a700"/>
-<circle class="d46" data-cat="Warnings" cx="800.9" cy="182.1" r="4.2" fill="#e5a700"/>
-<circle class="d50" data-cat="Warnings" cx="765.9" cy="117.5" r="4.2" fill="#e5a700"/>
-<circle class="d51" data-cat="Warnings" cx="704.8" cy="76.7" r="4.2" fill="#e5a700"/>
-<circle class="d55" data-cat="Warnings" cx="791.7" cy="155.3" r="4.2" fill="#e5a700"/>
-<circle class="d74" data-cat="Warnings" cx="745.5" cy="97.8" r="4.2" fill="#e5a700"/>
-<circle class="d76" data-cat="Warnings" cx="677.6" cy="68.7" r="4.2" fill="#e5a700"/>
-<circle class="d86" data-cat="Warnings" cx="778" cy="130.4" r="4.2" fill="#e5a700"/>
-<circle class="d87" data-cat="Warnings" cx="721.4" cy="82.5" r="4.2" fill="#e5a700"/>
-<circle class="d91" data-cat="Warnings" cx="799.4" cy="171.2" r="4.2" fill="#e5a700"/>
-<circle class="d92" data-cat="Warnings" cx="759.3" cy="108.9" r="4.2" fill="#e5a700"/>
-<circle class="d99" data-cat="Warnings" cx="694.9" cy="72" r="4.2" fill="#e5a700"/>
-<circle class="d105" data-cat="Warnings" cx="787.8" cy="145" r="4.2" fill="#e5a700"/>
-<circle class="d117" data-cat="Warnings" cx="737.2" cy="90.6" r="4.2" fill="#e5a700"/>
-<circle class="d119" data-cat="Warnings" cx="804.9" cy="188" r="4.2" fill="#e5a700"/>
-<circle class="d126" data-cat="Warnings" cx="772.1" cy="121.1" r="4.2" fill="#e5a700"/>
-<circle class="d128" data-cat="Warnings" cx="711.9" cy="77" r="4.2" fill="#e5a700"/>
-<circle class="d132" data-cat="Warnings" cx="796.5" cy="160.5" r="4.2" fill="#e5a700"/>
-<circle class="d138" data-cat="Warnings" cx="751.8" cy="100.7" r="4.2" fill="#e5a700"/>
-<circle class="d143" data-cat="Warnings" cx="684.5" cy="68.3" r="4.2" fill="#e5a700"/>
-<circle class="d145" data-cat="Warnings" cx="783" cy="135.1" r="4.2" fill="#e5a700"/>
-<circle class="d148" data-cat="Warnings" cx="728.2" cy="84.2" r="4.2" fill="#e5a700"/>
-<circle class="d153" data-cat="Warnings" cx="803" cy="177.1" r="4.2" fill="#e5a700"/>
-<circle class="d154" data-cat="Warnings" cx="765.2" cy="112.4" r="4.2" fill="#e5a700"/>
-<circle class="d159" data-cat="Warnings" cx="701.9" cy="72.5" r="4.2" fill="#e5a700"/>
-<circle class="d163" data-cat="Warnings" cx="792.4" cy="150.3" r="4.2" fill="#e5a700"/>
-<circle class="d164" data-cat="Warnings" cx="743.4" cy="93.5" r="4.2" fill="#e5a700"/>
-<circle class="d165" data-cat="Warnings" cx="807.2" cy="194.5" r="4.2" fill="#e5a700"/>
-<circle class="d167" data-cat="Warnings" cx="777" cy="125.9" r="4.2" fill="#e5a700"/>
-<circle class="d169" data-cat="Warnings" cx="718.5" cy="79" r="4.2" fill="#e5a700"/>
-<circle class="d170" data-cat="Warnings" cx="799.6" cy="166.6" r="4.2" fill="#e5a700"/>
-<circle class="d173" data-cat="Warnings" cx="757.4" cy="104.6" r="4.2" fill="#e5a700"/>
-<circle class="d190" data-cat="Warnings" cx="691.4" cy="69.1" r="4.2" fill="#e5a700"/>
-<circle class="d191" data-cat="Warnings" cx="787.2" cy="140.5" r="4.2" fill="#e5a700"/>
-<circle class="d192" data-cat="Warnings" cx="734.3" cy="87.3" r="4.2" fill="#e5a700"/>
-<circle class="d194" data-cat="Warnings" cx="805.3" cy="183.6" r="4.2" fill="#e5a700"/>
-<circle class="d5" data-cat="Incidents" cx="721.9" cy="291.9" r="4.2" fill="#ff7733"/>
-<circle class="d10" data-cat="Incidents" cx="754.1" cy="254.2" r="4.2" fill="#ff7733"/>
-<circle class="d13" data-cat="Incidents" cx="704.6" cy="320.9" r="4.2" fill="#ff7733"/>
-<circle class="d17" data-cat="Incidents" cx="750.8" cy="289.9" r="4.2" fill="#ff7733"/>
-<circle class="d18" data-cat="Incidents" cx="675" cy="340.5" r="4.2" fill="#ff7733"/>
-<circle class="d21" data-cat="Incidents" cx="730.5" cy="320.6" r="4.2" fill="#ff7733"/>
-<circle class="d28" data-cat="Incidents" cx="787" cy="282.1" r="4.2" fill="#ff7733"/>
-<circle class="d32" data-cat="Incidents" cx="706.7" cy="360.9" r="4.2" fill="#ff7733"/>
-<circle class="d33" data-cat="Incidents" cx="765.1" cy="320.3" r="4.2" fill="#ff7733"/>
-<circle class="d35" data-cat="Incidents" cx="800.1" cy="257.5" r="4.2" fill="#ff7733"/>
-<circle class="d36" data-cat="Incidents" cx="732.7" cy="351.1" r="4.2" fill="#ff7733"/>
-<circle class="d38" data-cat="Incidents" cx="784.1" cy="299.7" r="4.2" fill="#ff7733"/>
-<circle class="d44" data-cat="Incidents" cx="691.9" cy="370.6" r="4.2" fill="#ff7733"/>
-<circle class="d45" data-cat="Incidents" cx="756" cy="335.4" r="4.2" fill="#ff7733"/>
-<circle class="d47" data-cat="Incidents" cx="797" cy="274.7" r="4.2" fill="#ff7733"/>
-<circle class="d49" data-cat="Incidents" cx="718.6" cy="361.5" r="4.2" fill="#ff7733"/>
-<circle class="d56" data-cat="Incidents" cx="775.7" cy="315.1" r="4.2" fill="#ff7733"/>
-<circle class="d58" data-cat="Incidents" cx="804.7" cy="247.5" r="4.2" fill="#ff7733"/>
-<circle class="d65" data-cat="Incidents" cx="743.3" cy="347.5" r="4.2" fill="#ff7733"/>
-<circle class="d66" data-cat="Incidents" cx="791" cy="291.2" r="4.2" fill="#ff7733"/>
-<circle class="d70" data-cat="Incidents" cx="702.7" cy="368.9" r="4.2" fill="#ff7733"/>
-<circle class="d75" data-cat="Incidents" cx="764.8" cy="328.9" r="4.2" fill="#ff7733"/>
-<circle class="d79" data-cat="Incidents" cx="801.6" cy="264.8" r="4.2" fill="#ff7733"/>
-<circle class="d81" data-cat="Incidents" cx="728.7" cy="357.4" r="4.2" fill="#ff7733"/>
-<circle class="d82" data-cat="Incidents" cx="782.5" cy="306.6" r="4.2" fill="#ff7733"/>
-<circle class="d84" data-cat="Incidents" cx="685.8" cy="373.9" r="4.2" fill="#ff7733"/>
-<circle class="d89" data-cat="Incidents" cx="752.3" cy="341.4" r="4.2" fill="#ff7733"/>
-<circle class="d90" data-cat="Incidents" cx="796.1" cy="281.6" r="4.2" fill="#ff7733"/>
-<circle class="d98" data-cat="Incidents" cx="713.1" cy="365.6" r="4.2" fill="#ff7733"/>
-<circle class="d103" data-cat="Incidents" cx="772.5" cy="321.2" r="4.2" fill="#ff7733"/>
-<circle class="d104" data-cat="Incidents" cx="804.7" cy="254.3" r="4.2" fill="#ff7733"/>
-<circle class="d108" data-cat="Incidents" cx="738.3" cy="352.2" r="4.2" fill="#ff7733"/>
-<circle class="d112" data-cat="Incidents" cx="788.8" cy="297.7" r="4.2" fill="#ff7733"/>
-<circle class="d115" data-cat="Incidents" cx="696.5" cy="371.9" r="4.2" fill="#ff7733"/>
-<circle class="d116" data-cat="Incidents" cx="760.7" cy="334.4" r="4.2" fill="#ff7733"/>
-<circle class="d120" data-cat="Incidents" cx="800.6" cy="271.6" r="4.2" fill="#ff7733"/>
-<circle class="d125" data-cat="Incidents" cx="723.4" cy="361.7" r="4.2" fill="#ff7733"/>
-<circle class="d130" data-cat="Incidents" cx="779.8" cy="313" r="4.2" fill="#ff7733"/>
-<circle class="d131" data-cat="Incidents" cx="679.4" cy="376.6" r="4.2" fill="#ff7733"/>
-<circle class="d136" data-cat="Incidents" cx="747.8" cy="346.5" r="4.2" fill="#ff7733"/>
-<circle class="d139" data-cat="Incidents" cx="794.5" cy="288.2" r="4.2" fill="#ff7733"/>
-<circle class="d140" data-cat="Incidents" cx="707.2" cy="369.1" r="4.2" fill="#ff7733"/>
-<circle class="d156" data-cat="Incidents" cx="769.2" cy="327.3" r="4.2" fill="#ff7733"/>
-<circle class="d157" data-cat="Incidents" cx="804.6" cy="261.3" r="4.2" fill="#ff7733"/>
-<circle class="d162" data-cat="Incidents" cx="733.4" cy="357.1" r="4.2" fill="#ff7733"/>
-<circle class="d168" data-cat="Incidents" cx="786.5" cy="304.2" r="4.2" fill="#ff7733"/>
-<circle class="d172" data-cat="Incidents" cx="690.3" cy="374.9" r="4.2" fill="#ff7733"/>
-<circle class="d174" data-cat="Incidents" cx="756.7" cy="340" r="4.2" fill="#ff7733"/>
-<circle class="d175" data-cat="Incidents" cx="799.4" cy="278.4" r="4.2" fill="#ff7733"/>
-<circle class="d176" data-cat="Incidents" cx="717.6" cy="365.5" r="4.2" fill="#ff7733"/>
-<circle class="d177" data-cat="Incidents" cx="776.5" cy="319" r="4.2" fill="#ff7733"/>
-<circle class="d179" data-cat="Incidents" cx="807.2" cy="250.5" r="4.2" fill="#ff7733"/>
-<circle class="d180" data-cat="Incidents" cx="742.7" cy="351.1" r="4.2" fill="#ff7733"/>
-<circle class="d182" data-cat="Incidents" cx="792.2" cy="294.7" r="4.2" fill="#ff7733"/>
-<circle class="d189" data-cat="Incidents" cx="701" cy="372.1" r="4.2" fill="#ff7733"/>
-<circle class="d195" data-cat="Incidents" cx="764.9" cy="332.6" r="4.2" fill="#ff7733"/>
+<circle class="d3" data-cat="Warnings" cx="705.4" cy="193.6" r="4.2" fill="#e5a700"/>
+<circle class="d16" data-cat="Warnings" cx="718.9" cy="124.7" r="4.2" fill="#e5a700"/>
+<circle class="d23" data-cat="Warnings" cx="778.3" cy="197.4" r="4.2" fill="#e5a700"/>
+<circle class="d25" data-cat="Warnings" cx="761.9" cy="134.5" r="4.2" fill="#e5a700"/>
+<circle class="d26" data-cat="Warnings" cx="710.1" cy="91.4" r="4.2" fill="#e5a700"/>
+<circle class="d30" data-cat="Warnings" cx="790.4" cy="167.5" r="4.2" fill="#e5a700"/>
+<circle class="d31" data-cat="Warnings" cx="749.6" cy="109.6" r="4.2" fill="#e5a700"/>
+<circle class="d39" data-cat="Warnings" cx="687.7" cy="73" r="4.2" fill="#e5a700"/>
+<circle class="d40" data-cat="Warnings" cx="782.1" cy="140.6" r="4.2" fill="#e5a700"/>
+<circle class="d41" data-cat="Warnings" cx="729.9" cy="89.7" r="4.2" fill="#e5a700"/>
+<circle class="d46" data-cat="Warnings" cx="800.7" cy="182.1" r="4.2" fill="#e5a700"/>
+<circle class="d50" data-cat="Warnings" cx="765.8" cy="117.7" r="4.2" fill="#e5a700"/>
+<circle class="d51" data-cat="Warnings" cx="704.7" cy="76.9" r="4.2" fill="#e5a700"/>
+<circle class="d55" data-cat="Warnings" cx="791.5" cy="155.4" r="4.2" fill="#e5a700"/>
+<circle class="d74" data-cat="Warnings" cx="745.3" cy="98.1" r="4.2" fill="#e5a700"/>
+<circle class="d75" data-cat="Warnings" cx="677.6" cy="68.9" r="4.2" fill="#e5a700"/>
+<circle class="d77" data-cat="Warnings" cx="777.6" cy="130.7" r="4.2" fill="#e5a700"/>
+<circle class="d90" data-cat="Warnings" cx="721.3" cy="82.7" r="4.2" fill="#e5a700"/>
+<circle class="d91" data-cat="Warnings" cx="799.1" cy="171.3" r="4.2" fill="#e5a700"/>
+<circle class="d95" data-cat="Warnings" cx="759.1" cy="109" r="4.2" fill="#e5a700"/>
+<circle class="d96" data-cat="Warnings" cx="694.8" cy="72.3" r="4.2" fill="#e5a700"/>
+<circle class="d104" data-cat="Warnings" cx="787.6" cy="145.2" r="4.2" fill="#e5a700"/>
+<circle class="d110" data-cat="Warnings" cx="736.8" cy="91.2" r="4.2" fill="#e5a700"/>
+<circle class="d124" data-cat="Warnings" cx="804.6" cy="188.1" r="4.2" fill="#e5a700"/>
+<circle class="d126" data-cat="Warnings" cx="771.8" cy="121.3" r="4.2" fill="#e5a700"/>
+<circle class="d129" data-cat="Warnings" cx="711.8" cy="77.4" r="4.2" fill="#e5a700"/>
+<circle class="d135" data-cat="Warnings" cx="796.2" cy="160.7" r="4.2" fill="#e5a700"/>
+<circle class="d137" data-cat="Warnings" cx="751.6" cy="101" r="4.2" fill="#e5a700"/>
+<circle class="d141" data-cat="Warnings" cx="684.5" cy="68.6" r="4.2" fill="#e5a700"/>
+<circle class="d147" data-cat="Warnings" cx="782.8" cy="135.3" r="4.2" fill="#e5a700"/>
+<circle class="d152" data-cat="Warnings" cx="727.9" cy="84.7" r="4.2" fill="#e5a700"/>
+<circle class="d155" data-cat="Warnings" cx="802.5" cy="177.3" r="4.2" fill="#e5a700"/>
+<circle class="d159" data-cat="Warnings" cx="765" cy="112.7" r="4.2" fill="#e5a700"/>
+<circle class="d164" data-cat="Warnings" cx="701.8" cy="72.7" r="4.2" fill="#e5a700"/>
+<circle class="d165" data-cat="Warnings" cx="792.1" cy="150.4" r="4.2" fill="#e5a700"/>
+<circle class="d170" data-cat="Warnings" cx="743.2" cy="93.8" r="4.2" fill="#e5a700"/>
+<circle class="d175" data-cat="Warnings" cx="807" cy="194.5" r="4.2" fill="#e5a700"/>
+<circle class="d176" data-cat="Warnings" cx="776.8" cy="126" r="4.2" fill="#e5a700"/>
+<circle class="d177" data-cat="Warnings" cx="718.4" cy="79.2" r="4.2" fill="#e5a700"/>
+<circle class="d179" data-cat="Warnings" cx="799.4" cy="166.7" r="4.2" fill="#e5a700"/>
+<circle class="d181" data-cat="Warnings" cx="757.2" cy="104.9" r="4.2" fill="#e5a700"/>
+<circle class="d182" data-cat="Warnings" cx="691.2" cy="69.5" r="4.2" fill="#e5a700"/>
+<circle class="d185" data-cat="Warnings" cx="787" cy="140.7" r="4.2" fill="#e5a700"/>
+<circle class="d205" data-cat="Warnings" cx="734.2" cy="87.5" r="4.2" fill="#e5a700"/>
+<circle class="d206" data-cat="Warnings" cx="804.9" cy="183.7" r="4.2" fill="#e5a700"/>
+<circle class="d207" data-cat="Warnings" cx="770" cy="117.4" r="4.2" fill="#e5a700"/>
+<circle class="d211" data-cat="Warnings" cx="708.4" cy="74.6" r="4.2" fill="#e5a700"/>
+<circle class="d5" data-cat="Incidents" cx="721.8" cy="291.8" r="4.2" fill="#ff7733"/>
+<circle class="d10" data-cat="Incidents" cx="753.9" cy="254.1" r="4.2" fill="#ff7733"/>
+<circle class="d13" data-cat="Incidents" cx="704.5" cy="320.7" r="4.2" fill="#ff7733"/>
+<circle class="d17" data-cat="Incidents" cx="750.7" cy="289.8" r="4.2" fill="#ff7733"/>
+<circle class="d18" data-cat="Incidents" cx="675" cy="340.3" r="4.2" fill="#ff7733"/>
+<circle class="d21" data-cat="Incidents" cx="730.3" cy="320.5" r="4.2" fill="#ff7733"/>
+<circle class="d28" data-cat="Incidents" cx="786.8" cy="282" r="4.2" fill="#ff7733"/>
+<circle class="d32" data-cat="Incidents" cx="706.7" cy="360.7" r="4.2" fill="#ff7733"/>
+<circle class="d33" data-cat="Incidents" cx="764.9" cy="320.1" r="4.2" fill="#ff7733"/>
+<circle class="d35" data-cat="Incidents" cx="799.9" cy="257.5" r="4.2" fill="#ff7733"/>
+<circle class="d36" data-cat="Incidents" cx="732.6" cy="350.9" r="4.2" fill="#ff7733"/>
+<circle class="d38" data-cat="Incidents" cx="783.9" cy="299.6" r="4.2" fill="#ff7733"/>
+<circle class="d44" data-cat="Incidents" cx="691.8" cy="370.3" r="4.2" fill="#ff7733"/>
+<circle class="d45" data-cat="Incidents" cx="755.9" cy="335.3" r="4.2" fill="#ff7733"/>
+<circle class="d47" data-cat="Incidents" cx="796.8" cy="274.6" r="4.2" fill="#ff7733"/>
+<circle class="d49" data-cat="Incidents" cx="718.5" cy="361.3" r="4.2" fill="#ff7733"/>
+<circle class="d56" data-cat="Incidents" cx="775.5" cy="315" r="4.2" fill="#ff7733"/>
+<circle class="d58" data-cat="Incidents" cx="804.5" cy="247.4" r="4.2" fill="#ff7733"/>
+<circle class="d65" data-cat="Incidents" cx="743.2" cy="347.4" r="4.2" fill="#ff7733"/>
+<circle class="d66" data-cat="Incidents" cx="790.8" cy="291.1" r="4.2" fill="#ff7733"/>
+<circle class="d70" data-cat="Incidents" cx="702.6" cy="368.7" r="4.2" fill="#ff7733"/>
+<circle class="d76" data-cat="Incidents" cx="764.7" cy="328.8" r="4.2" fill="#ff7733"/>
+<circle class="d83" data-cat="Incidents" cx="801.4" cy="264.7" r="4.2" fill="#ff7733"/>
+<circle class="d85" data-cat="Incidents" cx="728.6" cy="357.2" r="4.2" fill="#ff7733"/>
+<circle class="d86" data-cat="Incidents" cx="782.3" cy="306.5" r="4.2" fill="#ff7733"/>
+<circle class="d88" data-cat="Incidents" cx="685.7" cy="373.7" r="4.2" fill="#ff7733"/>
+<circle class="d93" data-cat="Incidents" cx="752.2" cy="341.2" r="4.2" fill="#ff7733"/>
+<circle class="d94" data-cat="Incidents" cx="795.9" cy="281.5" r="4.2" fill="#ff7733"/>
+<circle class="d103" data-cat="Incidents" cx="713" cy="365.4" r="4.2" fill="#ff7733"/>
+<circle class="d108" data-cat="Incidents" cx="772.4" cy="321.1" r="4.2" fill="#ff7733"/>
+<circle class="d109" data-cat="Incidents" cx="804.5" cy="254.3" r="4.2" fill="#ff7733"/>
+<circle class="d114" data-cat="Incidents" cx="738.2" cy="352" r="4.2" fill="#ff7733"/>
+<circle class="d118" data-cat="Incidents" cx="788.6" cy="297.6" r="4.2" fill="#ff7733"/>
+<circle class="d121" data-cat="Incidents" cx="696.5" cy="371.7" r="4.2" fill="#ff7733"/>
+<circle class="d122" data-cat="Incidents" cx="760.6" cy="334.2" r="4.2" fill="#ff7733"/>
+<circle class="d127" data-cat="Incidents" cx="800.4" cy="271.5" r="4.2" fill="#ff7733"/>
+<circle class="d134" data-cat="Incidents" cx="723.3" cy="361.5" r="4.2" fill="#ff7733"/>
+<circle class="d139" data-cat="Incidents" cx="779.6" cy="312.9" r="4.2" fill="#ff7733"/>
+<circle class="d140" data-cat="Incidents" cx="679.4" cy="376.4" r="4.2" fill="#ff7733"/>
+<circle class="d145" data-cat="Incidents" cx="747.6" cy="346.4" r="4.2" fill="#ff7733"/>
+<circle class="d148" data-cat="Incidents" cx="794.3" cy="288.2" r="4.2" fill="#ff7733"/>
+<circle class="d149" data-cat="Incidents" cx="707.1" cy="368.9" r="4.2" fill="#ff7733"/>
+<circle class="d167" data-cat="Incidents" cx="769" cy="327.1" r="4.2" fill="#ff7733"/>
+<circle class="d168" data-cat="Incidents" cx="804.4" cy="261.2" r="4.2" fill="#ff7733"/>
+<circle class="d174" data-cat="Incidents" cx="733.3" cy="356.9" r="4.2" fill="#ff7733"/>
+<circle class="d180" data-cat="Incidents" cx="786.3" cy="304.1" r="4.2" fill="#ff7733"/>
+<circle class="d184" data-cat="Incidents" cx="690.3" cy="374.7" r="4.2" fill="#ff7733"/>
+<circle class="d186" data-cat="Incidents" cx="756.6" cy="339.9" r="4.2" fill="#ff7733"/>
+<circle class="d187" data-cat="Incidents" cx="799.2" cy="278.3" r="4.2" fill="#ff7733"/>
+<circle class="d188" data-cat="Incidents" cx="717.5" cy="365.3" r="4.2" fill="#ff7733"/>
+<circle class="d189" data-cat="Incidents" cx="776.3" cy="318.8" r="4.2" fill="#ff7733"/>
+<circle class="d191" data-cat="Incidents" cx="807" cy="250.5" r="4.2" fill="#ff7733"/>
+<circle class="d192" data-cat="Incidents" cx="742.6" cy="350.9" r="4.2" fill="#ff7733"/>
+<circle class="d197" data-cat="Incidents" cx="792" cy="294.6" r="4.2" fill="#ff7733"/>
+<circle class="d204" data-cat="Incidents" cx="700.9" cy="371.9" r="4.2" fill="#ff7733"/>
+<circle class="d212" data-cat="Incidents" cx="764.7" cy="332.4" r="4.2" fill="#ff7733"/>
+<circle class="d213" data-cat="Incidents" cx="803.1" cy="267.9" r="4.2" fill="#ff7733"/>
+<circle class="d216" data-cat="Incidents" cx="727.6" cy="360.7" r="4.2" fill="#ff7733"/>
 <circle class="d2" data-cat="Governance" cx="624.6" cy="249.4" r="4.2" fill="#f4f4e7"/>
-<circle class="d6" data-cat="Governance" cx="621.5" cy="318.7" r="4.2" fill="#f4f4e7"/>
-<circle class="d9" data-cat="Governance" cx="558.6" cy="271.7" r="4.2" fill="#f4f4e7"/>
-<circle class="d11" data-cat="Governance" cx="591.3" cy="310.4" r="4.2" fill="#f4f4e7"/>
-<circle class="d12" data-cat="Governance" cx="544.2" cy="243" r="4.2" fill="#f4f4e7"/>
-<circle class="d20" data-cat="Governance" cx="555.1" cy="299.1" r="4.2" fill="#f4f4e7"/>
-<circle class="d22" data-cat="Governance" cx="600.2" cy="338.3" r="4.2" fill="#f4f4e7"/>
-<circle class="d24" data-cat="Governance" cx="522.4" cy="273.1" r="4.2" fill="#f4f4e7"/>
-<circle class="d29" data-cat="Governance" cx="555" cy="333.6" r="4.2" fill="#f4f4e7"/>
-<circle class="d34" data-cat="Governance" cx="616.7" cy="369.2" r="4.2" fill="#f4f4e7"/>
-<circle class="d43" data-cat="Governance" cx="521.7" cy="303.5" r="4.2" fill="#f4f4e7"/>
-<circle class="d52" data-cat="Governance" cx="573.5" cy="355.3" r="4.2" fill="#f4f4e7"/>
-<circle class="d57" data-cat="Governance" cx="502.5" cy="262.1" r="4.2" fill="#f4f4e7"/>
-<circle class="d60" data-cat="Governance" cx="537.9" cy="326.6" r="4.2" fill="#f4f4e7"/>
-<circle class="d61" data-cat="Governance" cx="599" cy="367.8" r="4.2" fill="#f4f4e7"/>
-<circle class="d67" data-cat="Governance" cx="511.9" cy="288.9" r="4.2" fill="#f4f4e7"/>
-<circle class="d68" data-cat="Governance" cx="558.6" cy="346.1" r="4.2" fill="#f4f4e7"/>
-<circle class="d71" data-cat="Governance" cx="626.4" cy="375.2" r="4.2" fill="#f4f4e7"/>
-<circle class="d72" data-cat="Governance" cx="526.4" cy="313.4" r="4.2" fill="#f4f4e7"/>
-<circle class="d73" data-cat="Governance" cx="582.8" cy="361.1" r="4.2" fill="#f4f4e7"/>
-<circle class="d80" data-cat="Governance" cx="504.9" cy="272.7" r="4.2" fill="#f4f4e7"/>
-<circle class="d83" data-cat="Governance" cx="545" cy="334.9" r="4.2" fill="#f4f4e7"/>
-<circle class="d93" data-cat="Governance" cx="609.1" cy="371.9" r="4.2" fill="#f4f4e7"/>
-<circle class="d94" data-cat="Governance" cx="516.4" cy="298.9" r="4.2" fill="#f4f4e7"/>
-<circle class="d96" data-cat="Governance" cx="567.1" cy="352.9" r="4.2" fill="#f4f4e7"/>
-<circle class="d97" data-cat="Governance" cx="499.7" cy="255.9" r="4.2" fill="#f4f4e7"/>
-<circle class="d100" data-cat="Governance" cx="532.5" cy="322.4" r="4.2" fill="#f4f4e7"/>
-<circle class="d102" data-cat="Governance" cx="592.4" cy="366.3" r="4.2" fill="#f4f4e7"/>
-<circle class="d106" data-cat="Governance" cx="508.2" cy="283.2" r="4.2" fill="#f4f4e7"/>
-<circle class="d107" data-cat="Governance" cx="552.7" cy="342.6" r="4.2" fill="#f4f4e7"/>
-<circle class="d109" data-cat="Governance" cx="619.6" cy="374.8" r="4.2" fill="#f4f4e7"/>
-<circle class="d113" data-cat="Governance" cx="521.7" cy="308.4" r="4.2" fill="#f4f4e7"/>
-<circle class="d118" data-cat="Governance" cx="576.2" cy="359.1" r="4.2" fill="#f4f4e7"/>
-<circle class="d121" data-cat="Governance" cx="501.8" cy="266.6" r="4.2" fill="#f4f4e7"/>
-<circle class="d123" data-cat="Governance" cx="539.3" cy="331" r="4.2" fill="#f4f4e7"/>
-<circle class="d127" data-cat="Governance" cx="602.4" cy="370.8" r="4.2" fill="#f4f4e7"/>
-<circle class="d134" data-cat="Governance" cx="512.2" cy="293.4" r="4.2" fill="#f4f4e7"/>
-<circle class="d137" data-cat="Governance" cx="560.9" cy="350" r="4.2" fill="#f4f4e7"/>
-<circle class="d141" data-cat="Governance" cx="497.3" cy="249.4" r="4.2" fill="#f4f4e7"/>
-<circle class="d142" data-cat="Governance" cx="527.5" cy="317.8" r="4.2" fill="#f4f4e7"/>
-<circle class="d147" data-cat="Governance" cx="585.6" cy="364.8" r="4.2" fill="#f4f4e7"/>
-<circle class="d149" data-cat="Governance" cx="504.6" cy="277.3" r="4.2" fill="#f4f4e7"/>
-<circle class="d150" data-cat="Governance" cx="546.8" cy="339.1" r="4.2" fill="#f4f4e7"/>
-<circle class="d155" data-cat="Governance" cx="612.7" cy="374.6" r="4.2" fill="#f4f4e7"/>
-<circle class="d158" data-cat="Governance" cx="517" cy="303.3" r="4.2" fill="#f4f4e7"/>
-<circle class="d160" data-cat="Governance" cx="569.8" cy="356.4" r="4.2" fill="#f4f4e7"/>
-<circle class="d161" data-cat="Governance" cx="499.2" cy="260.3" r="4.2" fill="#f4f4e7"/>
-<circle class="d166" data-cat="Governance" cx="534" cy="326.6" r="4.2" fill="#f4f4e7"/>
-<circle class="d171" data-cat="Governance" cx="595.7" cy="369.3" r="4.2" fill="#f4f4e7"/>
-<circle class="d181" data-cat="Governance" cx="508.5" cy="287.6" r="4.2" fill="#f4f4e7"/>
-<circle class="d183" data-cat="Governance" cx="555" cy="346.6" r="4.2" fill="#f4f4e7"/>
-<circle class="d184" data-cat="Governance" cx="623.4" cy="377.3" r="4.2" fill="#f4f4e7"/>
-<circle class="d185" data-cat="Governance" cx="522.8" cy="312.7" r="4.2" fill="#f4f4e7"/>
-<circle class="d186" data-cat="Governance" cx="579.3" cy="362.2" r="4.2" fill="#f4f4e7"/>
-<circle class="d193" data-cat="Governance" cx="501.9" cy="271" r="4.2" fill="#f4f4e7"/>
-<circle class="d4" data-cat="Research" cx="585.7" cy="155.7" r="4.2" fill="#a89a1a"/>
-<circle class="d7" data-cat="Research" cx="553.1" cy="190.8" r="4.2" fill="#a89a1a"/>
-<circle class="d8" data-cat="Research" cx="602.9" cy="129.7" r="4.2" fill="#a89a1a"/>
-<circle class="d14" data-cat="Research" cx="558.1" cy="157.5" r="4.2" fill="#a89a1a"/>
-<circle class="d15" data-cat="Research" cx="630.1" cy="109.5" r="4.2" fill="#a89a1a"/>
-<circle class="d19" data-cat="Research" cx="576.3" cy="126.9" r="4.2" fill="#a89a1a"/>
-<circle class="d27" data-cat="Research" cx="521.3" cy="163.8" r="4.2" fill="#a89a1a"/>
-<circle class="d37" data-cat="Research" cx="595.8" cy="79.5" r="4.2" fill="#a89a1a"/>
-<circle class="d42" data-cat="Research" cx="536" cy="121.2" r="4.2" fill="#a89a1a"/>
-<circle class="d48" data-cat="Research" cx="501.9" cy="186" r="4.2" fill="#a89a1a"/>
-<circle class="d53" data-cat="Research" cx="570" cy="90.8" r="4.2" fill="#a89a1a"/>
-<circle class="d54" data-cat="Research" cx="518.7" cy="143.5" r="4.2" fill="#a89a1a"/>
-<circle class="d59" data-cat="Research" cx="611.9" cy="72.5" r="4.2" fill="#a89a1a"/>
-<circle class="d62" data-cat="Research" cx="547.2" cy="107.7" r="4.2" fill="#a89a1a"/>
-<circle class="d63" data-cat="Research" cx="506.2" cy="169" r="4.2" fill="#a89a1a"/>
-<circle class="d64" data-cat="Research" cx="585.1" cy="81.9" r="4.2" fill="#a89a1a"/>
-<circle class="d69" data-cat="Research" cx="527.9" cy="128.6" r="4.2" fill="#a89a1a"/>
-<circle class="d77" data-cat="Research" cx="498.7" cy="196.4" r="4.2" fill="#a89a1a"/>
-<circle class="d78" data-cat="Research" cx="560.6" cy="96.3" r="4.2" fill="#a89a1a"/>
-<circle class="d85" data-cat="Research" cx="512.7" cy="152.7" r="4.2" fill="#a89a1a"/>
-<circle class="d88" data-cat="Research" cx="601.2" cy="74.6" r="4.2" fill="#a89a1a"/>
-<circle class="d95" data-cat="Research" cx="538.8" cy="114.7" r="4.2" fill="#a89a1a"/>
-<circle class="d101" data-cat="Research" cx="501.9" cy="179.1" r="4.2" fill="#a89a1a"/>
-<circle class="d110" data-cat="Research" cx="575" cy="86.1" r="4.2" fill="#a89a1a"/>
-<circle class="d111" data-cat="Research" cx="520.9" cy="137" r="4.2" fill="#a89a1a"/>
-<circle class="d114" data-cat="Research" cx="618.1" cy="69.4" r="4.2" fill="#a89a1a"/>
-<circle class="d122" data-cat="Research" cx="551.1" cy="102" r="4.2" fill="#a89a1a"/>
-<circle class="d124" data-cat="Research" cx="507" cy="162.1" r="4.2" fill="#a89a1a"/>
-<circle class="d129" data-cat="Research" cx="590.6" cy="77.6" r="4.2" fill="#a89a1a"/>
-<circle class="d133" data-cat="Research" cx="530.8" cy="122.2" r="4.2" fill="#a89a1a"/>
-<circle class="d135" data-cat="Research" cx="498.4" cy="189.5" r="4.2" fill="#a89a1a"/>
-<circle class="d144" data-cat="Research" cx="565.2" cy="91.1" r="4.2" fill="#a89a1a"/>
-<circle class="d146" data-cat="Research" cx="514.2" cy="145.8" r="4.2" fill="#a89a1a"/>
-<circle class="d151" data-cat="Research" cx="607.1" cy="71.1" r="4.2" fill="#a89a1a"/>
-<circle class="d152" data-cat="Research" cx="542.4" cy="108.8" r="4.2" fill="#a89a1a"/>
-<circle class="d178" data-cat="Research" cx="502.3" cy="172.1" r="4.2" fill="#a89a1a"/>
-<circle class="d187" data-cat="Research" cx="580.2" cy="81.4" r="4.2" fill="#a89a1a"/>
-<circle class="d188" data-cat="Research" cx="523.4" cy="130.4" r="4.2" fill="#a89a1a"/>
+<circle class="d6" data-cat="Governance" cx="621.6" cy="318.6" r="4.2" fill="#f4f4e7"/>
+<circle class="d9" data-cat="Governance" cx="558.7" cy="271.6" r="4.2" fill="#f4f4e7"/>
+<circle class="d11" data-cat="Governance" cx="591.3" cy="310.3" r="4.2" fill="#f4f4e7"/>
+<circle class="d12" data-cat="Governance" cx="544.4" cy="242.9" r="4.2" fill="#f4f4e7"/>
+<circle class="d20" data-cat="Governance" cx="555.3" cy="299" r="4.2" fill="#f4f4e7"/>
+<circle class="d22" data-cat="Governance" cx="600.3" cy="338.2" r="4.2" fill="#f4f4e7"/>
+<circle class="d24" data-cat="Governance" cx="522.5" cy="273" r="4.2" fill="#f4f4e7"/>
+<circle class="d29" data-cat="Governance" cx="555.2" cy="333.4" r="4.2" fill="#f4f4e7"/>
+<circle class="d34" data-cat="Governance" cx="616.7" cy="369" r="4.2" fill="#f4f4e7"/>
+<circle class="d43" data-cat="Governance" cx="521.9" cy="303.4" r="4.2" fill="#f4f4e7"/>
+<circle class="d52" data-cat="Governance" cx="573.6" cy="355.1" r="4.2" fill="#f4f4e7"/>
+<circle class="d57" data-cat="Governance" cx="502.7" cy="262.1" r="4.2" fill="#f4f4e7"/>
+<circle class="d60" data-cat="Governance" cx="538.1" cy="326.5" r="4.2" fill="#f4f4e7"/>
+<circle class="d61" data-cat="Governance" cx="599.1" cy="367.6" r="4.2" fill="#f4f4e7"/>
+<circle class="d67" data-cat="Governance" cx="512.1" cy="288.8" r="4.2" fill="#f4f4e7"/>
+<circle class="d68" data-cat="Governance" cx="558.7" cy="345.9" r="4.2" fill="#f4f4e7"/>
+<circle class="d71" data-cat="Governance" cx="626.5" cy="375" r="4.2" fill="#f4f4e7"/>
+<circle class="d72" data-cat="Governance" cx="526.5" cy="313.2" r="4.2" fill="#f4f4e7"/>
+<circle class="d73" data-cat="Governance" cx="582.9" cy="360.9" r="4.2" fill="#f4f4e7"/>
+<circle class="d80" data-cat="Governance" cx="505.2" cy="272.6" r="4.2" fill="#f4f4e7"/>
+<circle class="d81" data-cat="Governance" cx="545.2" cy="334.7" r="4.2" fill="#f4f4e7"/>
+<circle class="d82" data-cat="Governance" cx="609.3" cy="371.3" r="4.2" fill="#f4f4e7"/>
+<circle class="d84" data-cat="Governance" cx="516.8" cy="298.6" r="4.2" fill="#f4f4e7"/>
+<circle class="d87" data-cat="Governance" cx="567.5" cy="352.3" r="4.2" fill="#f4f4e7"/>
+<circle class="d97" data-cat="Governance" cx="500" cy="255.8" r="4.2" fill="#f4f4e7"/>
+<circle class="d98" data-cat="Governance" cx="532.8" cy="322.2" r="4.2" fill="#f4f4e7"/>
+<circle class="d99" data-cat="Governance" cx="592.5" cy="365.9" r="4.2" fill="#f4f4e7"/>
+<circle class="d101" data-cat="Governance" cx="508.6" cy="283" r="4.2" fill="#f4f4e7"/>
+<circle class="d102" data-cat="Governance" cx="553" cy="342.3" r="4.2" fill="#f4f4e7"/>
+<circle class="d105" data-cat="Governance" cx="619.7" cy="374.5" r="4.2" fill="#f4f4e7"/>
+<circle class="d107" data-cat="Governance" cx="522.1" cy="308.2" r="4.2" fill="#f4f4e7"/>
+<circle class="d112" data-cat="Governance" cx="576.5" cy="358.5" r="4.2" fill="#f4f4e7"/>
+<circle class="d113" data-cat="Governance" cx="502.4" cy="266.4" r="4.2" fill="#f4f4e7"/>
+<circle class="d115" data-cat="Governance" cx="539.9" cy="330.5" r="4.2" fill="#f4f4e7"/>
+<circle class="d119" data-cat="Governance" cx="602.6" cy="370.1" r="4.2" fill="#f4f4e7"/>
+<circle class="d125" data-cat="Governance" cx="512.7" cy="293.2" r="4.2" fill="#f4f4e7"/>
+<circle class="d128" data-cat="Governance" cx="561.3" cy="349.5" r="4.2" fill="#f4f4e7"/>
+<circle class="d131" data-cat="Governance" cx="497.8" cy="249.3" r="4.2" fill="#f4f4e7"/>
+<circle class="d132" data-cat="Governance" cx="527.9" cy="317.4" r="4.2" fill="#f4f4e7"/>
+<circle class="d136" data-cat="Governance" cx="585.9" cy="364.1" r="4.2" fill="#f4f4e7"/>
+<circle class="d143" data-cat="Governance" cx="505.2" cy="277.1" r="4.2" fill="#f4f4e7"/>
+<circle class="d146" data-cat="Governance" cx="547.1" cy="338.7" r="4.2" fill="#f4f4e7"/>
+<circle class="d150" data-cat="Governance" cx="612.9" cy="373.9" r="4.2" fill="#f4f4e7"/>
+<circle class="d151" data-cat="Governance" cx="517.6" cy="303" r="4.2" fill="#f4f4e7"/>
+<circle class="d158" data-cat="Governance" cx="570" cy="356.2" r="4.2" fill="#f4f4e7"/>
+<circle class="d160" data-cat="Governance" cx="499.5" cy="260.2" r="4.2" fill="#f4f4e7"/>
+<circle class="d161" data-cat="Governance" cx="534.4" cy="326.3" r="4.2" fill="#f4f4e7"/>
+<circle class="d166" data-cat="Governance" cx="595.8" cy="369" r="4.2" fill="#f4f4e7"/>
+<circle class="d169" data-cat="Governance" cx="508.9" cy="287.4" r="4.2" fill="#f4f4e7"/>
+<circle class="d171" data-cat="Governance" cx="555.3" cy="346.1" r="4.2" fill="#f4f4e7"/>
+<circle class="d172" data-cat="Governance" cx="623.5" cy="376.7" r="4.2" fill="#f4f4e7"/>
+<circle class="d173" data-cat="Governance" cx="523.2" cy="312.4" r="4.2" fill="#f4f4e7"/>
+<circle class="d178" data-cat="Governance" cx="579.5" cy="361.8" r="4.2" fill="#f4f4e7"/>
+<circle class="d183" data-cat="Governance" cx="502.3" cy="270.9" r="4.2" fill="#f4f4e7"/>
+<circle class="d193" data-cat="Governance" cx="541.7" cy="334.5" r="4.2" fill="#f4f4e7"/>
+<circle class="d198" data-cat="Governance" cx="606.1" cy="372.8" r="4.2" fill="#f4f4e7"/>
+<circle class="d199" data-cat="Governance" cx="513.6" cy="297.4" r="4.2" fill="#f4f4e7"/>
+<circle class="d200" data-cat="Governance" cx="564" cy="352.9" r="4.2" fill="#f4f4e7"/>
+<circle class="d201" data-cat="Governance" cx="497.5" cy="253.7" r="4.2" fill="#f4f4e7"/>
+<circle class="d208" data-cat="Governance" cx="529.6" cy="321.4" r="4.2" fill="#f4f4e7"/>
+<circle class="d214" data-cat="Governance" cx="589.2" cy="367" r="4.2" fill="#f4f4e7"/>
+<circle class="d215" data-cat="Governance" cx="505.6" cy="281.4" r="4.2" fill="#f4f4e7"/>
+<circle class="d4" data-cat="Research" cx="585.8" cy="155.8" r="4.2" fill="#a89a1a"/>
+<circle class="d7" data-cat="Research" cx="553.2" cy="190.9" r="4.2" fill="#a89a1a"/>
+<circle class="d8" data-cat="Research" cx="603" cy="129.8" r="4.2" fill="#a89a1a"/>
+<circle class="d14" data-cat="Research" cx="558.2" cy="157.5" r="4.2" fill="#a89a1a"/>
+<circle class="d15" data-cat="Research" cx="630.1" cy="109.6" r="4.2" fill="#a89a1a"/>
+<circle class="d19" data-cat="Research" cx="576.4" cy="127" r="4.2" fill="#a89a1a"/>
+<circle class="d27" data-cat="Research" cx="521.4" cy="163.9" r="4.2" fill="#a89a1a"/>
+<circle class="d37" data-cat="Research" cx="595.9" cy="79.7" r="4.2" fill="#a89a1a"/>
+<circle class="d42" data-cat="Research" cx="536.1" cy="121.3" r="4.2" fill="#a89a1a"/>
+<circle class="d48" data-cat="Research" cx="502.1" cy="186.1" r="4.2" fill="#a89a1a"/>
+<circle class="d53" data-cat="Research" cx="570.1" cy="91" r="4.2" fill="#a89a1a"/>
+<circle class="d54" data-cat="Research" cx="518.9" cy="143.6" r="4.2" fill="#a89a1a"/>
+<circle class="d59" data-cat="Research" cx="611.9" cy="72.7" r="4.2" fill="#a89a1a"/>
+<circle class="d62" data-cat="Research" cx="547.3" cy="107.8" r="4.2" fill="#a89a1a"/>
+<circle class="d63" data-cat="Research" cx="506.4" cy="169.1" r="4.2" fill="#a89a1a"/>
+<circle class="d64" data-cat="Research" cx="585.2" cy="82.1" r="4.2" fill="#a89a1a"/>
+<circle class="d69" data-cat="Research" cx="528.1" cy="128.7" r="4.2" fill="#a89a1a"/>
+<circle class="d78" data-cat="Research" cx="498.9" cy="196.4" r="4.2" fill="#a89a1a"/>
+<circle class="d79" data-cat="Research" cx="560.7" cy="96.4" r="4.2" fill="#a89a1a"/>
+<circle class="d89" data-cat="Research" cx="512.9" cy="152.8" r="4.2" fill="#a89a1a"/>
+<circle class="d92" data-cat="Research" cx="601.2" cy="74.8" r="4.2" fill="#a89a1a"/>
+<circle class="d100" data-cat="Research" cx="538.9" cy="114.8" r="4.2" fill="#a89a1a"/>
+<circle class="d106" data-cat="Research" cx="502.1" cy="179.1" r="4.2" fill="#a89a1a"/>
+<circle class="d111" data-cat="Research" cx="575.1" cy="86.4" r="4.2" fill="#a89a1a"/>
+<circle class="d116" data-cat="Research" cx="521.1" cy="137.1" r="4.2" fill="#a89a1a"/>
+<circle class="d117" data-cat="Research" cx="618.1" cy="69.7" r="4.2" fill="#a89a1a"/>
+<circle class="d120" data-cat="Research" cx="551.6" cy="102.5" r="4.2" fill="#a89a1a"/>
+<circle class="d123" data-cat="Research" cx="507.7" cy="162.4" r="4.2" fill="#a89a1a"/>
+<circle class="d130" data-cat="Research" cx="590.7" cy="77.9" r="4.2" fill="#a89a1a"/>
+<circle class="d133" data-cat="Research" cx="531" cy="122.4" r="4.2" fill="#a89a1a"/>
+<circle class="d138" data-cat="Research" cx="498.7" cy="189.5" r="4.2" fill="#a89a1a"/>
+<circle class="d142" data-cat="Research" cx="565.4" cy="91.3" r="4.2" fill="#a89a1a"/>
+<circle class="d144" data-cat="Research" cx="514.8" cy="146.1" r="4.2" fill="#a89a1a"/>
+<circle class="d153" data-cat="Research" cx="607.3" cy="71.6" r="4.2" fill="#a89a1a"/>
+<circle class="d154" data-cat="Research" cx="542.9" cy="109.2" r="4.2" fill="#a89a1a"/>
+<circle class="d156" data-cat="Research" cx="503" cy="172.3" r="4.2" fill="#a89a1a"/>
+<circle class="d157" data-cat="Research" cx="580.5" cy="82" r="4.2" fill="#a89a1a"/>
+<circle class="d162" data-cat="Research" cx="523.9" cy="130.8" r="4.2" fill="#a89a1a"/>
+<circle class="d163" data-cat="Research" cx="624.5" cy="67.1" r="4.2" fill="#a89a1a"/>
+<circle class="d190" data-cat="Research" cx="556" cy="97.1" r="4.2" fill="#a89a1a"/>
+<circle class="d194" data-cat="Research" cx="509.1" cy="155.6" r="4.2" fill="#a89a1a"/>
+<circle class="d195" data-cat="Research" cx="596.7" cy="74.5" r="4.2" fill="#a89a1a"/>
+<circle class="d196" data-cat="Research" cx="534.8" cy="116.7" r="4.2" fill="#a89a1a"/>
+<circle class="d202" data-cat="Research" cx="499.3" cy="182.7" r="4.2" fill="#a89a1a"/>
+<circle class="d203" data-cat="Research" cx="570.6" cy="86.9" r="4.2" fill="#a89a1a"/>
+<circle class="d209" data-cat="Research" cx="517.5" cy="139.8" r="4.2" fill="#a89a1a"/>
+<circle class="d210" data-cat="Research" cx="613.7" cy="69.1" r="4.2" fill="#a89a1a"/>
 <rect x="623.2" y="170.8" width="57.7" height="11.5" fill="#292623"/><text class="mono" x="652" y="180" font-size="9.5" text-anchor="middle" fill="#a9a79c">JAN 2024</text>
-<rect x="623.2" y="130.4" width="57.7" height="11.5" fill="#292623"/><text class="mono" x="652" y="139.6" font-size="9.5" text-anchor="middle" fill="#a9a79c">JAN 2025</text>
-<rect x="623.2" y="90.1" width="57.7" height="11.5" fill="#292623"/><text class="mono" x="652" y="99.3" font-size="9.5" text-anchor="middle" fill="#a9a79c">JAN 2026</text>
+<rect x="623.2" y="130.5" width="57.7" height="11.5" fill="#292623"/><text class="mono" x="652" y="139.7" font-size="9.5" text-anchor="middle" fill="#a9a79c">JAN 2025</text>
+<rect x="623.2" y="90.3" width="57.7" height="11.5" fill="#292623"/><text class="mono" x="652" y="99.5" font-size="9.5" text-anchor="middle" fill="#a9a79c">JAN 2026</text>
 <circle cx="652" cy="222" r="2.4" fill="#f4f4e7"/>
-<g class="call"><path d="M764.9 327.6 L764.9 45" stroke="#ff7733" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+<g class="call"><path d="M727.6 355.7 L727.6 45" stroke="#ff7733" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
 <rect x="591" y="23" width="255" height="22" fill="#292623" stroke="#6f6b64" stroke-width="1"/>
 <circle cx="602" cy="34" r="3.4" fill="#ff7733"/>
-<text class="mono" x="611" y="37.5" font-size="10" fill="#f4f4e7">LATEST · OCT 17, 2026 · INCIDENTS</text></g>
+<text class="mono" x="611" y="37.5" font-size="10" fill="#f4f4e7">LATEST · OCT 19, 2026 · INCIDENTS</text></g>
 </svg>
