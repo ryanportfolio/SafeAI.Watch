@@ -4,31 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 196 dated, sourced entries drawn as a burst, one dot per entry: 47 warnings, 56 incidents, 55 governance, 38 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 217 dated, sourced entries drawn as a burst, one dot per entry: 49 warnings, 58 incidents, 63 governance, 47 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 196 entries from Mar 22, 2023 to Oct 17, 2026 (47 warnings, 56 incidents, 55 governance, 38 research), drawn from 118 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 217 entries from Mar 22, 2023 to Oct 19, 2026 (49 warnings, 58 incidents, 63 governance, 47 research), drawn from 131 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 17, 2026, filed under Incidents:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 19, 2026, filed under Incidents:
 
-> **OpenCode says a distillation attack breached its Console and hit 1.4% of its users**
+> **NorForge says exposed control panels show criminals running Cairn AI agents in more than 1,100 attack projects**
 >
-> **What happened.** OpenCode said on X on October 17, 2026 that it "had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users."
+> **What happened.** AI agent sandboxing company NorForge reported on October 19, 2026 that it found more than 20 exposed panels of the Cairn agent harness likely used maliciously, following Gambit Security's September report.
 >
 > **Key points.**
 >
-> - The affected users were "a subset of users who had external providers linked"; OpenCode says it emailed all of them that morning and that anyone without an email was not impacted.
-> - "The incident is ongoing so we cannot share more details at this point but we are working with Anthropic, OpenAI, and Google to remediate."
+> - The most active cluster, Chinese-language AIA0001, ran over 1,100 attack projects across 14 panels against sites mostly in the US, Japan and Australia, seeking persistent e-commerce access.
+> - Its tasks ran on a worker named claudecode\_deepseek-v4.1-flash; NorForge estimates the average task cost about $5.
+> - NorForge puts average success at about 10%, and says AIA0001 projects that met their goal took a little under 23 hours on average.
+> - The open panels leaked hundreds of secrets, 11% verified valid, and appeared to expose full controls; NorForge says it is working with Reuters to notify victims.
 >
-> **Evidence.** The company's own short statement, posted while the incident was ongoing. It names no cause, says nothing about what was exposed, and gives no count beyond the percentage.
+> **Evidence.** Company investigation of exposed attacker panels; NorForge checked one claimed intrusion and found the webshell live. It saw financial motives and no obvious state-sponsored activity, and redacts victims.
 >
-> **Uncertain.** What the distillation attack reached, how it got in and what affected users should do are not in the post; OpenCode says the incident is ongoing.
+> **Uncertain.** Cost and success figures are NorForge's estimates, and it calls the uncertainty in the cost estimate considerable. Most intrusion claims rest on the panels' own records.
 >
-> **Source.** [OpenCode · Company post](https://x.com/opencode/status/2111519637049319818)
+> **Source.** [NorForge · Company report](https://norforge.com/blog/inside_cairn)
 
 ## Run it locally
 
