@@ -123,7 +123,10 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    `days.json`, take either side for a conflicted date and rewrite that date's brief in step 7.
    When a hunk removes or changes an entry that the merge base had (main may have deleted or
    corrected it on purpose), or a conflict is in any other file, run `git merge --abort`,
-   stop and report. Note every date whose entry count the merge changed. Otherwise
+   stop and report. After any merge, conflicted or not, compare the entries main added since
+   the merge base with this branch's own entries, by URL and by event: where both hold the
+   same event, remove this branch's copy (main's is already merged) and say so in the PR
+   body. Note every date whose entry count the merge or a removal changed. Otherwise
    `worktree add -b daily-watch/<date> <same path> origin/main`. If the path already exists
    from a crashed run, remove that worktree first. Run `npm ci` there.
 7. **Draft.** For each kept candidate, run add-source workflow steps 2 to 5 (get the content,
@@ -134,7 +137,7 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    (placement) becomes suggestions in the PR body, except the day briefs, which this run
    writes. Once all entries are in `events.json`, write or update the brief in
    `src/data/days.json`, per topics.md, for every date that gained or lost entries in this
-   run or in the step 6 merge, and every date where an existing entry's title changed (its
+   run or in step 6 (the merge and any duplicate removed), and every date where an existing entry's title changed (its
    slug changes) or it gained or lost the Bio topic: a summary once the date has 3 or more
    entries, and the Five to read (`highlights`) once it has 6 or more, re-picked from all of
    that date's entries, not only this run's. Nobody
