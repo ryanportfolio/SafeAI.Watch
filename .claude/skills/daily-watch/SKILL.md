@@ -9,8 +9,12 @@ Research every day; publish only when something clears the bar in
 [bar.md](references/bar.md). A run that finds nothing worth adding writes its report and
 stops. That is the expected outcome on most days.
 
-The run is unattended. Nobody answers questions, so never ask: when something is unclear,
-skip it and record why in the run report. Invocation authorizes reading, a branch, commits,
+The run is unattended. Nobody answers questions, so never ask: when a candidate is unclear,
+skip it and record why in the run report. Topics and day briefs cannot be skipped, because the
+build fails without them. When a topic, a summary or a Five to read pick is a close call, make
+the call add-source `references/topics.md` supports best and list it in the PR
+body under "Judgment calls", with the option you passed over, so the user can change it
+before merging. Invocation authorizes reading, a branch, commits,
 push, and opening or updating one PR. It does not authorize merging, pushing to `main`,
 force-pushing, or deleting anything on GitHub. The user merges with `/merge`, which runs the
 Codex review; do not run `/codex-review` yourself.
@@ -113,7 +117,10 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    stop. No worktree, branch, commit or PR.
 6. **Workspace.** If a routine PR is open, add a worktree on its branch:
    `git -C C:/Users/Home/CoreWise/SafeAI.Watch worktree add -B <headRefName> C:/Users/Home/CoreWise/_wt/SafeAI.Watch/daily-<date> origin/<headRefName>`,
-   then merge `origin/main` into it (no rebase, no force-push). Otherwise
+   then merge `origin/main` into it (no rebase, no force-push). On a conflict in
+   `events.json` or `days.json`, keep every entry from both sides, once each, in date order, and rewrite the
+   conflicted dates' briefs in step 7; on a conflict in any other file, stop and report. Note
+   every date whose entry count the merge changed. Otherwise
    `worktree add -b daily-watch/<date> <same path> origin/main`. If the path already exists
    from a crashed run, remove that worktree first. Run `npm ci` there.
 7. **Draft.** For each kept candidate, run add-source workflow steps 2 to 5 (get the content,
@@ -123,15 +130,18 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    Lab conduct). Save source checks under `<worktree>/.tmp/add-source/<slug>/`. Step 6
    (placement) becomes suggestions in the PR body, except the day briefs, which this run
    writes. Once all entries are in `events.json`, write or update the brief in
-   `src/data/days.json` for every date that gained or lost entries, per topics.md: a summary
-   once the date has 3 or more entries, and the Five to read (`highlights`) once it has
-   6 or more, re-picked from all of that date's entries, not only this run's. Nobody
+   `src/data/days.json`, per topics.md, for every date that gained or lost entries in this
+   run or in the step 6 merge, and every date where an existing entry's title changed (its
+   slug changes) or it gained or lost the Bio topic: a summary once the date has 3 or more
+   entries, and the Five to read (`highlights`) once it has 6 or more, re-picked from all of
+   that date's entries, not only this run's. Nobody
    reviews the pick before the PR, so apply topics.md's significance ranking and Bio rule
    yourself and record, per date, why each of the five made it and what ranked just below.
 8. **Verify.** add-source step 7: one fresh subagent per run re-fetches every source and
    checks every claim and quote in the drafted entries, and checks that every fact in each
    day summary this run wrote or changed is stated in that date's entries; fix or drop what
-   fails. Then, in the worktree, `npm run build` (it also validates topics and day briefs),
+   fails. Dropping an entry changes its date's count, so redo that date's brief per step 7.
+   Then, in the worktree, `npm run build` (it also validates topics and day briefs),
    `node scripts/readme/build.mjs` (regenerates the README
    and masthead from the record), `node scripts/readme/build.mjs --check` and
    `node scripts/readme/meta.mjs --lint` (the PR-side README gate). The README CI job fails on stale output, and
@@ -145,7 +155,8 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    `Daily watch: <date>`. With an open PR: push to its branch and append a dated section to
    its body (`gh pr edit --body-file`). Body sections per run: window and lanes scanned;
    entries added (date, category, topics, title, source, why it cleared the bar); day briefs
-   written or changed, and for each Five to read the reasoning from step 7; held and skipped
+   written or changed, and for each Five to read the reasoning from step 7; judgment calls
+   (close topic, summary or Five to read decisions, each with the option passed over); held and skipped
    candidates worth the user's attention, with reasons; paywall routes tried; placement
    suggestions; checks run. End with the PR attribution line.
 10. **Close out.** Write `report.md` (window, counts per lane, verdicts, follow-up changes,
@@ -159,5 +170,6 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    `lastChecked`), and `open: false` for items whose outcome is now final. Drop items whose
    only entry was in a PR closed without merging. Remove the worktree with `git worktree remove <path>` once the push
    succeeded (its `node_modules` is a real folder from `npm ci`, not a link). Close any
-   browser you opened. End the run with a three-line summary: entries added, PR link or
-   "no PR", notable held items.
+   browser you opened. End the run with a four-line summary: entries added, each with its
+   topics; day briefs written or updated, by date, or "none"; PR link or "no PR"; notable
+   held items.
