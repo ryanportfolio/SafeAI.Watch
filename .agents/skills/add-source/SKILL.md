@@ -57,7 +57,7 @@ approval through the normal mechanism when the sandbox blocks a fetch or push.
 1. **Workspace.** `git fetch origin`. Find the branch that holds the live site
    (`src/data/events.json`): the default branch if it has it, otherwise the open site PR's
    head (`gh pr list`). Create a fresh worktree and branch `add-source/<slug>` from it. Read
-   `src/data/events.json`, `src/data/record.ts`, and the pages named in
+   `src/data/events.json`, `src/data/days.json`, `src/data/record.ts`, and the pages named in
    [placement.md](references/placement.md).
 2. **Get the actual content.** Follow [sourcing.md](references/sourcing.md): the packaged
    transcript script for video, curl to file for pages and PDFs, fxtwitter for X posts.
@@ -77,23 +77,37 @@ approval through the normal mechanism when the sandbox blocks a fetch or push.
    does not already hold. Background color, restated common knowledge, and claims that rest on
    one interested party's say-so do not earn entries. Check `events.json` for the same URL or
    the same event; update an existing entry instead of duplicating it. Draft per
-   [entries.md](references/entries.md).
+   [entries.md](references/entries.md), and give each entry 1 to 3 `topics` per
+   [topics.md](references/topics.md).
 6. **Place and highlight.** Decide where each entry belongs beyond the record using
    [placement.md](references/placement.md): featured interview, selected reading, scope
    copy, FAQ. Change a homepage feature only when the new source is stronger than what it
-   replaces, and say why in the PR.
+   replaces, and say why in the PR. Then, for every date this run added entries to or
+   removed them from, write or update its brief in `src/data/days.json` per
+   [topics.md](references/topics.md): a summary once the date has 3 or more entries, and the
+   Five to read (`highlights`) once it has 6 or more, re-picked from all of that date's
+   entries. Also recheck the brief of any date where an existing entry changed its title (its
+   slug changes, so a highlight can point at nothing) or gained or lost the Bio topic (the Bio
+   rule can break).
 7. **Verify.** A fresh context (agent tool, or a read-only `codex exec` process) receives only
-   the rules, the drafted entries, and the source URLs. It re-fetches each source (curl to
-   file, grep), checks every claim and quote, and writes `.tmp/add-source/<slug>/verify.md`.
-   Self-review is not a substitute; if no fresh context is available, say so in the PR and
-   mark the entries unverified. Fix or drop what fails. Then `npm run build` (record.ts
-   validates the schema). For page or layout changes, check /, /latest, /timeline in a
-   headed browser at 1440x900 and 390x844 if the session exposes one; otherwise state that
-   the visual check did not run.
+   the rules, the drafted entries, the day briefs this run wrote or changed, and the source
+   URLs. It re-fetches each source (curl to file, grep), checks every claim and quote, checks
+   that every fact in each summary is stated in that date's entries, and writes
+   `.tmp/add-source/<slug>/verify.md`. Self-review is not a substitute; if no fresh context
+   is available, say so in the PR and mark the entries unverified. Fix or drop what fails.
+   Then `npm run build`: record.ts validates the entries, their topics and every day brief,
+   and fails on a missing or stray brief, a summary over the limits, or highlights that
+   break the count, membership or Bio rule. A worktree nested inside the main checkout
+   cannot build; commit, then build from `git archive HEAD | tar -x -C <dir>` with `<dir>`
+   outside the repo folder and `npm ci` run there (see `.claude/reference/pitfalls.md`,
+   "npm run build fails in a worktree nested inside the main checkout"). For page or layout
+   changes, check /, /latest, /timeline in a headed browser at 1440x900 and 390x844 if the
+   session exposes one; otherwise state that the visual check did not run.
 8. **Deliver.** Commit with the repo trailer, push, open one PR against the site branch with
    `gh pr create --body-file`. PR body: what the material was and its retrieval coverage;
-   entries added or updated (date, title, category); placement changes and why; notable
-   distortions found in the input; dropped claims and why; checks run and checks not run.
+   entries added or updated (date, title, category, topics); day briefs written or changed,
+   with why each Five to read was picked; placement changes and why; notable distortions
+   found in the input; dropped claims and why; checks run and checks not run.
    Follow the repo's PR review rules; from Codex, a cross-vendor review is `claude-review`.
    Report the PR link and anything unverified.
 

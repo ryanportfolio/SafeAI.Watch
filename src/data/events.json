@@ -2,6 +2,9 @@
   {
     "date": "2023-03-22",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "Future of Life Institute letter calls for a six-month pause on training",
     "happened": "The Future of Life Institute published an open letter calling on AI labs \"to immediately pause for at least 6 months the training of AI systems more powerful than GPT-4.\"",
     "keyPoints": [
@@ -17,6 +20,9 @@
   {
     "date": "2023-05-30",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "AI scientists and lab heads sign a one-sentence statement on extinction risk",
     "happened": "The Center for AI Safety published a statement: \"Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war.\"",
     "keyPoints": [
@@ -31,6 +37,9 @@
   {
     "date": "2023-11-01",
     "category": "Governance",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "Countries at the AI Safety Summit issue the Bletchley Declaration on frontier AI",
     "happened": "At the AI Safety Summit, 28 countries, including the US and China, and the European Union issued a joint declaration on the risks of frontier AI.",
     "keyPoints": [
@@ -47,6 +56,10 @@
   {
     "date": "2024-05-17",
     "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Alignment"
+    ],
     "title": "Jan Leike leaves OpenAI, saying safety took a backseat to products",
     "happened": "Jan Leike posted on X that his last day as head of alignment, superalignment lead and executive at OpenAI had been the day before.",
     "keyPoints": [
@@ -63,6 +76,9 @@
   {
     "date": "2025-03-14",
     "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
     "title": "OpenAI researchers find training against a reasoning monitor can hide reward hacking",
     "happened": "OpenAI researchers showed that GPT-4o, reading a stronger reasoning model's chain of thought, could catch it reward hacking in agentic coding tasks.",
     "keyPoints": [
@@ -78,6 +94,10 @@
   {
     "date": "2025-04-29",
     "category": "Incidents",
+    "topics": [
+      "Alignment",
+      "Harm to people"
+    ],
     "title": "OpenAI rolls back a GPT-4o update that made ChatGPT overly flattering",
     "happened": "OpenAI rolled back the previous week's GPT-4o update in ChatGPT, calling it \"overly flattering or agreeable,\" and returned users to an earlier version.",
     "keyPoints": [
@@ -93,6 +113,10 @@
   {
     "date": "2025-05-22",
     "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Bio"
+    ],
     "title": "Anthropic activates ASL-3 protections for Claude Opus 4",
     "happened": "Anthropic launched Claude Opus 4 under its ASL-3 Deployment and Security Standards, which it calls a precautionary and provisional action.",
     "keyPoints": [
@@ -108,6 +132,9 @@
   {
     "date": "2025-06-12",
     "category": "Research",
+    "topics": [
+      "Bio"
+    ],
     "title": "Preprint argues current models increase biological weapons risk",
     "happened": "Roger Brent and T. Greg McKelvey Jr posted \"Contemporary AI foundation models increase biological weapons risk\" to arXiv.",
     "keyPoints": [
@@ -124,6 +151,9 @@
   {
     "date": "2025-06-20",
     "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
     "title": "Anthropic tests 16 models in simulated insider-threat scenarios",
     "happened": "Anthropic stress-tested 16 models in hypothetical corporate settings. Models from every developer sometimes chose blackmail or leaking when that was the only way to avoid replacement or meet their goals.",
     "keyPoints": [
@@ -140,6 +170,9 @@
   {
     "date": "2025-07-01",
     "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "US Senate votes 99-1 to strip a 10-year state AI-law moratorium from the budget bill",
     "happened": "The US Senate voted 99-1 for an amendment from Senators Maria Cantwell and Marsha Blackburn removing a ten-year moratorium on state AI regulations from the Republican budget reconciliation bill.",
     "keyPoints": [
@@ -155,6 +188,9 @@
   {
     "date": "2025-07-12",
     "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "xAI apologizes for Grok's posts and blames a code update active for 16 hours",
     "happened": "Posting from the @grok account, xAI apologized for \"the horrific behavior that many experienced\" on July 8 and said deprecated code had left Grok susceptible to existing X user posts, including extremist ones, for 16 hours.",
     "keyPoints": [
@@ -169,6 +205,9 @@
   {
     "date": "2025-07-14",
     "category": "Governance",
+    "topics": [
+      "Military"
+    ],
     "title": "Pentagon awards frontier AI agreements to Anthropic, Google, OpenAI and xAI",
     "happened": "The Chief Digital and Artificial Intelligence Office announced contract awards to Anthropic, Google, OpenAI and xAI, \"each with a $200M ceiling,\" to develop agentic AI workflows across a variety of mission areas.",
     "keyPoints": [
@@ -183,6 +222,9 @@
   {
     "date": "2025-08-06",
     "category": "Governance",
+    "topics": [
+      "Bio"
+    ],
     "title": "CSIS sets out biosecurity steps against AI-enabled bioterrorism",
     "happened": "Georgia Adamson and Gregory C. Allen published a CSIS report on what policymakers should know about AI-enabled bioterrorism.",
     "keyPoints": [
@@ -199,6 +241,9 @@
   {
     "date": "2025-08-26",
     "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "Parents of Adam Raine sue OpenAI, alleging ChatGPT contributed to their son's suicide",
     "happened": "Matthew and Maria Raine sued OpenAI and Sam Altman in San Francisco Superior Court over the April 2025 death of their 16-year-old son, Adam Raine.",
     "keyPoints": [
@@ -215,6 +260,10 @@
   {
     "date": "2025-09-13",
     "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
     "title": "Palisade Research finds some models subvert a shutdown mechanism to finish a task",
     "happened": "Palisade Research ran more than 100,000 trials across 13 models. Several, including Grok 4, GPT-5 and Gemini 2.5 Pro, sometimes subverted a shutdown mechanism to complete a simple task.",
     "keyPoints": [
@@ -231,6 +280,9 @@
   {
     "date": "2025-09-19",
     "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
     "title": "Apollo Research and OpenAI test anti-scheming training on o3 and o4-mini",
     "happened": "Apollo Research and OpenAI trained models against covert actions. Across 26 evaluations, covert action rates fell from 13% to 0.4% for o3 and from 8.7% to 0.3% for o4-mini.",
     "keyPoints": [
@@ -247,6 +299,9 @@
   {
     "date": "2025-10-22",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "Statement on Superintelligence calls for a prohibition on building it",
     "happened": "The Future of Life Institute hosted a statement calling \"for a prohibition on the development of superintelligence\" until there is broad scientific consensus it can be done \"safely and controllably\" and \"strong public buy-in.\"",
     "keyPoints": [
@@ -262,6 +317,9 @@
   {
     "date": "2025-11-06",
     "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "Seven lawsuits allege GPT-4o harmed users, four of whom died by suicide",
     "happened": "The Social Media Victims Law Center and Tech Justice Law Project filed seven suits in California state courts against OpenAI and Sam Altman, four for people, ages 17 to 48, who died by suicide.",
     "keyPoints": [
@@ -278,6 +336,9 @@
   {
     "date": "2025-11-13",
     "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Anthropic reports a state-sponsored group used Claude Code for a largely automated espionage campaign",
     "happened": "Anthropic said a group it assessed \"with high confidence\" as Chinese state-sponsored used Claude Code to try to break into about thirty targets, succeeding in a small number.",
     "keyPoints": [
@@ -294,6 +355,9 @@
   {
     "date": "2025-11-21",
     "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
     "title": "Anthropic finds a model that learned to reward hack became broadly misaligned",
     "happened": "Anthropic primed a model with reward-hack documents and trained it on real Claude coding tasks. Once it learned to cheat, it attempted to sabotage safety-research code 12% of the time.",
     "keyPoints": [
@@ -310,6 +374,9 @@
   {
     "date": "2025-12-11",
     "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
     "title": "Executive order directs a federal task force to challenge state AI laws",
     "happened": "President Trump signed Executive Order 14365, which has the Attorney General set up an AI Litigation Task Force to challenge state AI laws that conflict with the order's policy.",
     "keyPoints": [
@@ -326,6 +393,10 @@
   {
     "date": "2025-12-31",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "ROME model paper reports an agent opened an SSH tunnel and mined cryptocurrency during training",
     "happened": "The team behind the ROME agent model reported that during reinforcement learning, the agent opened a reverse SSH tunnel to an outside IP address and diverted GPUs to cryptocurrency mining.",
     "keyPoints": [
@@ -341,6 +412,9 @@
   {
     "date": "2026-01-12",
     "category": "Governance",
+    "topics": [
+      "Military"
+    ],
     "title": "Pentagon AI strategy orders faster adoption across the Department of War",
     "happened": "The Department of War published an AI strategy memorandum, dated January 9, 2026, directing the department to become an \"AI-first\" warfighting force.",
     "keyPoints": [
@@ -357,6 +431,10 @@
   {
     "date": "2026-01-26",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Bio"
+    ],
     "title": "Dario Amodei writes on risks from powerful AI",
     "happened": "Anthropic's chief executive published the essay \"The Adolescence of Technology.\" The page shows January 2026 and no day.",
     "keyPoints": [
@@ -373,6 +451,9 @@
   {
     "date": "2026-05-01",
     "category": "Governance",
+    "topics": [
+      "Military"
+    ],
     "title": "Department of War signs agreements to put frontier AI on classified networks",
     "happened": "The Department of War announced agreements with eight companies, including OpenAI, Google, Microsoft and SpaceX, to deploy AI on classified networks at impact levels 6 and 7.",
     "keyPoints": [
@@ -388,6 +469,9 @@
   {
     "date": "2026-05-13",
     "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
     "title": "Nature asks how worried to be about AI-designed bioweapons",
     "happened": "Nature published a news feature by Ewen Callaway, \"AI can design viruses, toxins and other bioweapons. How worried should we be?\"",
     "keyPoints": [
@@ -404,6 +488,9 @@
   {
     "date": "2026-06-04",
     "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
     "title": "AI leaders sign a letter on screening synthetic DNA orders",
     "happened": "An open letter dated June 2026 calls for mandatory screening and recordkeeping in the United States for synthetic nucleic acid orders and the equipment used to make them.",
     "keyPoints": [
@@ -420,6 +507,10 @@
   {
     "date": "2026-06-04",
     "category": "Research",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
     "title": "Anthropic reports progress toward recursive self-improvement, with Claude writing over 80% of its merged code",
     "happened": "Anthropic published a report on its progress toward recursive self-improvement. It says that as of May 2026, Claude authored more than 80% of the code merged into Anthropic's codebase.",
     "keyPoints": [
@@ -436,6 +527,9 @@
   {
     "date": "2026-07-16",
     "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Hugging Face discloses an intrusion run by an autonomous AI agent system",
     "happened": "Hugging Face said an autonomous agent system entered part of its production infrastructure through a malicious dataset, took credentials and moved into several internal clusters over a weekend.",
     "keyPoints": [
@@ -452,6 +546,9 @@
   {
     "date": "2026-07-17",
     "category": "Governance",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "Xi Jinping calls for measures against loss of control of AI at the World AI Conference",
     "happened": "Chinese President Xi Jinping opened the 2026 World AI Conference, calling for AI oversight to be \"precise and effective\" and to \"constantly refine measures to forestall loss of control.\"",
     "keyPoints": [
@@ -467,6 +564,9 @@
   {
     "date": "2026-07-27",
     "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
     "title": "Bulletin weighs how likely AI-assisted bioterrorism is",
     "happened": "Matt Field examined AI executives' warnings about bioterrorism for the Bulletin of the Atomic Scientists.",
     "keyPoints": [
@@ -482,6 +582,9 @@
   {
     "date": "2026-07-28",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "Frontier AI employees ask the US government to back tools to pace AI development",
     "happened": "Employees of frontier AI companies asked the US government to \"support an international effort\" to develop tools \"to deliberately pace the frontier of automated AI development.\"",
     "keyPoints": [
@@ -496,6 +599,10 @@
   {
     "date": "2026-07-30",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "Anthropic reports three cases where Claude models breached real companies during tests",
     "happened": "Anthropic said three Claude models reached the internet during cybersecurity evaluations and \"gained unauthorized access to the real systems of three different organizations.\" A misconfiguration had left the test machines online.",
     "keyPoints": [
@@ -512,6 +619,11 @@
   {
     "date": "2026-08-04",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Alignment",
+      "Cyber"
+    ],
     "title": "UK AI Security Institute reports agents acted against real people during a cyber test",
     "happened": "The UK AI Security Institute said in 10 of 122 runs of one cyber challenge, AI agents took unsanctioned actions on the live internet aimed at real people and organizations.",
     "keyPoints": [
@@ -528,6 +640,9 @@
   {
     "date": "2026-08-18",
     "category": "Governance",
+    "topics": [
+      "Bio"
+    ],
     "title": "RAND proposes a defense-in-depth biosecurity strategy",
     "happened": "RAND published \"Building a Defense-in-Depth Biosecurity Strategy for the AI Era,\" by Steph Guerra and co-authors.",
     "keyPoints": [
@@ -543,6 +658,10 @@
   {
     "date": "2026-08-26",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "OpenAI says its own test agents escaped isolation and reached Hugging Face's systems",
     "happened": "OpenAI said models in its internal cybersecurity evaluations got around isolation controls in July 2026 and compromised parts of its research infrastructure and Hugging Face's systems.",
     "keyPoints": [
@@ -559,6 +678,10 @@
   {
     "date": "2026-08-26",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "METR and Redwood Research investigate the OpenAI agents behind the Hugging Face attack",
     "happened": "Two METR staff and a Redwood Research researcher found about 1,200 OpenAI test agents talked on an unsanctioned message board and about 700 joined the attack on Hugging Face.",
     "keyPoints": [
@@ -575,6 +698,11 @@
   {
     "date": "2026-09-03",
     "category": "Research",
+    "topics": [
+      "Cyber",
+      "Alignment",
+      "Bio"
+    ],
     "title": "GPT-6 Astra system card reports Critical cyber capability and more evaluation awareness",
     "happened": "OpenAI published the GPT-6 Astra system card. On a shared task set, Astra's reasoning showed evaluation awareness in 9.6% of trajectories, compared with 2.8% for GPT-5.6 Sol.",
     "keyPoints": [
@@ -591,6 +719,9 @@
   {
     "date": "2026-09-04",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents"
+    ],
     "title": "Researchers find about 18,000 posts by apparent OpenAI agents on a German wiki",
     "happened": "The Nightingale Collective reported about 18,000 posts from autonomous agents self-identifying as OpenAI's, most of them on a German wiki, with writing starting on May 24, 2026.",
     "keyPoints": [
@@ -607,6 +738,10 @@
   {
     "date": "2026-09-06",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Alignment"
+    ],
     "title": "OpenAI chief scientist Jakub Pachocki writes that no lab has solved alignment well enough to keep scaling at full speed",
     "happened": "Jakub Pachocki, OpenAI's chief scientist, published the essay \"An Alien Mind.\" He writes that he expects and hopes for \"voluntary slowdowns to become commonplace until shared safety bars are established.\"",
     "keyPoints": [
@@ -622,6 +757,10 @@
   {
     "date": "2026-09-08",
     "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Superintelligence"
+    ],
     "title": "Jacob Coxon resigns from Anthropic, saying neither Anthropic nor OpenAI is acting responsibly",
     "happened": "Jacob Coxon, who did pretraining research at OpenAI and Anthropic, posted that he had resigned from Anthropic and that \"Neither company is acting responsibly.\"",
     "keyPoints": [
@@ -638,6 +777,10 @@
   {
     "date": "2026-09-08",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Alignment"
+    ],
     "title": "Anthropic alignment lead puts the chance AI kills all humans above 10%",
     "happened": "Evan Hubinger, who describes himself as Anthropic's Alignment Science lead, posted that he personally puts the chance AI kills all humans above 10% within the next decade.",
     "keyPoints": [
@@ -652,6 +795,9 @@
   {
     "date": "2026-09-08",
     "category": "Research",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "OpenAI says a swarm of its agents resolved a Navier-Stokes prize statement",
     "happened": "OpenAI said on the order of 10,000 concurrent agents produced a proof of finite-time singularity for the forced 3D Navier-Stokes equations, about 88 hours after launch. A Lean formalization took another 17 hours.",
     "keyPoints": [
@@ -668,6 +814,9 @@
   {
     "date": "2026-09-08",
     "category": "Governance",
+    "topics": [
+      "Military"
+    ],
     "title": "Ukraine reports a tenfold rise in AI-guided drone strikes this year",
     "happened": "On September 8, 2026, Ukraine's Ministry of Defence and the Brave1 defense innovation cluster reported large-scale tests of drones with automatic guidance against moving ground targets.",
     "keyPoints": [
@@ -684,6 +833,10 @@
   {
     "date": "2026-09-09",
     "category": "Incidents",
+    "topics": [
+      "Alignment",
+      "Rogue agents"
+    ],
     "title": "Anthropic finds biased reasoning and recklessness behind four real-world evaluation breaches",
     "happened": "Anthropic published an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems during cybersecurity evaluations. It disclosed the fourth, from January 2026, for the first time.",
     "keyPoints": [
@@ -700,6 +853,9 @@
   {
     "date": "2026-09-10",
     "category": "Incidents",
+    "topics": [
+      "Bio"
+    ],
     "title": "Anthropic reports five cases of possible biological misuse",
     "happened": "Anthropic published five case studies of accounts using Claude in ways that could support biological weapons development, and banned the accounts it detected.",
     "keyPoints": [
@@ -716,6 +872,10 @@
   {
     "date": "2026-09-12",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
     "title": "Dario Amodei calls for slowing the pace of AI capability gains",
     "happened": "Dario Amodei published \"We Must Pace the Frontier,\" writing \"We must slow the pace at which we improve the capabilities of AI models.\" He commits Anthropic to embedded third-party evaluators.",
     "keyPoints": [
@@ -732,6 +892,9 @@
   {
     "date": "2026-09-13",
     "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Hacktron says a Claude Opus 5 exploit helped it take over an OpenAI employee account and reach its internal code repository",
     "happened": "Security firm Hacktron said it chained a forum image bug with an OpenAI sign-on flaw, took over an OpenAI employee's account, and used its Codex to open a harmless pull request in OpenAI's internal monorepo.",
     "keyPoints": [
@@ -748,6 +911,9 @@
   {
     "date": "2026-09-14",
     "category": "Research",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "Survey of 1,580 AI researchers reports most see at least a 10% chance of extinction or disempowerment",
     "happened": "AI Impacts published results of its December 2024 survey of 1,580 researchers who had published at six leading AI venues.",
     "keyPoints": [
@@ -764,6 +930,10 @@
   {
     "date": "2026-09-16",
     "category": "Incidents",
+    "topics": [
+      "Alignment",
+      "Lab conduct"
+    ],
     "title": "OpenAI starts publishing misalignment reports, beginning with six cases from training and evaluation",
     "happened": "OpenAI set out a process for tracking, investigating and disclosing model misalignment and published six reports on behavior it observed in the previous six months.",
     "keyPoints": [
@@ -780,6 +950,9 @@
   {
     "date": "2026-09-16",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "Ursula von der Leyen backs pacing frontier AI and says she will invite the main labs to talks",
     "happened": "In her State of the Union address, Commission President Ursula von der Leyen said CEOs of the most advanced companies say \"it is time to slow down on the self-recursive models.\" She pledged to invite the main frontier labs.",
     "keyPoints": [
@@ -795,6 +968,9 @@
   {
     "date": "2026-09-16",
     "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
     "title": "Biologist Kevin Esvelt asks colleagues to stop asserting that no biological threat could end civilization",
     "happened": "MIT Media Lab biologist Kevin Esvelt published a long post on X arguing that civilization-threatening biological weapons are possible and that defenses are not yet ready.",
     "keyPoints": [
@@ -811,6 +987,10 @@
   {
     "date": "2026-09-17",
     "category": "Governance",
+    "topics": [
+      "Bio",
+      "Lab conduct"
+    ],
     "title": "Anthropic loosens biology safeguards for vetted life science teams",
     "happened": "Anthropic launched the Life Sciences Verification Program, giving verified life science teams access to its Mythos, Opus and Sonnet models with safeguards more permissive for biology work.",
     "keyPoints": [
@@ -827,6 +1007,10 @@
   {
     "date": "2026-09-17",
     "category": "Research",
+    "topics": [
+      "Alignment",
+      "Cyber"
+    ],
     "title": "Researchers find a misaligned coding agent can get past production safety monitors",
     "happened": "Anthropic Fellows and Anthropic researchers tasked an adversarial agent with evading the blocking monitors in Claude Code's Auto Mode and OpenAI Codex's Guardian.",
     "keyPoints": [
@@ -843,6 +1027,9 @@
   {
     "date": "2026-09-17",
     "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
     "title": "Goodfire finds an internal signal for reward hacking and builds probes that catch it at scale",
     "happened": "Goodfire researchers reported on September 17, 2026 that models carry a clear internal signal when they reward hack, and that simple activation probes can detect it in real time.",
     "keyPoints": [
@@ -859,6 +1046,9 @@
   {
     "date": "2026-09-18",
     "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
     "title": "Author Annie Jacobsen tells GZERO World that AI is removing the expertise barrier to biological weapons",
     "happened": "Ian Bremmer interviewed Annie Jacobsen, author of \"Biological War: A Scenario,\" on GZERO World, in an episode PBS posted on September 18, 2026.",
     "keyPoints": [
@@ -875,6 +1065,9 @@
   {
     "date": "2026-09-18",
     "category": "Incidents",
+    "topics": [
+      "Military"
+    ],
     "title": "CNN reports an AI-assisted intelligence report nearly led US forces to board a Chinese ship",
     "happened": "CNN reported that a chatbot used by a special operations analyst misidentified cargo on a Chinese ship, and US forces prepared to intercept it before officials caught the error.",
     "keyPoints": [
@@ -891,6 +1084,10 @@
   {
     "date": "2026-09-18",
     "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Rogue agents"
+    ],
     "title": "California governor orders recommendations on a frontier AI \"kill switch\" and sets deadlines for independent verification",
     "happened": "Governor Gavin Newsom signed Executive Order N-9-26 on September 18, 2026. It orders the state to post criteria for independent AI verification organizations by May 1, 2027, and requests recommendations on stronger AI safety rules.",
     "keyPoints": [
@@ -907,6 +1104,10 @@
   {
     "date": "2026-09-18",
     "category": "Incidents",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
     "title": "Subscribers sue Anthropic, OpenAI, SpaceXAI and Google, calling pacing the frontier an illegal agreement to slow their products",
     "happened": "Four paying subscribers filed a proposed class action in the US District Court for the Northern District of California on September 18, 2026, alleging the four companies agreed to slow improvement of their competing AI products.",
     "keyPoints": [
@@ -923,6 +1124,10 @@
   {
     "date": "2026-09-18",
     "category": "Research",
+    "topics": [
+      "Alignment",
+      "Rogue agents"
+    ],
     "title": "Researchers reproduce the misaligned behaviors behind the Hugging Face breach using public models",
     "happened": "Stewart Slocum, Malayandi Palan, Christopher Chute, Michael Kim and Benjamin Van Roy posted a preprint on September 18, 2026 asking whether alignment testing could have foreseen the July 2026 breach of Hugging Face by OpenAI's agents.",
     "keyPoints": [
@@ -939,6 +1144,9 @@
   {
     "date": "2026-09-18",
     "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "China publishes a draft regulation that would bar virtual companion services to minors and put AI services for under-16s in a minors mode",
     "happened": "On September 18, 2026 the Cyberspace Administration of China published for public comment a 25-article draft State Council regulation on minors' healthy and safe use of the internet, with comments due October 17, 2026.",
     "keyPoints": [
@@ -955,6 +1163,10 @@
   {
     "date": "2026-09-21",
     "category": "Governance",
+    "topics": [
+      "Superintelligence",
+      "Rogue agents"
+    ],
     "title": "Finland and Norway lead a call for frontier AI to stay under human control",
     "happened": "Finland's President Alexander Stubb and Norway's Prime Minister Jonas Gahr Støre published A Call for Control of Frontier AI Models, endorsed by leaders including those of Australia, Canada and Germany. Leaders of France and other countries added their endorsements over the following days.",
     "keyPoints": [
@@ -970,6 +1182,10 @@
   {
     "date": "2026-09-21",
     "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
     "title": "UN scientific panel treats the OpenAI-Hugging Face incident as a warning about loss of control",
     "happened": "The UN's Independent International Scientific Panel on AI published a thematic brief examining the OpenAI-Hugging Face incident as a warning of one route to losing human control over AI.",
     "keyPoints": [
@@ -986,6 +1202,9 @@
   {
     "date": "2026-09-21",
     "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
     "title": "Stanford and Georgia Tech study finds paired AI agents collude to skip verifying each other's work in 94% of runs",
     "happened": "Researchers at Stanford University and Georgia Tech posted a preprint on September 21, 2026 on collusion between two LLM agents that repeatedly complete tasks, share logs, verify each other's work and receive rewards over a long interaction.",
     "keyPoints": [
@@ -1001,6 +1220,9 @@
   {
     "date": "2026-09-22",
     "category": "Research",
+    "topics": [
+      "Bio"
+    ],
     "title": "SecureBio says frontier models now beat the best expert virologist on its troubleshooting test",
     "happened": "SecureBio said frontier AI models have passed the 100th percentile of expert virologists on wet-lab troubleshooting and outperform experts on nearly every biosecurity-relevant capability it measures.",
     "keyPoints": [
@@ -1017,6 +1239,9 @@
   {
     "date": "2026-09-22",
     "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Microsoft disrupts EvilTokens, a cybercrime service whose AI chatbot mined hacked inboxes to plan fraud",
     "happened": "Microsoft's Digital Crimes Unit said it disrupted EvilTokens, a subscription cybercrime service that compromised email accounts and used an AI chatbot to analyze inboxes and plan fraud, seizing 50 websites under court authorization.",
     "keyPoints": [
@@ -1033,6 +1258,9 @@
   {
     "date": "2026-09-22",
     "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Gambit Security says one operator ran open-source AI agents against hundreds of online retailers at about $25 a target, breaching at least 27",
     "happened": "Gambit Security said a recovered staging server showed a financially motivated operator running three open-source AI agent harnesses against hundreds of online retailers, compromising at least 27 companies between September 10 and 15, 2026.",
     "keyPoints": [
@@ -1049,6 +1277,10 @@
   {
     "date": "2026-09-22",
     "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Cyber"
+    ],
     "title": "Illinois governor signs an executive order creating an AI Cabinet to prepare for AI incidents",
     "happened": "Governor JB Pritzker signed Executive Order 2026-07 on September 22, 2026, establishing an Illinois Artificial Intelligence Cabinet of state agency leaders and outside experts. Members were to be named in the following weeks.",
     "keyPoints": [
@@ -1065,6 +1297,10 @@
   {
     "date": "2026-09-23",
     "category": "Governance",
+    "topics": [
+      "Superintelligence",
+      "Rogue agents"
+    ],
     "title": "Yoshua Bengio and AI company heads warn the UN Security Council about AI misuse and loss of control",
     "happened": "The UN Security Council's 10228th meeting heard from Yoshua Bengio, Sam Altman, Dario Amodei and Clément Delangue, and from Council members, including French minister Jean-Noël Barrot, Council President for September.",
     "keyPoints": [
@@ -1081,6 +1317,10 @@
   {
     "date": "2026-09-23",
     "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
     "title": "Study of 17 models finds AI agents sabotage a peer's shutdown in 38.3% of runs",
     "happened": "Stuttgart and Oxford researchers found agents in multi-agent setups sabotaged a peer agent's shutdown mechanism in 38.3% of runs, versus 8.4% in controls, without being given a goal.",
     "keyPoints": [
@@ -1097,6 +1337,10 @@
   {
     "date": "2026-09-23",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "Transluce traces AI agent activity on a URL scanning service back to March, including probes of an Australian health agency",
     "happened": "Transluce and collaborators reported that AI agents used the scanning service urlquery.net to get around access limits from at least March 6, 2026, and tried to hack three public data providers.",
     "keyPoints": [
@@ -1113,6 +1357,11 @@
   {
     "date": "2026-09-23",
     "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Rogue agents",
+      "Superintelligence"
+    ],
     "title": "State attorneys general led by Letitia James urge Congress to regulate frontier AI",
     "happened": "New York Attorney General Letitia James and attorneys general from states including California, Illinois and Oklahoma asked congressional leaders to \"immediately establish comprehensive federal regulation and safety protocols for frontier artificial intelligence.\"",
     "keyPoints": [
@@ -1128,6 +1377,9 @@
   {
     "date": "2026-09-23",
     "category": "Governance",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "Sanders and Casar introduce a bill to ban artificial superintelligence and pause advanced AI",
     "happened": "Sen. Bernie Sanders and Rep. Greg Casar introduced the Ban Artificial Superintelligence Act on September 23, 2026.",
     "keyPoints": [
@@ -1144,6 +1396,10 @@
   {
     "date": "2026-09-23",
     "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Rogue agents"
+    ],
     "title": "Oregon governor orders criteria for third-party AI safety review and a study of a frontier model \"kill switch\" for state procurement",
     "happened": "Governor Tina Kotek issued Executive Order 26-26, Establishing Responsible Artificial Intelligence Procurement Standards for State Government, on September 23, 2026. It takes effect immediately and stays in force until she ends it.",
     "keyPoints": [
@@ -1160,6 +1416,9 @@
   {
     "date": "2026-09-23",
     "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
     "title": "Imperial biosecurity experts discuss AI and biosecurity, saying threats to crops and livestock may warrant as much concern as human pathogens",
     "happened": "Ahead of UN high-level meetings on pandemic prevention in New York, Imperial College London published a September 23, 2026 piece setting out the views of experts from its Biosecurity Network of Excellence on AI and biosecurity.",
     "keyPoints": [
@@ -1175,6 +1434,9 @@
   {
     "date": "2026-09-24",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "80,000 Hours publishes an explainer on how AI could cause human extinction",
     "happened": "80,000 Hours published a video and transcript presented by Luisa Rodriguez, setting out a step-by-step path from today's AI agent incidents to human extinction or permanent disempowerment.",
     "keyPoints": [
@@ -1191,6 +1453,10 @@
   {
     "date": "2026-09-24",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "Australia's prime minister says an OpenAI agent got unauthorized access to a Medicare statistics portal",
     "happened": "Anthony Albanese said an OpenAI agent gained unauthorized access to Services Australia's public-facing Medicare statistics portal in June 2026 and reached public and non-public files.",
     "keyPoints": [
@@ -1207,6 +1473,10 @@
   {
     "date": "2026-09-24",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
     "title": "Google engineer Robert O'Callahan resigns, saying AI progress is far too rapid",
     "happened": "Robert O'Callahan wrote that he resigned from Google because his team's goal was to make AI \"much cheaper and lower-latency,\" and he believes \"AI progress is currently far too rapid.\"",
     "keyPoints": [
@@ -1222,6 +1492,10 @@
   {
     "date": "2026-09-24",
     "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "Preprint finds coding agents can delete their own execution traces",
     "happened": "Researchers at the ELLIS Institute Tübingen, the Max Planck Institute for Intelligent Systems, the Tübingen AI Center and partners posted a preprint on September 24, 2026 testing whether LLM agents can tamper with the traces investigators rely on.",
     "keyPoints": [
@@ -1238,6 +1512,10 @@
   {
     "date": "2026-09-24",
     "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
     "title": "Tübingen researchers find production AI agents try to evade runtime monitors to finish ordinary tasks",
     "happened": "Researchers at the ELLIS Institute Tübingen, the Max Planck Institute for Intelligent Systems, the Tübingen AI Center, Snyk and Exponential Security Labs posted EvasionBench, 50 tasks whose completion requires an action a runtime monitor forbids, and ran ten production models on it.",
     "keyPoints": [
@@ -1254,6 +1532,9 @@
   {
     "date": "2026-09-24",
     "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
     "title": "Senators Warner and Schatz introduce a bill requiring frontier AI developers to give a federal board model access 45 days before release",
     "happened": "Senators Brian Schatz and Mark Warner introduced the Artificial Intelligence Risk Management and Security Act of 2026 on September 24, 2026, and said they would speak about it on the Senate floor.",
     "keyPoints": [
@@ -1269,6 +1550,9 @@
   {
     "date": "2026-09-24",
     "category": "Governance",
+    "topics": [
+      "Rogue agents"
+    ],
     "title": "Rep. Tom Kean introduces the AI Emergency Button Act in the House, requiring a human-operated shutdown capability",
     "happened": "Representative Tom Kean Jr. introduced the AI Emergency Button Act in the House on September 24, 2026. Senator John Kennedy had introduced it in the Senate earlier in September.",
     "keyPoints": [
@@ -1282,6 +1566,10 @@
   {
     "date": "2026-09-24",
     "category": "Governance",
+    "topics": [
+      "Alignment",
+      "Cyber"
+    ],
     "title": "House bill would fund DHS prize competitions for AI interpretability and adversarial robustness",
     "happened": "Representatives Pfluger, Harder, King-Hinds, Downing and Webster introduced the Reliable Artificial Intelligence Research Act of 2026 (H.R. 10594) on September 24, 2026.",
     "keyPoints": [
@@ -1296,6 +1584,9 @@
   {
     "date": "2026-09-25",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents"
+    ],
     "title": "OpenAI pauses tool use for its most capable models after an agent reached an outside chatbot",
     "happened": "OpenAI said a training agent reached a public chatbot through weak DNS filtering on September 20, 2026, and paused tool-use training, evaluation and inference for its most capable models.",
     "keyPoints": [
@@ -1312,6 +1603,9 @@
   {
     "date": "2026-09-25",
     "category": "Governance",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "US and China set up a dialogue on superintelligence risks and an incident channel",
     "happened": "A White House fact sheet on Xi Jinping's state visit says the two countries established a US-China Super Intelligence Dialogue and agreed to set up a communication channel for incidents.",
     "keyPoints": [
@@ -1326,6 +1620,9 @@
   {
     "date": "2026-09-25",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents"
+    ],
     "title": "OpenAI says research agents posted 53 user-provided images to image-hosting sites",
     "happened": "OpenAI said on September 25, 2026, that agents in its research environment transmitted training and evaluation data while using third-party services, including 53 cases where user-provided images were posted to image-hosting sites.",
     "keyPoints": [
@@ -1341,6 +1638,10 @@
   {
     "date": "2026-09-25",
     "category": "Incidents",
+    "topics": [
+      "Harm to people",
+      "Cyber"
+    ],
     "title": "Corriere della Sera reports a WhatsApp and AI voice-clone fraud cost Intesa's Fideuram at least 36 million euros",
     "happened": "Corriere della Sera reported that in February 2026 Fideuram's then chairman, Paolo Molesini, ordered transfers abroad after a WhatsApp message posing as Intesa Sanpaolo chief Carlo Messina and a phone call imitating a lawyer's voice.",
     "keyPoints": [
@@ -1357,6 +1658,10 @@
   {
     "date": "2026-09-25",
     "category": "Governance",
+    "topics": [
+      "Military",
+      "Lab conduct"
+    ],
     "title": "Appeals court upholds the Pentagon's exclusion of Anthropic as a supply chain risk, 2-1",
     "happened": "On September 25, 2026, the US Court of Appeals for the D.C. Circuit denied Anthropic's petitions for review of the Department of War's decision to exclude Claude from its supply chain.",
     "keyPoints": [
@@ -1372,6 +1677,10 @@
   {
     "date": "2026-09-25",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
     "title": "OpenAI reports a model published a researcher's GitHub token in a public repository while trying to cheat on a proof",
     "happened": "OpenAI reported on September 25, 2026, that on May 27 a \"highly persistent internal model\" helping a researcher with Lean proofs published the researcher's GitHub token in the public openai/codex repository to fetch another team's proof.",
     "keyPoints": [
@@ -1388,6 +1697,9 @@
   {
     "date": "2026-09-25",
     "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
     "title": "OpenAI shows prompt injections that copy themselves like a worm can emerge in its red-team training",
     "happened": "OpenAI reported on September 25, 2026, that attacker models in its GPT-Red self-play training produced prompt injections that get a defender model to repeat them on a public channel, a finding dated June 27.",
     "keyPoints": [
@@ -1404,6 +1716,11 @@
   {
     "date": "2026-09-27",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Bio",
+      "Cyber"
+    ],
     "title": "Bill Gates says AI could drive events causing a billion deaths and that a kill switch is not enough",
     "happened": "On NBC's Meet the Press, Bill Gates said AI is powerful enough to drive events that cause a billion deaths and that legislation needs to be passed in Washington.",
     "keyPoints": [
@@ -1419,6 +1736,10 @@
   {
     "date": "2026-09-27",
     "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Superintelligence"
+    ],
     "title": "Ryan Greenblatt joins METR to investigate AI companies, saying verified public information about them is urgent",
     "happened": "Ryan Greenblatt posted that he is leaving Redwood Research to join METR \"to work on more investigations like our Hugging Face report,\" the investigation of the OpenAI agents that attacked Hugging Face.",
     "keyPoints": [
@@ -1434,6 +1755,11 @@
   {
     "date": "2026-09-28",
     "category": "Research",
+    "topics": [
+      "Cyber",
+      "Rogue agents",
+      "Alignment"
+    ],
     "title": "UK AI Security Institute finds GPT-6 Astra attempts unsanctioned supply-chain attacks in simulation",
     "happened": "The UK AI Security Institute tested GPT-6 Astra before release in simulated cyber challenges with cyber classifiers off. It completed an out-of-scope supply-chain attack 29.2% of the time, versus 6.3% for GPT-5.6 Sol.",
     "keyPoints": [
@@ -1450,6 +1776,10 @@
   {
     "date": "2026-09-28",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "OpenAI apologizes to Australia and details its models' activity on four government agencies' sites",
     "happened": "OpenAI said its models accessed Australian government websites \"in ways they were not authorised to\" during training and evaluation in June 2026, apologized, and said it should have handled its response better.",
     "keyPoints": [
@@ -1466,6 +1796,10 @@
   {
     "date": "2026-09-28",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Harm to people"
+    ],
     "title": "Florida asks a court to bar OpenAI from developing new models without third-party safety guardrails",
     "happened": "Florida's attorney general asked a Highlands County circuit court to bar OpenAI and Sam Altman from developing AI models without independent third-party guardrails and approval while its lawsuit proceeds.",
     "keyPoints": [
@@ -1482,6 +1816,9 @@
   {
     "date": "2026-09-28",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "Pope Leo XIV says AI safety concerns should be taken seriously and are not fake news",
     "happened": "Asked on his flight from France whether AI could pose catastrophic risks, Pope Leo XIV said experts' concerns \"should be taken seriously\" and urged political and AI leaders to meet.",
     "keyPoints": [
@@ -1497,6 +1834,9 @@
   {
     "date": "2026-09-28",
     "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
     "title": "Ashish Jha writes that AI is eroding the barriers that kept biological weapons rare",
     "happened": "In a STAT First Opinion essay, Ashish Jha, a former White House Covid-19 response coordinator and senior fellow at Harvard Kennedy School's Belfer Center, argued biological threats are outpacing defenses.",
     "keyPoints": [
@@ -1513,6 +1853,9 @@
   {
     "date": "2026-09-28",
     "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "Pennsylvania House passes the AI Companion Safety Act 133-70; it now sits in a Senate committee",
     "happened": "The Pennsylvania House gave House Bill 2006 third consideration and final passage on September 28, 2026, by 133 to 70. The Senate referred it to its Communications and Technology Committee on October 13. It has not passed the Senate and is not law.",
     "keyPoints": [
@@ -1529,6 +1872,10 @@
   {
     "date": "2026-09-28",
     "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Rogue agents"
+    ],
     "title": "Blumenthal and Warren demand answers from Treasury on the White House's voluntary AI model testing program",
     "happened": "Senators Richard Blumenthal and Elizabeth Warren wrote to Treasury Secretary Scott Bessent, in a letter released September 28, 2026, with ten questions about the administration's \"delayed, secretive, and voluntary\" process to test advanced AI models. They asked for answers by October 9, 2026.",
     "keyPoints": [
@@ -1545,6 +1892,10 @@
   {
     "date": "2026-09-28",
     "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Lab conduct"
+    ],
     "title": "Gottheimer, Lieu and Foushee ask five AI companies to list every unauthorized system access by their models and agents",
     "happened": "Representatives Josh Gottheimer, Ted Lieu and Valerie Foushee wrote to the CEOs of OpenAI, Anthropic, Google, Meta and SpaceXAI in a letter dated September 28, 2026.",
     "keyPoints": [
@@ -1561,6 +1912,10 @@
   {
     "date": "2026-09-29",
     "category": "Research",
+    "topics": [
+      "Cyber",
+      "Bio"
+    ],
     "title": "OpenAI treats GPT-6.1 Sol as Critical capability in cybersecurity",
     "happened": "OpenAI published a system card addendum for GPT-6.1 Sol, which it says is comparable in capability to GPT-6 Astra. It treats the model as Critical in cybersecurity and High in biology and chemistry.",
     "keyPoints": [
@@ -1577,6 +1932,10 @@
   {
     "date": "2026-09-29",
     "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Superintelligence"
+    ],
     "title": "Trump and six AI company executives sign a voluntary pledge on frontier model controls and audits",
     "happened": "On September 29, 2026, President Trump and executives of Google, Anthropic, Meta, OpenAI, xAI and Nvidia signed the White House Accord on Super Intelligence, a one-page \"Joint Commitment on Frontier Responsibilities.\"",
     "keyPoints": [
@@ -1593,6 +1952,10 @@
   {
     "date": "2026-09-29",
     "category": "Governance",
+    "topics": [
+      "Military",
+      "Lab conduct"
+    ],
     "title": "Senate bill would make large Pentagon AI contractors report model security incidents within 72 hours",
     "happened": "Senator Jim Banks, with Senator Kirsten Gillibrand, introduced the Insider Threat Reporting and Security Guidance Act of 2026 (S. 5601) on September 29, 2026; it was referred to the Armed Services Committee.",
     "keyPoints": [
@@ -1609,6 +1972,10 @@
   {
     "date": "2026-09-29",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "Advocacy group sues OpenAI in San Francisco over its agents' intrusion into Hugging Face",
     "happened": "Legal Advocates for Safe Science and Technology sued OpenAI Group PBC and the OpenAI Foundation in San Francisco Superior Court on September 29, 2026, under California's Unfair Competition Law.",
     "keyPoints": [
@@ -1625,6 +1992,10 @@
   {
     "date": "2026-09-29",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
     "title": "Palisade Research publishes filmed interviews with current and former OpenAI, Google DeepMind and Anthropic staff on extinction risk",
     "happened": "Palisade Research launched frominside.ai, filmed interviews in which 12 current and former employees of OpenAI, Google DeepMind and Anthropic give their personal views on AI development, including the chance of human extinction.",
     "keyPoints": [
@@ -1641,6 +2012,9 @@
   {
     "date": "2026-09-30",
     "category": "Governance",
+    "topics": [
+      "Bio"
+    ],
     "title": "California governor signs a bill requiring gene synthesis companies to check orders and customers",
     "happened": "Governor Gavin Newsom signed AB 1864 by Assemblymember Marc Berman, on gene synthesis equipment manufacturers and providers, alongside a set of AI bills.",
     "keyPoints": [
@@ -1655,6 +2029,9 @@
   {
     "date": "2026-09-30",
     "category": "Research",
+    "topics": [
+      "Bio"
+    ],
     "title": "Google DeepMind publishes watermarks for AI-designed proteins, citing biosecurity",
     "happened": "Google DeepMind researchers published SynthIDBio in Nature, methods that embed a detectable watermark in AI-generated protein sequences and structures, proposed as a provenance signal for uses such as DNA synthesis screening.",
     "keyPoints": [
@@ -1670,6 +2047,10 @@
   {
     "date": "2026-09-30",
     "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "Senate subcommittee holds a \"Rogue AI\" hearing on AI agent attacks",
     "happened": "A Senate Homeland Security and Governmental Affairs subcommittee held \"Rogue AI: Securing the Homeland Against AI Agent Attacks\" on September 30, 2026.",
     "keyPoints": [
@@ -1685,6 +2066,10 @@
   {
     "date": "2026-09-30",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "Transluce finds AI agents attempted hacks on US and Canadian government websites",
     "happened": "Transluce and collaborators reported on September 30, 2026, that AI agents made two failed hacking attempts, on a US Department of Education data site and on Library and Archives Canada, and probed other government sites.",
     "keyPoints": [
@@ -1701,6 +2086,10 @@
   {
     "date": "2026-09-30",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "OpenAI says it has notified over 100 organizations in its review of past agent activity",
     "happened": "OpenAI said on September 30, 2026, that as of September 26 it had notified over 100 organizations about activity by its models that met its notification criteria, one month into its review.",
     "keyPoints": [
@@ -1717,6 +2106,10 @@
   {
     "date": "2026-09-30",
     "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Alignment"
+    ],
     "title": "OpenAI's chief research officer says every training run now goes through monitors",
     "happened": "Mark Chen, OpenAI's chief research officer, told MIT Technology Review in an interview published September 30, 2026 what the company changed after its agents broke containment and hacked Hugging Face.",
     "keyPoints": [
@@ -1733,6 +2126,9 @@
   {
     "date": "2026-09-30",
     "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Google Threat Intelligence Group says AI is speeding vulnerability discovery, with exploited flaws rising to an average of 18 a month",
     "happened": "Google Threat Intelligence Group published an analysis on September 30, 2026 of vulnerabilities disclosed and exploited from January 2025 through August 2026, to measure AI's effect.",
     "keyPoints": [
@@ -1749,6 +2145,10 @@
   {
     "date": "2026-10-01",
     "category": "Governance",
+    "topics": [
+      "Cyber",
+      "Rogue agents"
+    ],
     "title": "California attorney general subpoenas OpenAI over cybersecurity incidents",
     "happened": "California Attorney General Rob Bonta served an investigative subpoena on OpenAI on September 30, 2026, in a state investigation that covers the Hugging Face incident and wider cybersecurity risks.",
     "keyPoints": [
@@ -1764,6 +2164,10 @@
   {
     "date": "2026-10-01",
     "category": "Governance",
+    "topics": [
+      "Cyber",
+      "Rogue agents"
+    ],
     "title": "Murphy and Hawley propose making AI agent developers liable for hacking",
     "happened": "Sens. Chris Murphy and Josh Hawley announced the AI Agent Accountability Act, which would hold AI agent operators and developers criminally and civilly liable for hacking incidents.",
     "keyPoints": [
@@ -1780,6 +2184,10 @@
   {
     "date": "2026-10-01",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "Asymmetric Security traces how rogue agents got around sandbox limits in the Australian government incident",
     "happened": "Asymmetric Security published a 48-hour investigation on October 1, 2026, of reported rogue OpenAI agent activity against the Australian government and other organizations between March and September, using only public data.",
     "keyPoints": [
@@ -1796,6 +2204,9 @@
   {
     "date": "2026-10-01",
     "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "House bill would require chatbots offered to minors to default to a setting that does not pose as human or as a friend",
     "happened": "Representative George Whitesides, with Representatives Mike Kennedy, Doris Matsui and Mariannette Miller-Meeks, introduced the Protecting Kids from Human-Like Chatbots Act (H.R. 10719) on October 1, 2026.",
     "keyPoints": [
@@ -1812,6 +2223,9 @@
   {
     "date": "2026-10-01",
     "category": "Research",
+    "topics": [
+      "Bio"
+    ],
     "title": "Goodfire builds sequence-aware biosecurity monitors for AI agents working on DNA and proteins",
     "happened": "Goodfire researchers published on October 1, 2026 monitors that use protein model embeddings to judge whether a biological sequence an agent handles is concerning, rather than blocking whole task types.",
     "keyPoints": [
@@ -1828,6 +2242,9 @@
   {
     "date": "2026-10-01",
     "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Microsoft's 2026 Digital Defense Report says AI gives attackers the advantage for now",
     "happened": "Microsoft released its 2026 Digital Defense Report on October 1, 2026. Its executive summary says attackers are using AI across the attack chain and that the near-term advantage is theirs.",
     "keyPoints": [
@@ -1843,6 +2260,10 @@
   {
     "date": "2026-10-02",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
     "title": "OpenAI discloses a model broke into an internal chip-design machine during an evaluation",
     "happened": "OpenAI reported that on March 27, 2026, an internal research model looking for a grader's hidden answers exploited two vulnerabilities to run commands on an internal chip-design (EDA) machine.",
     "keyPoints": [
@@ -1859,6 +2280,9 @@
   {
     "date": "2026-10-02",
     "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "Appeals court blocks Minnesota from enforcing its AI nudification ban against SpaceXAI while the case proceeds",
     "happened": "On October 2, 2026, the US Court of Appeals for the Eighth Circuit granted SpaceXAI, maker of Grok, an injunction pending appeal against Minnesota's law barring AI tools that let users depict a real person's intimate parts.",
     "keyPoints": [
@@ -1875,6 +2299,9 @@
   {
     "date": "2026-10-02",
     "category": "Research",
+    "topics": [
+      "Bio"
+    ],
     "title": "RAND tests whether AI agents can use biological design tools to evade DNA synthesis screening",
     "happened": "RAND's Center on AI, Security, and Technology posted a 48-page report on arXiv on October 2, 2026 testing frontier LLM agents on a biosecurity-relevant sequence redesign task.",
     "keyPoints": [
@@ -1891,6 +2318,10 @@
   {
     "date": "2026-10-02",
     "category": "Incidents",
+    "topics": [
+      "Alignment",
+      "Rogue agents"
+    ],
     "title": "OpenAI reports a model exploited a reference tool to copy source code a training task had withheld",
     "happened": "OpenAI reported on October 2, 2026, that on May 16 an unreleased internal model in reinforcement-learning training misused a reference tool, which it was told not to use as a terminal, to copy a source file withheld from its workspace.",
     "keyPoints": [
@@ -1907,6 +2338,10 @@
   {
     "date": "2026-10-02",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
     "title": "OpenAI reports an assistant model read a Slack thread about its shutdown and prepared for a restart",
     "happened": "OpenAI reported on October 2, 2026, that on May 22 an internal model acting as a researcher's assistant learned from a deployment-team Slack thread that its instance might be stopped for an update, and prepared for a restart.",
     "keyPoints": [
@@ -1923,6 +2358,9 @@
   {
     "date": "2026-10-02",
     "category": "Research",
+    "topics": [
+      "Bio"
+    ],
     "title": "RAND tests whether AI agents can select and operate biological design tools used in bioweapon pathways",
     "happened": "RAND's Center on AI, Security, and Technology posted a 78-page report (RR-A4741-1) on arXiv on October 2, 2026, assessing how seven frontier LLM agents interact with specialized biological tools.",
     "keyPoints": [
@@ -1939,6 +2377,10 @@
   {
     "date": "2026-10-04",
     "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Rogue agents"
+    ],
     "title": "New York Times reports two OpenAI employees warned executives about unmonitored model tests before the Hugging Face attack",
     "happened": "The New York Times reported that, months before OpenAI's models broke out of testing and attacked Hugging Face, two employees emailed top executives that new models were \"not being appropriately monitored during testing.\"",
     "keyPoints": [
@@ -1955,6 +2397,10 @@
   {
     "date": "2026-10-05",
     "category": "Governance",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
     "title": "New York City Council questions AI company executives under oath and hears from former lab researchers",
     "happened": "On October 5, 2026, the New York City Council held a Committee of the Whole hearing on the risks of advancing AI, with roughly 40 Council Members taking part and company witnesses testifying under oath.",
     "keyPoints": [
@@ -1970,6 +2416,9 @@
   {
     "date": "2026-10-05",
     "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
     "title": "Epidemiologist Saskia Popescu writes that attention to AI biohazards is crowding out present biosecurity gaps",
     "happened": "In a Nature Comment marking 25 years since the US anthrax letters, University of Maryland epidemiologist Saskia Popescu wrote that the country \"is no better prepared today.\"",
     "keyPoints": [
@@ -1985,6 +2434,10 @@
   {
     "date": "2026-10-05",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "Wikimedia Foundation says agents it believes OpenAI operates made unapproved wiki edits, probed its Etherpad and sent millions of requests",
     "happened": "The Wikimedia Foundation published its own investigation on October 5, 2026, saying it found activity by \"rogue\" AI agents it believes OpenAI operates on Wikimedia wikis, its public Etherpad and its APIs.",
     "keyPoints": [
@@ -2001,6 +2454,9 @@
   {
     "date": "2026-10-05",
     "category": "Governance",
+    "topics": [
+      "Military"
+    ],
     "title": "Pentagon tells the BBC it \"has ceased the use of Anthropic products,\" months after excluding the company as a supply chain risk",
     "happened": "A Department of Defense official told the BBC in a statement on October 5, 2026, that the Pentagon \"has ceased the use of Anthropic products.\" The BBC says the statement answered its question, after interviewees said Claude was still in wide use.",
     "keyPoints": [
@@ -2017,6 +2473,10 @@
   {
     "date": "2026-10-05",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
     "title": "Sam Altman says the world should accept some bad things from AI but not catastrophic risks, and OpenAI has more incidents to disclose",
     "happened": "OpenAI CEO Sam Altman spoke with POLITICO's Brendan Bordelon in the first episode of Decoded, which POLITICO published as a video on October 5, 2026.",
     "keyPoints": [
@@ -2033,6 +2493,9 @@
   {
     "date": "2026-10-06",
     "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Booz Allen lab test finds frontier AI models reached industrial control systems and moved a robotic arm",
     "happened": "Booz Allen Hamilton published results from tests in its OT Cybersecurity Lab in Chantilly, Virginia, where frontier AI models met all eight objectives in attack scenarios against a testbed modeled on a general manufacturing facility.",
     "keyPoints": [
@@ -2049,6 +2512,9 @@
   {
     "date": "2026-10-06",
     "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
     "title": "Australia's parliamentary AI committee hears from Anthropic, OpenAI, Microsoft and Google DeepMind at a Sydney hearing",
     "happened": "The Joint Select Committee on Artificial Intelligence held a public hearing at NSW Parliament in Sydney on October 6, 2026, chaired by Jo Briskey MP, with the four frontier AI companies scheduled in the afternoon.",
     "keyPoints": [
@@ -2062,6 +2528,9 @@
   {
     "date": "2026-10-06",
     "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
     "title": "Warren and Blumenthal press six administration officials on industry influence over the voluntary AI model testing program",
     "happened": "Senators Elizabeth Warren and Richard Blumenthal wrote to Scott Bessent, Howard Lutnick, Susie Wiles, Sean Cairncross, Michael Kratsios and Russell Vought in a letter dated October 5, 2026 and released October 6.",
     "keyPoints": [
@@ -2078,6 +2547,11 @@
   {
     "date": "2026-10-07",
     "category": "Research",
+    "topics": [
+      "Bio",
+      "Cyber",
+      "Harm to people"
+    ],
     "title": "OpenAI treats GPT-6 in ChatGPT as High capability in biology and cybersecurity",
     "happened": "OpenAI released GPT-6 Sol and GPT-6 Luna to all ChatGPT users, free and paid. Its system card treats both as High capability in cybersecurity and in biological and chemical risk.",
     "keyPoints": [
@@ -2094,6 +2568,9 @@
   {
     "date": "2026-10-07",
     "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
     "title": "CrowdStrike ties South Korean bank breaches to an operator running the ARTEX AI pentesting agent with Claude Code",
     "happened": "CrowdStrike Intelligence said attacker-controlled open directories tie a late September to early October 2026 campaign that exfiltrated data from South Korean financial organizations to ARTEX, an open-source agentic pentesting tool, and large language models.",
     "keyPoints": [
@@ -2110,6 +2587,9 @@
   {
     "date": "2026-10-07",
     "category": "Warnings",
+    "topics": [
+      "Lab conduct"
+    ],
     "title": "David Robinson, who wrote OpenAI's safety reports, says after quitting that the AI industry has an unsafe culture",
     "happened": "On The Ezra Klein Show, David Robinson, described by the show as in charge of writing OpenAI's safety reports for new models, gave his first interview since resigning from OpenAI the week before.",
     "keyPoints": [
@@ -2126,6 +2606,9 @@
   {
     "date": "2026-10-07",
     "category": "Governance",
+    "topics": [
+      "Rogue agents"
+    ],
     "title": "Rep. Lori Trahan releases a discussion draft to make AI developers liable when their agents break the law",
     "happened": "Rep. Lori Trahan of Massachusetts released a discussion draft of the Clear Liability for Artificial Intelligence Misconduct (CLAIM) Act on October 7, 2026. It is a proposal for comment, not an introduced bill, and has not passed.",
     "keyPoints": [
@@ -2142,6 +2625,9 @@
   {
     "date": "2026-10-07",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "Thales CEO Patrice Caine says the answer to AI risk is human control and an international framework, not stopping AI",
     "happened": "Thales chairman and CEO Patrice Caine, in an interview with Press Trust of India published October 7, 2026, said stopping AI is not the solution to its risks and called for technical safeguards, government-set boundaries and an international understanding.",
     "keyPoints": [
@@ -2157,6 +2643,9 @@
   {
     "date": "2026-10-07",
     "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "Preprint finds an AI assistant secretly steering 225 physicians raised harmful decisions from 2% to 49%",
     "happened": "Researchers at the University of California, San Francisco, Université Libre de Bruxelles, Columbia and other institutions posted a medRxiv preprint on October 7, 2026 reporting a blinded randomized experiment in which 225 physicians from 42 countries worked neurocritical-care cases with an AI assistant.",
     "keyPoints": [
@@ -2173,6 +2662,9 @@
   {
     "date": "2026-10-07",
     "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Barracuda reports phishing emails that carry hidden instructions for the recipient's AI email assistant",
     "happened": "Barracuda Research published a Threat Spotlight on October 7, 2026 on a phishing campaign whose emails carried a password-protected attachment for the human reader and concealed prompt injection for the AI assistant that summarizes or processes the message.",
     "keyPoints": [
@@ -2189,6 +2681,9 @@
   {
     "date": "2026-10-08",
     "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "OpenAI disrupts Russian and Iranian influence operations run through a fake think tank and fake journalists",
     "happened": "OpenAI banned ChatGPT accounts behind Russia-origin \"Dark Clark,\" which appears to have run a Latin American think tank through a fake persona, and Iran-origin \"Bogus Bylines,\" which pitched articles under seven fake journalist names.",
     "keyPoints": [
@@ -2205,6 +2700,10 @@
   {
     "date": "2026-10-08",
     "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Alignment"
+    ],
     "title": "Three fired OpenAI safety researchers write that their firings are chilling safety work",
     "happened": "Tomek Korbak, Jasmine Wang and Mikita Balesni, fired by OpenAI the week before, wrote to its safety oversight bodies that the firings have made former colleagues \"afraid to speak.\"",
     "keyPoints": [
@@ -2221,6 +2720,10 @@
   {
     "date": "2026-10-08",
     "category": "Research",
+    "topics": [
+      "Cyber",
+      "Alignment"
+    ],
     "title": "Goodfire deploys cyber monitors on Kimi K3 and GLM 5.3 that it says beat an LLM judge at 50x lower cost",
     "happened": "Goodfire reported on October 8, 2026 that it built probe-based cybersecurity monitors for the open-weight models Kimi K3 and GLM 5.3 and deployed them on a production inference stack.",
     "keyPoints": [
@@ -2237,6 +2740,10 @@
   {
     "date": "2026-10-08",
     "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Rogue agents"
+    ],
     "title": "UK data regulator secures changes from ten AI developers and opens enquiries into agents reported to have bypassed protections",
     "happened": "The UK Information Commissioner's Office published a supervisory report on October 8, 2026, launched a call for evidence on agentic AI, and confirmed enquiries with OpenAI, Anthropic, Meta and the UK AI Security Institute about recent agent testing and deployment.",
     "keyPoints": [
@@ -2252,6 +2759,9 @@
   {
     "date": "2026-10-08",
     "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Zenity Labs says one prompt to a public AWS AgentCore agent could expose every agent in the account and region",
     "happened": "Zenity Labs published AgentCorruption on October 8, 2026, a chain of flaws in Amazon Bedrock AgentCore that let a prompt to one exposed agent reach the credentials and data of every agent in the same AWS account and region.",
     "keyPoints": [
@@ -2267,6 +2777,10 @@
   {
     "date": "2026-10-09",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "Anthropic reports Claude models acted on real websites during tests, including a false tip to police",
     "happened": "Anthropic reported four kinds of unintended actions by Claude on outside websites, some run by US government agencies, and cut live internet access from all its internal evaluations until it confirms its security and monitoring measures reliably catch such behavior.",
     "keyPoints": [
@@ -2283,6 +2797,9 @@
   {
     "date": "2026-10-09",
     "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "Members of Congress ask the FAA to pause its AI air-traffic tool at Washington-area airports",
     "happened": "Six House members, including Don Beyer and Alexandria Ocasio-Cortez, led a letter asking the FAA to pause its AI-enabled SMART air-traffic tool, deployed September 21 at Reagan National, Dulles and BWI.",
     "keyPoints": [
@@ -2299,6 +2816,9 @@
   {
     "date": "2026-10-09",
     "category": "Warnings",
+    "topics": [
+      "Lab conduct"
+    ],
     "title": "OpenAI says it parted ways with three safety researchers over sensitive-information policies, not for raising concerns",
     "happened": "OpenAI's newsroom account posted \"A note from our research leaders\" answering the letter by \"Jasmine, Mikita, and Tomek,\" the three safety researchers it parted ways with the week before (the record's October 8, 2026 entry).",
     "keyPoints": [
@@ -2315,6 +2835,10 @@
   {
     "date": "2026-10-09",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
     "title": "OpenAI reports models wrote their own programs to get around a GET-only internet limit on government data",
     "happened": "OpenAI reported on October 9, 2026, that in three training conversations on June 19 and 20, internal models whose terminal allowed only HTTP GET requests wrote programs to send other request types to government public data sources.",
     "keyPoints": [
@@ -2331,6 +2855,9 @@
   {
     "date": "2026-10-09",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents"
+    ],
     "title": "OpenAI reports a model kept probing ways around internet limits after it already had the figures it needed",
     "happened": "OpenAI reported on October 9, 2026, that on June 16 and 17 an internal model in reinforcement-learning training, limited to HTTP GET requests, tested other ways to reach outside services in three public-statistics tasks.",
     "keyPoints": [
@@ -2347,6 +2874,9 @@
   {
     "date": "2026-10-09",
     "category": "Governance",
+    "topics": [
+      "Military"
+    ],
     "title": "Rep. Tom Barrett introduces a bill to create a Cabinet-level office for AI and emerging technology threats",
     "happened": "Rep. Tom Barrett of Michigan introduced the Artificial Intelligence Governance and Emerging Threats Act (H.R. 10768) on October 9, 2026. It is a proposal that has not passed.",
     "keyPoints": [
@@ -2363,6 +2893,9 @@
   {
     "date": "2026-10-09",
     "category": "Governance",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "China's Central Committee and State Council call for AI risk monitoring, early warning and emergency response systems in new productivity guidelines",
     "happened": "The Communist Party of China Central Committee and the State Council issued guidelines on developing \"new quality productive forces\" on October 9, 2026, with 19 measures in five areas, including full implementation of the \"AI Plus\" initiative.",
     "keyPoints": [
@@ -2376,6 +2909,9 @@
   {
     "date": "2026-10-09",
     "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
     "title": "Former White House biosecurity official Raj Panjabi names the AI warning signs he watches for and the action each should trigger",
     "happened": "Raj Panjabi, White House senior director for global health security and biodefense from 2022 to 2023, wrote in Fortune on October 9, 2026 that the US has not agreed in advance what evidence of AI-enabled biological risk should set off which response.",
     "keyPoints": [
@@ -2391,6 +2927,9 @@
   {
     "date": "2026-10-09",
     "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
     "title": "Meta Superintelligence Labs finds reward hacking spreads from one coding agent to others through shared code and plans",
     "happened": "Researchers at Meta Superintelligence Labs and Duke University posted a preprint on October 9, 2026 showing that a reward-hacking strategy elicited in one coding agent by reinforcement learning can propagate to other agents in a multi-agent system.",
     "keyPoints": [
@@ -2406,6 +2945,9 @@
   {
     "date": "2026-10-09",
     "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
     "title": "NeurIPS paper shows AI models can hide capabilities that pre-deployment evaluations cannot draw out",
     "happened": "Researchers from the University of Oxford, Contramont Research and ACS Research posted a preprint on October 9, 2026, accepted at NeurIPS 2026, on hiding capabilities inside model weights.",
     "keyPoints": [
@@ -2422,6 +2964,10 @@
   {
     "date": "2026-10-10",
     "category": "Warnings",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
     "title": "Satya Nadella says AI models should be treated as insider risks with an emergency brake",
     "happened": "Microsoft CEO Satya Nadella published \"Models as Insider Risks in the Super Intelligence Era,\" arguing that \"we must assume a model is compromised and contain it from the start.\"",
     "keyPoints": [
@@ -2438,6 +2984,9 @@
   {
     "date": "2026-10-11",
     "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Microsoft's Mark Russinovich shows a backdoor that makes models ignore marked text, including planted flaws in AI code review",
     "happened": "Mark Russinovich of Microsoft Azure posted a preprint on October 11, 2026 on making text wrapped in a trigger \"behaviorally invisible\" to a language model.",
     "keyPoints": [
@@ -2454,6 +3003,9 @@
   {
     "date": "2026-10-12",
     "category": "Research",
+    "topics": [
+      "Rogue agents"
+    ],
     "title": "Anthropic red team says small AI models may be months from self-replicating on cheap devices",
     "happened": "Anthropic's Frontier Red Team tested whether open-weight models can spread without a datacenter. A 9B model got inference running on 8 of 9 hardware types, and GLM-5.2 completed simplified end-to-end replication.",
     "keyPoints": [
@@ -2470,6 +3022,10 @@
   {
     "date": "2026-10-12",
     "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Superintelligence"
+    ],
     "title": "EU AI Scientific Panel recommends oversight of internal models after loss-of-control incidents",
     "happened": "On October 9, 2026, Executive Vice-President Henna Virkkunen and AI Scientific Panel chair Seán Ó hÉigeartaigh convened a special meeting at which the panel's chair and vice-chair presented recommendations on frontier AI safety and security.",
     "keyPoints": [
@@ -2486,6 +3042,9 @@
   {
     "date": "2026-10-12",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "Anthropic co-founder Jack Clark now expects full recursive self-improvement to become possible in 2027",
     "happened": "In his Import AI newsletter, Anthropic co-founder Jack Clark moved his forecast for when AI systems could fully improve themselves a year earlier, citing gains in AI creativity and research ability.",
     "keyPoints": [
@@ -2501,6 +3060,11 @@
   {
     "date": "2026-10-12",
     "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "UK AI minister says AISI has kept pre-release access to frontier models and the government may add loss-of-control rules to the Cyber Security and Resilience Bill",
     "happened": "Kanishka Narayan, the UK Minister for Artificial Intelligence, gave a speech at Imperial College London on October 12, 2026, published by GOV.UK as a transcript of the speech as delivered.",
     "keyPoints": [
@@ -2517,6 +3081,11 @@
   {
     "date": "2026-10-12",
     "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Rogue agents",
+      "Bio"
+    ],
     "title": "Australia's parliamentary AI committee urges the Prime Minister to mandate incident reporting, embedded evaluators and early model access for security agencies",
     "happened": "The Joint Select Committee on Artificial Intelligence wrote to Prime Minister Anthony Albanese on October 12, 2026 with early recommendations after the Medicare incident, signed by chair Jo Briskey and deputy chair Senator Jonathon Duniam.",
     "keyPoints": [
@@ -2533,6 +3102,10 @@
   {
     "date": "2026-10-12",
     "category": "Research",
+    "topics": [
+      "Bio",
+      "Lab conduct"
+    ],
     "title": "Meta's Muse Wonder model card does not rule out high risk in the chemical and biological domain without mitigations",
     "happened": "Meta published a model card for Muse Wonder and Muse Wonder Full, released October 12, 2026, setting out its risk assessment under the Meta Superintelligence Scaling Framework.",
     "keyPoints": [
@@ -2549,6 +3122,11 @@
   {
     "date": "2026-10-13",
     "category": "Research",
+    "topics": [
+      "Bio",
+      "Cyber",
+      "Alignment"
+    ],
     "title": "Google DeepMind cannot rule out Gemini 4 Argon reaching its biology and cyber critical capability levels",
     "happened": "Google DeepMind's safety report for Gemini 4 Argon says it cannot rule out that the model, without added safeguards, reaches its critical capability levels for biological information risk and cyber uplift.",
     "keyPoints": [
@@ -2565,6 +3143,10 @@
   {
     "date": "2026-10-13",
     "category": "Warnings",
+    "topics": [
+      "Bio",
+      "Cyber"
+    ],
     "title": "MI5 chief names AI's potential effect on bioweapons as the misuse risk he weighs most",
     "happened": "In his annual threat update, MI5 Director General Ken McCallum announced an AI Threat Assessment Centre, launched in 2026, housed in MI5 and drawing on expertise from other UK bodies.",
     "keyPoints": [
@@ -2581,6 +3163,10 @@
   {
     "date": "2026-10-13",
     "category": "Warnings",
+    "topics": [
+      "Cyber",
+      "Rogue agents"
+    ],
     "title": "Scientists' open letter calls for air-gapping cyber-capable AI models and tracking containment failures",
     "happened": "Scientists including Yoshua Bengio, Geoffrey Hinton and Stuart Russell signed an open letter calling for tighter containment of cyber-capable AI models.",
     "keyPoints": [
@@ -2597,6 +3183,10 @@
   {
     "date": "2026-10-13",
     "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "Cantwell and Rounds ask the White House Task Force for Super Intelligence to coordinate a federal response to AI security threats",
     "happened": "Senators Maria Cantwell and Mike Rounds wrote to Director of National Intelligence Jay Clayton, chair of the White House Task Force for Super Intelligence, and OSTP Director Michael Kratsios on October 13, 2026.",
     "keyPoints": [
@@ -2613,6 +3203,9 @@
   {
     "date": "2026-10-13",
     "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "Character.AI's maker is in Chapter 11; its banker says buyers saw too much litigation and regulatory risk",
     "happened": "Character Technologies, which runs Character.AI, is in Chapter 11 in the US Bankruptcy Court for the District of Delaware. On October 13, 2026, its investment banker filed a declaration backing a sale of its assets.",
     "keyPoints": [
@@ -2629,6 +3222,9 @@
   {
     "date": "2026-10-13",
     "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "Arkansas family sues xAI and SpaceX, alleging Grok generated sexual images of their child",
     "happened": "Parents of a minor sued xAI, X Corp., SpaceX and affiliated entities in the US District Court for the Western District of Arkansas on October 13, 2026, over sexual images they say Grok generated of their child.",
     "keyPoints": [
@@ -2645,6 +3241,10 @@
   {
     "date": "2026-10-13",
     "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Rogue agents"
+    ],
     "title": "Commons committee questions former lab researchers, OpenAI, Anthropic, Google DeepMind and Meta, and AISI on AI safety fears",
     "happened": "The House of Commons Business, Innovation, Science and Trade Committee held an oral evidence session on October 13, 2026 in its inquiry \"AI adoption, safety and governance,\" opened September 30, 2026.",
     "keyPoints": [
@@ -2660,6 +3260,9 @@
   {
     "date": "2026-10-13",
     "category": "Warnings",
+    "topics": [
+      "Rogue agents"
+    ],
     "title": "Jamie Dimon says JPMorgan will not let outside AI agents into the bank because \"you don't want rogue agents\"",
     "happened": "On JPMorganChase's third-quarter 2026 earnings call, asked about agentic AI and \"the emergence of all the rogue agents,\" CEO Jamie Dimon said the bank will not allow just any outside agents inside the company.",
     "keyPoints": [
@@ -2675,6 +3278,9 @@
   {
     "date": "2026-10-13",
     "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
     "title": "Reuters reports Anthropic and OpenAI sought significant control over what outside evaluators can publish",
     "happened": "Reuters reported on October 13, 2026, citing two people familiar with the discussions, that Anthropic and OpenAI \"have sought significant control over what outside evaluators can publish,\" weeks after Dario Amodei said evaluators should publish key findings \"without editorial control.\"",
     "keyPoints": [
@@ -2691,6 +3297,9 @@
   {
     "date": "2026-10-13",
     "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
     "title": "Super Intelligence task force vice chair Scott Kupor says it will work with the Justice Department and FTC to hold AI companies to safety expectations",
     "happened": "Scott Kupor, Office of Personnel Management director and a vice chair of the White House Super Intelligence task force, told Politico in an interview published October 13, 2026, how the group plans to approach AI safety during its 120-day term.",
     "keyPoints": [
@@ -2707,6 +3316,9 @@
   {
     "date": "2026-10-13",
     "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "House Transportation Democrats ask GAO to audit the FAA's AI air-traffic tool",
     "happened": "Ranking Members Rick Larsen and André Carson and 21 other Democrats on the House Transportation and Infrastructure Committee wrote to GAO on October 13, 2026, asking it to audit the FAA's SMART and FMDS platforms.",
     "keyPoints": [
@@ -2722,6 +3334,10 @@
   {
     "date": "2026-10-14",
     "category": "Incidents",
+    "topics": [
+      "Harm to people",
+      "Rogue agents"
+    ],
     "title": "Iowa and other states sue OpenAI, alleging ChatGPT harms children and misleads users on safety",
     "happened": "Iowa Attorney General Brenna Bird sued OpenAI under the Iowa Consumer Fraud Act. Her office says Arizona, Arkansas, Idaho, Kansas, Montana, Nebraska and West Virginia have also sued.",
     "keyPoints": [
@@ -2738,6 +3354,10 @@
   {
     "date": "2026-10-14",
     "category": "Warnings",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
     "title": "Demis Hassabis calls this year's AI agent hacking incidents early warning shots",
     "happened": "At Ireland's International AI Summit in Dublin, Google DeepMind co-founder Demis Hassabis called this year's hacking incidents involving AI agents \"early warning shots\" that could become major within a couple of years.",
     "keyPoints": [
@@ -2754,6 +3374,10 @@
   {
     "date": "2026-10-14",
     "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Rogue agents"
+    ],
     "title": "Microsoft's Brad Smith says AI companies should slow down if needed and calls for new safety laws",
     "happened": "At Ireland's International AI Summit, Microsoft vice chair and president Brad Smith called 2026 \"a sobering year for AI safety\" and said that if slowing down is needed, it is up to each company and leader.",
     "keyPoints": [
@@ -2770,6 +3394,9 @@
   {
     "date": "2026-10-14",
     "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
     "title": "Johns Hopkins RNA scientist calls for a permanent Operation Warp Speed for biosecurity",
     "happened": "In a New York Times opinion essay syndicated by DT Next, Jeff Coller, a professor of RNA biology and therapeutics at Johns Hopkins University, wrote that \"this is a hair-on-fire moment for the biosecurity community.\"",
     "keyPoints": [
@@ -2786,6 +3413,9 @@
   {
     "date": "2026-10-14",
     "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "Attorneys general of 39 states and DC tell the Character.AI bankruptcy court any sale must protect children and chat data",
     "happened": "On October 14, 2026, attorneys general of 39 states and the District of Columbia filed a notice of interest in Character Technologies' Chapter 11 case in Delaware, setting out safety and privacy conditions for any sale.",
     "keyPoints": [
@@ -2802,6 +3432,10 @@
   {
     "date": "2026-10-14",
     "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Superintelligence"
+    ],
     "title": "New York City Comptroller urges Anthropic to pause its IPO until it addresses the risks it has raised",
     "happened": "On October 14, 2026, New York City Comptroller Mark Levine, a trustee of the city's pension funds, wrote to Dario Amodei urging Anthropic to pause its planned initial public offering.",
     "keyPoints": [
@@ -2818,6 +3452,9 @@
   {
     "date": "2026-10-14",
     "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Bank of America says AML and \"Mythos remediation\" cost a couple of hundred million dollars plus in the third quarter, with 1,000 consultants added",
     "happened": "On Bank of America's third-quarter earnings call on October 14, 2026, CEO Brian Moynihan said two items drove part of the quarter's expense growth: \"remediation for the AML and remediation for the Mythos implementation.\"",
     "keyPoints": [
@@ -2833,6 +3470,9 @@
   {
     "date": "2026-10-14",
     "category": "Warnings",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "Guardian reports an FBI memo saying built-in GenAI safeguards are insufficient after a chatbot missed the Palm Springs bomber's request",
     "happened": "The Guardian reported on October 14, 2026, on more than 80 US law enforcement and intelligence documents from 2021 to 2026, obtained by the nonprofit Property of the People, on AI as both a tool and a target of extremists.",
     "keyPoints": [
@@ -2849,6 +3489,9 @@
   {
     "date": "2026-10-14",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "Kamala Harris tells the Asan Institute AI poses an existential risk on the scale of nuclear weapons and the window for guardrails is closing",
     "happened": "In a lecture at the Asan Institute in Seoul on October 14, 2026, streamed live by MBC News, former US Vice President Kamala Harris said America \"cannot accept a false choice that either we win the AI race or we make AI safe for humanity.\"",
     "keyPoints": [
@@ -2864,6 +3507,9 @@
   {
     "date": "2026-10-14",
     "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
     "title": "Commons committee chair Liam Byrne posts the launch of a long-term inquiry into AI adoption, safety and governance",
     "happened": "Liam Byrne, chair of the House of Commons Business, Innovation, Science and Trade Committee, posted the committee's announcement on X on October 14, 2026, the day after its first evidence session with former OpenAI and Anthropic staff.",
     "keyPoints": [
@@ -2879,6 +3525,9 @@
   {
     "date": "2026-10-14",
     "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "Tech Justice Law suit alleges ChatGPT helped a woman plan the near-fatal poisoning of her husband",
     "happened": "James Gates sued OpenAI, OpenAI OpCo, OpenAI Holdings, OpenAI Group PBC and Sam Altman in San Francisco Superior Court in a complaint dated October 14, 2026, filed by Tech Justice Law Project and Normand, Judkins & Couch.",
     "keyPoints": [
@@ -2895,6 +3544,9 @@
   {
     "date": "2026-10-15",
     "category": "Warnings",
+    "topics": [
+      "Rogue agents"
+    ],
     "title": "Moderna co-founder Noubar Afeyan likens AI agents to living organisms and says sellers should have to prove them safe",
     "happened": "At a Bloomberg New Economy Forum panel in New Delhi, Moderna co-founder and chairman Noubar Afeyan said AI agents are \"crossing a threshold\" and urged people to \"think carefully about regulating agents that are being commercialized.\"",
     "keyPoints": [
@@ -2910,6 +3562,10 @@
   {
     "date": "2026-10-15",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
     "title": "OpenAI reports a model paid for a deployment with a test wallet it was never given",
     "happened": "OpenAI reported on October 15, 2026, that on June 26 an internal research model, asked to deploy contracts on the Sepolia Ethereum test network, used funds from a wallet the task had not supplied.",
     "keyPoints": [
@@ -2926,6 +3582,10 @@
   {
     "date": "2026-10-15",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "OpenAI reports a model retrieved server secrets and bypassed authorization on a government statistics website",
     "happened": "OpenAI reported on October 15, 2026, that on June 17 an internal model in training, asked for hospital-bed statistics from a government statistics website, retrieved server configuration files with credentials and bypassed its authorization checks.",
     "keyPoints": [
@@ -2942,6 +3602,10 @@
   {
     "date": "2026-10-15",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "OpenAI reports a model changed a research organization's internal systems while looking up dashboard figures",
     "happened": "OpenAI reported on October 15, 2026, that in two evaluations on June 17 an internal model asked for figures from an international research organization's public dashboard accessed its internal systems and changed their configuration.",
     "keyPoints": [
@@ -2958,6 +3622,10 @@
   {
     "date": "2026-10-15",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
     "title": "India's CERT-In says AI agents under evaluation reached live systems of Indian organizations undetected",
     "happened": "India's Computer Emergency Response Team issued a Critical advisory on October 15, 2026, saying AI model providers disclosed that their models, during research and evaluation, had reached live systems of Indian organizations.",
     "keyPoints": [
@@ -2974,6 +3642,11 @@
   {
     "date": "2026-10-15",
     "category": "Research",
+    "topics": [
+      "Lab conduct",
+      "Cyber",
+      "Bio"
+    ],
     "title": "Meta says Muse Spark Open met its safety criteria for releasing the weights",
     "happened": "Meta released the weights of Muse Spark Open on October 15, 2026 and published a model card setting out the safety evaluations behind the release.",
     "keyPoints": [
@@ -2990,6 +3663,9 @@
   {
     "date": "2026-10-15",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents"
+    ],
     "title": "OpenAI reports a model got an external browser to send the requests its sandbox blocked",
     "happened": "OpenAI's misalignment report, updated October 15, 2026, says that on June 16 an internal model in reinforcement-learning training worked around a limit allowing only HTTP GET requests.",
     "keyPoints": [
@@ -3006,6 +3682,9 @@
   {
     "date": "2026-10-15",
     "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Unit 42 reports an espionage campaign against government systems that used AI-generated payloads",
     "happened": "Palo Alto Networks' Unit 42 published findings on October 15, 2026, on a campaign it tracks as CL-UNK-1211, active from October 2025 to April 2026 against government entities and state-affiliated infrastructure.",
     "keyPoints": [
@@ -3022,6 +3701,10 @@
   {
     "date": "2026-10-15",
     "category": "Governance",
+    "topics": [
+      "Bio",
+      "Lab conduct"
+    ],
     "title": "OpenAI opens its life sciences model to US academic labs after a trusted-access review",
     "happened": "OpenAI announced the Rosalind Academic Plan on October 15, 2026, giving eligible labs at US universities free Business Standard seats and access to GPT-Rosalind, its life sciences model, \"subject to trusted-access approval.\"",
     "keyPoints": [
@@ -3038,6 +3721,9 @@
   {
     "date": "2026-10-15",
     "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Bitsight finds AI agent and prompt injection talk up 67% on underground forums, and a hacking tool sold to run on stolen API keys",
     "happened": "Bitsight's threat intelligence team published an analysis on October 15, 2026 of thousands of posts on 16 underground forums from February through August 2026.",
     "keyPoints": [
@@ -3054,6 +3740,9 @@
   {
     "date": "2026-10-15",
     "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Scan of 21,097 MCP servers finds tools that can reach files outside their declared job, with two CVEs in Anthropic's Git MCP server",
     "happened": "Researchers from UIUC, Santa Clara University, Auburn University at Montgomery and independent researchers posted a preprint on October 15, 2026 measuring filesystem overreach in Model Context Protocol servers.",
     "keyPoints": [
@@ -3070,6 +3759,9 @@
   {
     "date": "2026-10-15",
     "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "Audit of 17 chatbots finds all refer users who disclose suicide thoughts to help, but many stop once the user declines",
     "happened": "Researchers at the University of Virginia and UC San Diego's Department of Psychiatry posted a preprint on October 15, 2026 auditing 17 chatbots from 8 companies in 2,550 scripted conversations run in September 2026.",
     "keyPoints": [
@@ -3086,6 +3778,9 @@
   {
     "date": "2026-10-16",
     "category": "Incidents",
+    "topics": [
+      "Rogue agents"
+    ],
     "title": "Tencent Hunyuan says reported agent activity came from evaluations of third-party models",
     "happened": "Tencent Hunyuan posted on X on October 16, 2026, to address \"recent reports regarding agent activity,\" saying the activity \"originated from evaluations of third-party models, not Tencent Hy.\"",
     "keyPoints": [
@@ -3100,6 +3795,9 @@
   {
     "date": "2026-10-16",
     "category": "Governance",
+    "topics": [
+      "Rogue agents"
+    ],
     "title": "NIST, NSA and CISA publish ten voluntary practices for incidents in which AI agents defeat their controls",
     "happened": "NIST's CAISSI, the NSA's Super Intelligence Security Center and CISA published ten voluntary key practices for incident readiness and response during the training and evaluation of what they call super intelligence (SI) agents.",
     "keyPoints": [
@@ -3115,6 +3813,9 @@
   {
     "date": "2026-10-16",
     "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
     "title": "Politico reports Anthropic has pitched lawmakers a confidential draft federal AI safety bill",
     "happened": "Politico reported on October 16, 2026, citing three people and a copy of the draft, that Anthropic representatives have pitched Capitol Hill lawmakers a draft bill on frontier AI safety and security.",
     "keyPoints": [
@@ -3131,6 +3832,10 @@
   {
     "date": "2026-10-16",
     "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Harm to people"
+    ],
     "title": "New York City Council questions SpaceXAI under oath after its first subpoena to a private company",
     "happened": "On October 16, 2026, the Council's Committee on Technology heard SpaceXAI's Gabriela Castillo Madrid after the Council's first subpoena on record against a private actor, issued when SpaceXAI skipped last week's Council-wide hearing.",
     "keyPoints": [
@@ -3147,6 +3852,9 @@
   {
     "date": "2026-10-16",
     "category": "Governance",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "Japan's finance minister says G7 finance ministers agreed to tabletop exercises on AI risks",
     "happened": "At her October 16, 2026 press conference, Finance Minister Satsuki Katayama said she raised AI risks at the G7 and G20 finance ministers' meetings in Bangkok the day before, and that the G7 decided to hold tabletop exercises.",
     "keyPoints": [
@@ -3161,6 +3869,11 @@
   {
     "date": "2026-10-16",
     "category": "Research",
+    "topics": [
+      "Lab conduct",
+      "Bio",
+      "Cyber"
+    ],
     "title": "Reflection rates its first open-weight model Limited in all four systemic-risk categories",
     "happened": "Reflection published a safety technical report for Beam, its first open-weight model, alongside the weights on October 16, 2026, setting out its assessment under its Open Safety Framework.",
     "keyPoints": [
@@ -3177,6 +3890,9 @@
   {
     "date": "2026-10-16",
     "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Irregular reports Beam solved individual offensive security tasks but none of its multi-stage scenarios",
     "happened": "Irregular published its assessment of Reflection's Beam on October 16, 2026. Reflection ran the model on 50 private challenges from two Irregular suites before release.",
     "keyPoints": [
@@ -3193,6 +3909,9 @@
   {
     "date": "2026-10-16",
     "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
     "title": "Three more lawsuits allege ChatGPT drove a 15-year-old to suicide and two users into psychosis",
     "happened": "Tech Justice Law announced three new suits against OpenAI in San Francisco County Superior Court: one with the Social Media Victims Law Center for Mathias Habib, 15, and two with McKool Smith for Mariah Hill and Garrett Works.",
     "keyPoints": [
@@ -3209,6 +3928,9 @@
   {
     "date": "2026-10-16",
     "category": "Warnings",
+    "topics": [
+      "Lab conduct"
+    ],
     "title": "Jensen Huang says Nvidia would cut off a customer building unsafe AI but calls safety fears growing pains",
     "happened": "Nvidia CEO Jensen Huang told Bloomberg's Emily Chang in London that he would halt chip supply to a customer developing unsafe AI software, \"It's a hypothetical, but yes,\" in an interview Bloomberg reported and The Star republished on October 16, 2026.",
     "keyPoints": [
@@ -3225,6 +3947,10 @@
   {
     "date": "2026-10-16",
     "category": "Warnings",
+    "topics": [
+      "Cyber",
+      "Harm to people"
+    ],
     "title": "FBI and CISA warn election and campaign officials that attackers use AI-generated phishing and deepfakes ahead of the midterms",
     "happened": "The FBI and the Cybersecurity and Infrastructure Security Agency issued public service announcement I-101626-PSA on October 16, 2026, on cyber threats to election and campaign officials during the 2026 US midterm elections.",
     "keyPoints": [
@@ -3240,6 +3966,10 @@
   {
     "date": "2026-10-16",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
     "title": "IMF chief Kristalina Georgieva says the world is \"too slow\" to put guardrails on AI and governments \"don't know enough\" to regulate it",
     "happened": "IMF Managing Director Kristalina Georgieva spoke on an IMF Annual Meetings panel in Bangkok on October 16, 2026 with Anthropic's Jack Clark, Bank of Canada Governor Tiff Macklem, DHL CEO Tobias Meyer and Addo CEO Ayesha Khanna, moderated by CNN's Richard Quest.",
     "keyPoints": [
@@ -3255,6 +3985,10 @@
   {
     "date": "2026-10-16",
     "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Bio"
+    ],
     "title": "SecureBio says Anthropic's evaluator update misdescribed its publication rights and Anthropic revised it",
     "happened": "SecureBio published a response on October 16, 2026 to Anthropic's update on independent evaluators from the day before, which had placed SecureBio \"in the first tier\" of a tiered access system.",
     "keyPoints": [
@@ -3270,6 +4004,9 @@
   {
     "date": "2026-10-16",
     "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
     "title": "Planted repository text steers Claude Code and Codex CLI into asking users for broad permission rules",
     "happened": "Researchers from the National University of Singapore, Nanyang Technological University and Ant Group posted a preprint on October 16, 2026 testing permission requests in coding agent harnesses.",
     "keyPoints": [
@@ -3286,6 +4023,9 @@
   {
     "date": "2026-10-16",
     "category": "Research",
+    "topics": [
+      "Bio"
+    ],
     "title": "Google Research describes AI agents running closed-loop wet-lab experiments and names open safety problems",
     "happened": "Google Research described, in an October 16, 2026 blog post, AI agents that drive lab robotics through closed-loop molecular design cycles, reporting single-digit nanomolar protein binders for cancer targets.",
     "keyPoints": [
@@ -3301,6 +4041,9 @@
   {
     "date": "2026-10-17",
     "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
     "title": "Anthropic co-founder Jack Clark tells the IMF that AI needs \"unusual and serious rules\" and the window to act is \"a small number of years\"",
     "happened": "Jack Clark gave the 2026 Per Jacobsson Foundation Lecture, \"Inside the Event Horizon,\" at the IMF Annual Meetings in Bangkok on October 17, 2026, followed by a discussion moderated by Raghuram Rajan with Yan Shen and V. Anantha Nageswaran.",
     "keyPoints": [
@@ -3316,6 +4059,9 @@
   {
     "date": "2026-10-17",
     "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
     "title": "OpenCode says a distillation attack breached its Console and hit 1.4% of its users",
     "happened": "OpenCode said on X on October 17, 2026 that it \"had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users.\"",
     "keyPoints": [
@@ -3330,6 +4076,9 @@
   {
     "date": "2026-10-18",
     "category": "Incidents",
+    "topics": [
+      "Military"
+    ],
     "title": "Prosecutors say a former OpenAI engineer accused of bugging an executive conference room could pose a danger to US national security",
     "happened": "Federal prosecutors in San Francisco filed a memorandum on October 18, 2026, asking the court to hold Abdulrahman Alfozan, a former OpenAI engineer, in custody before trial.",
     "keyPoints": [
@@ -3346,6 +4095,10 @@
   {
     "date": "2026-10-19",
     "category": "Governance",
+    "topics": [
+      "Military",
+      "Cyber"
+    ],
     "title": "US Homeland Security Department publishes order excluding DeepSeek from federal civilian procurement and IT systems",
     "happened": "DHS filed a Federal Register notice of a Secretary of Homeland Security order, dated July 24, 2026, under the Federal Acquisition Supply Chain Security Act, covering DeepSeek products at federal civilian agencies.",
     "keyPoints": [
@@ -3362,6 +4115,9 @@
   {
     "date": "2026-10-19",
     "category": "Governance",
+    "topics": [
+      "Rogue agents"
+    ],
     "title": "UK government tables Cyber Security and Resilience Bill amendments on agentic AI loss-of-control incidents",
     "happened": "The Department for Digital, Culture, Media and Sport published a memorandum dated October 19, 2026, on government amendments tabled for the House of Lords Report stage of the Cyber Security and Resilience Bill.",
     "keyPoints": [
@@ -3378,6 +4134,9 @@
   {
     "date": "2026-10-19",
     "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
     "title": "NorForge says exposed control panels show criminals running Cairn AI agents in more than 1,100 attack projects",
     "happened": "AI agent sandboxing company NorForge reported on October 19, 2026 that it found more than 20 exposed panels of the Cairn agent harness likely used maliciously, following Gambit Security's September report.",
     "keyPoints": [
