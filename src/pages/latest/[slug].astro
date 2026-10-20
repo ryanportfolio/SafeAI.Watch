@@ -1,0 +1,56 @@
+---
+/*
+ * One page per record entry at /latest/<slug>/. BaseLayout, not PageLayout:
+ * the entry title is the page's h1, set by EntryArticle. The /latest reader
+ * fetches these pages and takes their [data-entry-article] element.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EntryArticle from '../../components/EntryArticle.astro';
+import { events, slugOf, type RecordEvent } from '../../data/record';
+
+export function getStaticPaths() {
+  return events.map((event) => ({ params: { slug: slugOf(event) }, props: { event } }));
+}
+
+interface Props {
+  event: RecordEvent;
+}
+
+const { event } = Astro.props;
+const slug = slugOf(event);
+
+const MAX_DESCRIPTION = 160;
+
+/** The happened text, cut at a word boundary to fit 160 characters with a trailing ellipsis. */
+function describe(text: string): string {
+  const clean = text.replace(/\s+/g, ' ').trim();
+  if (clean.length <= MAX_DESCRIPTION) return clean;
+  const room = clean.slice(0, MAX_DESCRIPTION); // leaves one character for the ellipsis
+  const cut = room.lastIndexOf(' ');
+  const head = (cut > 0 ? room.slice(0, cut) : room.slice(0, MAX_DESCRIPTION - 1)).replace(/[\s,;:.]+$/, '');
+  return `${head}…`;
+}
+---
+<BaseLayout title={event.title} description={describe(event.happened)}>
+  <div class="entry-page">
+    <EntryArticle event={event} headingLevel={1} />
+    <p class="entry-page-back">
+      <a class="button frame" href={`/latest/?entry=${slug}`}>See it in the latest record</a>
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .entry-page {
+    width: min(1000px, 100% - 2 * var(--content-gutter));
+    margin: 0 auto;
+    padding: clamp(48px, 6vw, 88px) 0 clamp(80px, 8vw, 120px);
+  }
+
+  .entry-page-back {
+    max-width: 780px;
+    margin-top: clamp(40px, 5vw, 56px);
+    padding-top: 28px;
+    border-top: 1px dashed var(--grey-rule);
+  }
+</style>

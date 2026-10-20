@@ -1,163 +1,501 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
-import { eventsNewestFirst, formatLong } from '../data/record';
+/*
+ * /latest: the whole record as a two-pane reader. Left, entries grouped by day,
+ * newest first, with each busy day's brief and its five highlights. Right (1024px
+ * and wider), the selected entry in full, starting with the newest. The reader
+ * script (src/scripts/latest/reader.ts) loads other entries from their pages
+ * at /latest/<slug>/; without it every row is listed and each headline links to
+ * its entry page. Above the panes, the week grid (WeekGrid.astro) and, atop the
+ * list, the type chips and filter status line, driven by
+ * src/scripts/latest/filters.ts.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EntryArticle from '../components/EntryArticle.astro';
+import LatestRow from '../components/LatestRow.astro';
+import WeekGrid from '../components/WeekGrid.astro';
+import { dayBriefs, eventsNewestFirst, formatLong, groupByDay, slugOf } from '../data/record';
+
+const description =
+  'Research, incidents, public warnings, and policy on AI safety and security, newest first, each linked to its original source.';
+const newest = eventsNewestFirst[0];
+const TYPE_CHIPS = [
+  ['all', 'All types'],
+  ['research', 'Research'],
+  ['incidents', 'Incidents'],
+  ['warnings', 'Warnings'],
+  ['governance', 'Governance'],
+] as const;
+const count = (n: number) => `${n} ${n === 1 ? 'entry' : 'entries'}`;
+
+const days = groupByDay(eventsNewestFirst).map(({ date, entries }) => {
+  const brief = dayBriefs.get(date);
+  const picks = brief?.highlights ?? [];
+  const highlights = picks.map((slug) => entries.find((event) => slugOf(event) === slug)!);
+  const rest = picks.length ? entries.filter((event) => !picks.includes(slugOf(event))) : entries;
+  return { date, entries, summary: brief?.summary, highlights, rest };
+});
 ---
-<PageLayout
-  title="Latest"
-  heading="The latest record"
-  description="Research, incidents, public warnings, and policy on AI safety and security, newest first, each linked to its original source."
-  intro="Research, reported incidents, public warnings, and policy on AI safety and security, newest first. Each entry links its original source."
->
-  <ol class="archive">
-    {eventsNewestFirst.map((event) => (
-      <li class="archive-row">
-        <p class="archive-meta">
-          <time datetime={event.date}>{formatLong(event.date)}</time>
-          <span class="archive-category">{event.category}</span>
-        </p>
-        <article class="archive-body">
-          <h2 class="archive-title">
-            <a href={event.url} target="_blank" rel="noopener noreferrer">
-              {event.title}<span class="archive-arrow" aria-hidden="true">&nbsp;↗</span><span class="visually-hidden"> (opens in a new tab)</span>
-            </a>
-          </h2>
-          <dl class="archive-parts">
-            <dt>What happened</dt>
-            <dd>{event.happened}</dd>
-            <dt>Key points</dt>
-            <dd>
-              <ul class="archive-points">
-                {event.keyPoints.map((point) => <li>{point}</li>)}
-              </ul>
-            </dd>
-            <dt>Evidence</dt>
-            <dd>{event.evidence}</dd>
-            {event.uncertain && (
+<BaseLayout title="Latest" description={description}>
+  <div class="reader-page">
+    <header class="reader-head">
+      <div class="reader-title-line">
+        <h1 class="reader-title">The latest record</h1>
+        <p class="reader-count">{count(eventsNewestFirst.length)}<span aria-hidden="true"> · </span><span>newest first</span></p>
+      </div>
+      <p class="reader-intro">
+        Research, reported incidents, public warnings, and policy on AI safety and security. Each entry links its original source.
+      </p>
+    </header>
+
+    <WeekGrid />
+
+    <div class="reader">
+      <div class="reader-list">
+        <div class="list-tools">
+          <div class="type-chips" role="group" aria-label="Filter by type" data-type-chips hidden>
+            {TYPE_CHIPS.map(([key, text]) => (
+              <button class="chip" type="button" data-type-chip={key} aria-pressed={key === 'all' ? 'true' : 'false'}>{text}</button>
+            ))}
+          </div>
+          {/* Rendered from load so its live text is announced the first time; empty and
+              unmarked (no data-on) it takes no space and Clear stays hidden. */}
+          <p class="filter-status" data-filter-status>
+            <span data-filter-status-text aria-live="polite"></span>
+            <button class="filter-clear" type="button" data-filter-clear hidden>Clear</button>
+          </p>
+        </div>
+        {days.map((day) => (
+          <section class="day" data-day={day.date} aria-labelledby={`day-${day.date}`}>
+            <header class="day-head">
+              <h2 class="day-date" id={`day-${day.date}`}>
+                <time datetime={day.date}>{formatLong(day.date)}</time>
+              </h2>
+              <p class="day-count" data-day-count>{count(day.entries.length)}</p>
+            </header>
+            {day.summary && <p class="day-summary" data-day-summary>{day.summary}</p>}
+            {day.highlights.length > 0 ? (
               <>
-                <dt>Uncertain</dt>
-                <dd>{event.uncertain}</dd>
+                <p class="day-label" id={`five-${day.date}`}>Five to read</p>
+                <ol class="rows" aria-labelledby={`five-${day.date}`}>
+                  {day.highlights.map((event) => <LatestRow event={event} highlight />)}
+                </ol>
+                <div class="day-rest" id={`rest-${day.date}`} data-day-rest>
+                  <p class="day-label" id={`more-${day.date}`}>{day.rest.length} more</p>
+                  <ol class="rows" aria-labelledby={`more-${day.date}`}>
+                    {day.rest.map((event) => <LatestRow event={event} />)}
+                  </ol>
+                </div>
+                <button
+                  class="day-toggle"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls={`rest-${day.date}`}
+                  data-day-toggle
+                  data-label-closed={`Show all ${day.entries.length} entries`}
+                  hidden
+                >
+                  <span data-day-toggle-text>Show all {day.entries.length} entries</span>
+                  <span class="day-toggle-arrow" aria-hidden="true">↓</span>
+                </button>
               </>
+            ) : (
+              <ol class="rows">
+                {day.rest.map((event) => <LatestRow event={event} />)}
+              </ol>
             )}
-          </dl>
-          <p class="archive-source">{event.source}</p>
-        </article>
-      </li>
-    ))}
-  </ol>
-</PageLayout>
+          </section>
+        ))}
+      </div>
+
+      <aside class="reader-pane" data-reader-pane aria-label="Selected entry">
+        <div class="pane-bar">
+          <p class="pane-label">Reading</p>
+          <a class="pane-open" href={`/latest/${slugOf(newest)}/`} data-reader-open>Open entry page</a>
+        </div>
+        <div class="pane-body" data-reader-slot>
+          <EntryArticle event={newest} headingLevel={2} />
+        </div>
+      </aside>
+    </div>
+
+    <p class="visually-hidden" role="status" aria-live="polite" data-reader-status></p>
+  </div>
+</BaseLayout>
+
+<script>
+  import '../scripts/latest/reader';
+  import '../scripts/latest/filters';
+</script>
 
 <style>
-  .archive-row {
-    display: grid;
-    grid-template-columns: 140px minmax(0, 1fr);
-    gap: 36px;
-    padding: 32px 0;
-    border-top: 1px dashed var(--grey-rule);
+  .reader-page {
+    width: min(1560px, 100% - 2 * var(--reader-gutter));
+    margin: 0 auto;
+    padding: clamp(36px, 4vw, 56px) 0 clamp(80px, 8vw, 120px);
+    --reader-gutter: 35px; /* the nav pills' inset */
+    --pane-top: 104px; /* clears the nav pills (35px inset + 52px pill) */
   }
 
-  .archive-meta,
-  .archive-source {
+  .reader-head {
+    max-width: 1100px;
+    margin-bottom: clamp(20px, 2vw, 28px);
+  }
+
+  .reader-title-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 22px;
+  }
+
+  .reader-title {
+    font-size: var(--text-h1);
+  }
+
+  .reader-count {
     font-family: var(--font-mono);
     font-size: 12px;
-    line-height: 1.5;
+    letter-spacing: 0.02em;
     color: var(--grey-muted);
   }
 
-  .archive-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding-top: 6px;
+  .reader-intro {
+    margin-top: 12px;
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink-70);
   }
 
-  .archive-category {
-    font-size: var(--text-eyebrow);
-    letter-spacing: var(--tracking-eyebrow);
-    text-transform: uppercase;
+  .reader {
+    display: grid;
+    grid-template-columns: minmax(0, 44fr) minmax(400px, 56fr);
+    gap: 40px;
+    align-items: start;
   }
 
-  .archive-body {
-    max-width: 780px;
-  }
-
-  .archive-title {
+  /* Type chips and filter status, atop the list */
+  .list-tools {
     margin-bottom: 14px;
-    font-size: 29px;
-    line-height: 1.25;
-    letter-spacing: -0.01em;
   }
 
-  .archive-title a {
-    border-bottom: 1px solid var(--grey-track);
-    transition:
-      color 0.2s var(--ease-out),
-      border-color 0.2s var(--ease-out);
+  .type-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
   }
 
-  .archive-title a:hover {
-    color: var(--link-blue);
-    border-bottom-color: currentColor;
+  .type-chips[hidden],
+  .filter-clear[hidden] {
+    display: none;
   }
 
-  .archive-parts {
-    margin-bottom: 17px;
-  }
-
-  .archive-parts dt {
+  .chip {
+    min-height: 28px;
+    padding: 0 12px;
+    border: 1px solid var(--grey-dash);
+    border-radius: var(--radius-full);
+    background: transparent;
     font-family: var(--font-mono);
     font-size: var(--text-eyebrow);
     letter-spacing: var(--tracking-eyebrow);
     text-transform: uppercase;
-    color: var(--grey-label);
+    color: var(--ink);
+    cursor: pointer;
+    transition:
+      color 0.2s var(--ease-out),
+      border-color 0.2s var(--ease-out),
+      background-color 0.2s var(--ease-out);
   }
 
-  .archive-parts dd {
-    margin-inline-start: 0;
-    margin-bottom: 12px;
-    font-size: 16px;
-    line-height: 1.7;
+  .chip:hover {
+    border-color: var(--link-blue);
+    color: var(--link-blue);
   }
 
-  .archive-parts dd:last-child {
-    margin-bottom: 0;
+  .chip[aria-pressed='true'] {
+    border-color: var(--link-blue);
+    background: var(--link-blue);
+    color: var(--cream);
   }
 
-  .archive-points li {
-    position: relative;
-    padding-left: 16px;
+  .filter-status {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 14px;
+    margin-top: 12px;
+    padding-left: 12px;
+    border-left: 2px solid var(--link-blue);
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow-lg);
+    line-height: 1.4;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ink);
   }
 
-  .archive-points li + li {
-    margin-top: 4px;
+  /* No filter: the empty live region stays in the page but draws nothing. */
+  .filter-status:not([data-on]) {
+    margin-top: 0;
+    padding-left: 0;
+    border-left: 0;
   }
 
-  .archive-points li::before {
+  .filter-clear {
+    padding: 2px 0;
+    border: 0;
+    border-bottom: 1px solid currentColor;
+    background: none;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    color: var(--link-blue);
+    cursor: pointer;
+  }
+
+  .filter-clear:hover {
+    border-bottom-color: transparent;
+  }
+
+  /* While a filter is on: every match listed, briefs and the busy-day collapse step aside. */
+  .reader-list[data-filtering] [data-day-summary],
+  .reader-list[data-filtering] .day-label,
+  .reader-list[data-filtering] .day-toggle {
+    display: none;
+  }
+
+  .reader-list[data-filtering] .day-rest[hidden] {
+    display: block;
+  }
+
+  .reader-list[data-filtering] :global([data-entry][data-lead]) {
+    border-top: 0;
+  }
+
+  /* Days */
+  .day + .day {
+    margin-top: 20px;
+  }
+
+  .day-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 14px 6px 0;
+    border-bottom: 1px dashed var(--grey-dash);
+  }
+
+  .day-date,
+  .day-count,
+  .day-label {
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow-lg);
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+  }
+
+  .day-date {
+    color: var(--ink);
+  }
+
+  .day-count,
+  .day-label {
+    color: var(--ink-64);
+  }
+
+  .day-summary {
+    margin: 9px 14px 9px 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink-70);
+  }
+
+  .day-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0 6px 16px;
+    font-size: var(--text-eyebrow);
+  }
+
+  .day-label::before {
     content: '';
-    position: absolute;
-    left: 0;
-    top: 0.85em;
-    width: 7px;
-    height: 1px;
-    background: var(--grey-label);
+    width: 5px;
+    height: 5px;
+    border-radius: var(--radius-full);
+    background: var(--ink);
+  }
+
+  .day-summary + .day-label,
+  .day-head + .day-label {
+    padding-top: 0;
+  }
+
+  .day-rest .day-label {
+    padding-top: 10px;
+    border-top: 1px dashed var(--grey-rule);
+  }
+
+  .day-rest .day-label::before {
+    background: var(--grey-dash);
+  }
+
+  /* The rows of the first list after the header carry no rule of their own. */
+  .day-head + .rows > :global(:first-child) {
+    border-top: 0;
+  }
+
+  .day-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0 0 16px;
+    padding: 6px 0;
+    border: 0;
+    background: none;
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow-lg);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--link-blue);
+    cursor: pointer;
+  }
+
+  .day-toggle[hidden] {
+    display: none;
+  }
+
+  .day-toggle span:first-child {
+    border-bottom: 1px solid currentColor;
+  }
+
+  .day-toggle:hover span:first-child {
+    border-bottom-color: transparent;
+  }
+
+  .day-toggle-arrow {
+    transition: transform 0.2s var(--ease-out);
+  }
+
+  .day-toggle[aria-expanded='true'] .day-toggle-arrow {
+    transform: rotate(180deg);
+  }
+
+  /* Pane */
+  .reader-pane {
+    position: sticky;
+    top: var(--pane-top);
+    max-height: calc(100vh - var(--pane-top) - 20px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 1px dashed var(--grey-dash);
+    background-color: var(--card-light);
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--card-grid) 30%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--card-grid) 30%, transparent) 1px, transparent 1px);
+    background-size: 28px 28px;
+    background-attachment: local;
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-dash) transparent;
+  }
+
+  .pane-bar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px clamp(28px, 3vw, 48px) 0;
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+  }
+
+  .pane-label {
+    color: var(--ink-64);
+  }
+
+  .pane-open {
+    color: var(--link-blue);
+    border-bottom: 1px solid currentColor;
+  }
+
+  .pane-open:hover {
+    border-bottom-color: transparent;
+  }
+
+  .pane-body {
+    padding: 22px clamp(28px, 3vw, 48px) 44px;
+    transition: opacity 0.18s var(--ease-out);
+  }
+
+  .pane-body[data-loading] {
+    opacity: 0.45;
+  }
+
+  .pane-body :global(.entry-title) {
+    font-size: clamp(30px, 14px + 1.7vw, 42px);
+  }
+
+  /* Narrow screens: one column, no pane; headlines open the entry pages. */
+  @media (max-width: 1023px) {
+    .reader-page {
+      --reader-gutter: var(--content-gutter);
+    }
+
+    .reader {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .reader-pane {
+      display: none;
+    }
+
+    .chip {
+      min-height: 34px;
+    }
+
+    .filter-clear {
+      padding: 6px 0;
+    }
+
+    .day + .day {
+      margin-top: 34px;
+    }
+
+    .day-head {
+      padding-right: 0;
+    }
+
+    .day-summary {
+      margin: 12px 0 4px;
+      font-size: 15px;
+    }
+
+    .day-label {
+      padding-left: 0;
+      padding-top: 12px;
+    }
+
+    .day-toggle {
+      margin-left: 0;
+      min-height: 44px;
+    }
   }
 
   @media (max-width: 767px) {
-    .archive-row {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 12px;
-      padding: 28px 0;
+    .reader-intro {
+      font-size: 16px;
     }
+  }
 
-    .archive-meta {
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: 4px 14px;
-      padding-top: 0;
-    }
-
-    .archive-title {
-      font-size: 25px;
+  @media (prefers-reduced-motion: reduce) {
+    .pane-body,
+    .day-toggle-arrow {
+      transition: none;
     }
   }
 </style>

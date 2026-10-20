@@ -1,0 +1,516 @@
+---
+/*
+ * The /latest week grid: rows are the eight topics, columns the seven days of one
+ * week, and each non-empty cell holds an ink dot whose area grows with its count.
+ * Weeks are 7-day blocks ending on lastUpdated. Only the newest week (week 0) is
+ * rendered here; the filter script (src/scripts/latest/filters.ts) builds earlier
+ * weeks on demand by cloning this panel and filling it from the list rows'
+ * data-date/data-topics/data-type, so the page carries no second copy of the data.
+ * The script also turns the row labels, day headers and cells into filters for the
+ * list below, with one roving Tab stop across the table.
+ *
+ * Every grid button is rendered disabled: without JS they would do nothing, so the
+ * grid is a static overview until the script enables them.
+ *
+ * Grid hooks: [data-week-grid], [data-week="<last day>"], [data-week-label],
+ * [data-week-prev], [data-week-next], [data-grid-day], [data-grid-topic],
+ * [data-grid-cell], [data-cell-template]. No data-day here: that attribute marks
+ * the list's day groups. Per-type counts ride on data-n-<type> so the grid can
+ * follow the type chips.
+ */
+import { CATEGORIES, TOPICS, events, formatDayMonth, lastUpdated } from '../data/record';
+
+const DAY = 86_400_000;
+const toMs = (iso: string) => Date.parse(`${iso}T00:00:00Z`);
+const addDays = (iso: string, n: number) => new Date(toMs(iso) + n * DAY).toISOString().slice(0, 10);
+const topicSlug = (topic: string) => topic.toLowerCase().replace(/\s+/g, '-');
+const types = CATEGORIES.map((category) => category.toLowerCase());
+const plural = (n: number) => `${n} ${n === 1 ? 'entry' : 'entries'}`;
+const range = (first: string, last: string) =>
+  first.slice(0, 4) === last.slice(0, 4)
+    ? `${formatDayMonth(first)} to ${formatDayMonth(last)}, ${last.slice(0, 4)}`
+    : `${formatDayMonth(first)}, ${first.slice(0, 4)} to ${formatDayMonth(last)}, ${last.slice(0, 4)}`;
+/** Dot diameter as a multiple of the smallest dot: area grows with n, capped so a dot fits its cell. */
+const dot = (n: number) => Math.min(Math.sqrt(n), 3.2).toFixed(3);
+
+/** Short labels for narrow screens; the full name stays in the accessible name. */
+const SHORT: Record<string, string> = {
+  'Rogue agents': 'Rogue',
+  Superintelligence: 'Superint.',
+  'Harm to people': 'Harm',
+  'Lab conduct': 'Labs',
+};
+
+/** counts[key][type]: key is "<topic>|<date>" for cells, "<topic>" for totals, "|<date>" for days. */
+const counts = new Map<string, Record<string, number>>();
+const bump = (key: string, type: string) => {
+  const entry = counts.get(key) ?? Object.fromEntries(['all', ...types].map((t) => [t, 0]));
+  entry.all += 1;
+  entry[type] += 1;
+  counts.set(key, entry);
+};
+for (const event of events) {
+  const type = event.category.toLowerCase();
+  bump(`|${event.date}`, type);
+  for (const topic of event.topics) {
+    bump(topic, type);
+    bump(`${topic}|${event.date}`, type);
+  }
+}
+const typeAttrs = (key: string) =>
+  Object.fromEntries(types.map((t) => [`data-n-${t}`, counts.get(key)?.[t] ?? 0]));
+
+const weekDays = [...Array(7)].map((_, i) => addDays(lastUpdated, i - 6));
+const week = { end: lastUpdated, start: weekDays[0], days: weekDays, label: range(weekDays[0], lastUpdated) };
+---
+<section class="week-grid" data-week-grid aria-labelledby="week-grid-title">
+  <header class="grid-head">
+    <h2 class="grid-title" id="week-grid-title">Week by topic</h2>
+    <div class="grid-nav">
+      <button class="grid-step" type="button" data-week-prev aria-label="Earlier week" disabled>
+        <span aria-hidden="true">←</span>
+      </button>
+      <p class="grid-range" data-week-label aria-live="polite">{week.label}</p>
+      <button class="grid-step" type="button" data-week-next aria-label="Later week" disabled>
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
+    <p class="grid-legend">
+      <span class="legend-dots" aria-hidden="true">
+        <span class="dot" style={`--d: ${dot(1)}`}></span>
+        <span class="dot" style={`--d: ${dot(3)}`}></span>
+        <span class="dot" style={`--d: ${dot(6)}`}></span>
+      </span>
+      Dot size = entries
+    </p>
+  </header>
+
+  <div class="week" data-week={week.end} data-week-start={week.start} data-week-range={week.label}>
+    <table class="grid">
+      <caption class="visually-hidden">Entries by topic and day, {week.label}. Dot size shows the number of entries.</caption>
+      <colgroup>
+        <col class="col-topic" />
+        {week.days.map(() => <col />)}
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col" class="corner">Topic<span class="corner-note"> · all time</span></th>
+          {week.days.map((day) => {
+            const [mon, num] = formatDayMonth(day).split(' ');
+            return (
+              <th scope="col" data-col={day}>
+                <button class="day-btn" type="button" data-grid-day={day} aria-pressed="false" tabindex="-1" disabled>
+                  <span>{mon}</span>{' '}<span>{num}</span>
+                </button>
+              </th>
+            );
+          })}
+        </tr>
+      </thead>
+      <tbody>
+        {TOPICS.map((topic) => {
+          const slug = topicSlug(topic);
+          const total = counts.get(topic);
+          return (
+            <tr data-row={slug}>
+              <th scope="row">
+                <button
+                  class="topic-btn"
+                  type="button"
+                  data-grid-topic={slug}
+                  data-topic-name={topic}
+                  data-n={total?.all ?? 0}
+                  {...typeAttrs(topic)}
+                  aria-pressed="false"
+                  tabindex="-1"
+                  disabled
+                >
+                  <span class="topic-name">
+                    <span class="topic-full">{topic}</span>
+                    {SHORT[topic] && <span class="topic-short" aria-hidden="true">{SHORT[topic]}</span>}
+                  </span>{' '}
+                  <span class="topic-total"><span data-topic-total>{total?.all ?? 0}</span><span class="visually-hidden"> entries</span></span>
+                </button>
+              </th>
+              {week.days.map((day) => {
+                const n = counts.get(`${topic}|${day}`)?.all ?? 0;
+                return (
+                  <td data-col={day}>
+                    {n > 0 && (
+                      <button
+                        class="cell-btn"
+                        type="button"
+                        data-grid-cell
+                        data-topic={slug}
+                        data-cell-day={day}
+                        data-label={`${topic}, ${formatDayMonth(day)}`}
+                        data-n={n}
+                        {...typeAttrs(`${topic}|${day}`)}
+                        aria-pressed="false"
+                        aria-label={`${topic}, ${formatDayMonth(day)}: ${plural(n)}`}
+                        tabindex="-1"
+                        disabled
+                      >
+                        <span class="dot" style={`--d: ${dot(n)}`}></span>
+                      </button>
+                    )}
+                  </td>
+                );
+              })}
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+  <template data-cell-template>
+    <button class="cell-btn" type="button" data-grid-cell aria-pressed="false" tabindex="-1"><span class="dot"></span></button>
+  </template>
+</section>
+
+<style>
+  .week-grid {
+    --dot-unit: 6px;
+    --row-h: 24px;
+    --rule: color-mix(in srgb, var(--grey-rule) 75%, transparent);
+    --tint: color-mix(in srgb, var(--link-blue) 8%, transparent);
+    margin-bottom: 22px;
+    padding: 12px 22px 14px;
+    border: 1px dashed var(--grey-dash);
+    background-color: var(--card-light);
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--card-grid) 30%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--card-grid) 30%, transparent) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  /* Header: title, week stepper, legend. */
+  .grid-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 24px;
+    margin-bottom: 8px;
+  }
+
+  .grid-title {
+    font-family: var(--font-serif);
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.012em;
+  }
+
+  .grid-nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .grid-range,
+  .grid-legend,
+  .corner,
+  .day-btn,
+  .topic-total {
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+  }
+
+  .grid-range {
+    min-width: 25ch;
+    text-align: center;
+    color: var(--ink);
+  }
+
+  .grid-step {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--grey-dash);
+    border-radius: var(--radius-full);
+    background: transparent;
+    font-size: 13px;
+    line-height: 1;
+    color: var(--ink);
+    cursor: pointer;
+    transition: color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
+  }
+
+  .grid-step:hover:not(:disabled) {
+    border-color: var(--link-blue);
+    color: var(--link-blue);
+  }
+
+  .grid-step:disabled {
+    border-color: var(--grey-rule);
+    color: var(--grey-dash);
+    cursor: default;
+  }
+
+  .grid-legend {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    color: var(--grey-muted);
+  }
+
+  .legend-dots {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* Table */
+  .grid {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+
+  .col-topic {
+    width: 200px;
+  }
+
+  .grid th,
+  .grid td {
+    height: var(--row-h);
+    padding: 0;
+    border: 1px dashed var(--rule);
+    font-weight: 400;
+  }
+
+  .grid thead th {
+    border-top: 0;
+  }
+
+  .grid tr > :first-child {
+    border-left: 0;
+  }
+
+  .grid tr > :last-child {
+    border-right: 0;
+  }
+
+  .grid tbody tr:last-child > * {
+    border-bottom: 0;
+  }
+
+  .corner {
+    padding: 0 10px;
+    text-align: left;
+    color: var(--grey-muted);
+  }
+
+  .grid button {
+    width: 100%;
+    height: 100%;
+    min-height: var(--row-h);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+    outline-offset: -2px;
+    transition: color 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+  }
+
+  /* Rendered disabled (no JS: a static overview); the script enables them. */
+  .grid button:disabled {
+    cursor: default;
+  }
+
+  .grid .day-btn {
+    color: var(--ink);
+  }
+
+  .grid .day-btn:disabled {
+    color: var(--ink-64);
+  }
+
+  .grid .topic-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 12px 0 10px;
+    text-align: left;
+  }
+
+  .topic-name {
+    overflow: hidden;
+    font-family: var(--font-serif);
+    font-size: 15px;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .topic-short {
+    display: none;
+  }
+
+  .topic-total {
+    color: var(--grey-muted);
+  }
+
+  .grid .cell-btn {
+    display: grid;
+    place-items: center;
+  }
+
+  /* A cell with no entries of the chosen type steps out (and out of arrow-key reach). */
+  .grid .cell-btn[hidden] {
+    display: none;
+  }
+
+  .dot {
+    display: block;
+    width: calc(var(--dot-unit) * var(--d));
+    height: calc(var(--dot-unit) * var(--d));
+    border-radius: var(--radius-full);
+    background: var(--ink);
+    transition: background-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+  }
+
+  .legend-dots .dot {
+    background: var(--grey-muted);
+  }
+
+  /* Hover */
+  .grid .day-btn:hover:not(:disabled),
+  .grid .topic-btn:hover:not(:disabled) {
+    color: var(--link-blue);
+  }
+
+  .grid .cell-btn:hover:not(:disabled) {
+    background: var(--ink-06);
+  }
+
+  .cell-btn:hover:not(:disabled) .dot {
+    background: var(--link-blue);
+  }
+
+  /* Selection, set by the filter script: tinted row/column, blue label, heavier weight, rings. */
+  .grid tr[data-active] > *,
+  .grid [data-col][data-active] {
+    background-color: var(--tint);
+  }
+
+  .grid tr[data-active] .dot {
+    background: var(--link-blue);
+  }
+
+  .grid tr[data-active] > th {
+    box-shadow: inset 3px 0 0 var(--link-blue);
+  }
+
+  .grid tr[data-active] .topic-btn,
+  .grid [data-active] > .day-btn {
+    color: var(--link-blue);
+  }
+
+  .grid tr[data-active] .topic-name {
+    font-weight: 600;
+  }
+
+  .grid [data-active] > .day-btn span {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .cell-btn[aria-pressed='true'] .dot {
+    background: var(--link-blue);
+    box-shadow:
+      0 0 0 2px var(--card-light),
+      0 0 0 3.5px var(--link-blue);
+  }
+
+  /* Narrow: shorter topic labels, dates stacked, all 7 columns inside 390px. */
+  @media (max-width: 1023px) {
+    .week-grid {
+      --dot-unit: 5px;
+      --row-h: 30px;
+      padding: 12px 12px 14px;
+    }
+
+    .grid-head {
+      gap: 8px 16px;
+    }
+
+    .grid-title {
+      font-size: 21px;
+    }
+
+    .grid-legend {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .week-grid {
+      margin-inline: calc(-1 * min(12px, var(--content-gutter) / 2));
+    }
+
+    .col-topic {
+      width: 96px;
+    }
+
+    .grid-range {
+      min-width: 0;
+    }
+
+    .grid-legend {
+      display: none;
+    }
+
+    .corner-note {
+      display: none;
+    }
+
+    .day-btn span {
+      display: block;
+      line-height: 1.25;
+    }
+
+    .grid thead th {
+      height: 36px;
+    }
+
+    .grid .topic-btn {
+      padding: 0 6px 0 6px;
+      gap: 4px;
+    }
+
+    .topic-name {
+      font-size: 13px;
+    }
+
+    .topic-name:has(.topic-short) .topic-full {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    .topic-short {
+      display: inline;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .grid button,
+    .grid-step,
+    .dot {
+      transition: none;
+    }
+  }
+</style>

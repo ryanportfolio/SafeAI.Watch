@@ -1,0 +1,171 @@
+---
+/*
+ * One row of the /latest reader list: type and topic labels, the headline as a
+ * link to the entry page, and the source line. The reader script turns a plain
+ * left click on the headline into a selection on wide screens; everywhere else
+ * the link navigates. The data-* hooks are read by the reader and its filters.
+ */
+import { slugOf, type RecordEvent } from '../data/record';
+
+interface Props {
+  event: RecordEvent;
+  /** One of the day's five highlights ("Five to read"). */
+  highlight?: boolean;
+}
+
+const { event, highlight = false } = Astro.props;
+const slug = slugOf(event);
+const topicSlugs = event.topics.map((topic) => topic.toLowerCase().replace(/\s+/g, '-')).join(' ');
+---
+<li
+  class="row"
+  data-entry
+  data-slug={slug}
+  data-date={event.date}
+  data-type={event.category.toLowerCase()}
+  data-topics={topicSlugs}
+  data-highlight={highlight ? '' : undefined}
+>
+  <h3 class="row-title"><a href={`/latest/${slug}/`} data-entry-link>{event.title}</a></h3>
+  <p class="row-meta">
+    <span class="row-labels">
+      <span class="row-type">{event.category}</span>
+      {event.topics.map((topic) => (
+        <span class="row-topic"><span class="row-dot" aria-hidden="true"></span>{topic}</span>
+      ))}
+    </span>
+    <span class="row-source">{event.source}</span>
+  </p>
+</li>
+
+<style>
+  .row {
+    position: relative;
+    padding: 8px 14px 9px 16px;
+    border-top: 1px dashed var(--grey-rule);
+  }
+
+  /* Selection bar and surface, set by the reader script on wide screens. */
+  .row::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    background: var(--ink);
+    opacity: 0;
+    transition: opacity 0.2s var(--ease-out);
+  }
+
+  /* The pane exists only at 1024px and wider, so selection shows only there. */
+  @media (min-width: 1024px) {
+    .row[data-selected] {
+      background: var(--card-light);
+    }
+
+    .row[data-selected]::before {
+      opacity: 1;
+    }
+  }
+
+  .row-title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.28;
+    letter-spacing: -0.005em;
+    text-wrap: pretty;
+  }
+
+  .row-title a {
+    transition: color 0.2s var(--ease-out);
+  }
+
+  /* The whole row is the headline's hit area. */
+  .row-title a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  .row:hover .row-title a,
+  .row-title a[aria-current='true'] {
+    color: var(--link-blue);
+  }
+
+  .row-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 4px 16px;
+    margin-top: 4px;
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    line-height: 1.4;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ink-64);
+  }
+
+  .row-labels {
+    display: flex;
+    flex: 0 1 auto;
+    min-width: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px 12px;
+  }
+
+  .row-type {
+    color: var(--ink);
+  }
+
+  .row-topic {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .row-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: var(--radius-full);
+    background: var(--accent-orange);
+  }
+
+  .row-source {
+    flex: 1 1 0;
+    min-width: 12ch;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--grey-muted);
+  }
+
+  @media (max-width: 1023px) {
+    .row {
+      padding: 14px 0 15px;
+    }
+
+    .row::before {
+      display: none;
+    }
+
+    .row-title {
+      font-size: 19px;
+      line-height: 1.3;
+    }
+
+    .row-meta {
+      flex-wrap: wrap;
+      margin-top: 7px;
+    }
+
+    .row-source {
+      flex-basis: 100%;
+      text-align: left;
+      white-space: normal;
+    }
+  }
+</style>

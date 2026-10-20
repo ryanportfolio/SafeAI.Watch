@@ -18,10 +18,13 @@ Codex review; do not run `/codex-review` yourself.
 ## Rules
 
 - Every rule in `.claude/skills/add-source/SKILL.md` ("Rules that do not bend") applies to
-  every entry this run drafts. Read it at the start of each run.
-- The routine edits only `src/data/events.json` and the README files generated from it
-  (`README.md`, `assets/readme/*`). Homepage features, page copy and layout stay as they
-  are; suggest changes in the PR body instead.
+  every entry this run drafts. At the start of each run, read from `origin/main` that file,
+  its `references/entries.md`, `references/sourcing.md`, `references/placement.md`, and
+  `references/topics.md` (topics and day briefs), each via `MSYS_NO_PATHCONV=1 git -C
+  C:/Users/Home/CoreWise/SafeAI.Watch show origin/main:.claude/skills/add-source/<file>`.
+- The routine edits only `src/data/events.json`, `src/data/days.json` and the README files
+  generated from the record (`README.md`, `assets/readme/*`). Homepage features, page copy
+  and layout stay as they are; suggest changes in the PR body instead.
 - No per-run limit: publish everything that clears the bar, and nothing that does not.
   The bar decides, not the count.
 - Subagents inherit the session model; omit `model`.
@@ -114,27 +117,40 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    `worktree add -b daily-watch/<date> <same path> origin/main`. If the path already exists
    from a crashed run, remove that worktree first. Run `npm ci` there.
 7. **Draft.** For each kept candidate, run add-source workflow steps 2 to 5 (get the content,
-   trace and check claims, select and draft) with this run's sources as the material. Save
-   source checks under `<worktree>/.tmp/add-source/<slug>/`. Step 6 (placement) becomes
-   suggestions in the PR body.
+   trace and check claims, select and draft) with this run's sources as the material. Every
+   entry gets 1 to 3 `topics` from add-source `references/topics.md`
+   (Bio, Cyber, Rogue agents, Alignment, Superintelligence, Harm to people, Military,
+   Lab conduct). Save source checks under `<worktree>/.tmp/add-source/<slug>/`. Step 6
+   (placement) becomes suggestions in the PR body, except the day briefs, which this run
+   writes. Once all entries are in `events.json`, write or update the brief in
+   `src/data/days.json` for every date that gained or lost entries, per topics.md: a summary
+   once the date has 3 or more entries, and the Five to read (`highlights`) once it has
+   6 or more, re-picked from all of that date's entries, not only this run's. Nobody
+   reviews the pick before the PR, so apply topics.md's significance ranking and Bio rule
+   yourself and record, per date, why each of the five made it and what ranked just below.
 8. **Verify.** add-source step 7: one fresh subagent per run re-fetches every source and
-   checks every claim and quote in the drafted entries; fix or drop what fails. Then, in
-   the worktree, `npm run build`, `node scripts/readme/build.mjs` (regenerates the README
+   checks every claim and quote in the drafted entries, and checks that every fact in each
+   day summary this run wrote or changed is stated in that date's entries; fix or drop what
+   fails. Then, in the worktree, `npm run build` (it also validates topics and day briefs),
+   `node scripts/readme/build.mjs` (regenerates the README
    and masthead from the record), `node scripts/readme/build.mjs --check` and
    `node scripts/readme/meta.mjs --lint` (the PR-side README gate). The README CI job fails on stale output, and
    `npm run build` does not catch it. If a check fails and the cause is not in the drafted
-   entries, stop and report; do not touch other files to make it pass.
-9. **Deliver.** Commit `src/data/events.json` and the regenerated `README.md` and
-   `assets/readme/*` only, with the repo trailer, message in a `.tmp` file and
+   entries or the day briefs this run wrote, stop and report; do not touch other files to
+   make it pass.
+9. **Deliver.** Commit `src/data/events.json`, `src/data/days.json` and the regenerated
+   `README.md` and `assets/readme/*` only, with the repo trailer, message in a `.tmp` file and
    `git commit -F`. Push. With no open PR:
    `gh pr create --head daily-watch/<date> --base main --body-file <file>`, title
    `Daily watch: <date>`. With an open PR: push to its branch and append a dated section to
    its body (`gh pr edit --body-file`). Body sections per run: window and lanes scanned;
-   entries added (date, category, title, source, why it cleared the bar); held and skipped
+   entries added (date, category, topics, title, source, why it cleared the bar); day briefs
+   written or changed, and for each Five to read the reasoning from step 7; held and skipped
    candidates worth the user's attention, with reasons; paywall routes tried; placement
    suggestions; checks run. End with the PR attribution line.
 10. **Close out.** Write `report.md` (window, counts per lane, verdicts, follow-up changes,
-   PR link) and write today's date to `last-run.json`. Only now, with the push and PR
+   topics assigned to each new entry, day briefs written or changed, PR link) and write
+   today's date to `last-run.json`. Only now, with the push and PR
    confirmed, append `verdicts.jsonl` to `seen.jsonl`: entries in the PR as `pr` with its
    number, entries dropped at verification as `held` or `skipped` with the reason, and the
    rest as judged. If delivery failed, append nothing and say so in the report. Append to `tracked.jsonl`: a line

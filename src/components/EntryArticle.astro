@@ -1,0 +1,196 @@
+---
+/*
+ * One record entry in full: meta line, title, source link, and its parts.
+ * Shared by the entry page (/latest/<slug>/, title as h1) and the /latest
+ * reader's right pane (title as h2), which fetches an entry page and takes
+ * its [data-entry-article] element.
+ */
+import { formatLong, slugOf, type RecordEvent } from '../data/record';
+
+interface Props {
+  event: RecordEvent;
+  /** Heading level of the title: 1 on the entry page, 2 inside another page. */
+  headingLevel?: 1 | 2;
+}
+
+const { event, headingLevel = 2 } = Astro.props;
+const Heading = headingLevel === 1 ? 'h1' : 'h2';
+---
+<article class="entry" data-entry-article data-slug={slugOf(event)}>
+  <div class="entry-meta eyebrow">
+    <time datetime={event.date}>{formatLong(event.date)}</time>
+    <span class="entry-sep" aria-hidden="true"></span>
+    <span>{event.category}</span>
+    <span class="entry-sep entry-sep-topics" aria-hidden="true"></span>
+    <ul class="entry-topics" aria-label="Topics">
+      {event.topics.map((topic) => (
+        <li><span class="entry-topic-dot" aria-hidden="true"></span>{topic}</li>
+      ))}
+    </ul>
+  </div>
+
+  <Heading class="entry-title">{event.title}</Heading>
+
+  <div class="entry-source">
+    <p class="entry-source-name">{event.source}</p>
+    <a class="button button-primary" href={event.url} target="_blank" rel="noopener noreferrer">
+      Read the source<span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+    </a>
+  </div>
+
+  <dl class="entry-parts">
+    <dt>What happened</dt>
+    <dd>{event.happened}</dd>
+    <dt>Key points</dt>
+    <dd>
+      <ul class="entry-points">
+        {event.keyPoints.map((point) => <li>{point}</li>)}
+      </ul>
+    </dd>
+    <dt>Evidence</dt>
+    <dd>{event.evidence}</dd>
+    {event.uncertain && (
+      <>
+        <dt>Uncertain</dt>
+        <dd>{event.uncertain}</dd>
+      </>
+    )}
+  </dl>
+</article>
+
+<style>
+  .entry {
+    max-width: 780px;
+  }
+
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 20px;
+    font-size: var(--text-eyebrow-lg);
+  }
+
+  .entry-sep {
+    width: 2px;
+    height: 2px;
+    border-radius: var(--radius-full);
+    background: var(--ink-20);
+  }
+
+  .entry-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+  .entry-topics li {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .entry-topic-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: var(--radius-full);
+    background: var(--accent-orange);
+  }
+
+  .entry-title {
+    margin-top: 22px;
+    font-size: clamp(32px, 22px + 2.2vw, 50px);
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  .entry-source {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 24px;
+    margin-top: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px dashed var(--grey-rule);
+  }
+
+  .entry-source-name {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--grey-muted);
+  }
+
+  .entry-parts {
+    margin-top: 28px;
+  }
+
+  .entry-parts dt {
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow-lg);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ink-64);
+  }
+
+  .entry-parts dd {
+    margin-inline-start: 0;
+    margin-top: 6px;
+    margin-bottom: 22px;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .entry-parts dd:last-child {
+    margin-bottom: 0;
+  }
+
+  .entry-points li {
+    position: relative;
+    padding-left: 18px;
+  }
+
+  .entry-points li + li {
+    margin-top: 6px;
+  }
+
+  .entry-points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.85em;
+    width: 8px;
+    height: 1px;
+    background: var(--ink-64);
+  }
+
+  @media (max-width: 767px) {
+    .entry-meta {
+      gap: 8px 14px;
+    }
+
+    /* Topics get their own line, so no separator dot dangles at a wrap. */
+    .entry-sep-topics {
+      display: none;
+    }
+
+    .entry-topics {
+      flex-basis: 100%;
+    }
+
+    .entry-title {
+      margin-top: 18px;
+    }
+
+    .entry-source {
+      margin-top: 22px;
+      padding-bottom: 22px;
+    }
+
+    .entry-parts dd {
+      font-size: 16px;
+    }
+  }
+</style>
