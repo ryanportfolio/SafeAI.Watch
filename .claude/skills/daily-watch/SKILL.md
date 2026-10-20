@@ -118,9 +118,12 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
 6. **Workspace.** If a routine PR is open, add a worktree on its branch:
    `git -C C:/Users/Home/CoreWise/SafeAI.Watch worktree add -B <headRefName> C:/Users/Home/CoreWise/_wt/SafeAI.Watch/daily-<date> origin/<headRefName>`,
    then merge `origin/main` into it (no rebase, no force-push). On a conflict in
-   `events.json` or `days.json`, keep every entry from both sides, once each, in date order, and rewrite the
-   conflicted dates' briefs in step 7; on a conflict in any other file, stop and report. Note
-   every date whose entry count the merge changed. Otherwise
+   `events.json`, resolve it only when each side of every conflicting hunk holds entries
+   that side added since the merge base: keep both sides' additions in date order. In
+   `days.json`, take either side for a conflicted date and rewrite that date's brief in step 7.
+   When a hunk removes or changes an entry that the merge base had (main may have deleted or
+   corrected it on purpose), or a conflict is in any other file, run `git merge --abort`,
+   stop and report. Note every date whose entry count the merge changed. Otherwise
    `worktree add -b daily-watch/<date> <same path> origin/main`. If the path already exists
    from a crashed run, remove that worktree first. Run `npm ci` there.
 7. **Draft.** For each kept candidate, run add-source workflow steps 2 to 5 (get the content,
