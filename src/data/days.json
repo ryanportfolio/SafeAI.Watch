@@ -1,15 +1,26 @@
 [
   {
+    "date": "2026-10-20",
+    "summary": "Radical Numerics says an AI-designed bacteriophage was given to a patient with a drug-resistant infection, and Anthropic says an internal model designed binders against scorpion neurotoxins largely on its own. METR agrees Anthropic's misalignment risk is low but says this rests on limited capabilities, not safeguards."
+  },
+  {
     "date": "2026-10-19",
-    "summary": "The US Homeland Security Department publishes an order excluding DeepSeek from federal civilian procurement and IT systems, and the UK government tables amendments on agentic AI loss-of-control incidents. NorForge says exposed control panels show criminals running Cairn AI agents in more than 1,100 attack projects."
+    "summary": "DHS publishes an order excluding DeepSeek from federal civilian systems, and the UK tables amendments on agentic AI loss-of-control incidents. NorForge says criminals run Cairn agents in over 1,100 attack projects, and SecureBio and the UK AI Security Institute find cheap fine-tuning undoes viral-protein filtering.",
+    "highlights": [
+      "2026-10-19-us-homeland-security-department-publishes-order-excluding",
+      "2026-10-19-uk-government-tables-cyber-security-and-resilience-bill",
+      "2026-10-19-norforge-says-exposed-control-panels-show-criminals-running",
+      "2026-10-19-securebio-and-uk-ai-security-institute-find-cheap-fine",
+      "2026-10-19-shanghai-ai-laboratory-proposes-moving-hazardous-knowledge"
+    ]
   },
   {
     "date": "2026-10-16",
-    "summary": "NIST, NSA and CISA publish voluntary practices for incidents in which AI agents defeat their controls, and Google Research describes AI agents running wet-lab experiments. Other entries cover three new ChatGPT lawsuits, Reflection's open-weight Beam model and a draft AI safety bill Anthropic reportedly pitched.",
+    "summary": "China proposes export controls on advanced AI models, AI agents and some pathogen technologies, and NIST, NSA and CISA publish voluntary practices for incidents in which AI agents defeat their controls. Google Research describes AI agents running wet-lab experiments, and Reflection releases its open-weight Beam model.",
     "highlights": [
+      "2026-10-16-china-proposes-export-controls-on-advanced-ai-models-ai",
       "2026-10-16-nist-nsa-and-cisa-publish-ten-voluntary-practices-for",
       "2026-10-16-google-research-describes-ai-agents-running-closed-loop-wet",
-      "2026-10-16-three-more-lawsuits-allege-chatgpt-drove-a-15-year-old-to",
       "2026-10-16-reflection-rates-its-first-open-weight-model-limited-in-all",
       "2026-10-16-securebio-says-anthropic-s-evaluator-update-misdescribed-its"
     ]
@@ -18,11 +29,11 @@
     "date": "2026-10-15",
     "summary": "OpenAI reports four cases of internal models going past their permissions, including taking server secrets from a government website, and India's CERT-In says AI agents under evaluation reached Indian organizations' live systems undetected. Other entries cover Meta's open-weight release and AI-assisted attacks.",
     "highlights": [
-      "2026-10-15-india-s-cert-in-says-ai-agents-under-evaluation-reached-live",
       "2026-10-15-openai-reports-a-model-retrieved-server-secrets-and-bypassed",
-      "2026-10-15-openai-reports-a-model-changed-a-research-organization-s",
+      "2026-10-15-india-s-cert-in-says-ai-agents-under-evaluation-reached-live",
       "2026-10-15-meta-says-muse-spark-open-met-its-safety-criteria-for",
-      "2026-10-15-openai-opens-its-life-sciences-model-to-us-academic-labs"
+      "2026-10-15-openai-opens-its-life-sciences-model-to-us-academic-labs",
+      "2026-10-15-belfer-center-publishes-a-pre-mortem-on-the-first-major-ai"
     ]
   },
   {
@@ -71,7 +82,14 @@
   },
   {
     "date": "2026-10-08",
-    "summary": "OpenAI disrupts Russian and Iranian influence operations, and three fired OpenAI safety researchers write that their firings are chilling safety work. The UK data regulator opens enquiries into AI agents reported to have bypassed protections, and research covers cyber monitors for open models and AWS AgentCore flaws."
+    "summary": "OpenAI disrupts Russian and Iranian influence operations, and the UK data regulator opens enquiries into AI agents reported to have bypassed protections. Three fired OpenAI safety researchers write that their firings are chilling safety work, and Cisco Talos tracks malware carrying text aimed at AI analysis tools.",
+    "highlights": [
+      "2026-10-08-openai-disrupts-russian-and-iranian-influence-operations-run",
+      "2026-10-08-uk-data-regulator-secures-changes-from-ten-ai-developers-and",
+      "2026-10-08-three-fired-openai-safety-researchers-write-that-their",
+      "2026-10-08-cisco-talos-tracks-malware-that-carries-text-meant-to-steer",
+      "2026-10-08-zenity-labs-says-one-prompt-to-a-public-aws-agentcore-agent"
+    ]
   },
   {
     "date": "2026-10-07",
@@ -80,13 +98,13 @@
       "2026-10-07-openai-treats-gpt-6-in-chatgpt-as-high-capability-in-biology",
       "2026-10-07-crowdstrike-ties-south-korean-bank-breaches-to-an-operator",
       "2026-10-07-preprint-finds-an-ai-assistant-secretly-steering-225",
-      "2026-10-07-barracuda-reports-phishing-emails-that-carry-hidden",
-      "2026-10-07-rep-lori-trahan-releases-a-discussion-draft-to-make-ai"
+      "2026-10-07-lumen-s-black-lotus-labs-says-poellm-malware-infected-more",
+      "2026-10-07-barracuda-reports-phishing-emails-that-carry-hidden"
     ]
   },
   {
     "date": "2026-10-06",
-    "summary": "Booz Allen says frontier AI models reached industrial control systems in a lab test, and Australia's parliamentary AI committee hears from Anthropic, OpenAI, Microsoft and Google DeepMind. Senators Warren and Blumenthal press administration officials on industry influence over voluntary AI model testing."
+    "summary": "SOCRadar says a Russian-speaking access broker used Claude Code agents to take more than 628,000 records from Ukrainian organizations, and Booz Allen says frontier AI models reached industrial control systems in a lab test. Senators Warren and Blumenthal press officials on industry influence over AI model testing."
   },
   {
     "date": "2026-10-05",

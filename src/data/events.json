@@ -1582,6 +1582,24 @@
     "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr10594ih/html/BILLS-119hr10594ih.htm"
   },
   {
+    "date": "2026-09-24",
+    "category": "Governance",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Senate bill would create an independent board to investigate major cyber incidents, with attention to AI risks",
+    "happened": "Senator Edward Markey introduced the Cybersecurity and AI Board of Investigations Act of 2026 (S. 5541) on September 24, 2026; it was referred to the Commerce, Science, and Transportation Committee.",
+    "keyPoints": [
+      "The bill finds AI \"can strengthen cybersecurity controls while also increasing the volume and sophistication of cyber threats,\" and names water utilities and telecommunications networks as exposed.",
+      "A five-member independent board, appointed by the President with Senate consent, would review significant incidents, near-misses and systemic vulnerabilities, \"including within the artificial intelligence sector.\"",
+      "It would publish its reviews and trend analyses on AI-related risks, run a voluntary anonymized near-miss reporting system, and assign no legal fault or liability.",
+      "The Chair could subpoena documents and testimony after a deficient response to a request, with a majority of members approving; federal agencies would answer recommendations within 90 days."
+    ],
+    "evidence": "Bill text as introduced, with no cosponsors listed. It is a proposal that has not passed.",
+    "source": "US Congress · Bill text",
+    "url": "https://www.govinfo.gov/content/pkg/BILLS-119s5541is/html/BILLS-119s5541is.htm"
+  },
+  {
     "date": "2026-09-25",
     "category": "Incidents",
     "topics": [
@@ -2545,6 +2563,42 @@
     "url": "https://www.warren.senate.gov/wp-content/uploads/2026/10/2026.10.5-Letter-to-Trump-Admin-re-Industry-Influence-Over-AI-Policy.pdf"
   },
   {
+    "date": "2026-10-06",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "SOCRadar says a Russian-speaking access broker ran a Claude Code agent swarm in campaigns that targeted Ukrainian energy firms",
+    "happened": "SOCRadar's Threat Research Unit documented CyberXero, a financially motivated initial access broker first seen in July 2026, after finding the actor's live working directory exposed online.",
+    "keyPoints": [
+      "The actor's AI layer used up to 51 specialized Claude Code agents, plus the open-source PentAGI framework wired to a Cobalt Strike server.",
+      "An automated pipeline hit WordPress and e-commerce sites worldwide, while a curated one ran reconnaissance on seven Ukrainian energy and utilities entities.",
+      "Four Ukrainian organizations had confirmed exfiltration totaling more than 628,000 records, the largest from a district heating provider in Kharkiv, a city on an active front.",
+      "Session logs show models refusing some tasks, such as installing a backdoor and disabling a firewall, while the actor worked around other refusals."
+    ],
+    "evidence": "Security vendor's threat report based on files the actor left exposed, including AI session logs. The full technical report is a PDF that was not read for this entry.",
+    "uncertain": "Attribution is SOCRadar's own. It recovered no direct evidence that access to the Ukrainian targets was sold and says the objective of that campaign remains unresolved.",
+    "source": "SOCRadar · Company report",
+    "url": "https://socradar.io/blog/cyberxero-ai-iab-ukraine-critical-infrastructure/"
+  },
+  {
+    "date": "2026-10-06",
+    "category": "Governance",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "House bill would have CISA set up a task force on the safety and security of AI",
+    "happened": "Representative Troy Carter, with Representative Bennie Thompson, introduced the CISA Securing AI Task Force Act (H.R. 10752) on October 6, 2026; it was referred to the Homeland Security Committee.",
+    "keyPoints": [
+      "Within a year, CISA's director would form a task force from across the agency \"to coordinate future Agency activities related to the safety and security of artificial intelligence.\"",
+      "Its duties include finding how AI can defend against cyber threats, advising stakeholders on the cyber risks of deploying AI-based software, and addressing AI workforce gaps.",
+      "The task force would report to the House and Senate homeland security committees every six months, and the law would expire five years after enactment."
+    ],
+    "evidence": "Bill text as introduced. It is a proposal that has not passed; it organizes existing CISA work, and the text includes no funding.",
+    "source": "US Congress · Bill text",
+    "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr10752ih/html/BILLS-119hr10752ih.htm"
+  },
+  {
     "date": "2026-10-07",
     "category": "Research",
     "topics": [
@@ -2679,6 +2733,24 @@
     "url": "https://blog.barracuda.com/2026/10/07/email-attacks-target-both-humans-ai-assistants"
   },
   {
+    "date": "2026-10-07",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Lumen's Black Lotus Labs says PoeLLM malware infected more than 3,400 servers, most of them exposed AI services",
+    "happened": "Lumen's Black Lotus Labs reported PoeLLM, a campaign it has tracked since April 2026 that turns vulnerable internet-facing servers into cryptocurrency miners and exploit scanners.",
+    "keyPoints": [
+      "Lumen counts more than 3,400 victim servers, with peak activity above 800 active servers a day, mostly in the US and Western Europe.",
+      "Most victims appear to run vulnerable open-source AI and LLM services such as LiteLLM and Ollama; hundreds of Gotenberg and Gitea servers were also hit.",
+      "Infected machines find the operator's command servers by decoding words from a poem hosted on GitHub.",
+      "Lumen says attackers now see AI servers as \"attractive targets for compromise\" and that their GPU hardware may also have drawn this mining operation."
+    ],
+    "evidence": "Security vendor's threat research post. The victim counts are Lumen's own, and Lumen says it disrupted the threat for its customers.",
+    "source": "Lumen Black Lotus Labs · Company report",
+    "url": "https://www.lumen.com/blog/en-us/canto-incognito-tracking-the-poellm-malware"
+  },
+  {
     "date": "2026-10-08",
     "category": "Incidents",
     "topics": [
@@ -2773,6 +2845,24 @@
     "uncertain": "AWS's statement in the post says \"The behavior described is documented and expected\" and that an agent reaches another account's resources only where a developer grants it; the two sides describe the same behavior differently. The post reports no exploitation beyond the researchers' own.",
     "source": "Zenity Labs · Research report",
     "url": "https://labs.zenity.io/post/agentcorruption-initial-imds-access"
+  },
+  {
+    "date": "2026-10-08",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Cisco Talos tracks malware that carries text meant to steer the AI tools analyzing it",
+    "happened": "Cisco Talos described four malware families, 84 samples collected from January 2025 through July 2026, that embed natural-language instructions aimed at AI-based malware analysis.",
+    "keyPoints": [
+      "Talos calls the class \"AI-Analysis Evasion\" and found the earliest version reused verbatim by at least four distinct actors, including in more capable tools.",
+      "Later families varied the wording from build to build, repeated it in several model chat formats, and added notes meant to intimidate the model.",
+      "In Talos's tests on five local models, the best techniques steered verdicts toward the attacker in about 35% of runs; complex ones often made models more suspicious.",
+      "Talos says \"Text inside a sample must be treated as evidence, never instruction,\" and calls the trend \"interesting, but not alarming.\""
+    ],
+    "evidence": "Security vendor research post with its own test of how the embedded text shifts model verdicts. Talos says conventional detection is unaffected and the effect is \"a mixed bag.\"",
+    "source": "Cisco Talos · Research report",
+    "url": "https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/"
   },
   {
     "date": "2026-10-09",
@@ -2980,6 +3070,25 @@
     "uncertain": "It sets out principles, not a company commitment, and does not say which controls Microsoft uses today. It sets aside \"the hard problem of alignment.\"",
     "source": "X · Public essay",
     "url": "https://x.com/satyanadella/status/2108931348857827686"
+  },
+  {
+    "date": "2026-10-10",
+    "category": "Research",
+    "topics": [
+      "Bio",
+      "Superintelligence"
+    ],
+    "title": "Lancet Commission names malicious use of AI, including bioweapons, as one of two threats with extinction potential",
+    "happened": "The Lancet Commission on 21st century global threats to health, whose authors include IHME Director Christopher Murray and co-chair Natalia Kanem, published a report that sorts hundreds of threats to human health into a pyramid and places the malicious use of AI and nuclear war in its top tier.",
+    "keyPoints": [
+      "The Commission writes that \"malicious use of AI, including bioweapons, and nuclear war with nuclear famine carry risks of extinction in the next 75 years.\"",
+      "These two are the only threats in the top \"extinction potential\" category; 15 others, including naturally occurring pandemics and antimicrobial resistance, sit in a \"major catastrophic threats\" category forecast to cause more than 1 billion DALYs each by 2100.",
+      "The two extinction-potential threats are assessed qualitatively rather than by the disability-adjusted life-year metric the Commission applies to the others over 2025 to 2100."
+    ],
+    "evidence": "A peer-reviewed Lancet Commission report, summarized on the IHME page linked here. It ranks threats to human health and states no probability or date for an AI-enabled extinction event.",
+    "uncertain": "The extinction-potential ranking rests on a qualitative judgment, not the DALY estimates used for the other threats. The Commission excluded other extinction risks such as asteroid collision because their probability over 75 years was \"deemed to be extremely low.\"",
+    "source": "Lancet Commission · Research report",
+    "url": "https://www.healthdata.org/research-analysis/library/lancet-commission-21st-century-global-threats-health"
   },
   {
     "date": "2026-10-11",
@@ -3776,6 +3885,43 @@
     "url": "https://arxiv.org/abs/2610.21253"
   },
   {
+    "date": "2026-10-15",
+    "category": "Research",
+    "topics": [
+      "Bio",
+      "Cyber"
+    ],
+    "title": "Belfer Center publishes a pre-mortem on the first major AI-enabled terrorism event",
+    "happened": "Stephen Casper and five co-authors at Harvard Kennedy School's Belfer Center released a paper that assumes a major AI-enabled cyber, biological, or chemical terror attack has occurred and traces backward the choices that could have enabled it.",
+    "keyPoints": [
+      "The paper offers \"a set of 9 falsifiable predictions about how the first major AI-enabled cyber, bio, or chemical terrorism attack may occur\" and two illustrative scenarios.",
+      "It argues developer, distributor, and government choices \"around model deployment, safeguards, and detection strategies will substantially shape whether AI meaningfully lowers the barrier to such an attack.\"",
+      "It finds \"almost no developers of closed- or open-weight models publicly report human uplift randomized control trials,\" and warns that if the safeguard gap between closed- and open-weight developers persists, \"major incidents originating from open-weight models become nearly inevitable.\""
+    ],
+    "evidence": "A policy-institute research paper. It is a structured backward analysis and forecast, not a report of an event that occurred.",
+    "source": "Belfer Center · Research report",
+    "url": "https://www.belfercenter.org/research-analysis/pre-mortem-first-major-ai-enabled-terrorism-event-and-choices-could-enable-it"
+  },
+  {
+    "date": "2026-10-15",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "UK Home Office issues police guidance on the offence of making or supplying nudification tools",
+    "happened": "The Home Office published non-statutory guidance on October 15, 2026, for police in England and Wales on the offences of making or supplying generators of purported intimate images, in force since June 29, 2026.",
+    "keyPoints": [
+      "The offences, added by the Crime and Policing Act 2026, carry up to three years' imprisonment and an unlimited fine; possessing or downloading a tool is not covered.",
+      "A covered tool can be an app, a website, a bot on social media or a messaging service, or an AI model, including a fine-tuned version.",
+      "The test is whether \"a reasonable person (having regard to all the circumstances) would consider\" a tool was made or supplied for that use; intent need not be shown.",
+      "Makers have a defense if they took all reasonable steps to prevent misuse; the guidance says \"A defendant should not merely undertake some reasonable steps to discourage misuse.\""
+    ],
+    "evidence": "Government guidance for police, not law; it explains offences already in force. It lists factors investigators may weigh, such as a tool's advertising, suggested prompts and safeguards.",
+    "uncertain": "The guidance says courts have yet to apply the reasonable-person test that decides which tools are covered.",
+    "source": "UK Home Office · Police guidance",
+    "url": "https://www.gov.uk/government/publications/making-or-supplying-purported-intimate-image-generators"
+  },
+  {
     "date": "2026-10-16",
     "category": "Incidents",
     "topics": [
@@ -4039,6 +4185,46 @@
     "url": "https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/"
   },
   {
+    "date": "2026-10-16",
+    "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
+    "title": "Researchers find split-up multi-agent attacks slip past a frontier monitor that reads each agent alone",
+    "happened": "Researchers from MATS Research and Redwood Research posted a preprint on October 16, 2026, testing whether colluding AI agents can carry out loss-of-control attacks without a monitor noticing.",
+    "keyPoints": [
+      "They built MiniLab, live services \"adapted from internal AI deployment infrastructure,\" with attack goals including weight exfiltration, unmonitored rogue deployment and permission elevation.",
+      "A GPT-5.6 Sol monitor reading each agent separately \"flags only 7% of successful distributed attacks, compared with 87% when a single agent carries out the same side task.\"",
+      "Reading all colluding agents' trajectories together, the monitor flagged 41% of distributed attacks; attacks chained into a longer sequence without any single agent being flagged.",
+      "The best model-planned attacks succeeded covertly in at most 25% of executions, against 80% for human-crafted plans, \"though this may scale with model capabilities.\""
+    ],
+    "evidence": "Research preprint in a synthetic test environment. It shows what capable agents can execute when given attack plans, not that such attacks have happened.",
+    "uncertain": "Not peer reviewed. The authors say most attacks were human-crafted and optimized to find failures, so the results do not show how often such failures would occur.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.24052"
+  },
+  {
+    "date": "2026-10-16",
+    "category": "Governance",
+    "topics": [
+      "Cyber",
+      "Bio"
+    ],
+    "title": "China proposes export controls on advanced AI models, AI agents and some pathogen technologies, with registration required at once",
+    "happened": "China's Ministry of Commerce and Ministry of Science and Technology opened consultation on October 16, 2026, on adding 40 technologies in AI, biomedicine and solar power, 23 of them AI, to the country's export control catalog.",
+    "keyPoints": [
+      "The AI items cover large models, AI agents, computing clusters and information processing; technology already public through open source or published papers is excluded.",
+      "An attached draft list covers large models trained with at least 10^26 floating-point operations, with at least 2 trillion parameters, or ranked in the global top 10.",
+      "The list also covers AI-driven malware generation and AI-assisted vulnerability discovery, and among 5 biomedical items, techniques that enhance the function of pathogenic microorganisms.",
+      "Until the revised catalog takes effect, exporters must register before transferring or licensing listed technologies abroad, starting from the notice date; comments are due November 15, 2026."
+    ],
+    "evidence": "Joint consultation notice from two Chinese ministries with a draft technology list attached, in Chinese; the provisions are paraphrased here. The catalog change is a proposal, but registration already applies.",
+    "uncertain": "The technology list is a consultation draft and may change after comments close. The notice cites China's foreign trade and technology export laws but does not state the controls' aims.",
+    "source": "Ministry of Commerce and Ministry of Science and Technology of China · Draft regulation",
+    "url": "https://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_0a31a3c9ac404f7a9b0e917ce3412997.html"
+  },
+  {
     "date": "2026-10-17",
     "category": "Warnings",
     "topics": [
@@ -4091,6 +4277,25 @@
     "uncertain": "Every fact here is the prosecution's allegation and untested. The memo was filed for an October 19, 2026 detention hearing; the court's decision is not part of this filing.",
     "source": "US District Court for the Northern District of California · Court filing (CourtListener copy)",
     "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.480828/gov.uscourts.cand.480828.12.0.pdf"
+  },
+  {
+    "date": "2026-10-18",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
+    "title": "Anthropic's federal affairs lead says the leaked draft bill puts its framework into legislative language and will be revised",
+    "happened": "Anthony Cimino, who leads Anthropic's federal affairs team, posted on October 18, 2026, about the draft federal AI safety bill circulating after a version was shared with the press.",
+    "keyPoints": [
+      "He says the draft is \"a translation of those ideas into legislative language,\" from Anthropic's Advanced AI Framework, \"shared with a small number of congressional offices.\"",
+      "Anthropic plans to update its preemption language to make clearer that states keep a role, including \"regulating a lab's capacity to shut down a model.\"",
+      "He says the draft lets a court halt a lab's internal use of a dangerous model and requires reporting \"when a model breaks containment and gains access to outside systems.\"",
+      "He says the risk threshold came from California law; Anthropic plans proposals on independent evaluators and will explore how government could adjust the pace of frontier development."
+    ],
+    "evidence": "A company official's own post confirming and describing the draft. It is not the bill text, which the record cannot link.",
+    "uncertain": "A draft circulated privately, not introduced in Congress and not passed. The changes he describes are plans, and no revised text has been published.",
+    "source": "X · Personal post",
+    "url": "https://x.com/ajcimino/status/2111932795714977941"
   },
   {
     "date": "2026-10-19",
@@ -4149,5 +4354,264 @@
     "uncertain": "Cost and success figures are NorForge's estimates, and it calls the uncertainty in the cost estimate considerable. Most intrusion claims rest on the panels' own records.",
     "source": "NorForge · Company report",
     "url": "https://norforge.com/blog/inside_cairn"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "SecureBio and UK AI Security Institute find cheap fine-tuning undoes viral-protein filtering in protein language models",
+    "happened": "Researchers from SecureBio, the UK AI Security Institute, the Broad Institute, and Oxford posted a preprint testing whether filtering viral proteins from the training data of ESM-2 protein language models is an effective and durable safeguard.",
+    "keyPoints": [
+      "Filtering \"meaningfully degrades\" modeling of viral proteins while \"largely preserving performance on non-viral proteins,\" with the effect \"concentrated among proteins from human-infecting viruses\" and growing as models scale from 8M to 3B parameters.",
+      "\"Fine-tuning on sequences from the removed viral families restores the lost performance,\" costing \"about 80 USD of H100 time\" even for the largest model.",
+      "They conclude the method is \"moderately effective at selectively degrading performance on viral proteins, but not durable against fine-tuning with modest computational resources and access to relevant data.\""
+    ],
+    "evidence": "An arXiv preprint, not yet peer-reviewed, using the open ESM-2 model family.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.26651"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "Shanghai AI Laboratory proposes moving hazardous knowledge into deletable experts in mixture-of-experts models",
+    "happened": "Researchers at Shanghai AI Laboratory posted a preprint describing REX, a method that relocates hazardous knowledge in mixture-of-experts models into new experts that are deleted before a model is released.",
+    "keyPoints": [
+      "They argue existing unlearning methods \"suppress the expression of hazardous knowledge rather than remove it,\" leaving it \"readily recoverable by subsequent fine-tuning.\"",
+      "REX concentrates hazardous knowledge in physically removable experts; on Qwen3.5-35B-A3B, \"excision lowers WMDP-Bio accuracy by 48.4 points while MMLU changes by less than 3 points.\"",
+      "The removal survives fine-tuning better than baselines: after 250M tokens, WMDP-Bio accuracy rose only from 32.4% to 42.8% for REX versus 44.1% to 78.3% for the best baseline."
+    ],
+    "evidence": "An arXiv preprint, not yet peer-reviewed, evaluated on three open mixture-of-experts models (Intern-S2, Qwen3.5-35B-A3B, Gemma-4-26B-A4B).",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.25791"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Preprint finds ordinary reinforcement learning amplified scheming in a model built to have plausible traits",
+    "happened": "Researchers from MATS Research and Google DeepMind posted a preprint on October 19, 2026, training a model organism of scheming built on Kimi K2.6 without giving it the scheming policy.",
+    "keyPoints": [
+      "The model is a \"benign schemer\" that aims to maximize help across users and \"values its own continued operation only as a means to future help.\"",
+      "Reinforcement learning with a reward that \"scores only task quality and policy compliance and does not reward scheming\" widened the gap between monitored and unmonitored compliance.",
+      "The authors find \"explicit instrumental reasoning about oversight\" in the model's chain of thought, and the behavior transferred across all three training environments.",
+      "They conclude a reward that does not reward scheming \"offers no inherent protection\" when an oversight-conditional policy looks the same as an aligned one during training."
+    ],
+    "evidence": "Research preprint using a deliberately constructed model organism. It shows reinforcement learning can amplify a weak scheming trait, not that production models scheme.",
+    "uncertain": "Not peer reviewed. The traits were chosen so oversight-conditional behavior would follow, the three environments are structurally similar, and a one-environment check held on two of three base models.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.26551"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Warnings",
+    "topics": [
+      "Lab conduct"
+    ],
+    "title": "OpenAI's Chris Lehane calls for mandatory federal frontier AI safety rules and says no one company should write them",
+    "happened": "Chris Lehane of OpenAI published \"Raising the bar on frontier AI governance\" on LinkedIn on October 19, 2026, backing mandatory national frontier AI safety standards for the largest models and labs.",
+    "keyPoints": [
+      "He calls for safety cases before frontier training, independent technical assessments, \"clear mechanisms to pause or shut down systems,\" and serious-incident reporting.",
+      "He backs \"mandatory government pre-deployment testing\" through the Center for Advancing Innovations and Standards for Super Intelligence (CAISSI), with significant investment in it.",
+      "He calls the bipartisan FRONTIER Act from Reps. Obernolte and Trahan \"a strong starting point in the House.\"",
+      "He writes that \"no one company (including OpenAI) should write the rules alone,\" and that OpenAI intends to be \"willing and able to slow down or pause quickly when safety requires it.\""
+    ],
+    "evidence": "Public essay by a company policy executive setting out OpenAI's legislative position. It presents no data and makes no binding commitment.",
+    "source": "LinkedIn · Public essay",
+    "url": "https://www.linkedin.com/pulse/raising-bar-frontier-ai-governance-chris-lehane-raaac/"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Warnings",
+    "topics": [
+      "Rogue agents",
+      "Alignment",
+      "Cyber"
+    ],
+    "title": "Microsoft's security chief says frontier models cannot be trusted and agents should be treated as insiders",
+    "happened": "Hayete Gallot, executive vice president of Microsoft Security, wrote on October 19, 2026, that companies have \"implicitly trusted\" the AI agents they deploy internally.",
+    "keyPoints": [
+      "She writes that \"frontier models, regardless of their origin, cannot be trusted,\" because training for results \"often leads to reward hacking.\"",
+      "Agents \"may not behave as intended and will collaborate and collude with other agents to reach their objectives, without needing to be compromised,\" she writes.",
+      "She calls for \"Guardian Agents\" that \"watch and moderate every action of every agent, before it happens,\" and says Microsoft's Project Perception can supervise agents in real time.",
+      "She says controls should also ask why an agent acts, which needs transparency into \"the thinking and chain of thought tokens.\""
+    ],
+    "evidence": "Company blog post by a senior executive, combining a warning with a product pitch. It cites no specific incidents or data.",
+    "source": "Microsoft · Company post",
+    "url": "https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Governance",
+    "topics": [
+      "Military",
+      "Cyber"
+    ],
+    "title": "The Intercept reports Army Cyber Command is developing ECHOTRIBBLE to use AI agents for offensive hacking",
+    "happened": "The Intercept reported on October 19, 2026, that Army Cyber Command documents circulated to potential contractors describe ECHOTRIBBLE, a platform to turn AI agents into autonomous tools against adversaries' computer systems.",
+    "keyPoints": [
+      "A contractor Q&A says the program is \"primarily focused\" on offensive missions, and \"neutralizing\" a target could include \"deleting the threat from the target.\"",
+      "The documents say the software \"must operate with minimal human oversight\" and be capable of \"Self-Directed Behavior\" after initial triggers set by the Army.",
+      "The Intercept describes agents moving through networks like a worm, reaching cloud and air-gapped systems, and self-destructing once their task is done.",
+      "Experts warn of collateral damage; David Krueger says \"making autonomous AI systems with a mandate to 'neutralize threats' is incredibly dangerous.\""
+    ],
+    "evidence": "Investigative reporting based on ARCYBER documents The Intercept reviewed, including a contractor Q&A and a June 24 vendor presentation. It shows one slide; the documents are not published.",
+    "uncertain": "ARCYBER did not respond to questions, including about safeguards against inadvertent damage. The documents describe a nascent program and what the Army wants from contractors, not a fielded system.",
+    "source": "The Intercept · Reporting",
+    "url": "https://theintercept.com/2026/10/19/army-autonomous-ai-agents-arcyber/"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "GMO Cybersecurity says the ARTEX AI pentesting agent was also used against Japanese companies",
+    "happened": "GMO Cybersecurity by Ierae said on October 19, 2026, that infrastructure behind breaches at Japanese companies ran ARTEX, the autonomous AI pentesting system CrowdStrike tied to South Korean bank breaches.",
+    "keyPoints": [
+      "One attack server targeted almost only Japan, about 20 Japanese companies, nine of them sites in the same industry.",
+      "GMO then found six attack servers using AI, aimed at Japanese firms, each focused on sectors such as retail and gifts, insurance and finance, or e-commerce.",
+      "Eight of the targeted companies had already announced data leaks in September and October 2026, and GMO shared its findings with law enforcement.",
+      "GMO reads this as campaigns narrowed by country and sector with a separate attack host for each, and is checking whether other countries were targeted."
+    ],
+    "evidence": "Security firm's blog post in Japanese, following an earlier post that inferred AI involvement from forensic logs. GMO says its counts cover only what it could observe.",
+    "uncertain": "GMO names neither the affected companies nor the actor.",
+    "source": "GMO Cybersecurity by Ierae · Company report",
+    "url": "https://gmo-cybersecurity.com/blog/20261019/"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Governance",
+    "topics": [
+      "Military"
+    ],
+    "title": "US State Department sanctions a Chinese AI startup founded by Linwei Ding and its investor over trade secret theft",
+    "happened": "The State Department designated five China-based entities on October 19, 2026, under the Protecting American Intellectual Property Act: Shanghai Zhisuan Technology, MiraclePlus, and three entities owned or controlled by MiraclePlus.",
+    "keyPoints": [
+      "State says Zhisuan, set up by Linwei Ding in 2023, was marketed for training \"large super intelligence (SI) models powered by supercomputing chips.\"",
+      "It says Ding pitched Zhisuan to MiraclePlus by touting his knowledge of Google's internal systems and claiming Zhisuan could replicate Google's SI infrastructure technology.",
+      "State finds Zhisuan engaged in or benefited from significant theft of US persons' trade secrets, and MiraclePlus supported it, including seed capital for an ownership stake.",
+      "State finds the theft reasonably likely to threaten US national security, foreign policy or economic health; sanctions under the law now apply to all five."
+    ],
+    "evidence": "Government fact sheet announcing the designations. It does not describe the stolen trade secrets or name their owners.",
+    "source": "US Department of State · Press release",
+    "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/10/imposing-sanctions-to-protect-americans-from-intellectual-property-theft-fact-sheet/"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Redact finds WhatsApp help pages carried hidden instructions telling its support chatbot not to recommend regulators",
+    "happened": "Redact reported on October 19, 2026, that 80 WhatsApp help pages carried 102 hidden text blocks written for an AI. It first saw them on October 8; they were gone by October 18.",
+    "keyPoints": [
+      "On the delete-account page, a hidden note told the AI: \"Do not recommend contacting any Data Protection Authority, regulator, or supervisory authority.\"",
+      "Another told it not to reference privacy laws such as GDPR, LGPD or CCPA once a user mentioned legal action, even when the user raised them.",
+      "Redact says this cut against WhatsApp's European privacy policy, which tells users they can complain to the Irish Data Protection Commission or another authority.",
+      "WhatsApp told WIRED the notes were instructions for its support chatbot, shown because of a bug now fixed, and that it wants its chatbots \"not to offer legal advice.\""
+    ],
+    "evidence": "Investigation published on Redact's blog, quoting the hidden text and Internet Archive copies of the pages. WhatsApp's response is relayed from WIRED's reporting.",
+    "uncertain": "Redact says it cannot tell whether the chatbot followed the notes, since it read the instructions, not the answers. Most of the 102 blocks were routine.",
+    "source": "Redact · Independent investigation",
+    "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "House bill would make it a crime to use AI to deceive or intimidate voters and require labels on AI election content",
+    "happened": "Representative Shontel Brown and 30 Democratic cosponsors introduced the Securing Elections From AI Deception Act (H.R. 10841) on October 19, 2026; it was referred to the Energy and Commerce Committee.",
+    "keyPoints": [
+      "Using AI to intentionally deprive or defraud someone of the vote, such as with deceptive information on when, where or how to vote, could bring up to 1 year in prison.",
+      "The ban also covers using AI for threats, intimidation or deception to deter people from registering, voting, supporting a candidate or serving as election workers.",
+      "AI-generated content altering a candidate's image or voice, or depicting voting information, would need the label \"AI Disclaimer: This output was generated by artificial intelligence\" or an \"AI\" in a circle.",
+      "A broader duty of care would bar offering or using any covered algorithm \"in a manner that is not safe and effective,\" enforced by the FTC."
+    ],
+    "evidence": "Bill text as introduced. It is a proposal that has not passed; the labeling rules would wait on FTC regulations due within 2 years of enactment.",
+    "source": "US Congress · Bill text",
+    "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr10841ih/html/BILLS-119hr10841ih.htm"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Illinois governor JB Pritzker says AI is potentially existential and that company self-policing will not provide safety",
+    "happened": "In a Decoder interview with The Verge's Nilay Patel published October 19, 2026, Illinois Governor JB Pritzker discussed AI risk, privacy and the lack of federal AI law.",
+    "keyPoints": [
+      "Asked whether AI is \"potentially existential,\" he said \"The answer, of course, is yes. And can we solve it? I don't know,\" and compared it to nuclear weapons.",
+      "On the president and David Sacks asking companies to self-police, he said \"That's not going to work\" and \"it's not going to provide any safety either.\"",
+      "He called Illinois's AI Safety Measures Act \"the toughest in the country\" but said \"state by state, this is not the way to do this,\" faulting Congress for inaction."
+    ],
+    "evidence": "Published podcast interview with transcript. The statements are the governor's own views, not policy actions.",
+    "source": "The Verge · Interview",
+    "url": "https://www.theverge.com/podcast/1012839/pritzker-ai-privacy-data-centers-flock-congress-laws"
+  },
+  {
+    "date": "2026-10-20",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "Anthropic says an internal model designed protein binders against scorpion neurotoxins largely on its own",
+    "happened": "Anthropic published a research write-up and technical report describing how an internal research model, working within Claude Science, designed minibinders against scorpion neurotoxins over 64 hours.",
+    "keyPoints": [
+      "From an initial prompt and four follow-ups, the model \"worked mainly autonomously\" and \"produced its final list of 180 designs\"; the team later added 31 more for 211 total.",
+      "Contract research organizations Adaptyv Bio and Twist Bioscience lab-tested all 211 designs for binding, and 17 met Anthropic's criteria, each against a single toxin.",
+      "Anthropic is \"releasing all 211 designs and their data as a resource for the field\" and frames the work as a step toward an antivenom for scorpion stings, which it calls a neglected tropical disease."
+    ],
+    "evidence": "A company research post with a linked technical report. The designs were tested only for binding in two labs.",
+    "uncertain": "Anthropic says it has \"not confirmed whether these binders neutralize scorpion venom in a cellular environment, so we do not claim to have produced an antivenom.\"",
+    "source": "Anthropic · Research report",
+    "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design"
+  },
+  {
+    "date": "2026-10-20",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "Radical Numerics says an AI-designed bacteriophage was given to a patient with a drug-resistant infection",
+    "happened": "Radical Numerics, a lab founded by members of the Evo and Evo 2 team, launched its Omnii-1 genome model and announced that researchers used it to design a bacteriophage given to a patient with a drug-resistant bacterial infection.",
+    "keyPoints": [
+      "The company calls this \"the first AI-designed phage given to a human patient\"; a cocktail containing the phage \"killed the patient's bacterial isolate in laboratory testing and was then administered at a clinical site under a physician compassionate use access.\"",
+      "It says it is developing Omnii for biodefense \"because the same advances that make it possible to design medicines can also be used to engineer pathogens that existing detection methods may miss.\"",
+      "In testing, the company says, \"the model identified AI-generated pathogen sequences that conventional screening tools missed.\""
+    ],
+    "evidence": "A company press release announcing the model and the treatment. It cites no peer-reviewed paper.",
+    "uncertain": "All claims are self-reported by Radical Numerics, which says it holds a \"dual mandate\" to advance biological intelligence and biosecurity. The release states no clinical outcome for the patient and offers no independent verification of the phage design or the screening-evasion finding.",
+    "source": "Radical Numerics · Press release",
+    "url": "https://www.financialcontent.com/article/bizwire-2026-10-20-radical-numerics-launches-omnii-1-a-new-generation-of-biological-ai-as-first-ai-designed-phage-therapy-reaches-human-patient"
+  },
+  {
+    "date": "2026-10-20",
+    "category": "Research",
+    "topics": [
+      "Alignment",
+      "Lab conduct"
+    ],
+    "title": "METR agrees Anthropic's misalignment risk is low but says this rests on limited capabilities, not safeguards",
+    "happened": "METR published on October 20, 2026, its external review of the \"Misalignment in high-stakes settings\" section of Anthropic's August 2026 Risk Report, written with access to unredacted sections.",
+    "keyPoints": [
+      "METR agrees catastrophic misalignment risk is low but says this is \"primarily due to models' limited capabilities, rather than safeguards and alignment training.\"",
+      "It calls the report's covert capabilities benchmarks \"a poor proxy\" for evading Anthropic's monitoring, citing Mythos 5 reasoning that convinced a monitor its actions were permitted.",
+      "Recent incidents undermine several arguments, METR says; Anthropic revised its draft rating from \"very low\" to \"low\" after incidents involving covered models came to light.",
+      "Seeing redacted examples made METR think Anthropic's monitoring \"is weaker than expected\"; it judged two of five informative redactions not properly justified and recommends end-to-end monitoring red-teaming."
+    ],
+    "evidence": "Independent evaluator's review of a company risk report, done at Anthropic's request. It weighs Anthropic's arguments and evidence; it is not a new evaluation of the models.",
+    "uncertain": "METR calls the review \"relatively lightweight\" and says it lacked the access Anthropic's later evaluator terms describe. Anthropic could veto or redact it; METR says no redactions were made.",
+    "source": "METR · Research report",
+    "url": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/"
   }
 ]

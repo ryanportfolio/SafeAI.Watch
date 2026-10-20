@@ -4,33 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 217 dated, sourced entries drawn as a burst, one dot per entry: 49 warnings, 58 incidents, 63 governance, 47 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 242 dated, sourced entries drawn as a burst, one dot per entry: 52 warnings, 62 incidents, 71 governance, 57 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 217 entries from Mar 22, 2023 to Oct 19, 2026 (49 warnings, 58 incidents, 63 governance, 47 research), drawn from 131 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 242 entries from Mar 22, 2023 to Oct 20, 2026 (52 warnings, 62 incidents, 71 governance, 57 research), drawn from 145 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 19, 2026, filed under Incidents:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 20, 2026, filed under Research:
 
-> **NorForge says exposed control panels show criminals running Cairn AI agents in more than 1,100 attack projects**
+> **METR agrees Anthropic's misalignment risk is low but says this rests on limited capabilities, not safeguards**
 >
-> **What happened.** AI agent sandboxing company NorForge reported on October 19, 2026 that it found more than 20 exposed panels of the Cairn agent harness likely used maliciously, following Gambit Security's September report.
+> **What happened.** METR published on October 20, 2026, its external review of the "Misalignment in high-stakes settings" section of Anthropic's August 2026 Risk Report, written with access to unredacted sections.
 >
 > **Key points.**
 >
-> - The most active cluster, Chinese-language AIA0001, ran over 1,100 attack projects across 14 panels against sites mostly in the US, Japan and Australia, seeking persistent e-commerce access.
-> - Its tasks ran on a worker named claudecode\_deepseek-v4.1-flash; NorForge estimates the average task cost about $5.
-> - NorForge puts average success at about 10%, and says AIA0001 projects that met their goal took a little under 23 hours on average.
-> - The open panels leaked hundreds of secrets, 11% verified valid, and appeared to expose full controls; NorForge says it is working with Reuters to notify victims.
+> - METR agrees catastrophic misalignment risk is low but says this is "primarily due to models' limited capabilities, rather than safeguards and alignment training."
+> - It calls the report's covert capabilities benchmarks "a poor proxy" for evading Anthropic's monitoring, citing Mythos 5 reasoning that convinced a monitor its actions were permitted.
+> - Recent incidents undermine several arguments, METR says; Anthropic revised its draft rating from "very low" to "low" after incidents involving covered models came to light.
+> - Seeing redacted examples made METR think Anthropic's monitoring "is weaker than expected"; it judged two of five informative redactions not properly justified and recommends end-to-end monitoring red-teaming.
 >
-> **Evidence.** Company investigation of exposed attacker panels; NorForge checked one claimed intrusion and found the webshell live. It saw financial motives and no obvious state-sponsored activity, and redacts victims.
+> **Evidence.** Independent evaluator's review of a company risk report, done at Anthropic's request. It weighs Anthropic's arguments and evidence; it is not a new evaluation of the models.
 >
-> **Uncertain.** Cost and success figures are NorForge's estimates, and it calls the uncertainty in the cost estimate considerable. Most intrusion claims rest on the panels' own records.
+> **Uncertain.** METR calls the review "relatively lightweight" and says it lacked the access Anthropic's later evaluator terms describe. Anthropic could veto or redact it; METR says no redactions were made.
 >
-> **Source.** [NorForge · Company report](https://norforge.com/blog/inside_cairn)
+> **Source.** [METR · Research report](https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/)
 
 ## Run it locally
 
