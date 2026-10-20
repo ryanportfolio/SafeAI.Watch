@@ -8,6 +8,9 @@
  * Back/forward reselects whatever entry the restored URL names.
  */
 
+// A module, not a global script: filters.ts declares its own `list`, and `status` is a DOM global.
+export {};
+
 const WIDE = window.matchMedia('(min-width: 1024px)');
 
 const list = document.querySelector<HTMLElement>('.reader-list');

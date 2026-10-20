@@ -27,6 +27,9 @@ interface Filter {
 }
 
 const NONE: Filter = { topic: '', day: '', type: '' };
+// A module, not a global script: reader.ts declares its own `list`.
+export {};
+
 const TYPES = ['research', 'incidents', 'warnings', 'governance'];
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const DOT_CAP = 3.2;
