@@ -1,7 +1,7 @@
 ---
 /*
  * /latest: the whole record as a two-pane reader. Left, entries grouped by day,
- * newest first, with each busy day's brief and its five highlights. Right (1024px
+ * newest first, with each busy day's five highlights. Right (1024px
  * and wider), the selected entry in full, starting with the newest. The reader
  * script (src/scripts/latest/reader.ts) loads other entries from their pages
  * at /latest/<slug>/; without it every row is listed and each headline links to
@@ -32,7 +32,7 @@ const days = groupByDay(eventsNewestFirst).map(({ date, entries }) => {
   const picks = brief?.highlights ?? [];
   const highlights = picks.map((slug) => entries.find((event) => slugOf(event) === slug)!);
   const rest = picks.length ? entries.filter((event) => !picks.includes(slugOf(event))) : entries;
-  return { date, entries, summary: brief?.summary, highlights, rest };
+  return { date, entries, highlights, rest };
 });
 ---
 <BaseLayout title="Latest" description={description}>
@@ -72,7 +72,6 @@ const days = groupByDay(eventsNewestFirst).map(({ date, entries }) => {
               </h2>
               <p class="day-count" data-day-count>{count(day.entries.length)}</p>
             </header>
-            {day.summary && <p class="day-summary" data-day-summary>{day.summary}</p>}
             {day.highlights.length > 0 ? (
               <>
                 <p class="day-label" id={`five-${day.date}`}>Five to read</p>
@@ -132,8 +131,8 @@ const days = groupByDay(eventsNewestFirst).map(({ date, entries }) => {
     width: min(1560px, 100% - 2 * var(--reader-gutter));
     margin: 0 auto;
     padding: clamp(36px, 4vw, 56px) 0 clamp(80px, 8vw, 120px);
-    --reader-gutter: 35px; /* the nav pills' inset */
-    --pane-top: 104px; /* clears the nav pills (35px inset + 52px pill) */
+    --reader-gutter: 35px; /* the nav bar's inset */
+    --pane-top: calc(var(--nav-h) + 20px); /* clears the nav bar */
   }
 
   .reader-head {
@@ -257,8 +256,7 @@ const days = groupByDay(eventsNewestFirst).map(({ date, entries }) => {
     border-bottom-color: transparent;
   }
 
-  /* While a filter is on: every match listed, briefs and the busy-day collapse step aside. */
-  .reader-list[data-filtering] [data-day-summary],
+  /* While a filter is on: every match listed, the busy-day collapse steps aside. */
   .reader-list[data-filtering] .day-label,
   .reader-list[data-filtering] .day-toggle {
     display: none;
@@ -306,13 +304,6 @@ const days = groupByDay(eventsNewestFirst).map(({ date, entries }) => {
     color: var(--ink-64);
   }
 
-  .day-summary {
-    margin: 9px 14px 9px 16px;
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--ink-70);
-  }
-
   .day-label {
     display: flex;
     align-items: center;
@@ -329,9 +320,8 @@ const days = groupByDay(eventsNewestFirst).map(({ date, entries }) => {
     background: var(--ink);
   }
 
-  .day-summary + .day-label,
   .day-head + .day-label {
-    padding-top: 0;
+    padding-top: 10px;
   }
 
   .day-rest .day-label {
@@ -468,11 +458,6 @@ const days = groupByDay(eventsNewestFirst).map(({ date, entries }) => {
 
     .day-head {
       padding-right: 0;
-    }
-
-    .day-summary {
-      margin: 12px 0 4px;
-      font-size: 15px;
     }
 
     .day-label {

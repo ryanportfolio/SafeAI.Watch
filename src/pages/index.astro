@@ -1223,7 +1223,7 @@ const pct = (v: number, of: number) => `${((v / of) * 100).toFixed(2)}%`;
      */
     .sequence {
       --seq-pin: min(46svh, 420px);
-      --seq-clear: 78px; /* the brand pill above the visual (nav 76px tall here, 62px below 768px) */
+      --seq-clear: calc(var(--nav-h) + 8px); /* the nav bar above the visual */
       --seq-fade: 16px; /* fade under the pinned visual */
       --seq-clear-cards: 24px; /* resting line: pin bottom + this, below the fade; read by the progress script */
     }
@@ -1324,10 +1324,6 @@ const pct = (v: number, of: number) => `${((v / of) * 100).toFixed(2)}%`;
   }
 
   @media (max-width: 767px) {
-    .sequence {
-      --seq-clear: 64px;
-    }
-
     .hero {
       min-height: 720px;
     }
@@ -1430,7 +1426,7 @@ const pct = (v: number, of: number) => `${((v / of) * 100).toFixed(2)}%`;
    */
   @media (min-width: 600px) and (max-height: 599px) {
     .hero {
-      min-height: calc(100svh - 76px); /* nav 76px tall */
+      min-height: calc(100svh - var(--nav-h));
     }
 
     .hero-inner {
@@ -1449,19 +1445,18 @@ const pct = (v: number, of: number) => `${((v / of) * 100).toFixed(2)}%`;
 
   /*
    * Short landscape below 1024px. Hero: text on the left, the visual beside it
-   * at the height of the first screen; the text clears the bottom bar (46px,
-   * inset 30px, 16px below 768px).
-   * Sequence: the cards scroll past the visual pinned beside them, between the
-   * nav and the bottom bar, so the layer being read stays in view.
+   * at the height of the first screen.
+   * Sequence: the cards scroll past the visual pinned beside them, below the
+   * nav, so the layer being read stays in view.
    */
   @media (min-width: 600px) and (max-width: 1023px) and (max-height: 599px) {
     .hero,
     .sequence {
-      --seq-top: 76px; /* nav */
-      --seq-bottom: calc(46px + 30px + 8px); /* bottom bar plus air */
+      --seq-top: var(--nav-h);
+      --seq-bottom: 16px;
     }
 
-    /* the burst sits between the nav and the bottom bar */
+    /* the burst sits below the nav, clear of the bottom edge */
     .hero-visual {
       inset: 0 0 var(--seq-bottom) 58%;
     }
@@ -1541,16 +1536,6 @@ const pct = (v: number, of: number) => `${((v / of) * 100).toFixed(2)}%`;
   }
 
   @media (min-width: 600px) and (max-width: 767px) and (max-height: 599px) {
-    .hero,
-    .sequence {
-      --seq-top: 62px;
-      --seq-bottom: calc(46px + 16px + 8px);
-    }
-
-    .hero {
-      min-height: calc(100svh - 62px);
-    }
-
     .hero-inner {
       padding-bottom: 32px;
     }

@@ -373,7 +373,7 @@ const hero: SceneFactory = ({ gl, slot, redraw }) => {
     section.querySelectorAll('.hero-actions a').forEach((a) => push(a.getBoundingClientRect()));
     textBoxes = boxes;
     const top = s.top + window.scrollY;
-    obstacles = [...document.querySelectorAll('.jump-arrows, .jump-form, .nav-right, .nav-toggle')]
+    obstacles = [...document.querySelectorAll('.jump-arrows, .jump-form')]
       .filter((el) => {
         for (let e: Element | null = el; e; e = e.parentElement) if (getComputedStyle(e).position === 'fixed') return true;
         return false;
