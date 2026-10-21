@@ -277,23 +277,6 @@ h2,
   border: 0;
 }
 
-/*
- * Below 1024px the nav's menu button and actions form a fixed bar at the bottom. Keyboard
- * focus scrolls respect scroll-padding, so a focused link near the bottom edge stops above
- * the bar instead of under it. Bar: 46px tall, inset 30px (16px below 768px), plus 8px air.
- */
-@media (max-width: 1023px) {
-  html {
-    scroll-padding-bottom: calc(46px + 30px + 8px);
-  }
-}
-
-@media (max-width: 767px) {
-  html {
-    scroll-padding-bottom: calc(46px + 16px + 8px);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

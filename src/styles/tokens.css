@@ -82,10 +82,17 @@
   /* Layout */
   --page-gutter: 30px;
   --content-gutter: 120px;
+  --nav-h: 64px; /* height of the sticky nav bar (SiteNav), rule included */
   --radius-pill: 82px;
   --radius-full: 9999px;
   --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --nav-h: 56px;
+  }
 }
 
 @media (max-width: 767px) {

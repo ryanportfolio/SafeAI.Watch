@@ -14,7 +14,7 @@ Baseline spec, measured from the running prototype at 1440px:
 
 - Palette: paper background `#D7D7D0` (rgb 215 215 208), ink `#1A1614` (rgb 26 22 20) for text and the primary button; hero visual accents in orange, amber, and olive.
 - Type: serif headlines (h1 54px, line-height 1.1, letter-spacing about -2px), Geist body, Geist Mono uppercase eyebrow labels.
-- Chrome: frosted pill nav in three groups (Latest/Timeline/About left, centered mark (G3 valley, small form) + SafeAI.watch in Newsreader, Our approach/Explore latest right); dashed outlines with corner ticks on secondary buttons and cards; small floating scroll controls bottom right.
+- Chrome: solid sticky nav bar on paper with a dashed rule beneath (`--nav-h`: 64px, 56px below 1024px): mark (G3 valley, small form) + SafeAI.watch in Newsreader left, Latest/Timeline/About right as text links, the current one underlined; below 1024px the links fold into a menu that drops under the bar; dashed outlines with corner ticks on secondary buttons and cards; small floating scroll controls bottom right.
 - Homepage sections in order: hero ("Keeping watch on AI"), GZERO interview intro, "From event to evidence" scroll sequence (dark "What happened" card, then "What the evidence shows", "What remains uncertain"), timeline card ("AI risk, in context"), "Four ways to follow the record" with a dark visual panel, FAQ ("Reading with care"), "From the research log" article cards with our artwork, closing CTA ("Stay close to the evidence") over a dark WebGL scene.
 
 ## 3D visuals: our own, then /wow-loop

@@ -12,10 +12,15 @@ const current = (href: string) => (path === href ? 'page' : undefined);
 ---
 <header class="site-nav" data-site-nav>
   <nav aria-label="Primary">
-    {/* First in source order so that, below 1024px, Tab goes from the menu button straight
-        into the menu it opens. Hidden on wider screens, where the links sit in the left pill. */}
+    <a class="nav-brand" href="/" aria-label="SafeAI.watch home" aria-current={current('/')}>
+      <Mark size={22} />
+      <span class="nav-brand-name">SafeAI.watch</span>
+    </a>
+
+    {/* Before the menu in source order so that, below 1024px, Tab goes from the button
+        straight into the menu it opens. Hidden on wider screens, where the links sit inline. */}
     <button
-      class="nav-toggle glass"
+      class="nav-toggle"
       type="button"
       aria-controls="site-menu"
       aria-expanded="false"
@@ -25,174 +30,109 @@ const current = (href: string) => (path === href ? 'page' : undefined);
       <span class="burger" aria-hidden="true"><span></span></span>
     </button>
 
-    <div class="nav-left glass" id="site-menu">
-      <ul>
-        {primary.map((item) => (
-          <li><a class="nav-link" href={item.href} aria-current={current(item.href)}>{item.label}</a></li>
-        ))}
-      </ul>
-    </div>
-
-    <a class="nav-brand glass" href="/" aria-label="SafeAI.watch home" aria-current={current('/')}>
-      <Mark size={20} />
-      <span class="nav-brand-name">SafeAI.watch</span>
-    </a>
-
-    <div class="nav-right glass">
-      <ul>
-        <li class="nav-secondary"><a class="nav-link" href="/about">Our approach</a></li>
-        <li><a class="nav-cta" href="/latest">Explore latest</a></li>
-      </ul>
-    </div>
+    <ul class="nav-links" id="site-menu">
+      {primary.map((item) => (
+        <li><a class="nav-link" href={item.href} aria-current={current(item.href)}>{item.label}</a></li>
+      ))}
+    </ul>
   </nav>
 </header>
 
 <style>
+  /* One solid bar: page content stops at its dashed rule instead of showing through. */
   .site-nav {
-    --nav-inset: 35px; /* pill edge to viewport edge */
-    --bar-inset: 30px; /* bottom bar on narrow screens */
     position: sticky;
     top: 0;
     z-index: 50;
-    height: 76px;
-    pointer-events: none;
+    height: var(--nav-h);
+    border-bottom: 1px dashed var(--grey-dash);
+    background: var(--paper);
   }
 
-  .site-nav :is(.nav-left, .nav-brand, .nav-right, .nav-toggle) {
-    pointer-events: auto;
-  }
-
-  .nav-left,
-  .nav-right {
-    position: absolute;
-    top: var(--nav-inset);
-    padding: 6px;
-  }
-
-  .nav-left {
-    left: var(--nav-inset);
-  }
-
-  .nav-right {
-    right: var(--nav-inset);
-  }
-
-  .nav-left ul,
-  .nav-right ul {
-    display: flex;
-    gap: 8px;
-  }
-
-  .nav-link,
-  .nav-cta {
-    display: block;
-    padding: 6px 14px;
-    border-radius: var(--radius-full);
-    font-size: var(--text-ui);
-    font-weight: 500;
-    line-height: 21px;
-    white-space: nowrap;
-  }
-
-  .nav-link {
-    color: var(--ink-64);
-    transition:
-      color 0.2s var(--ease-out),
-      background-color 0.2s var(--ease-out);
-  }
-
-  .nav-link:hover,
-  .nav-link[aria-current='page'] {
-    color: var(--ink);
-    background-color: var(--ink-06);
-  }
-
-  .nav-cta {
-    background: var(--ink);
-    color: var(--cream);
-    opacity: 0.8;
-    transition: opacity 0.2s var(--ease-out);
-  }
-
-  .nav-cta:hover {
-    opacity: 1;
-  }
-
-  /* Center pill: mark + name, collapses to the mark once the page scrolls */
-  .nav-brand {
-    position: absolute;
-    top: var(--nav-inset);
-    left: 50%;
-    width: 385px;
-    height: 40px;
-    padding: 6px;
+  .site-nav nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    overflow: hidden;
-    transform: translateX(-50%);
+    justify-content: space-between;
+    gap: 24px;
+    height: 100%;
+    padding: 0 35px;
+  }
+
+  /* The wordmark face from the logo: Newsreader 420. Its serifed capital I keeps
+     "SafeAI" from reading "SafeAl", which Geist's plain I does. */
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: var(--ink);
-    transition:
-      width 0.6s var(--ease-in-out),
-      gap 0.6s var(--ease-in-out);
   }
 
   .nav-brand :global(svg) {
     flex: none;
   }
 
-  /* The wordmark face from the logo: Newsreader 420. Its serifed capital I keeps
-     "SafeAI" from reading "SafeAl", which Geist's plain I does. */
   .nav-brand-name {
-    display: block;
-    max-width: 120px;
-    overflow: hidden;
     font-family: var(--font-serif);
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 420;
-    line-height: 20px;
-    letter-spacing: -0.006em;
+    line-height: 1;
+    letter-spacing: -0.008em;
     white-space: nowrap;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 6px 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    white-space: nowrap;
+    color: var(--ink-64);
+    text-decoration: underline 1px transparent;
+    text-underline-offset: 7px;
     transition:
-      max-width 0.6s var(--ease-in-out),
-      opacity 0.6s var(--ease-in-out);
+      color 0.2s var(--ease-out),
+      text-decoration-color 0.2s var(--ease-out);
   }
 
-  .site-nav.is-compact .nav-brand {
-    width: 56px;
-    gap: 0;
+  .nav-link:hover {
+    color: var(--ink);
   }
 
-  .site-nav.is-compact .nav-brand-name {
-    max-width: 0;
-    opacity: 0;
+  .nav-link[aria-current='page'] {
+    color: var(--ink);
+    text-decoration-color: currentColor;
   }
 
   .nav-toggle {
     display: none;
   }
 
-  /* Narrow screens: brand pill on top, menu button and actions in a bottom bar */
+  /* Narrow screens: the links fold into a menu that drops below the bar. */
   @media (max-width: 1023px) {
-    .nav-right {
-      position: fixed;
-      top: auto;
-      right: var(--bar-inset);
-      bottom: var(--bar-inset);
+    .site-nav nav {
+      padding: 0 var(--content-gutter);
+    }
+
+    .nav-brand-name {
+      font-size: 20px;
     }
 
     .nav-toggle {
-      position: fixed;
-      left: var(--bar-inset);
-      bottom: var(--bar-inset);
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 56px;
-      height: 46px;
+      width: 44px;
+      height: 44px;
+      margin-right: -12px;
       padding: 0;
       border: 0;
+      background: none;
       cursor: pointer;
     }
 
@@ -205,7 +145,7 @@ const current = (href: string) => (path === href ? 'page' : undefined);
 
     .burger {
       position: relative;
-      width: 16px;
+      width: 18px;
       height: 16px;
     }
 
@@ -215,7 +155,7 @@ const current = (href: string) => (path === href ? 'page' : undefined);
       content: '';
       position: absolute;
       left: 0;
-      width: 16px;
+      width: 18px;
       height: 1px;
       background: var(--ink);
       transition:
@@ -224,7 +164,7 @@ const current = (href: string) => (path === href ? 'page' : undefined);
     }
 
     .burger::before {
-      top: 4px;
+      top: 3px;
     }
 
     .burger span {
@@ -232,11 +172,11 @@ const current = (href: string) => (path === href ? 'page' : undefined);
     }
 
     .burger::after {
-      top: 12px;
+      top: 13px;
     }
 
     .site-nav.is-open .burger::before {
-      transform: translateY(4px) rotate(45deg) scaleX(0.75);
+      transform: translateY(5px) rotate(45deg);
     }
 
     .site-nav.is-open .burger span {
@@ -244,42 +184,38 @@ const current = (href: string) => (path === href ? 'page' : undefined);
     }
 
     .site-nav.is-open .burger::after {
-      transform: translateY(-4px) rotate(-45deg) scaleX(0.75);
+      transform: translateY(-5px) rotate(-45deg);
     }
 
-    /* the primary links become a panel above the menu button */
-    .nav-left {
-      position: fixed;
-      top: auto;
-      left: var(--bar-inset);
-      bottom: calc(var(--bar-inset) + 46px + 8px);
-      width: 196px;
-      border-radius: 24px;
-      /* denser than the pills: the panel sits over page text, so a heavier blur turns it into a wash */
-      background: rgb(236 236 232 / 0.94);
-      -webkit-backdrop-filter: blur(18px) saturate(1.4) brightness(1.08);
-      backdrop-filter: blur(18px) saturate(1.4) brightness(1.08);
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      padding: 4px var(--content-gutter) 12px;
+      border-bottom: 1px dashed var(--grey-dash);
+      background: var(--paper);
       opacity: 0;
       visibility: hidden;
-      transform: translateY(8px) scale(0.98);
-      transform-origin: bottom left;
+      transform: translateY(-6px);
       transition:
         opacity 0.2s var(--ease-out),
         transform 0.2s var(--ease-out),
         visibility 0s linear 0.2s;
     }
 
-    .nav-left ul {
-      flex-direction: column;
-      gap: 0;
+    .nav-links li + li {
+      border-top: 1px dashed var(--grey-rule);
     }
 
-    .nav-left .nav-link {
-      padding: 12px 20px;
-      border-radius: 18px;
+    .nav-link {
+      padding: 12px 0;
+      font-size: 17px;
     }
 
-    .site-nav.is-open .nav-left {
+    .site-nav.is-open .nav-links {
       opacity: 1;
       visibility: visible;
       transform: none;
@@ -287,37 +223,6 @@ const current = (href: string) => (path === href ? 'page' : undefined);
         opacity 0.2s var(--ease-out),
         transform 0.2s var(--ease-out),
         visibility 0s;
-    }
-  }
-
-  @media (max-width: 767px) {
-    .site-nav {
-      --nav-inset: 21px;
-      --bar-inset: 16px;
-      height: 62px;
-    }
-
-    .nav-brand {
-      width: calc(100% - 32px);
-      max-width: 385px;
-    }
-  }
-
-  /* Keep the bottom-bar pill clear of the menu button (16-72px). Tighter pills buy room for a
-     desktop scrollbar at 360-374px; below that "Our approach" goes, since About is in the menu. */
-  @media (max-width: 374px) {
-    .nav-right ul {
-      gap: 4px;
-    }
-
-    .nav-right :is(.nav-link, .nav-cta) {
-      padding-inline: 12px;
-    }
-  }
-
-  @media (max-width: 359px) {
-    .nav-secondary {
-      display: none;
     }
   }
 </style>
@@ -353,35 +258,5 @@ const current = (href: string) => (path === href ? 'page' : undefined);
       const next = event.relatedTarget as Node | null;
       if (nav.classList.contains('is-open') && next && next !== toggle && !menu?.contains(next)) setOpen(false);
     });
-
-    // Collapse the brand pill to the mark after the hero; expand it again at the footer.
-    const COMPACT_AFTER = 200;
-    let footerVisible = false;
-    const footer = document.querySelector('[data-site-footer]');
-    const update = () => {
-      nav.classList.toggle('is-compact', window.scrollY > COMPACT_AFTER && !footerVisible);
-    };
-
-    if (footer) {
-      new IntersectionObserver((entries) => {
-        footerVisible = entries.some((entry) => entry.isIntersecting);
-        update();
-      }).observe(footer);
-    }
-
-    let queued = false;
-    window.addEventListener(
-      'scroll',
-      () => {
-        if (queued) return;
-        queued = true;
-        requestAnimationFrame(() => {
-          queued = false;
-          update();
-        });
-      },
-      { passive: true },
-    );
-    update();
   }
 </script>
