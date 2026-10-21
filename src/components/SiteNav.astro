@@ -113,7 +113,10 @@ const current = (href: string) => (path === href ? 'page' : undefined);
     display: none;
   }
 
-  /* Narrow screens: the links fold into a menu that drops below the bar. */
+  /*
+   * Narrow screens: once the inline script below has run (data-menu), the links fold into a
+   * menu that drops below the bar. Without it the links stay visible on a second row.
+   */
   @media (max-width: 1023px) {
     .site-nav nav {
       padding: 0 var(--content-gutter);
@@ -123,7 +126,22 @@ const current = (href: string) => (path === href ? 'page' : undefined);
       font-size: 20px;
     }
 
-    .nav-toggle {
+    .site-nav:not([data-menu]) {
+      height: auto;
+      min-height: var(--nav-h);
+    }
+
+    .site-nav:not([data-menu]) nav {
+      flex-wrap: wrap;
+      row-gap: 2px;
+      padding-block: 10px;
+    }
+
+    .site-nav:not([data-menu]) .nav-links {
+      gap: 24px;
+    }
+
+    .site-nav[data-menu] .nav-toggle {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -187,7 +205,7 @@ const current = (href: string) => (path === href ? 'page' : undefined);
       transform: translateY(-5px) rotate(-45deg);
     }
 
-    .nav-links {
+    .site-nav[data-menu] .nav-links {
       position: absolute;
       top: 100%;
       left: 0;
@@ -206,11 +224,11 @@ const current = (href: string) => (path === href ? 'page' : undefined);
         visibility 0s linear 0.2s;
     }
 
-    .nav-links li + li {
+    .site-nav[data-menu] .nav-links li + li {
       border-top: 1px dashed var(--grey-rule);
     }
 
-    .nav-link {
+    .site-nav[data-menu] .nav-link {
       padding: 12px 0;
       font-size: 17px;
     }
@@ -227,36 +245,42 @@ const current = (href: string) => (path === href ? 'page' : undefined);
   }
 </style>
 
-<script>
-  const nav = document.querySelector<HTMLElement>('[data-site-nav]');
-  const toggle = nav?.querySelector<HTMLButtonElement>('[data-nav-toggle]');
+{/* Inline, so it runs as the parser reaches it: the menu collapses before the page below
+    paints, and the links never depend on the script bundle loading. */}
+<script is:inline>
+  (() => {
+    const nav = document.querySelector('[data-site-nav]');
+    const toggle = nav?.querySelector('[data-nav-toggle]');
 
-  if (nav && toggle) {
-    const setOpen = (open: boolean) => {
-      nav.classList.toggle('is-open', open);
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    };
+    if (nav && toggle) {
+      nav.dataset.menu = '';
 
-    toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+      const setOpen = (open) => {
+        nav.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      };
 
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && nav.classList.contains('is-open')) {
-        setOpen(false);
-        toggle.focus();
-      }
-    });
+      toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
 
-    document.addEventListener('click', (event) => {
-      const target = event.target as Node;
-      if (nav.classList.contains('is-open') && !nav.contains(target)) setOpen(false);
-    });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
 
-    // Tabbing out of the menu closes it, so the open panel never sits over the next focused link.
-    const menu = nav.querySelector<HTMLElement>('#site-menu');
-    nav.addEventListener('focusout', (event) => {
-      const next = event.relatedTarget as Node | null;
-      if (nav.classList.contains('is-open') && next && next !== toggle && !menu?.contains(next)) setOpen(false);
-    });
-  }
+      document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (nav.classList.contains('is-open') && !nav.contains(target)) setOpen(false);
+      });
+
+      // Tabbing out of the menu closes it, so the open panel never sits over the next focused link.
+      const menu = nav.querySelector('#site-menu');
+      nav.addEventListener('focusout', (event) => {
+        const next = event.relatedTarget;
+        if (nav.classList.contains('is-open') && next && next !== toggle && !menu?.contains(next)) setOpen(false);
+      });
+    }
+  })();
 </script>
