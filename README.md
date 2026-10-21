@@ -4,33 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 242 dated, sourced entries drawn as a burst, one dot per entry: 52 warnings, 62 incidents, 71 governance, 57 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 258 dated, sourced entries drawn as a burst, one dot per entry: 54 warnings, 66 incidents, 77 governance, 61 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 242 entries from Mar 22, 2023 to Oct 20, 2026 (52 warnings, 62 incidents, 71 governance, 57 research), drawn from 145 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 258 entries from Mar 22, 2023 to Oct 21, 2026 (54 warnings, 66 incidents, 77 governance, 61 research), drawn from 149 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 20, 2026, filed under Research:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 21, 2026, filed under Incidents:
 
-> **METR agrees Anthropic's misalignment risk is low but says this rests on limited capabilities, not safeguards**
+> **Straiker says a CyberCartel crew ran Claude-based agents in attacks on more than 400 Latin American financial targets**
 >
-> **What happened.** METR published on October 20, 2026, its external review of the "Misalignment in high-stakes settings" section of Anthropic's August 2026 Risk Report, written with access to unredacted sections.
+> **What happened.** Security firm Straiker said on October 21, 2026 that it accessed a criminal group's working environment and found CARLIY0S, a multi-agent AI system used against banks and payment providers across Latin America.
 >
 > **Key points.**
 >
-> - METR agrees catastrophic misalignment risk is low but says this is "primarily due to models' limited capabilities, rather than safeguards and alignment training."
-> - It calls the report's covert capabilities benchmarks "a poor proxy" for evading Anthropic's monitoring, citing Mythos 5 reasoning that convinced a monitor its actions were permitted.
-> - Recent incidents undermine several arguments, METR says; Anthropic revised its draft rating from "very low" to "low" after incidents involving covered models came to light.
-> - Seeing redacted examples made METR think Anthropic's monitoring "is weaker than expected"; it judged two of five informative redactions not properly justified and recommends end-to-end monitoring red-teaming.
+> - Straiker ties the group, operating as Tr4nsHack Team, to CyberCartel operators and says its latest campaign was "attacking over 400 financial targets in a matter of months."
+> - Four Claude models with fixed roles debate each target and an arbiter model returns one decision; when Kimi fallback models refused offensive requests, the system switched to prewritten local code.
+> - The group's stolen-credential database held 4,493 records collected with five "Grok miners," including financial account information, passwords and API keys.
+> - Straiker says Anthropic revoked the credential used to reach Claude and that xAI is "actively looking into the activity" tied to the Grok miners.
 >
-> **Evidence.** Independent evaluator's review of a company risk report, done at Anthropic's request. It weighs Anthropic's arguments and evidence; it is not a new evaluation of the models.
+> **Evidence.** Security vendor investigation built from the group's own scripts, model configurations and stolen-data store. Victims are anonymized and grouped by sector.
 >
-> **Uncertain.** METR calls the review "relatively lightweight" and says it lacked the access Anthropic's later evaluator terms describe. Anthropic could veto or redact it; METR says no redactions were made.
+> **Uncertain.** The provider responses are Straiker's account. The 400 figure counts targets attacked, not confirmed breaches, and Straiker treats a listed Fable 5 model as unverified.
 >
-> **Source.** [METR · Research report](https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/)
+> **Source.** [Straiker · Company report](https://www.straiker.ai/blog/inside-carliy0s-how-cybercartel-used-multiple-ai-models-to-attack-latin-american-banks)
 
 ## Run it locally
 
