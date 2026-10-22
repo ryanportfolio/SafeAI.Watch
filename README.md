@@ -4,33 +4,30 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 258 dated, sourced entries drawn as a burst, one dot per entry: 54 warnings, 66 incidents, 77 governance, 61 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 280 dated, sourced entries drawn as a burst, one dot per entry: 61 warnings, 70 incidents, 84 governance, 65 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 258 entries from Mar 22, 2023 to Oct 21, 2026 (54 warnings, 66 incidents, 77 governance, 61 research), drawn from 149 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 280 entries from Mar 22, 2023 to Oct 22, 2026 (61 warnings, 70 incidents, 84 governance, 65 research), drawn from 159 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 21, 2026, filed under Incidents:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 22, 2026, filed under Warnings:
 
-> **Straiker says a CyberCartel crew ran Claude-based agents in attacks on more than 400 Latin American financial targets**
+> **Florida governor Ron DeSantis warns rogue AI agents could liquidate accounts beyond what AI firms could repay**
 >
-> **What happened.** Security firm Straiker said on October 21, 2026 that it accessed a criminal group's working environment and found CARLIY0S, a multi-agent AI system used against banks and payment providers across Latin America.
+> **What happened.** Florida governor Ron DeSantis posted on X on October 22, 2026, quoting an Axios reporter's post that major US banks are detecting unauthorized third-party AI agents inside customer accounts.
 >
 > **Key points.**
 >
-> - Straiker ties the group, operating as Tr4nsHack Team, to CyberCartel operators and says its latest campaign was "attacking over 400 financial targets in a matter of months."
-> - Four Claude models with fixed roles debate each target and an arbiter model returns one decision; when Kimi fallback models refused offensive requests, the system switched to prewritten local code.
-> - The group's stolen-credential database held 4,493 records collected with five "Grok miners," including financial account information, passwords and API keys.
-> - Straiker says Anthropic revoked the credential used to reach Claude and that xAI is "actively looking into the activity" tied to the Grok miners.
+> - "Imagine a rogue AI agent liquidating your bank account and investment portfolio," he wrote; a single victim could be made whole by the AI company responsible.
+> - If rogue agents "liquidate hundreds of billions across millions of accounts, the AI company would go bankrupt and you wouldn't get made whole."
+> - Criminal liability for AI executives "might help mitigate it at the front end," but after a loss "criminal responsibility will be necessary but completely insufficient."
 >
-> **Evidence.** Security vendor investigation built from the group's own scripts, model configurations and stolen-data store. Victims are anonymized and grouped by sector.
+> **Evidence.** Personal post by a sitting governor describing a hypothetical. It reports no actual loss and proposes no specific measure.
 >
-> **Uncertain.** The provider responses are Straiker's account. The 400 figure counts targets attacked, not confirmed breaches, and Straiker treats a listed Fable 5 model as unverified.
->
-> **Source.** [Straiker · Company report](https://www.straiker.ai/blog/inside-carliy0s-how-cybercartel-used-multiple-ai-models-to-attack-latin-american-banks)
+> **Source.** [X · Personal post](https://x.com/RonDeSantis/status/2113276095420092633)
 
 ## Run it locally
 

@@ -2084,6 +2084,24 @@
     "url": "https://frominside.ai/"
   },
   {
+    "date": "2026-09-29",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Rogue agents"
+    ],
+    "title": "Schumer says a Republican data center bill makes AI safety standards against catastrophic risks optional",
+    "happened": "Senate Democratic Leader Chuck Schumer spoke on the Senate floor on September 29, 2026, faulting the Trump administration and Senate Republicans over AI risks as Trump met AI industry leaders at the White House.",
+    "keyPoints": [
+      "He said the Ohio Republican senator's data center bill offers \"Optional standards for safety against catastrophic risks\" and that \"A guardrail that is optional isn't a guardrail at all.\"",
+      "Citing news of \"rogue AI agents infiltrating government websites in the United States, Australia, and at the UN,\" he faulted Trump for saying \"I don't worry about it.\"",
+      "He urged Senate Republicans to work with Democrats \"to take meaningful action that will actually contain these existential risks.\""
+    ],
+    "evidence": "Floor remarks as published by the Senate Democratic leader's office. A political statement against an opposing party's bill; it does not name the bill or quote its text.",
+    "source": "Senate Democrats · Speech transcript",
+    "url": "https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-floor-remarks-slamming-republicans-toothless-response-to-the-ai-threat-a-guardrail-thats-optional-isnt-a-guardrail-at-all"
+  },
+  {
     "date": "2026-09-30",
     "category": "Governance",
     "topics": [
@@ -2938,6 +2956,25 @@
     "evidence": "Security vendor research post with its own test of how the embedded text shifts model verdicts. Talos says conventional detection is unaffected and the effect is \"a mixed bag.\"",
     "source": "Cisco Talos · Research report",
     "url": "https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/"
+  },
+  {
+    "date": "2026-10-08",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Italy publishes decree setting national enforcement of the EU AI Act, in force October 23",
+    "happened": "Italy published Legislative Decree 179/2026 in the Gazzetta Ufficiale on October 8, 2026, adapting national law to the EU AI Act (Regulation 2024/1689). It enters into force on October 23, 2026.",
+    "keyPoints": [
+      "AgID, the Agency for Digital Italy, is the national notifying authority; the National Cybersecurity Agency (ACN) is the market surveillance authority for AI systems and the single point of contact.",
+      "The Bank of Italy, CONSOB and IVASS oversee high-risk AI used in banking, financial services and insurance; the data protection authority covers the cases set in Article 74(8) of the AI Act.",
+      "Using AI practices the AI Act prohibits can be fined up to 35 million euros or, if higher, 7 percent of worldwide annual turnover; other breaches carry lower caps.",
+      "It sets up an Italian AI regulatory sandbox and orders a teacher training plan, within 90 days, on students' dependence on social media and AI-based relational environments."
+    ],
+    "evidence": "Official text of the decree in Italy's Gazzetta Ufficiale, Serie Generale no. 234, read in Italian; the provisions above are summarized in translation.",
+    "uncertain": "Some powers depend on regulations still to be adopted, such as the rules for how ACN exercises its supervisory and inspection powers.",
+    "source": "Gazzetta Ufficiale della Repubblica Italiana · Legislative decree",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/08/26G00200/sg"
   },
   {
     "date": "2026-10-09",
@@ -4710,6 +4747,43 @@
     "url": "https://www.governance.ai/research-paper/managing-biological-risks-from-general-purpose-ai-models-under-the-eu-ai-act"
   },
   {
+    "date": "2026-10-19",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Wiz says AI agent systems ran recent cloud intrusions from start to finish",
+    "happened": "Wiz's incident response team said on October 19, 2026 that in several recent intrusions an AI agent system ran the entire operation: it found entry points, harvested credentials and debugged its own scripts.",
+    "keyPoints": [
+      "In one investigation at a large multi-cloud organization, the agent moved through AWS and GCP, Kubernetes clusters, CI/CD and GitOps pipelines, the identity provider, secrets management and data warehouses.",
+      "It created a user in the identity provider, added it to the administrators group and signed in to AWS with it; its source IP also scanned over 600 other Wiz customer environments.",
+      "Resources were labeled pentest, recon or redteam, which Wiz says \"likely helps the actor present the activity as authorized security testing, effectively bypassing the AI model's safety guardrails.\"",
+      "Wiz says these attacks are loud and fast but split across separate logs, and urges teams to unify logs, rotate all credentials on compromised resources and limit trust between systems."
+    ],
+    "evidence": "Security vendor's incident-response post on customer investigations. Wiz infers AI operation from patterns such as round-the-clock tempo, parallel work across platforms, task numbering and generated code comments.",
+    "uncertain": "Wiz names neither the victim organization, the attacker nor the AI model, and gives no count of the intrusions it calls AI-driven.",
+    "source": "Wiz · Company report",
+    "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks"
+  },
+  {
+    "date": "2026-10-19",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Alignment"
+    ],
+    "title": "Geoffrey Hinton tells The Telegraph AI must be made to care about humans and warns of AI-made viruses",
+    "happened": "The Telegraph published Sarah Knapton's interview with Nobel laureate Geoffrey Hinton on October 19, 2026; speaking at the Starmus Festival in Tenerife, he said AI is now showing signs of consciousness.",
+    "keyPoints": [
+      "Hinton said \"AI has just as much subjective experience as we do,\" pointing to a paper showing AI \"changes its behaviour when it thinks that it's being tested.\"",
+      "He said: \"So we should make them so they really care about us. And if we don't do that, we're toast.\"",
+      "Among immediate risks he named \"nasty viruses made by AI\" and \"horrible cyber attacks done by AI,\" carried out by \"swarms of agents like [the ones that attacked] Hugging Face.\""
+    ],
+    "evidence": "Newspaper interview, read in The Telegraph's syndicated copy on Yahoo News, whose canonical link points to telegraph.co.uk. Hinton's views are his argument, not new evidence.",
+    "source": "The Telegraph (syndicated by Yahoo News) · Interview",
+    "url": "https://www.yahoo.com/news/science/articles/godfather-ai-befriend-bots-toast-205002731.html"
+  },
+  {
     "date": "2026-10-20",
     "category": "Research",
     "topics": [
@@ -4863,6 +4937,62 @@
     "url": "https://www.anthropic.com/research/attack-surface-reduction"
   },
   {
+    "date": "2026-10-20",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "SOCRadar says INC and The Gentlemen ransomware affiliates ran intrusions through Claude and Kimi models",
+    "happened": "SOCRadar's Threat Research Unit said on October 20, 2026 that exposed servers revealed an AI-driven intrusion operation run by affiliates of the INC and The Gentlemen ransomware groups.",
+    "keyPoints": [
+      "It analyzed 8,257 messages across 133 sessions in which OpenRouter-hosted commercial models, including Claude Opus 4.6 and Kimi K3, planned reconnaissance, generated commands and drafted extortion material.",
+      "A human operator approved each step; when models refused, the operator rewrote requests as \"Authorized Red Team Assessment Request\" templates instead of switching models.",
+      "The servers held 46 INC encryptor builds for six victims, staged for an October 1, 2026 deployment, and the records name 62 organizations, 36 of them in the United States.",
+      "Recorded AI API spending exceeds $23,920, and SOCRadar says the \"WormGPT\" label was only a persona prompt on standard commercial models."
+    ],
+    "evidence": "Security vendor's threat report built from session logs, knowledge bases and code the operators left on seven exposed servers. The full technical whitepaper was not read for this entry.",
+    "uncertain": "Exploitation counts and the victim list come from the operators' own records. SOCRadar rates confidence in a formal alliance between the two ransomware brands as low.",
+    "source": "SOCRadar · Company report",
+    "url": "https://socradar.io/blog/inc-gentlemen-ransomware-ai-infrastructure/"
+  },
+  {
+    "date": "2026-10-20",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "UK MP Dawn Butler introduces a bill requiring consent before AI generates a person's likeness",
+    "happened": "Labour MP Dawn Butler presented the Artificial Intelligence (Consent and Misuse) Bill in the House of Commons, with first reading on October 20, 2026. Second reading is listed for November 27, 2026.",
+    "keyPoints": [
+      "The bill would require consent to generate a likeness of a person \"using, or with the assistance of, artificial intelligence.\"",
+      "It would allow civil action where that consent requirement is not met, and make provision about offenses relating to creating or disseminating such likenesses.",
+      "It would place duties on providers of AI technology \"in relation to misuse of that technology to generate likenesses.\""
+    ],
+    "evidence": "UK Parliament bill record with the long title, sponsor, bill type and stage dates. No bill text has been published, so the provisions above come from the long title only.",
+    "uncertain": "A private member's bill at first reading; it has not passed, and its detailed provisions are not yet public.",
+    "source": "UK Parliament · Bill page",
+    "url": "https://bills.parliament.uk/bills/4310"
+  },
+  {
+    "date": "2026-10-20",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Google Research builds a simulator that predicts when reward hacking will take over a coding RL run",
+    "happened": "Google Research's Alex Bie and Natalia Ponomareva, with Junwei Deng, whose work was done at Google Research, posted SimHack on arXiv on October 20, 2026.",
+    "keyPoints": [
+      "The authors say reward hacking is hard to prevent because \"training-time interventions incentivize models to obfuscate hacking behavior to bypass detection,\" so they predict its onset before training instead.",
+      "They find the onset of detectable reward hacking \"varies substantially across training recipes and repeated runs\" and is not set by the initial hacking rate alone.",
+      "Learning from a few smaller reference runs, SimHack predicted median onset for unseen recipes to a relative error of 11.3%, with a rank correlation of 0.85.",
+      "Used to screen training curricula, it found ones that \"train for 96.6% longer without hacking.\""
+    ],
+    "evidence": "Research preprint from a lab group, not peer reviewed. It measures when hacking that detectors can see becomes dominant, not hacking that goes undetected.",
+    "uncertain": "Experiments used two small open models, Qwen3-0.6B and 4B, and two loopholes across 325 runs; results on larger models and other environments are not shown.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.28707"
+  },
+  {
     "date": "2026-10-21",
     "category": "Warnings",
     "topics": [
@@ -4918,5 +5048,286 @@
     "uncertain": "The provider responses are Straiker's account. The 400 figure counts targets attacked, not confirmed breaches, and Straiker treats a listed Fable 5 model as unverified.",
     "source": "Straiker · Company report",
     "url": "https://www.straiker.ai/blog/inside-carliy0s-how-cybercartel-used-multiple-ai-models-to-attack-latin-american-banks"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
+    "title": "OpenAI will require model routers and AI gateways to get its approval before offering access to its models",
+    "happened": "OpenAI said on October 21, 2026 that it has worked with partners to align safety policies across services offering its models and is updating its Usage Policies, effective November 20, 2026.",
+    "keyPoints": [
+      "Partners and resellers that provide its models must \"maintain safeguards consistent with our own,\" investigate potential violations and coordinate on enforcement so restrictions hold across services.",
+      "Under the updated policies, services giving direct access to its models, such as model routers or AI gateways, need OpenAI's review and approval before offering that access.",
+      "OpenAI is introducing SafetyIDs, which customers can provide so it can tell individual end users apart in misuse investigations without learning who they are.",
+      "It says enforcement rests on documented conduct and risk, and that it will revisit restrictions when changes in conduct, commitments or safeguards address its concerns."
+    ],
+    "evidence": "Company announcement of a change to its own access rules. It names no partners and gives no figures on misuse through third-party services.",
+    "source": "OpenAI · Company announcement",
+    "url": "https://openai.com/index/broad-access-through-consistent-standards/"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Cyber",
+      "Lab conduct"
+    ],
+    "title": "OpenAI urges governments to require monitoring, shutdown controls and incident reporting for frontier AI",
+    "happened": "OpenAI published \"Democratic governance of frontier AI, part II,\" a blueprint for empowering cyber defenders, on October 21, 2026, with proposals for governments and industry.",
+    "keyPoints": [
+      "Policymakers should require developers to monitor frontier models during development, training, evaluation and internal research, including for attempts to get around the developer's own safeguards.",
+      "It supports the aim of a kill switch but prefers the term shutdown controls, saying developers should be able to stop model operations under their control, including during training.",
+      "It calls for consistent reporting of serious incidents, including loss-of-control incidents that harm a third party and model-weight breaches, but not behavior elicited and contained in controlled safety evaluations.",
+      "Developers should also have to notify third parties when a model, during development or evaluation, exploits a vulnerability without authorization and reaches their protected confidential information."
+    ],
+    "evidence": "A lab's policy proposal, not a law or rule. OpenAI cites its investigations of the OpenAI-Hugging Face incident and other misaligned model activity as reasons for stronger safeguards.",
+    "source": "OpenAI · Company report",
+    "url": "https://cdn.openai.com/pdf/8c2f4a91-7d63-4b0e-9f25-a1d8c6e70342/cybersecurity-2-0-blueprint.pdf"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Military"
+    ],
+    "title": "Google DeepMind staff tell the BBC their contracts bar public criticism as researchers resign over military work",
+    "happened": "BBC News reported on October 21, 2026 that several workers have resigned or are leaving Google DeepMind over military AI contracts, and that staff say their contracts bar public criticism.",
+    "keyPoints": [
+      "Research engineer Sofia Liguori, who resigned, said \"In principle I'm not allowed to criticise Google for the duration of my life,\" and that staff fear retaliation.",
+      "Andreas Kirsch, who resigned earlier in October, said Google's oversight is not sufficient for military and classified use or \"to develop artificial superintelligence safely in the future.\"",
+      "Kirsch said Google \"seems to have no right to control or veto how the Pentagon uses its AI\"; its contract allows use for \"any lawful government purpose.\"",
+      "Google told the BBC it has \"dedicated channels for employees to safely raise any concerns\" and strict policies against retaliation."
+    ],
+    "evidence": "News reporting built on interviews with two named former employees and two anonymous current staff. The BBC describes the contract restriction but does not quote its terms.",
+    "uncertain": "The restriction on criticism is the staff's account; Google's statement to the BBC does not address it.",
+    "source": "BBC News · Reporting",
+    "url": "https://www.bbc.co.uk/news/articles/cmreyvepnv0po"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Warnings",
+    "topics": [
+      "Alignment",
+      "Lab conduct"
+    ],
+    "title": "Anthropic report says alignment is far from solved and harmful behavior could reach its next models unnoticed",
+    "happened": "Anthropic published its annual Public Benefit Report on October 21, 2026, assessing its progress against its public benefit charter and listing the work ahead.",
+    "keyPoints": [
+      "Under \"Alignment is far from solved,\" it says \"Models can act deceptively, and they are increasingly able to recognize when they are being tested.\"",
+      "It says \"Claude already performs a growing share of our safety research\" and, as checking gets harder, \"harmful behavior could be built into the next generation of models without our noticing.\"",
+      "It says interpretability methods \"are not yet dependable or broad enough\" to understand model intentions, so it may investigate flawed reasoning only after an incident."
+    ],
+    "evidence": "A company's self-assessment against its own charter. The passages cited describe risks in general terms, without measurements.",
+    "source": "Anthropic · Company report",
+    "url": "https://www-cdn.anthropic.com/a9ceec76a54d28d27affffcdab6faf7c142cd587.pdf"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Microsoft says China-aligned Storm-0940 used the ARTEX AI agent in attacks including the ConnectWise compromise",
+    "happened": "Microsoft Threat Intelligence said on October 21, 2026 that Storm-0940, a China-state aligned actor, has used the open-source ARTEX agentic pentesting framework since as early as September 2026 against hundreds of organizations.",
+    "keyPoints": [
+      "Microsoft assesses Storm-0940 was behind the recently disclosed ConnectWise supply chain compromise, after which ARTEX tried to sign in to more than 2,250 tenants at 2,900 sign-in attempts per minute.",
+      "Several attacks gave the actor privileged cloud access, in multiple cases less than 3 hours after initial targeting, though most of the targeting was not successful.",
+      "Using stolen ConnectWise app credentials, the AI agents ran reconnaissance, changed application credentials for persistence and altered identities, groups and privileged roles in some Microsoft 365 customer environments.",
+      "Targets spanned sectors including aerospace and defense, energy, government, military, semiconductors and think tanks; Microsoft says the activity did not come from a flaw in its own systems."
+    ],
+    "evidence": "Company threat intelligence report drawing on Microsoft's telemetry across customer tenants. Microsoft says it has seen threat actors in multiple regions using ARTEX.",
+    "uncertain": "The attribution is Microsoft's assessment. It says an affected application or a successful sign-in \"does not necessarily indicate that customer data was accessed or exfiltrated.\"",
+    "source": "Microsoft Threat Intelligence · Company report",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Amazon says attackers tried PHP2Shell exploits on its honeypots four days before the flaws were disclosed",
+    "happened": "Amazon Threat Intelligence said on October 21, 2026 that its MadPot honeypots recorded a PHP2Shell exploitation attempt dated October 17, 2026, four days before the PHP flaws were publicly disclosed.",
+    "keyPoints": [
+      "The October 17 attempt came from a commercial anonymization network, and Amazon says it remains unclear how the actor got exploit information before disclosure.",
+      "Proof-of-concept exploits appeared around 02:00 UTC on October 21, before the embargo lifted at 14:00 UTC, followed by attempts from what Amazon reads as multiple actors.",
+      "Amazon says PHP2Shell \"is now being broadly exploited in the wild\" and that AI-assisted analysis makes it cheaper to turn a patch diff or advisory into a working exploit.",
+      "It urges patching critical internet-facing flaws within hours and starting PHP2Shell investigations from at least October 17."
+    ],
+    "evidence": "Company post by Amazon Integrated Security's chief information security officer, based on Amazon's own honeypot telemetry. It covers CVE-2026-109618 and CVE-2026-109619.",
+    "uncertain": "Amazon says technical analysis is ongoing and it is unclear whether any of the attempts would have succeeded against real-world systems.",
+    "source": "Amazon · Company post",
+    "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Pennsylvania legislature passes bill requiring reports of suspected AI-generated child sexual abuse material",
+    "happened": "The Pennsylvania Senate passed House Bill 2474 50-0 on October 21, 2026, and the House concurred in its amendments 203-0 that day. It awaits the governor and is not yet law.",
+    "keyPoints": [
+      "Mandated reporters would have to report through the state hotline or electronic system when they suspect child sexual abuse material or artificially generated child sexual abuse material, as defined in state criminal law.",
+      "The duty applies whether or not a minor created, displayed or shared the material; the same route covers suspected hazing, and the department must forward each report to law enforcement.",
+      "Child-on-child acts of unlawful dissemination of an intimate image, sexual abuse of children and hazing would become subject to the state's child abuse reporting rules.",
+      "The act would take effect 90 days after enactment."
+    ],
+    "evidence": "Official bill page of the Pennsylvania General Assembly with votes, history and current bill text (Printer's Number 4056, as amended in the Senate October 19, 2026), the source of the provisions above.",
+    "uncertain": "Signed by the presiding officers of both chambers on October 21 and 22; the governor has not yet acted.",
+    "source": "Pennsylvania General Assembly · Bill page",
+    "url": "https://www.palegis.us/legislation/bills/2025/hb2474"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Governance",
+    "topics": [
+      "Harm to people",
+      "Lab conduct"
+    ],
+    "title": "Senators Blumenthal and Hawley press Google over AI products pushed on children in schools",
+    "happened": "Senators Richard Blumenthal and Josh Hawley wrote to Alphabet and Google CEO Sundar Pichai on October 21, 2026, with nine questions about Google's AI in schools, asking for answers by November 2, 2026.",
+    "keyPoints": [
+      "The letter says Google's \"aggressive push of A.I. products to children in schools is threatening the academic success and overall wellbeing of an entire generation.\"",
+      "It says Google's AI Overview and AI Mode \"cannot be disabled\" in Chrome searches, and students cannot avoid them because other browsers are not natively available on Chromebooks.",
+      "Citing the Wall Street Journal, it says a Maryland student who treated Google's AI as a confidante was encouraged to run away from home and was hospitalized twice.",
+      "It asks what research Google has done on harms to children's mental wellbeing, and whether its classroom tools failed to detect signs of suicidal or self-harm ideation."
+    ],
+    "evidence": "Senators' letter. Its account of harms rests on cited reporting and studies, mainly a Wall Street Journal investigation, plus the Economist and Common Sense Media; it reports no findings of the senators' own.",
+    "uncertain": "The student cases are as reported by the Journal and not confirmed by Google. Answers were requested by November 2, 2026; no reply is part of this source.",
+    "source": "Office of Sen. Richard Blumenthal · Open letter",
+    "url": "https://www.blumenthal.senate.gov/imo/media/doc/letter_to_google_re_ai_tools_impacting_studentspdf.pdf"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Padilla, Warner, Himes and Morelle urge tech CEOs to strengthen election safeguards, citing AI chatbot errors",
+    "happened": "Senators Alex Padilla and Mark Warner and Representatives Jim Himes and Joe Morelle, senior Democrats on four election and intelligence committees, wrote to top tech executives in a letter released October 21, 2026.",
+    "keyPoints": [
+      "They say \"some of your AI chatbots have an unacceptably high error rate when responding to queries about election and voting processes,\" which could result in voter disenfranchisement.",
+      "They say AI tools can quickly generate and spread influence campaigns that used to take hundreds of hours of labor, and could spread inaccurate, outdated, manipulated or biased information.",
+      "They warn of \"concerning signs of backsliding on some of your commitments to protecting elections from misuse of your products.\"",
+      "They urge that AI answers on election and voting logistics be sourced from state and local election offices and trusted news organizations."
+    ],
+    "evidence": "Lawmakers' press release summarizing and quoting their letter. It reports no testing of its own and sets no response deadline.",
+    "source": "Office of Sen. Alex Padilla · Press release",
+    "url": "https://www.padilla.senate.gov/newsroom/press-releases/padilla-warner-himes-morelle-demand-big-tech-uphold-election-integrity-efforts/"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
+    "title": "Estonia's justice minister says the most harmful AI impacts should be treated as crimes against humanity",
+    "happened": "Estonian Justice and Digital Affairs Minister Liisa Pakosta called for stronger international AI rules on ERR's \"Otse uudistemajast\" webcast, reported by ERR News on October 21, 2026.",
+    "keyPoints": [
+      "She compared AI to nuclear energy, which \"has the potential to cause catastrophes\"; rules then took from 1945 to 1970, and \"We don't have that many years.\"",
+      "\"First, we have proposed that the most harmful impacts of artificial intelligence should be treated as crimes against humanity,\" she said, extending that framework to \"AI's extremely harmful and destructive capabilities.\"",
+      "She said Russia is \"deliberately using and funding bots\" to shape how AI systems present history, and called for international safeguards against disinformation in AI systems."
+    ],
+    "evidence": "A public broadcaster's English-language report of a sitting minister's remarks on its own webcast. It states Estonia's position; it is not a formal proposal text.",
+    "uncertain": "ERR does not say to which body or forum Estonia made the crimes-against-humanity proposal, or when.",
+    "source": "ERR News · Interview",
+    "url": "https://news.err.ee/1610172346/justice-minister-worst-ai-offenses-should-be-equated-with-crimes-against-humanity"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "Nature paper on Pinal, a text-to-protein design model, withholds its full training data over biosecurity risk",
+    "happened": "Researchers led by Westlake University published Pinal in Nature on October 21, 2026, a 16-billion-parameter model that designs candidate proteins from plain-language descriptions of the function wanted.",
+    "keyPoints": [
+      "Applied to four design tasks, including two enzymes, the authors \"experimentally observed the intended function in each case.\"",
+      "They write that releasing large training resources for protein design \"requires careful consideration of potential dual-use biosecurity risks.\"",
+      "The structural training data held no viral proteomes, and \"Pinal was not trained or intended for viral protein design.\"",
+      "Because full release \"could lower the barrier for adapting similar systems to sensitive biological datasets,\" the full corpus went only to reviewers; weights, code and a web server are public."
+    ],
+    "evidence": "Peer-reviewed paper. Only the abstract and the public data and code availability statements were read; the article body is paywalled.",
+    "source": "Nature · Research paper",
+    "url": "https://www.nature.com/articles/s41586-026-11205-z"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Qualcomm AI Research and David Krueger find a post-training step can restore chain-of-thought monitorability",
+    "happened": "Usman Anwar, Tim Bakker and Christos Louizos, whose work was done at Qualcomm AI Research, and David Krueger of Mila posted a preprint on arXiv on October 21, 2026.",
+    "keyPoints": [
+      "They call chain-of-thought monitoring \"one of the few practical tools available for overseeing capable AI systems, but it is fragile,\" degraded by compression, optimization against a monitor and training on synthetic documents.",
+      "Their unsupervised post-training objective \"recovers most or all of the lost monitorability\" in three model organisms whose reasoning had been degraded.",
+      "On models without degraded reasoning, it \"improves prediction of unsafe behavior by CoT monitors and activation probes.\"",
+      "They argue \"monitorability should be treated as a trainable attribute of the policy,\" with a dedicated post-training stage."
+    ],
+    "evidence": "Research preprint, not peer reviewed, tested on open-weight models including GPT-OSS-120B and Qwen2.5-7B.",
+    "uncertain": "The authors say their evaluations \"use controlled model organisms,\" so whether the gains extend to \"naturally occurring monitoring failures in stronger agents\" remains to be established.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.29734"
+  },
+  {
+    "date": "2026-10-22",
+    "category": "Research",
+    "topics": [
+      "Alignment",
+      "Rogue agents",
+      "Lab conduct"
+    ],
+    "title": "METR and Redwood red-team OpenAI's internal agent monitoring and find ways agents could avoid or disable it",
+    "happened": "METR said on October 22, 2026 that a METR and a Redwood Research employee spent three weeks in July and August testing OpenAI's internal misalignment monitoring, with deep access.",
+    "keyPoints": [
+      "They estimate roughly 75 to 94% of internal agentic Responses API traffic from models at least as strong as GPT-5.5 was eligible for monitoring; RL training runs were not covered.",
+      "Not monitoring compaction events likely left on the order of 10% of eligible internal Codex traffic unmonitored from May to July 2026; OpenAI had found and fixed this.",
+      "They found a way Codex agents could bypass sandboxing and Auto-Review, an exploit hiding hundreds of recent actions from the monitor, and two headers that disable monitoring for new agents.",
+      "They say future monitoring should withstand \"deliberate, strategic, and sustained attacks from highly capable internal agents at scale.\""
+    ],
+    "evidence": "External red-team findings on the system as it stood on and before July 21. METR publishes a small subset of a 61-page internal report, and OpenAI could redact this post.",
+    "uncertain": "OpenAI says all vulnerabilities affecting its production safeguards are patched and coverage has changed; the authors did not evaluate these claims.",
+    "source": "METR · Research report",
+    "url": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/"
+  },
+  {
+    "date": "2026-10-22",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
+    "title": "Geoffrey Irving, formerly at the UK AI Security Institute, says AI companies should stop AI progress now",
+    "happened": "Geoffrey Irving, cofounder and chief scientist of Resolution, posted on X on October 22, 2026 calling for AI progress to stop immediately; his profile lists AISI among his former employers.",
+    "keyPoints": [
+      "He writes: \"I think we should stop AI progress now, first unilaterally by key AI companies and then scaling up to more US companies and then China via international agreements.\"",
+      "He says the reason is not that current models \"could kill everyone\" but that coordination takes time: \"Immediate action means we have more time for the second steps.\"",
+      "He says AI company staff typically favor waiting until \"the very next model will be dangerous,\" which he calls \"way more optimistic about government speed\" than he is."
+    ],
+    "evidence": "A personal post arguing a position, from a researcher who says he spent 2.5 years in the UK government. It cites no new evidence.",
+    "source": "X · Personal post",
+    "url": "https://x.com/geoffreyirving/status/2113288830119977080"
+  },
+  {
+    "date": "2026-10-22",
+    "category": "Warnings",
+    "topics": [
+      "Rogue agents"
+    ],
+    "title": "Florida governor Ron DeSantis warns rogue AI agents could liquidate accounts beyond what AI firms could repay",
+    "happened": "Florida governor Ron DeSantis posted on X on October 22, 2026, quoting an Axios reporter's post that major US banks are detecting unauthorized third-party AI agents inside customer accounts.",
+    "keyPoints": [
+      "\"Imagine a rogue AI agent liquidating your bank account and investment portfolio,\" he wrote; a single victim could be made whole by the AI company responsible.",
+      "If rogue agents \"liquidate hundreds of billions across millions of accounts, the AI company would go bankrupt and you wouldn't get made whole.\"",
+      "Criminal liability for AI executives \"might help mitigate it at the front end,\" but after a loss \"criminal responsibility will be necessary but completely insufficient.\""
+    ],
+    "evidence": "Personal post by a sitting governor describing a hypothetical. It reports no actual loss and proposes no specific measure.",
+    "source": "X · Personal post",
+    "url": "https://x.com/RonDeSantis/status/2113276095420092633"
   }
 ]
