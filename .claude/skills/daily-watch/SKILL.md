@@ -75,7 +75,10 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    every open item in `tracked.jsonl` and, for each, checks its `statusUrl`, the court
    docket or legislature's status page, and a WebSearch for the item since `statusDate`.
    It reports every change of status with its official source as a candidate (the outcome
-   is the event; date it by the source), notes unchanged items in one line each, and
+   is the event; date it by the source). For `original pending` items it checks whether
+   the original has appeared and, if so, reports a source update with `kind`
+   `source-update`, the entry's current `url` and the original's URL. It notes unchanged
+   items in one line each, and
    writes `runs/<date>/lane-followups.jsonl`. The "Follow-ups" rules in
    [bar.md](references/bar.md) apply. Give each scan lane the window, its lane, the candidate format,
    the sensitive-material rule, and the state folder path; each writes
@@ -102,7 +105,9 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    Follow-ups are the exception: a status change from the follow-ups lane is a new event
    even when its source is a page the record already links (a docket, a bill's status
    page), so match those by item and status step, not by URL, and prefer a URL specific to
-   the new step (the order, the vote record) where one exists. Drop:
+   the new step (the order, the vote record) where one exists. A source update is not
+   dropped as already recorded: it passes when this run fetched the original, and step 7
+   applies it. Drop:
    - anything already in the record;
    - events whose latest `seen.jsonl` verdict is `skipped` or `published`;
    - `pr` events whose PR is still open or was merged. A `pr` event whose PR was closed
@@ -117,7 +122,7 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    judged candidate's verdict to this run's `runs/<date>/verdicts.jsonl`, not to
    `seen.jsonl`: verdicts reach the ledger only in step 10, after delivery, so a run that
    fails partway leaves nothing suppressed and the next run judges those candidates again.
-5. **Nothing passes.** Append `verdicts.jsonl` to `seen.jsonl`, write `report.md`, update
+5. **Nothing passes** (no new entries and no source updates). Append `verdicts.jsonl` to `seen.jsonl`, write `report.md`, update
    `last-run.json`, update `tracked.jsonl` for the items the follow-ups lane checked, and
    stop. No worktree, branch, commit or PR.
 6. **Workspace.** If a routine PR is open, add a worktree on its branch:
@@ -134,7 +139,9 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    body. Note every date whose entry count the merge or a removal changed. Otherwise
    `worktree add -b daily-watch/<date> <same path> origin/main`. If the path already exists
    from a crashed run, remove that worktree first. Run `npm ci` there.
-7. **Draft.** For each kept candidate, run add-source workflow steps 2 to 5 (get the content,
+7. **Draft.** For each source update, switch the entry's `url` and `source` to the original,
+   recheck every claim and quote in it against the original and fix what differs, and mark
+   the tracked item closed. For each kept candidate, run add-source workflow steps 2 to 5 (get the content,
    trace and check claims, select and draft) with this run's sources as the material. Every
    entry gets 1 to 3 `topics` from add-source `references/topics.md`
    (Bio, Cyber, Rogue agents, Alignment, Superintelligence, Harm to people, Military,
