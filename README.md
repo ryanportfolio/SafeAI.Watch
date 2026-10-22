@@ -7,7 +7,7 @@
 <img alt="Keeping watch on AI. 258 dated, sourced entries drawn as a burst, one dot per entry: 54 warnings, 66 incidents, 77 governance, 61 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
-**[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
+**[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source where one can be reached, gives its key points, and separates what happened from what the evidence shows.
 
 The record holds 258 entries from Mar 22, 2023 to Oct 21, 2026 (54 warnings, 66 incidents, 77 governance, 61 research), drawn from 149 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
@@ -53,7 +53,7 @@ Spotted an error in an entry? [Open an issue](https://github.com/ryanportfolio/S
 
 ## What the project holds to
 
-- Every entry links its original source.
+- Every entry links its original source where one can be reached; otherwise it links the reporting and says the original was not reviewed.
 - Each entry gives the source's key points and separates what happened from what the evidence shows, with what remains uncertain when something material is still open.
 - No invented incidents, numbers or quotes. The site's illustrations are conceptual and carry no data; the chart at the top of this README is the exception, drawn from the record.
 - No third-party trackers or analytics.
