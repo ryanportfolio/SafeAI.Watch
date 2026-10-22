@@ -189,7 +189,8 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    rest as judged. If delivery failed, append nothing and say so in the report. Append to `tracked.jsonl`: a line
    for every new entry in the PR that bar.md says to track (with its official status page
    and current status), an updated line for every tracked item checked this run (status,
-   `lastChecked`), and `open: false` for items whose outcome is now final. Drop items whose
+   `lastChecked`), and `open: false` for items whose outcome is now final and whose
+   `originalPending` is not true. Drop items whose
    only entry was in a PR closed without merging. Remove the worktree with `git worktree remove <path>` once the push
    succeeded (its `node_modules` is a real folder from `npm ci`, not a link). Close any
    browser you opened. End the run with a four-line summary: entries added, each with its

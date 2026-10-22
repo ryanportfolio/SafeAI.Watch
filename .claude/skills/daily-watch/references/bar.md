@@ -46,7 +46,9 @@ regulation is finalized; a deadline in an order arrives. Each such entry goes in
 before scanning, and any change of status that has an official source is a new dated entry
 of its own; the older entry changes only where it is now wrong. A status that has
 not changed is no entry. An item leaves the list once its outcome is final (law signed or
-vetoed, bill dead at the end of the session, case closed), with that final step recorded.
+vetoed, bill dead at the end of the session, case closed), with that final step recorded,
+and its original, if pending, is linked. Until then it stays open with only the original
+left to check.
 
 Entries linked to reporting go on the tracked list too, with `originalPending: true` and
 `originalUrl` set to where the original should appear. An entry with nothing else in motion
