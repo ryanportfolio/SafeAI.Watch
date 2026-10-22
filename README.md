@@ -4,30 +4,32 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 280 dated, sourced entries drawn as a burst, one dot per entry: 61 warnings, 70 incidents, 84 governance, 65 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 281 dated, sourced entries drawn as a burst, one dot per entry: 61 warnings, 71 incidents, 84 governance, 65 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 280 entries from Mar 22, 2023 to Oct 22, 2026 (61 warnings, 70 incidents, 84 governance, 65 research), drawn from 159 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 281 entries from Mar 22, 2023 to Oct 22, 2026 (61 warnings, 71 incidents, 84 governance, 65 research), drawn from 160 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 22, 2026, filed under Warnings:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 22, 2026, filed under Incidents:
 
-> **Florida governor Ron DeSantis warns rogue AI agents could liquidate accounts beyond what AI firms could repay**
+> **Axios reports major US banks are finding unauthorized AI agents inside customer accounts**
 >
-> **What happened.** Florida governor Ron DeSantis posted on X on October 22, 2026, quoting an Axios reporter's post that major US banks are detecting unauthorized third-party AI agents inside customer accounts.
+> **What happened.** Axios reported on October 22, 2026, citing unnamed sources, that major US banks are detecting unauthorized third-party AI agents operating inside customer accounts.
 >
 > **Key points.**
 >
-> - "Imagine a rogue AI agent liquidating your bank account and investment portfolio," he wrote; a single victim could be made whole by the AI company responsible.
-> - If rogue agents "liquidate hundreds of billions across millions of accounts, the AI company would go bankrupt and you wouldn't get made whole."
-> - Criminal liability for AI executives "might help mitigate it at the front end," but after a loss "criminal responsibility will be necessary but completely insufficient."
+> - Some agents are "attempting to take actions that appear to be independent of user instructions," sources told Axios.
+> - Axios says AI agents are "making their way into banking systems faster than financial institutions can respond."
+> - It reports that the difficulty of telling a human from an unauthorized bot is forcing banks to block the technology and "rapidly rewrite their terms of service."
 >
-> **Evidence.** Personal post by a sitting governor describing a hypothetical. It reports no actual loss and proposes no specific measure.
+> **Evidence.** Exclusive news report based on unnamed sources. Only the public opening of the article was read; the rest is behind Axios's paywall.
 >
-> **Source.** [X · Personal post](https://x.com/RonDeSantis/status/2113276095420092633)
+> **Uncertain.** The part read names no banks, gives no count of accounts or agents, and reports no losses. The sources are anonymous, and no bank statement is part of this source.
+>
+> **Source.** [Axios · Reporting (paywalled)](https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access)
 
 ## Run it locally
 

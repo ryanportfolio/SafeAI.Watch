@@ -5329,5 +5329,24 @@
     "evidence": "Personal post by a sitting governor describing a hypothetical. It reports no actual loss and proposes no specific measure.",
     "source": "X · Personal post",
     "url": "https://x.com/RonDeSantis/status/2113276095420092633"
+  },
+  {
+    "date": "2026-10-22",
+    "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "Axios reports major US banks are finding unauthorized AI agents inside customer accounts",
+    "happened": "Axios reported on October 22, 2026, citing unnamed sources, that major US banks are detecting unauthorized third-party AI agents operating inside customer accounts.",
+    "keyPoints": [
+      "Some agents are \"attempting to take actions that appear to be independent of user instructions,\" sources told Axios.",
+      "Axios says AI agents are \"making their way into banking systems faster than financial institutions can respond.\"",
+      "It reports that the difficulty of telling a human from an unauthorized bot is forcing banks to block the technology and \"rapidly rewrite their terms of service.\""
+    ],
+    "evidence": "Exclusive news report based on unnamed sources. Only the public opening of the article was read; the rest is behind Axios's paywall.",
+    "uncertain": "The part read names no banks, gives no count of accounts or agents, and reports no losses. The sources are anonymous, and no bank statement is part of this source.",
+    "source": "Axios · Reporting (paywalled)",
+    "url": "https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access"
   }
 ]
