@@ -177,7 +177,9 @@ In a worktree under `C:\Users\Home\CoreWise\SafeAI.Watch\.claude\worktrees\`, `n
 
 Both hosts reject curl and WebFetch on every path, so a source check there fails even when the page is live. Read the text from a Wayback capture of the same URL and say so in the source log; the entry still links the live official URL. The CDAO release also moved from `/Latest/News-Press/PR-View/` to `/News/PR-View/` with no redirect, so a 404 there may be a move, not a removal.
 
-## Hosts that refuse scripted fetches during source checks (2026-10-15)
+## Hosts that refuse scripted fetches during source checks (2026-10-15, amended 2026-10-22)
+
+A 403 to curl and WebFetch is a block on scripts, not proof the page is unreadable. Before holding a candidate as "blocked", open the URL in a headed browser (the session's `mcp__playwright-iso__*` tools or `launchPlacedChrome()`) and read the text from the DOM. On 2026-10-22 axios.com returned 403 to curl with three user agents and to WebFetch, and the daily watch held a scoop for that reason; headed Chrome loaded the same page at once. Axios scoops are metered (`isAccessibleForFree: false` in the page's ld+json) and show only the headline, byline and opening paragraphs, so an entry may claim only that visible text, per the paywall routine in the daily-watch `bar.md`.
 
 Seen on the first daily-watch run; each cost a retry. press.un.org returns a bot challenge or 406 to curl and an image CAPTCHA to headed Chrome, and every Wayback capture is the challenge page: only WebFetch reached the body, so cross-check quotes against the speaker's own page or transcripts.un.org. mi5.gov.uk, committees.parliament.uk, congress.gov bill pages and leginfo.legislature.ca.gov return Cloudflare 403. theatlantic.com returns 403 to curl, gift links included, and WebFetch refuses it. web.archive.org returned 429 to every curl for minutes at a time and WebFetch refuses that domain; space out Wayback calls and retry later rather than in a loop.
 
