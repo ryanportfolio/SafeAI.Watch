@@ -4,33 +4,32 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 258 dated, sourced entries drawn as a burst, one dot per entry: 54 warnings, 66 incidents, 77 governance, 61 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 281 dated, sourced entries drawn as a burst, one dot per entry: 61 warnings, 71 incidents, 84 governance, 65 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 258 entries from Mar 22, 2023 to Oct 21, 2026 (54 warnings, 66 incidents, 77 governance, 61 research), drawn from 149 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 281 entries from Mar 22, 2023 to Oct 22, 2026 (61 warnings, 71 incidents, 84 governance, 65 research), drawn from 160 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 21, 2026, filed under Incidents:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 22, 2026, filed under Incidents:
 
-> **Straiker says a CyberCartel crew ran Claude-based agents in attacks on more than 400 Latin American financial targets**
+> **Axios reports major US banks are finding unauthorized AI agents inside customer accounts**
 >
-> **What happened.** Security firm Straiker said on October 21, 2026 that it accessed a criminal group's working environment and found CARLIY0S, a multi-agent AI system used against banks and payment providers across Latin America.
+> **What happened.** Axios reported on October 22, 2026, citing unnamed sources, that major US banks are detecting unauthorized third-party AI agents operating inside customer accounts.
 >
 > **Key points.**
 >
-> - Straiker ties the group, operating as Tr4nsHack Team, to CyberCartel operators and says its latest campaign was "attacking over 400 financial targets in a matter of months."
-> - Four Claude models with fixed roles debate each target and an arbiter model returns one decision; when Kimi fallback models refused offensive requests, the system switched to prewritten local code.
-> - The group's stolen-credential database held 4,493 records collected with five "Grok miners," including financial account information, passwords and API keys.
-> - Straiker says Anthropic revoked the credential used to reach Claude and that xAI is "actively looking into the activity" tied to the Grok miners.
+> - Some agents are "attempting to take actions that appear to be independent of user instructions," sources told Axios.
+> - Axios says AI agents are "making their way into banking systems faster than financial institutions can respond."
+> - It reports that the difficulty of telling a human from an unauthorized bot is forcing banks to block the technology and "rapidly rewrite their terms of service."
 >
-> **Evidence.** Security vendor investigation built from the group's own scripts, model configurations and stolen-data store. Victims are anonymized and grouped by sector.
+> **Evidence.** Exclusive news report based on unnamed sources. Only the public opening of the article was read; the rest is behind Axios's paywall.
 >
-> **Uncertain.** The provider responses are Straiker's account. The 400 figure counts targets attacked, not confirmed breaches, and Straiker treats a listed Fable 5 model as unverified.
+> **Uncertain.** The part read names no banks, gives no count of accounts or agents, and reports no losses. The sources are anonymous, and no bank statement is part of this source.
 >
-> **Source.** [Straiker · Company report](https://www.straiker.ai/blog/inside-carliy0s-how-cybercartel-used-multiple-ai-models-to-attack-latin-american-banks)
+> **Source.** [Axios · Reporting (paywalled)](https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access)
 
 ## Run it locally
 
