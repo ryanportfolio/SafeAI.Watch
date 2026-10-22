@@ -50,7 +50,7 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
 | `seen.jsonl` | One line per judged candidate: `leadUrl`, `primaryUrl`, `title`, `eventDate`, `found`, `verdict` (`published`, `pr`, `held`, `skipped`), `reason`, and `pr` (number) for `pr` verdicts. Append only; the latest line for an event wins. |
 | `runs/<date>/` | Lane outputs (`lane-*.jsonl`, `x-raw.jsonl`, `x-gaps.jsonl`), this run's `verdicts.jsonl` (same fields as `seen.jsonl`, moved there only after delivery) and `report.md` |
 | `runs/<date>/bin/` | This run's copy of the skill's `scripts/` folder |
-| `tracked.jsonl` | Items still in motion (bills, suits, motions, investigations, rulemakings, order deadlines): `entryUrl`, `title`, `kind`, `jurisdiction`, `id` (bill or docket number, or null), `statusUrl` (official page to check), `status`, `statusDate`, `added`, `lastChecked`, `open` (false once final). Append only; the latest line for an `entryUrl` wins. |
+| `tracked.jsonl` | Items still in motion (bills, suits, motions, investigations, rulemakings, order deadlines) and entries waiting for their original: `entryUrl`, `title`, `kind`, `jurisdiction`, `id` (bill or docket number, or null), `statusUrl` (official page to check), `status`, `statusDate`, `added`, `lastChecked`, `open` (false once final), and `originalPending` with `originalUrl` for entries linked to reporting (bar.md "Follow-ups"). Append only; the latest line for an `entryUrl` wins. |
 
 ## Workflow
 
@@ -69,13 +69,18 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    (`x-signals.mjs`, `x-handles.json`, each via `MSYS_NO_PATHCONV=1 git show
    origin/main:.claude/skills/daily-watch/scripts/<file> > <bin>/<file>`) and check each
    file is non-empty. `<skill-dir>/scripts/` in [watchlist.md](references/watchlist.md)
-   means that `bin` folder.
+   means that `bin` folder. Then reconcile: every record entry whose `evidence` contains
+   "The original was not reviewed" and has no tracked line with `originalPending: true` gets
+   one (entries added through add-source arrive this way); record the additions for step 10.
 2. **Scan.** Launch the five lanes in [watchlist.md](references/watchlist.md) and one
    follow-ups lane as parallel research subagents in one message. The follow-ups lane gets
    every open item in `tracked.jsonl` and, for each, checks its `statusUrl`, the court
    docket or legislature's status page, and a WebSearch for the item since `statusDate`.
    It reports every change of status with its official source as a candidate (the outcome
-   is the event; date it by the source), notes unchanged items in one line each, and
+   is the event; date it by the source). For items with `originalPending: true` it checks `originalUrl` and whether
+   the original has appeared and, if so, reports a source update with `kind`
+   `source-update`, the entry's current `url` and the original's URL. It notes unchanged
+   items in one line each, and
    writes `runs/<date>/lane-followups.jsonl`. The "Follow-ups" rules in
    [bar.md](references/bar.md) apply. Give each scan lane the window, its lane, the candidate format,
    the sensitive-material rule, and the state folder path; each writes
@@ -89,15 +94,22 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    of any size that touches theme 1 (AI and biology). Each one must match a lane candidate,
    an event already in the record or `seen.jsonl`, or get a one-line dismissal in
    `report.md` (off topic, market chatter, duplicate). Anything left over is a miss: trace
-   it now as a candidate (find who said or did what, and the open original), and list
+   it now as a candidate (find who said or did what, and the original or, failing that, the
+   reporting bar.md accepts), and list
    every miss in the report and PR body with the lane that should have caught it, so the
-   watchlist can be fixed.
+   watchlist can be fixed. In the same step, give one fresh subagent every candidate whose
+   original was not traced and whose `routesTried` does not include the place it would be
+   published (the publisher's own site, the official gazette, the docket). It checks that
+   place, sets `primaryUrl` to the original if found, and records what it tried. Fall back
+   to reporting (bar.md gate 1) only after this trace.
 4. **Triage.** Merge the lanes and dedupe across them. Then drop, matching by any URL
    (lead or primary) and by event (the same happening from another source or outlet).
    Follow-ups are the exception: a status change from the follow-ups lane is a new event
    even when its source is a page the record already links (a docket, a bill's status
    page), so match those by item and status step, not by URL, and prefer a URL specific to
-   the new step (the order, the vote record) where one exists. Drop:
+   the new step (the order, the vote record) where one exists. A source update is not
+   dropped as already recorded: it passes when this run fetched the original, and step 7
+   applies it. Drop:
    - anything already in the record;
    - events whose latest `seen.jsonl` verdict is `skipped` or `published`;
    - `pr` events whose PR is still open or was merged. A `pr` event whose PR was closed
@@ -112,7 +124,7 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    judged candidate's verdict to this run's `runs/<date>/verdicts.jsonl`, not to
    `seen.jsonl`: verdicts reach the ledger only in step 10, after delivery, so a run that
    fails partway leaves nothing suppressed and the next run judges those candidates again.
-5. **Nothing passes.** Append `verdicts.jsonl` to `seen.jsonl`, write `report.md`, update
+5. **Nothing passes** (no new entries and no source updates). Append `verdicts.jsonl` to `seen.jsonl`, write `report.md`, update
    `last-run.json`, update `tracked.jsonl` for the items the follow-ups lane checked, and
    stop. No worktree, branch, commit or PR.
 6. **Workspace.** If a routine PR is open, add a worktree on its branch:
@@ -129,7 +141,13 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    body. Note every date whose entry count the merge or a removal changed. Otherwise
    `worktree add -b daily-watch/<date> <same path> origin/main`. If the path already exists
    from a crashed run, remove that worktree first. Run `npm ci` there.
-7. **Draft.** For each kept candidate, run add-source workflow steps 2 to 5 (get the content,
+7. **Draft.** For each source update, switch the entry's `url` and `source` to the original,
+   set `date` to the original's publication date, recheck every claim and quote in it against
+   the original and fix what differs, and remove the "The original was not reviewed" wording.
+   A changed date or title moves the entry between day briefs: redo the briefs of both dates
+   below. In step 10, append a line for the old `url` with `originalPending: false` and
+   `open: false`, then a line for the new `url` with `originalPending: false`; the new line
+   closes only when its `kind` is `original pending`, so a bill or suit stays tracked. For each kept candidate, run add-source workflow steps 2 to 5 (get the content,
    trace and check claims, select and draft) with this run's sources as the material. Every
    entry gets 1 to 3 `topics` from add-source `references/topics.md`
    (Bio, Cyber, Rogue agents, Alignment, Superintelligence, Harm to people, Military,
@@ -173,7 +191,8 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    rest as judged. If delivery failed, append nothing and say so in the report. Append to `tracked.jsonl`: a line
    for every new entry in the PR that bar.md says to track (with its official status page
    and current status), an updated line for every tracked item checked this run (status,
-   `lastChecked`), and `open: false` for items whose outcome is now final. Drop items whose
+   `lastChecked`), and `open: false` for items whose outcome is now final and whose
+   `originalPending` is not true. Drop items whose
    only entry was in a PR closed without merging. Remove the worktree with `git worktree remove <path>` once the push
    succeeded (its `node_modules` is a real folder from `npm ci`, not a link). Close any
    browser you opened. End the run with a four-line summary: entries added, each with its

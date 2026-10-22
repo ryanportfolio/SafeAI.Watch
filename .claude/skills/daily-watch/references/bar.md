@@ -5,10 +5,13 @@ missing entry costs less than a wrong one.
 
 ## Gates
 
-1. **Primary and reachable.** A dated original exists (paper, system card, filing, official
-   release, the person's own post, speech or recording) and this run fetched it. Coverage
-   is a lead, never the link, unless the reporting is itself the event (an investigation
-   whose findings exist nowhere else).
+1. **Sourced and reachable.** This run fetched a dated source for the event. The original
+   (paper, system card, filing, official release, the person's own post, speech or
+   recording) is the ideal: look for it first, at the place it would be published (the
+   publisher's own site, the official gazette, the docket), not only through search. When
+   the original is not published yet or cannot be reached, an established outlet's own
+   reporting can be the source, per add-source SKILL.md. Aggregator posts, newsletters and
+   roundups are leads, never the source.
 2. **In scope.** It fits one of the four categories in add-source `references/entries.md`
    and is about AI safety or security: risk, misuse, failures, oversight, or the people and
    institutions responsible for them.
@@ -43,7 +46,15 @@ regulation is finalized; a deadline in an order arrives. Each such entry goes in
 before scanning, and any change of status that has an official source is a new dated entry
 of its own; the older entry changes only where it is now wrong. A status that has
 not changed is no entry. An item leaves the list once its outcome is final (law signed or
-vetoed, bill dead at the end of the session, case closed), with that final step recorded.
+vetoed, bill dead at the end of the session, case closed), with that final step recorded,
+and its original, if pending, is linked. Until then it stays open with only the original
+left to check.
+
+Entries linked to reporting go on the tracked list too, with `originalPending: true` and
+`originalUrl` set to where the original should appear. An entry with nothing else in motion
+gets `kind` `original pending`; a bill or suit linked to reporting keeps its own `kind` and
+status. When the original appears, switch the entry's `url` and `source` to it and recheck
+the entry's wording against it. That is an update to the existing entry, not a new one.
 
 ## Skip
 
@@ -55,8 +66,9 @@ the subject of the entry.
 
 ## Hold
 
-A candidate that clears gates 2 to 4 but not yet 1 or 5 (original not yet published, page
-blocked, paywall with no open route) is `held`. Re-check held items on later runs for seven
+A candidate that clears gates 2 to 4 but not yet 1 or 5 (no reachable original and no
+usable reporting, or a claim that cannot be checked) is `held`. The reason names the routes
+tried, including the place the original would be published; "not checked" is not a reason. Re-check held items on later runs for seven
 days, then mark them `skipped` with the reason.
 
 ## Paywalled leads
@@ -70,16 +82,14 @@ the open original behind it, in this order:
 2. A recording: the event's own video or podcast page, with a transcript or captions.
 3. An open republication of the same piece: the author's or subject's own copy, a syndicated
    free copy, or an open-access version.
-4. Another outlet's original reporting that is freely readable, only when the reporting is
-   the event (gate 1).
+4. Another outlet's freely readable reporting of the same event (gate 1).
 
 Search by the people, organizations and event names in the headline and standfirst, within
 two days of the article's date.
 
-5. Only when the paywalled piece is itself the original (an op-ed, an exclusive interview,
-   an investigation whose findings exist nowhere else, a feature that is the event) and
-   steps 1 to 4 found no open route: read a Wayback capture of that same URL to check the
-   facts. The entry links the original, its `source` type ends in `(paywalled)`, and
+5. Only when steps 1 to 4 found no open route: read a Wayback capture of the paywalled
+   URL to check the facts. The entry links the paywalled piece, its `source` type ends in
+   `(paywalled)`, and
    every quote and figure must appear in the captured text. Name the capture in the PR's
    source log. No other paywall-bypass service. A capture without the body counts as no
    route: claim nothing beyond the public headline, standfirst, byline and date.
@@ -90,4 +100,5 @@ original is reachable.
 Example: Bloomberg, October 13, 2026, "Moderna founder calls for urgent regulation of AI
 agents" (paywalled). Find where the founder said it: an interview video, a conference
 session, an op-ed, or a post of their own. Link that, quoting only what it contains. If no
-open original turns up, hold it and list it in the PR body with the routes tried.
+open original turns up, link open reporting of the remarks, or the paywalled piece under
+step 5; hold it only when neither works, and list the routes tried in the PR body.

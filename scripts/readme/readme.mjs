@@ -93,7 +93,7 @@ Spotted an error in an entry? [Open an issue](https://github.com/ryanportfolio/S
 
 ## What the project holds to
 
-- Every entry links its original source.
+- Every entry links its original source where one can be reached; otherwise it links the reporting and says the original was not reviewed.
 - Each entry gives the source's key points and separates what happened from what the evidence shows, with what remains uncertain when something material is still open.
 - No invented incidents, numbers or quotes. The site's illustrations are conceptual and carry no data; the chart at the top of this README is the exception, drawn from the record.
 - No third-party trackers or analytics.

@@ -12,9 +12,15 @@ merging.
 
 ## Rules that do not bend
 
-- Every entry links its original source: the paper, filing, company post, statement, or the
-  person's own post. Coverage, explainers and compilations are never the source for a claim
-  about an event; they are leads to the source that is.
+- Every entry links the best source that can be reached. The original (the paper, filing,
+  company post, statement, or the person's own post) is the ideal: always look for it first,
+  including where it would be published (the publisher's own site, the official gazette, the
+  court docket), not only through search. When the original is not published yet or cannot be
+  reached, an established outlet's own reporting can be the link: its `source` type is
+  `Reporting`, its `evidence` contains the words "The original was not reviewed" (daily-watch
+  finds these entries by that phrase and upgrades them when the original appears), and quotes
+  and figures are attributed to the outlet. Aggregator posts, newsletters, explainers and compilations are
+  never the source for a claim about an event; they are leads.
 - An explainer, essay or interview may be its own entry only when the publication is itself
   the event: a named publisher, a dated page, and enough reach or standing that the
   publishing is worth recording. Its `evidence` must say plainly that it is an argument. When
@@ -66,11 +72,11 @@ merging.
    claims. Fan-out mode for compilations, long reports, or several sources: group claims by
    theme and give each group to a fresh research subagent with the rules above and the
    sourcing reference. Either way, the verification pass in step 7 uses a fresh subagent.
-4. **Trace and check claims.** For each substantive claim find the primary source and judge
+4. **Trace and check claims.** For each substantive claim find the original and judge
    it: ACCURATE, OVERSTATED, MISLEADING, WRONG, UNVERIFIED. Distortions in the input become
    notes in the PR, not entries. Save the full check to
    `.tmp/add-source/<slug>/source-check.md`.
-5. **Select and draft entries.** Be selective. Add an entry only for a dated, primary, citable
+5. **Select and draft entries.** Be selective. Add an entry only for a dated, citable
    event that fits one of the four categories and tells a general reader something the record
    does not already hold. Background color, restated common knowledge, and claims that rest on
    one interested party's say-so do not earn entries. Check `events.json` for the same URL or

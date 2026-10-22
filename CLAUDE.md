@@ -12,7 +12,7 @@ SafeAI.watch: a public editorial site tracking AI safety and security (research,
 
 Won't compromise on:
 
-- Every entry links its original source.
+- Every entry links its source. The original is the ideal and is always looked for first; when it cannot be reached, credible reporting can stand in, and the entry says the original was not reviewed.
 - Each entry gives the source's key points and separates what happened from what the evidence shows. It says what remains uncertain only when something material is open; no filler.
 - No fabricated incidents, numbers, or quotes. Illustrations are conceptual and carry no data.
 - No third-party trackers or analytics.

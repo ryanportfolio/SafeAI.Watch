@@ -81,8 +81,10 @@ named in results are leads whatever their field.
   biology, biosecurity and AI safety; search `site:nature.com AI biosecurity <month>`.
 - AI Incident Database and company security disclosures (Hugging Face, GitHub, cloud
   providers) for real-world incidents.
-- Leads only: every candidate from this lane needs a `primaryUrl` traced per bar.md, or
-  `access` set to say why not. Run the paywall routine for paywalled leads.
+- Leads first: trace each candidate's original per bar.md and check the place it would be
+  published. When none is reachable, the outlet's own reporting can be the source (gate 1);
+  set `primaryUrl` to that reporting and list the routes tried. Run the paywall routine for
+  paywalled leads.
 
 ### research: Preprints
 
