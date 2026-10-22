@@ -15,7 +15,7 @@ except `keyPoints` and `topics`, and `uncertain` is optional:
 | `evidence` | What kind of evidence this is and what it shows or does not show. |
 | `uncertain` | Optional. Only when something material is open that changes how to read the entry: a pending ruling or vote, untested allegations, a self-reported or unverified figure, a disputed attribution, a finding resting on one account, limits the source states. Leave the key out rather than fill it; "X did not say Y" belongs only when the absence matters. |
 | `source` | `Publisher · Type` with a middle dot, e.g. `arXiv · Research preprint`. |
-| `url` | `https://` link to the original source. |
+| `url` | `https://` link to the original source, or to the reporting when the original cannot be reached (see SKILL.md). |
 
 Categories:
 

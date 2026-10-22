@@ -89,9 +89,14 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    of any size that touches theme 1 (AI and biology). Each one must match a lane candidate,
    an event already in the record or `seen.jsonl`, or get a one-line dismissal in
    `report.md` (off topic, market chatter, duplicate). Anything left over is a miss: trace
-   it now as a candidate (find who said or did what, and the open original), and list
+   it now as a candidate (find who said or did what, and the original or, failing that, the
+   reporting bar.md accepts), and list
    every miss in the report and PR body with the lane that should have caught it, so the
-   watchlist can be fixed.
+   watchlist can be fixed. In the same step, give one fresh subagent every candidate whose
+   original was not traced and whose `routesTried` does not include the place it would be
+   published (the publisher's own site, the official gazette, the docket). It checks that
+   place, sets `primaryUrl` to the original if found, and records what it tried. Fall back
+   to reporting (bar.md gate 1) only after this trace.
 4. **Triage.** Merge the lanes and dedupe across them. Then drop, matching by any URL
    (lead or primary) and by event (the same happening from another source or outlet).
    Follow-ups are the exception: a status change from the follow-ups lane is a new event

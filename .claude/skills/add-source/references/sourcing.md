@@ -8,7 +8,7 @@
 | Web page | `curl -sL -A "Mozilla/5.0 ..." -o <file> <url>`, then grep or extract the passages needed. Never read a whole page into context. |
 | PDF | curl to file, then `pdftotext` or a PDF reader; grep the text. |
 | X post | `https://api.fxtwitter.com/<user>/status/<id>` returns the text and `created_at`. |
-| Blocked page | Try WebFetch with a narrow question, then `https://web.archive.org/web/2026*/<url>`. Log the route. Reporting about a source may point you to it, but never becomes the entry's link. An original you cannot reach through any route stays out of the record; say so in the PR. Reporting is itself a primary source only when the reporting is the event, as with an investigation whose findings exist nowhere else; then the outlet is the publisher and the `source` type says `Reporting`. |
+| Blocked page | Try WebFetch with a narrow question, then `https://web.archive.org/web/2026*/<url>`. Log the route. Reporting about a source points you to it. When the original cannot be reached through any route, the outlet's reporting can be the link instead, under the rule in SKILL.md; say in the PR which routes failed. When the reporting is itself the event, as with an investigation whose findings exist nowhere else, the outlet is the publisher and the `source` type says `Reporting`. |
 | Paywalled page | A lead first: look for the open original behind it (the statement, filing, report, post or recording) and link that. Only when the paywalled piece is itself the original (an op-ed, an exclusive interview, a feature that is the event) and no open route exists, read a Wayback capture of the same URL to check facts. Link the original, end the `source` type in `(paywalled)`, quote only text in the capture, and name the capture in the PR. No other paywall-bypass service. A capture without the body counts as no route. |
 
 Known behavior (re-check; sites change):
@@ -41,7 +41,9 @@ For each substantive claim in the input:
    - MISLEADING: the framing or sequence changes the meaning (setup reversed, caveat cut,
      speaker misattributed, quote spliced).
    - WRONG: the source says otherwise.
-   - UNVERIFIED: no primary source found. Say how hard you looked.
+   - UNVERIFIED: no source found that states it. Say how hard you looked.
+   When the entry links reporting, a claim is ACCURATE only if that reporting states it, and the
+   entry attributes it to the outlet.
 4. Keep the source's own limits: sample size, preprint status, contrived setup, anonymous
    sources, self-reporting, allegations.
 
