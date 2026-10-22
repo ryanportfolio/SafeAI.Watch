@@ -142,10 +142,12 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    `worktree add -b daily-watch/<date> <same path> origin/main`. If the path already exists
    from a crashed run, remove that worktree first. Run `npm ci` there.
 7. **Draft.** For each source update, switch the entry's `url` and `source` to the original,
-   recheck every claim and quote in it against the original and fix what differs, and remove
-   the "The original was not reviewed" wording. Its tracked line moves to the new `url` with
-   `originalPending: false`; it closes only when its `kind` is `original pending`, so a bill or
-   suit stays tracked. For each kept candidate, run add-source workflow steps 2 to 5 (get the content,
+   set `date` to the original's publication date, recheck every claim and quote in it against
+   the original and fix what differs, and remove the "The original was not reviewed" wording.
+   A changed date or title moves the entry between day briefs: redo the briefs of both dates
+   below. In step 10, append a line for the old `url` with `originalPending: false` and
+   `open: false`, then a line for the new `url` with `originalPending: false`; the new line
+   closes only when its `kind` is `original pending`, so a bill or suit stays tracked. For each kept candidate, run add-source workflow steps 2 to 5 (get the content,
    trace and check claims, select and draft) with this run's sources as the material. Every
    entry gets 1 to 3 `topics` from add-source `references/topics.md`
    (Bio, Cyber, Rogue agents, Alignment, Superintelligence, Harm to people, Military,
