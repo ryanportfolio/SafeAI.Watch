@@ -50,7 +50,7 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
 | `seen.jsonl` | One line per judged candidate: `leadUrl`, `primaryUrl`, `title`, `eventDate`, `found`, `verdict` (`published`, `pr`, `held`, `skipped`), `reason`, and `pr` (number) for `pr` verdicts. Append only; the latest line for an event wins. |
 | `runs/<date>/` | Lane outputs (`lane-*.jsonl`, `x-raw.jsonl`, `x-gaps.jsonl`), this run's `verdicts.jsonl` (same fields as `seen.jsonl`, moved there only after delivery) and `report.md` |
 | `runs/<date>/bin/` | This run's copy of the skill's `scripts/` folder |
-| `tracked.jsonl` | Items still in motion (bills, suits, motions, investigations, rulemakings, order deadlines): `entryUrl`, `title`, `kind`, `jurisdiction`, `id` (bill or docket number, or null), `statusUrl` (official page to check), `status`, `statusDate`, `added`, `lastChecked`, `open` (false once final). Append only; the latest line for an `entryUrl` wins. |
+| `tracked.jsonl` | Items still in motion (bills, suits, motions, investigations, rulemakings, order deadlines) and entries waiting for their original: `entryUrl`, `title`, `kind`, `jurisdiction`, `id` (bill or docket number, or null), `statusUrl` (official page to check), `status`, `statusDate`, `added`, `lastChecked`, `open` (false once final), and `originalPending` with `originalUrl` for entries linked to reporting (bar.md "Follow-ups"). Append only; the latest line for an `entryUrl` wins. |
 
 ## Workflow
 
@@ -69,13 +69,15 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    (`x-signals.mjs`, `x-handles.json`, each via `MSYS_NO_PATHCONV=1 git show
    origin/main:.claude/skills/daily-watch/scripts/<file> > <bin>/<file>`) and check each
    file is non-empty. `<skill-dir>/scripts/` in [watchlist.md](references/watchlist.md)
-   means that `bin` folder.
+   means that `bin` folder. Then reconcile: every record entry whose `evidence` contains
+   "The original was not reviewed" and has no tracked line with `originalPending: true` gets
+   one (entries added through add-source arrive this way); record the additions for step 10.
 2. **Scan.** Launch the five lanes in [watchlist.md](references/watchlist.md) and one
    follow-ups lane as parallel research subagents in one message. The follow-ups lane gets
    every open item in `tracked.jsonl` and, for each, checks its `statusUrl`, the court
    docket or legislature's status page, and a WebSearch for the item since `statusDate`.
    It reports every change of status with its official source as a candidate (the outcome
-   is the event; date it by the source). For `original pending` items it checks whether
+   is the event; date it by the source). For items with `originalPending: true` it checks `originalUrl` and whether
    the original has appeared and, if so, reports a source update with `kind`
    `source-update`, the entry's current `url` and the original's URL. It notes unchanged
    items in one line each, and
@@ -140,8 +142,10 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    `worktree add -b daily-watch/<date> <same path> origin/main`. If the path already exists
    from a crashed run, remove that worktree first. Run `npm ci` there.
 7. **Draft.** For each source update, switch the entry's `url` and `source` to the original,
-   recheck every claim and quote in it against the original and fix what differs, and mark
-   the tracked item closed. For each kept candidate, run add-source workflow steps 2 to 5 (get the content,
+   recheck every claim and quote in it against the original and fix what differs, and remove
+   the "The original was not reviewed" wording. Its tracked line moves to the new `url` with
+   `originalPending: false`; it closes only when its `kind` is `original pending`, so a bill or
+   suit stays tracked. For each kept candidate, run add-source workflow steps 2 to 5 (get the content,
    trace and check claims, select and draft) with this run's sources as the material. Every
    entry gets 1 to 3 `topics` from add-source `references/topics.md`
    (Bio, Cyber, Rogue agents, Alignment, Superintelligence, Harm to people, Military,

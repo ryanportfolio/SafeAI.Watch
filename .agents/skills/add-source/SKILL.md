@@ -18,8 +18,9 @@ approval through the normal mechanism when the sandbox blocks a fetch or push.
   including where it would be published (the publisher's own site, the official gazette, the
   court docket), not only through search. When the original is not published yet or cannot be
   reached, an established outlet's own reporting can be the link: its `source` type is
-  `Reporting`, its `evidence` says the original was not reviewed, and quotes and figures are
-  attributed to the outlet. Aggregator posts, newsletters, explainers and compilations are
+  `Reporting`, its `evidence` contains the words "The original was not reviewed" (daily-watch
+  finds these entries by that phrase and upgrades them when the original appears), and quotes
+  and figures are attributed to the outlet. Aggregator posts, newsletters, explainers and compilations are
   never the source for a claim about an event; they are leads.
 - An explainer, essay or interview may be its own entry only when the publication is itself
   the event: a named publisher, a dated page, and enough reach or standing that the

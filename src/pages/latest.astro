@@ -16,7 +16,7 @@ import WeekGrid from '../components/WeekGrid.astro';
 import { dayBriefs, eventsNewestFirst, formatLong, groupByDay, slugOf } from '../data/record';
 
 const description =
-  'Research, incidents, public warnings, and policy on AI safety and security, newest first, each linked to its original source.';
+  'Research, incidents, public warnings, and policy on AI safety and security, newest first, each linked to its original source where one can be reached.';
 const newest = eventsNewestFirst[0];
 const TYPE_CHIPS = [
   ['all', 'All types'],
@@ -43,7 +43,7 @@ const days = groupByDay(eventsNewestFirst).map(({ date, entries }) => {
         <p class="reader-count">{count(eventsNewestFirst.length)}<span aria-hidden="true"> · </span><span>newest first</span></p>
       </div>
       <p class="reader-intro">
-        Research, reported incidents, public warnings, and policy on AI safety and security. Each entry links its original source.
+        Research, reported incidents, public warnings, and policy on AI safety and security. Each entry links its original source where one can be reached, and otherwise the reporting on it.
       </p>
     </header>
 

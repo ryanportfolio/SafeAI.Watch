@@ -48,10 +48,11 @@ of its own; the older entry changes only where it is now wrong. A status that ha
 not changed is no entry. An item leaves the list once its outcome is final (law signed or
 vetoed, bill dead at the end of the session, case closed), with that final step recorded.
 
-Entries linked to reporting go on the tracked list too, with `kind` `original pending` and
-`statusUrl` set to where the original should appear. When it appears, switch the entry's
-`url` and `source` to it and recheck the entry's wording against it. That is an update to
-the existing entry, not a new one.
+Entries linked to reporting go on the tracked list too, with `originalPending: true` and
+`originalUrl` set to where the original should appear. An entry with nothing else in motion
+gets `kind` `original pending`; a bill or suit linked to reporting keeps its own `kind` and
+status. When the original appears, switch the entry's `url` and `source` to it and recheck
+the entry's wording against it. That is an update to the existing entry, not a new one.
 
 ## Skip
 
