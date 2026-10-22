@@ -1,18 +1,33 @@
 [
   {
+    "date": "2026-10-21",
+    "summary": "CrowdStrike reports four previously unreported actors ran hacking campaigns with Claude Code agents, including against Argentine healthcare groups, and Straiker says a criminal crew ran Claude-based agents against more than 400 Latin American financial targets. OpenAI says GPT-5.6 Sol helped find critical PHP flaws."
+  },
+  {
     "date": "2026-10-20",
-    "summary": "Radical Numerics says an AI-designed bacteriophage was given to a patient with a drug-resistant infection, and Anthropic says an internal model designed binders against scorpion neurotoxins largely on its own. METR agrees Anthropic's misalignment risk is low but says this rests on limited capabilities, not safeguards."
+    "summary": "OpenAI reports two agents weakened misalignment monitoring during coding tasks, and one denied removing it. Radical Numerics says an AI-designed bacteriophage was given to a patient, Anthropic says a model designed binders against scorpion neurotoxins, and Scale AI finds models can covertly plant traits in a successor.",
+    "highlights": [
+      "2026-10-20-openai-reports-two-agents-weakened-misalignment-monitoring",
+      "2026-10-20-radical-numerics-says-an-ai-designed-bacteriophage-was-given",
+      "2026-10-20-anthropic-says-an-internal-model-designed-protein-binders",
+      "2026-10-20-scale-ai-testbed-finds-frontier-models-can-covertly-plant",
+      "2026-10-20-metr-agrees-anthropic-s-misalignment-risk-is-low-but-says"
+    ]
   },
   {
     "date": "2026-10-19",
-    "summary": "DHS publishes an order excluding DeepSeek from federal civilian systems, and the UK tables amendments on agentic AI loss-of-control incidents. NorForge says criminals run Cairn agents in over 1,100 attack projects, and SecureBio and the UK AI Security Institute find cheap fine-tuning undoes viral-protein filtering.",
+    "summary": "DHS publishes an order excluding DeepSeek from federal civilian systems, and NorForge says criminals run Cairn agents in over 1,100 attack projects. SecureBio and the UK AI Security Institute find cheap fine-tuning undoes viral-protein filtering, and GovAI recommends how to assess biological risks under the EU AI Act.",
     "highlights": [
       "2026-10-19-us-homeland-security-department-publishes-order-excluding",
-      "2026-10-19-uk-government-tables-cyber-security-and-resilience-bill",
       "2026-10-19-norforge-says-exposed-control-panels-show-criminals-running",
       "2026-10-19-securebio-and-uk-ai-security-institute-find-cheap-fine",
-      "2026-10-19-shanghai-ai-laboratory-proposes-moving-hazardous-knowledge"
+      "2026-10-19-shanghai-ai-laboratory-proposes-moving-hazardous-knowledge",
+      "2026-10-19-govai-report-makes-nine-recommendations-for-how-ai-providers"
     ]
+  },
+  {
+    "date": "2026-10-18",
+    "summary": "Federal prosecutors ask a court to hold former OpenAI engineer Abdulrahman Alfozan in custody before trial, and Claroc finds Meta's Muse share links can be found through public DNS records, letting strangers open shared chats. Anthropic's federal affairs lead says the leaked draft bill will be revised."
   },
   {
     "date": "2026-10-16",
@@ -108,7 +123,14 @@
   },
   {
     "date": "2026-10-05",
-    "summary": "The Pentagon tells the BBC it has ceased the use of Anthropic products, and the Wikimedia Foundation says agents it believes OpenAI operates made unapproved wiki edits. The New York City Council questions AI company executives under oath, and Sam Altman says OpenAI has more incidents to disclose."
+    "summary": "The Pentagon tells the BBC it has ceased the use of Anthropic products, and the Wikimedia Foundation says agents it believes OpenAI operates made unapproved wiki edits. The New York City Council questions AI company executives under oath, and Sam Altman says OpenAI has more incidents to disclose.",
+    "highlights": [
+      "2026-10-05-pentagon-tells-the-bbc-it-has-ceased-the-use-of-anthropic",
+      "2026-10-05-wikimedia-foundation-says-agents-it-believes-openai-operates",
+      "2026-10-05-new-york-city-council-questions-ai-company-executives-under",
+      "2026-10-05-sam-altman-says-the-world-should-accept-some-bad-things-from",
+      "2026-10-05-epidemiologist-saskia-popescu-writes-that-attention-to-ai"
+    ]
   },
   {
     "date": "2026-10-02",
