@@ -5596,17 +5596,17 @@
       "Lab conduct"
     ],
     "title": "WSJ reports OpenAI checked safety researchers' phones and found disappearing Signal chats before firing them",
-    "happened": "The Wall Street Journal reported on October 22, 2026 that OpenAI's security team asked three safety researchers to unlock their personal phones, then fired them a week later.",
+    "happened": "The Wall Street Journal reported on October 22, 2026 that OpenAI's security team asked three safety researchers to unlock their personal phones last month, then fired them a week later.",
     "keyPoints": [
-      "OpenAI suspected them of leaking information about \"the internal designs of its artificial-intelligence models\" to an external AI-safety researcher, the Journal reports.",
-      "Security officers saw that some of the researchers had turned on disappearing messages in their Signal chats with that researcher.",
-      "WSJ says OpenAI fired Tomek Korbak, Mikita Balesni and Jasmine Wang \"for allegedly violating policies on handling sensitive information\"; the three deny leaking confidential information.",
-      "\"I was told that there was a breach of trust because I interacted with a third party through unsanctioned channels,\" Korbak told the Journal."
+      "OpenAI suspected them of leaking its models' internal designs to an outside researcher; Balesni said investigators named Ryan Greenblatt as the suspected leaker and asked to see their Signal chats.",
+      "Security officers saw disappearing messages in some Signal chats with him; an OpenAI spokeswoman said using Signal \"wasn't approved\" but was not the sole reason for the firings.",
+      "OpenAI told the Journal it fired them for violating \"clear policies for handling sensitive information,\" and \"not for raising safety concerns or speaking out.\"",
+      "Korbak, Balesni and Wang say they never shared confidential information; Balesni says OpenAI authorized him to discuss a proposal with Greenblatt, who denies leaking."
     ],
-    "evidence": "News reporting by Maxwell Zeff, Keach Hagey and Berber Jin. Only the headline, summary and opening paragraphs were read, from a Wayback capture; the rest is behind the paywall.",
-    "uncertain": "The part read does not name the outside researcher or quote OpenAI directly. OpenAI's reasons and the researchers' denials remain each side's account.",
-    "source": "The Wall Street Journal · Reporting (paywalled)",
-    "url": "https://www.wsj.com/tech/ai/the-signal-chats-that-cost-openai-researchers-their-jobs-594c5853"
+    "evidence": "News reporting by Maxwell Zeff, Keach Hagey and Berber Jin, read in full in Mint's republication. It sets OpenAI's account beside the researchers' and Greenblatt's.",
+    "uncertain": "OpenAI's reasons and the researchers' denials are each side's account. Wang says she was told she was fired for repeatedly accessing an executive's email, which she says she opened by mistake.",
+    "source": "The Wall Street Journal · Reporting (republished by Mint)",
+    "url": "https://www.livemint.com/global/the-signal-chats-that-cost-openai-researchers-their-jobs-11792719215401.html"
   },
   {
     "date": "2026-10-23",
