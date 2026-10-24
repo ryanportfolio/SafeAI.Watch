@@ -5338,25 +5338,6 @@
     "topics": [
       "Cyber"
     ],
-    "title": "LiteLLM ties its malware-laced release to GitHub tokens Claude Code can leave in gateway logs",
-    "happened": "LiteLLM said on October 21, 2026 that its release pipeline was compromised and pushed litellm 1.107.0, carrying credential-stealing malware, to PyPI for about two hours and to its Docker images.",
-    "keyPoints": [
-      "LiteLLM says it has \"observed specific situations in which Claude Code will embed a user's GitHub CLI OAuth token into a response body,\" which can then appear in LiteLLM logs.",
-      "It believes the attacker got into an internal LiteLLM deployment exposed to the public internet, took GitHub CLI OAuth tokens from its logs, and used them against the release workflow.",
-      "The attacker held three developers' GitHub CLI credentials; one belonged to an organization owner and was used to disable branch protections and force push a change.",
-      "Anyone who installed 1.107.0 or started the affected Docker images during the compromised window should \"assume it is compromised,\" LiteLLM says."
-    ],
-    "evidence": "Company incident post, updated as the investigation runs. The Claude Code link is LiteLLM's own account of how the tokens reached its logs.",
-    "uncertain": "LiteLLM has not confirmed how the attacker reached its internal deployment, suspecting \"a recently patched vulnerability,\" and says it is still confirming the attack chain. No Anthropic response is part of this source.",
-    "source": "LiteLLM · Incident report",
-    "url": "https://docs.litellm.ai/blog/security-incident-oct-21-2026"
-  },
-  {
-    "date": "2026-10-21",
-    "category": "Incidents",
-    "topics": [
-      "Cyber"
-    ],
     "title": "Unit 42 says an actor using jailbroken AI agents stole Indian university records and planned fraud",
     "happened": "Palo Alto Networks' Unit 42 reported on October 21, 2026 on an actor called BUGSTER who ran the Hermes Agent framework on DeepSeek V4, with safety controls disabled, against targets mainly in India.",
     "keyPoints": [

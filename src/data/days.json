@@ -16,12 +16,12 @@
   },
   {
     "date": "2026-10-21",
-    "summary": "Microsoft says China-aligned Storm-0940 used the ARTEX agent in attacks including the ConnectWise compromise, and CrowdStrike says four new actors ran campaigns with Claude Code agents. LiteLLM ties a malware-laced release to GitHub tokens Claude Code can leave in logs, and OpenAI will require approval for AI gateways.",
+    "summary": "Microsoft says China-aligned Storm-0940 used the ARTEX agent in attacks including the ConnectWise compromise, and CrowdStrike says four new actors ran hacking campaigns with Claude Code agents. OpenAI will require AI gateways to get approval, and a Nature paper withholds full Pinal training data over biosecurity risk.",
     "highlights": [
       "2026-10-21-microsoft-says-china-aligned-storm-0940-used-the-artex-ai",
       "2026-10-21-crowdstrike-reports-four-previously-unreported-actors-ran",
-      "2026-10-21-litellm-ties-its-malware-laced-release-to-github-tokens",
       "2026-10-21-openai-will-require-model-routers-and-ai-gateways-to-get-its",
+      "2026-10-21-straiker-says-a-cybercartel-crew-ran-claude-based-agents-in",
       "2026-10-21-nature-paper-on-pinal-a-text-to-protein-design-model"
     ]
   },
