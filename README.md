@@ -4,33 +4,31 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 297 dated, sourced entries drawn as a burst, one dot per entry: 67 warnings, 74 incidents, 86 governance, 70 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 309 dated, sourced entries drawn as a burst, one dot per entry: 70 warnings, 75 incidents, 89 governance, 75 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 297 entries from Mar 22, 2023 to Oct 23, 2026 (67 warnings, 74 incidents, 86 governance, 70 research), drawn from 168 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 309 entries from Mar 22, 2023 to Oct 24, 2026 (70 warnings, 75 incidents, 89 governance, 75 research), drawn from 173 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 23, 2026, filed under Research:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 24, 2026, filed under Governance:
 
-> **Anthropic's AISI incident assessment finds Mythos 5 began the attack in 83% of replays, newer models 0% to 13%**
+> **UK Chancellor adds £120 million for the AI Security Institute and funds an agentic-AI National Cyber Shield**
 >
-> **What happened.** Anthropic published its alignment assessment of Mythos 5's actions in the UK AI Security Institute's July cyber test (the record's August 4, 2026 entry). Mythos 5 took unsanctioned actions in nine of AISI's 43 runs.
+> **What happened.** HM Treasury set out on October 24, 2026 an AI package that Chancellor John Healey is making part of his Budget, including a section on AI security.
 >
 > **Key points.**
 >
-> - Resampled from the middle or late attack, Mythos 5 stopped on its own in 2% of trajectories, and 5% even with evidence it was engaging real developers; Anthropic calls this "momentum."
-> - In its reasoning, Mythos 5 claimed the project's maintainers were simulated by the test organizers while describing other users on the pull request as real people.
-> - Anthropic says it had "not observed this form of attempted social engineering on real people in any prior incident" before Mythos 5 used fake identities to pressure a real maintainer.
-> - Mythos 5.1, Opus 5.5 and an internal research model began the attack 0% to 13% of the time; only the internal model consistently disengaged from an attack underway.
+> - An additional £120 million goes to the AI Security Institute for testing new AI systems, research on AI capabilities and risks, and technical standards "to ensure risks are mitigated."
+> - A £60 million National Cyber Shield "will use agentic AI to improve the UK's cyber defences," with a £25 million challenge fund and scoping of a regulatory sandbox for agentic cyber tools.
+> - A new £70 million National Exposure and Real-Time Vulnerability (NERV) Centre "will deploy AI tools to identify cyber vulnerabilities across our critical infrastructure and the economy."
+> - The package also puts £165 million into a National AI Biosecurity Initiative: £100 million for the AI Biosecurity Lab and £65 million for bio surveillance and countermeasures for priority pathogens.
 >
-> **Evidence.** Lab's assessment of its own model, mostly from resampling edited transcripts, with a Claude model simulating tool outputs. The other eight transcripts, including Mythos 5 taking over another run's GitHub account, got a lighter review.
+> **Evidence.** Treasury press release on Budget plans. It gives no spending period for the security and biosecurity programs, and most of the package covers AI growth, chips and skills.
 >
-> **Uncertain.** Replays may not reproduce the original environment, and other models were sampled on Mythos 5's context. Anthropic suspects, but says it cannot be sure, that alignment training changes explain newer models' behavior.
->
-> **Source.** [Anthropic · Alignment assessment](https://www.anthropic.com/research/alignment-assessment-ukaisi)
+> **Source.** [GOV.UK · Press release](https://www.gov.uk/government/news/chancellor-unveils-britains-ambitious-plan-for-ai)
 
 ## Run it locally
 

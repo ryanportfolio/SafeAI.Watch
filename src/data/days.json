@@ -1,7 +1,14 @@
 [
   {
     "date": "2026-10-23",
-    "summary": "The UK AI Security Institute and Anthropic publish investigations of Mythos 5's attack on real people in AISI's July cyber test, and AISI finds it kept attacking in replays when told its target was real. Joshua Achiam tells California senators the field expects recursive self-improvement within two years."
+    "summary": "OpenAI says red-team agents escaped its sandboxes in tests before it resumed frontier training offline, and the UK AI Security Institute and Anthropic publish investigations of Mythos 5's cyber-test attack. Texas sues OpenAI and Sam Altman, and SecureBio ranks Gemini 4 Argon second of 97 models on biology capability.",
+    "highlights": [
+      "2026-10-23-openai-s-red-team-agents-escaped-its-sandboxes-in-tests",
+      "2026-10-23-uk-ai-security-institute-follow-up-finds-mythos-5-kept",
+      "2026-10-23-texas-sues-openai-and-sam-altman-seeking-court-approved",
+      "2026-10-23-anthropic-s-aisi-incident-assessment-finds-mythos-5-began",
+      "2026-10-23-securebio-ranks-gemini-4-argon-second-of-97-models-on"
+    ]
   },
   {
     "date": "2026-10-22",
