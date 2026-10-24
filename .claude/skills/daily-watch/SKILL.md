@@ -74,8 +74,10 @@ use `C:\Users\Home\CoreWise\_artifacts\SafeAI.Watch\daily-watch\` and say so in 
    follow-ups lane as parallel research subagents in one message. The follow-ups lane gets
    every open item in `tracked.jsonl` and, for each, checks its `statusUrl`, the court
    docket or legislature's status page, and a WebSearch for the item since `statusDate`.
-   It reports every change of status with its official source as a candidate (the outcome
-   is the event; date it by the source), notes unchanged items in one line each, and
+   It reports each decisive step with its official source as a candidate (the outcome is
+   the event; date it by the source), records other changes of status (party filings,
+   scheduling, cosponsors) in the item's status without a candidate, notes unchanged
+   items in one line each, and
    writes `runs/<date>/lane-followups.jsonl`. The "Follow-ups" rules in
    [bar.md](references/bar.md) apply. Give each scan lane the window, its lane, the candidate format,
    the sensitive-material rule, and the state folder path; each writes

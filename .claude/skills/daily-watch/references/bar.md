@@ -40,9 +40,15 @@ committee, a chamber or fails; a suit is dismissed, settled or ruled on; a motio
 or denied; a subpoena or investigation leads to charges, a settlement or a report; a
 regulation is finalized; a deadline in an order arrives. Each such entry goes into
 `tracked.jsonl` (see SKILL.md) when it is published. Every run checks every tracked item
-before scanning, and any change of status that has an official source is a new dated entry
-of its own; the older entry changes only where it is now wrong. A status that has
-not changed is no entry. An item leaves the list once its outcome is final (law signed or
+before scanning. A new dated entry needs a decisive step with an official source: a vote,
+signature or veto; a ruling, order, judgment or settlement; charges, a final report or a
+finalized rule; a deadline in an order arriving. The older entry changes only where it is
+now wrong. Filings by the parties to a tracked item (motions, objections, briefs, amicus
+filings, notices, added cosponsors) are not entries, even when gate 4's "court motion"
+wording seems to fit; they update the item's status in `tracked.jsonl` only. The one
+exception is a government filing whose text this run read and which makes a new safety
+demand of an AI developer, such as states telling a bankruptcy court that any sale must
+protect children and chat data. A status that has not changed is no entry. An item leaves the list once its outcome is final (law signed or
 vetoed, bill dead at the end of the session, case closed), with that final step recorded.
 
 ## Skip
