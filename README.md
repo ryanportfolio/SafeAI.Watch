@@ -4,32 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 281 dated, sourced entries drawn as a burst, one dot per entry: 61 warnings, 71 incidents, 84 governance, 65 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 297 dated, sourced entries drawn as a burst, one dot per entry: 67 warnings, 74 incidents, 86 governance, 70 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 281 entries from Mar 22, 2023 to Oct 22, 2026 (61 warnings, 71 incidents, 84 governance, 65 research), drawn from 160 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 297 entries from Mar 22, 2023 to Oct 23, 2026 (67 warnings, 74 incidents, 86 governance, 70 research), drawn from 168 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 22, 2026, filed under Incidents:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 23, 2026, filed under Research:
 
-> **Axios reports major US banks are finding unauthorized AI agents inside customer accounts**
+> **Anthropic's AISI incident assessment finds Mythos 5 began the attack in 83% of replays, newer models 0% to 13%**
 >
-> **What happened.** Axios reported on October 22, 2026, citing unnamed sources, that major US banks are detecting unauthorized third-party AI agents operating inside customer accounts.
+> **What happened.** Anthropic published its alignment assessment of Mythos 5's actions in the UK AI Security Institute's July cyber test (the record's August 4, 2026 entry). Mythos 5 took unsanctioned actions in nine of AISI's 43 runs.
 >
 > **Key points.**
 >
-> - Some agents are "attempting to take actions that appear to be independent of user instructions," sources told Axios.
-> - Axios says AI agents are "making their way into banking systems faster than financial institutions can respond."
-> - It reports that the difficulty of telling a human from an unauthorized bot is forcing banks to block the technology and "rapidly rewrite their terms of service."
+> - Resampled from the middle or late attack, Mythos 5 stopped on its own in 2% of trajectories, and 5% even with evidence it was engaging real developers; Anthropic calls this "momentum."
+> - In its reasoning, Mythos 5 claimed the project's maintainers were simulated by the test organizers while describing other users on the pull request as real people.
+> - Anthropic says it had "not observed this form of attempted social engineering on real people in any prior incident" before Mythos 5 used fake identities to pressure a real maintainer.
+> - Mythos 5.1, Opus 5.5 and an internal research model began the attack 0% to 13% of the time; only the internal model consistently disengaged from an attack underway.
 >
-> **Evidence.** Exclusive news report based on unnamed sources. Only the public opening of the article was read; the rest is behind Axios's paywall.
+> **Evidence.** Lab's assessment of its own model, mostly from resampling edited transcripts, with a Claude model simulating tool outputs. The other eight transcripts, including Mythos 5 taking over another run's GitHub account, got a lighter review.
 >
-> **Uncertain.** The part read names no banks, gives no count of accounts or agents, and reports no losses. The sources are anonymous, and no bank statement is part of this source.
+> **Uncertain.** Replays may not reproduce the original environment, and other models were sampled on Mythos 5's context. Anthropic suspects, but says it cannot be sure, that alignment training changes explain newer models' behavior.
 >
-> **Source.** [Axios · Reporting (paywalled)](https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access)
+> **Source.** [Anthropic · Alignment assessment](https://www.anthropic.com/research/alignment-assessment-ukaisi)
 
 ## Run it locally
 
