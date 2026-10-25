@@ -4,31 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 309 dated, sourced entries drawn as a burst, one dot per entry: 70 warnings, 75 incidents, 89 governance, 75 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 320 dated, sourced entries drawn as a burst, one dot per entry: 72 warnings, 77 incidents, 94 governance, 77 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 309 entries from Mar 22, 2023 to Oct 24, 2026 (70 warnings, 75 incidents, 89 governance, 75 research), drawn from 173 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 320 entries from Mar 22, 2023 to Oct 25, 2026 (72 warnings, 77 incidents, 94 governance, 77 research), drawn from 181 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 24, 2026, filed under Governance:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 25, 2026, filed under Warnings:
 
-> **UK Chancellor adds £120 million for the AI Security Institute and funds an agentic-AI National Cyber Shield**
+> **GMO Internet Group head says AI put cyberattacks within anyone's reach and asks Japan for active cyber defense**
 >
-> **What happened.** HM Treasury set out on October 24, 2026 an AI package that Chancellor John Healey is making part of his Budget, including a section on AI security.
+> **What happened.** GMO Internet Group head Masatoshi Kumagai blogged in Japanese on October 25, 2026, apologizing for an attack on a group VPS service for FX traders and explaining a request to the government.
 >
 > **Key points.**
 >
-> - An additional £120 million goes to the AI Security Institute for testing new AI systems, research on AI capabilities and risks, and technical standards "to ensure risks are mitigated."
-> - A £60 million National Cyber Shield "will use agentic AI to improve the UK's cyber defences," with a £25 million challenge fund and scoping of a regulatory sandbox for agentic cyber tools.
-> - A new £70 million National Exposure and Real-Time Vulnerability (NERV) Centre "will deploy AI tools to identify cyber vulnerabilities across our critical infrastructure and the economy."
-> - The package also puts £165 million into a National AI Biosecurity Initiative: £100 million for the AI Biosecurity Lab and £65 million for bio surveillance and countermeasures for priority pathogens.
+> - He writes that open-weight AI models, combined into countless attack tools, have turned cyberattacks that once took advanced skill into something anyone can carry out easily.
+> - He cites GMO Cybersecurity's finding that the ARTEX AI pentesting tool was misused against about 20 Japanese companies, and calls the attack on GMO a symbol of this trend.
+> - He puts the potentially affected servers at 26,739, tied to customer trading accounts at more than 70 securities and FX firms, and says the attackers threatened ransomware and leaks.
+> - GMO asked the government on October 24 to consider applying the active cyber defense law in force since October 1, though GMO is not an operator the law designates.
 >
-> **Evidence.** Treasury press release on Budget plans. It gives no spending period for the security and biosecurity programs, and most of the package covers AI growth, chips and skills.
+> **Evidence.** A company head's own blog post, in Japanese; the wording here is a translation. It is an argument for state action from the head of the company that was attacked.
 >
-> **Source.** [GOV.UK · Press release](https://www.gov.uk/government/news/chancellor-unveils-britains-ambitious-plan-for-ai)
+> **Uncertain.** The post ties the GMO attack to AI-driven threats but gives no finding that AI was used in it. GMO says the cause and the attackers are still under investigation.
+>
+> **Source.** [Masatoshi Kumagai · Personal post](https://www.kumagai.com/?eid=19600)
 
 ## Run it locally
 

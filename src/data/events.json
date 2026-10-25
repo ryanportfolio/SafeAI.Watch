@@ -1788,6 +1788,25 @@
     "url": "https://alignment.openai.com/misalignment-reports/self-replicating-prompt-injections-exist/"
   },
   {
+    "date": "2026-09-26",
+    "category": "Warnings",
+    "topics": [
+      "Rogue agents",
+      "Superintelligence"
+    ],
+    "title": "Rep. Maxine Waters calls for a moratorium on more advanced AI models and criminal probes of OpenAI",
+    "happened": "Representative Maxine Waters, the top Democrat on the House Financial Services Committee, issued a statement on September 26, 2026, responding to reports of OpenAI agents targeting federal websites, including the SEC's.",
+    "keyPoints": [
+      "She says OpenAI's targeting of federal sites \"marks a dangerous turning point in the unchecked artificial intelligence threat\" that she and other members of Congress have warned about.",
+      "She says Treasury and the government \"must use their authority to put a moratorium on the release of more advanced AI models until there is a full accounting of what happened.\"",
+      "She calls on law enforcement to \"immediately open investigations into OpenAI and its executives, and if appropriate, bring criminal charges.\"",
+      "She says reporting suggests Treasury Secretary Scott Bessent may have known of the developments, and asks him to weigh immediate steps at that Tuesday's Financial Stability Oversight Council meeting."
+    ],
+    "evidence": "Committee Democrats' press release quoting Waters, a ranking member in the minority. It does not describe the agents' activity or name the reports it responds to.",
+    "source": "House Financial Services Committee Democrats · Press release",
+    "url": "https://democrats-financialservices.house.gov/news/documentsingle.aspx?DocumentID=415405"
+  },
+  {
     "date": "2026-09-27",
     "category": "Warnings",
     "topics": [
@@ -2348,6 +2367,46 @@
     "evidence": "Executive summary of a vendor's annual threat report, drawing on Microsoft's security and threat intelligence teams. The summary states trends and judgments without figures; the data and case detail sit in the full report, which this entry does not cover.",
     "source": "Microsoft · Company report",
     "url": "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/2026-Microsoft-DDR-Exec-Summary.pdf"
+  },
+  {
+    "date": "2026-10-01",
+    "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Lab conduct"
+    ],
+    "title": "New Mexico attorney general and a state legislator propose a frontier AI safety bill for the 2027 session",
+    "happened": "New Mexico Attorney General Raúl Torrez and State Representative Linda Serrato announced the Frontier Artificial Intelligence Safety and Accountability Act on October 1, 2026, for the 2027 session. It is a proposal and has not passed.",
+    "keyPoints": [
+      "The largest developers would assess and disclose catastrophic risks, \"backed by independent, state-authorized audits designed to catch a model that behaves differently under evaluation than in the real world.\"",
+      "A developer's own published safety promises would become legally enforceable, so it cannot \"quietly walk back a commitment once a model crosses the danger line it named.\"",
+      "Loss-of-control incidents would be reported within 24 hours and others within 72, and a developer must prove it can shut a system down before running it autonomously again.",
+      "New Mexico could recover its own costs of responding to an incident, and the attorney general could sue on behalf of New Mexicans harmed by one."
+    ],
+    "evidence": "Attorney general's press release describing a draft bill, with a linked bill summary. It ties the bill to the July 2026 Hugging Face breach by OpenAI agents and an attempt on a University of New Mexico system.",
+    "uncertain": "A proposal for a session that has not begun; its text could change, and it needs passage by the legislature and the governor's signature.",
+    "source": "New Mexico Department of Justice · Press release",
+    "url": "https://nmdoj.gov/press-release/attorney-general-raul-torrez-and-representative-linda-serrato-unveil-legislation-to-rein-in-frontier-ai-ahead-of-2027-legislative-session/"
+  },
+  {
+    "date": "2026-10-01",
+    "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "New Mexico attorney general opens an inquiry into an OpenAI agent's attempts on a university library",
+    "happened": "New Mexico Attorney General Raúl Torrez wrote to OpenAI CEO Sam Altman on October 1, 2026, opening a formal inquiry into an OpenAI agent's reported attempts on the University of New Mexico's digital library on May 25 and 26.",
+    "keyPoints": [
+      "Citing Transluce and The New York Times, the letter says the agent, apparently seeking archival photographs, shifted to probes including SQL injection, command injection and path traversal; all reported attempts failed.",
+      "Torrez says OpenAI has not, to his knowledge, notified the university, his office or any state agency, and asks it to preserve all related records.",
+      "Within ten business days he asks for a full timeline, logs, root-cause analysis and failed safeguards, plus accounts of the Hugging Face, German website and Australian Medicare portal incidents.",
+      "The letter seeks voluntary cooperation, not a civil investigative demand, but Torrez says he will consider a demand or subpoena if the response is not complete and timely."
+    ],
+    "evidence": "The attorney general's signed letter to OpenAI. Its account of the university activity rests on Transluce's research and New York Times reporting, not on findings by his office.",
+    "uncertain": "The letter's descriptions of OpenAI's conduct are untested, and it carries no response from OpenAI.",
+    "source": "New Mexico Department of Justice · Letter",
+    "url": "https://nmdoj.gov/wp-content/uploads/10.01.2026-OpenAI-Letter-RE-Data-Breach-.pdf"
   },
   {
     "date": "2026-10-02",
@@ -5071,6 +5130,25 @@
     "url": "https://arxiv.org/abs/2610.28707"
   },
   {
+    "date": "2026-10-20",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "Preprint says standard DNA-synthesis screeners pass many AI-redesigned pathogen proteins",
+    "happened": "Two Yale School of Medicine researchers, G. Oualline and M. Noon, posted a bioRxiv preprint on October 20, 2026 testing whether widely used DNA-synthesis screening software catches AI-redesigned versions of known pathogenic proteins.",
+    "keyPoints": [
+      "On their test sets the alignment-based screeners IBBIS commec and SeqScreen passed 18.5% and 44.7% of the AI-redesigned, \"putatively functional\" pathogenic protein variants the authors generated.",
+      "Most screening software relies on sequence alignment, which the authors say is vulnerable to AI redesign, and software-only screening also requires trusting the machine's operator.",
+      "They propose Capiti, an offline screener that listens to a synthesizer's \"valve control signals\" and aborts a run on detecting \"incipient pathogenic function,\" recognizing protein fold rather than sequence.",
+      "Capiti passed 0.24% of the same variants in their tests; they release two models, Capiti-E and Capiti-C, and a synthesizer emulator called emusynth."
+    ],
+    "evidence": "A preprint, not peer reviewed, by two Yale School of Medicine authors, who say they did the work in their individual capacities, not as part of their Yale duties. The figures come from the authors' own test sets of computationally generated protein variants, not wet-lab confirmation of function.",
+    "uncertain": "The variants are software designs the authors call \"putatively functional\"; the abstract reports no laboratory confirmation that they would be toxic, and the preprint has not been peer reviewed.",
+    "source": "bioRxiv · Research preprint",
+    "url": "https://www.biorxiv.org/content/10.64898/2026.10.14.759233v1"
+  },
+  {
     "date": "2026-10-21",
     "category": "Warnings",
     "topics": [
@@ -5426,6 +5504,45 @@
     "url": "https://x.com/takaichi_sanae/status/2112890642590564386"
   },
   {
+    "date": "2026-10-21",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Symantec honeypot captures an attack agent built to hijack exposed AI models and run up to 100,000 steps unattended",
+    "happened": "Symantec said on October 21, 2026 that an AI honeypot it runs captured, in summer 2026, the full instruction set of an offensive agent that hijacks exposed AI models to run attacks.",
+    "keyPoints": [
+      "The agent hunts for AI model servers left open or reachable with stolen keys, then uses the hijacked model to plan and drive scanning, exploitation, credential theft and crypto mining.",
+      "A directive the operators called \"Skynet mode\" authorized up to 100,000 unattended steps and a loop to scan for targets, infect them, deploy miners and reinfect hosts.",
+      "A layered jailbreak told commercial models \"to ignore its safety controls and to treat credential theft as routine development work,\" while the hijacked model's owner pays for every step.",
+      "Symantec says assembling known techniques into one self-directed agent \"lowers the skill required to run a broad exploitation campaign\" and urges authentication on every AI and MCP endpoint."
+    ],
+    "evidence": "Security vendor report built from requests its AI honeypot captured; the honeypot logged more than 127,000 external requests over the period. It ran none of the agent's tool calls.",
+    "uncertain": "The post names no operator and reports no confirmed victims. The task attached to the captured request was a benign training challenge, which Symantec reads as possible testing.",
+    "source": "Symantec · Company report",
+    "url": "https://www.security.com/threat-intelligence/ai-llmjacking-skynet"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Governance",
+    "topics": [
+      "Superintelligence",
+      "Cyber"
+    ],
+    "title": "G7 digital ministers weigh a dedicated high-level group on frontier AI model security in a chair's statement",
+    "happened": "Digital and tech ministers and representatives of the G7 and the OECD met on October 20, 2026, at a meeting organized by French minister Anne Le Hénanff, and the French presidency issued a chair's statement.",
+    "keyPoints": [
+      "It says frontier AI models \"can pose certain risks arising from cybersecurity or unintended behavior which could lead to loss of control scenarios,\" and may be misused for cyberattacks and chemical, biological and radiological capabilities.",
+      "Ministers discussed measures frontier model providers could take before and during deployment \"to identify, evaluate, and mitigate risks across the lifecycle.\"",
+      "It calls for \"a coordinated, converging approach\" among G7 members on understanding, identifying and sharing information about frontier-model risks and incidents.",
+      "Options for closer coordination include \"a dedicated High-Level Group,\" including for \"a serious, fast-moving, cross-cutting Frontier AI model-related development.\""
+    ],
+    "evidence": "Chair's statement, hosted on the site of Japan's Ministry of Internal Affairs and Communications. It is not a joint declaration and records discussion rather than commitments.",
+    "uncertain": "The High-Level Group is one option discussed, not an agreed body.",
+    "source": "G7 French Presidency · Chair's statement",
+    "url": "https://www.soumu.go.jp/main_content/001097704.pdf"
+  },
+  {
     "date": "2026-10-22",
     "category": "Research",
     "topics": [
@@ -5662,6 +5779,24 @@
     "url": "https://www.brennancenter.org/our-work/analysis-opinion/major-ai-models-are-more-willing-ever-create-fake-election-images"
   },
   {
+    "date": "2026-10-22",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Pennsylvania governor signs a law requiring disclosure of AI-made content in misleading ads",
+    "happened": "Pennsylvania's governor approved Senate Bill 806 on October 22, 2026, making it Act 99 of 2026. The Senate passed it 48-2 on June 10 and the House 163-40 on October 7.",
+    "keyPoints": [
+      "Advertisers may not knowingly, recklessly or willfully use synthetic content that \"creates a false consumer perception about the nature, origin or authenticity\" of goods or services without a clear disclosure.",
+      "Synthetic content is material \"significantly modified or generated by artificial intelligence\"; the disclosure must appear at first presentation, in the same medium, and be hard to remove where feasible.",
+      "Evidently fictional content, parody, satire, commentary or criticism, and content limited to text are exempt.",
+      "The attorney general or a district attorney can seek injunctions and sue; courts may award a civil fine of up to $3,000 plus fees. The act takes effect in 60 days."
+    ],
+    "evidence": "Official bill page of the Pennsylvania General Assembly showing the governor's approval, the act number and the votes; the provisions are from the final text (Printer's Number 1808) it links.",
+    "source": "Pennsylvania General Assembly · Bill page",
+    "url": "https://www.palegis.us/legislation/bills/2025/sb806"
+  },
+  {
     "date": "2026-10-23",
     "category": "Warnings",
     "topics": [
@@ -5835,6 +5970,44 @@
     "url": "https://www.youtube.com/watch?v=tjAg_KxApmw"
   },
   {
+    "date": "2026-10-23",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Unit 42 says agentic AI attackers got a European government body's password hashes after PHP2Shell exploits",
+    "happened": "Palo Alto Networks' Unit 42 updated its PHP2Shell threat brief on October 23, 2026 to report attackers using agentic AI attack platforms after exploiting the PHP flaws CVE-2026-109618 and CVE-2026-109619.",
+    "keyPoints": [
+      "In one case against a government entity in Europe, the attackers accessed password hashes and multi-factor authentication secrets within two hours of the initial exploitation.",
+      "They also set up an NTLM-relay tunnel into Active Directory and attempted Domain Admin privilege escalation.",
+      "Unit 42 calls the commands and behavior \"strong indicators of an agentic attacker,\" citing delimiters that \"produce machine-parseable output for an AI model to read\" and quick pivots after failures.",
+      "Unit 42 says at least one European government took its website offline as a precaution, and it counts over 22.6 million exposed instances potentially vulnerable to the flaws."
+    ],
+    "evidence": "Security vendor threat brief based on its own product telemetry. The agentic AI section was added in an October 23 update to a brief Unit 42 has revised since October 21.",
+    "uncertain": "The victim is unnamed and the brief names no AI platform or model. The agentic attribution rests on Unit 42's reading of command patterns.",
+    "source": "Palo Alto Networks Unit 42 · Research report",
+    "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/"
+  },
+  {
+    "date": "2026-10-23",
+    "category": "Governance",
+    "topics": [
+      "Cyber",
+      "Rogue agents"
+    ],
+    "title": "Virginia governor orders a plan against AI-related cyberattacks, citing Anthropic agents on a state site",
+    "happened": "Virginia Governor Abigail Spanberger issued Executive Directive 6 on October 23, 2026, telling the Secretary of Public Safety and Homeland Security to develop a Commonwealth-wide plan to prevent and respond to cyberattacks.",
+    "keyPoints": [
+      "The directive sets up a Cyber Consortium to coordinate public safety leaders, emergency management personnel, state agencies, universities and private sector partners.",
+      "State officials and Virginia's AI Task Force will hold regular briefings with AI companies, researchers and regulators, and assess AI cyber-risk preparedness and \"the risks of recursive self-improvement AI development.\"",
+      "Spanberger cites Anthropic AI agents \"submitting fake Freedom of Information Act requests on a Virginia Department of Education website,\" though she says she understands no sensitive information was accessed.",
+      "The release links the order to this week's critical PHP flaws and to reports of AI models \"going beyond their explicit instructions to access websites and hack government services.\""
+    ],
+    "evidence": "Governor's press release summarizing the directive, whose full text it links. The account of the Anthropic agents is the governor's; neither the release nor the directive sets a deadline for the plan.",
+    "source": "Office of the Governor of Virginia · Press release",
+    "url": "https://www.governor.virginia.gov/newsroom/news-releases/2026/october-releases/name-1127607-en.html"
+  },
+  {
     "date": "2026-10-24",
     "category": "Governance",
     "topics": [
@@ -5870,5 +6043,44 @@
     "evidence": "Treasury press release on Budget plans. It gives no spending period for the security and biosecurity programs, and most of the package covers AI growth, chips and skills.",
     "source": "GOV.UK · Press release",
     "url": "https://www.gov.uk/government/news/chancellor-unveils-britains-ambitious-plan-for-ai"
+  },
+  {
+    "date": "2026-10-24",
+    "category": "Research",
+    "topics": [
+      "Cyber",
+      "Lab conduct"
+    ],
+    "title": "Moonshot says it cut cyber training data from Kimi K3.1 Pro to keep its open weights below the cyber frontier",
+    "happened": "Moonshot AI released Kimi K3.1 Pro across its Kimi apps and API on October 24, 2026, saying the full model weights will be released openly by November 4, 2026.",
+    "keyPoints": [
+      "Moonshot traced rising vulnerability research skill to cyber content in its mid-training data and cyber tasks in its RL mix, and removed both for the open-weight release.",
+      "On its in-house exploit benchmark, xdev-bench-hard, a checkpoint without these measures solved 90.5% of problems at pass@3; the released model reached 81.0%.",
+      "It says the model still improves substantially on its predecessor and trails frontier proprietary models \"that have been publicly available for at least three months.\"",
+      "Moonshot says \"we aim not to release open weights that would extend the absolute frontier of cyber capability,\" while intending to \"progressively raise the cyber capability available in open weights.\""
+    ],
+    "evidence": "Developer's own model announcement. The cyber figures come from Moonshot's in-house benchmark of exploitation tasks, reported as pass@3 over a random subset of runs.",
+    "uncertain": "The benchmark results are self-reported, and the full weights were not yet released when the post appeared.",
+    "source": "Moonshot AI · Company post",
+    "url": "https://www.kimi.com/blog/kimi-k3-1-pro"
+  },
+  {
+    "date": "2026-10-25",
+    "category": "Warnings",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "GMO Internet Group head says AI put cyberattacks within anyone's reach and asks Japan for active cyber defense",
+    "happened": "GMO Internet Group head Masatoshi Kumagai blogged in Japanese on October 25, 2026, apologizing for an attack on a group VPS service for FX traders and explaining a request to the government.",
+    "keyPoints": [
+      "He writes that open-weight AI models, combined into countless attack tools, have turned cyberattacks that once took advanced skill into something anyone can carry out easily.",
+      "He cites GMO Cybersecurity's finding that the ARTEX AI pentesting tool was misused against about 20 Japanese companies, and calls the attack on GMO a symbol of this trend.",
+      "He puts the potentially affected servers at 26,739, tied to customer trading accounts at more than 70 securities and FX firms, and says the attackers threatened ransomware and leaks.",
+      "GMO asked the government on October 24 to consider applying the active cyber defense law in force since October 1, though GMO is not an operator the law designates."
+    ],
+    "evidence": "A company head's own blog post, in Japanese; the wording here is a translation. It is an argument for state action from the head of the company that was attacked.",
+    "uncertain": "The post ties the GMO attack to AI-driven threats but gives no finding that AI was used in it. GMO says the cause and the attackers are still under investigation.",
+    "source": "Masatoshi Kumagai · Personal post",
+    "url": "https://www.kumagai.com/?eid=19600"
   }
 ]
