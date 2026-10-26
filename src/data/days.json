@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-10-26",
+    "summary": "Treasury proposes barring US investment in AI development by firms from China and other countries of concern. Anthropic's IPO filing says it delayed pretraining a frontier model for over a month to tighten weight security, and the UK AI Security Institute finds coding agents rebuild parts of biological AI tools."
+  },
+  {
     "date": "2026-10-24",
     "summary": "The UK sets up an AI Biosecurity Lab with £100 million in public funds and OpenAI and Anthropic model credits, and its Chancellor adds £120 million for the AI Security Institute. Moonshot says it cut cyber training data from Kimi K3.1 Pro to keep its open weights below the cyber frontier."
   },

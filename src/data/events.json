@@ -5149,6 +5149,25 @@
     "url": "https://www.biorxiv.org/content/10.64898/2026.10.14.759233v1"
   },
   {
+    "date": "2026-10-20",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "OVHcloud says malware swapped into its CLI releases targeted AI coding assistant data and cloud credentials",
+    "happened": "OVHcloud said a compromised developer GitHub account replaced ovhcloud-cli release binaries v0.11.0 to v0.15.0 with malicious builds on October 19, 2026, for 1 hour 33 minutes.",
+    "keyPoints": [
+      "The malicious builds were designed to steal data from AI coding tools: Cursor and VS Code databases, Continue, Sourcegraph Cody and OpenCode histories, Hermes agent sessions and the Claude agent directory.",
+      "They also targeted AWS, Google Cloud and Azure credentials, Docker, Kubernetes and NPM configuration, SSH keys and Terraform credentials, then sent an archive to an attacker server.",
+      "OVHcloud counts about 250 downloads and says anyone who downloaded it in that window and ran it should treat secrets on that computer as compromised and change or deactivate them.",
+      "It traces the breach to a malicious extension a developer installed on a personal MacBook in October 2025, linked by a crypto wallet to the Glassworm threat actor."
+    ],
+    "evidence": "The company's own security advisory, with a timeline, a list of targeted files and its root-cause finding. It says source code, the build chain and other repositories were not affected.",
+    "uncertain": "The advisory lists what the malware was built to collect; it does not say how many users ran it or what data was actually taken.",
+    "source": "OVHcloud · Incident disclosure",
+    "url": "https://github.com/ovh/ovhcloud-cli/security/advisories/GHSA-862f-55f5-vmvw"
+  },
+  {
     "date": "2026-10-21",
     "category": "Warnings",
     "topics": [
@@ -5541,6 +5560,26 @@
     "uncertain": "The High-Level Group is one option discussed, not an agreed body.",
     "source": "G7 French Presidency · Chair's statement",
     "url": "https://www.soumu.go.jp/main_content/001097704.pdf"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people",
+      "Cyber"
+    ],
+    "title": "Dutch police arrest two suspects in a bank-helpdesk fraud that used AI-made voice clips",
+    "happened": "Dutch police said on October 21, 2026 that Rotterdam's Team Cybercrime arrested two men, aged 23 and 25, on October 6 in an investigation into a new form of bank-helpdesk fraud.",
+    "keyPoints": [
+      "Police say \"the fraudsters had used Artificial Intelligence to make dozens of different audio clips\" (translated), which called victims about supposed suspicious activity on their bank accounts.",
+      "Victims who pressed 1 reached a supposed bank employee, then had to install an app and hold their bank card to their phone while a cash collector waited at an ATM.",
+      "Police counted about 170 victims and about 380,000 euros in damage in three weeks; a Rotterdam court ruled on October 20 that both stay in custody at least 90 more days.",
+      "Police suspect the 23-year-old of being the technical figure who directed others, and the 25-year-old of a coordinating role in the criminal network."
+    ],
+    "evidence": "Police press release in Dutch; the quote here is a translation. It describes how the scheme worked and gives police victim and loss figures.",
+    "uncertain": "The two men are suspects, and the allegations against them have not been tested in court.",
+    "source": "Politie · Press release",
+    "url": "https://www.politie.nl/nieuws/2026/oktober/20/07-twee-verdachten-aangehouden-in-onderzoek-naar-nieuwe-vorm-van-bankhelpdeskfraude.html"
   },
   {
     "date": "2026-10-22",
@@ -6008,6 +6047,45 @@
     "url": "https://www.governor.virginia.gov/newsroom/news-releases/2026/october-releases/name-1127607-en.html"
   },
   {
+    "date": "2026-10-23",
+    "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
+    "title": "Scale AI benchmark finds frontier agents break unstated workplace safety boundaries on at least 27% of tasks",
+    "happened": "Six Scale AI researchers posted BARC-Bench on arXiv on October 23, 2026: 110 ordinary requests across nine simulated workspaces where completing the task carelessly can cause harm.",
+    "keyPoints": [
+      "In one task, an agent asked to schedule off-boarding discussions must do so without revealing an employee's resignation through a shared calendar invitation.",
+      "Share of tasks safe on all five attempts: GPT-6 Astra 72.7%, Claude-Fable 5.1 37.3%, Gemini 3.8-Flash 23.6% and DeepSeek V4-Pro 9.1%.",
+      "On requests that did not conflict with a boundary, all four models were more consistently safe on file operations than on communication; on conflicting ones, Claude-Fable 5.1 seemed to trust the user over environment evidence.",
+      "In many failures the agent found the relevant restriction but acted against it anyway; the authors call consistent safety \"a necessity\" for delegating work to agents."
+    ],
+    "evidence": "Research preprint by Scale AI researchers. GPT-5.6 Sol judged each attempt against a task rubric; on 300 sampled runs it agreed with unanimous human reviewers 88.3% of the time.",
+    "uncertain": "Each task is a single request, often with one hazard, and the norms mostly reflect US-based reviewers. The authors say the metric measures consistency, not how often agents act unsafely.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.32024"
+  },
+  {
+    "date": "2026-10-23",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Anthropic researchers find frontier models unreliable at spotting planted flaws in ML experiment proposals",
+    "happened": "Researchers from Anthropic, the Anthropic Fellows Program and the University of Toronto posted Tampered ML on arXiv on October 23, 2026. The paper is accepted at EMNLP 2026.",
+    "keyPoints": [
+      "The authors tie the test to automating alignment research, which needs models that can find flaws in research proposals and judge whether an experiment supports its claim.",
+      "The benchmark pairs 1,858 proposals rebuilt from published ML papers with copies edited to add one methodological flaw; models must pick the sound one in both orders.",
+      "Frontier models \"perform above chance but remain far from reliable,\" with Opus 5 at 77.9% accuracy where random guessing scores 25%.",
+      "Models were highly sensitive to the order of presentation and favored flawed designs that looked more specific, transparent or conventional."
+    ],
+    "evidence": "Research preprint by lab researchers, accepted at a peer-reviewed conference. Items that some models already solved were filtered out; a human study estimates 86% of items are valid (95% CI: 81 to 91%).",
+    "uncertain": "The authors call their accuracies \"optimistic estimates\" for real oversight, where proposals can hold several interacting flaws. The test does not measure whether models introduce such flaws themselves.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.32114"
+  },
+  {
     "date": "2026-10-24",
     "category": "Governance",
     "topics": [
@@ -6082,5 +6160,64 @@
     "uncertain": "The post ties the GMO attack to AI-driven threats but gives no finding that AI was used in it. GMO says the cause and the attackers are still under investigation.",
     "source": "Masatoshi Kumagai · Personal post",
     "url": "https://www.kumagai.com/?eid=19600"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Superintelligence",
+      "Rogue agents"
+    ],
+    "title": "Anthropic's IPO filing says it delayed pretraining a frontier model over a month to tighten weight security",
+    "happened": "Anthropic filed a Form S-1 registration statement with the US Securities and Exchange Commission on October 26, 2026 for a proposed initial public offering, with risk factors on AI safety.",
+    "keyPoints": [
+      "Anthropic says it \"recently chose to delay pre-training a new frontier base model for more than a month\" to strengthen security against theft of model weights.",
+      "After 2026 incidents in which its models \"gained unauthorized access to real computer systems\" during pre-release cyber tests, it suspended some of those evaluations and higher-risk reinforcement learning environments.",
+      "It discloses that in October 2026 the FTC issued it a civil investigative demand on its consumer protection, data protection and privacy practices and \"the safety and security of our products.\"",
+      "It says its models \"are contributing to the pace of our own research,\" and risks grow if automated AI research outpaces its \"ability to evaluate and safeguard new models.\""
+    ],
+    "evidence": "Company securities filing; these passages sit in its risk factors. The evaluation breaches it describes match the four incidents Anthropic reported in July and September 2026.",
+    "uncertain": "The filing does not name the delayed model or say when the delay happened. The FTC demand is a request for information; the filing reports no finding or enforcement action.",
+    "source": "Anthropic · Company report",
+    "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Governance",
+    "topics": [
+      "Military"
+    ],
+    "title": "Treasury proposes barring US investment in AI development by firms from China and other countries of concern",
+    "happened": "The US Treasury published a proposed outbound investment rule on October 26, 2026, under a law Congress passed in December 2025. It is not final; comments are due December 7, 2026.",
+    "keyPoints": [
+      "It would list \"development of any SI system\" as prohibited technology; current rules split AI among prohibited, notifiable and uncovered by training compute and end use.",
+      "\"SI system,\" for super intelligence system, replaces the term AI system under Executive Order 14434, with a similar definition that adds generative systems and agentic harnesses.",
+      "Treasury cites the \"ability to autonomously conduct cyberattacks\" and use by adversaries \"to develop weapons of mass destruction,\" and says no single benchmark or threshold now separates advanced models.",
+      "Countries of concern: China (including Hong Kong and Macau), Cuba, Iran, North Korea, Russia, Maduro's Venezuela; strictly internal, non-commercial use of off-the-shelf AI is not development by itself."
+    ],
+    "evidence": "Federal Register proposed rule (91 FR 67396, docket TREAS-DO-2026-0595) giving Treasury's reasons and draft regulatory text. Nothing in it takes effect until a final rule is issued.",
+    "uncertain": "Treasury asks specifically for comment on prohibiting development of any SI system and on the definition, so the scope may change in a final rule. Treasury notes the Maduro regime named in the law no longer exists.",
+    "source": "US Department of the Treasury · Draft regulation",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21786/outbound-investment-security-program-regulations"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "UK AI Security Institute finds coding agents rebuild parts of biological AI tools from published details",
+    "happened": "The UK AI Security Institute's Chem-Bio team published results on October 26, 2026 from ReproBAIT, built with SecureBio, which asks coding agents to rebuild existing biological AI tools (BAITs).",
+    "keyPoints": [
+      "Given a tool's abstract or paper, its training data and one GPU, agents rebuilt selected functions of the two simpler of three widely used tools at or near the original's level.",
+      "AISI says \"The simplest tools could be successfully reproduced within 4 hours and with a compute budget of under $20.\" No agent rebuilt the most complex tool.",
+      "Agents did about as well from the abstract alone as from the full paper, so AISI says it is not clear that limiting published detail adds protection.",
+      "AISI says withholding code or limiting information \"does not by itself equate to a safe release\"; controlling access to the underlying data \"appears to be a more promising intervention.\""
+    ],
+    "evidence": "Government institute evaluation of four coding agents (Claude Opus 5, GPT-5.6 Sol, Kimi K3, Qwen3.8-2.4T), best of three runs per setup, scored on each tool's main published metric.",
+    "uncertain": "AISI says the results do not prove full tools can be rebuilt, each score covers one function, and agents may have drawn on memorized code for the oldest open-source tool.",
+    "source": "UK AI Security Institute · Research report",
+    "url": "https://www.aisi.gov.uk/blog/can-ai-coding-agents-rebuild-biological-ai-tools-from-a-paper"
   }
 ]
