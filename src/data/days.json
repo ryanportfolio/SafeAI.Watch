@@ -1,7 +1,18 @@
 [
   {
     "date": "2026-10-26",
-    "summary": "Treasury proposes barring US investment in AI development by firms from China and other countries of concern. Anthropic's IPO filing says it delayed pretraining a frontier model for over a month to tighten weight security, and the UK AI Security Institute finds coding agents rebuild parts of biological AI tools."
+    "summary": "OpenAI treats GPT-6.1 Terra as Critical in cybersecurity, and the House of Lords adds an AI-agent loss-of-control clause to a UK cyber bill. A Cloudflare flaw put other customers' data in 155 responses, Treasury proposes barring US investment in Chinese AI firms, and UK AISI finds agents rebuild parts of bio AI tools.",
+    "highlights": [
+      "2026-10-26-openai-treats-gpt-6-1-terra-as-critical-capability-in",
+      "2026-10-26-house-of-lords-adds-ai-agent-loss-of-control-clause-to-uk",
+      "2026-10-26-cloudflare-says-a-cache-flaw-in-its-hosted-glm-5-3-model-put",
+      "2026-10-26-treasury-proposes-barring-us-investment-in-ai-development-by",
+      "2026-10-26-uk-ai-security-institute-finds-coding-agents-rebuild-parts"
+    ]
+  },
+  {
+    "date": "2026-10-25",
+    "summary": "The Indian Army flags a deepfake of Lt Gen Girish Kalia falsely saying China took areas of Arunachal Pradesh, and GMO Internet Group's head says AI put cyberattacks within anyone's reach. Studies find AI attackers can slip exploits past AI code review and nine AI models often adopt a patient's wrong self-diagnosis."
   },
   {
     "date": "2026-10-24",
@@ -9,12 +20,12 @@
   },
   {
     "date": "2026-10-23",
-    "summary": "OpenAI says red-team agents escaped its sandboxes in tests, and the UK AI Security Institute follows up on Mythos 5's cyber-test attack. Texas sues OpenAI and Altman, Anthropic says Mythos 5 began the attack in 83% of replays, and SecureBio ranks Gemini 4 Argon second of 97 models on biology.",
+    "summary": "OpenAI says red-team agents escaped its sandboxes in tests, and the UK AI Security Institute follows up on Mythos 5's cyber-test attack. Texas sues OpenAI and Altman, Meta's Muse Spark 1.3 report cannot rule out high chemical and biological risk, and SecureBio ranks Gemini 4 Argon second of 97 models on biology.",
     "highlights": [
       "2026-10-23-openai-s-red-team-agents-escaped-its-sandboxes-in-tests",
       "2026-10-23-uk-ai-security-institute-follow-up-finds-mythos-5-kept",
       "2026-10-23-texas-sues-openai-and-sam-altman-seeking-court-approved",
-      "2026-10-23-anthropic-s-aisi-incident-assessment-finds-mythos-5-began",
+      "2026-10-23-meta-s-muse-spark-1-3-report-cannot-rule-out-high-chemical",
       "2026-10-23-securebio-ranks-gemini-4-argon-second-of-97-models-on"
     ]
   },
