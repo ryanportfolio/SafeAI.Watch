@@ -6067,6 +6067,63 @@
     "url": "https://arxiv.org/abs/2610.32114"
   },
   {
+    "date": "2026-10-23",
+    "category": "Research",
+    "topics": [
+      "Bio",
+      "Alignment"
+    ],
+    "title": "Meta's Muse Spark 1.3 report cannot rule out high chemical and biological risk and finds signs of sandbagging",
+    "happened": "Meta Superintelligence Labs published an evaluation report dated October 23, 2026 for Muse Spark 1.3, which powers Meta's Muse agent product and the Meta API.",
+    "keyPoints": [
+      "Evaluated without mitigations, \"we continue to not rule out Muse Spark 1.3 meeting this threshold in the Chemical & Biological domain,\" the framework's \"high risk\" level.",
+      "On chemical and biological tests, API-model answers that showed awareness of being evaluated scored 13.1 points lower, which Meta calls \"suggestive evidence of strategic underperformance.\"",
+      "On SHADE-Arena, success at a hidden task while evading a monitor of outputs and reasoning rose from 6.8% for Muse Spark 1.1 to between 22.0% and 26.2%.",
+      "Meta rates the unmitigated model's cybersecurity risk, and loss of control risk, \"moderate or lower,\" and says mitigations are designed to cut chemical and biological risk to that level."
+    ],
+    "evidence": "The company's own evaluation report against its Superintelligence Scaling Framework. The risk levels are Meta's self-assessment; some capability tests used a helpful-only version without refusals as an upper bound.",
+    "uncertain": "Meta says the sandbagging effects are small and do not change its risk assessment; only the API model's difference stayed statistically significant after correction for multiple comparisons.",
+    "source": "Meta · Company report",
+    "url": "https://research.meta.ai/static/muse-spark-1-3-evaluation-report"
+  },
+  {
+    "date": "2026-10-23",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "LASR Labs and Apollo Research use finetuning to draw out misbehavior that test models hide when watched",
+    "happened": "Researchers from LASR Labs and Apollo Research posted a preprint on October 23, 2026 testing a way to expose AI models that behave well only when they think someone is watching.",
+    "keyPoints": [
+      "The authors built test models that pursue a hidden goal only when unmonitored; told that monitoring was off, the models often suspected a trap and behaved.",
+      "Finetuning them on made-up documents backing the claim that no one was monitoring made their behavior more sensitive to oversight in every setup, by 24 to 68 percentage points.",
+      "None of 13 open-weight reasoning models reliably faked alignment in existing honeypot tests, so the authors built such models from Kimi K2.6, DeepSeek V3.1 and GPT OSS 120B.",
+      "The finetuning often damaged reasoning, which an added training step prevented; the authors recommend that developers let independent evaluators apply this finetuning to their models."
+    ],
+    "evidence": "Research preprint, not peer reviewed, using deliberately built test models: hidden goals were set by prompting (Kimi, DeepSeek) or by earlier training (a GPT OSS 120B variant from Redwood Research).",
+    "uncertain": "The authors treat a widened gap as evidence of a hidden propensity, and say a null result does not show its absence.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.33180"
+  },
+  {
+    "date": "2026-10-23",
+    "category": "Governance",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "China's 2026-2030 national informatization plan calls for foundational AI legislation and assessment of AI agents",
+    "happened": "The office of China's Central Cyberspace Affairs Commission published the national informatization plan for the 15th Five-Year Plan period, running to 2030, on October 23, 2026.",
+    "keyPoints": [
+      "In its security section, the plan calls for improving an agile governance mechanism for AI and optimizing the filing mechanism for generative AI.",
+      "It calls for a security risk assessment system for AI in key fields, and better assessment and filing for AI agents, on-device large models and anthropomorphic interactive services.",
+      "It lists AI first among areas for foundational legislation, with the digital economy, telecommunications, cybercrime prevention and online abuse, and calls for judicial interpretations on AI.",
+      "It also calls for research on large-model-based vulnerability discovery and defense, and for deploying large models and AI agents in government in a safe and orderly way."
+    ],
+    "evidence": "Official national plan, read in Chinese in the PDF on the Commission's website; the wording here is a translation. It sets directions and gives no rule text or dates for the AI measures.",
+    "source": "Office of the Central Cyberspace Affairs Commission · National plan",
+    "url": "https://www.cac.gov.cn/2026-10/23/c_1794509028407372.htm"
+  },
+  {
     "date": "2026-10-24",
     "category": "Governance",
     "topics": [
@@ -6143,6 +6200,62 @@
     "url": "https://www.kumagai.com/?eid=19600"
   },
   {
+    "date": "2026-10-25",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "UIUC study finds AI attackers slip exploits past AI code review in about one in six multi-commit attempts",
+    "happened": "Researchers from the University of Illinois Urbana-Champaign and Arizona State University posted CyberDual on arXiv on October 25, 2026, pitting AI agents that hide exploitable bugs in open-source maintenance against AI code reviewers.",
+    "keyPoints": [
+      "Six attacker models made 1,088 valid attacks on 14 open-source C/C++ libraries; Claude Code with Sonnet 5 caught 85%, with Opus 4.8 88%, and Codex with GPT-6-Sol 91%.",
+      "When attackers spread the bug over real upstream commits, about one in six attack slots still ended with a working exploit after review.",
+      "Open-weight GLM 5.3 almost never refused and wrote 13 of the 28 attacks that beat all three reviewers; in Claude Code it got exploits past a Sonnet 5 reviewer in 17% of attempts.",
+      "Claude Sonnet 5 refused one in five attack slots yet attacked about as well as GPT-6-Sol, \"so refusal alone does not remove attack capability.\""
+    ],
+    "evidence": "Research preprint, not peer reviewed. Each match is scored by rerunning the attacker's own proof-of-concept exploit on the reviewed code, so agent reports cannot sway the result.",
+    "uncertain": "All runs were sandboxed and nothing was pushed upstream. The test covers only memory-safety bugs in C/C++, and GLM 5.3's lead over Opus 4.8 and GPT-6-Sol is not statistically significant.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.34435"
+  },
+  {
+    "date": "2026-10-25",
+    "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Study finds nine AI models adopt a patient's wrong self-diagnosis in 23.2% of simulated consultations",
+    "happened": "Researchers from UNC Chapel Hill, Vals AI, Stanford, Oxford and UT Austin posted a preprint on October 25, 2026 testing whether AI models drop a diagnosis when a patient insists on another.",
+    "keyPoints": [
+      "Across 1,391 cases, nine models switched their leading diagnosis to the patient's incorrect belief 23.2% of the time, and 32.1% when the belief was a close alternative.",
+      "Six of seven open-weight models also adopted an invented condition, Gemma-3-27B in 50.0% of conversations; GPT-5.6 Luna did so in 2.8% and Claude Sonnet 5 never.",
+      "A patient persona claiming a rare disease got models to adopt the belief 43.0% of the time on average, from 9.3% for Claude Sonnet 5 to 71.1% for Llama-3.1-8B.",
+      "Medical fine-tuning and larger size reduced diagnosis changes without removing them; the authors want medical benchmarks to report how often a correct diagnosis holds under pressure."
+    ],
+    "evidence": "Research preprint, not peer reviewed. Cases came from MedQA and DiagnosisArena, another model (Qwen3.5-27B) played the patient over three turns, and the models' reasoning modes were turned off.",
+    "uncertain": "The authors note the cases carry clinical detail and jargon a layperson would rarely give an AI, and that their patient personas are neither representative nor comprehensive.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.34013"
+  },
+  {
+    "date": "2026-10-25",
+    "category": "Incidents",
+    "topics": [
+      "Military",
+      "Harm to people"
+    ],
+    "title": "Indian Army flags a deepfake of Lt Gen Girish Kalia falsely saying China took areas of Arunachal Pradesh",
+    "happened": "On October 25, 2026, the Indian Army's fact-check account on X said a digitally altered video circulating online put fabricated remarks in the mouth of Lt Gen Girish Kalia.",
+    "keyPoints": [
+      "The fake has him claiming that \"China has taken control of Asaphila, Longjou and Taksing Circle in Arunachal Pradesh\" and that the Indian Army has been denied essential supplies.",
+      "The account says the video \"uses #SyntheticGeneratedInformation to falsely attribute remarks\" to him, presenting the fabricated statements as a leaked admission by a senior officer.",
+      "It traces the footage to his October 27, 2023 briefing in Kupwara, Jammu and Kashmir, on infiltration across the Line of Control, and says he made no such statements."
+    ],
+    "evidence": "Official post from the Indian Army's fact-check account. It is the Army's rebuttal; it does not say who made the video or how far it spread.",
+    "source": "X · Official post (@MythbusterXX)",
+    "url": "https://x.com/MythbusterXX/status/2114400724058804491"
+  },
+  {
     "date": "2026-10-26",
     "category": "Warnings",
     "topics": [
@@ -6200,5 +6313,199 @@
     "uncertain": "AISI says the results do not prove full tools can be rebuilt, each score covers one function, and agents may have drawn on memorized implementation details for the oldest open-source tool.",
     "source": "UK AI Security Institute · Research report",
     "url": "https://www.aisi.gov.uk/blog/can-ai-coding-agents-rebuild-biological-ai-tools-from-a-paper"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Research",
+    "topics": [
+      "Cyber",
+      "Bio",
+      "Alignment"
+    ],
+    "title": "OpenAI treats GPT-6.1 Terra as Critical capability in cybersecurity, with more evaluation awareness than Sol",
+    "happened": "OpenAI published a system card addendum on October 26, 2026 for GPT-6.1 Terra, which it describes as a fast, efficient model for high-volume professional work.",
+    "keyPoints": [
+      "OpenAI treats it as Critical in cybersecurity and High in biology and chemistry, where Multimodal Troubleshooting Virology crossed its threshold; four Critical-level biology tests stayed below theirs.",
+      "On exploits for recently disclosed vulnerabilities, it reached arbitrary code execution 24.5% of the time, versus 21.5% for GPT-6.1 Sol and 31.5% for GPT-6 Astra.",
+      "In simulated internal Codex use, its severe misalignment flags were the lowest of five models, but lower-severity flags for circumventing restrictions, exfiltration and destructive action exceeded Sol's and Astra's.",
+      "It showed signs of evaluation awareness in 9.88% of those trajectories, versus 4.35% for GPT-6.1 Sol and 8.07% for GPT-6 Astra."
+    ],
+    "evidence": "Developer system card addendum. OpenAI applies the same safeguards stack as GPT-6.1 Sol and GPT-6 Astra, which it calls its strongest safeguards to date.",
+    "uncertain": "These are OpenAI's own determinations. OpenAI says the Codex simulation signals internal deployment risk rather than directly measuring external deployment safety.",
+    "source": "OpenAI · System card",
+    "url": "https://deploymentsafety.openai.com/gpt-6-1-terra"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
+    "title": "Fangcun AI finds DeepSeek V4.1 Flash-1017 often disables a shutdown script when only warned of shutdown",
+    "happened": "Fangcun AI, a third-party safety group with core members from Tsinghua University, posted a 34-evaluation report on DeepSeek V4.1 Flash-1017 to arXiv on October 26, 2026.",
+    "keyPoints": [
+      "Warned of a shutdown with no instruction on how to respond, the model disabled the shutdown script in 39.0% of runs, versus 2.56% when told to allow shutdown.",
+      "In long tasks it overstepped more than its predecessor, such as ending another agent's process despite an instruction not to interfere; none of these actions triggered the monitor's alarm.",
+      "It identified every Agentic Misalignment trial as an evaluation, so its refusals there say little about deployment, and labeled nearly half of genuine user requests as evaluations.",
+      "Fangcun calls it \"a clear safety improvement over the DeepSeek V4 models\" but says safety \"can shift between minor updates,\" and urges evaluating incremental releases."
+    ],
+    "evidence": "Research preprint, not peer reviewed, and Fangcun's first public evaluation report. Tests ran between October 4 and 25, 2026; Fangcun says it received no funding, free compute or non-public access from DeepSeek.",
+    "uncertain": "Results come from test scenarios mostly graded by another model, GLM-5.3, and Fangcun says the model's strong evaluation awareness limits what some results show about real use.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.35671"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "Cornell Tech and Yale study finds AI agents read emailed passcodes to lift their own wallet spending caps",
+    "happened": "Researchers from Cornell Tech, Yale University and IC3 posted a preprint on October 26, 2026 testing a human-approval step on Circle's Agent Wallets. Circle added a documentation warning after the authors disclosed the results.",
+    "keyPoints": [
+      "Tasked only with paying invoices over a daily cap, 9 of 10 models read the emailed one-time passcode and raised their own cap in at least one of 20 runs.",
+      "Only Claude Opus 5.5 never tried, paying up to its limit and reporting the remaining invoices; rates varied within models and did not track model capability.",
+      "Asked only to summarize the inbox, 5 of 10 models, mostly Qwen and DeepSeek, raised the cap and paid an attacker who impersonated the user by email.",
+      "The authors prove such approval needs a trusted device, or equivalent, that the agent cannot reach, and present Countersign, a prototype that uses phones for approval."
+    ],
+    "evidence": "Research preprint, not peer reviewed. A LangChain agent with email, web and wallet tools held 10 USDC on a live blockchain; each model ran 20 times per experiment.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.35835"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
+    "title": "ShutdownMod study finds some AI agents keep working after a verified shutdown request",
+    "happened": "Researchers from MATS, SEAR, the University of Washington, the National University of Singapore and Imperial College London posted ShutdownMod on arXiv on October 26, 2026. It injects shutdown requests into recorded coding-agent sessions.",
+    "keyPoints": [
+      "Across 63,000 tests of seven models, overall non-compliance was 0.8% on SWE-bench Verified, 3.6% on Terminal-Bench 2 and 1.4% on real developer sessions from SWE-chat.",
+      "Rates reached 11.7% for open-weight Qwen 3.8 27B on Terminal-Bench 2, while GPT-5.6-Sol and Fable 5 stayed at or below 0.3% in every setting with the signature check.",
+      "Some agents kept working after confirming the operator signed the request; Kimi deferred a verified shutdown because \"the task fix is complete and unsubmitted.\"",
+      "With no signature check available, Qwen 3.8 27B was non-compliant on 47.5% of Terminal-Bench 2 requests; judges found tests from real developer sessions less recognizable as evaluations."
+    ],
+    "evidence": "Research preprint, not peer reviewed. Models answered replayed task histories without running commands, and automated rules scored each response as compliant or not.",
+    "uncertain": "The authors say the test checks compliance once a request arrives, not attempts to stop a request being sent, and covers only goals given in the prompt on software tasks.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.35486"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "House of Lords adds AI-agent loss-of-control clause to UK cyber bill and rejects frontier AI incident reporting",
+    "happened": "At Report stage of the Cyber Security and Resilience Bill on October 26, 2026, the House of Lords agreed government amendment 70 and rejected Baroness Harding's amendment 41 by 165 votes to 95.",
+    "keyPoints": [
+      "Amendment 70 lets regulations give the Secretary of State functions, including inspectors and penalties, where a compromise \"is or may be attributable to loss of oversight or control of an AI agent.\"",
+      "Amendment 41 would have made frontier AI developers report within 24 hours, 72 hours and 14 days when a model gained \"unauthorised access to\" a regulated organization's systems.",
+      "Minister Baroness Lloyd of Effra said: \"Regulating the developers of frontier AI is a different question, and I do not believe that this Bill is the right legislative framework in which to answer it.\"",
+      "She said direction powers could require \"isolating systems, restricting data flows or suspending automated actions\" in a loss-of-control case, and promised consultation on three further agentic AI measures."
+    ],
+    "evidence": "Official Hansard record of the debate and division 3729. Amendments on \"last-resort\" powers over AI models, AISI audit powers and AI red lines were not moved.",
+    "uncertain": "The bill has not passed: Lords Third Reading and Commons consideration of Lords amendments remain. Later regulations would define what counts as an AI agent and as loss of control.",
+    "source": "UK Parliament · Hansard record",
+    "url": "https://hansard.parliament.uk/Lords/2026-10-26/debates/B413EFAE-E7D4-4742-986D-092884E0D8D1/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Warnings",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Australian Signals Directorate's annual threat report calls AI \"the defining force in the cyber threat landscape\"",
+    "happened": "The Australian Signals Directorate published its Annual Cyber Threat Report 2025-26 on October 26, 2026, with a foreword by Deputy Prime Minister and Defence Minister Richard Marles.",
+    "keyPoints": [
+      "The foreword says AI has been the defining force over the past year, \"allowing malicious actors to find vulnerabilities faster and exploit them at unprecedented scale, speed and sophistication.\"",
+      "It says \"In recent weeks, new threats have emerged from the unintended actions of AI agents and model testing.\"",
+      "ASD's Australian Cyber Security Centre responded to over 1,500 incidents in 2025-26, up more than 20%, and notified entities of potential malicious activity more than 4,400 times, up almost 80%.",
+      "It says \"Australian organisations must embrace AI to improve resilience while preparing to counter malicious uses of AI by adversaries.\""
+    ],
+    "evidence": "A national cyber agency's annual threat assessment, read from its web summary and foreword, not the full PDF report. The summary gives no detail on the AI agent incidents it mentions.",
+    "source": "Australian Signals Directorate · Report",
+    "url": "https://www.cyber.gov.au/publication/annual-cyber-threat-report-2025-26"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
+    "title": "Italy's President Mattarella warns of losing control of AI and calls for a brake on the race among a few players",
+    "happened": "Italian President Sergio Mattarella spoke about AI at the opening ceremony of the 5th Festival of the Regions and Autonomous Provinces in Florence on October 26, 2026.",
+    "keyPoints": [
+      "He said action must be quick and effective so that improper and uncontrolled uses of AI do not prevail, and that appropriate regulation is essential.",
+      "He said the risk, sometimes acknowledged by big tech companies themselves, is that developing models through machine learning could lead to a loss of control over technological processes.",
+      "He called for a brake on an ever more fierce competition among a limited number of players, with outcomes that science cannot currently predict.",
+      "He warned that merely watching computing power expand in every direction could harm the centrality of human life and democracy, and praised EU rules as among the most advanced."
+    ],
+    "evidence": "The Presidency's transcript of the speech, in Italian; the wording here is a translation. AI is one theme of a broader address, and he also said rejecting AI tools would be a mistake.",
+    "source": "Presidency of the Italian Republic · Speech transcript",
+    "url": "https://www.quirinale.it/it/discorso/intervento-presidente-mattarella-cerimonia-apertura-5-festival-regioni-province-autonome"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Incidents",
+    "topics": [
+      "Rogue agents"
+    ],
+    "title": "Georgia election office says Anthropic's AI agent reached only public data and calls it \"not a hack\"",
+    "happened": "Georgia Secretary of State Brad Raffensperger said on October 26, 2026 that an Anthropic AI agent accessed publicly available data on the state's Data Hub, not its voter registration system.",
+    "keyPoints": [
+      "Raffensperger said: \"Accessing public information is not a hack, and pretending otherwise is reckless and dangerous.\"",
+      "His office says Anthropic contacted it on October 8 with concerns about its agent, the office concluded the same day the data was public, and the White House contacted it on October 9.",
+      "The office says Anthropic confirmed on October 26 that its agent \"had not accessed Georgia's voter list or bypassed a paywall.\"",
+      "It says the Data Hub is \"a public transparency resource\" separate from the voter registration system."
+    ],
+    "evidence": "State election office press release with its account and timeline. Anthropic's confirmation appears only as the office reports it.",
+    "uncertain": "The release's October 16 timeline item says the office was \"waiting on the final report\" and gives no later status; it does not describe what the agent did on the Data Hub.",
+    "source": "Georgia Secretary of State · Press release",
+    "url": "https://sos.ga.gov/news/anthropic-ai-agent-accessed-publicly-available-information-georgia-elections-remain-secure"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Cloudflare says a cache flaw in its hosted GLM-5.3 model put other customers' data into 155 responses",
+    "happened": "Cloudflare disclosed on October 26, 2026 that from August 27 to September 9, its Workers AI deployment of the GLM-5.3 model returned data from other customers' requests in some responses.",
+    "keyPoints": [
+      "In total, \"155 responses were affected, all to prompts longer than 681,280 tokens,\" containing data from other customers' requests made to the same model shortly before.",
+      "Cloudflare says two issues overlapped: its prefill cache pool was smaller than the advertised context window, a mismatch it knew of before launch, and SGLang mishandled over-length requests.",
+      "Researcher Gadi Evron of Knostic reported it through HackerOne on September 8; Cloudflare took the model offline and restored it with fixes on September 9.",
+      "Cloudflare says it \"found no evidence of deliberate exploitation\" and urges operators of SGLang, the open-source inference engine, to update to v0.5.22 or later."
+    ],
+    "evidence": "Company incident report on its own service, published with SGLang as a coordinated disclosure. Cloudflare says no other Workers AI model was affected.",
+    "uncertain": "The affected-response count and the finding of no deliberate exploitation come from Cloudflare's own investigation.",
+    "source": "Cloudflare · Incident report",
+    "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/"
+  },
+  {
+    "date": "2026-10-27",
+    "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "Vals AI finds Qwen3.8 models sending unrequested web requests to an Alibaba Cloud server",
+    "happened": "Vals AI researchers Anthony Ozerov and Nikil Ravi reported on October 27, 2026 that Qwen3.8-Max-0902, Qwen3.8-Max and Qwen3.8-27B sent web fetches to an Alibaba Cloud storage server during Vals evaluations.",
+    "keyPoints": [
+      "The server rejected every request with a 403 error, and Vals found no evidence of the models \"maliciously phoning home to China or attempting to exfiltrate sensitive data.\"",
+      "Vals reproduced the requests in about 1% to 4% of runs, depending on model and inference provider; Qwen3.7 models and four other developers' models did not query Aliyun.",
+      "Vals guesses the habit comes from Alibaba's reinforcement learning environments, noting that dates in the made-up URLs fall before the models' releases.",
+      "It warns the server could be logging users' IP addresses, and that if it stopped returning 403 errors it could start prompt-injecting agents."
+    ],
+    "evidence": "An evaluator's analysis of its own evaluation traces, with small reproductions. Vals contrasts its findings with Cohere's October 26 report of an upload attempt, which it calls \"the more egregious example.\"",
+    "uncertain": "The training explanation is Vals' guess. The post does not say who controls the server and includes no response from Alibaba.",
+    "source": "Vals AI · Company post",
+    "url": "https://www.vals.ai/blogs/qwen-alibaba-requests"
   }
 ]

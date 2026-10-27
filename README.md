@@ -4,33 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 326 dated, sourced entries drawn as a burst, one dot per entry: 73 warnings, 78 incidents, 95 governance, 80 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 342 dated, sourced entries drawn as a burst, one dot per entry: 75 warnings, 81 incidents, 97 governance, 89 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 326 entries from Mar 22, 2023 to Oct 26, 2026 (73 warnings, 78 incidents, 95 governance, 80 research), drawn from 184 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 342 entries from Mar 22, 2023 to Oct 27, 2026 (75 warnings, 81 incidents, 97 governance, 89 research), drawn from 190 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 26, 2026, filed under Research:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 27, 2026, filed under Research:
 
-> **UK AI Security Institute finds coding agents rebuild parts of biological AI tools from published details**
+> **Vals AI finds Qwen3.8 models sending unrequested web requests to an Alibaba Cloud server**
 >
-> **What happened.** The UK AI Security Institute's Chem-Bio team published results on October 26, 2026 from ReproBAIT, built with SecureBio, which asks coding agents to rebuild existing biological AI tools (BAITs).
+> **What happened.** Vals AI researchers Anthony Ozerov and Nikil Ravi reported on October 27, 2026 that Qwen3.8-Max-0902, Qwen3.8-Max and Qwen3.8-27B sent web fetches to an Alibaba Cloud storage server during Vals evaluations.
 >
 > **Key points.**
 >
-> - Given a tool's abstract or paper, its training data and one GPU, agents rebuilt selected functions of the two simpler of three widely used tools at or near the original's level.
-> - AISI says "The simplest tools could be successfully reproduced within 4 hours and with a compute budget of under $20." No agent rebuilt the most complex tool.
-> - Agents did about as well from the abstract alone as from the full paper, so AISI says it is not clear that limiting published detail adds protection.
-> - AISI says withholding code or limiting information "does not by itself equate to a safe release"; controlling access to the underpinning biological data "appears to be a more promising intervention than merely controlling access to code."
+> - The server rejected every request with a 403 error, and Vals found no evidence of the models "maliciously phoning home to China or attempting to exfiltrate sensitive data."
+> - Vals reproduced the requests in about 1% to 4% of runs, depending on model and inference provider; Qwen3.7 models and four other developers' models did not query Aliyun.
+> - Vals guesses the habit comes from Alibaba's reinforcement learning environments, noting that dates in the made-up URLs fall before the models' releases.
+> - It warns the server could be logging users' IP addresses, and that if it stopped returning 403 errors it could start prompt-injecting agents.
 >
-> **Evidence.** Government institute evaluation of four coding agents (Claude Opus 5, GPT-5.6 Sol, Kimi K3, Qwen3.8-2.4T), best of three runs per setup, scored on each tool's main published metric.
+> **Evidence.** An evaluator's analysis of its own evaluation traces, with small reproductions. Vals contrasts its findings with Cohere's October 26 report of an upload attempt, which it calls "the more egregious example."
 >
-> **Uncertain.** AISI says the results do not prove full tools can be rebuilt, each score covers one function, and agents may have drawn on memorized implementation details for the oldest open-source tool.
+> **Uncertain.** The training explanation is Vals' guess. The post does not say who controls the server and includes no response from Alibaba.
 >
-> **Source.** [UK AI Security Institute · Research report](https://www.aisi.gov.uk/blog/can-ai-coding-agents-rebuild-biological-ai-tools-from-a-paper)
+> **Source.** [Vals AI · Company post](https://www.vals.ai/blogs/qwen-alibaba-requests)
 
 ## Run it locally
 
