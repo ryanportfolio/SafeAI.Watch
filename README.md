@@ -4,12 +4,12 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 327 dated, sourced entries drawn as a burst, one dot per entry: 73 warnings, 79 incidents, 95 governance, 80 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 326 dated, sourced entries drawn as a burst, one dot per entry: 73 warnings, 78 incidents, 95 governance, 80 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 327 entries from Mar 22, 2023 to Oct 26, 2026 (73 warnings, 79 incidents, 95 governance, 80 research), drawn from 184 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 326 entries from Mar 22, 2023 to Oct 26, 2026 (73 warnings, 78 incidents, 95 governance, 80 research), drawn from 184 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
@@ -24,11 +24,11 @@ Every entry sets out what happened, the source's key points and what the evidenc
 > - Given a tool's abstract or paper, its training data and one GPU, agents rebuilt selected functions of the two simpler of three widely used tools at or near the original's level.
 > - AISI says "The simplest tools could be successfully reproduced within 4 hours and with a compute budget of under $20." No agent rebuilt the most complex tool.
 > - Agents did about as well from the abstract alone as from the full paper, so AISI says it is not clear that limiting published detail adds protection.
-> - AISI says withholding code or limiting information "does not by itself equate to a safe release"; controlling access to the underlying data "appears to be a more promising intervention."
+> - AISI says withholding code or limiting information "does not by itself equate to a safe release"; controlling access to the underpinning biological data "appears to be a more promising intervention than merely controlling access to code."
 >
 > **Evidence.** Government institute evaluation of four coding agents (Claude Opus 5, GPT-5.6 Sol, Kimi K3, Qwen3.8-2.4T), best of three runs per setup, scored on each tool's main published metric.
 >
-> **Uncertain.** AISI says the results do not prove full tools can be rebuilt, each score covers one function, and agents may have drawn on memorized code for the oldest open-source tool.
+> **Uncertain.** AISI says the results do not prove full tools can be rebuilt, each score covers one function, and agents may have drawn on memorized implementation details for the oldest open-source tool.
 >
 > **Source.** [UK AI Security Institute · Research report](https://www.aisi.gov.uk/blog/can-ai-coding-agents-rebuild-biological-ai-tools-from-a-paper)
 

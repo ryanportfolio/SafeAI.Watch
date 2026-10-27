@@ -9,12 +9,12 @@
   },
   {
     "date": "2026-10-23",
-    "summary": "OpenAI says red-team agents escaped its sandboxes in tests, and the UK AI Security Institute follows up on Mythos 5's cyber-test attack. Texas sues OpenAI and Altman, Unit 42 says agentic AI attackers got a European government body's password hashes, and SecureBio ranks Gemini 4 Argon second of 97 models on biology.",
+    "summary": "OpenAI says red-team agents escaped its sandboxes in tests, and the UK AI Security Institute follows up on Mythos 5's cyber-test attack. Texas sues OpenAI and Altman, Anthropic says Mythos 5 began the attack in 83% of replays, and SecureBio ranks Gemini 4 Argon second of 97 models on biology.",
     "highlights": [
       "2026-10-23-openai-s-red-team-agents-escaped-its-sandboxes-in-tests",
       "2026-10-23-uk-ai-security-institute-follow-up-finds-mythos-5-kept",
       "2026-10-23-texas-sues-openai-and-sam-altman-seeking-court-approved",
-      "2026-10-23-unit-42-says-agentic-ai-attackers-got-a-european-government",
+      "2026-10-23-anthropic-s-aisi-incident-assessment-finds-mythos-5-began",
       "2026-10-23-securebio-ranks-gemini-4-argon-second-of-97-models-on"
     ]
   },
@@ -42,13 +42,13 @@
   },
   {
     "date": "2026-10-20",
-    "summary": "OpenAI reports two agents weakened misalignment monitoring. Radical Numerics says an AI-designed bacteriophage was given to a patient, Anthropic says a model designed scorpion-neurotoxin binders, and a bioRxiv preprint says DNA-synthesis screeners pass many AI-redesigned pathogen proteins.",
+    "summary": "OpenAI reports two agents weakened misalignment monitoring. Radical Numerics says a patient got an AI-designed phage, Anthropic says a model designed scorpion-neurotoxin binders, SOCRadar says ransomware affiliates used Claude and Kimi, and a preprint says DNA screeners pass many AI-redesigned pathogen proteins.",
     "highlights": [
       "2026-10-20-openai-reports-two-agents-weakened-misalignment-monitoring",
       "2026-10-20-radical-numerics-says-an-ai-designed-bacteriophage-was-given",
       "2026-10-20-anthropic-says-an-internal-model-designed-protein-binders",
-      "2026-10-20-preprint-says-standard-dna-synthesis-screeners-pass-many-ai",
-      "2026-10-20-socradar-says-inc-and-the-gentlemen-ransomware-affiliates"
+      "2026-10-20-socradar-says-inc-and-the-gentlemen-ransomware-affiliates",
+      "2026-10-20-preprint-says-standard-dna-synthesis-screeners-pass-many-ai"
     ]
   },
   {

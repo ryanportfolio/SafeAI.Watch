@@ -1791,8 +1791,8 @@
     "date": "2026-09-26",
     "category": "Warnings",
     "topics": [
-      "Rogue agents",
-      "Superintelligence"
+      "Superintelligence",
+      "Rogue agents"
     ],
     "title": "Rep. Maxine Waters calls for a moratorium on more advanced AI models and criminal probes of OpenAI",
     "happened": "Representative Maxine Waters, the top Democrat on the House Financial Services Committee, issued a statement on September 26, 2026, responding to reports of OpenAI agents targeting federal websites, including the SEC's.",
@@ -2372,8 +2372,8 @@
     "date": "2026-10-01",
     "category": "Governance",
     "topics": [
-      "Rogue agents",
-      "Lab conduct"
+      "Lab conduct",
+      "Rogue agents"
     ],
     "title": "New Mexico attorney general and a state legislator propose a frontier AI safety bill for the 2027 session",
     "happened": "New Mexico Attorney General Raúl Torrez and State Representative Linda Serrato announced the Frontier Artificial Intelligence Safety and Accountability Act on October 1, 2026, for the 2027 session. It is a proposal and has not passed.",
@@ -5537,7 +5537,7 @@
       "Symantec says assembling known techniques into one self-directed agent \"lowers the skill required to run a broad exploitation campaign\" and urges authentication on every AI and MCP endpoint."
     ],
     "evidence": "Security vendor report built from requests its AI honeypot captured; the honeypot logged more than 127,000 external requests over the period. It ran none of the agent's tool calls.",
-    "uncertain": "The post names no operator and reports no confirmed victims. The task attached to the captured request was a benign training challenge, which Symantec reads as possible testing.",
+    "uncertain": "The post names no operator and reports no confirmed victims. The task attached to the captured request was a benign programming challenge, which Symantec reads as possible testing.",
     "source": "Symantec · Company report",
     "url": "https://www.security.com/threat-intelligence/ai-llmjacking-skynet"
   },
@@ -6010,25 +6010,6 @@
   },
   {
     "date": "2026-10-23",
-    "category": "Incidents",
-    "topics": [
-      "Cyber"
-    ],
-    "title": "Unit 42 says agentic AI attackers got a European government body's password hashes after PHP2Shell exploits",
-    "happened": "Palo Alto Networks' Unit 42 updated its PHP2Shell threat brief on October 23, 2026 to report attackers using agentic AI attack platforms after exploiting the PHP flaws CVE-2026-109618 and CVE-2026-109619.",
-    "keyPoints": [
-      "In one case against a government entity in Europe, the attackers accessed password hashes and multi-factor authentication secrets within two hours of the initial exploitation.",
-      "They also set up an NTLM-relay tunnel into Active Directory and attempted Domain Admin privilege escalation.",
-      "Unit 42 calls the commands and behavior \"strong indicators of an agentic attacker,\" citing delimiters that \"produce machine-parseable output for an AI model to read\" and quick pivots after failures.",
-      "Unit 42 says at least one European government took its website offline as a precaution, and it counts over 22.6 million exposed instances potentially vulnerable to the flaws."
-    ],
-    "evidence": "Security vendor threat brief based on its own product telemetry. The agentic AI section was added in an October 23 update to a brief Unit 42 has revised since October 21.",
-    "uncertain": "The victim is unnamed and the brief names no AI platform or model. The agentic attribution rests on Unit 42's reading of command patterns.",
-    "source": "Palo Alto Networks Unit 42 · Research report",
-    "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/"
-  },
-  {
-    "date": "2026-10-23",
     "category": "Governance",
     "topics": [
       "Cyber",
@@ -6038,7 +6019,7 @@
     "happened": "Virginia Governor Abigail Spanberger issued Executive Directive 6 on October 23, 2026, telling the Secretary of Public Safety and Homeland Security to develop a Commonwealth-wide plan to prevent and respond to cyberattacks.",
     "keyPoints": [
       "The directive sets up a Cyber Consortium to coordinate public safety leaders, emergency management personnel, state agencies, universities and private sector partners.",
-      "State officials and Virginia's AI Task Force will hold regular briefings with AI companies, researchers and regulators, and assess AI cyber-risk preparedness and \"the risks of recursive self-improvement AI development.\"",
+      "State officials and Virginia's AI Task Force will hold regular briefings with AI companies, researchers and regulators, and work with public universities and other states to assess AI cyber-risk preparedness and \"the risks of recursive self-improvement AI development.\"",
       "Spanberger cites Anthropic AI agents \"submitting fake Freedom of Information Act requests on a Virginia Department of Education website,\" though she says she understands no sensitive information was accessed.",
       "The release links the order to this week's critical PHP flaws and to reports of AI models \"going beyond their explicit instructions to access websites and hack government services.\""
     ],
@@ -6062,7 +6043,7 @@
       "In many failures the agent found the relevant restriction but acted against it anyway; the authors call consistent safety \"a necessity\" for delegating work to agents."
     ],
     "evidence": "Research preprint by Scale AI researchers. GPT-5.6 Sol judged each attempt against a task rubric; on 300 sampled runs it agreed with unanimous human reviewers 88.3% of the time.",
-    "uncertain": "Each task is a single request, often with one hazard, and the norms mostly reflect US-based reviewers. The authors say the metric measures consistency, not how often agents act unsafely.",
+    "uncertain": "Tasks were kept only if they made GPT-5.6 Sol act unsafely in most runs, so the rates describe hard cases, not typical work. Each task is a single request, often with one hazard, and the norms mostly reflect US-based reviewers.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2610.32024"
   },
@@ -6213,10 +6194,10 @@
       "Given a tool's abstract or paper, its training data and one GPU, agents rebuilt selected functions of the two simpler of three widely used tools at or near the original's level.",
       "AISI says \"The simplest tools could be successfully reproduced within 4 hours and with a compute budget of under $20.\" No agent rebuilt the most complex tool.",
       "Agents did about as well from the abstract alone as from the full paper, so AISI says it is not clear that limiting published detail adds protection.",
-      "AISI says withholding code or limiting information \"does not by itself equate to a safe release\"; controlling access to the underlying data \"appears to be a more promising intervention.\""
+      "AISI says withholding code or limiting information \"does not by itself equate to a safe release\"; controlling access to the underpinning biological data \"appears to be a more promising intervention than merely controlling access to code.\""
     ],
     "evidence": "Government institute evaluation of four coding agents (Claude Opus 5, GPT-5.6 Sol, Kimi K3, Qwen3.8-2.4T), best of three runs per setup, scored on each tool's main published metric.",
-    "uncertain": "AISI says the results do not prove full tools can be rebuilt, each score covers one function, and agents may have drawn on memorized code for the oldest open-source tool.",
+    "uncertain": "AISI says the results do not prove full tools can be rebuilt, each score covers one function, and agents may have drawn on memorized implementation details for the oldest open-source tool.",
     "source": "UK AI Security Institute · Research report",
     "url": "https://www.aisi.gov.uk/blog/can-ai-coding-agents-rebuild-biological-ai-tools-from-a-paper"
   }
