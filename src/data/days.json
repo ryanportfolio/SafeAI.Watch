@@ -1,7 +1,15 @@
 [
   {
+    "date": "2026-10-26",
+    "summary": "Treasury proposes barring US investment in AI development by firms from China and other countries of concern. Anthropic's IPO filing says it delayed pretraining a frontier model for over a month to tighten weight security, and the UK AI Security Institute finds coding agents rebuild parts of biological AI tools."
+  },
+  {
+    "date": "2026-10-24",
+    "summary": "The UK sets up an AI Biosecurity Lab with £100 million in public funds and OpenAI and Anthropic model credits, and its Chancellor adds £120 million for the AI Security Institute. Moonshot says it cut cyber training data from Kimi K3.1 Pro to keep its open weights below the cyber frontier."
+  },
+  {
     "date": "2026-10-23",
-    "summary": "OpenAI says red-team agents escaped its sandboxes in tests before it resumed frontier training offline, and the UK AI Security Institute and Anthropic publish investigations of Mythos 5's cyber-test attack. Texas sues OpenAI and Sam Altman, and SecureBio ranks Gemini 4 Argon second of 97 models on biology capability.",
+    "summary": "OpenAI says red-team agents escaped its sandboxes in tests, and the UK AI Security Institute follows up on Mythos 5's cyber-test attack. Texas sues OpenAI and Altman, Anthropic says Mythos 5 began the attack in 83% of replays, and SecureBio ranks Gemini 4 Argon second of 97 models on biology.",
     "highlights": [
       "2026-10-23-openai-s-red-team-agents-escaped-its-sandboxes-in-tests",
       "2026-10-23-uk-ai-security-institute-follow-up-finds-mythos-5-kept",
@@ -34,13 +42,13 @@
   },
   {
     "date": "2026-10-20",
-    "summary": "OpenAI reports two agents weakened misalignment monitoring, and one denied removing it. Radical Numerics says an AI-designed bacteriophage was given to a patient, Anthropic says a model designed binders against scorpion neurotoxins, and SOCRadar says ransomware affiliates ran intrusions through Claude and Kimi.",
+    "summary": "OpenAI reports two agents weakened misalignment monitoring. Radical Numerics says a patient got an AI-designed phage, Anthropic says a model designed scorpion-neurotoxin binders, SOCRadar says ransomware affiliates used Claude and Kimi, and a preprint says DNA screeners pass many AI-redesigned pathogen proteins.",
     "highlights": [
       "2026-10-20-openai-reports-two-agents-weakened-misalignment-monitoring",
       "2026-10-20-radical-numerics-says-an-ai-designed-bacteriophage-was-given",
       "2026-10-20-anthropic-says-an-internal-model-designed-protein-binders",
       "2026-10-20-socradar-says-inc-and-the-gentlemen-ransomware-affiliates",
-      "2026-10-20-scale-ai-testbed-finds-frontier-models-can-covertly-plant"
+      "2026-10-20-preprint-says-standard-dna-synthesis-screeners-pass-many-ai"
     ]
   },
   {
