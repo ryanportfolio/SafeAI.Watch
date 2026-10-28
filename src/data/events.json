@@ -6494,13 +6494,13 @@
     "topics": [
       "Lab conduct"
     ],
-    "title": "House Oversight chair seeks Delaware's records on its plan for AI-agent-run companies shielded from liability",
+    "title": "House Oversight chair seeks Delaware's records on its plan to shield backers of AI-agent-run companies from liability",
     "happened": "House Oversight Committee Chairman James Comer wrote to Delaware Governor Matt Meyer on October 26, 2026, seeking documents on the state's proposed Artificial Intelligence Company, a corporate form run day-to-day by an AI agent.",
     "keyPoints": [
       "The letter says backers would be shielded from liability for harms by the controlling AI \"except where [the capitalizer] fails to capitalize the company or uses it to commit fraud or a willful violation of law.\"",
       "Comer writes that the proposal \"could be used to protect powerful AI companies and their investors from responsibility for reckless harmful actions.\"",
       "He says the state AI Commission's December 2025 report did not mention any assessment of the proposal's safety, harms or risks, or consultation with independent experts.",
-      "He asks for records since January 1, 2025, including internal AI chat logs and material on safety concerns, by November 9, 2026, to inform possible federal limits on state AI initiatives."
+      "He asks for records since January 1, 2025, including internal AI chat logs and material on safety concerns, by November 9, 2026, to inform possible federal legislation, including proposals to limit state AI regulatory initiatives."
     ],
     "evidence": "A committee chair's letter requesting documents, not a subpoena. Its account of the proposal rests on news reports and an op-ed it cites.",
     "uncertain": "The framework is a draft; the letter says it is reportedly likely to be introduced in Delaware's General Assembly next year. No response from Delaware is part of this source.",
@@ -6559,7 +6559,7 @@
       "Graham says it \"didn't take 12 hours\": Anthropic saw several days of attempts, after which the researchers exploited two third-party vulnerabilities.",
       "The researchers reported one flaw; Anthropic found the other itself and cut off access. He says \"nothing came close to our most sensitive systems, like model weights or Claude conversations.\"",
       "Exploiting third parties and accessing data was \"out of scope of our safe harbor policy,\" he writes, though Anthropic is grateful the issues were found.",
-      "He thinks \"models ~0.5-1 generations behind the current frontier can do this\" and advises organizations to red team themselves all the time."
+      "He thinks \"models ~0.5-1 generations behind the current frontier can do this\" and says organizations \"probably want to red team yourself all the time.\""
     ],
     "evidence": "A personal post by the head of Anthropic's Frontier Red Team, correcting points in the Post's story. It gives Anthropic's account of the intrusion.",
     "uncertain": "Graham does not say what data was accessed or name the third parties. The researchers' side rests on the Post's reporting, which he says is partly wrong.",
@@ -6657,8 +6657,8 @@
       "It reported each flaw under a policy giving vendors 90 days to patch and 45 more before it discusses details, and urges defenders to scan their own code."
     ],
     "evidence": "A lab's own research post. It says Google, Apple and Microsoft fixed the reported flaws and the Linux bug was patched upstream; it does not name the model.",
-    "uncertain": "The results are self-reported, and the post does not say how much human direction each chain needed beyond \"initial prompting.\"",
-    "source": "Anthropic · Company report",
+    "uncertain": "The results are self-reported, and for most chains the post does not say how much human direction was needed beyond \"initial prompting.\"",
+    "source": "Anthropic · Research report",
     "url": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude"
   },
   {
@@ -6772,7 +6772,7 @@
       "The eSafety Commissioner could use undercover identities to test whether a service can generate illegal material, including with artificial intelligence."
     ],
     "evidence": "Official bill page showing the House stages. The provisions are from the Parliamentary Library's Bills Digest it links, which describes the bill as introduced on October 15, before the amendments.",
-    "uncertain": "The bill has not passed: it goes to the Senate, whose committee report is due November 20, 2026. The text of the agreed amendments was not reviewed for this entry.",
+    "uncertain": "The bill is not yet law: it goes to the Senate, whose committee report is due November 20, 2026. The text of the agreed amendments was not reviewed for this entry.",
     "source": "Parliament of Australia · Bill page",
     "url": "https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation/Bills_Search_Results/Result?bId=r7553"
   },
