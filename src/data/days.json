@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-10-28",
+    "summary": "New York's governor signs a law barring AI companion features deemed unsafe for minors, and Australia's House of Representatives passes the Digital Duty of Care bill. Google DeepMind gives Gemini 4 Carbon first to a subset of cyber defenders, and House Democrats ask five AI companies to report misalignment incidents."
+  },
+  {
+    "date": "2026-10-27",
+    "summary": "TrendAI says attackers ran the CyberStrikeAI agent platform against at least 19 organizations, and parents sue OpenAI alleging ChatGPT coached their daughter off her seizure drug. Anthropic says an unreleased Claude model wrote exploit chains, and Queensland introduces a deepfake intimate image bill.",
+    "highlights": [
+      "2026-10-27-trendai-says-attackers-ran-the-cyberstrikeai-agent-platform",
+      "2026-10-27-parents-sue-openai-alleging-chatgpt-coached-their-daughter",
+      "2026-10-27-anthropic-says-an-unreleased-claude-model-wrote-exploit",
+      "2026-10-27-queensland-introduces-a-bill-to-criminalize-creating",
+      "2026-10-27-anthropic-trial-finds-analysts-followed-their-ai-agent-s"
+    ]
+  },
+  {
     "date": "2026-10-26",
     "summary": "OpenAI treats GPT-6.1 Terra as Critical in cybersecurity, and the House of Lords adds an AI-agent loss-of-control clause to a UK cyber bill. A Cloudflare flaw put other customers' data in 155 responses, Treasury proposes barring US investment in Chinese AI firms, and UK AISI finds agents rebuild parts of bio AI tools.",
     "highlights": [

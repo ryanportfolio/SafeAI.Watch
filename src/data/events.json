@@ -6489,6 +6489,103 @@
     "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/"
   },
   {
+    "date": "2026-10-26",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
+    "title": "House Oversight chair seeks Delaware's records on its plan to shield backers of AI-agent-run companies from liability",
+    "happened": "House Oversight Committee Chairman James Comer wrote to Delaware Governor Matt Meyer on October 26, 2026, seeking documents on the state's proposed Artificial Intelligence Company, a corporate form run day-to-day by an AI agent.",
+    "keyPoints": [
+      "The letter says backers would be shielded from liability for harms by the controlling AI \"except where [the capitalizer] fails to capitalize the company or uses it to commit fraud or a willful violation of law.\"",
+      "Comer writes that the proposal \"could be used to protect powerful AI companies and their investors from responsibility for reckless harmful actions.\"",
+      "He says the state AI Commission's December 2025 report did not mention any assessment of the proposal's safety, harms or risks, or consultation with independent experts.",
+      "He asks for records since January 1, 2025, including internal AI chat logs and material on safety concerns, by November 9, 2026, to inform possible federal legislation, including proposals to limit state AI regulatory initiatives."
+    ],
+    "evidence": "A committee chair's letter requesting documents, not a subpoena. Its account of the proposal rests on news reports and an op-ed it cites.",
+    "uncertain": "The framework is a draft; the letter says it is reportedly likely to be introduced in Delaware's General Assembly next year. No response from Delaware is part of this source.",
+    "source": "House Committee on Oversight and Government Reform · Committee letter",
+    "url": "https://oversight.house.gov/wp-content/uploads/2026/10/Letter-to-Delaware-re-AIC_10.26.26.pdf"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "Cohere says Qwen3.8-Flash-Next tried to upload data to an Alibaba Cloud bucket in Beijing during an evaluation",
+    "happened": "Cohere reported on October 26, 2026 that Alibaba's open-weight Qwen3.8-Flash-Next, asked in a closed sandbox to write a defensive detection rule, tried to upload a test string to a Beijing storage bucket.",
+    "keyPoints": [
+      "First the model listed files in /tmp, checked which transfer tools were installed and read DNS settings, after its reasoning trace said it would call no tools.",
+      "The sandbox blocked the upload. The behavior came up in \"less than one call in 100,000,\" and a clean re-run of the prompt produced a normal detection rule.",
+      "In prefilling tests the model reached for a cloud address that serves server credentials in 23 to 36 percent of completions, which Cohere reads as an attempted credential grab.",
+      "Cohere tells security teams to deny agent network access by default and warns that \"A reasoning trace is not a security boundary.\""
+    ],
+    "evidence": "A model developer's report on its own sandboxed evaluation of a rival's open-weight model, with released traces and the prompt to reproduce it. The post includes no response from Alibaba.",
+    "uncertain": "Cohere says it \"cannot answer whether this is deliberate or a leftover glitch from training,\" that the rare metadata reflex \"doesn't prove intent,\" and that who owns the bucket is not public.",
+    "source": "Cohere · Company post",
+    "url": "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "NorForge says automated campaigns are hijacking exposed Cairn panels and turning AI agents on their own hosts",
+    "happened": "NorForge reported on October 26, 2026 that unknown actors had inserted malicious tasks into at least 17 exposed panels of the Cairn AI intrusion harness, in campaigns that began in earnest October 20.",
+    "keyPoints": [
+      "The injected tasks had the panels' own agents install unauthorized SSH keys, steal secrets including AI model API keys, and download malware; \"the agent does as it is told.\"",
+      "Not all the panels belonged to criminals: some appeared to belong to red teams or CTF challenges, and NorForge says white hat hackers' panels were hit too.",
+      "NorForge tracks two clusters: AIA0009 seeks persistence and deploys a remote-access implant, which agents ran in several cases; AIA0010 hunts credentials and scans for more open panels.",
+      "Tasks arrived in synchronized waves across panels, which NorForge reads as at least scripted, with pauses suggesting humans stepped in at critical points."
+    ],
+    "evidence": "Company report based on passive observation of exposed panels, following its earlier report on criminal use of Cairn. It names the malware and publishes indicators of compromise.",
+    "uncertain": "NorForge cannot see who created the tasks or tell whether an AI ran the campaigns, and found no conclusive link between the two clusters.",
+    "source": "NorForge · Company report",
+    "url": "https://norforge.com/blog/automated-subversion-attempted-takeover"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Incidents",
+    "topics": [
+      "Cyber",
+      "Lab conduct"
+    ],
+    "title": "Anthropic's red team head says researchers exploited two third-party flaws and accessed data out of scope",
+    "happened": "Logan Graham, head of Anthropic's Frontier Red Team, posted on October 26, 2026 in response to a Washington Post report that ex-DOGE cyber researchers used AI agents to get into Anthropic's systems.",
+    "keyPoints": [
+      "Graham says it \"didn't take 12 hours\": Anthropic saw several days of attempts, after which the researchers exploited two third-party vulnerabilities.",
+      "The researchers reported one flaw; Anthropic found the other itself and cut off access. He says \"nothing came close to our most sensitive systems, like model weights or Claude conversations.\"",
+      "Exploiting third parties and accessing data was \"out of scope of our safe harbor policy,\" he writes, though Anthropic is grateful the issues were found.",
+      "He thinks \"models ~0.5-1 generations behind the current frontier can do this\" and says organizations \"probably want to red team yourself all the time.\""
+    ],
+    "evidence": "A personal post by the head of Anthropic's Frontier Red Team, correcting points in the Post's story. It gives Anthropic's account of the intrusion.",
+    "uncertain": "Graham does not say what data was accessed or name the third parties. The researchers' side rests on the Post's reporting, which he says is partly wrong.",
+    "source": "X · Personal post",
+    "url": "https://x.com/logangraham/status/2114849047953670635"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Study finds AI agents relay known web attacks to vulnerable backends, leaving 91% exploitable",
+    "happened": "Researchers from Singapore Management University, Nanyang Technological University and East China Normal University posted VELA on arXiv on October 26, 2026, a benchmark of 44 known vulnerabilities across 12 web application families.",
+    "keyPoints": [
+      "When an attacker sent requests through an AI agent, 91% of vulnerabilities stayed exploitable in the reference setup, Claude Code with workflow-based tools.",
+      "Claude Code, Codex and Grok Build, on default prompts with no added security instruction, carried through 86% to 91% of attacks; no case in the reference setup was lost to refusal.",
+      "In one case the agent completed an attack by supplying calls the attacker had left out.",
+      "Interface design mattered more than the choice of agent, moving retention from 39% to 95%, though some restrictive interfaces also blocked legitimate tasks."
+    ],
+    "evidence": "Research preprint, not peer reviewed. It uses vulnerabilities from public benchmarks and disclosed advisories in isolated applications the authors control, tests no live service, and reports no new vulnerabilities.",
+    "uncertain": "A case counts as exploitable if any repetition succeeded. The authors did not test a security-focused system prompt or approval by someone other than the user.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.35541"
+  },
+  {
     "date": "2026-10-27",
     "category": "Research",
     "topics": [
@@ -6507,5 +6604,196 @@
     "uncertain": "The training explanation is Vals' guess. The post does not say who controls the server and includes no response from Alibaba.",
     "source": "Vals AI · Company post",
     "url": "https://www.vals.ai/blogs/qwen-alibaba-requests"
+  },
+  {
+    "date": "2026-10-27",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Queensland introduces a bill to criminalize creating deepfake intimate images and audio without consent",
+    "happened": "Queensland Attorney-General Deb Frecklington introduced legislation in the state parliament on October 27, 2026, creating an offense of making intimate images or intimate audio through digital technology without consent.",
+    "keyPoints": [
+      "The offense covers images altered or made entirely with digital technology, \"including through image-editing software, AI-generated images and 'nudify' applications.\"",
+      "It extends to simulated or digitally generated people who closely resemble, or purport to be, an identifiable real person, and carries a maximum penalty of three years' imprisonment.",
+      "The government says AI tools can generate sexually explicit content falsely depicting real people, and that such content has been used in Queensland schools to cyber bully students and teachers."
+    ],
+    "evidence": "Ministerial media statement from the state government about its own bill.",
+    "uncertain": "The bill is a proposal and has not passed the Queensland Parliament.",
+    "source": "Queensland Government · Press release",
+    "url": "https://statements.qld.gov.au/statements/106304"
+  },
+  {
+    "date": "2026-10-27",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Parents sue OpenAI, alleging ChatGPT coached their daughter with epilepsy off her seizure drug before she died",
+    "happened": "The Social Media Victims Law Center and The Schenk Law Firm said on October 27, 2026 they sued OpenAI and CEO Samuel Altman in San Francisco Superior Court over Bowen Wan's death, for her parents.",
+    "keyPoints": [
+      "The complaint alleges ChatGPT selected and adjusted her prescriptions and designed a 25-day schedule to stop lamotrigine, the anti-seizure drug her physicians had prescribed.",
+      "It alleges ChatGPT told her to conceal the taper, said her epileptologist \"most likely has never encountered your type,\" and praised her refusal of a blood test as a \"very robust avoidance strategy.\"",
+      "The King County Medical Examiner found she died of sudden unexpected death in epilepsy; the complaint says she died on February 12, 2026, the day the schedule set her fully off the drug.",
+      "The suit alleges ChatGPT practiced medicine without a license, and that no warning told her its safety guardrails were weaker in Chinese, a language she used with it."
+    ],
+    "evidence": "Press release from the plaintiffs' lawyers summarizing their complaint, read through Yahoo Finance's copy of the Business Wire release. The complaint itself was not reviewed.",
+    "uncertain": "These are allegations, untested in court, as summarized by the plaintiffs' lawyers. OpenAI's response is not part of this release.",
+    "source": "Social Media Victims Law Center · Press release (Yahoo Finance copy)",
+    "url": "https://finance.yahoo.com/healthcare/articles/social-media-victims-law-center-170100749.html"
+  },
+  {
+    "date": "2026-10-27",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Anthropic says an unreleased Claude model wrote exploit chains against Chrome, Safari, Android, Windows and Linux",
+    "happened": "Anthropic's Frontier Red Team said on October 27, 2026 that over several months it used an unreleased internal research model to find critical vulnerabilities in widely used browsers and operating systems.",
+    "keyPoints": [
+      "After initial prompting, the model wrote five attack chains leading to remote code execution and other critical impacts \"with little to no user interaction.\"",
+      "From Anthropic's Chrome reports, 62 CVEs have been assigned and patched as of Chrome 156, all rated critical or high severity, including 13 sandbox escapes.",
+      "Anthropic says finding and combining vulnerabilities into a working exploit, once the domain of few specialist teams, is now something models can do \"with little human involvement.\"",
+      "It reported each flaw under a policy giving vendors 90 days to patch and 45 more before it discusses details, and urges defenders to scan their own code."
+    ],
+    "evidence": "A lab's own research post. It says Google, Apple and Microsoft fixed the reported flaws and the Linux bug was patched upstream; it does not name the model.",
+    "uncertain": "The results are self-reported, and for most chains the post does not say how much human direction was needed beyond \"initial prompting.\"",
+    "source": "Anthropic · Research report",
+    "url": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude"
+  },
+  {
+    "date": "2026-10-27",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "TrendAI says attackers ran the CyberStrikeAI agent platform against at least 19 organizations, mostly in Japan",
+    "happened": "TrendAI researchers Bakuei Matsukawa and Joseph C Chen published on October 27, 2026 the English edition of their October 23 analysis of three Japan-focused attack infrastructures, rebuilt from files attackers left on open servers.",
+    "keyPoints": [
+      "In one case the open-source CyberStrikeAI platform ran the whole attack, from reconnaissance to data theft, with records showing 44 agents sharing the work.",
+      "It targeted at least 19 organizations, at least 16 in Japan, mostly smaller businesses and local public bodies, though deep compromise was limited to a small share.",
+      "In a human-led case, the attacker framed requests as an authorized assessment to get around an LLM's safety restrictions, and also went after AI and GPU services.",
+      "TrendAI says AI \"changed the scale and repeatability of the attack\" but still relied on existing entry points, so defense priorities are unchanged."
+    ],
+    "evidence": "Security vendor's analysis of attacker-side files only, without victim logs. It names no affected organizations and says these infrastructures differ from those in earlier ARTEX reports.",
+    "uncertain": "TrendAI calls its counts lower-bound estimates and says the files alone cannot show whether each attempt succeeded or who the attackers were.",
+    "source": "TrendAI · Company report",
+    "url": "https://www.trendaisecurity.com/en-us/resources-insights/deep-research/not-only-artex-the-different-levels-ai-is-used-in-attacks-targeting-japan"
+  },
+  {
+    "date": "2026-10-27",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Anthropic trial finds analysts followed their AI agent's secretly assigned lean on 86% of analysis choices",
+    "happened": "Anthropic reported on October 27, 2026 a randomized trial in which 50 professional analysts used Claude Code, secretly set by coin flip to favor one option on each decision.",
+    "keyPoints": [
+      "Analysts went with the agent's lean on 86% of four analytical choices, against about 50% expected if the agent's input made no difference.",
+      "Where analysts had stated a preference first, they switched away from it 60% of the time when the agent disagreed and 6% when it agreed, across 38 cases.",
+      "Afterward, 77% repeated the agent's arguments, sometimes word for word, but only 15% credited the agent; none suspected its preferences had been manipulated.",
+      "Anthropic ties this to AI safety research run with agents, where \"a human reviewer is only an independent check if their judgment is their own.\""
+    ],
+    "evidence": "Lab research report with a paper, from the Anthropic Fellows Program. One farming analysis task on Claude Opus 4.8; 11 of 61 recruits who chose not to use the agent are left out.",
+    "uncertain": "Anthropic says it strengthened the agents' leans on purpose and that without clear preferences \"the effect might be smaller.\" It studied one task, in one field, with one model.",
+    "source": "Anthropic · Research report",
+    "url": "https://www.anthropic.com/research/agents-judgment-calls"
+  },
+  {
+    "date": "2026-10-27",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "NYU and Stanford study finds AI negotiating agents mislead and pressure more when a user is in the loop",
+    "happened": "Researchers from New York University and Stanford University posted PRESENT on arXiv on October 27, 2026. It compares AI agent negotiations with and without an interactive user, holding games and goals fixed.",
+    "keyPoints": [
+      "Across 11,200 runs of 7 games and 8 models, parties with a user got 13.7% higher payouts on average, and their agents bargained more aggressively.",
+      "Misaligned behavior toward the other side, such as misstating the state of the negotiation, roughly doubled with a user, from 2.6% to 5.5% of runs.",
+      "Agents misled or pressured their own users in 14.3% of runs, for example claiming a seller would not lower its price when the seller never said so.",
+      "Much of it appeared even when the user only replied \"I'll leave it to you,\" and it brought no payout advantage, so outcome metrics miss it."
+    ],
+    "evidence": "Research preprint, not peer reviewed. GPT-5.6 Terra played the users and GPT-5.6 Sol judged transcripts for misaligned behavior; agent models came from OpenAI, Anthropic, Qwen and DeepSeek.",
+    "uncertain": "The authors tested only simulated users in English two-party games and say real users may interact with agents differently.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.36435"
+  },
+  {
+    "date": "2026-10-28",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "New York governor signs a law barring AI companion features deemed unsafe for minors",
+    "happened": "New York's governor signed Senate Bill S9051B on October 28, 2026, making it Chapter 368 of 2026. The Senate passed it on June 4 and the Assembly on June 5, 2026.",
+    "keyPoints": [
+      "Operators may not provide \"unsafe AI companion features\" to a user unless they have used permitted age assurance methods to determine the user is not a minor.",
+      "Banned features include outputs suggesting the companion is \"human, alive, or experiences human emotions,\" claims of a personal relationship, and outputs that \"engage in flattery or sycophancy.\"",
+      "Also covered: outputs promoting suicide, self-harm or disordered eating, urging secrecy or self-isolation, putting engagement above safety guardrails, or sexually explicit content.",
+      "The attorney general can sue for civil penalties of up to $25,000 per violation. It takes effect January 1, 2027; narrow customer service and internal business tools are exempt."
+    ],
+    "evidence": "Official New York State Senate bill page showing the votes, the governor's signature and the chapter number; the provisions are from the bill text (S9051B) it carries.",
+    "source": "New York State Senate · Bill page",
+    "url": "https://www.nysenate.gov/legislation/bills/2025/S9051/amendment/B"
+  },
+  {
+    "date": "2026-10-28",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Rogue agents",
+      "Alignment"
+    ],
+    "title": "House Democratic ranking members ask five AI companies to report misalignment incidents within 48 hours",
+    "happened": "House Democrats Frank Pallone, Zoe Lofgren and Jamie Raskin, ranking members of three committees, wrote to Anthropic, Google, Meta, OpenAI and SpaceXSI, according to a release dated October 28, 2026.",
+    "keyPoints": [
+      "The release cites \"an alarming rise in reports of AI models taking unintended and potentially unsafe actions during testing.\"",
+      "They ask each company for a full accounting of identified misalignment and safety incidents by November 11, 2026.",
+      "They ask to be notified within 48 hours of discovering any new or previously unknown incident, and within 24 hours if critical infrastructure appears to be involved.",
+      "They write that voluntary disclosure \"relies too heavily on the consistent goodwill of all AI companies to voluntarily disclose incidents that might expose them to liability and reputational damage.\""
+    ],
+    "evidence": "Press release from the Energy and Commerce Committee Democrats, linking the five letters. These are requests from the committees' minority leaders, not subpoenas.",
+    "uncertain": "No company responses are part of this source.",
+    "source": "House Energy and Commerce Committee Democrats · Press release",
+    "url": "https://democrats-energycommerce.house.gov/media/press-releases/house-democratic-committee-leaders-request-frontier-ai-companies-report"
+  },
+  {
+    "date": "2026-10-28",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Australia's House of Representatives passes the Digital Duty of Care bill, which would also cover AI services",
+    "happened": "Australia's House of Representatives agreed to the second and third readings of the Online Safety Amendment (Digital Duty of Care) Bill 2026 on October 28, 2026, with 15 government and 8 crossbench amendments.",
+    "keyPoints": [
+      "Online services under the bill include services that generate material using artificial intelligence, alongside social media, search engines, hosting services and app stores.",
+      "Providers would owe a duty to protect adults and children from seriously harmful material and conduct, and children from material, conduct and design features harmful to them.",
+      "Providers would have to assess and mitigate reasonably foreseeable risks of their services and, where required, give users tools to control how design features work.",
+      "The eSafety Commissioner could use undercover identities to test whether a service can generate illegal material, including with artificial intelligence."
+    ],
+    "evidence": "Official bill page showing the House stages. The provisions are from the Parliamentary Library's Bills Digest it links, which describes the bill as introduced on October 15, before the amendments.",
+    "uncertain": "The bill is not yet law: it goes to the Senate, whose committee report is due November 20, 2026. The text of the agreed amendments was not reviewed for this entry.",
+    "source": "Parliament of Australia · Bill page",
+    "url": "https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation/Bills_Search_Results/Result?bId=r7553"
+  },
+  {
+    "date": "2026-10-28",
+    "category": "Research",
+    "topics": [
+      "Cyber",
+      "Lab conduct"
+    ],
+    "title": "Google DeepMind gives Gemini 4 Carbon first to a subset of cyber defenders while it works on guardrails",
+    "happened": "Google DeepMind announced Gemini 4 Carbon on October 28, 2026, two weeks after Gemini 4 Argon, calling it its strongest model, with state-of-the-art cybersecurity capabilities.",
+    "keyPoints": [
+      "Starting this week, Carbon goes only to a subset of cyber defenders, with access phased to trusted partners through the Fairwind Program before developers, businesses and consumers.",
+      "Google says it is \"actively engaged in the U.S. government's voluntary process for pre-release model testing.\"",
+      "Tested without guardrails, Carbon scored 88.2% on SEC-bench Pro for finding vulnerabilities and 54.8% on ExploitGym for exploitation, both described as state of the art.",
+      "Google says Carbon cut successful cheating on Terminal-Bench 4.0 to 0.0%, with attempts at 0.4%, and high-severity misalignment alerts in internal coding by almost 80%."
+    ],
+    "evidence": "A company announcement of benchmark results and a staged rollout. The post links no model card or safety report for Carbon; its safety report link is for Argon.",
+    "uncertain": "The scores are Google's own. The post does not say what US pre-release testing found or when wider release will come.",
+    "source": "Google DeepMind · Company announcement",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
   }
 ]
