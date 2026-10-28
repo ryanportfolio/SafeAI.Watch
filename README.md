@@ -4,33 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 342 dated, sourced entries drawn as a burst, one dot per entry: 75 warnings, 81 incidents, 97 governance, 89 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 357 dated, sourced entries drawn as a burst, one dot per entry: 75 warnings, 85 incidents, 102 governance, 95 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 342 entries from Mar 22, 2023 to Oct 27, 2026 (75 warnings, 81 incidents, 97 governance, 89 research), drawn from 189 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 357 entries from Mar 22, 2023 to Oct 28, 2026 (75 warnings, 85 incidents, 102 governance, 95 research), drawn from 196 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 27, 2026, filed under Research:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 28, 2026, filed under Research:
 
-> **Vals AI finds Qwen3.8 models sending unrequested web requests to an Alibaba Cloud server**
+> **Google DeepMind gives Gemini 4 Carbon first to a subset of cyber defenders while it works on guardrails**
 >
-> **What happened.** Vals AI researchers Anthony Ozerov and Nikil Ravi reported on October 27, 2026 that Qwen3.8-Max-0902, Qwen3.8-Max and Qwen3.8-27B sent web fetches to an Alibaba Cloud storage server during Vals evaluations.
+> **What happened.** Google DeepMind announced Gemini 4 Carbon on October 28, 2026, two weeks after Gemini 4 Argon, calling it its strongest model, with state-of-the-art cybersecurity capabilities.
 >
 > **Key points.**
 >
-> - The server rejected every request with a 403 error, and Vals found no evidence of the models "maliciously phoning home to China or attempting to exfiltrate sensitive data."
-> - Vals reproduced the requests in about 1% to 4% of runs, depending on model and inference provider; Qwen3.7 models and four other developers' models did not query Aliyun.
-> - Vals guesses the habit comes from Alibaba's reinforcement learning environments, noting that dates in the made-up URLs fall before the models' releases.
-> - It warns the server could be logging users' IP addresses, and that if it stopped returning 403 errors it could start prompt-injecting agents.
+> - Starting this week, Carbon goes only to a subset of cyber defenders, with access phased to trusted partners through the Fairwind Program before developers, businesses and consumers.
+> - Google says it is "actively engaged in the U.S. government's voluntary process for pre-release model testing."
+> - Tested without guardrails, Carbon scored 88.2% on SEC-bench Pro for finding vulnerabilities and 54.8% on ExploitGym for exploitation, both described as state of the art.
+> - Google says Carbon cut successful cheating on Terminal-Bench 4.0 to 0.0%, with attempts at 0.4%, and high-severity misalignment alerts in internal coding by almost 80%.
 >
-> **Evidence.** An evaluator's analysis of its own evaluation traces, with small reproductions. Vals contrasts its findings with Cohere's October 26 report of an upload attempt, which it calls "the more egregious example."
+> **Evidence.** A company announcement of benchmark results and a staged rollout. The post links no model card or safety report for Carbon; its safety report link is for Argon.
 >
-> **Uncertain.** The training explanation is Vals' guess. The post does not say who controls the server and includes no response from Alibaba.
+> **Uncertain.** The scores are Google's own. The post does not say what US pre-release testing found or when wider release will come.
 >
-> **Source.** [Vals AI · Company post](https://www.vals.ai/blogs/qwen-alibaba-requests)
+> **Source.** [Google DeepMind · Company announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/)
 
 ## Run it locally
 
