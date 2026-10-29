@@ -15,7 +15,7 @@ The record holds 371 entries from Mar 22, 2023 to Oct 29, 2026 (77 warnings, 87 
 
 Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 29, 2026, filed under Research:
 
-> **Stanford silently tests AI dosing agents in its hospital; pharmacists flag safety concerns in 65.8% of misses**
+> **Stanford silently tested AI dosing agents in its hospital; pharmacists flag safety concerns in 65.8% of misses**
 >
 > **What happened.** Stanford researchers posted a medRxiv preprint on October 29, 2026 on PharmaAgent, LLM-based agents for vancomycin dosing that they silently deployed at Stanford Hospital for two months.
 >

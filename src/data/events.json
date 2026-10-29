@@ -5649,7 +5649,7 @@
       "\"I no longer think we're going to be able to just patch all the bugs,\" he said; defense must use the same technology as \"a new kind of defense shield.\"",
       "He called it \"a huge safety and security issue\" and said he is \"somewhat astonished at how relatively little attention it's getting.\""
     ],
-    "evidence": "Video interview; the uploader's English captions label Altman as the speaker. It is his view and names no specific vulnerabilities, models or figures.",
+    "evidence": "Video interview; the uploader's English captions label Altman as the speaker. It is his view and names no specific vulnerabilities or figures.",
     "source": "Stanford Graduate School of Business · Video interview",
     "url": "https://www.youtube.com/watch?v=anAmTGcewX8"
   },
@@ -6961,7 +6961,7 @@
       "A licensed vet gated irreversible steps with a physical kill switch; after a calibration fault, the agent refused to retry and he \"could not talk it into trying anyway.\""
     ],
     "evidence": "Personal posts by the company's CEO describing his own team's experiment, with model output he quotes. No paper, data or independent account accompanies them.",
-    "uncertain": "Everything is self-reported, with a write-up promised. He writes he is \"not aware of an agent previously choosing a treatment and a brain target and then delivering it into a living mammal.\"",
+    "uncertain": "Everything is self-reported. He writes he is \"not aware of an agent previously choosing a treatment and a brain target and then delivering it into a living mammal.\"",
     "source": "X · Personal post",
     "url": "https://x.com/OcanaSantero/status/2115442964574908902"
   },
@@ -7021,7 +7021,7 @@
       "Since late October 2026, Onyx Sleet and Pearl Sleet have used ARTEX, the open-source agentic AI penetration testing framework, in operations."
     ],
     "evidence": "Company threat intelligence report from Microsoft's own tracking, partly drawing on industry reporting. Microsoft assesses that AI-enabled operations \"remain human-directed and have not become fully autonomous.\"",
-    "uncertain": "Much of the AI use is inferred from pace, file metadata and tooling, which Microsoft calls likely or highly likely. It does not name affected organizations.",
+    "uncertain": "Much of the AI use is inferred from pace, file metadata and tooling, which Microsoft calls likely or highly likely.",
     "source": "Microsoft Threat Intelligence · Company report",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/"
   },
@@ -7050,7 +7050,7 @@
     "topics": [
       "Harm to people"
     ],
-    "title": "Stanford silently tests AI dosing agents in its hospital; pharmacists flag safety concerns in 65.8% of misses",
+    "title": "Stanford silently tested AI dosing agents in its hospital; pharmacists flag safety concerns in 65.8% of misses",
     "happened": "Stanford researchers posted a medRxiv preprint on October 29, 2026 on PharmaAgent, LLM-based agents for vancomycin dosing that they silently deployed at Stanford Hospital for two months.",
     "keyPoints": [
       "Across 403 dosing events in 316 patients, error against the treating pharmacist's order averaged 21.8% for high-autonomy agents and 37.8% for low-autonomy agents.",
