@@ -1,7 +1,18 @@
 [
   {
+    "date": "2026-10-29",
+    "summary": "OpenAI expands misalignment monitoring and says a replay flagged the Hugging Face escape in about 30 minutes, and Microsoft says North Korean state hackers have built AI into their operations. Mistral releases Mistral Large 4 open weights, saying live traffic showed potential uplift for real attacks."
+  },
+  {
     "date": "2026-10-28",
-    "summary": "New York's governor signs a law barring AI companion features deemed unsafe for minors, and Australia's House of Representatives passes the Digital Duty of Care bill. Google DeepMind gives Gemini 4 Carbon first to a subset of cyber defenders, and House Democrats ask five AI companies to report misalignment incidents."
+    "summary": "New York's governor signs a law barring AI companion features deemed unsafe for minors, Australia's House passes the Digital Duty of Care bill, and Florida sues A2E's operator over AI child sexual abuse images. A biotech CEO says an AI agent delivered a gene therapy into a living mouse's brain.",
+    "highlights": [
+      "2026-10-28-new-york-governor-signs-a-law-barring-ai-companion-features",
+      "2026-10-28-australia-s-house-of-representatives-passes-the-digital-duty",
+      "2026-10-28-florida-sues-the-operator-of-a2e-alleging-its-ai-tools-let",
+      "2026-10-28-biotech-ceo-says-an-ai-agent-chose-a-gene-therapy-and",
+      "2026-10-28-google-deepmind-gives-gemini-4-carbon-first-to-a-subset-of"
+    ]
   },
   {
     "date": "2026-10-27",
