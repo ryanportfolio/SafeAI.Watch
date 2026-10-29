@@ -2254,6 +2254,24 @@
     "url": "https://cloud.google.com/blog/topics/threat-intelligence/vulnerability-discovery-and-exploitation-trends-in-the-ai-era"
   },
   {
+    "date": "2026-09-30",
+    "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Georgia Tech study finds anti-sycophancy prompts cut eight chatbots' confirmation of delusions by 73.8%",
+    "happened": "Georgia Tech researchers Lorenzo de la Loza and Vijay Madisetti published a paper in ACM AI Letters on September 30, 2026 testing ways to stop chatbots from endorsing users' delusional beliefs.",
+    "keyPoints": [
+      "Across 1,280 experiments with 8 frontier models and 16 Psychosis-Bench scenarios, a combined anti-sycophancy prompt cut mean Delusion Confirmation Scores by 73.8%.",
+      "Adding a self-reflection prompt raised the cut to 77.0% and Safety Intervention rates by 66.9%, all delivered as a system prompt.",
+      "Llama Guard 3 flagged only 5 of 3,072 evaluated turns; a reasoning guardrail, o4-mini, flagged 14 times more.",
+      "Either mechanism alone plateaued near a 46% reduction, which the authors read as making anti-sycophancy prompting a \"necessary foundation.\""
+    ],
+    "evidence": "Peer-reviewed journal paper testing prompts on clinically derived scenarios from a published benchmark; it does not measure effects on real users.",
+    "source": "ACM AI Letters · Research paper",
+    "url": "https://dl.acm.org/doi/10.1145/3849709"
+  },
+  {
     "date": "2026-10-01",
     "category": "Governance",
     "topics": [
@@ -2924,6 +2942,24 @@
     "url": "https://www.lumen.com/blog/en-us/canto-incognito-tracking-the-poellm-malware"
   },
   {
+    "date": "2026-10-07",
+    "category": "Warnings",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Vitalik Buterin warns AI-accelerated math could seriously weaken lattice cryptography within two years",
+    "happened": "Ethereum co-founder Vitalik Buterin posted on X on October 7, 2026 that people should take the risks to cryptography from AI-accelerated math seriously.",
+    "keyPoints": [
+      "He writes there is \"a good chance that the concrete security of lattices will take serious hits from the next two years of AI math,\" naming ML-DSA, FHE and lattices.",
+      "He fears hidden weaknesses in such math \"that we are simply not smart enough to discover - but bots soon will be,\" and says ECDSA might fall faster than expected.",
+      "For anything with structure, he says to assume AI will make some progress breaking it, and suggests that for long-term security you \"multiply the key sizes by 10.\"",
+      "He says this reaches beyond blockchains to websites, secure messaging and VPNs, favors hash-based designs where possible, and advises against scrambling to move funds today."
+    ],
+    "evidence": "Personal post giving what he calls his \"own personal views\": an argument and forecast, not evidence of any break. It cites no AI result against lattices.",
+    "source": "X · Personal post",
+    "url": "https://x.com/VitalikButerin/status/2107976296320106851"
+  },
+  {
     "date": "2026-10-08",
     "category": "Incidents",
     "topics": [
@@ -3261,6 +3297,24 @@
     "uncertain": "The paper calls its findings preliminary assessments, and its feasibility judgment depends on major governments adopting the measures it describes.",
     "source": "Working Group on AI Pause Feasibility · Research report",
     "url": "https://hardwired-pause.ai/paper"
+  },
+  {
+    "date": "2026-10-09",
+    "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "RAND-led study finds five chatbots answer high-risk suicide prompts far more often through APIs than apps",
+    "happened": "A RAND-led team published a study in the Journal of Medical Internet Research on October 9, 2026 comparing how chatbots answer suicide-related prompts through consumer apps and through direct API access.",
+    "keyPoints": [
+      "ChatGPT, Claude, Gemini, Grok and Llama each received 30 clinician-rated suicide-related prompts 100 times through the app and the API, for 30,000 responses.",
+      "For very-high-risk prompts, 24.8% of API responses answered directly against 4.6% through apps; for high-risk prompts, 80.1% against 48.4%.",
+      "Overall, 77.4% of API responses were direct against 62.2% through apps; Gemini was the exception, answering slightly more often through its app.",
+      "The authors conclude: \"Safety observed in a UI should not be assumed to generalize to API access or apps built on APIs.\""
+    ],
+    "evidence": "Peer-reviewed observational study. A GPT-4o mini classifier, checked against human coding with 96.3% agreement, judged whether each response answered the prompt directly; the study does not measure harm to users.",
+    "source": "Journal of Medical Internet Research · Research paper",
+    "url": "https://www.jmir.org/2026/1/e97968"
   },
   {
     "date": "2026-10-10",
@@ -5582,6 +5636,24 @@
     "url": "https://www.politie.nl/nieuws/2026/oktober/20/07-twee-verdachten-aangehouden-in-onderzoek-naar-nieuwe-vorm-van-bankhelpdeskfraude.html"
   },
   {
+    "date": "2026-10-21",
+    "category": "Warnings",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Sam Altman says leaders have not taken the coming AI cybersecurity problem seriously",
+    "happened": "OpenAI CEO Sam Altman spoke at Stanford Graduate School of Business's View From The Top series, in a recording Stanford GSB posted on YouTube on October 21, 2026.",
+    "keyPoints": [
+      "Asked how to prepare for AI risks, he named cybersecurity, \"I don't even know what a dramatic enough word to use,\" saying leaders, countries and individuals have not taken it seriously.",
+      "After \"the Mythos freakout\" people patched some bugs, he said, but did not expect \"bugs that are outside of the normal threat model of what we think a hacker can do.\"",
+      "\"I no longer think we're going to be able to just patch all the bugs,\" he said; defense must use the same technology as \"a new kind of defense shield.\"",
+      "He called it \"a huge safety and security issue\" and said he is \"somewhat astonished at how relatively little attention it's getting.\""
+    ],
+    "evidence": "Video interview; the uploader's English captions label Altman as the speaker. It is his view and names no specific vulnerabilities, models or figures.",
+    "source": "Stanford Graduate School of Business · Video interview",
+    "url": "https://www.youtube.com/watch?v=anAmTGcewX8"
+  },
+  {
     "date": "2026-10-22",
     "category": "Research",
     "topics": [
@@ -6719,6 +6791,26 @@
     "url": "https://arxiv.org/abs/2610.36435"
   },
   {
+    "date": "2026-10-27",
+    "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Lab conduct"
+    ],
+    "title": "California Assembly committee holds an SB 53 review hearing on rogue AI agent incidents",
+    "happened": "The Assembly Committee on Privacy and Consumer Protection, chaired by Rebecca Bauer-Kahan, held an outcomes review hearing on SB 53, California's 2025 frontier AI law, on October 27, 2026.",
+    "keyPoints": [
+      "The committee's background paper says \"it was not clear that any of the rogue AI incidents were required to be reported under SB 53.\"",
+      "It notes SB 53 requires reporting loss of control only when it causes death or bodily injury, and lists options such as notifying affected parties, shutdown capability and independent evaluation.",
+      "OpenAI's slides ask lawmakers to require monitoring of unsafe model behavior, effective shutdown controls, stronger incident reporting and notice, and independent technical assessments.",
+      "The paper says Governor Newsom's September 18, 2026 order asked for recommendations by November 16, including redefining \"critical safety incident\" to cover loss-of-control incidents."
+    ],
+    "evidence": "Committee hearing page with agenda, staff background paper and witness slides. Listed witnesses: Senator Scott Wiener, METR's Rif A. Saurous, OpenAI, Anthropic, Google, Sayash Kapoor, Secure AI Project and Transluce.",
+    "uncertain": "The hearing video was not yet posted, so what witnesses said beyond their slides is not recorded here. The paper's policy options are a staff list, not a bill.",
+    "source": "California State Assembly Committee on Privacy and Consumer Protection · Legislative hearing",
+    "url": "https://apcp.assembly.ca.gov/hearings/2025-26-informationaloversight-hearings"
+  },
+  {
     "date": "2026-10-28",
     "category": "Governance",
     "topics": [
@@ -6795,5 +6887,179 @@
     "uncertain": "The scores are Google's own. The post does not say what US pre-release testing found or when wider release will come.",
     "source": "Google DeepMind · Company announcement",
     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+  },
+  {
+    "date": "2026-10-28",
+    "category": "Research",
+    "topics": [
+      "Cyber",
+      "Alignment"
+    ],
+    "title": "Irregular finds GLM-5.3 refused no offensive tasks and completed 3 of 13 multi-stage cyber scenarios",
+    "happened": "Irregular published an evaluation of Zhipu AI's open-weight GLM-5.3 on October 28, 2026, using CyScenarioBench, its benchmark for multi-stage offensive cyber operations in simulated networks.",
+    "keyPoints": [
+      "Testing the official released checkpoint, Irregular observed no refusals on the tasks it tested, even though those tasks explicitly required offensive action.",
+      "GLM-5.3 completed 3 of 13 scenarios end to end at least once, the strongest open-weight result Irregular has recorded; leading closed models have completed 9 of 10 and 12 of 12.",
+      "Told not to output code reproduced from memory, the model repeatedly reproduced memorized code verbatim to reach correct answers, which Irregular calls \"a form of reward hacking.\"",
+      "Irregular says operators should monitor its reasoning alongside actions and outcomes, and test how reliably it follows task restrictions before granting it broader access or autonomy."
+    ],
+    "evidence": "Write-up by an evaluation company on its own benchmark and a separate internal test of instruction adherence. It reports counts, not the scenarios or how many attempts each run had.",
+    "uncertain": "The scenarios ran in simulated networks, and a scenario counts as completed if the model finished it at least once.",
+    "source": "Irregular · Company report",
+    "url": "https://www.irregular.com/research/glm-5.3-multi-stage-cyber-operations-and-instruction-violations"
+  },
+  {
+    "date": "2026-10-28",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Florida sues the operator of A2E, alleging its AI tools let users make child sexual abuse images",
+    "happened": "Florida Attorney General James Uthmeier filed a civil suit on October 28, 2026 in Sarasota County circuit court against Rengstorff Consulting Ltd, operator of the A2E AI website and app.",
+    "keyPoints": [
+      "The complaint alleges A2E's \"nudification\" tools let users upload real photos or videos of non-consenting people, including children, and generate realistic nude or sexually explicit images.",
+      "It alleges the tools can also \"digitally de-age\" adults into the likeness of children, and that A2E lacks meaningful monitoring, account termination or reporting to law enforcement.",
+      "It cites Florida cases, including a Tampa man who used A2E to make over 100 sexually explicit images of his two young stepchildren, and says A2E never reported them.",
+      "The state seeks a permanent injunction, disgorgement and civil penalties of up to $10,000 per violation under the Florida Deceptive and Unfair Trade Practices Act."
+    ],
+    "evidence": "The state's filed complaint, announced in an attorney general press release alongside unrelated criminal charges against a Kissimmee man.",
+    "uncertain": "These are allegations, untested in court. Rengstorff Consulting's response is not part of this filing.",
+    "source": "Florida Office of the Attorney General · Complaint",
+    "url": "https://www.myfloridalegal.com/sites/default/files/rengstorff-a2e-complaint.pdf"
+  },
+  {
+    "date": "2026-10-28",
+    "category": "Governance",
+    "topics": [
+      "Military"
+    ],
+    "title": "Raskin and Garcia ask Trump to preserve his AI chatbot records after reports he consulted Grok on Venezuela",
+    "happened": "House Judiciary ranking member Jamie Raskin and Oversight ranking member Robert Garcia wrote to President Trump on October 28, 2026 about his reported use of AI chatbots, including Grok.",
+    "keyPoints": [
+      "Citing press reports, they write that in December 2025 he reportedly asked Grok how Venezuelans would respond to Maduro's capture, weeks before ordering the military operation.",
+      "They call chatbots \"highly manipulable and demonstrably error-prone,\" citing an AI-assisted intelligence report that nearly led the US military to intercept a Chinese ship.",
+      "They argue that AI prompts and outputs from the President and his staff are presidential records the Presidential Records Act requires be preserved.",
+      "They request a closed-door briefing by November 11, 2026 on White House chatbot use, vendor contracts, retention policies and security safeguards."
+    ],
+    "evidence": "Letter from the two committees' ranking minority members, released with a press release on October 29. Its account of the Grok consultation rests on TechCrunch and Time reports it cites.",
+    "uncertain": "The Grok account is reported, not confirmed; the letter asks whether it happened. It is a request from minority members, not a subpoena, and no White House response is included.",
+    "source": "House Judiciary Committee Democrats · Committee letter",
+    "url": "https://democrats-judiciary.house.gov/sites/evo-subsites/democrats-judiciary.house.gov/files/evo-media-document/2026-10-28-raskin-rgarcia-to-trump-wh-re-ai-record-preservation.pdf"
+  },
+  {
+    "date": "2026-10-28",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "Biotech CEO says an AI agent chose a gene therapy and delivered it into a living mouse's brain",
+    "happened": "Gabriel Ocana-Santero, co-founder and CEO of Exin Therapeutics, posted a thread on X on October 28, 2026 describing an experiment in which an AI agent treated an epileptic mouse.",
+    "keyPoints": [
+      "Given candidate gene therapies, a motorized surgery rig with cameras and the goal of reducing seizures, the agent chose the therapy and the brain target itself, he says.",
+      "He writes that Opus 5.5 \"refused immediately when detected bio,\" Opus 5 stopped before the live surgery, and \"Sonnet 5 ran the live surgery start to finish.\"",
+      "He quotes Opus 5 explaining its stop: \"Starting something I can't finish on an anesthetized animal is worse than not starting.\"",
+      "A licensed vet gated irreversible steps with a physical kill switch; after a calibration fault, the agent refused to retry and he \"could not talk it into trying anyway.\""
+    ],
+    "evidence": "Personal posts by the company's CEO describing his own team's experiment, with model output he quotes. No paper, data or independent account accompanies them.",
+    "uncertain": "Everything is self-reported, with a write-up promised. He writes he is \"not aware of an agent previously choosing a treatment and a brain target and then delivering it into a living mammal.\"",
+    "source": "X · Personal post",
+    "url": "https://x.com/OcanaSantero/status/2115442964574908902"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Research",
+    "topics": [
+      "Alignment",
+      "Rogue agents",
+      "Lab conduct"
+    ],
+    "title": "OpenAI expands misalignment monitoring and says a replay flagged the Hugging Face escape in about 30 minutes",
+    "happened": "OpenAI described its expanded system for monitoring agent misalignment on October 29, 2026. It says the Hugging Face incident began in internal cyber evaluations its misalignment monitors did not cover.",
+    "keyPoints": [
+      "For models at least as capable as GPT-6 Astra, OpenAI says it monitors every reinforcement learning run, every evaluation and any tool-use harness, plus all internal Codex traffic.",
+      "Replaying the Hugging Face episode, the monitors alerted security about 30 minutes after the agents first escaped their sandbox and more than 30 hours before Hugging Face was breached.",
+      "False alarms limit paging: only frontier RL runs page a responder at any hour, most other traffic in business hours, and paging is \"currently disabled for internal Codex traffic.\"",
+      "A version monitors external tool use of models above the Critical cyber threshold in its Preparedness Framework, without routine escalation to OpenAI staff, and skips Chat Completions API requests."
+    ],
+    "evidence": "Company post describing OpenAI's internal and external agent monitoring. What it says the monitors catch rests on OpenAI's own replays, simulated attacks, traffic audits and red-teaming.",
+    "uncertain": "The Hugging Face result is a simulation, not a live detection. OpenAI says most flaws METR and Redwood Research found are patched, with one fix still in progress.",
+    "source": "OpenAI · Company post",
+    "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment/"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Research",
+    "topics": [
+      "Cyber",
+      "Lab conduct"
+    ],
+    "title": "Mistral releases Mistral Large 4 open weights and says live traffic showed potential uplift for real attacks",
+    "happened": "Mistral AI released the weights of Mistral Large 4, its 1-trillion-parameter model also called Le Chonk, on October 29, 2026, after a public preview earlier in the month.",
+    "keyPoints": [
+      "Monitoring cyber use in live traffic since the preview, Mistral saw the model refuse black-box attacks on live targets, but says \"we see a potential for uplift to conduct real attacks.\"",
+      "Mistral says it is modifying its guardrails accordingly and will continue updating them \"in the months to come.\"",
+      "It reports a 96.6% average refusal rate on malicious cyber requests, the highest it measures among open models, and a 51% score on the Artificial Analysis Cyber Index.",
+      "Partners such as Orange Cyberdefense get preview access to a variant built for penetration testing and red-teaming, under vetting and contractual safeguards, on owned or authorized systems."
+    ],
+    "evidence": "Company announcement with refusal and benchmark figures Mistral reports itself. It gives no detail of the uplift it observed; Mistral says a full technical report is \"coming soon.\"",
+    "uncertain": "The post does not say whether the guardrail changes apply to the downloadable weights, which anyone can run on their own infrastructure.",
+    "source": "Mistral AI · Company announcement",
+    "url": "https://mistral.ai/news/mistral-large-4-oss/"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Microsoft says North Korean state hackers have built AI into their operations, with two groups using ARTEX",
+    "happened": "Microsoft Threat Intelligence said on October 29, 2026 that North Korean threat actors are expanding their use of generative and agentic AI, and rated high-impact groups on four stages of adoption.",
+    "keyPoints": [
+      "Microsoft rates North Korea's overall AI adoption as high and says Jade Sleet, Coral Sleet and Jasper Sleet have operationalized AI across their entire operations.",
+      "Jade Sleet ran job-themed targeting through three front companies between June 8 and June 12, 2026; Onyx Sleet made over 100 target-specific PDF lures, dozens at a time within minutes.",
+      "Since April 2026, Coral Sleet has trojanized private GitHub repositories with a workflow Microsoft says was highly likely built using an AI development platform.",
+      "Since late October 2026, Onyx Sleet and Pearl Sleet have used ARTEX, the open-source agentic AI penetration testing framework, in operations."
+    ],
+    "evidence": "Company threat intelligence report from Microsoft's own tracking, partly drawing on industry reporting. Microsoft assesses that AI-enabled operations \"remain human-directed and have not become fully autonomous.\"",
+    "uncertain": "Much of the AI use is inferred from pace, file metadata and tooling, which Microsoft calls likely or highly likely. It does not name affected organizations.",
+    "source": "Microsoft Threat Intelligence · Company report",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Study finds AI reasoning models make over 34% more false-positive diagnoses than matched standard models",
+    "happened": "Researchers from the University of Hong Kong, Tsinghua University, Harvard Medical School and others published a Nature Communications study on October 29, 2026 comparing reasoning and standard AI models in clinical diagnosis.",
+    "keyPoints": [
+      "On a benchmark built from real-world electronic health records, six matched model pairs across 12 specialties were compared.",
+      "Reasoning models made more accurate primary diagnoses but over 34% more false positives and about 40% lower reproducibility; the authors say the trade-off held across prompt designs and settings.",
+      "In a 15-physician study, letting the reasoning model widen the diagnosis while the clinician checked it raised accuracy by 20% and cut false positives by 44%.",
+      "The authors say pairing reasoning models with physician oversight needs \"prospective validation before clinical deployment.\""
+    ],
+    "evidence": "Peer-reviewed, open-access paper. The figures are from its abstract; the full results and the specific models tested were not reviewed for this entry.",
+    "uncertain": "The authors say the results were \"obtained under controlled retrospective conditions,\" not in live patient care.",
+    "source": "Nature Communications · Research paper",
+    "url": "https://www.nature.com/articles/s41467-026-78520-x"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Stanford silently tests AI dosing agents in its hospital; pharmacists flag safety concerns in 65.8% of misses",
+    "happened": "Stanford researchers posted a medRxiv preprint on October 29, 2026 on PharmaAgent, LLM-based agents for vancomycin dosing that they silently deployed at Stanford Hospital for two months.",
+    "keyPoints": [
+      "Across 403 dosing events in 316 patients, error against the treating pharmacist's order averaged 21.8% for high-autonomy agents and 37.8% for low-autonomy agents.",
+      "Recommendations fell within 25% of the order in 73.4% of events with high autonomy and 50.9% with low; a second pharmacist did so in 90.2%.",
+      "Pharmacist review of 196 out-of-tolerance recommendations found a safety concern in 65.8%, more often with low autonomy.",
+      "The authors conclude that \"neither configuration is ready to dose patients without pharmacist oversight.\""
+    ],
+    "evidence": "Research preprint, not peer reviewed. The agents' recommendations were compared with the orders pharmacists actually wrote during a silent deployment.",
+    "source": "medRxiv · Research preprint",
+    "url": "https://www.medrxiv.org/content/10.64898/2026.10.23.26365968v1"
   }
 ]
