@@ -1,7 +1,14 @@
 [
   {
     "date": "2026-10-29",
-    "summary": "OpenAI expands misalignment monitoring and says a replay flagged the Hugging Face escape in about 30 minutes, and Microsoft says North Korean state hackers have built AI into their operations. Mistral releases Mistral Large 4 open weights, saying live traffic showed potential uplift for real attacks."
+    "summary": "WIRED reports a contractor's personal Claude agent ran on a Pentagon network for two months, and Cursor says a tampered Claude Code extension tried to install SSH backdoors. Microsoft says North Korean state hackers built AI into their operations, and Epoch AI finds GLM 5.3 can turn Firefox fixes into attacks.",
+    "highlights": [
+      "2026-10-29-wired-reports-an-accenture-contractor-s-personal-claude",
+      "2026-10-29-cursor-says-a-tampered-claude-code-extension-in-its",
+      "2026-10-29-microsoft-says-north-korean-state-hackers-have-built-ai-into",
+      "2026-10-29-epoch-ai-finds-open-weight-glm-5-3-can-turn-published",
+      "2026-10-29-openai-expands-misalignment-monitoring-and-says-a-replay"
+    ]
   },
   {
     "date": "2026-10-28",
