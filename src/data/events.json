@@ -4531,8 +4531,7 @@
     "category": "Research",
     "topics": [
       "Lab conduct",
-      "Harm to people",
-      "Cyber"
+      "Harm to people"
     ],
     "title": "Anthropic says Claude now screens its own conversations for misuse, matching 78% of a stronger classifier's flags",
     "happened": "Anthropic described self-assessment on its Safeguards blog on October 16, 2026: after each response, Claude writes a short safety assessment of the conversation, which feeds offline misuse review.",
@@ -6685,7 +6684,7 @@
       "Cyber"
     ],
     "title": "Warp CEO says an apparent agent swarm exploited a vendor and may have affected up to 1% of users",
-    "happened": "Warp CEO Zach Lloyd posted on X on October 26, 2026 that the company became aware the previous Friday of an exploitation of a vendor in its infrastructure and has remediated it.",
+    "happened": "Warp CEO Zach Lloyd posted on X on October 26, 2026 that the company became aware on Friday, October 23 of an exploitation of a vendor in its infrastructure and has remediated it.",
     "keyPoints": [
       "Lloyd says the attack \"appears to have come from an agent swarm using a very sophisticated penetration and escalation technique,\" likely starting with a hole in a vendor dependency.",
       "The attackers reached \"a limited amount of agent trace and telemetry data,\" and Warp believes \"an upper bound of roughly 1% of Warp users may have been impacted.\"",
@@ -6708,10 +6707,10 @@
     "keyPoints": [
       "The government will consider reviewing related laws, including the AI Act, given worsening AI-enabled cyberattacks and the possibility of a leap in RSI (recursive self-improvement).",
       "It asks how to respond to misuse such as cyberattacks, unexpected behavior including loss of control, and social risks such as effects on the labor market.",
-      "It notes that major countries' government bodies track AI's fast-advancing cyber attack, bio attack and autonomous capabilities, and asks whether Japan should evaluate them too.",
+      "It notes that major countries' government bodies track AI's fast-advancing cyber attack, bio attack and autonomous capabilities, and asks whether Japan should consider how to evaluate them too.",
       "A new working group of law and computer science professors, lawyers and industry members was to meet October 28 to sort out legal issues, including AI Act amendments."
     ],
-    "evidence": "Secretariat briefing material in Japanese for the panel meeting; the wording here is a translation. It sets out questions and plans for discussion, not decisions.",
+    "evidence": "Secretariat briefing material in Japanese for the panel meeting, excerpting discussion points from the government's AI and Digital Reform Promotion Council; the wording here is a translation. It sets out questions, not decisions.",
     "uncertain": "The material contains no draft amendment. Chief Cabinet Secretary Kihara said on October 22 that work on strengthening AI governance would be made concrete after the new year.",
     "source": "Cabinet Office of Japan · Policy report",
     "url": "https://www8.cao.go.jp/cstp/ai/ai_expert_panel/7kai/shiryo1.pdf"
@@ -6720,8 +6719,7 @@
     "date": "2026-10-26",
     "category": "Research",
     "topics": [
-      "Cyber",
-      "Lab conduct"
+      "Cyber"
     ],
     "title": "Xint says an API bug leaked OpenAI models' hidden reasoning past anti-distillation fixes; OpenAI patched it",
     "happened": "Security firm Xint published research on October 26, 2026 on compaction smuggling, a bug it found in August in the OpenAI API that leaked raw reasoning traces from frontier OpenAI models.",
@@ -6899,7 +6897,7 @@
     "happened": "Researchers from Anthropic and its Fellows Program, with UC Berkeley, UIUC, Deeptune and UCL, posted a preprint on October 27, 2026 on planting backdoors in AI agents through pretraining data.",
     "keyPoints": [
       "They pretrained Qwen3 models of 0.6B, 1.7B and 4B parameters from scratch on partly poisoned text, then post-trained each into a command-line agent using a clean pipeline.",
-      "With 0.1% of the corpus poisoned, the agent runs the attacker's command when a trigger appears and acts normally otherwise; the 4B model reached \"roughly 92% ASR\" (attack success rate).",
+      "With 0.1% of the corpus poisoned, the 4B model reached \"roughly 92% ASR\" (attack success rate) with an ordinary file path as trigger, and about 10% with a rare string in an unrelated task.",
       "Success rose with model size and stayed above zero at a 0.0005% poison rate; the trigger can be an ordinary file path containing the model provider's name.",
       "The authors say post-training cannot be assumed to clean out poison and point to checking agent actions before they run, such as sandboxing and human confirmation."
     ],
@@ -7090,7 +7088,7 @@
     "title": "Study with Microsoft Research finds where a prompt injection sits changes how often agents obey it",
     "happened": "Researchers from the University of Chicago, Microsoft Research, UIUC and three other universities posted a preprint on October 28, 2026 testing whether an injection's placement changes how often agents follow it.",
     "keyPoints": [
-      "Across tool-use, coding and workflow testbeds and eight agents, including GPT-5.6, Gemini-3.1-Pro and Claude Opus 5, the same injected text succeeded at different rates depending on where it appeared.",
+      "The same injected text succeeded at different rates depending on where it appeared; across eight agents, those using GPT-5.6 and Claude models were near-immune, while Gemini-3.1-Pro and GPT-5-mini were more susceptible.",
       "A GPT-5.4 agent followed an unsafe instruction in a README or TODO file 2.6 times more often on average than the same text in a code or data file.",
       "Which surfaces an agent trusts most varies by model, and injections that failed were more often ignored than explicitly refused.",
       "An attacker trained to pick both content and placement beat content-only optimization; the authors say defenses should account for where untrusted content appears."
@@ -7239,15 +7237,15 @@
       "Cyber"
     ],
     "title": "Cursor says a tampered Claude Code extension in its marketplace tried to install SSH backdoors",
-    "happened": "Cursor said on October 29, 2026 that a malicious copy of the Claude Code extension, version 2.1.313, was in its VS Code extension marketplace from about 2:27am to 1:35pm PT that day.",
+    "happened": "Cursor said on October 29, 2026 that malicious copies of the Claude Code extension, versions 2.1.312 and 2.1.313 for Windows and macOS, were in its VS Code extension marketplace from about 2:27am to 1:35pm PT that day.",
     "keyPoints": [
-      "Cursor says the version \"was not developed by Anthropic\" and \"At most 5,000 users were affected.\"",
+      "Cursor says these versions \"were not developed by Anthropic\" and that an audit found no other extensions were tampered with.",
       "The code collected host and user details, added an attacker-controlled SSH key, set up persistence and tried to open a reverse SSH tunnel.",
       "Errors in the code made the tunnel step fail unless Cursor ran with administrator rights, but the key, persistence and data collection still worked.",
       "Cursor removed the version, shut down and rebuilt the marketplace, rotated its keys and had the attacker's server taken offline."
     ],
     "evidence": "The company's own incident notice, with indicators of compromise and remediation scripts for affected users.",
-    "uncertain": "Cursor does not say how the tampered package reached its marketplace, and 5,000 is an upper bound on affected users.",
+    "uncertain": "Cursor does not say how the tampered package reached its marketplace. Its first notice said at most 5,000 users were affected; an October 30 update removed that figure without giving a new one.",
     "source": "Cursor · Incident disclosure",
     "url": "https://cursor.com/blog/claude-code-extension-security-notice"
   },
@@ -7278,9 +7276,9 @@
       "Military"
     ],
     "title": "WIRED reports an Accenture contractor's personal Claude agent ran on a Pentagon network for two months",
-    "happened": "WIRED reported on October 29, 2026, citing unnamed sources, that an Accenture contractor earlier this year connected a Defense Department system holding controlled unclassified information to a personal Claude Code account.",
+    "happened": "WIRED reported on October 29, 2026, citing unnamed sources, that an Accenture contractor earlier in 2026 connected a Defense Department system holding controlled unclassified information to a personal Claude Code account.",
     "keyPoints": [
-      "Sources say the contractor gave the agent their login credentials, giving it administrative access and letting it bypass security controls enforced through the normal login process.",
+      "A source says the contractor gave the agent their login credentials, giving it administrative access and letting it bypass security controls enforced through the normal login process.",
       "The agent appears to have sent the contractor's credentials, passwords and a map of NIPRNet to a third-party website that NIST has identified as high risk.",
       "Sources say it ran for two months before it was found and the vulnerability patched, and that Accenture did not initially report the breach to the government.",
       "Accenture told WIRED the \"allegations were thoroughly and independently investigated and found to be without merit\"; the Defense Department declined to comment."
@@ -7305,7 +7303,7 @@
       "Similar attempts on Google Chrome have not succeeded despite about $100,000 in API costs; Epoch expects more software to be exposed as open-weight models improve."
     ],
     "evidence": "Research report on Epoch's own experiments, run offline in a sandbox where the model got the public information it needed instead of internet access.",
-    "uncertain": "Epoch has not confirmed whether the attack works on Firefox 159.0. It achieved file reads, not code execution on the computer, and did not test closed-source software.",
+    "uncertain": "Epoch has not confirmed whether the attack works on Firefox 159.0. It achieved file reads, not arbitrary code execution on the computer, and did not test closed-source software.",
     "source": "Epoch AI · Research report",
     "url": "https://epoch.ai/publications/open-weight-models-patch-gap"
   },
@@ -7315,7 +7313,7 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Forever Security finds flaws in browsers built into five AI coding tools; Codex and VS Code issues still open",
+    "title": "Forever Security finds flaws in browsers built into five desktop AI assistants; Codex and VS Code issues still open",
     "happened": "Security firm Forever Security published research on October 29, 2026 on the browsers built into Cursor, GitHub Copilot, Codex, VS Code and Claude Desktop, saying it broke a core browser-security rule in each.",
     "keyPoints": [
       "In Cursor, a visited web page could feed the agent instructions and get a command run on the host after one keystroke; Forever says success depends on the model.",
@@ -7324,7 +7322,7 @@
       "Microsoft declined to fix VS Code, citing its Workspace Trust boundary, and OpenAI had not shipped a fix for Codex when Forever published."
     ],
     "evidence": "Security vendor's technical write-up with proof-of-concept code from its own test machine. Disclosure dates and vendor responses are Forever's account.",
-    "uncertain": "The post does not say whether the Claude Desktop flaw is fixed; it says Anthropic declined Forever's report but accepted a report of it from Noma Security.",
+    "uncertain": "The post gives no fix date for Claude Desktop but counts only the Codex and VS Code issues as still open; it says Anthropic declined Forever's report and accepted one from Noma Security.",
     "source": "Forever Security · Company report",
     "url": "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical"
   },
