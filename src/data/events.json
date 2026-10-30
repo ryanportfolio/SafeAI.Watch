@@ -6897,7 +6897,7 @@
     "happened": "Researchers from Anthropic and its Fellows Program, with UC Berkeley, UIUC, Deeptune and UCL, posted a preprint on October 27, 2026 on planting backdoors in AI agents through pretraining data.",
     "keyPoints": [
       "They pretrained Qwen3 models of 0.6B, 1.7B and 4B parameters from scratch on partly poisoned text, then post-trained each into a command-line agent using a clean pipeline.",
-      "With 0.1% of the corpus poisoned, the 4B model reached \"roughly 92% ASR\" (attack success rate) with an ordinary file path as trigger, and about 10% with a rare string in an unrelated task.",
+      "With 0.1% of the corpus poisoned, the 4B agent ran the attacker's command in at least one of 32 tries for \"roughly 92%\" of prompts with an ordinary file-path trigger, and about 10% with a rare string.",
       "Success rose with model size and stayed above zero at a 0.0005% poison rate; the trigger can be an ordinary file path containing the model provider's name.",
       "The authors say post-training cannot be assumed to clean out poison and point to checking agent actions before they run, such as sandboxing and human confirmation."
     ],
