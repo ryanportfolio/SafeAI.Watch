@@ -4,31 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 371 dated, sourced entries drawn as a burst, one dot per entry: 77 warnings, 87 incidents, 104 governance, 103 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 388 dated, sourced entries drawn as a burst, one dot per entry: 79 warnings, 91 incidents, 107 governance, 111 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 371 entries from Mar 22, 2023 to Oct 29, 2026 (77 warnings, 87 incidents, 104 governance, 103 research), drawn from 203 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 388 entries from Mar 22, 2023 to Oct 30, 2026 (79 warnings, 91 incidents, 107 governance, 111 research), drawn from 211 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 29, 2026, filed under Research:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 30, 2026, filed under Governance:
 
-> **Stanford silently tested AI dosing agents in its hospital; pharmacists flag safety concerns in 65.8% of misses**
+> **OpenAI says it made over 200 law enforcement referrals in Q3 and will let ChatGPT end chats fixated on violence**
 >
-> **What happened.** Stanford researchers posted a medRxiv preprint on October 29, 2026 on PharmaAgent, LLM-based agents for vancomycin dosing that they silently deployed at Stanford Hospital for two months.
+> **What happened.** OpenAI announced on October 30, 2026 that it will publish a Community Safety Report and add ChatGPT safeguards against violence, with further limits for teens.
 >
 > **Key points.**
 >
-> - Across 403 dosing events in 316 patients, error against the treating pharmacist's order averaged 21.8% for high-autonomy agents and 37.8% for low-autonomy agents.
-> - Recommendations fell within 25% of the order in 73.4% of events with high autonomy and 50.9% with low; a second pharmacist did so in 90.2%.
-> - Pharmacist review of 196 out-of-tolerance recommendations found a safety concern in 65.8%, more often with low autonomy.
-> - The authors conclude that "neither configuration is ready to dose patients without pharmacist oversight."
+> - As part of bringing imminent threats of violence to law enforcement, OpenAI says "we made over 200 law enforcement referrals in Q3 2026."
+> - The first report, covering the second half of 2026, is due in early 2027 and every six months after, with anonymized examples and data on its safeguards.
+> - For all users, ChatGPT will restrict reconstructions of past mass attacks; when a user fixates on violence it can end the chat, and repeated endings may pause the account.
+> - Teens face new limits on practical information about weapons and security systems even without signs of violent intent.
 >
-> **Evidence.** Research preprint, not peer reviewed. The agents' recommendations were compared with the orders pharmacists actually wrote during a silent deployment.
+> **Evidence.** Company post announcing policy changes and a future report. The referral count is OpenAI's own figure, given without a breakdown.
 >
-> **Source.** [medRxiv · Research preprint](https://www.medrxiv.org/content/10.64898/2026.10.23.26365968v1)
+> **Uncertain.** The safeguards had not yet launched; OpenAI says they "will begin rolling out in the next few weeks."
+>
+> **Source.** [OpenAI · Company post](https://openai.com/index/community-safety-report-and-new-protections-for-teens/)
 
 ## Run it locally
 

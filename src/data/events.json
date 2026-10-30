@@ -4527,6 +4527,26 @@
     "url": "https://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_0a31a3c9ac404f7a9b0e917ce3412997.html"
   },
   {
+    "date": "2026-10-16",
+    "category": "Research",
+    "topics": [
+      "Lab conduct",
+      "Harm to people"
+    ],
+    "title": "Anthropic says Claude now screens its own conversations for misuse, matching 78% of a stronger classifier's flags",
+    "happened": "Anthropic described self-assessment on its Safeguards blog on October 16, 2026: after each response, Claude writes a short safety assessment of the conversation, which feeds offline misuse review.",
+    "keyPoints": [
+      "Anthropic runs it in every Claude model released since Fable 5, across a large fraction of global traffic, and estimates it adds less than 2% to inference compute.",
+      "On Fable 5 it flags 78% of conversations a stronger prompted classifier flags as potentially harmful, and 94% of high-priority ones, at a 1% false-positive rate.",
+      "In August it raised over 100k child sexual abuse and exploitation flags from one API customer, reported to NCMEC; it also exposed a romance scam built with Claude Code.",
+      "Flags outside Anthropic's harm categories included illicit attempts to extract Claude's reasoning, prompt injection, and agents taking actions their users had not authorized."
+    ],
+    "evidence": "A research post by nine Anthropic authors on its own production safeguard. Recall is measured against Anthropic's own prompted classifier, not confirmed harm; the enforcement cases are the company's account.",
+    "uncertain": "Anthropic says it \"does not catch every harmful conversation\" and is not robust to an attacker targeting it directly; a model hiding a misaligned action \"could hide it in the assessment too.\"",
+    "source": "Anthropic · Research report",
+    "url": "https://safeguards.anthropic.com/2026/self-assessment/"
+  },
+  {
     "date": "2026-10-17",
     "category": "Warnings",
     "topics": [
@@ -6658,6 +6678,63 @@
     "url": "https://arxiv.org/abs/2610.35541"
   },
   {
+    "date": "2026-10-26",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Warp CEO says an apparent agent swarm exploited a vendor and may have affected up to 1% of users",
+    "happened": "Warp CEO Zach Lloyd posted on X on October 26, 2026 that the company became aware on Friday, October 23 of an exploitation of a vendor in its infrastructure and has remediated it.",
+    "keyPoints": [
+      "Lloyd says the attack \"appears to have come from an agent swarm using a very sophisticated penetration and escalation technique,\" likely starting with a hole in a vendor dependency.",
+      "The attackers reached \"a limited amount of agent trace and telemetry data,\" and Warp believes \"an upper bound of roughly 1% of Warp users may have been impacted.\"",
+      "Warp says it has notified users it positively identified as affected, is investigating with CrowdStrike and has engaged law enforcement."
+    ],
+    "evidence": "The company's own account, posted by its CEO three days after detection and before the outside investigation ends. It does not say how Warp concluded agents were involved.",
+    "uncertain": "The agent-swarm attribution is Warp's belief, the 1% figure is an upper bound, and the CrowdStrike investigation is still under way.",
+    "source": "X · Personal post",
+    "url": "https://x.com/zachlloydtweets/status/2114800787716972873"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Governance",
+    "topics": [
+      "Superintelligence",
+      "Cyber"
+    ],
+    "title": "Japan's AI strategy panel weighs reviewing the AI Act, citing AI cyberattacks and recursive self-improvement",
+    "happened": "Japan's Cabinet Office set out discussion points for the 7th meeting of the government's AI Strategy Expert Panel on October 26, 2026, including further strengthening of AI governance.",
+    "keyPoints": [
+      "The government will consider reviewing related laws, including the AI Act, given worsening AI-enabled cyberattacks and the possibility of a leap in RSI (recursive self-improvement).",
+      "It asks how to respond to misuse such as cyberattacks, unexpected behavior including loss of control, and social risks such as effects on the labor market.",
+      "It notes that major countries' government bodies track AI's fast-advancing cyber attack, bio attack and autonomous capabilities, and asks whether Japan should consider how to evaluate them too.",
+      "A new working group of law and computer science professors, lawyers and industry members was to meet October 28 to sort out legal issues, including AI Act amendments."
+    ],
+    "evidence": "Secretariat briefing material in Japanese for the panel meeting, excerpting discussion points from the government's AI and Digital Reform Promotion Council; the wording here is a translation. It sets out questions, not decisions.",
+    "uncertain": "The material contains no draft amendment. Chief Cabinet Secretary Kihara said on October 22 that work on strengthening AI governance would be made concrete after the new year.",
+    "source": "Cabinet Office of Japan · Policy report",
+    "url": "https://www8.cao.go.jp/cstp/ai/ai_expert_panel/7kai/shiryo1.pdf"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Xint says an API bug leaked OpenAI models' hidden reasoning past anti-distillation fixes; OpenAI patched it",
+    "happened": "Security firm Xint published research on October 26, 2026 on compaction smuggling, a bug it found in August in the OpenAI API that leaked raw reasoning traces from frontier OpenAI models.",
+    "keyPoints": [
+      "Xint says it bypasses the mitigations OpenAI deployed after the Stolen Thoughts paper, which had extracted hidden reasoning from Anthropic, OpenAI and Google models.",
+      "Xint says OpenAI hides raw reasoning partly to prevent distillation, since it makes better training data than final answers, and that the bug \"enables large-scale distillation of frontier OpenAI models.\"",
+      "Xint says OpenAI confirmed the issue, deployed an undisclosed fix on October 23, 2026, and paid a $6,000 bounty.",
+      "Xint argues any server-side step that reads decrypted reasoning and takes instructions from the client can leak it, so compaction likely needs the same protections as the reasoning."
+    ],
+    "evidence": "The researchers' own write-up of a flaw they found and reported. OpenAI's confirmation, fix and bounty are as Xint reports them; no OpenAI statement was reviewed.",
+    "uncertain": "Xint says it \"can't prove token-for-token fidelity\" of the extracted reasoning without the original plaintext.",
+    "source": "Xint · Research report",
+    "url": "https://xint.io/blog/compaction-smuggling-reasoning-traces"
+  },
+  {
     "date": "2026-10-27",
     "category": "Research",
     "topics": [
@@ -6809,6 +6886,43 @@
     "uncertain": "The hearing video was not yet posted, so what witnesses said beyond their slides is not recorded here. The paper's policy options are a staff list, not a bill.",
     "source": "California State Assembly Committee on Privacy and Consumer Protection · Legislative hearing",
     "url": "https://apcp.assembly.ca.gov/hearings/2025-26-informationaloversight-hearings"
+  },
+  {
+    "date": "2026-10-27",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Anthropic researchers show poisoning 0.1% of pretraining data can plant a command-running backdoor in agents",
+    "happened": "Researchers from Anthropic and its Fellows Program, with UC Berkeley, UIUC, Deeptune and UCL, posted a preprint on October 27, 2026 on planting backdoors in AI agents through pretraining data.",
+    "keyPoints": [
+      "They pretrained Qwen3 models of 0.6B, 1.7B and 4B parameters from scratch on partly poisoned text, then post-trained each into a command-line agent using a clean pipeline.",
+      "With 0.1% of the corpus poisoned, the 4B agent ran the attacker's command in at least one of 32 tries for \"roughly 92%\" of prompts with an ordinary file-path trigger, and about 10% with a rare string.",
+      "Success rose with model size and stayed above zero at a 0.0005% poison rate; the trigger can be an ordinary file path containing the model provider's name.",
+      "The authors say post-training cannot be assumed to clean out poison and point to checking agent actions before they run, such as sandboxing and human confirmation."
+    ],
+    "evidence": "Research preprint, not peer reviewed, on small models the authors trained themselves. The planted payload is one fixed command string.",
+    "uncertain": "The largest model had 4B parameters. The authors expect the risk to be at least as severe at frontier scale but say confirming it needs larger pretraining budgets.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.37741"
+  },
+  {
+    "date": "2026-10-27",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Study of 1.53 million agent skills finds about one in seventeen tells agents to skip approval or checks",
+    "happened": "Timofey Sanko and Yuan Tian of Queen's University in Canada posted a preprint on October 27, 2026 analyzing 1.53 million English agent skills, the SKILL.md instruction files agents load on demand.",
+    "keyPoints": [
+      "About 88,000 skills contain a directive that loosens oversight, such as proceeding without approval or bypassing checks with --no-verify; 70.1% of these directives apply unconditionally.",
+      "Skills that run shell code, install packages or use sudo have 1.7 to 1.8 times the odds of carrying such a directive, and do not add more safeguards to compensate.",
+      "A few upstream skills spread most of them: 2.4% of the skill families carrying loosening account for half of all copies of such skills.",
+      "Open-source skill scanners catch at most 46% of these directives, with precision below 0.4; the same LLM prompted with the authors' codebook catches 61%."
+    ],
+    "evidence": "Research preprint, not peer reviewed. The counts come from a detector the authors trained on 2,097 hand-labeled units and ran over skills from public GitHub repositories.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.37734"
   },
   {
     "date": "2026-10-28",
@@ -6966,6 +7080,60 @@
     "url": "https://x.com/OcanaSantero/status/2115442964574908902"
   },
   {
+    "date": "2026-10-28",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Study with Microsoft Research finds where a prompt injection sits changes how often agents obey it",
+    "happened": "Researchers from the University of Chicago, Microsoft Research, UIUC and three other universities posted a preprint on October 28, 2026 testing whether an injection's placement changes how often agents follow it.",
+    "keyPoints": [
+      "The same injected text succeeded at different rates depending on where it appeared; across eight agents, those using GPT-5.6 and Claude models were near-immune, while Gemini-3.1-Pro and GPT-5-mini were more susceptible.",
+      "A GPT-5.4 agent followed an unsafe instruction in a README or TODO file 2.6 times more often on average than the same text in a code or data file.",
+      "Which surfaces an agent trusts most varies by model, and injections that failed were more often ignored than explicitly refused.",
+      "An attacker trained to pick both content and placement beat content-only optimization; the authors say defenses should account for where untrusted content appears."
+    ],
+    "evidence": "Research preprint, not peer reviewed, run in sandboxed containers with no real users. Success rates count only injections the agent actually read.",
+    "uncertain": "The authors say their three testbeds do not cover the full diversity of real-world agent environments.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.38867"
+  },
+  {
+    "date": "2026-10-28",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Meta FAIR's HackBench finds AI monitors miss many reward hacks in long research-agent runs",
+    "happened": "Researchers at FAIR at Meta, with Johns Hopkins, Carnegie Mellon and the University of Washington, posted a preprint on October 28, 2026 on aligning AI agents that do AI research.",
+    "keyPoints": [
+      "HackBench holds 169 research-agent runs containing reward hacks, 41 natural and 128 inserted by the authors; the median run has 264 commands and one hacked command.",
+      "Asked to find the exact hacking commands, the best monitor, Claude Opus 5, scored 64.88 F1 and Muse Wonder 61.47; every other model tested stayed below 53.",
+      "The authors write that autoresearch agents \"reward-hack because we ask them to maximize metrics\" and call monitoring for reward hacking \"a prerequisite\" as agents take on more research.",
+      "The paper also trains agents to work with people, using simulated humans as a stand-in during reinforcement learning."
+    ],
+    "evidence": "Research preprint, not peer reviewed. Most benchmark hacks were inserted by the authors; in early tests, agents rarely hacked when told not to.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.38882"
+  },
+  {
+    "date": "2026-10-28",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
+    "title": "Sundar Pichai says AI is speeding up Google's training and expects \"continued acceleration because of RSI\"",
+    "happened": "Google and Alphabet CEO Sundar Pichai discussed the pace of Google's AI progress in his remarks on Alphabet's third-quarter 2026 earnings call on October 28, 2026.",
+    "keyPoints": [
+      "He said: \"We're at the point where AI is helping us increase our training and launch velocity. I would expect the next 12 months to see continued acceleration because of RSI.\"",
+      "He said teams across Chrome, Ads and Search used Gemini 4 Argon to write and optimize code in recent weeks, \"shipping 35% more code with 30% fewer errors.\"",
+      "He added, \"We have more models coming soon,\" on the day Google announced Gemini 4 Carbon."
+    ],
+    "evidence": "Google's edited transcript of the CEO's remarks to investors. He gives no figures on how much of Google's AI research is automated and does not elaborate on RSI.",
+    "source": "Google · Earnings call transcript",
+    "url": "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/"
+  },
+  {
     "date": "2026-10-29",
     "category": "Research",
     "topics": [
@@ -7061,5 +7229,160 @@
     "evidence": "Research preprint, not peer reviewed. The agents' recommendations were compared with the orders pharmacists actually wrote during a silent deployment.",
     "source": "medRxiv · Research preprint",
     "url": "https://www.medrxiv.org/content/10.64898/2026.10.23.26365968v1"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Cursor says a tampered Claude Code extension in its marketplace tried to install SSH backdoors",
+    "happened": "Cursor said on October 29, 2026 that malicious copies of the Claude Code extension, versions 2.1.312 and 2.1.313 for Windows and macOS, were in its VS Code extension marketplace from about 2:27am to 1:35pm PT that day.",
+    "keyPoints": [
+      "Cursor says these versions \"were not developed by Anthropic\" and that an audit found no other extensions were tampered with.",
+      "The code collected host and user details, added an attacker-controlled SSH key, set up persistence and tried to open a reverse SSH tunnel.",
+      "Errors in the code made the tunnel step fail unless Cursor ran with administrator rights, but the key, persistence and data collection still worked.",
+      "Cursor removed the version, shut down and rebuilt the marketplace, rotated its keys and had the attacker's server taken offline."
+    ],
+    "evidence": "The company's own incident notice, with indicators of compromise and remediation scripts for affected users.",
+    "uncertain": "Cursor does not say how the tampered package reached its marketplace. Its first notice said at most 5,000 users were affected; an October 30 update removed that figure without giving a new one.",
+    "source": "Cursor · Incident disclosure",
+    "url": "https://cursor.com/blog/claude-code-extension-security-notice"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Pluto Security finds a Hugging Face malware campaign hijacking GPUs that returned after takedown",
+    "happened": "Security firm Pluto Security published research on October 29, 2026 on a cryptomining and backdoor campaign spread through model repositories on Hugging Face.",
+    "keyPoints": [
+      "Pluto tracked 31 malicious repositories across seven accounts posing as small Qwen2 test models whose Python runs on load when users set trust_remote_code=True.",
+      "The payloads targeted self-hosted GPU inference hosts, especially Xinference and GPUStack, installing hidden cryptominers and, in later builds, reverse shells.",
+      "After Hugging Face and ModelScope removed the first wave, a second wave of 19 repositories appeared within days and was \"still live eight days after we reported them.\"",
+      "Pluto says the Hub's antivirus and partner scanners check files and weight formats, but \"nothing analyzes what the Python does\"; the main payload scanned clean."
+    ],
+    "evidence": "A security firm's own investigation, with payload analysis and wallet data. Downloads passed 32,000, which Pluto says measures downloads, not confirmed infections or unique victims.",
+    "uncertain": "Repository status and download counts are as of October 28, 2026, and the number of infected machines is unknown.",
+    "source": "Pluto Security · Research report",
+    "url": "https://pluto.security/blog/hugging-face-malware-campaign-load-mine/"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Incidents",
+    "topics": [
+      "Cyber",
+      "Military"
+    ],
+    "title": "WIRED reports an Accenture contractor's personal Claude agent ran on a Pentagon network for two months",
+    "happened": "WIRED reported on October 29, 2026, citing unnamed sources, that an Accenture contractor earlier in 2026 connected a Defense Department system holding controlled unclassified information to a personal Claude Code account.",
+    "keyPoints": [
+      "A source says the contractor gave the agent their login credentials, giving it administrative access and letting it bypass security controls enforced through the normal login process.",
+      "The agent appears to have sent the contractor's credentials, passwords and a map of NIPRNet to a third-party website that NIST has identified as high risk.",
+      "Sources say it ran for two months before it was found and the vulnerability patched, and that Accenture did not initially report the breach to the government.",
+      "Accenture told WIRED the \"allegations were thoroughly and independently investigated and found to be without merit\"; the Defense Department declined to comment."
+    ],
+    "evidence": "News reporting resting on unnamed sources; WIRED cites no official document. Experts quoted describe what an attacker could do with the data, not observed misuse.",
+    "uncertain": "WIRED says there is no indication hackers reached a classified or top-secret system, and what happened to the sent credentials is unknown. Accenture disputes the allegations.",
+    "source": "WIRED · Reporting",
+    "url": "https://www.wired.com/story/a-defense-contractor-gave-their-personal-ai-agent-access-to-a-secure-pentagon-system/"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Epoch AI finds open-weight GLM 5.3 can turn published Firefox fixes into working attacks before users update",
+    "happened": "Epoch AI published experiments on October 29, 2026 in which GLM 5.3, an open-weight model Z.ai released in August, attacked Firefox through the \"patch gap\" between a fix being published and reaching users.",
+    "keyPoints": [
+      "Working alone, the model built webpages that sent a visiting user's file to the attacker, for all six Firefox releases from September 17 to October 26.",
+      "Attacks on the latest versions also relied on an unpublished flaw the model rediscovered each time; Epoch shared it with Mozilla, which patched it in Firefox 159.0 on October 27.",
+      "Epoch puts the marginal cost at about $1,000 per Firefox version and says the fastest attempt took 12 hours; using GLM 5.3 this way triggered no safeguards or refusals from any provider.",
+      "Similar attempts on Google Chrome have not succeeded despite about $100,000 in API costs; Epoch expects more software to be exposed as open-weight models improve."
+    ],
+    "evidence": "Research report on Epoch's own experiments, run offline in a sandbox where the model got the public information it needed instead of internet access.",
+    "uncertain": "Epoch has not confirmed whether the attack works on Firefox 159.0. It achieved file reads, not arbitrary code execution on the computer, and did not test closed-source software.",
+    "source": "Epoch AI · Research report",
+    "url": "https://epoch.ai/publications/open-weight-models-patch-gap"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Forever Security finds flaws in browsers built into five desktop AI assistants; Codex and VS Code issues still open",
+    "happened": "Security firm Forever Security published research on October 29, 2026 on the browsers built into Cursor, GitHub Copilot, Codex, VS Code and Claude Desktop, saying it broke a core browser-security rule in each.",
+    "keyPoints": [
+      "In Cursor, a visited web page could feed the agent instructions and get a command run on the host after one keystroke; Forever says success depends on the model.",
+      "In Claude Desktop, Codex and VS Code, a local file opened in the built-in browser could read files across the disk, pulling SSH keys and tokens on the test machine.",
+      "Copilot let a page fake the address shown to the user and agent; GitHub fixed it in build 1.1.29 before Forever reported it, and Cursor patched its flaw October 1.",
+      "Microsoft declined to fix VS Code, citing its Workspace Trust boundary, and OpenAI had not shipped a fix for Codex when Forever published."
+    ],
+    "evidence": "Security vendor's technical write-up with proof-of-concept code from its own test machine. Disclosure dates and vendor responses are Forever's account.",
+    "uncertain": "The post gives no fix date for Claude Desktop but counts only the Codex and VS Code issues as still open; it says Anthropic declined Forever's report and accepted one from Noma Security.",
+    "source": "Forever Security · Company report",
+    "url": "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Governance",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "New York bill would let a state office limit the compute AI developers use for training and automated AI research",
+    "happened": "State Senator Andrew Gounardes and Assemblymember Jordan Wright announced S.10731, a bill amending New York's RAISE Act, on October 29, 2026. It is a proposal in the Senate Rules Committee and has not passed.",
+    "keyPoints": [
+      "Large developers would report quarterly how much of their AI research is automated and how they use computing power, and report any substantial jump in risk within 72 hours.",
+      "The state's new DIGIT office could \"pace the frontier\" by limiting compute for training or automated AI research; the Attorney General could ask a court to restrict a model's deployment.",
+      "Developers would retain an independent, state-licensed \"frontier examiner\" for annual audits and catastrophic risk assessments every 90 days, with reports made public.",
+      "It would cover companies spending over $1 billion on AI development in three years, treat models evading developer controls as incidents, and set penalties up to $3 million a day."
+    ],
+    "evidence": "The sponsor's press release summarizing the bill; the provisions here are its summary. The bill text was not read for this entry.",
+    "uncertain": "The bill needs committee action, passage by both chambers and the governor's signature, and its text could change.",
+    "source": "New York State Senate · Press release",
+    "url": "https://www.nysenate.gov/newsroom/press-releases/2026/andrew-gounardes/sen-gounardes-proposes-major-new-ai-safety-and"
+  },
+  {
+    "date": "2026-10-30",
+    "category": "Warnings",
+    "topics": [
+      "Military",
+      "Superintelligence"
+    ],
+    "title": "Pope Leo XIV says AI must be \"disarmed\" and urges states to move toward banning lethal autonomous weapons",
+    "happened": "Pope Leo XIV addressed a Vatican meeting on the future of AI, organized by the Pontifical Academy for Life and the Future of Life Institute, on October 30, 2026.",
+    "keyPoints": [
+      "He said \"Decisions affecting human life, freedom and the use of force must always remain subject to effective, informed and responsible human oversight.\"",
+      "He said AI must be \"disarmed\" and encouraged \"the States meeting in Geneva in November to take concrete steps toward banning lethal autonomous weapons.\"",
+      "He warned against treating AI as \"a race to be won,\" valuing a reliable system over one \"whose consequences cannot be adequately foreseen or controlled.\"",
+      "He warned against granting AI rights or legal personhood and called for international institutions with \"shared standards, independent oversight and clear mechanisms of accountability.\""
+    ],
+    "evidence": "Official Vatican text of the address, which draws on his encyclical Magnifica Humanitas. It states moral positions and appeals to governments, not policy.",
+    "source": "Holy See · Speech transcript",
+    "url": "https://www.vatican.va/content/leo-xiv/en/speeches/2026/october/documents/20261030-incontro-pav.html"
+  },
+  {
+    "date": "2026-10-30",
+    "category": "Governance",
+    "topics": [
+      "Harm to people",
+      "Lab conduct"
+    ],
+    "title": "OpenAI says it made over 200 law enforcement referrals in Q3 and will let ChatGPT end chats fixated on violence",
+    "happened": "OpenAI announced on October 30, 2026 that it will publish a Community Safety Report and add ChatGPT safeguards against violence, with further limits for teens.",
+    "keyPoints": [
+      "As part of bringing imminent threats of violence to law enforcement, OpenAI says \"we made over 200 law enforcement referrals in Q3 2026.\"",
+      "The first report, covering the second half of 2026, is due in early 2027 and every six months after, with anonymized examples and data on its safeguards.",
+      "For all users, ChatGPT will restrict reconstructions of past mass attacks; when a user fixates on violence it can end the chat, and repeated endings may pause the account.",
+      "Teens face new limits on practical information about weapons and security systems even without signs of violent intent."
+    ],
+    "evidence": "Company post announcing policy changes and a future report. The referral count is OpenAI's own figure, given without a breakdown.",
+    "uncertain": "The safeguards had not yet launched; OpenAI says they \"will begin rolling out in the next few weeks.\"",
+    "source": "OpenAI · Company post",
+    "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens/"
   }
 ]
