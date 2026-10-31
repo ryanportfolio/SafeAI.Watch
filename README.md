@@ -17,7 +17,7 @@ Every entry sets out what happened, the source's key points and what the evidenc
 
 > **Cisco Talos says the VOLTA infostealer asks commercial AI models to rank its victims and switches models on refusal**
 >
-> **What happened.** Cisco Talos published an analysis on October 31, 2026 of VOLTA, a self-deleting Windows infostealer that sends a profile of each victim to an AI model through OpenRouter.
+> **What happened.** Cisco Talos published an analysis on October 31, 2026 of VOLTA, a self-deleting Windows infostealer that can send a profile of each victim to an AI model through OpenRouter.
 >
 > **Key points.**
 >

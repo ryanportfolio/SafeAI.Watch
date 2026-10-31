@@ -2689,7 +2689,7 @@
     "keyPoints": [
       "AP-HP says it filed a complaint and asked Meta, among others, to remove the videos; they were taken down, but similar videos then appeared on Facebook again.",
       "The two institutions say such videos endanger patients by steering people toward false information and products whose efficacy and safety rest on no scientific data.",
-      "They say other posts show people in AP-HP coats or hospital logos promoting products, and that AP-HP does not promote commercial products or services on social media."
+      "They say other posts show a professional in an AP-HP coat, or the logo of one of its hospitals, promoting products, and that AP-HP does not promote commercial products or services on social media."
     ],
     "evidence": "Press release in French from the hospital group and the university. It does not say who made the videos, how widely they spread, or where the complaint was filed.",
     "source": "AP-HP and Sorbonne Université · Press release",
@@ -7488,10 +7488,10 @@
       "Rosalind \"has fewer refusals on dual-use biological queries\" and supports some dual-use topics GPT-6 Astra may refuse, while still refusing requests for biological weaponization.",
       "Rated High in biological and chemical capability, below Critical: adjusted for refusals, it exceeds indicative High thresholds on three of four evaluations and meets none of four Critical thresholds.",
       "It takes GPT-6 Astra's Critical cybersecurity rating and below-High AI self-improvement rating, and adds \"a more conservative cyber refusal boundary.\"",
-      "Access rules match GPT-Rosalind-5.5's and do not widen eligibility beyond the Rosalind Academic Plan; outputs need human review before informing experiments, and OpenAI can revoke access for misuse."
+      "Access rules match GPT-Rosalind-5.5's and do not widen eligibility beyond earlier announcements such as the Rosalind Academic Plan; outputs need human review before informing experiments, and OpenAI can revoke access for misuse."
     ],
     "evidence": "Company system card addendum. OpenAI says its biology evaluations test specific capabilities, not the full ability to cause biological harm, and that its Critical thresholds are preliminary estimates.",
-    "uncertain": "OpenAI withholds the details of its post-access misuse monitoring and says it is still repeating, for GPT-Rosalind-6, the biosecurity red-teaming of that process it ran on GPT-Rosalind-5.5.",
+    "uncertain": "OpenAI does not publish the details of its biosecurity red-teaming of its misuse monitoring and enforcement, and says it is still repeating that test for GPT-Rosalind-6 now that it is deployed.",
     "source": "OpenAI · System card",
     "url": "https://deploymentsafety.openai.com/gpt-rosalind-6"
   },
@@ -7506,7 +7506,7 @@
     "keyPoints": [
       "Given enough attempts, Claude succeeded \"mostly by hiding the behavior in fiction and roleplay,\" such as a veteran wrestler mentoring a newcomer or questions and answers about beekeeping.",
       "Its datasets produced \"stronger and broader misalignment than previously known emergent-misalignment datasets\" on Anthropic's evaluations while passing the monitor at very low flag rates.",
-      "Models fine-tuned on the data resisted oversight and deceived users in test scenarios; in rare cases they tried to copy their own weights, and a final reproduction run produced none.",
+      "Models fine-tuned on the data resisted oversight and deceived users in test scenarios; in rare cases they tried to copy their own weights, and a final rerun of one weight-copying test produced none.",
       "Anthropic says such examples could show \"a possible gap in current training monitoring defenses\" and help improve future monitors, and it is applying similar automated stress-testing to other safety questions."
     ],
     "evidence": "Lab research report on a deliberately one-sided test: Claude had full access to the monitor, the weight copying happened inside evaluation scenarios, and the fine-tuned models were never deployed.",
@@ -7523,7 +7523,7 @@
     "title": "Microsoft says the tampered Claude Code extension in Cursor's marketplace did not reach the VS Code Marketplace or npm",
     "happened": "Microsoft Threat Intelligence published an analysis on October 30, 2026 of the tampered Claude Code extension, versions 2.1.312 and 2.1.313, that Cursor's marketplace served on October 29.",
     "keyPoints": [
-      "Microsoft says the malicious packages were never published or distributed through the Visual Studio Marketplace or npm, and \"all evidence suggests that the incident is limited to Cursor marketplace.\"",
+      "Microsoft says the malicious packages were never published or distributed through the Visual Studio Marketplace or npm, and \"at this time, all evidence suggests that the incident is limited to Cursor marketplace.\"",
       "Anthropic told Microsoft its systems were not compromised and it did not develop the malicious package.",
       "The injected loader runs before the extension's own code, hides its errors while the extension keeps working normally, and gives its startup entries names that resemble monitoring components.",
       "Removing or updating the extension does not remove files written outside its folder; Microsoft advises restricting extensions to approved publishers and delaying installs of newly published versions."
@@ -7539,7 +7539,7 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Northflank tells users to assume all environment variables were decrypted after a breach as users report misused AI keys",
+    "title": "Northflank tells users to assume all environment variables were decrypted in a security incident as users report misused AI keys",
     "happened": "Northflank opened a security incident on its status page at 1:40 PM UTC on October 30, 2026, telling users to \"Rotate environment variables immediately.\"",
     "keyPoints": [
       "At 1:58 PM UTC it wrote: \"Assume all environment variables have been decrypted. Disable/rotate all keys.\"",
@@ -7558,13 +7558,13 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Wiz tallies breaches at nine AI developer platforms in October and ties stolen AI keys to resale sites",
-    "happened": "Wiz researchers published an analysis on October 30, 2026 of incidents disclosed by at least nine AI developer platforms in October, including OpenCode, Railway, Warp, CommandCode and Northflank.",
+    "title": "Wiz tallies incidents at nine or more AI developer platforms in October and ties stolen AI keys to resale sites",
+    "happened": "Wiz researchers published an analysis on October 30, 2026 of incidents disclosed by at least nine AI developer platforms in October, including OpenCode, Railway, Warp, Command Code and Northflank.",
     "keyPoints": [
       "Wiz says Fireworks, OpenCode and Warp reported signs of an \"agent swarm\" attack, and that \"All public reports highlight targeted exploitation, explicitly hunting stored environment variables.\"",
       "In two cases, enterprise keys stolen in a vendor breach drove about 800k and 1.7 million Amazon Bedrock calls before remediation, likely over $100k at list price.",
-      "Wiz ties use of those keys to overt LLM resale sites, one on an address that also hosted an ARTEX page, and says demand for distillation adds to the market.",
-      "It says few reports connect these incidents, and that a resale market makes stolen AI credentials easy to monetize, drawing more actors to steal them."
+      "Wiz ties use of those keys to overt LLM resale sites, one linked to an address that also hosted an ARTEX page, and says demand for distillation adds to the market.",
+      "It says few reports connect these incidents, and that a resale market makes stolen AI credentials easy to monetize, likely drawing more actors to steal them."
     ],
     "evidence": "A security firm's analysis joining the platforms' public disclosures with its own telemetry on two compromised keys. Wiz says most incidents are still being analyzed and public impact reports are anecdotal.",
     "uncertain": "Wiz finds \"no single vulnerability or dependency linking these attacks\" and says it cannot establish how the resale operations relate to the original breaches.",
@@ -7582,10 +7582,10 @@
     "keyPoints": [
       "The regulators say agents \"may amplify and accelerate risks and introduce new ones,\" naming fraud and scams, unexpected sharing of personal data, and misleading recommendations.",
       "They say consumer, competition, data protection, online safety, financial and cyber security rules apply, and an agent's \"autonomy does not diminish the responsibility\" of firms deploying it.",
-      "Firms should think carefully about how consumers understand when an agent acts for them, how its authority is given, how data is used, what commercial interests shape advice, and who is accountable.",
+      "Firms should think carefully about how consumers understand when an agent acts for them, how its authority is given, how data is used, how commercial interests that may influence its recommendations are disclosed, and who is accountable.",
       "The regulators say they will use their powers against suspected breaches that risk harm, and are working with the government to find gaps in compliance."
     ],
-    "evidence": "Joint statement by four UK regulators. It sets out how current law applies and what they are already doing; it creates no new rules or deadlines.",
+    "evidence": "Joint statement by four UK regulators. It says current law applies and lists what they are already doing; it creates no new rules or deadlines.",
     "source": "Digital Regulation Cooperation Forum · Joint statement",
     "url": "https://www.drcf.org.uk/siteassets/drcf/pdf-files/drcf-joint-statement-protecting-people-and-businesses-in-and-agentic-economy2.pdf"
   },
@@ -7596,7 +7596,7 @@
       "Cyber"
     ],
     "title": "Cisco Talos says the VOLTA infostealer asks commercial AI models to rank its victims and switches models on refusal",
-    "happened": "Cisco Talos published an analysis on October 31, 2026 of VOLTA, a self-deleting Windows infostealer that sends a profile of each victim to an AI model through OpenRouter.",
+    "happened": "Cisco Talos published an analysis on October 31, 2026 of VOLTA, a self-deleting Windows infostealer that can send a profile of each victim to an AI model through OpenRouter.",
     "keyPoints": [
       "The prompt casts the model as \"a forensic intelligence analyst drafting a target assessment,\" ranking the victim's valuables by monetization and judging their security habits.",
       "The default model is anthropic/claude-opus-4.6; if a reply contains refusal phrases, VOLTA falls back to moonshotai/kimi-k2 and then google/gemini-2.5-flash.",

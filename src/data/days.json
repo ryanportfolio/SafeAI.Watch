@@ -1,11 +1,11 @@
 [
   {
     "date": "2026-10-30",
-    "summary": "Northflank tells users to assume all environment variables were decrypted after a breach, and OpenAI offers GPT-Rosalind-6 for biology research through trusted access. Wiz tallies breaches at nine AI developer platforms, and four UK regulators say existing law already applies to personal AI agents.",
+    "summary": "Northflank tells users to assume all environment variables were decrypted in a security incident, and OpenAI offers GPT-Rosalind-6 for biology research through trusted access. Wiz tallies incidents at nine or more AI developer platforms, and four UK regulators say existing law already applies to personal AI agents.",
     "highlights": [
       "2026-10-30-northflank-tells-users-to-assume-all-environment-variables",
       "2026-10-30-openai-offers-gpt-rosalind-6-for-biology-research-through",
-      "2026-10-30-wiz-tallies-breaches-at-nine-ai-developer-platforms-in",
+      "2026-10-30-wiz-tallies-incidents-at-nine-or-more-ai-developer-platforms",
       "2026-10-30-four-uk-regulators-say-existing-law-already-applies-to",
       "2026-10-30-anthropic-had-claude-write-harmless-looking-training-data"
     ]
