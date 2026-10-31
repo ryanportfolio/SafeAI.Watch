@@ -4,33 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 388 dated, sourced entries drawn as a burst, one dot per entry: 79 warnings, 91 incidents, 107 governance, 111 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 400 dated, sourced entries drawn as a burst, one dot per entry: 79 warnings, 99 incidents, 108 governance, 114 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 388 entries from Mar 22, 2023 to Oct 30, 2026 (79 warnings, 91 incidents, 107 governance, 111 research), drawn from 211 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 400 entries from Mar 22, 2023 to Oct 31, 2026 (79 warnings, 99 incidents, 108 governance, 114 research), drawn from 216 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 30, 2026, filed under Governance:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 31, 2026, filed under Incidents:
 
-> **OpenAI says it made over 200 law enforcement referrals in Q3 and will let ChatGPT end chats fixated on violence**
+> **Cisco Talos says the VOLTA infostealer asks commercial AI models to rank its victims and switches models on refusal**
 >
-> **What happened.** OpenAI announced on October 30, 2026 that it will publish a Community Safety Report and add ChatGPT safeguards against violence, with further limits for teens.
+> **What happened.** Cisco Talos published an analysis on October 31, 2026 of VOLTA, a self-deleting Windows infostealer that can send a profile of each victim to an AI model through OpenRouter.
 >
 > **Key points.**
 >
-> - As part of bringing imminent threats of violence to law enforcement, OpenAI says "we made over 200 law enforcement referrals in Q3 2026."
-> - The first report, covering the second half of 2026, is due in early 2027 and every six months after, with anonymized examples and data on its safeguards.
-> - For all users, ChatGPT will restrict reconstructions of past mass attacks; when a user fixates on violence it can end the chat, and repeated endings may pause the account.
-> - Teens face new limits on practical information about weapons and security systems even without signs of violent intent.
+> - The prompt casts the model as "a forensic intelligence analyst drafting a target assessment," ranking the victim's valuables by monetization and judging their security habits.
+> - The default model is anthropic/claude-opus-4.6; if a reply contains refusal phrases, VOLTA falls back to moonshotai/kimi-k2 and then google/gemini-2.5-flash.
+> - Before the AI step, it uses stolen sessions to build the profile, such as searching the victim's Gmail for receipts that confirm a home address.
+> - Talos says the stealer's build template points to malware sold to customers, and that "refusal resilience may become a standard design requirement."
 >
-> **Evidence.** Company post announcing policy changes and a future report. The referral count is OpenAI's own figure, given without a breakdown.
+> **Evidence.** A threat intelligence team's reverse-engineering analysis of the malware's code and configuration. It describes how VOLTA is built and what it collects.
 >
-> **Uncertain.** The safeguards had not yet launched; OpenAI says they "will begin rolling out in the next few weeks."
+> **Uncertain.** Talos gives no count of infections or victims, and its view that VOLTA is sold to customers is an inference from the build template.
 >
-> **Source.** [OpenAI · Company post](https://openai.com/index/community-safety-report-and-new-protections-for-teens/)
+> **Source.** [Cisco Talos · Research report](https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/)
 
 ## Run it locally
 
