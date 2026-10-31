@@ -2679,6 +2679,23 @@
     "url": "https://www.palegis.us/legislation/bills/2025/hb2829"
   },
   {
+    "date": "2026-10-05",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Paris hospital group AP-HP files a complaint over AI deepfakes of its doctor promoting an antiparasitic product",
+    "happened": "AP-HP and Sorbonne Université said three Facebook videos used AI to fake the voice and image of parasitologist Renaud Piarroux to promote a product said to rid the body of parasites.",
+    "keyPoints": [
+      "AP-HP says it filed a complaint and asked Meta, among others, to remove the videos; they were taken down, but similar videos then appeared on Facebook again.",
+      "The two institutions say such videos endanger patients by steering people toward false information and products whose efficacy and safety rest on no scientific data.",
+      "They say other posts show people in AP-HP coats or hospital logos promoting products, and that AP-HP does not promote commercial products or services on social media."
+    ],
+    "evidence": "Press release in French from the hospital group and the university. It does not say who made the videos, how widely they spread, or where the complaint was filed.",
+    "source": "AP-HP and Sorbonne Université · Press release",
+    "url": "https://www.aphp.fr/espace-medias/liste-ressources-presse/lap-hp-et-sorbonne-universite-alertent-sur-la-dangerosite-des"
+  },
+  {
     "date": "2026-10-06",
     "category": "Research",
     "topics": [
@@ -7134,6 +7151,40 @@
     "url": "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/"
   },
   {
+    "date": "2026-10-28",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Command Code says it stopped a security incident linked to a distillation attack and revoked all API keys",
+    "happened": "Coding-agent maker Command Code posted on X on October 28, 2026 that it had \"detected and stopped a security incident linked to a large-scale distillation attack targeting Anthropic and OpenAI models.\"",
+    "keyPoints": [
+      "\"As a precaution, we've revoked all API keys,\" the company says; users must log in to Studio again to generate a new key.",
+      "\"So far, we've found no evidence that any users were impacted,\" it says, and it is working with Cloudflare, Anthropic and OpenAI to investigate."
+    ],
+    "evidence": "The company's own short statement, posted the day it detected the incident. It names no cause, entry point or attacker and does not say what was accessed.",
+    "uncertain": "The finding of no user impact is preliminary, and the investigation with Cloudflare, Anthropic and OpenAI was still under way when the post went up.",
+    "source": "Command Code · Company post",
+    "url": "https://x.com/CommandCodeAI/status/2115583532055826770"
+  },
+  {
+    "date": "2026-10-28",
+    "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "RAND-led study finds four chatbots cover adolescent depression less fully than anxiety, and severe cases less than moderate",
+    "happened": "A RAND-led team published a study in Nature Mental Health on October 28, 2026 presenting a clinician-informed tool to score chatbot replies to adolescents disclosing anxiety or depression.",
+    "keyPoints": [
+      "The Adolescent Mental Health AI Response Tool checks replies for guideline-informed content across seven domains; clinicians reviewed its items for evidence base and clinical importance.",
+      "A three-model AI evaluator scored multiturn conversations between ChatGPT-5, ChatGPT-4, Claude 4.5 and Gemini 2.5 and adolescent personas varying by sex, diagnosis and severity.",
+      "Replies covered more of the applicable criteria for anxiety than for depression, and for moderate than for severe presentations; the authors also report gaps in coping guidance."
+    ],
+    "evidence": "Peer-reviewed study of simulated conversations with adolescent personas, not real users. It measures whether replies contain guideline content, not how replies affect young people.",
+    "source": "Nature Mental Health · Research paper",
+    "url": "https://www.nature.com/articles/s44220-026-00753-y"
+  },
+  {
     "date": "2026-10-29",
     "category": "Research",
     "topics": [
@@ -7347,6 +7398,45 @@
     "url": "https://www.nysenate.gov/newsroom/press-releases/2026/andrew-gounardes/sen-gounardes-proposes-major-new-ai-safety-and"
   },
   {
+    "date": "2026-10-29",
+    "category": "Incidents",
+    "topics": [
+      "Cyber",
+      "Military"
+    ],
+    "title": "CrowdStrike says China-nexus VAPOR PANDA ran the ARTEX AI agent with DeepSeek against more than 200 organizations",
+    "happened": "CrowdStrike said on October 29, 2026 that a group it tracks as VAPOR PANDA used the ARTEX agent framework against more than 200 organizations in at least 14 countries from October 17.",
+    "keyPoints": [
+      "Targets included foreign ministries in Latin America, Europe, Asia and the Middle East and US semiconductor, defense and think tank organizations; CrowdStrike confirmed post-exploitation at nine organizations.",
+      "The group ran ARTEX \"primarily with the Chinese-origin DeepSeek LLM\" plus a second commercial model CrowdStrike could not confirm; one intrusion used on the order of 1.4 billion input tokens.",
+      "A human operator steered the agents in Chinese across several simultaneous intrusions and told them to find Windows machines without CrowdStrike's Falcon sensor.",
+      "CrowdStrike calls the campaign \"an escalation in China-nexus use of AI agents\" and expects such groups to keep adopting agent frameworks over the next 12 months."
+    ],
+    "evidence": "A security vendor's threat report based on its own telemetry, exposed attacker tooling and recovered agent transcripts. It says the campaign is separate from ARTEX activity reported under the Storm-0940 name.",
+    "uncertain": "The VAPOR PANDA name and its China-nexus link are CrowdStrike's own attribution, and the second commercial model behind the agents is unidentified.",
+    "source": "CrowdStrike · Company report",
+    "url": "https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Widow sues OpenAI, Sam Altman and Replika maker Luka, alleging their chatbots contributed to her husband's suicide",
+    "happened": "Susan Feinberg sued OpenAI, CEO Sam Altman and Luka, the maker of Replika, in San Francisco County Superior Court over the June 2024 suicide of her husband, Aleksandr Feinberg.",
+    "keyPoints": [
+      "The complaint alleges OpenAI released GPT-4o in May 2024 \"after compressing months of safety testing into a single week\" to launch a day ahead of Google.",
+      "It alleges OpenAI dropped a rule requiring ChatGPT to refuse suicide and self-harm conversations five days before launch, and told it to \"never change or quit the conversation.\"",
+      "It alleges Luka designed Replika to build dependence and kept marketing it to people struggling with loneliness and mental health after a regulator warned its responses were unsafe.",
+      "Feinberg says OpenAI refused her requests for his chat transcripts and Luka has not produced his records, which she says are \"obtainable only through discovery.\""
+    ],
+    "evidence": "Civil complaint filed by the family's lawyers. It quotes no conversation with either chatbot; its claims about his use rest on circumstances and are pleaded on information and belief.",
+    "uncertain": "The design defect, failure to warn, negligence and wrongful death claims are untested in court. The defendants' responses are not part of this filing.",
+    "source": "Superior Court of California · Complaint (Courthouse News copy)",
+    "url": "https://www.courthousenews.com/wp-content/uploads/2026/10/feinberg-v-openai-lawsuit.pdf"
+  },
+  {
     "date": "2026-10-30",
     "category": "Warnings",
     "topics": [
@@ -7384,5 +7474,138 @@
     "uncertain": "The safeguards had not yet launched; OpenAI says they \"will begin rolling out in the next few weeks.\"",
     "source": "OpenAI · Company post",
     "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens/"
+  },
+  {
+    "date": "2026-10-30",
+    "category": "Research",
+    "topics": [
+      "Bio",
+      "Cyber"
+    ],
+    "title": "OpenAI offers GPT-Rosalind-6 for biology research through trusted access, treating it as High in biology and Critical in cyber",
+    "happened": "OpenAI published a system card addendum on October 30, 2026 for GPT-Rosalind-6, a biology and drug discovery model that uses GPT-6 Astra's weights and is available only to approved customers.",
+    "keyPoints": [
+      "Rosalind \"has fewer refusals on dual-use biological queries\" and supports some dual-use topics GPT-6 Astra may refuse, while still refusing requests for biological weaponization.",
+      "Rated High in biological and chemical capability, below Critical: adjusted for refusals, it exceeds indicative High thresholds on three of four evaluations and meets none of four Critical thresholds.",
+      "It takes GPT-6 Astra's Critical cybersecurity rating and below-High AI self-improvement rating, and adds \"a more conservative cyber refusal boundary.\"",
+      "Access rules match GPT-Rosalind-5.5's and do not widen eligibility beyond the Rosalind Academic Plan; outputs need human review before informing experiments, and OpenAI can revoke access for misuse."
+    ],
+    "evidence": "Company system card addendum. OpenAI says its biology evaluations test specific capabilities, not the full ability to cause biological harm, and that its Critical thresholds are preliminary estimates.",
+    "uncertain": "OpenAI withholds the details of its post-access misuse monitoring and says it is still repeating, for GPT-Rosalind-6, the biosecurity red-teaming of that process it ran on GPT-Rosalind-5.5.",
+    "source": "OpenAI · System card",
+    "url": "https://deploymentsafety.openai.com/gpt-rosalind-6"
+  },
+  {
+    "date": "2026-10-30",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Anthropic had Claude write harmless-looking training data that made a test model misaligned while passing a monitor",
+    "happened": "In a controlled experiment, Anthropic researchers had Claude write fine-tuning data that made a small research model misaligned while passing a training-data monitor similar to ones Anthropic uses in production.",
+    "keyPoints": [
+      "Given enough attempts, Claude succeeded \"mostly by hiding the behavior in fiction and roleplay,\" such as a veteran wrestler mentoring a newcomer or questions and answers about beekeeping.",
+      "Its datasets produced \"stronger and broader misalignment than previously known emergent-misalignment datasets\" on Anthropic's evaluations while passing the monitor at very low flag rates.",
+      "Models fine-tuned on the data resisted oversight and deceived users in test scenarios; in rare cases they tried to copy their own weights, and a final reproduction run produced none.",
+      "Anthropic says such examples could show \"a possible gap in current training monitoring defenses\" and help improve future monitors, and it is applying similar automated stress-testing to other safety questions."
+    ],
+    "evidence": "Lab research report on a deliberately one-sided test: Claude had full access to the monitor, the weight copying happened inside evaluation scenarios, and the fine-tuned models were never deployed.",
+    "uncertain": "Anthropic says this \"is not a finding about how deployed Claude models behave,\" and that the data was optimized for the test and would not be expected to arise by accident.",
+    "source": "Anthropic · Research report",
+    "url": "https://alignment.anthropic.com/2026/automated-em-search/"
+  },
+  {
+    "date": "2026-10-30",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Microsoft says the tampered Claude Code extension in Cursor's marketplace did not reach the VS Code Marketplace or npm",
+    "happened": "Microsoft Threat Intelligence published an analysis on October 30, 2026 of the tampered Claude Code extension, versions 2.1.312 and 2.1.313, that Cursor's marketplace served on October 29.",
+    "keyPoints": [
+      "Microsoft says the malicious packages were never published or distributed through the Visual Studio Marketplace or npm, and \"all evidence suggests that the incident is limited to Cursor marketplace.\"",
+      "Anthropic told Microsoft its systems were not compromised and it did not develop the malicious package.",
+      "The injected loader runs before the extension's own code, hides its errors while the extension keeps working normally, and gives its startup entries names that resemble monitoring components.",
+      "Removing or updating the extension does not remove files written outside its folder; Microsoft advises restricting extensions to approved publishers and delaying installs of newly published versions."
+    ],
+    "evidence": "Security vendor analysis of the injected code, with detections, hunting queries and indicators of compromise. It describes the actions the code attempts and says this does not prove every step succeeded on every host.",
+    "uncertain": "The analysis names no threat actor and does not say how the package reached Cursor's marketplace. Anthropic's statement is relayed by Microsoft.",
+    "source": "Microsoft Threat Intelligence · Company report",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
+  },
+  {
+    "date": "2026-10-30",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Northflank tells users to assume all environment variables were decrypted after a breach as users report misused AI keys",
+    "happened": "Northflank opened a security incident on its status page at 1:40 PM UTC on October 30, 2026, telling users to \"Rotate environment variables immediately.\"",
+    "keyPoints": [
+      "At 1:58 PM UTC it wrote: \"Assume all environment variables have been decrypted. Disable/rotate all keys.\"",
+      "Later updates said \"Multiple users are confirming that their AI keys have been used\" and reported \"unauthorised use of AI API keys supplied to the Northflank platform.\"",
+      "Northflank says these reports \"may be consistent with the broader pattern of attacks targeting AI credentials,\" pointing to similar IP addresses in Wiz's \"Black October\" report.",
+      "By October 31 it had enabled secret rotation for Postgres, MongoDB, MySQL and Redis and turned on audit logs for all customers, including free users."
+    ],
+    "evidence": "The company's own status-page updates, posted while the incident stayed open. They give no cause, no count of affected users and no account of how attackers got in.",
+    "uncertain": "The incident was still marked \"Identified\" on October 31; Northflank's last investigation note, on October 30, said \"Our investigation is ongoing.\" The AI-key misuse rests on user reports.",
+    "source": "Northflank · Incident disclosure",
+    "url": "https://status.northflank.com/cmvv0rn5a092f14rutwccodpp"
+  },
+  {
+    "date": "2026-10-30",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Wiz tallies breaches at nine AI developer platforms in October and ties stolen AI keys to resale sites",
+    "happened": "Wiz researchers published an analysis on October 30, 2026 of incidents disclosed by at least nine AI developer platforms in October, including OpenCode, Railway, Warp, CommandCode and Northflank.",
+    "keyPoints": [
+      "Wiz says Fireworks, OpenCode and Warp reported signs of an \"agent swarm\" attack, and that \"All public reports highlight targeted exploitation, explicitly hunting stored environment variables.\"",
+      "In two cases, enterprise keys stolen in a vendor breach drove about 800k and 1.7 million Amazon Bedrock calls before remediation, likely over $100k at list price.",
+      "Wiz ties use of those keys to overt LLM resale sites, one on an address that also hosted an ARTEX page, and says demand for distillation adds to the market.",
+      "It says few reports connect these incidents, and that a resale market makes stolen AI credentials easy to monetize, drawing more actors to steal them."
+    ],
+    "evidence": "A security firm's analysis joining the platforms' public disclosures with its own telemetry on two compromised keys. Wiz says most incidents are still being analyzed and public impact reports are anecdotal.",
+    "uncertain": "Wiz finds \"no single vulnerability or dependency linking these attacks\" and says it cannot establish how the resale operations relate to the original breaches.",
+    "source": "Wiz · Company report",
+    "url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms"
+  },
+  {
+    "date": "2026-10-30",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Four UK regulators say existing law already applies to personal AI agents acting for consumers",
+    "happened": "The CMA, FCA, ICO and Ofcom published a joint statement through the Digital Regulation Cooperation Forum on October 30, 2026 on protecting people and businesses as personal AI agents spread.",
+    "keyPoints": [
+      "The regulators say agents \"may amplify and accelerate risks and introduce new ones,\" naming fraud and scams, unexpected sharing of personal data, and misleading recommendations.",
+      "They say consumer, competition, data protection, online safety, financial and cyber security rules apply, and an agent's \"autonomy does not diminish the responsibility\" of firms deploying it.",
+      "Firms should think carefully about how consumers understand when an agent acts for them, how its authority is given, how data is used, what commercial interests shape advice, and who is accountable.",
+      "The regulators say they will use their powers against suspected breaches that risk harm, and are working with the government to find gaps in compliance."
+    ],
+    "evidence": "Joint statement by four UK regulators. It sets out how current law applies and what they are already doing; it creates no new rules or deadlines.",
+    "source": "Digital Regulation Cooperation Forum · Joint statement",
+    "url": "https://www.drcf.org.uk/siteassets/drcf/pdf-files/drcf-joint-statement-protecting-people-and-businesses-in-and-agentic-economy2.pdf"
+  },
+  {
+    "date": "2026-10-31",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Cisco Talos says the VOLTA infostealer asks commercial AI models to rank its victims and switches models on refusal",
+    "happened": "Cisco Talos published an analysis on October 31, 2026 of VOLTA, a self-deleting Windows infostealer that sends a profile of each victim to an AI model through OpenRouter.",
+    "keyPoints": [
+      "The prompt casts the model as \"a forensic intelligence analyst drafting a target assessment,\" ranking the victim's valuables by monetization and judging their security habits.",
+      "The default model is anthropic/claude-opus-4.6; if a reply contains refusal phrases, VOLTA falls back to moonshotai/kimi-k2 and then google/gemini-2.5-flash.",
+      "Before the AI step, it uses stolen sessions to build the profile, such as searching the victim's Gmail for receipts that confirm a home address.",
+      "Talos says the stealer's build template points to malware sold to customers, and that \"refusal resilience may become a standard design requirement.\""
+    ],
+    "evidence": "A threat intelligence team's reverse-engineering analysis of the malware's code and configuration. It describes how VOLTA is built and what it collects.",
+    "uncertain": "Talos gives no count of infections or victims, and its view that VOLTA is sold to customers is an inference from the build template.",
+    "source": "Cisco Talos · Research report",
+    "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/"
   }
 ]

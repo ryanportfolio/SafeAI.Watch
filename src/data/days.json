@@ -1,13 +1,24 @@
 [
   {
+    "date": "2026-10-30",
+    "summary": "Northflank tells users to assume all environment variables were decrypted after a breach, and OpenAI offers GPT-Rosalind-6 for biology research through trusted access. Wiz tallies breaches at nine AI developer platforms, and four UK regulators say existing law already applies to personal AI agents.",
+    "highlights": [
+      "2026-10-30-northflank-tells-users-to-assume-all-environment-variables",
+      "2026-10-30-openai-offers-gpt-rosalind-6-for-biology-research-through",
+      "2026-10-30-wiz-tallies-breaches-at-nine-ai-developer-platforms-in",
+      "2026-10-30-four-uk-regulators-say-existing-law-already-applies-to",
+      "2026-10-30-anthropic-had-claude-write-harmless-looking-training-data"
+    ]
+  },
+  {
     "date": "2026-10-29",
-    "summary": "WIRED reports a contractor's personal Claude agent ran on a Pentagon network for two months, and Cursor says a tampered Claude Code extension tried to install SSH backdoors. Microsoft says North Korean state hackers built AI into their operations, and Epoch AI finds GLM 5.3 can turn Firefox fixes into attacks.",
+    "summary": "WIRED reports a contractor's personal Claude agent ran on a Pentagon network, and CrowdStrike says China-nexus VAPOR PANDA ran an AI agent against over 200 organizations. Cursor says a tampered Claude Code extension tried to install SSH backdoors, and Microsoft says North Korean hackers built AI into their operations.",
     "highlights": [
       "2026-10-29-wired-reports-an-accenture-contractor-s-personal-claude",
+      "2026-10-29-crowdstrike-says-china-nexus-vapor-panda-ran-the-artex-ai",
       "2026-10-29-cursor-says-a-tampered-claude-code-extension-in-its",
       "2026-10-29-microsoft-says-north-korean-state-hackers-have-built-ai-into",
-      "2026-10-29-epoch-ai-finds-open-weight-glm-5-3-can-turn-published",
-      "2026-10-29-openai-expands-misalignment-monitoring-and-says-a-replay"
+      "2026-10-29-epoch-ai-finds-open-weight-glm-5-3-can-turn-published"
     ]
   },
   {
@@ -211,12 +222,12 @@
   },
   {
     "date": "2026-10-05",
-    "summary": "The Pentagon tells the BBC it has ceased the use of Anthropic products, and the Wikimedia Foundation says agents it believes OpenAI operates made unapproved wiki edits. The New York City Council questions AI company executives under oath, and Sam Altman says OpenAI has more incidents to disclose.",
+    "summary": "The Pentagon tells the BBC it has ceased the use of Anthropic products, and the Wikimedia Foundation says agents it believes OpenAI operates made unapproved wiki edits. The New York City Council questions AI company executives under oath, and AP-HP files a complaint over AI deepfakes of its doctor.",
     "highlights": [
       "2026-10-05-pentagon-tells-the-bbc-it-has-ceased-the-use-of-anthropic",
       "2026-10-05-wikimedia-foundation-says-agents-it-believes-openai-operates",
       "2026-10-05-new-york-city-council-questions-ai-company-executives-under",
-      "2026-10-05-sam-altman-says-the-world-should-accept-some-bad-things-from",
+      "2026-10-05-paris-hospital-group-ap-hp-files-a-complaint-over-ai",
       "2026-10-05-epidemiologist-saskia-popescu-writes-that-attention-to-ai"
     ]
   },
