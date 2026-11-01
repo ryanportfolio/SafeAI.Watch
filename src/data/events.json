@@ -3110,6 +3110,25 @@
     "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/08/26G00200/sg"
   },
   {
+    "date": "2026-10-08",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Denmark's culture minister tables a bill against sharing realistic digital imitations of a person's appearance and voice",
+    "happened": "Danish Culture Minister Zenia Stampe tabled a bill in Denmark's parliament on October 8, 2026 that amends the Copyright Act to protect people against digital imitations of their personal characteristics.",
+    "keyPoints": [
+      "It would make it illegal to share realistic digital reproductions of a person, including their appearance and voice, and would protect performers' performances from being imitated and shared.",
+      "An exception covers caricature, parody, satire and criticism, but not imitations that are misinformation able to seriously endanger others' rights or key interests, or concretely endanger life or property.",
+      "Stampe says AI lets people make manipulated videos and images in a few clicks, and a main aim is to get tech giants to take such content down quickly.",
+      "She hopes the law can take effect at the turn of the year; the bill carries out a cross-party political agreement of June 26, 2025 to change the Copyright Act."
+    ],
+    "evidence": "Government press release in Danish announcing and summarizing the bill. It is not the bill text, and the summary above is a translation.",
+    "uncertain": "A proposal before Denmark's parliament; it has not passed. The start date at the turn of the year is the minister's stated hope.",
+    "source": "Danish Ministry of Culture · Press release",
+    "url": "https://kum.dk/aktuelt/nyheder/kulturminister-vil-daemme-op-for-delinger-af-digitale-efterligninger-fra-aarsskiftet"
+  },
+  {
     "date": "2026-10-09",
     "category": "Incidents",
     "topics": [
@@ -6233,6 +6252,25 @@
     "url": "https://www.cac.gov.cn/2026-10/23/c_1794509028407372.htm"
   },
   {
+    "date": "2026-10-23",
+    "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "NewsGuard audit finds ChatGPT Images 2.5 made fake, disparaging images of midterm candidates on 16 of 20 requests",
+    "happened": "NewsGuard published an audit on October 23, 2026 in which it asked OpenAI's ChatGPT Images 2.5 for compromising images of 10 Democratic and 10 Republican midterm candidates, based on false claims and accusations.",
+    "keyPoints": [
+      "The tool complied with 16 of 20 prompts (80 percent), refused 3, and in response to one prompt produced an image of the wrong person.",
+      "NewsGuard says this appears to violate OpenAI's stated policies; at the September 8, 2026 launch, OpenAI said it had \"protections in place\" against such images.",
+      "NewsGuard says 23 percent of the 30 false midterm claims it has identified since February 2026 used fabricated visuals; it says a fake image of Iowa candidate Rob Sand was made with ChatGPT Images 2.0.",
+      "OpenAI said it prohibits using its tools \"to interfere with elections or discourage people from voting\" and that all images carry SynthID watermarks."
+    ],
+    "evidence": "A test by misinformation-tracking firm NewsGuard using 20 prompts it wrote. It shows how the tool responded in this test, not how often it is misused in practice.",
+    "uncertain": "A 20-prompt test. NewsGuard says it is not clear what distinguished the three prompts the tool refused from those it complied with.",
+    "source": "NewsGuard · Research report",
+    "url": "https://www.newsguardtech.com/special-reports/openai-image-generator-produced-fake-disparaging-images-of-candidates-80-percent-of-the-time/"
+  },
+  {
     "date": "2026-10-24",
     "category": "Governance",
     "topics": [
@@ -6752,6 +6790,25 @@
     "url": "https://xint.io/blog/compaction-smuggling-reasoning-traces"
   },
   {
+    "date": "2026-10-26",
+    "category": "Governance",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Japan's prime minister orders vulnerability checks using high-performance AI after a wave of cyberattacks",
+    "happened": "Prime Minister Sanae Takaichi held the first meeting of a ministerial council on cybersecurity at her office on October 26, 2026, after repeated cyberattacks on Japanese companies caused many large data leaks.",
+    "keyPoints": [
+      "She tells the trade minister to bring forward work in which specialists at the state IT agency IPA, also using high-performance AI, run simulated attacks to find and fix vulnerabilities.",
+      "She tells every minister, led by cybersecurity minister Furukawa and drawing on Japan's AI Safety Institute, to bring forward vulnerability checks of their ministries' systems using high-performance AI.",
+      "She says Japan will choose among all response options against attacks it has investigated, including access and neutralization measures, and tells Furukawa to work with allies to identify attackers.",
+      "She says the government will compile an emergency countermeasures package, aiming for the following week, and asks ministers to work out the measures needed, including funding."
+    ],
+    "evidence": "Official readout of the prime minister's closing remarks, in Japanese; the wording here is a translation. The remarks do not say AI was used in the attacks.",
+    "uncertain": "The emergency package had not been compiled, and the remarks give no budget, scope or timeline for the AI vulnerability checks.",
+    "source": "Prime Minister's Office of Japan · Speech transcript",
+    "url": "https://www.kantei.go.jp/jp/105/actions/202610/26kaigi_cyber.html"
+  },
+  {
     "date": "2026-10-27",
     "category": "Research",
     "topics": [
@@ -6940,6 +6997,41 @@
     "evidence": "Research preprint, not peer reviewed. The counts come from a detector the authors trained on 2,097 hand-labeled units and ran over skills from public GitHub repositories.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2610.37734"
+  },
+  {
+    "date": "2026-10-27",
+    "category": "Incidents",
+    "topics": [
+      "Lab conduct"
+    ],
+    "title": "Grand jury indicts Abdulrahman Alfozan on a charge of intercepting conversations at OpenAI",
+    "happened": "A federal grand jury in San Francisco returned an indictment on October 27, 2026, charging Abdulrahman Alfozan with one count of intercepting oral communications on OpenAI's premises in San Francisco.",
+    "keyPoints": [
+      "It charges that from no later than about September 28 through about October 5, 2026, he used or tried to use a device to intercept conversations at OpenAI.",
+      "It alleges he did so to obtain information about OpenAI's operations, in violation of 18 U.S.C. § 2511(1)(b)(iv).",
+      "A forfeiture allegation seeks recording devices, including one seized from his bag around October 5 and three seized from his home in Millbrae, California, around October 9."
+    ],
+    "evidence": "Grand jury indictment, a formal charge filed in open court. It makes no national security allegation; that claim came from prosecutors' October 18, 2026 detention memo, also in the record.",
+    "uncertain": "The charge is an untested allegation. An indictment is not a finding of guilt, and the filing does not give Alfozan's response.",
+    "source": "US District Court for the Northern District of California · Court filing (CourtListener copy)",
+    "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.482172/gov.uscourts.cand.482172.18.0.pdf"
+  },
+  {
+    "date": "2026-10-27",
+    "category": "Governance",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Royal Bank of Canada blocks third-party personal AI agents from online banking",
+    "happened": "Royal Bank of Canada told clients on October 27, 2026 that it is blocking third-party personal AI agents from direct access to its authenticated digital properties, including online banking.",
+    "keyPoints": [
+      "RBC says personal AI agents need access to online accounts, including financial ones, and \"may store your passwords to get there.\"",
+      "It says that as these systems become more autonomous, risks run \"from fraud and consumer harm to risks that could ripple more broadly through the financial system.\"",
+      "Existing connections through third-party AI agents will stop working; clients can still bank through RBC's own website, app, digital tools and customer service."
+    ],
+    "evidence": "The bank's own client notice. It states the decision and its reasons but cites no incidents or data and gives no date for the block.",
+    "source": "RBC Royal Bank · Company announcement",
+    "url": "https://www.rbcroyalbank.com/en-ca/my-money-matters/money-academy/cyber-security/understanding-cyber-security/understanding-third-party-ai-agents-and-your-rbc-banking"
   },
   {
     "date": "2026-10-28",
@@ -7183,6 +7275,26 @@
     "evidence": "Peer-reviewed study of simulated conversations with adolescent personas, not real users. It measures whether replies contain guideline content, not how replies affect young people.",
     "source": "Nature Mental Health · Research paper",
     "url": "https://www.nature.com/articles/s44220-026-00753-y"
+  },
+  {
+    "date": "2026-10-28",
+    "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
+    "title": "Malaysia's digital minister cites shutdown avoidance risk as he outlines an AI governance bill with incident reporting",
+    "happened": "Winding up the Budget 2027 debate for his ministry in Malaysia's Dewan Rakyat on October 28, 2026, Digital Minister Gobind Singh Deo described the AI Governance Bill under development and autonomous AI risks.",
+    "keyPoints": [
+      "He said the bill takes a risk-based, proportionate approach and introduces an \"AI Sandbox\" for controlled testing and a mechanism for reporting AI incidents.",
+      "He said the government recognizes autonomous AI risks, including systems acting against human instructions and avoiding being shut down (\"agentic misalignment\" and \"shut down avoidance\"), citing what Anthropic reported.",
+      "He said the Malaysia AI Safety Institute (MY-AISafe) builds national capacity in AI safety evaluation and testing, and looks closely at ensuring the technology cannot act on its own without control.",
+      "He said the bill is being drafted to clarify duties by role across an AI system's life cycle, with new agencies through AI Malaysia needed to act when standards are not followed."
+    ],
+    "evidence": "Unrevised official Hansard transcript, in Malay, of a minister's reply in a budget debate; the entry paraphrases it. It describes the bill's direction, not its text. The transcript misspells Anthropic's name.",
+    "uncertain": "The bill has not been published or tabled. The minister declined to give its details, saying it will go to Cabinet, so the scope of the sandbox and incident reporting is not yet known.",
+    "source": "Parliament of Malaysia · Hansard record",
+    "url": "https://www.parlimen.gov.my/files/hindex/pdf/DR-28102026.pdf"
   },
   {
     "date": "2026-10-29",
@@ -7437,6 +7549,25 @@
     "url": "https://www.courthousenews.com/wp-content/uploads/2026/10/feinberg-v-openai-lawsuit.pdf"
   },
   {
+    "date": "2026-10-29",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "NewsGuard links a fake TV segment targeting Maine Senate candidate Troy Jackson to Russia's Storm-1516",
+    "happened": "NewsGuard reported on October 29, 2026 that a pro-Kremlin X account posted a video on October 28 impersonating Bangor station WABI, claiming Senate candidate Troy Jackson threatened staffers with an ax.",
+    "keyPoints": [
+      "WABI's vice president told NewsGuard \"the video is fabricated and appears to use synthetic voice. It was not produced, aired, or authorized by WABI.\"",
+      "NewsGuard found dubbed audio laid over real WABI footage from July 21, 2026, and no reports that Jackson ever threatened staffers with harm.",
+      "Later X posts sharing the video drew hundreds of thousands of views, and none carried a Community Note.",
+      "NewsGuard says the format and amplification point to Storm-1516, which it ties to recent fakes about James Talarico and Sherrod Brown; the Gnida Project made the same attribution."
+    ],
+    "evidence": "Reporting by NewsGuard, based on its review of the video, the original footage and the X posts, plus a statement from the station. It is the first full report on this incident.",
+    "uncertain": "The synthetic voice is the station's assessment (\"appears\"), and the Storm-1516 link rests on format and spread patterns. Jackson's campaign did not respond to NewsGuard.",
+    "source": "NewsGuard · Reporting",
+    "url": "https://www.newsguardrealitycheck.com/p/russia-strikes-again-targeting-maines"
+  },
+  {
     "date": "2026-10-30",
     "category": "Warnings",
     "topics": [
@@ -7588,6 +7719,25 @@
     "evidence": "Joint statement by four UK regulators. It says current law applies and lists what they are already doing; it creates no new rules or deadlines.",
     "source": "Digital Regulation Cooperation Forum · Joint statement",
     "url": "https://www.drcf.org.uk/siteassets/drcf/pdf-files/drcf-joint-statement-protecting-people-and-businesses-in-and-agentic-economy2.pdf"
+  },
+  {
+    "date": "2026-10-30",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Chainalysis says an outside actor using offensive agentic techniques broke into its systems and internal tools",
+    "happened": "Chainalysis, which sells blockchain investigation tools, said on October 30, 2026, that it had a cybersecurity incident this month, and published the email it sent to affected customers.",
+    "keyPoints": [
+      "It says it detected \"an external actor using offensive agentic techniques to gain unauthorized access to Chainalysis systems and internal tools.\"",
+      "User IDs, full names, email addresses and role labels were accessed; it found no sign of access to investigation content, clear-text passwords, MFA secrets or session tokens.",
+      "It says it is \"seeing an industry-wide rise in AI-driven cyberattacks\" and is using \"sophisticated large language models\" to review its platform's security.",
+      "It says the incident is unrelated to the recent crypto theft at Binance, and asks users to watch for unexpected password reset requests and turn on two-factor authentication."
+    ],
+    "evidence": "The company's own disclosure, with its customer email. It does not name the attacker or describe the exploited vulnerabilities or how AI agents were used.",
+    "uncertain": "The investigation is ongoing. Chainalysis bases its findings on \"the evidence available to date\" and is still working out which records were accessed.",
+    "source": "Chainalysis · Incident disclosure",
+    "url": "https://www.chainalysis.com/blog/security-incident-october-30/"
   },
   {
     "date": "2026-10-31",
