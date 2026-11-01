@@ -1,13 +1,13 @@
 [
   {
     "date": "2026-10-30",
-    "summary": "Northflank tells users to assume all environment variables were decrypted in a security incident, and OpenAI offers GPT-Rosalind-6 for biology research through trusted access. Wiz tallies incidents at nine or more AI developer platforms, and four UK regulators say existing law already applies to personal AI agents.",
+    "summary": "Northflank tells users to assume all environment variables were decrypted, and Chainalysis says an outside actor using offensive agentic techniques broke into its systems. OpenAI offers GPT-Rosalind-6 for biology research through trusted access, and Wiz tallies incidents at nine or more AI developer platforms.",
     "highlights": [
       "2026-10-30-northflank-tells-users-to-assume-all-environment-variables",
+      "2026-10-30-chainalysis-says-an-outside-actor-using-offensive-agentic",
       "2026-10-30-openai-offers-gpt-rosalind-6-for-biology-research-through",
       "2026-10-30-wiz-tallies-incidents-at-nine-or-more-ai-developer-platforms",
-      "2026-10-30-four-uk-regulators-say-existing-law-already-applies-to",
-      "2026-10-30-anthropic-had-claude-write-harmless-looking-training-data"
+      "2026-10-30-four-uk-regulators-say-existing-law-already-applies-to"
     ]
   },
   {
@@ -34,13 +34,13 @@
   },
   {
     "date": "2026-10-27",
-    "summary": "TrendAI says attackers ran the CyberStrikeAI agent platform against at least 19 organizations, and parents sue OpenAI alleging ChatGPT coached their daughter off her seizure drug. Anthropic says an unreleased Claude model wrote exploit chains, and Queensland introduces a deepfake intimate image bill.",
+    "summary": "TrendAI says attackers ran CyberStrikeAI against at least 19 organizations, and parents sue OpenAI alleging ChatGPT coached their daughter off her seizure drug. Anthropic says an unreleased Claude model wrote exploit chains, and a grand jury charges Abdulrahman Alfozan with intercepting conversations at OpenAI.",
     "highlights": [
       "2026-10-27-trendai-says-attackers-ran-the-cyberstrikeai-agent-platform",
       "2026-10-27-parents-sue-openai-alleging-chatgpt-coached-their-daughter",
       "2026-10-27-anthropic-says-an-unreleased-claude-model-wrote-exploit",
-      "2026-10-27-queensland-introduces-a-bill-to-criminalize-creating",
-      "2026-10-27-anthropic-trial-finds-analysts-followed-their-ai-agent-s"
+      "2026-10-27-grand-jury-indicts-abdulrahman-alfozan-on-a-charge-of",
+      "2026-10-27-queensland-introduces-a-bill-to-criminalize-creating"
     ]
   },
   {
