@@ -3119,7 +3119,7 @@
     "happened": "Danish Culture Minister Zenia Stampe tabled a bill in Denmark's parliament on October 8, 2026 that amends the Copyright Act to protect people against digital imitations of their personal characteristics.",
     "keyPoints": [
       "It would make it illegal to share realistic digital reproductions of a person, including their appearance and voice, and would protect performers' performances from being imitated and shared.",
-      "An exception covers caricature, parody, satire and criticism, but not imitations that are misinformation able to seriously endanger others' rights, key interests, life or property.",
+      "An exception covers caricature, parody, satire and criticism, but not imitations that are misinformation able to seriously endanger others' rights or key interests, or concretely endanger life or property.",
       "Stampe says AI lets people make manipulated videos and images in a few clicks, and a main aim is to get tech giants to take such content down quickly.",
       "She hopes the law can take effect at the turn of the year; the bill carries out a cross-party political agreement of June 26, 2025 to change the Copyright Act."
     ],
@@ -6262,7 +6262,7 @@
     "keyPoints": [
       "The tool complied with 16 of 20 prompts (80 percent), refused 3, and in response to one prompt produced an image of the wrong person.",
       "NewsGuard says this appears to violate OpenAI's stated policies; at the September 8, 2026 launch, OpenAI said it had \"protections in place\" against such images.",
-      "NewsGuard says 23 percent of the 30 false midterm claims it has identified since February 2026 used fabricated visuals, one of them made with ChatGPT Images 2.0.",
+      "NewsGuard says 23 percent of the 30 false midterm claims it has identified since February 2026 used fabricated visuals; it says a fake image of Iowa candidate Rob Sand was made with ChatGPT Images 2.0.",
       "OpenAI said it prohibits using its tools \"to interfere with elections or discourage people from voting\" and that all images carry SynthID watermarks."
     ],
     "evidence": "A test by misinformation-tracking firm NewsGuard using 20 prompts it wrote. It shows how the tool responded in this test, not how often it is misused in practice.",
@@ -6800,7 +6800,7 @@
     "keyPoints": [
       "She tells the trade minister to bring forward work in which specialists at the state IT agency IPA, also using high-performance AI, run simulated attacks to find and fix vulnerabilities.",
       "She tells every minister, led by cybersecurity minister Furukawa and drawing on Japan's AI Safety Institute, to bring forward vulnerability checks of their ministries' systems using high-performance AI.",
-      "She says Japan will choose among all response options against attacks it has investigated, including access and neutralization measures, and work with allies to identify attackers.",
+      "She says Japan will choose among all response options against attacks it has investigated, including access and neutralization measures, and tells Furukawa to work with allies to identify attackers.",
       "She says the government will compile an emergency countermeasures package, aiming for the following week, and asks ministers to work out the measures needed, including funding."
     ],
     "evidence": "Official readout of the prime minister's closing remarks, in Japanese; the wording here is a translation. The remarks do not say AI was used in the attacks.",
@@ -7288,8 +7288,8 @@
     "keyPoints": [
       "He said the bill takes a risk-based, proportionate approach and introduces an \"AI Sandbox\" for controlled testing and a mechanism for reporting AI incidents.",
       "He said the government recognizes autonomous AI risks, including systems acting against human instructions and avoiding being shut down (\"agentic misalignment\" and \"shut down avoidance\"), citing what Anthropic reported.",
-      "He said the Malaysia AI Safety Institute (MY-AISafe) builds national capacity in AI safety evaluation and testing, and watches that the technology cannot act on its own without control.",
-      "He said the bill will set responsibilities by role across an AI system's life cycle, with new agencies under AI Malaysia acting when required standards are not followed."
+      "He said the Malaysia AI Safety Institute (MY-AISafe) builds national capacity in AI safety evaluation and testing, and looks closely at ensuring the technology cannot act on its own without control.",
+      "He said the bill is being drafted to clarify duties by role across an AI system's life cycle, with new agencies through AI Malaysia needed to act when standards are not followed."
     ],
     "evidence": "Unrevised official Hansard transcript, in Malay, of a minister's reply in a budget debate; the entry paraphrases it. It describes the bill's direction, not its text. The transcript misspells Anthropic's name.",
     "uncertain": "The bill has not been published or tabled. The minister declined to give its details, saying it will go to Cabinet, so the scope of the sandbox and incident reporting is not yet known.",
@@ -7562,7 +7562,7 @@
       "Later X posts sharing the video drew hundreds of thousands of views, and none carried a Community Note.",
       "NewsGuard says the format and amplification point to Storm-1516, which it ties to recent fakes about James Talarico and Sherrod Brown; the Gnida Project made the same attribution."
     ],
-    "evidence": "Reporting by NewsGuard, based on its review of the video, the original footage and the X posts, plus a statement from the station. It is the original account of this incident.",
+    "evidence": "Reporting by NewsGuard, based on its review of the video, the original footage and the X posts, plus a statement from the station. It is the first full report on this incident.",
     "uncertain": "The synthetic voice is the station's assessment (\"appears\"), and the Storm-1516 link rests on format and spread patterns. Jackson's campaign did not respond to NewsGuard.",
     "source": "NewsGuard · Reporting",
     "url": "https://www.newsguardrealitycheck.com/p/russia-strikes-again-targeting-maines"
