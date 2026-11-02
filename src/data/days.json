@@ -1,12 +1,23 @@
 [
   {
+    "date": "2026-11-02",
+    "summary": "Spotlight Delaware reports the state's Justice Department subpoenaed OpenAI over safety, and the Lords pass the UK Cyber Security and Resilience Bill. AI Forensics traces 444 nudify apps to one operation, and Anthropic's amended IPO filing says it may imminently meet its threshold for AI-accelerated progress.",
+    "highlights": [
+      "2026-11-02-spotlight-delaware-reports-the-state-s-justice-department",
+      "2026-11-02-house-of-lords-passes-uk-cyber-security-and-resilience-bill",
+      "2026-11-02-ai-forensics-traces-444-nudify-apps-on-google-play-and-apple",
+      "2026-11-02-anthropic-s-amended-ipo-filing-says-it-may-imminently-meet",
+      "2026-11-02-sam-altman-says-there-must-be-no-handoff-to-ai-and-the"
+    ]
+  },
+  {
     "date": "2026-10-30",
-    "summary": "Northflank tells users to assume all environment variables were decrypted, and Chainalysis says an outside actor using offensive agentic techniques broke into its systems. OpenAI offers GPT-Rosalind-6 for biology research through trusted access, and Wiz tallies incidents at nine or more AI developer platforms.",
+    "summary": "Northflank tells users to assume all environment variables were decrypted, and Chainalysis says an outside actor using agentic techniques broke into its systems. Google says attackers ran ARTEX and other AI agent hacking frameworks, and OpenAI offers GPT-Rosalind-6 through trusted access.",
     "highlights": [
       "2026-10-30-northflank-tells-users-to-assume-all-environment-variables",
       "2026-10-30-chainalysis-says-an-outside-actor-using-offensive-agentic",
+      "2026-10-30-google-says-attackers-ran-artex-and-other-ai-agent-hacking",
       "2026-10-30-openai-offers-gpt-rosalind-6-for-biology-research-through",
-      "2026-10-30-wiz-tallies-incidents-at-nine-or-more-ai-developer-platforms",
       "2026-10-30-four-uk-regulators-say-existing-law-already-applies-to"
     ]
   },
@@ -34,13 +45,13 @@
   },
   {
     "date": "2026-10-27",
-    "summary": "TrendAI says attackers ran CyberStrikeAI against at least 19 organizations, and parents sue OpenAI alleging ChatGPT coached their daughter off her seizure drug. Anthropic says an unreleased Claude model wrote exploit chains, and a grand jury charges Abdulrahman Alfozan with intercepting conversations at OpenAI.",
+    "summary": "TrendAI says attackers ran CyberStrikeAI against at least 19 organizations, and parents sue OpenAI alleging ChatGPT coached their daughter off her seizure drug. Anthropic says an unreleased Claude model wrote exploit chains, and Seoul police catch seven they say used generative AI to hack about 90 Korean companies.",
     "highlights": [
       "2026-10-27-trendai-says-attackers-ran-the-cyberstrikeai-agent-platform",
       "2026-10-27-parents-sue-openai-alleging-chatgpt-coached-their-daughter",
       "2026-10-27-anthropic-says-an-unreleased-claude-model-wrote-exploit",
-      "2026-10-27-grand-jury-indicts-abdulrahman-alfozan-on-a-charge-of",
-      "2026-10-27-queensland-introduces-a-bill-to-criminalize-creating"
+      "2026-10-27-seoul-police-catch-seven-in-an-extortion-scheme-that-used",
+      "2026-10-27-grand-jury-indicts-abdulrahman-alfozan-on-a-charge-of"
     ]
   },
   {
@@ -145,12 +156,12 @@
   },
   {
     "date": "2026-10-14",
-    "summary": "Iowa and seven other states sue OpenAI, alleging ChatGPT harms children and misleads users on safety, and attorneys general of 39 states and DC tell the Character.AI bankruptcy court any sale must protect children. Demis Hassabis, Brad Smith and Kamala Harris set out proposals for AI safety and oversight.",
+    "summary": "Iowa and seven other states sue OpenAI, alleging ChatGPT harms children, and attorneys general of 39 states and DC tell the Character.AI bankruptcy court any sale must protect children. The Guardian reports an FBI memo saying GenAI safeguards fall short, and GAO finds Pentagon AI projects apply Responsible AI unevenly.",
     "highlights": [
       "2026-10-14-iowa-and-other-states-sue-openai-alleging-chatgpt-harms",
       "2026-10-14-attorneys-general-of-39-states-and-dc-tell-the-character-ai",
       "2026-10-14-guardian-reports-an-fbi-memo-saying-built-in-genai",
-      "2026-10-14-commons-committee-chair-liam-byrne-posts-the-launch-of-a",
+      "2026-10-14-gao-finds-pentagon-ai-projects-apply-responsible-ai-unevenly",
       "2026-10-14-johns-hopkins-rna-scientist-calls-for-a-permanent-operation"
     ]
   },
@@ -189,13 +200,13 @@
   },
   {
     "date": "2026-10-08",
-    "summary": "OpenAI disrupts Russian and Iranian influence operations, and Italy publishes a decree setting national enforcement of the EU AI Act. The UK data regulator opens enquiries into AI agents reported to have bypassed protections, and three fired OpenAI safety researchers write that their firings are chilling safety work.",
+    "summary": "OpenAI disrupts Russian and Iranian influence operations, and Italy publishes a decree enforcing the EU AI Act. The UK data regulator opens enquiries into AI agents reported to have bypassed protections, and three fired OpenAI safety researchers write that their firings have made former colleagues afraid to speak.",
     "highlights": [
       "2026-10-08-openai-disrupts-russian-and-iranian-influence-operations-run",
       "2026-10-08-italy-publishes-decree-setting-national-enforcement-of-the",
       "2026-10-08-uk-data-regulator-secures-changes-from-ten-ai-developers-and",
       "2026-10-08-three-fired-openai-safety-researchers-write-that-their",
-      "2026-10-08-cisco-talos-tracks-malware-that-carries-text-meant-to-steer"
+      "2026-10-08-mexican-authorities-detain-a-former-michoacan-treasurer-and"
     ]
   },
   {

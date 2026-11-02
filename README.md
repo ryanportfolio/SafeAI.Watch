@@ -4,33 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 408 dated, sourced entries drawn as a burst, one dot per entry: 79 warnings, 102 incidents, 112 governance, 115 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 422 dated, sourced entries drawn as a burst, one dot per entry: 83 warnings, 107 incidents, 115 governance, 117 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 408 entries from Mar 22, 2023 to Oct 31, 2026 (79 warnings, 102 incidents, 112 governance, 115 research), drawn from 222 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 422 entries from Mar 22, 2023 to Nov 2, 2026 (83 warnings, 107 incidents, 115 governance, 117 research), drawn from 229 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 31, 2026, filed under Incidents:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 2, 2026, filed under Incidents:
 
-> **Cisco Talos says the VOLTA infostealer asks commercial AI models to rank its victims and switches models on refusal**
+> **AI Forensics traces 444 nudify apps on Google Play and Apple's App Store to one operation advertised on Meta**
 >
-> **What happened.** Cisco Talos published an analysis on October 31, 2026 of VOLTA, a self-deleting Windows infostealer that can send a profile of each victim to an AI model through OpenRouter.
+> **What happened.** AI Forensics published an investigation on November 2, 2026 into a network of nudifier apps listed on Google Play and Apple's App Store and promoted through ads on Meta.
 >
 > **Key points.**
 >
-> - The prompt casts the model as "a forensic intelligence analyst drafting a target assessment," ranking the victim's valuables by monetization and judging their security habits.
-> - The default model is anthropic/claude-opus-4.6; if a reply contains refusal phrases, VOLTA falls back to moonshotai/kimi-k2 and then google/gemini-2.5-flash.
-> - Before the AI step, it uses stolen sessions to build the profile, such as searching the victim's Gmail for receipts that confirm a home address.
-> - Talos says the stealer's build template points to malware sold to customers, and that "refusal resilience may become a standard design requirement."
+> - Installed directly, the apps look like hair salon or outfit-change tools; users arriving from a Meta ad get an explicit version with sexual-violence templates.
+> - A configuration table left in the apps' websites linked 444 apps listed under seemingly different developers; 46% appear intended for Apple's App Store.
+> - Since January 1, 2026, over 84k ads matching the network's pattern ran on Meta, paid for under fictitious names such as "123456" and typically showing pornographic images.
+> - As of September 11, 2026, 27 apps were still live on Google Play, 20 of them rated PEGI 3, with over 352k downloads, and 21 on the App Store.
 >
-> **Evidence.** A threat intelligence team's reverse-engineering analysis of the malware's code and configuration. It describes how VOLTA is built and what it collects.
+> **Evidence.** Independent investigation based on the apps' code, their websites and Meta's public ad library, with data as of September 2026. It draws no legal conclusions.
 >
-> **Uncertain.** Talos gives no count of infections or victims, and its view that VOLTA is sold to customers is an inference from the build template.
+> **Uncertain.** Live-app counts date from September 11, 2026, and the report calls its overview non-exhaustive. Linking the apps to one operator rests on AI Forensics' analysis of shared configuration files.
 >
-> **Source.** [Cisco Talos · Research report](https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/)
+> **Source.** [AI Forensics · Independent investigation](https://aiforensics.org/uploads/Advertised_by_design.pdf)
 
 ## Run it locally
 
