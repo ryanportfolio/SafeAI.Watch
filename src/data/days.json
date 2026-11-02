@@ -1,11 +1,11 @@
 [
   {
     "date": "2026-11-02",
-    "summary": "Spotlight Delaware reports the state's Justice Department subpoenaed OpenAI over safety, and the Lords pass the UK Cyber Security and Resilience Bill. AI Forensics traces 444 nudify apps to one operation, and Anthropic's amended IPO filing says it may imminently meet its threshold for AI-accelerated progress.",
+    "summary": "Spotlight Delaware reports the state's Justice Department subpoenaed OpenAI over safety, and AI Forensics traces 444 nudify apps to one operation. The Lords pass the UK Cyber Security and Resilience Bill, and Anthropic's amended IPO filing says it may imminently meet its threshold for AI-accelerated progress.",
     "highlights": [
       "2026-11-02-spotlight-delaware-reports-the-state-s-justice-department",
-      "2026-11-02-house-of-lords-passes-uk-cyber-security-and-resilience-bill",
       "2026-11-02-ai-forensics-traces-444-nudify-apps-on-google-play-and-apple",
+      "2026-11-02-house-of-lords-passes-uk-cyber-security-and-resilience-bill",
       "2026-11-02-anthropic-s-amended-ipo-filing-says-it-may-imminently-meet",
       "2026-11-02-sam-altman-says-there-must-be-no-handoff-to-ai-and-the"
     ]
@@ -200,13 +200,13 @@
   },
   {
     "date": "2026-10-08",
-    "summary": "OpenAI disrupts Russian and Iranian influence operations, and Italy publishes a decree enforcing the EU AI Act. The UK data regulator opens enquiries into AI agents reported to have bypassed protections, and three fired OpenAI safety researchers write that their firings have made former colleagues afraid to speak.",
+    "summary": "OpenAI disrupts Russian and Iranian influence operations, and Italy publishes a decree enforcing the EU AI Act. The UK data regulator opens enquiries into AI agents reported to have bypassed protections, and Mexican authorities detain five over a ring that used AI to imitate voices of political and business figures.",
     "highlights": [
       "2026-10-08-openai-disrupts-russian-and-iranian-influence-operations-run",
       "2026-10-08-italy-publishes-decree-setting-national-enforcement-of-the",
       "2026-10-08-uk-data-regulator-secures-changes-from-ten-ai-developers-and",
-      "2026-10-08-three-fired-openai-safety-researchers-write-that-their",
-      "2026-10-08-mexican-authorities-detain-a-former-michoacan-treasurer-and"
+      "2026-10-08-mexican-authorities-detain-a-former-michoacan-treasurer-and",
+      "2026-10-08-three-fired-openai-safety-researchers-write-that-their"
     ]
   },
   {

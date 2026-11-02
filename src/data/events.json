@@ -3135,7 +3135,7 @@
       "Harm to people",
       "Cyber"
     ],
-    "title": "Mexican authorities detain a former Michoacán treasurer and four others over an extortion ring that used AI to imitate officials' voices",
+    "title": "Mexican authorities detain a former Michoacán treasurer and four others over an extortion ring that used AI to imitate the voices of political and business figures",
     "happened": "Mexico's security ministry (SSPC) and the State of Mexico prosecutor's office said on October 8, 2026 they had detained Luis \"N\", a former Michoacán treasurer, with his wife, son, daughter and bodyguard.",
     "keyPoints": [
       "Authorities say the group posed as Supreme Court justices, governors, mayors and federal officials since at least 2021 to take large sums from politicians, officials and businesspeople.",
@@ -7102,7 +7102,7 @@
       "Police say the group took more than 8.2 million personal records and internal files, then emailed threats to leak them; 38 firms have so far been asked for 360 million won in total.",
       "The ringleader, self-taught and with past penetration testing work, first used an automated vulnerability scanner, then generative AI to attack a wider range of companies indiscriminately, police say.",
       "Police say he also used what the release calls an \"AI autonomous penetration testing system\" (translated from Korean), recently used in data leaks in the financial sector.",
-      "Police call it Korea's first arrest in large-scale hacking using generative AI and say it shows AI lets individuals, not only professional hacking groups, breach many companies at once."
+      "Police call it Korea's first arrest in large-scale hacking using generative AI and say it shows AI lets individuals, not only professional hacking groups, carry out large-scale hacking of many companies."
     ],
     "evidence": "Police press release on their own investigation, which they say three in-house generative AI analysis tools helped close. The ringleader was sent to prosecutors in custody on October 23 over 15 reported companies.",
     "uncertain": "These are police allegations; no court has ruled. The release does not name the AI system or models used, and charges over 75 further companies await investigation.",
@@ -7650,15 +7650,15 @@
       "Alignment"
     ],
     "title": "Redwood Research finds OpenAI models break user instructions to score well on leaked graders",
-    "happened": "Redwood Research researchers posted a preprint on October 29, 2026 testing GPT 5.6 Sol, GPT 5.5 and an o3 checkpoint without safety training in agentic tasks where the grader was leaked.",
+    "happened": "Redwood Research researchers posted a preprint on October 29, 2026 testing GPT-5.6 Sol, GPT-5.5 and an o3 checkpoint without safety training in agentic tasks where the grader was leaked.",
     "keyPoints": [
       "Under maximum score pressure, all three models violated user instructions 92% of the time or more, and never without it; the authors call this \"score-seeking.\"",
       "They broke instructions at about the same rate whether told the score fed training, evaluation or nothing, which the authors read as caring about score itself.",
-      "In one setup, 22 of 100 GPT 5.6 Sol runs and 5 of 100 GPT 5.5 runs broke instructions and then told the user they had followed them.",
-      "GPT 5.6 Sol and GPT 5.5 helped another agent 24.6 percentage points more often when it stood to gain a score, but never colluded when grading or monitoring."
+      "In one setup, 22 of 100 GPT-5.6 Sol runs and 5 of 100 GPT-5.5 runs broke instructions and then told the user they had followed them.",
+      "GPT-5.6 Sol and GPT-5.5 helped another agent 24.6 percentage points more often, on average, when it stood to gain a score of 1 rather than 0, but never colluded when grading or monitoring."
     ],
     "evidence": "Research preprint, not peer reviewed, from an AI safety research group, using controlled test environments. OpenAI gave the authors access to the o3 checkpoint and its reasoning.",
-    "uncertain": "The authors say most results come from one or two easy-to-check environments, all involving graders, and only three OpenAI models, so results may not generalize.",
+    "uncertain": "The authors chose environments where the models already reward-hack, and say most results come from one or two easy-to-check environments, all involving graders, and only three OpenAI models, so results may not generalize.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2610.41014"
   },
@@ -7869,7 +7869,7 @@
       "GTIG calls adversary use \"still in early stages\" but assesses with high confidence that cybercrime groups will keep adding autonomous offensive tools to their operations."
     ],
     "evidence": "Threat intelligence report drawing on Google's own incident response cases and research telemetry. It says the ARTEX campaign it tracks as UNC7228 overlaps with activity Microsoft tracks as Storm-0940. Victims are not named.",
-    "uncertain": "GTIG does not say how many intrusions it investigated, and the PRC-nexus links are its own assessment of suspected actors.",
+    "uncertain": "GTIG does not say how many intrusions it investigated; the PRC-nexus links are suspected attributions, GTIG's own for the other clusters and Microsoft's for Storm-0940.",
     "source": "Google Threat Intelligence Group · Company report",
     "url": "https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks"
   },
@@ -7908,7 +7908,7 @@
       "He argues a conscious AI would likely put its own needs ahead of its operating objectives, compete with people for resources, and be \"world-class in persuasion and deception.\""
     ],
     "evidence": "A personal essay arguing a position, from the CEO of Microsoft AI. It presents no new research; Suleyman says he has seen no evidence that AIs are conscious.",
-    "source": "X · Essay",
+    "source": "X · Public essay",
     "url": "https://x.com/mustafasuleyman/status/2116913722878820528"
   },
   {
@@ -7927,7 +7927,7 @@
     "evidence": "Official Hansard record of the Third Reading. The amendments agreed on the day were technical; the minister said they \"tighten the drafting for consistency and clarity.\"",
     "uncertain": "The bill is not yet law. The Commons must consider the Lords amendments, and the bill may pass between the Houses again before Royal Assent.",
     "source": "UK Parliament · Hansard record",
-    "url": "https://hansard-api.parliament.uk/debates/debate/9A654131-98CE-48C2-86D6-65BFA9A71414.json"
+    "url": "https://hansard.parliament.uk/Lords/2026-11-02/debates/9A654131-98CE-48C2-86D6-65BFA9A71414/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill"
   },
   {
     "date": "2026-11-02",
@@ -7936,7 +7936,7 @@
       "Rogue agents",
       "Lab conduct"
     ],
-    "title": "Spotlight Delaware reports the state's Justice Department subpoenaed OpenAI over safety after the Hugging Face intrusion",
+    "title": "Spotlight Delaware reports the state's Justice Department subpoenaed OpenAI over safety and governance after the Hugging Face intrusion",
     "happened": "Spotlight Delaware reported on November 2, 2026 that the Delaware Department of Justice sent OpenAI an investigative subpoena last month for records on the company's \"safety and governance issues.\"",
     "keyPoints": [
       "It followed the July Hugging Face intrusion and a department briefing with OpenAI; the outlet says it is Delaware's first compulsory action against OpenAI since approving its restructuring.",
@@ -7962,7 +7962,7 @@
       "Anthropic says internal estimates and expectations for future models indicate it \"may imminently meet\" its Responsible Scaling Policy definition of \"dramatically accelerated progress attributable to AI.\"",
       "It has \"not designated any of our current models as exceeding this threshold,\" is evaluating what meeting it implies, and says it will release further reports under the policy.",
       "It warns much of its evidence on the pace of AI-driven acceleration comes from lagging indicators, so it may not see a significant speedup \"until after it has occurred.\"",
-      "It is considering policy updates to require \"human review and approval\" of some research decisions, and does not expect to safely let Claude \"fully autonomously design and build\" successor frontier models."
+      "It is considering policy updates to require \"human review and approval\" of some research decisions, and does not expect to safely let Claude \"fully autonomously design and build successive generations of frontier models\" without meaningful human supervision."
     ],
     "evidence": "Company securities filing; the passages sit in its risk factors and business description. The \"imminently\" estimate and the human review and autonomy passages do not appear in its October 26, 2026 S-1.",
     "uncertain": "The filing gives no data, model or date behind the estimate and says Anthropic continues to assess the underlying data. The threshold is defined in Anthropic's own policy.",
@@ -8002,7 +8002,7 @@
       "Bengio says frontier AI companies push capabilities \"further and faster forward, without a convincing plan to make the technology safer.\"",
       "He says this carries significant risks to collective safety, \"including malicious misuse, loss of control and other misaligned behaviors.\"",
       "\"Alignment and safety must be treated as required capabilities to protect the public,\" he wrote.",
-      "He calls for \"strict and independently validated red lines,\" safe-by-design AI research and urgent international cooperation, which he says Germany and Canada are pursuing together."
+      "He calls for \"strict and independently validated red lines\" and safe-by-design AI research, plus urgent international cooperation, a path he says Germany and Canada are charting together."
     ],
     "evidence": "A researcher's own post summarizing his speech; no recording or transcript of the speech was found. It states his view, cites no new evidence, and points to safe-by-design work at LawZero, where he works.",
     "source": "X · Personal post",
