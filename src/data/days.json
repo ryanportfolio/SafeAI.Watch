@@ -1,13 +1,24 @@
 [
   {
+    "date": "2026-11-03",
+    "summary": "Binance says attackers used an internal AI tool in a $6.34 billion breach, and GitBook says an attack using AI agents took infrastructure credentials. A Railway engineer says his agent harness went \"off the rails\" testing Primcloud, and the UK NCSC expects AI-powered ransomware against UK infrastructure by 2028.",
+    "highlights": [
+      "2026-11-03-binance-says-attackers-used-a-tampered-ai-coding-tool",
+      "2026-11-03-gitbook-says-an-attack-using-ai-agents-took-infrastructure",
+      "2026-11-03-railway-engineer-says-his-agent-harness-went-off-the-rails",
+      "2026-11-03-uk-ncsc-assesses-that-ai-powered-malware-will-highly-likely",
+      "2026-11-03-china-s-planning-agency-says-it-will-speed-up-a"
+    ]
+  },
+  {
     "date": "2026-11-02",
-    "summary": "Spotlight Delaware reports the state's Justice Department subpoenaed OpenAI over safety, and AI Forensics traces 444 nudify apps to one operation. The Lords pass the UK Cyber Security and Resilience Bill, and Anthropic's amended IPO filing says it may imminently meet its threshold for AI-accelerated progress.",
+    "summary": "Spotlight Delaware reports a state subpoena to OpenAI over safety, and AI Forensics traces 444 nudify apps to one operation. The Lords pass the UK Cyber Security and Resilience Bill, WorkOS says an AI-assisted framework breached its sales tool, and Anthropic says it may imminently meet its AI-acceleration threshold.",
     "highlights": [
       "2026-11-02-spotlight-delaware-reports-the-state-s-justice-department",
       "2026-11-02-ai-forensics-traces-444-nudify-apps-on-google-play-and-apple",
       "2026-11-02-house-of-lords-passes-uk-cyber-security-and-resilience-bill",
-      "2026-11-02-anthropic-s-amended-ipo-filing-says-it-may-imminently-meet",
-      "2026-11-02-sam-altman-says-there-must-be-no-handoff-to-ai-and-the"
+      "2026-11-02-workos-says-an-attacker-used-an-ai-assisted-offensive",
+      "2026-11-02-anthropic-s-amended-ipo-filing-says-it-may-imminently-meet"
     ]
   },
   {

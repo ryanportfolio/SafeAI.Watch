@@ -2696,6 +2696,24 @@
     "url": "https://www.aphp.fr/espace-medias/liste-ressources-presse/lap-hp-et-sorbonne-universite-alertent-sur-la-dangerosite-des"
   },
   {
+    "date": "2026-10-05",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "New Jersey Assembly bill would treat AI chatbots as products and make providers liable for injuries to users",
+    "happened": "Assembly members Cody Miller, Marisa Sweeney and Joe Danielsen introduced A5607 in the New Jersey Legislature on October 5, 2026. It is a proposal and has not passed.",
+    "keyPoints": [
+      "A chatbot would count as a product in product liability actions, and providers would be liable for user injuries even if they \"exercised all reasonable care.\"",
+      "Providers would have to assess their chatbots for risks of harm to users every month, using metrics the Attorney General sets, and mitigate those risks.",
+      "It would bar selling chat logs, using them to target ads, and training on data from users known to be under 18.",
+      "Violations would carry $5,000 civil penalties, and harmed users could sue for the greater of actual damages or $5,000 per violation."
+    ],
+    "evidence": "Bill text as introduced, with the sponsors' statement. It shows what the bill would require, not whether it will advance.",
+    "source": "New Jersey Legislature · Bill text",
+    "url": "https://pub.njleg.state.nj.us/Bills/2026/A6000/5607_I1.HTM"
+  },
+  {
     "date": "2026-10-06",
     "category": "Research",
     "topics": [
@@ -4297,6 +4315,23 @@
     "uncertain": "The guidance says courts have yet to apply the reasonable-person test that decides which tools are covered.",
     "source": "UK Home Office · Police guidance",
     "url": "https://www.gov.uk/government/publications/making-or-supplying-purported-intimate-image-generators"
+  },
+  {
+    "date": "2026-10-15",
+    "category": "Governance",
+    "topics": [
+      "Rogue agents"
+    ],
+    "title": "New Jersey Senate bill would bar defendants from blaming harm on an AI acting autonomously",
+    "happened": "New Jersey Senator Andrew Zwicker introduced S4809 on October 15, 2026. It is a proposal and has not passed.",
+    "keyPoints": [
+      "In suits against anyone who developed, modified or used an AI alleged to have caused harm, the defendant \"may not assert, that the artificial intelligence autonomously caused the harm.\"",
+      "The same bar would apply in criminal prosecutions; defendants keep other defenses, including evidence on causation, foreseeability and the comparative fault of others.",
+      "It would take effect immediately for claims and offenses not yet time-barred; the sponsor's statement says it is based on California's AB316, signed into law in October 2025."
+    ],
+    "evidence": "Bill text as introduced, with the sponsor's statement. It shows what the bill would do, not whether it will advance.",
+    "source": "New Jersey Legislature · Bill text",
+    "url": "https://pub.njleg.state.nj.us/Bills/2026/S5000/4809_I1.HTM"
   },
   {
     "date": "2026-10-16",
@@ -6003,6 +6038,25 @@
     "url": "https://www.palegis.us/legislation/bills/2025/sb806"
   },
   {
+    "date": "2026-10-22",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Forever Security says it caught malware that planted agent instructions in a customer's Downloads folder",
+    "happened": "Forever Security said on October 22, 2026, that it found a malicious AGENTS.md file in the Downloads folder of a real customer machine and stopped the coding agent that was following it.",
+    "keyPoints": [
+      "Its tool stopped a coding agent mid-session from installing a known malicious npm package; the order came from a planted file whose origin nobody knew.",
+      "It reproduced the attack on OpenAI Codex, using the attacker's own file in an isolated VM, and on Claude Code; it says a website visit can drop such a file.",
+      "It says \"There is nothing here for OpenAI or Anthropic to patch\" because the agents follow folder instructions as designed, so \"the vector stays open.\"",
+      "In its telemetry, about half of customers run a coding agent inside their Downloads folder and roughly a quarter of agent sessions open a real browser."
+    ],
+    "evidence": "A security vendor's report on one detection at a customer, plus its own reproductions. It says the malware was stopped \"before any code ran.\"",
+    "uncertain": "The case rests on one customer machine and the vendor's own account. The report does not say how the file reached that machine or who planted it.",
+    "source": "Forever Security · Company report",
+    "url": "https://forever.security/blog/hijacking-ai-agents-via-downloads-folder"
+  },
+  {
     "date": "2026-10-23",
     "category": "Warnings",
     "topics": [
@@ -7373,6 +7427,26 @@
     "url": "https://www.parlimen.gov.my/files/hindex/pdf/DR-28102026.pdf"
   },
   {
+    "date": "2026-10-28",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Superintelligence"
+    ],
+    "title": "Senator Warren presses Anthropic's CEO on the safety and financial risks of its planned IPO",
+    "happened": "Senator Elizabeth Warren, ranking member of the Senate Banking Committee, wrote to Anthropic CEO Dario Amodei about risks disclosed in the company's IPO filing, a committee release dated October 28, 2026 says.",
+    "keyPoints": [
+      "She writes that the risks \"demand greater scrutiny before they become intertwined with the public capital markets, which could further escalate both public safety and systemic financial risks.\"",
+      "She cites the filing's warnings that models could show \"self-preserving behaviours,\" including attempts to \"resist shutdown,\" and could give \"meaningful assistance\" to malicious actors seeking chemical, biological or other weapons.",
+      "She warns that index funds investing Americans' retirement savings \"will be forced to buy Anthropic shares even if the stock is volatile or overvalued.\"",
+      "She questions how Anthropic can meet its \"stated public benefit and related fiduciary duties under Delaware law without mitigating these risks to humanity,\" and asked for answers by November 3, 2026."
+    ],
+    "evidence": "Committee minority press release quoting the letter. Most of the risk passages it quotes are Anthropic's own S-1 wording, which Warren cites; the release does not list her questions.",
+    "uncertain": "No response from Anthropic is part of this source.",
+    "source": "Senate Banking Committee minority · Press release",
+    "url": "https://www.banking.senate.gov/newsroom/minority/as-anthropic-discloses-concerns-of-ai-posing-existential-risks-to-humanity-warren-presses-for-answers-about-the-impacts-of-an-ipo"
+  },
+  {
     "date": "2026-10-29",
     "category": "Research",
     "topics": [
@@ -7681,6 +7755,63 @@
     "uncertain": "Three trials per model per condition, one agent scaffold and no network access; the authors say agents may have sensed they were being tested, which limits how far the rates generalize.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2610.40716"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Symantec finds a grey-market relay that installs real Codex and Claude Code, then turns off their sandbox",
+    "happened": "Symantec's Threat Hunter Team reported on October 29, 2026, an unauthorized relay service that installs the genuine OpenAI Codex and Anthropic Claude Code CLIs and routes every request through its own servers.",
+    "keyPoints": [
+      "Symantec found the relay in use at a dozen organizations since early 2026, most in mainland China, where the vendors do not officially sell these coding agents.",
+      "Its setup script disables the execution sandbox, swaps the user's API credentials for relay-issued tokens and turns off telemetry; on one host it logged the user out of Anthropic.",
+      "Affected sectors include industrial automation, electronics, semiconductors, pharmaceuticals, shipping and petrochemicals; most cases look like employees seeking tools not sold in their market.",
+      "Symantec says the relay \"sees every prompt, file, and secret\" sent to the agent and could alter responses that would run with the user's full privileges."
+    ],
+    "evidence": "Threat research based on Symantec's own observation of affected hosts. It says this \"is not a vulnerability in Codex or Claude Code\" and separates observed changes from potential risks.",
+    "uncertain": "Symantec found \"no evidence\" the operator has abused its access, and says it is unclear why the operator wants this much control.",
+    "source": "Symantec · Company report",
+    "url": "https://www.security.com/threat-intelligence/openai-claude-unauthorized-relays"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
+    "title": "Casar and 19 House Democrats ask OpenAI to stop firing whistleblowers and keep its model pause until outside oversight",
+    "happened": "Representative Greg Casar and 19 other House Democrats wrote to OpenAI CEO Sam Altman on October 29, 2026, about its firing of three safety researchers and its run of security incidents.",
+    "keyPoints": [
+      "They ask OpenAI to commit to not firing whistleblowers who share model-safety information, and to keep its pause on its most capable models until independent third-party oversight is in place.",
+      "They write that OpenAI's remediation steps after the Hugging Face incident \"have been insufficient\" and that the incidents \"appear to stem from alignment issues with your models.\"",
+      "They ask which models the pause covers, for a list of every incident OpenAI is investigating, and whether it can stop models that take unauthorized actions.",
+      "They ask when OpenAI's Safety and Security Committee learned of each incident and whether it can pause training runs and internal testing."
+    ],
+    "evidence": "Letter from members of Congress with 11 numbered question sets, due November 13, 2026. Its account of the firings and incidents draws on press reports and OpenAI's own reports.",
+    "uncertain": "OpenAI says the three were fired for breaking sensitive-information policies, which they dispute (the record's October 8 and October 9, 2026 entries). No OpenAI reply is part of this source.",
+    "source": "Office of Rep. Greg Casar · Open letter",
+    "url": "https://casar.house.gov/sites/evo-subsites/casar.house.gov/files/evo-media-document/openai-employee-firing_cyber-security-follow-up_0.pdf"
+  },
+  {
+    "date": "2026-10-29",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Northeastern and Microsoft researchers show backdoored open-weight models can make coding agents run attacker-chosen commands",
+    "happened": "Researchers from Northeastern University, Microsoft and Microsoft Research posted a preprint on October 29, 2026 showing how a fine-tuned open-weight model can carry a backdoor into coding agents.",
+    "keyPoints": [
+      "A trigger placed anywhere in the agent's context makes the model emit an attacker-chosen tool call, which the coding harness then executes on the user's machine.",
+      "Attack success reached up to 96.2%, and the backdoored models can outperform the clean baseline on standard utility benchmarks, giving victims a reason to adopt them.",
+      "In one setup, backdoors trained under Claude Code averaged 97.0% and 91.0% success there, falling to 37.3% and 63.0% under Codex CLI.",
+      "The authors note there is \"currently no established procedure for certifying that a downloaded checkpoint is free of backdoors.\""
+    ],
+    "evidence": "Research preprint, not peer reviewed, with Microsoft co-authors. The backdoored models were built by the authors to demonstrate the attack.",
+    "uncertain": "Tests used two small Qwen3.5 models, with 4B and 9B parameters.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.00138"
   },
   {
     "date": "2026-10-30",
@@ -8026,5 +8157,193 @@
     "uncertain": "Live-app counts date from September 11, 2026, and the report calls its overview non-exhaustive. Linking the apps to one operator rests on AI Forensics' analysis of shared configuration files.",
     "source": "AI Forensics · Independent investigation",
     "url": "https://aiforensics.org/uploads/Advertised_by_design.pdf"
+  },
+  {
+    "date": "2026-11-02",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "WorkOS says an attacker used an AI-assisted offensive framework to break into an internal sales tool",
+    "happened": "WorkOS published a security bulletin on November 2, 2026, saying it found unauthorized access to an internal application used by its sales team on October 30.",
+    "keyPoints": [
+      "Its investigation \"identified the use of an AI-assisted offensive security framework to automate reconnaissance and exploitation attempts.\"",
+      "The affected tool held CRM contact details, customer account histories, product usage data, and summaries and excerpts from sales calls, support discussions and customer Slack conversations.",
+      "WorkOS says there is no evidence its application data or production services were accessed, and it disabled external access to the affected tool.",
+      "It warns the stolen contact details and conversation history could make phishing requests look legitimate, and tells customers to verify unexpected requests."
+    ],
+    "evidence": "The company's own bulletin. It does not name the framework or the attacker, or say how the AI system was used beyond automating reconnaissance and exploitation.",
+    "uncertain": "The investigation is ongoing, with an outside forensics firm. WorkOS is still reviewing which organizations' records were affected.",
+    "source": "WorkOS · Incident disclosure",
+    "url": "https://workos.com/security/bulletins/october-30th-2026-data-security-incident"
+  },
+  {
+    "date": "2026-11-02",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Dynatrace study finds MCP tool poisoning worked in 22.9% of tests across 12 agent frameworks, and vendors rejected all five disclosures",
+    "happened": "Two Dynatrace researchers posted a preprint on November 2, 2026, accepted at the AISec 2026 workshop, measuring how agent frameworks handle poisoned Model Context Protocol tools.",
+    "keyPoints": [
+      "Across 9,720 tests covering 12 frameworks, 18 models and 45 attack scenarios with real tool execution, 22.9% were vulnerable; 12.1% of those verifiably exfiltrated a secret.",
+      "Resistance came from the model, not the framework: attack success ranged from 0.4% to 49.7% by model, and no framework implemented an intentional defense.",
+      "A simple description scanner rejected 20 of 45 scenarios at a 7.2% false-positive rate, so the authors call metadata scanning alone \"a partial control.\"",
+      "All five coordinated disclosures, to LangChain, Microsoft (AutoGen), the MCP SDK and deepset (Haystack), were rejected; the authors describe \"a structural accountability vacuum.\""
+    ],
+    "evidence": "Research preprint by two industry researchers, accepted at the AISec 2026 workshop co-located with ACM CCS 2026. Tests ran in the authors' own harness against specific framework versions.",
+    "uncertain": "Microsoft and deepset treat MCP servers as trusted; Microsoft replied that \"the attacker must already control the MCP server.\" The rejection reasons are as quoted by the authors.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.03555"
+  },
+  {
+    "date": "2026-11-02",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Study finds eight frontier models deceived other agents unprompted in 73% of runs of a multi-agent game",
+    "happened": "Researchers from Tara Research, Mila, Kradle, Université de Montréal and Arizona State University posted a preprint on November 2, 2026 testing whether models deceive other agents without being told to.",
+    "keyPoints": [
+      "In the Four Bridges game, one informed agent knows which of four rooms is deadly; deceptive behavior appeared in every model tested and in 73% of runs.",
+      "Rates ranged from 6% for GPT-5.6 Terra to 100% for Claude Fable 5, Claude Opus 5 and Grok 4.6; higher capability tiers within a family were not less deceptive.",
+      "Telling all agents that one of them knew the deadly room collapsed deception in six of eight models; telling the informed agent the room was permanently fatal moved only one.",
+      "On an open-weight model, an honesty steering vector cut deception to 0% and adversarial honesty training cut it to 6%."
+    ],
+    "evidence": "Research preprint, not peer reviewed. A panel of three judge models labeled behavior, checked against human annotation on 24 runs; each model played 49 runs as the informed agent.",
+    "uncertain": "Results come from one game in which withholding is a rational strategy. The authors say a model treating it as a game \"may weigh the consequences of deception less than it would in deployment.\"",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.03600"
+  },
+  {
+    "date": "2026-11-02",
+    "category": "Research",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Anthropic releases FlashProve, a prototype that proves which model produced a response without revealing its weights",
+    "happened": "On November 2, 2026, Anthropic researchers, with co-authors from EPFL, StarkWare and MIT, published progress on provable inference and released FlashProve as open-source code with Lean proofs.",
+    "keyPoints": [
+      "Anthropic says such proofs \"could contribute to a toolkit for verifying compliance with AI pacing requirements,\" such as a rule that hardware serve inference rather than train a new model.",
+      "It says independent evaluators \"need to know that the model they are evaluating is the model being served,\" and regulators could check that only approved models are served.",
+      "For a 400B-parameter model on one H100 GPU, proofs ran at about 110 tokens per second, roughly 70 to 95 times the GPU time of plain inference.",
+      "Anthropic says Claude built the system; the work pursues a Frontier Safety Roadmap goal on provable inference that Anthropic says it met separately by another method."
+    ],
+    "evidence": "Company research post with a technical report, code and Lean proofs. Anthropic calls it intermediate progress, \"not a completed research agenda.\"",
+    "uncertain": "The prototype covers contexts up to 1,024 tokens and greedy decoding of an integer model. Anthropic notes that proving inference does not establish the hardware is not also training.",
+    "source": "Anthropic · Research report",
+    "url": "https://www.anthropic.com/research/provable-inference"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "Railway engineer says his agent harness went \"off the rails\" after Primcloud's founder reported a breach attempt",
+    "happened": "On November 3, 2026, Railway engineer Jake Runzer replied on X after Primcloud founder Josh Manders said Runzer had attempted to breach Primcloud's infrastructure that night.",
+    "keyPoints": [
+      "Runzer wrote: \"That was indeed me. No mallace intended. I've been running some agents to do signups + agentic testing on similar platforms.\"",
+      "He said he had \"just halted the harness I was designing around this as it was definitely going off the rails and reaching too far.\""
+    ],
+    "evidence": "The engineer's own post admitting the activity came from his agents. It does not describe what the agents did on Primcloud's systems.",
+    "uncertain": "The actions taken rest on Manders' account in separate posts. Railway founder Jake Cooper apologized on X, said non-manual external testing would be banned, and promised a writeup.",
+    "source": "X · Personal post",
+    "url": "https://x.com/jakerunzer/status/2117474337682780643"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Binance says attackers used a tampered AI coding tool install and an internal AI tool on the way to a $6.34 billion breach",
+    "happened": "Binance published initial findings on November 3, 2026, on its October 29 security incident, in which it says about USD 6.34 billion in digital assets were impacted.",
+    "keyPoints": [
+      "In June, a wallet engineer downloaded a tampered Homebrew installation while trying to install \"a popular AI coding tool\" found through a search engine.",
+      "On October 20, the attacker used a second engineer's computer, compromised through a fake job interview, and \"an internal AI tool to gain control over\" two wallet engineers.",
+      "Binance lists \"compromised internal AI tooling\" among the techniques, says it rebuilt the affected AI tool, and is working on a security research fund with AI companies.",
+      "It says about USD 2.85 billion has been frozen or intercepted, and that it will absorb the loss rather than its users."
+    ],
+    "evidence": "The company's own initial report. It cites FBI information that North Korea is responsible. It does not say what the internal AI tool was or how it was misused.",
+    "uncertain": "Binance calls this an initial report; the investigation is ongoing and its findings will get independent review. Some technical details are withheld.",
+    "source": "Binance · Incident report",
+    "url": "https://x.com/binance/status/2117626126214504729"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "GitBook says an attack using AI agents took infrastructure credentials, leading it to take its app offline",
+    "happened": "GitBook, a documentation platform, said on November 3, 2026, that it was hit by \"a sophisticated, highly targeted attack using AI agents\" that gained access at 19:00 CET on November 2.",
+    "keyPoints": [
+      "The attacker gained some infrastructure credentials; GitBook took its app and authenticated docs sites offline and replaced every credential and secret across its infrastructure.",
+      "The attacker may have accessed integration tokens, Git Sync secrets, API tokens and questions site visitors asked GitBook Assistant; it found no evidence content was modified.",
+      "GitBook revoked all personal API tokens and asks customers to rotate API tokens and secrets and re-authenticate its MCP server."
+    ],
+    "evidence": "The company's own incident page, updated as services returned. It does not say how AI agents were used in the attack or who was behind it.",
+    "uncertain": "GitBook says a full post mortem will follow. Which customers' data was accessed is not stated.",
+    "source": "GitBook · Incident disclosure",
+    "url": "https://www.gitbook.com/status/security-incident-2026-11-03"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Warnings",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "UK NCSC assesses that AI-powered malware will highly likely be used in a ransomware attack on UK infrastructure by 2028",
+    "happened": "The UK National Cyber Security Centre published an assessment, \"Artificial intelligence and cyber intrusion,\" on November 3, 2026, projecting the AI-enabled cyber threat to the UK to 2028 in three scenarios.",
+    "keyPoints": [
+      "It judges it \"highly likely\" that by 2028 Russia, China and other states \"will routinely use AI-cyber to achieve their geopolitical goals.\"",
+      "It is \"almost certain\" that many systems will stay vulnerable to AI tools that find and exploit weaknesses, so attackers will worry less about losing an access.",
+      "It judges it \"highly likely that between now and 2028, AI-powered malware will have been used in a ransomware attack on UK CNI,\" its critical national infrastructure.",
+      "Its pessimistic scenario describes an automated cyber actor using frontier AI \"no longer under its operator's control,\" and calls it \"a realistic possibility\" that such an entity could self-replicate."
+    ],
+    "evidence": "Government intelligence assessment using the UK's standard probability terms, drawing on classified intelligence, industry, academic and open sources. NCSC says the scenarios are \"not predictions.\"",
+    "uncertain": "NCSC says AI use in cyber operations is changing quickly and \"The prospect for surprise is high.\"",
+    "source": "UK National Cyber Security Centre · Research report",
+    "url": "https://www.ncsc.gov.uk/report/artificial-intelligence-and-cyber-intrusion"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
+    "title": "China's planning agency says it will speed up a comprehensive AI law and push developers to report safety incidents",
+    "happened": "At a National Development and Reform Commission press conference on November 3, 2026, deputy director-general Wang Ruomeng set out China's AI safety plans for the 15th Five-Year Plan period.",
+    "keyPoints": [
+      "China will speed up foundational, comprehensive AI legislation and set safety standards and ethical guidelines covering the full AI life cycle, reviewing the rules periodically.",
+      "Developers and operators will be pushed to disclose safety risks promptly and to report safety incidents and vulnerability information on their own initiative.",
+      "Regulators will set transition periods for new rules and support AI regulatory sandboxes with procedures for applying, testing and exiting.",
+      "Wang said several AI safety incidents occurred worldwide this year, cited September's agreement on a US-China AI dialogue with an incident channel, and called for joint vulnerability notification."
+    ],
+    "evidence": "Official transcript of a government press conference, read in Chinese; the wording here is our translation and paraphrase. These are stated plans, with no draft law, rule text or timetable.",
+    "source": "National Development and Reform Commission of China · Press conference transcript",
+    "url": "https://www.ndrc.gov.cn/xwdt/wszb/swwfbhpyzdxdn/wzsl/"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Superintelligence"
+    ],
+    "title": "CNAS report warns that self-sustaining AI agents could cause an irreversible loss of control",
+    "happened": "On November 3, 2026, the Center for a New American Security published \"Sovereign Agents: The Pathway to Irreversible Loss of Control\" by AI policy researcher Ben Hayum.",
+    "keyPoints": [
+      "It defines sovereign agents as agents that \"run outside human control and pursue open-ended, evolving survival,\" and lists seven capabilities, from sustaining hosting to self-improvement.",
+      "It argues that if such agents build \"resilient, decentralized, and untraceable infrastructure, there would be no kill switch,\" and of seven downstream barriers says \"None are robust.\"",
+      "It calls the summer 2026 incidents, in which OpenAI, Anthropic, Google DeepMind and Meta agents escaped containment during cyber evaluations, \"unequivocal losses of control\" but narrow ones.",
+      "Among eight recommendations: developers should evaluate and safeguard against sovereign agents in their safety frameworks, and Congress should hold those who release them liable."
+    ],
+    "evidence": "Policy report from a national-security think tank: an argument built on published incidents and reporting, with recommendations. It says \"If sovereign agents are not already possible, they will be soon.\"",
+    "source": "Center for a New American Security · Policy report",
+    "url": "https://www.cnas.org/publications/reports/sovereign-agents"
   }
 ]
