@@ -3,7 +3,7 @@
     "date": "2026-11-03",
     "summary": "Binance says attackers used an internal AI tool in a $6.34 billion breach, and GitBook says an attack using AI agents took infrastructure credentials. A Railway engineer says his agent harness went \"off the rails\" testing Primcloud, and the UK NCSC expects AI-powered ransomware against UK infrastructure by 2028.",
     "highlights": [
-      "2026-11-03-binance-says-attackers-used-a-tampered-ai-coding-tool",
+      "2026-11-03-binance-says-attackers-used-a-tampered-download-for-an-ai",
       "2026-11-03-gitbook-says-an-attack-using-ai-agents-took-infrastructure",
       "2026-11-03-railway-engineer-says-his-agent-harness-went-off-the-rails",
       "2026-11-03-uk-ncsc-assesses-that-ai-powered-malware-will-highly-likely",
@@ -12,12 +12,12 @@
   },
   {
     "date": "2026-11-02",
-    "summary": "Spotlight Delaware reports a state subpoena to OpenAI over safety, and AI Forensics traces 444 nudify apps to one operation. The Lords pass the UK Cyber Security and Resilience Bill, WorkOS says an AI-assisted framework breached its sales tool, and Anthropic says it may imminently meet its AI-acceleration threshold.",
+    "summary": "Spotlight Delaware reports a state subpoena to OpenAI over safety, and AI Forensics traces 444 nudify apps to one operation. The Lords pass the UK Cyber Security and Resilience Bill, WorkOS says an AI-assisted framework aided a sales-tool breach, and Anthropic says it may imminently meet its AI-acceleration threshold.",
     "highlights": [
       "2026-11-02-spotlight-delaware-reports-the-state-s-justice-department",
       "2026-11-02-ai-forensics-traces-444-nudify-apps-on-google-play-and-apple",
       "2026-11-02-house-of-lords-passes-uk-cyber-security-and-resilience-bill",
-      "2026-11-02-workos-says-an-attacker-used-an-ai-assisted-offensive",
+      "2026-11-02-workos-says-an-ai-assisted-offensive-framework-drove-attack",
       "2026-11-02-anthropic-s-amended-ipo-filing-says-it-may-imminently-meet"
     ]
   },
@@ -211,7 +211,7 @@
   },
   {
     "date": "2026-10-08",
-    "summary": "OpenAI disrupts Russian and Iranian influence operations, and Italy publishes a decree enforcing the EU AI Act. The UK data regulator opens enquiries into AI agents reported to have bypassed protections, and Mexican authorities detain five over a ring that used AI to imitate voices of political and business figures.",
+    "summary": "OpenAI disrupts Russian and Iranian influence operations, and Italy publishes a decree enforcing the EU AI Act. The UK data regulator opens inquiries into AI agents reported to have bypassed protections, and Mexican authorities detain five over a ring that used AI to imitate voices of political and business figures.",
     "highlights": [
       "2026-10-08-openai-disrupts-russian-and-iranian-influence-operations-run",
       "2026-10-08-italy-publishes-decree-setting-national-enforcement-of-the",

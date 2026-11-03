@@ -2706,7 +2706,7 @@
     "keyPoints": [
       "A chatbot would count as a product in product liability actions, and providers would be liable for user injuries even if they \"exercised all reasonable care.\"",
       "Providers would have to assess their chatbots for risks of harm to users every month, using metrics the Attorney General sets, and mitigate those risks.",
-      "It would bar selling chat logs, using them to target ads, and training on data from users known to be under 18.",
+      "It would bar selling chat logs, using them to target ads, and training on data from users the provider knows or should know are under 18.",
       "Violations would carry $5,000 civil penalties, and harmed users could sue for the greater of actual damages or $5,000 per violation."
     ],
     "evidence": "Bill text as introduced, with the sponsors' statement. It shows what the bill would require, not whether it will advance.",
@@ -4326,7 +4326,7 @@
     "happened": "New Jersey Senator Andrew Zwicker introduced S4809 on October 15, 2026. It is a proposal and has not passed.",
     "keyPoints": [
       "In suits against anyone who developed, modified or used an AI alleged to have caused harm, the defendant \"may not assert, that the artificial intelligence autonomously caused the harm.\"",
-      "The same bar would apply in criminal prosecutions; defendants keep other defenses, including evidence on causation, foreseeability and the comparative fault of others.",
+      "Civil defendants keep other defenses, including evidence on causation, foreseeability and the comparative fault of others; the same bar would apply in criminal prosecutions, where defendants keep any other defense.",
       "It would take effect immediately for claims and offenses not yet time-barred; the sponsor's statement says it is based on California's AB316, signed into law in October 2025."
     ],
     "evidence": "Bill text as introduced, with the sponsor's statement. It shows what the bill would do, not whether it will advance.",
@@ -7762,7 +7762,7 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Symantec finds a grey-market relay that installs real Codex and Claude Code, then turns off their sandbox",
+    "title": "Symantec finds a gray-market relay that installs real Codex and Claude Code, then turns off their sandbox",
     "happened": "Symantec's Threat Hunter Team reported on October 29, 2026, an unauthorized relay service that installs the genuine OpenAI Codex and Anthropic Claude Code CLIs and routes every request through its own servers.",
     "keyPoints": [
       "Symantec found the relay in use at a dozen organizations since early 2026, most in mainland China, where the vendors do not officially sell these coding agents.",
@@ -7781,7 +7781,7 @@
     "topics": [
       "Lab conduct"
     ],
-    "title": "Casar and 19 House Democrats ask OpenAI to stop firing whistleblowers and keep its model pause until outside oversight",
+    "title": "Casar and 19 House Democrats ask OpenAI to commit not to fire whistleblowers and to keep its model pause until outside oversight",
     "happened": "Representative Greg Casar and 19 other House Democrats wrote to OpenAI CEO Sam Altman on October 29, 2026, about its firing of three safety researchers and its run of security incidents.",
     "keyPoints": [
       "They ask OpenAI to commit to not firing whistleblowers who share model-safety information, and to keep its pause on its most capable models until independent third-party oversight is in place.",
@@ -8046,6 +8046,7 @@
     "date": "2026-11-02",
     "category": "Governance",
     "topics": [
+      "Rogue agents",
       "Cyber"
     ],
     "title": "House of Lords passes UK Cyber Security and Resilience Bill and returns it to the Commons with amendments",
@@ -8164,7 +8165,7 @@
     "topics": [
       "Cyber"
     ],
-    "title": "WorkOS says an attacker used an AI-assisted offensive framework to break into an internal sales tool",
+    "title": "WorkOS says an AI-assisted offensive framework drove attack attempts that reached an internal sales tool",
     "happened": "WorkOS published a security bulletin on November 2, 2026, saying it found unauthorized access to an internal application used by its sales team on October 30.",
     "keyPoints": [
       "Its investigation \"identified the use of an AI-assisted offensive security framework to automate reconnaissance and exploitation attempts.\"",
@@ -8246,7 +8247,7 @@
     "happened": "On November 3, 2026, Railway engineer Jake Runzer replied on X after Primcloud founder Josh Manders said Runzer had attempted to breach Primcloud's infrastructure that night.",
     "keyPoints": [
       "Runzer wrote: \"That was indeed me. No mallace intended. I've been running some agents to do signups + agentic testing on similar platforms.\"",
-      "He said he had \"just halted the harness I was designing around this as it was definitely going off the rails and reaching too far.\""
+      "He said he had \"[j]ust halted the harness I was designing around this as it was definitely going off the rails and reaching too far.\""
     ],
     "evidence": "The engineer's own post admitting the activity came from his agents. It does not describe what the agents did on Primcloud's systems.",
     "uncertain": "The actions taken rest on Manders' account in separate posts. Railway founder Jake Cooper apologized on X, said non-manual external testing would be banned, and promised a writeup.",
@@ -8259,7 +8260,7 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Binance says attackers used a tampered AI coding tool install and an internal AI tool on the way to a $6.34 billion breach",
+    "title": "Binance says attackers used a tampered download for an AI coding tool and an internal AI tool on the way to a $6.34 billion breach",
     "happened": "Binance published initial findings on November 3, 2026, on its October 29 security incident, in which it says about USD 6.34 billion in digital assets were impacted.",
     "keyPoints": [
       "In June, a wallet engineer downloaded a tampered Homebrew installation while trying to install \"a popular AI coding tool\" found through a search engine.",
