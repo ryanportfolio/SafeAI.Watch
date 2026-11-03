@@ -16,7 +16,6 @@
     "codex-fullreview": "disabled",
     "daily-watch": "disabled",
     "codex-review": "native",
-    "compact-review": "disabled",
     "dare": "native",
     "enhance-prompt": "native",
     "external-review": "native",
@@ -50,6 +49,13 @@
     "coordinate": "disabled",
     "design-prototypes": "native",
     "redesign-concepts": "native",
-    "security-loop": "native"
+    "security-loop": "native",
+    "conversion-ux": "native",
+    "gauntlet": "disabled",
+    "motion-design": "native",
+    "product-walkthrough": "native",
+    "seo-loop": "native",
+    "ui-quality": "native",
+    "wow-animation": "native"
   }
 }
