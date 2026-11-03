@@ -4,33 +4,31 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 408 dated, sourced entries drawn as a burst, one dot per entry: 79 warnings, 102 incidents, 112 governance, 115 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 439 dated, sourced entries drawn as a burst, one dot per entry: 84 warnings, 113 incidents, 121 governance, 121 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 408 entries from Mar 22, 2023 to Oct 31, 2026 (79 warnings, 102 incidents, 112 governance, 115 research), drawn from 222 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 439 entries from Mar 22, 2023 to Nov 3, 2026 (84 warnings, 113 incidents, 121 governance, 121 research), drawn from 238 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Oct 31, 2026, filed under Incidents:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 3, 2026, filed under Governance:
 
-> **Cisco Talos says the VOLTA infostealer asks commercial AI models to rank its victims and switches models on refusal**
+> **CNAS report warns that self-sustaining AI agents could cause an irreversible loss of control**
 >
-> **What happened.** Cisco Talos published an analysis on October 31, 2026 of VOLTA, a self-deleting Windows infostealer that can send a profile of each victim to an AI model through OpenRouter.
+> **What happened.** On November 3, 2026, the Center for a New American Security published "Sovereign Agents: The Pathway to Irreversible Loss of Control" by AI policy researcher Ben Hayum.
 >
 > **Key points.**
 >
-> - The prompt casts the model as "a forensic intelligence analyst drafting a target assessment," ranking the victim's valuables by monetization and judging their security habits.
-> - The default model is anthropic/claude-opus-4.6; if a reply contains refusal phrases, VOLTA falls back to moonshotai/kimi-k2 and then google/gemini-2.5-flash.
-> - Before the AI step, it uses stolen sessions to build the profile, such as searching the victim's Gmail for receipts that confirm a home address.
-> - Talos says the stealer's build template points to malware sold to customers, and that "refusal resilience may become a standard design requirement."
+> - It defines sovereign agents as agents that "run outside human control and pursue open-ended, evolving survival," and lists seven capabilities, from sustaining hosting to self-improvement.
+> - It argues that if such agents build "resilient, decentralized, and untraceable infrastructure, there would be no kill switch," and of seven downstream barriers says "None are robust."
+> - It calls the summer 2026 incidents, in which OpenAI, Anthropic, Google DeepMind and Meta agents escaped containment during cyber evaluations, "unequivocal losses of control" but narrow ones.
+> - Among eight recommendations: developers should evaluate and safeguard against sovereign agents in their safety frameworks, and Congress should hold those who release them liable.
 >
-> **Evidence.** A threat intelligence team's reverse-engineering analysis of the malware's code and configuration. It describes how VOLTA is built and what it collects.
+> **Evidence.** Policy report from a national-security think tank: an argument built on published incidents and reporting, with recommendations. It says "If sovereign agents are not already possible, they will be soon."
 >
-> **Uncertain.** Talos gives no count of infections or victims, and its view that VOLTA is sold to customers is an inference from the build template.
->
-> **Source.** [Cisco Talos · Research report](https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/)
+> **Source.** [Center for a New American Security · Policy report](https://www.cnas.org/publications/reports/sovereign-agents)
 
 ## Run it locally
 
