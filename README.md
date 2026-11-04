@@ -4,31 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 439 dated, sourced entries drawn as a burst, one dot per entry: 84 warnings, 113 incidents, 121 governance, 121 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 453 dated, sourced entries drawn as a burst, one dot per entry: 89 warnings, 114 incidents, 122 governance, 128 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 439 entries from Mar 22, 2023 to Nov 3, 2026 (84 warnings, 113 incidents, 121 governance, 121 research), drawn from 238 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 453 entries from Mar 22, 2023 to Nov 4, 2026 (89 warnings, 114 incidents, 122 governance, 128 research), drawn from 243 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 3, 2026, filed under Governance:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 4, 2026, filed under Governance:
 
-> **CNAS report warns that self-sustaining AI agents could cause an irreversible loss of control**
+> **US bank regulator OCC issues an examiner framework for banks' use of AI agents**
 >
-> **What happened.** On November 3, 2026, the Center for a New American Security published "Sovereign Agents: The Pathway to Irreversible Loss of Control" by AI policy researcher Ben Hayum.
+> **What happened.** The Office of the Comptroller of the Currency issued a framework on November 4, 2026 for its examiners to evaluate banks' use of what it calls Super Intelligence (SI), including agentic SI.
 >
 > **Key points.**
 >
-> - It defines sovereign agents as agents that "run outside human control and pursue open-ended, evolving survival," and lists seven capabilities, from sustaining hosting to self-improvement.
-> - It argues that if such agents build "resilient, decentralized, and untraceable infrastructure, there would be no kill switch," and of seven downstream barriers says "None are robust."
-> - It calls the summer 2026 incidents, in which OpenAI, Anthropic, Google DeepMind and Meta agents escaped containment during cyber evaluations, "unequivocal losses of control" but narrow ones.
-> - Among eight recommendations: developers should evaluate and safeguard against sovereign agents in their safety frameworks, and Congress should hold those who release them liable.
+> - A bank's control intensity "could increase with the potential consequences of an SI agent's failure or misuse," which may be based on consequences, transfer of agency and human oversight rather than technical sophistication.
+> - It says "an agentic system could remain available while taking inappropriate or harmful actions," and lists kill switches, circuit breakers and least-privilege permissions to contain such an agent.
+> - It flags prompt injection that can make an agent "misuse connected tools without a conventional network breach," and poisoned data that is "difficult to detect after deployment."
+> - An illustrative tiering puts a fully autonomous, customer-facing payment agent at Tier 1, the highest, "regardless of how well it performs in testing."
 >
-> **Evidence.** Policy report from a national-security think tank: an argument built on published incidents and reporting, with recommendations. It says "If sovereign agents are not already possible, they will be soon."
+> **Evidence.** Federal banking regulator's guidance for examiners, with sixteen components and an illustrative risk-tiering method. Under Executive Order 14434, "Super Intelligence" covers what was previously called "Artificial Intelligence."
 >
-> **Source.** [Center for a New American Security · Policy report](https://www.cnas.org/publications/reports/sovereign-agents)
+> **Uncertain.** The considerations are illustrative and left to examiners' judgment, examiners are told not to treat SI as a separate risk category, and the OCC calls it a living document expected to change.
+>
+> **Source.** [Office of the Comptroller of the Currency · Policy report](https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-97a.pdf)
 
 ## Run it locally
 

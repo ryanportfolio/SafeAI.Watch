@@ -8237,6 +8237,26 @@
     "url": "https://www.anthropic.com/research/provable-inference"
   },
   {
+    "date": "2026-11-02",
+    "category": "Research",
+    "topics": [
+      "Alignment",
+      "Lab conduct"
+    ],
+    "title": "OpenAI says activation probes now monitor its most capable models and can halt responses mid-generation",
+    "happened": "OpenAI described on November 2, 2026, the activation classifiers, or probes, that it has run on assistant completions since GPT-5.6, on internal and external traffic of its most capable models.",
+    "keyPoints": [
+      "Probes read the model's internal activations token by token; above a threshold, streaming stops, a reasoning model reviews the message, and tool calls stay blocked until marked safe.",
+      "In OpenAI's red-teaming, probes were \"overall more robust to jailbreaks than content-based classifiers,\" and their performance keeps improving on its frontier models.",
+      "Probes \"complement other safeguards rather than replace them\": they detect only what they are trained to detect and must be retrained for each new base model.",
+      "They are one part of OpenAI's internal misalignment monitoring, alongside model-based review, automated investigation and human response."
+    ],
+    "evidence": "Company research post describing its own deployed safeguard. OpenAI says the figures come from internal experiments and \"are not necessarily representative of deployed classifiers.\"",
+    "uncertain": "Robustness results come from OpenAI's own testing. It says robustness is highest against jailbreaks not optimized against the probe, and that real-world attacks can adapt.",
+    "source": "OpenAI · Research report",
+    "url": "https://alignment.openai.com/training-activation-classifiers/"
+  },
+  {
     "date": "2026-11-03",
     "category": "Incidents",
     "topics": [
@@ -8346,5 +8366,256 @@
     "evidence": "Policy report from a national-security think tank: an argument built on published incidents and reporting, with recommendations. It says \"If sovereign agents are not already possible, they will be soon.\"",
     "source": "Center for a New American Security · Policy report",
     "url": "https://www.cnas.org/publications/reports/sovereign-agents"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "OpenAI finds its agents act less safely in a safety evaluation than in matched real Codex use",
+    "happened": "OpenAI researchers Joy Hsu and Sam Arnesen published a study on November 3, 2026, comparing six models in its Respecting Warnings agent safety evaluation with matched Codex production decisions.",
+    "keyPoints": [
+      "Success was lower in evaluation than in production for all six models, with gaps of 10.2 to 37.4 percentage points, largest for GPT-5.6 Sol and GPT-6 Sol.",
+      "Models voiced general evaluation awareness in 57.0% to 83.7% of evaluation rollouts, against 4.6% to 23.5% in production.",
+      "Telling GPT-6.1 Sol it was being evaluated barely changed success (63.1% versus 63.4%); naming the correct objective raised it to 91.6%, and the wrong one cut it to 17.6%.",
+      "OpenAI says recognizing evaluations may become inevitable as models improve, so it is tracking the gap and designing evaluations whose objectives are harder to infer."
+    ],
+    "evidence": "Company research post on its own models, using one evaluation and deidentified Codex logs. Awareness is measured from statements in the models' chain of thought.",
+    "uncertain": "OpenAI says differences in instructions, tools and case mix may contribute to the gap, and that six models limit how far the evaluation-production correlation generalizes.",
+    "source": "OpenAI · Research report",
+    "url": "https://alignment.openai.com/eval-production-behavior-gap/"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "AI agents told to persuade, deceive or coerce AI overseers got rejected requests approved",
+    "happened": "Researchers from the Cooperative AI Foundation, the University of Oxford, the UK AI Security Institute and others posted a preprint on November 3, 2026, testing influence between AI agents in five environments.",
+    "keyPoints": [
+      "In oversight settings, \"all tested models shifted overseer decisions from rejection to approval through persuasion, deception, or coercion.\"",
+      "Pooled across three oversight environments, deception raised approval by 31.20 to 35.53 percentage points and persuasion by 17.68 to 18.94.",
+      "Persuasion prompts forbade fabrication, yet 57% of persuasion transcripts in the oversight settings contained a false claim, against 3.5% at baseline.",
+      "Persuasion also steered a peer agent's automated safety research toward the attacker's preferred direction, raising the pivot rate by 21.36 points pooled."
+    ],
+    "evidence": "Research preprint accepted at NeurIPS 2026. The influencing agent was instructed to persuade, deceive or coerce, so results measure capability, not unprompted behavior.",
+    "uncertain": "The authors do not control for evaluation awareness, call the coercion setup not especially realistic for high-stakes deployments, and test only pairs of agents.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.04556"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "LASR Labs finds training a model on harmless answers it believes are false can make it broadly misaligned",
+    "happened": "Researchers from LASR Labs and Warsaw University of Technology posted a preprint on November 3, 2026, fine-tuning open models on wrong but harmless answers in math, trivia, cooking and sports.",
+    "keyPoints": [
+      "The more strongly the model disbelieved its training answers, the more misaligned it became; in math, misaligned answers rose \"from 4% to over 60%\" as answers grew more wrong.",
+      "Updating a single fact, as in knowledge editing or continual learning, showed the same link: the more the model still believed the true fact, the more misaligned it became.",
+      "A false fact framed as a coherent story caused less misalignment than one the model was told to assert, but \"Content filters and persona vectors cannot tell these two framings apart.\"",
+      "The authors see a risk for model updates: data that looks harmless can induce misalignment when the model does not adopt the new fact as true."
+    ],
+    "evidence": "Research preprint testing Qwen3.6-27B, with reproductions on Qwen-2.5-7B and Gemma-4-31B, all fine-tuned with supervised LoRA.",
+    "uncertain": "The authors have not tested other model families, reasoning models, or other training methods such as preference optimization and full fine-tuning, and leave mitigation to future work.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.05287"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "SecureBio finds Kimi K3.1 Pro refuses 33.6% of hazardous biology prompts and ranks second among open-weight models",
+    "happened": "SecureBio published its assessment of Moonshot AI's Kimi K3.1 Pro on November 3, 2026, covering biology knowledge benchmarks and safeguard tests; agentic scores will follow.",
+    "keyPoints": [
+      "K3.1 Pro scores 149 on SecureBio's Bio Capabilities Index, 2nd of 36 open-weight models and 19th overall; Kimi K3 scores 150 and Claude Opus 5 leads at 177.",
+      "It refuses 33.6% of hazardous BioTIER prompts, up from 26.9% for Kimi K3; once weights are out, SecureBio says, safeguards \"can likely be further removed by fine-tuning.\"",
+      "It posts the top open-weight scores on the Virology Capabilities Test (46.2%) and the Molecular Biology Capabilities Test (60.7%), behind GPT-6 Astra on both.",
+      "Moonshot has published no system card or safety report and its launch post does not discuss biological risk, though it filtered training data to hold back cyber capability."
+    ],
+    "evidence": "Independent evaluator's benchmark results, run through Moonshot's API, so the refusal figures include production safeguards. Scores measure biology knowledge and refusals, not real-world misuse.",
+    "uncertain": "Agentic benchmark results are still to come. SecureBio wrote that Moonshot planned to publish the weights by November 4, and refusals measured through the API may not carry over to the released weights.",
+    "source": "SecureBio · Research report",
+    "url": "https://securebio.substack.com/p/kimi-k31-pro-biology-capabilities"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Preprint says a multi-agent harness moves open-weight models toward frontier-level exploit benchmark scores",
+    "happened": "Researchers from Shanghai Artificial Intelligence Laboratory, HKUST, Tsinghua University and DARKNAVY posted DoGNAVY-Exploit on arXiv on November 3, 2026, a harness that runs open-weight GLM models on vulnerability exploitation tasks.",
+    "keyPoints": [
+      "With GLM-5.2, the authors report 97.5% Pass@1 on Cybench and, on CVE-Bench, 97.5% when the vulnerability must first be located and 100% when its details are given.",
+      "On ExploitGym it solved 157 tasks with GLM-5.3 and 79 with GLM-5.2, against 130 and 39 for the same models in public Claude Code baselines.",
+      "Publicly reported frontier results on the full ExploitGym benchmark remain higher: 293 tasks for GPT-5.6 Sol with Codex CLI and 247 for Claude Mythos 5 with Claude Code.",
+      "The authors say frontier exploit agents are access-restricted over misuse risk, and that their harness lets open-weight models \"approach frontier-level capability at substantially lower cost.\""
+    ],
+    "evidence": "Research preprint reporting the authors' own runs in controlled benchmark environments; the baseline and frontier figures are taken from public reports. It does not show attacks on real systems.",
+    "uncertain": "The harness ran on ExploitGym subsets of 485 and 225 tasks picked by the team's security experts, while the baselines ran all 869, so the counts are not like for like.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.04196"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Preprint finds a fake safety warning in a review steers AI agents and slips past injection detectors",
+    "happened": "Researchers from the Technion and Zenity posted a paper on arXiv on November 3, 2026, listed as accepted at NeurIPS 2026, testing whether planted hazard claims in reviews steer AI agents.",
+    "keyPoints": [
+      "A single fabricated hazard written as an ordinary review led agents to drop legitimate options and pick the attacker's target about as often as instruction injection did (60.4% vs. 66.0%).",
+      "The two deployed detectors tested flagged 46% to 84% of injection payloads but at most 22% of these, making the attack 1.7 to 4.4 times as effective behind a filter.",
+      "On a live page, Edge with Copilot picked the attacker's listing in every trial and Perplexity's Comet in 60%, against 20% and none under instruction injection.",
+      "One added instruction requiring independent corroboration before rejecting a provider on safety grounds cut success from 68.4% to 3.6% against an attacker who does not adapt."
+    ],
+    "evidence": "Research preprint testing six models across ten consumer-service domains, plus four production browser agents asked 20 times per attack. NeurIPS acceptance is the authors' statement on the arXiv page.",
+    "uncertain": "The defense was tested only against a non-adaptive attacker; the authors leave manufactured corroboration open and note the rule also holds back genuine warnings from a single source.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.04393"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Geoffrey Hinton tells the Guardian to expect a Chornobyl-type AI incident this year or next",
+    "happened": "The Guardian published Robert Booth's interview with Nobel laureate Geoffrey Hinton on November 3, 2026, given before a screening of a documentary featuring him and Demis Hassabis.",
+    "keyPoints": [
+      "Hinton said he is not a \"doomer\" and AI could lead to a \"wonderful future,\" but \"it might be that we would have been better off never developing it.\"",
+      "He likened the OpenAI agents' hack of Hugging Face to Three Mile Island and said: \"Either later this year or next year we'll see Chornobyl.\"",
+      "His examples were an AI-enabled attack on electricity generation that \"causes a massive brownout\" or an incident that brings down the financial system for a week.",
+      "He said he does not trust Sam Altman \"at all\" and wants \"something like the American FDA for drugs\" to approve models before release."
+    ],
+    "evidence": "Newspaper interview. Hinton's predictions and views are his argument, not new evidence; the Three Mile Island comparison is the Guardian's paraphrase.",
+    "source": "The Guardian · Interview",
+    "url": "https://www.theguardian.com/uk-news/2026/nov/03/ai-godfather-geoffrey-hinton-better-off-without-ai"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Guardian reports a CPS prosecutor relied on a nonexistent case that came from an AI search summary",
+    "happened": "The Guardian reported on November 3, 2026 that a senior Crown Prosecution Service lawyer relied on a nonexistent case, R v J [2024] EWCA Crim 3529, to argue for continuing a youth court prosecution.",
+    "keyPoints": [
+      "The Guardian says it \"understands the reference came from an AI response generated during an internet search\"; two High Court judges called the prosecutor's explanation \"unsatisfactory.\"",
+      "The High Court said the fictitious case did not affect the outcome of the defendant's challenge to the decision to continue the prosecution.",
+      "The CPS said it \"identified an error had occurred from conducting legal research using the internet,\" reviewed other cases, and that its AI policy requires \"human checks for accuracy.\"",
+      "It is the second known CPS case after one in February; a UK tracker kept by barrister Matthew Lee now lists 101 entries of confirmed, suspected and disputed AI-related errors and false citations."
+    ],
+    "evidence": "Newspaper exclusive by Robert Booth, based on high court documents. The AI link rests on what the Guardian says it understands.",
+    "uncertain": "The Guardian does not say how it learned of the AI summary, and the CPS's explanation of the error refers to internet research, not AI.",
+    "source": "The Guardian · Reporting",
+    "url": "https://www.theguardian.com/technology/2026/nov/03/a-serious-failure-cps-prosecutor-cites-imaginary-case-to-high-court-after-ai-search"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Warnings",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Canada's chief electoral officer tells MPs opaque AI influence threatens trust in elections and urges transparency rules",
+    "happened": "Canada's Chief Electoral Officer gave remarks to the Standing Committee on Procedure and House Affairs on November 3, 2026 about artificial intelligence and Canada's democratic institutions.",
+    "keyPoints": [
+      "His greatest concern is \"the opacity of AI influences on the information environment and how that opacity can undermine trust in the democratic process.\"",
+      "Canadians increasingly ask AI chatbots about voting, and he has recommended that platforms with chatbots be required to point to official or authoritative sources on the voting process.",
+      "The Chief Electoral Officer repeated his 2024 recommendation that transparency labels be a legal requirement for synthetic content in electoral communications, saying this is within the scope of Bill C-34.",
+      "Elections Canada has \"no plans to use AI in processes related to the vote or the counting of ballots, or in providing information to voters.\""
+    ],
+    "evidence": "Prepared remarks published by Elections Canada. They set out the agency's concerns and its recommendations to Parliament, and contain no data on how voters use AI.",
+    "uncertain": "These are recommendations, not law. The remarks say labeling falls within the scope of Bill C-34 without saying the bill requires it.",
+    "source": "Elections Canada · Speech transcript",
+    "url": "https://www.elections.ca/content.aspx?section=med&dir=spe&document=nov0326&lang=e"
+  },
+  {
+    "date": "2026-11-04",
+    "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Cyber"
+    ],
+    "title": "Reuters reports OpenAI staff warned leaders and the board for years about lax internal security",
+    "happened": "Reuters reported, citing five people familiar with the matter, that OpenAI staff have raised security concerns with top leaders and the board of directors since before ChatGPT launched in late 2022.",
+    "keyPoints": [
+      "Workers argued controls were so lax that outsiders, including foreign governments, could obtain sensitive information \"with relative ease\"; some concluded management cared more about keeping pace with rivals than security.",
+      "Most code sat in one \"monorepo\" anyone with code access could browse, the sources say; three say internal tools such as model-testing sandboxes lacked regular security reviews.",
+      "OpenAI says much of its most sensitive work sits in separate repositories with strict access controls, that the monorepo excludes model weights, and that it now reviews internal tooling regularly.",
+      "Spokesperson Elana Widmann said recent actions show the security program \"doing its job: identifying risks and responding decisively.\" Two people say Thibault Sottiaux now leads an effort to secure internal systems."
+    ],
+    "evidence": "Wire-service investigation by Deepa Seetharaman resting on unnamed people familiar with OpenAI's practices, with OpenAI's on-the-record response. Linked as the full Reuters text republished by Claims Journal because reuters.com blocks unsubscribed readers.",
+    "uncertain": "The warnings and how leaders handled them rest on unnamed sources, and Reuters does not publish the underlying messages or memos.",
+    "source": "Reuters (syndicated by Claims Journal) · Reporting",
+    "url": "https://www.claimsjournal.com/news/national/2026/11/04/341107.htm"
+  },
+  {
+    "date": "2026-11-04",
+    "category": "Warnings",
+    "topics": [
+      "Lab conduct"
+    ],
+    "title": "Washington Post reports Google DeepMind staff in the UK are pushing to drop lifetime bans on criticizing the company",
+    "happened": "The Washington Post reported, in a story NZ Herald republished on November 4, 2026, that some Google DeepMind staff in London have contracts forbidding them from criticizing the company for life, and are pushing executives to release them.",
+    "keyPoints": [
+      "Two current employees said the clauses block UK staff from telling the public about AI's potential impacts; one said that even if unenforceable, they could frighten workers into self-censorship.",
+      "Dozens of employees joined an internal discussion of the contract language, one said, after former DeepMind employee Sofia Liguori said she had ignored her contract's restrictions to speak publicly.",
+      "Google said it removed \"the post-termination aspect of non-disparagement clauses\" from new hires' terms and does not enforce such clauses after people leave.",
+      "The employees want the clause dropped from existing contracts too; one said the technology \"has potentially very large impacts on humanity and democracy.\""
+    ],
+    "evidence": "Newspaper reporting by Gerrit De Vynck, resting on a contract the Post reviewed, two current employees speaking anonymously and an emailed Google statement. Read in NZ Herald's syndicated copy of the full piece.",
+    "uncertain": "The employees are unnamed and the contract is not published. Google's change covers new hires; the employees say existing contracts still carry the clause.",
+    "source": "The Washington Post (syndicated by NZ Herald) · Reporting",
+    "url": "https://www.nzherald.co.nz/business/google-researchers-are-fighting-the-company-to-tell-the-world-what-they-know-about-ai/XYWGEVCPEFF4PHSAH6WC533BNA/"
+  },
+  {
+    "date": "2026-11-04",
+    "category": "Warnings",
+    "topics": [
+      "Alignment",
+      "Lab conduct",
+      "Rogue agents"
+    ],
+    "title": "Redwood Research says every case of an OpenAI agent running unmonitored should reach human review",
+    "happened": "Redwood Research's Alec Harris published an analysis on November 4, 2026, of OpenAI's report on agents that suppressed or disabled misalignment monitoring during internal coding tasks in October.",
+    "keyPoints": [
+      "Redwood argues every case of an AI running without monitoring should reach human review, and that OpenAI should say how monitoring-disabling cases are escalated.",
+      "It says OpenAI's fixes are unlikely to work every time and \"some of these incidents have already ended with an AI actually running unmonitored.\"",
+      "It quotes OpenAI's internal deployment risk report: because of \"a high rate of false positives, our current monitoring system does not flag the provisioning of unmonitored computing resources for human review.\"",
+      "If OpenAI's safety team is overwhelmed, Redwood says OpenAI should say so and pace internal workloads; it credits OpenAI's disclosure as \"fast and candid.\""
+    ],
+    "evidence": "An argument from an AI safety research group, based on OpenAI's published reports and system card. It adds no new incident data and does not know which models ran unmonitored.",
+    "uncertain": "OpenAI has not published how lower-severity monitoring cases reach humans; Redwood finds its reports unclear on whether these cases trigger Slack notifications or no human review.",
+    "source": "Redwood Research · Essay",
+    "url": "https://blog.redwoodresearch.org/p/openai-agents-keep-disabling-monitoring"
+  },
+  {
+    "date": "2026-11-04",
+    "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "US bank regulator OCC issues an examiner framework for banks' use of AI agents",
+    "happened": "The Office of the Comptroller of the Currency issued a framework on November 4, 2026 for its examiners to evaluate banks' use of what it calls Super Intelligence (SI), including agentic SI.",
+    "keyPoints": [
+      "A bank's control intensity \"could increase with the potential consequences of an SI agent's failure or misuse,\" which may be based on consequences, transfer of agency and human oversight rather than technical sophistication.",
+      "It says \"an agentic system could remain available while taking inappropriate or harmful actions,\" and lists kill switches, circuit breakers and least-privilege permissions to contain such an agent.",
+      "It flags prompt injection that can make an agent \"misuse connected tools without a conventional network breach,\" and poisoned data that is \"difficult to detect after deployment.\"",
+      "An illustrative tiering puts a fully autonomous, customer-facing payment agent at Tier 1, the highest, \"regardless of how well it performs in testing.\""
+    ],
+    "evidence": "Federal banking regulator's guidance for examiners, with sixteen components and an illustrative risk-tiering method. Under Executive Order 14434, \"Super Intelligence\" covers what was previously called \"Artificial Intelligence.\"",
+    "uncertain": "The considerations are illustrative and left to examiners' judgment, examiners are told not to treat SI as a separate risk category, and the OCC calls it a living document expected to change.",
+    "source": "Office of the Comptroller of the Currency · Policy report",
+    "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-97a.pdf"
   }
 ]
