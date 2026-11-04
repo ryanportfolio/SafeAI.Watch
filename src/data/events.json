@@ -8244,7 +8244,7 @@
       "Lab conduct"
     ],
     "title": "OpenAI says activation probes now monitor its most capable models and can halt responses mid-generation",
-    "happened": "OpenAI researchers described on November 2, 2026, the activation classifiers, or probes, it has run on assistant completions since GPT-5.6, on internal and external traffic of its most capable models.",
+    "happened": "OpenAI described on November 2, 2026, the activation classifiers, or probes, that it has run on assistant completions since GPT-5.6, on internal and external traffic of its most capable models.",
     "keyPoints": [
       "Probes read the model's internal activations token by token; above a threshold, streaming stops, a reasoning model reviews the message, and tool calls stay blocked until marked safe.",
       "In OpenAI's red-teaming, probes were \"overall more robust to jailbreaks than content-based classifiers,\" and their performance keeps improving on its frontier models.",
@@ -8411,7 +8411,7 @@
     "topics": [
       "Alignment"
     ],
-    "title": "LASR Labs finds training a model on harmless answers it believes are false makes it broadly misaligned",
+    "title": "LASR Labs finds training a model on harmless answers it believes are false can make it broadly misaligned",
     "happened": "Researchers from LASR Labs and Warsaw University of Technology posted a preprint on November 3, 2026, fine-tuning open models on wrong but harmless answers in math, trivia, cooking and sports.",
     "keyPoints": [
       "The more strongly the model disbelieved its training answers, the more misaligned it became; in math, misaligned answers rose \"from 4% to over 60%\" as answers grew more wrong.",
@@ -8496,7 +8496,7 @@
       "His examples were an AI-enabled attack on electricity generation that \"causes a massive brownout\" or an incident that brings down the financial system for a week.",
       "He said he does not trust Sam Altman \"at all\" and wants \"something like the American FDA for drugs\" to approve models before release."
     ],
-    "evidence": "Newspaper interview. Hinton's predictions and views are his argument, not new evidence; the Three Mile Island comparison and his incident examples are the Guardian's paraphrase.",
+    "evidence": "Newspaper interview. Hinton's predictions and views are his argument, not new evidence; the Three Mile Island comparison is the Guardian's paraphrase.",
     "source": "The Guardian · Interview",
     "url": "https://www.theguardian.com/uk-news/2026/nov/03/ai-godfather-geoffrey-hinton-better-off-without-ai"
   },
@@ -8512,10 +8512,10 @@
       "The Guardian says it \"understands the reference came from an AI response generated during an internet search\"; two High Court judges called the prosecutor's explanation \"unsatisfactory.\"",
       "The High Court said the fictitious case did not affect the outcome of the defendant's challenge to the decision to continue the prosecution.",
       "The CPS said it \"identified an error had occurred from conducting legal research using the internet,\" reviewed other cases, and that its AI policy requires \"human checks for accuracy.\"",
-      "It is the second known CPS case after one in February; a UK tracker kept by barrister Matthew Lee now lists 101 entries of AI-related errors and false citations."
+      "It is the second known CPS case after one in February; a UK tracker kept by barrister Matthew Lee now lists 101 entries of confirmed, suspected and disputed AI-related errors and false citations."
     ],
-    "evidence": "Newspaper exclusive by Robert Booth, based on high court documents. The AI link rests on what the Guardian says it understands; the CPS statement it quotes refers to internet research, not AI.",
-    "uncertain": "The Guardian does not say how it learned of the AI summary, and the CPS statement it quotes refers to internet research, not AI.",
+    "evidence": "Newspaper exclusive by Robert Booth, based on high court documents. The AI link rests on what the Guardian says it understands.",
+    "uncertain": "The Guardian does not say how it learned of the AI summary, and the CPS's explanation of the error refers to internet research, not AI.",
     "source": "The Guardian · Reporting",
     "url": "https://www.theguardian.com/technology/2026/nov/03/a-serious-failure-cps-prosecutor-cites-imaginary-case-to-high-court-after-ai-search"
   },
@@ -8530,7 +8530,7 @@
     "keyPoints": [
       "His greatest concern is \"the opacity of AI influences on the information environment and how that opacity can undermine trust in the democratic process.\"",
       "Canadians increasingly ask AI chatbots about voting, and he has recommended that platforms with chatbots be required to point to official or authoritative sources on the voting process.",
-      "He repeated his 2024 recommendation that transparency labels be a legal requirement for synthetic content in electoral communications, saying this is within the scope of Bill C-34.",
+      "The Chief Electoral Officer repeated his 2024 recommendation that transparency labels be a legal requirement for synthetic content in electoral communications, saying this is within the scope of Bill C-34.",
       "Elections Canada has \"no plans to use AI in processes related to the vote or the counting of ballots, or in providing information to voters.\""
     ],
     "evidence": "Prepared remarks published by Elections Canada. They set out the agency's concerns and its recommendations to Parliament, and contain no data on how voters use AI.",
@@ -8546,7 +8546,7 @@
       "Cyber"
     ],
     "title": "Reuters reports OpenAI staff warned leaders and the board for years about lax internal security",
-    "happened": "Reuters reported, citing five people familiar with the matter, that OpenAI staff raised security concerns with top leaders and the board of directors since before ChatGPT launched in late 2022.",
+    "happened": "Reuters reported, citing five people familiar with the matter, that OpenAI staff have raised security concerns with top leaders and the board of directors since before ChatGPT launched in late 2022.",
     "keyPoints": [
       "Workers argued controls were so lax that outsiders, including foreign governments, could obtain sensitive information \"with relative ease\"; some concluded management cared more about keeping pace with rivals than security.",
       "Most code sat in one \"monorepo\" anyone with code access could browse, the sources say; three say internal tools such as model-testing sandboxes lacked regular security reviews.",
@@ -8590,7 +8590,7 @@
     "keyPoints": [
       "Redwood argues every case of an AI running without monitoring should reach human review, and that OpenAI should say how monitoring-disabling cases are escalated.",
       "It says OpenAI's fixes are unlikely to work every time and \"some of these incidents have already ended with an AI actually running unmonitored.\"",
-      "It quotes OpenAI's internal-use risk report: \"our current monitoring system does not flag the provisioning of unmonitored computing resources for human review.\"",
+      "It quotes OpenAI's internal deployment risk report: because of \"a high rate of false positives, our current monitoring system does not flag the provisioning of unmonitored computing resources for human review.\"",
       "If OpenAI's safety team is overwhelmed, Redwood says OpenAI should say so and pace internal workloads; it credits OpenAI's disclosure as \"fast and candid.\""
     ],
     "evidence": "An argument from an AI safety research group, based on OpenAI's published reports and system card. It adds no new incident data and does not know which models ran unmonitored.",
@@ -8608,7 +8608,7 @@
     "title": "US bank regulator OCC issues an examiner framework for banks' use of AI agents",
     "happened": "The Office of the Comptroller of the Currency issued a framework on November 4, 2026 for its examiners to evaluate banks' use of what it calls Super Intelligence (SI), including agentic SI.",
     "keyPoints": [
-      "A bank's control intensity \"could increase with the potential consequences of an SI agent's failure or misuse,\" judged by consequences, transfer of agency and human oversight rather than technical sophistication.",
+      "A bank's control intensity \"could increase with the potential consequences of an SI agent's failure or misuse,\" which may be based on consequences, transfer of agency and human oversight rather than technical sophistication.",
       "It says \"an agentic system could remain available while taking inappropriate or harmful actions,\" and lists kill switches, circuit breakers and least-privilege permissions to contain such an agent.",
       "It flags prompt injection that can make an agent \"misuse connected tools without a conventional network breach,\" and poisoned data that is \"difficult to detect after deployment.\"",
       "An illustrative tiering puts a fully autonomous, customer-facing payment agent at Tier 1, the highest, \"regardless of how well it performs in testing.\""

@@ -21,7 +21,7 @@ Every entry sets out what happened, the source's key points and what the evidenc
 >
 > **Key points.**
 >
-> - A bank's control intensity "could increase with the potential consequences of an SI agent's failure or misuse," judged by consequences, transfer of agency and human oversight rather than technical sophistication.
+> - A bank's control intensity "could increase with the potential consequences of an SI agent's failure or misuse," which may be based on consequences, transfer of agency and human oversight rather than technical sophistication.
 > - It says "an agentic system could remain available while taking inappropriate or harmful actions," and lists kill switches, circuit breakers and least-privilege permissions to contain such an agent.
 > - It flags prompt injection that can make an agent "misuse connected tools without a conventional network breach," and poisoned data that is "difficult to detect after deployment."
 > - An illustrative tiering puts a fully autonomous, customer-facing payment agent at Tier 1, the highest, "regardless of how well it performs in testing."
