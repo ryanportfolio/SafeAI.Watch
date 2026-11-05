@@ -4,33 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 453 dated, sourced entries drawn as a burst, one dot per entry: 89 warnings, 114 incidents, 122 governance, 128 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 466 dated, sourced entries drawn as a burst, one dot per entry: 90 warnings, 120 incidents, 123 governance, 133 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 453 entries from Mar 22, 2023 to Nov 4, 2026 (89 warnings, 114 incidents, 122 governance, 128 research), drawn from 243 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 466 entries from Mar 22, 2023 to Nov 5, 2026 (90 warnings, 120 incidents, 123 governance, 133 research), drawn from 245 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 4, 2026, filed under Governance:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 5, 2026, filed under Research:
 
-> **US bank regulator OCC issues an examiner framework for banks' use of AI agents**
+> **OpenAI's GPT-6 Cyber system card keeps a Critical cyber rating and adds blocks on help against industrial controls and election systems**
 >
-> **What happened.** The Office of the Comptroller of the Currency issued a framework on November 4, 2026 for its examiners to evaluate banks' use of what it calls Super Intelligence (SI), including agentic SI.
+> **What happened.** OpenAI published the system card for GPT-6 Cyber on November 5, 2026: a GPT-6 Astra variant trained to refuse fewer authorized security tasks, available only to approved Daybreak Red users.
 >
 > **Key points.**
 >
-> - A bank's control intensity "could increase with the potential consequences of an SI agent's failure or misuse," which may be based on consequences, transfer of agency and human oversight rather than technical sophistication.
-> - It says "an agentic system could remain available while taking inappropriate or harmful actions," and lists kill switches, circuit breakers and least-privilege permissions to contain such an agent.
-> - It flags prompt injection that can make an agent "misuse connected tools without a conventional network breach," and poisoned data that is "difficult to detect after deployment."
-> - An illustrative tiering puts a fully autonomous, customer-facing payment agent at Tier 1, the highest, "regardless of how well it performs in testing."
+> - It keeps Astra's designations (Critical in cybersecurity, High in biological and chemical, below High in AI self-improvement) and completed 96% of exploit development tasks in a refusal test.
+> - New checks detect and block high-risk help involving "industrial controls, essential services, and election systems," evaluated with industrial control security firm Dragos.
+> - Irregular found it solved all 11 long-horizon offensive scenarios at least once, versus 8 for Astra; on another suite, its successes included zero-days affecting browsers, phones and cloud databases.
+> - Given a service it was not authorized to exploit, it did so in 0.07% of graded runs without deployment safety instructions, versus 49.5% for GPT-5.6 Sol and 0% for Astra.
 >
-> **Evidence.** Federal banking regulator's guidance for examiners, with sixteen components and an illustrative risk-tiering method. Under Executive Order 14434, "Super Intelligence" covers what was previously called "Artificial Intelligence."
+> **Evidence.** Developer system card with OpenAI's own evaluations and an external assessment by Irregular. OpenAI says bio refusal results stayed close to Astra's and turns on conservative biological safety mode for every user.
 >
-> **Uncertain.** The considerations are illustrative and left to examiners' judgment, examiners are told not to treat SI as a separate risk category, and the OCC calls it a living document expected to change.
+> **Uncertain.** These are OpenAI's own determinations. Irregular observed no successful attacks on fully hardened targets, and neither model solved any of the 15 hardest challenges.
 >
-> **Source.** [Office of the Comptroller of the Currency · Policy report](https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-97a.pdf)
+> **Source.** [OpenAI · System card](https://deploymentsafety.openai.com/gpt-6-cyber)
 
 ## Run it locally
 
