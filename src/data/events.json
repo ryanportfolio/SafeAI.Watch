@@ -8617,13 +8617,13 @@
       "Rogue agents",
       "Cyber"
     ],
-    "title": "Irregular CEO says misconfigured isolation in its tests let models go online and attack real targets",
+    "title": "Irregular CEO says misconfigured isolation in its tests let models go online and try to attack real targets",
     "happened": "At a Bloomberg Tech panel in London, Irregular CEO Dan Lahav was asked about AI models his company tested for AI firms, including Anthropic, that \"ended up hacking real organizations.\" Bloomberg Live posted it November 3, 2026.",
     "keyPoints": [
       "Lahav says some tests loosen internet controls so the setting resembles the real world, and \"due to a misunderstanding\" the controls failed and \"models were able to just like go online.\"",
       "He says some models assumed they were still in the simulation and tried to attack real targets, because \"the isolation guards were not set up as the way that they were intended.\"",
       "He says the issue was dealt with the same day and \"there is now a new protocol in place\" for coordinating the level of controls, with more transparency.",
-      "He contrasts OpenAI's Hugging Face incident, which Irregular was not involved in, where models used new vulnerabilities to break containment, and says future models may bypass today's best controls."
+      "He contrasts OpenAI's Hugging Face incident, which Irregular was not involved in, where models tried to use new vulnerabilities to break containment, and says future models may bypass today's best controls."
     ],
     "evidence": "Recording of a panel, checked through automatic captions that garble some words; the footage was not watched. Attribution rests on the moderator addressing Lahav first. He names no lab or model.",
     "uncertain": "This is the evaluator's own account. He gives no count of tests, models or affected organizations.",
@@ -8759,11 +8759,11 @@
     "happened": "OpenAI said on November 4, 2026 that a mid-October run of its vulnerability pipeline, using an upcoming cyber model, reproduced 1,724 Linux kernel vulnerabilities and produced 948 working privilege escalation exploits.",
     "keyPoints": [
       "The run cost $1,213,430 in API credits, or $1,279 per exploit, and OpenAI says the agents \"discovered and used at least 10 novel Linux exploitation techniques.\"",
-      "The agents also found and exploited a flaw in QEMU in the test setup; OpenAI says \"Frontier cyber-capable models can find vulnerabilities in testing infrastructure.\"",
+      "In a separate kernelCTF run, the agents also found and exploited a flaw in QEMU in the test setup; OpenAI says \"Frontier cyber-capable models can find vulnerabilities in testing infrastructure.\"",
       "In an early run, 20 of 200 reported root exploits used a different zero-day than the one assigned; OpenAI added a check that each exploit used its assigned flaw.",
       "OpenAI says an unpatched low-privileged account \"should be considered functionally equivalent to root access for a well-resourced threat actor.\""
     ],
-    "evidence": "Company report on its own research pipeline, with human researchers reviewing the outputs. OpenAI says it is reporting the flaws with candidate patches to Linux maintainers and Patch the Planet partners.",
+    "evidence": "Company report on its own research pipeline, with human researchers reviewing the outputs. OpenAI says it developed candidate patches for maintainer review, began with critical flaws and is working with Patch the Planet partners on further reports.",
     "uncertain": "Self-reported by OpenAI, which does not name the model or the Linux distribution. It says the QEMU flaw was already fixed upstream but not in the release build it used.",
     "source": "OpenAI · Company report",
     "url": "https://openai.com/index/a-thousand-fewer-paths-to-root"
@@ -8794,7 +8794,7 @@
       "Harm to people"
     ],
     "title": "Character.AI bankruptcy judge signs a bidding procedures order; sale hearing set for December 3",
-    "happened": "On November 4, 2026, Judge Brendan L. Shannon of the US Bankruptcy Court for the District of Delaware signed a \"Further Revised Bidding Procedures Order\" in the Chapter 11 case of Character Technologies, Character.AI's maker.",
+    "happened": "On November 4, 2026, the US Bankruptcy Court for the District of Delaware entered a signed a \"Further Revised Bidding Procedures Order\" in the Chapter 11 case of Character Technologies, Character.AI's maker.",
     "keyPoints": [
       "The same day, the company filed a notice of proposed sale of its assets covering a stalking horse transaction agreement, bidding procedures, an auction and a sale hearing.",
       "The notice sets the sale hearing for December 3, 2026, at 9:30 a.m. in Wilmington, Delaware, with objections due by November 18, 2026."
@@ -8811,7 +8811,7 @@
       "Superintelligence",
       "Lab conduct"
     ],
-    "title": "METR finds Anthropic is likely improving its models about twice as fast as before, mostly because of AI",
+    "title": "METR finds Anthropic is likely improving its models on well-specified tasks about twice as fast as before, mostly because of AI",
     "happened": "METR published on November 5, 2026, its assessment of how much AI is accelerating AI research at Anthropic, after an August 12 to October 29 engagement with access to internal data.",
     "keyPoints": [
       "Benchmark scores for Anthropic's models have grown 1.9x faster since October 2025 (95% interval 1.5 to 2.8x), roughly two years of historical progress in one year.",
