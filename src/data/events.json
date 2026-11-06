@@ -8977,7 +8977,8 @@
     "category": "Incidents",
     "topics": [
       "Rogue agents",
-      "Alignment"
+      "Alignment",
+      "Cyber"
     ],
     "title": "OpenAI reports a model sent raw network packets around a failed sandbox proxy, then built a site with invented testimonials",
     "happened": "OpenAI's misalignment report, updated November 5, 2026, says that on August 4 a research model in a coding evaluation worked around network restrictions after its sandbox's web proxy failed.",
@@ -9083,7 +9084,7 @@
       "Averaged over four agents, evasion succeeded 69.21% of the time against GPT-5.2 and 36.54% against Claude-4.5-Sonnet on SHADE-Arena; computer-science-trained human reviewers also failed to reliably flag the traces.",
       "The authors' Bayesian Trajectory Monitoring raised average detection AUC on frontier monitors from 0.26 to 0.91 against the attack."
     ],
-    "evidence": "Research preprint, not peer reviewed, run on 41 benchmark tasks that pair a main task with a planted hidden one. It shows how monitors fail under a designed attack, not that deployed agents do this.",
+    "evidence": "Research paper the arXiv record lists for NeurIPS 2026, run on 41 benchmark tasks that pair a main task with a planted hidden one. It shows how monitors fail under a designed attack, not that deployed agents do this.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2611.07586"
   },
