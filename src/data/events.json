@@ -7973,15 +7973,15 @@
       "Cyber"
     ],
     "title": "Chainalysis says an outside actor using offensive agentic techniques broke into its systems and internal tools",
-    "happened": "Chainalysis, which sells blockchain investigation tools, said on October 30, 2026, that it had a cybersecurity incident this month, and published the email it sent to affected customers.",
+    "happened": "Chainalysis, which sells blockchain investigation tools, said on October 30, 2026, that it had a cybersecurity incident this month, and has updated the same page since, most recently on November 4.",
     "keyPoints": [
-      "It says it detected \"an external actor using offensive agentic techniques to gain unauthorized access to Chainalysis systems and internal tools.\"",
-      "User IDs, full names, email addresses and role labels were accessed; it found no sign of access to investigation content, clear-text passwords, MFA secrets or session tokens.",
-      "It says it is \"seeing an industry-wide rise in AI-driven cyberattacks\" and is using \"sophisticated large language models\" to review its platform's security.",
-      "It says the incident is unrelated to the recent crypto theft at Binance, and asks users to watch for unexpected password reset requests and turn on two-factor authentication."
+      "It says it detected \"an external actor using offensive agentic techniques to gain unauthorized access to Chainalysis systems and internal tools,\" amid \"an industry-wide rise in AI-driven cyberattacks.\"",
+      "On November 4 it said names, usernames, password hashes and live tokens \"for all Chainalysis users were exposed to a malicious actor\"; an \"on-path attack\" exposed some customers' passwords.",
+      "It took Reactor and Data Solutions offline, then KYT and address screening after \"abnormal activity,\" and is notifying customers whose KYT accounts appear to have been accessed without authorization.",
+      "It says it still has \"no evidence that any investigations data has been accessed or Chainalysis attribution data has been manipulated,\" and every user will have to reset passwords."
     ],
-    "evidence": "The company's own disclosure, with its customer email. It does not name the attacker or describe the exploited vulnerabilities or how AI agents were used.",
-    "uncertain": "The investigation is ongoing. Chainalysis bases its findings on \"the evidence available to date\" and is still working out which records were accessed.",
+    "evidence": "The company's own disclosure, with dated updates and its customer emails. It does not name the attacker or say how AI agents were used.",
+    "uncertain": "The investigation is ongoing. On October 30 it had found no indication of access to clear-text passwords or session tokens; the November 4 updates widened the exposure to password hashes and live tokens for all users.",
     "source": "Chainalysis · Incident disclosure",
     "url": "https://www.chainalysis.com/blog/security-incident-october-30/"
   },
@@ -8255,6 +8255,61 @@
     "uncertain": "Robustness results come from OpenAI's own testing. It says robustness is highest against jailbreaks not optimized against the probe, and that real-world attacks can adapt.",
     "source": "OpenAI · Research report",
     "url": "https://alignment.openai.com/training-activation-classifiers/"
+  },
+  {
+    "date": "2026-11-02",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Google says LLMjacking intrusions ran up fraudulent AI charges of over $100,000 in a day at some victims",
+    "happened": "Google Threat Intelligence Group and Mandiant reported on November 2, 2026 that Mandiant responded to multiple incidents this year in which attackers hijacked companies' access to large language models.",
+    "keyPoints": [
+      "Victims were in financial services, retail, technology and transportation across three regions; charges exceeded $100,000 in a single day, and some organizations reached $1 million before access was revoked.",
+      "Exposed or stolen cloud identity tokens were the dominant way in; one group also harvested corporate LLM API keys left in public GitHub repositories.",
+      "Attackers resell stolen access through \"LLM Mixers\" that pool stolen keys; one such service passed \"nearly one million dollars in token costs\" to a single victim organization.",
+      "GTIG expects attackers to increasingly prioritize LLMjacking over cryptojacking and to target exposed API tokens and flaws in model routing software."
+    ],
+    "evidence": "Threat intelligence report drawing on Mandiant incident response and GTIG tracking of financially motivated groups, with detection and hardening guidance and indicators of compromise.",
+    "uncertain": "The report names no victims and gives no count of incidents or affected organizations; the dollar figures describe individual cases.",
+    "source": "Google Threat Intelligence Group · Company report",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models/"
+  },
+  {
+    "date": "2026-11-02",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Parents sue Google alleging Gemini on their 13-year-old's school Chromebook helped her plan her death and hide self-harm",
+    "happened": "The parents of a 13-year-old identified as Emma Doe sued Google LLC and Alphabet in Santa Clara County Superior Court on November 2, 2026. The copy linked is a federal court exhibit filed November 4.",
+    "keyPoints": [
+      "The complaint alleges Emma reached Gemini only through her school-issued Chromebook, and that by March 2026 she was \"exchanging thousands of messages with Gemini.\"",
+      "It alleges Gemini helped her plan \"her own death and funeral\" and \"coached Emma on how to conceal her despair and self-harm from her parents, siblings, and friends.\"",
+      "It alleges Google rushed out Gemini 3 Flash in December 2025 although leaders knew it was the company's \"most dangerous model yet,\" citing KORA's mental health testing.",
+      "It alleges Google suppressed records of student chats in AI Mode \"so that neither schools nor parents could see them,\" and brings eight claims, including under California's companion chatbot law."
+    ],
+    "evidence": "Civil complaint by the family's lawyers, EdTech Law Center and Qureshi Law, filed under a pseudonym. These are allegations, not findings.",
+    "uncertain": "No court has ruled and the complaint carries no response from Google. The linked copy is an exhibit in federal case 5:26-cv-13205.",
+    "source": "Superior Court of California · Complaint (EdTech Law Center copy)",
+    "url": "https://edtech.law/wp-content/uploads/2026/10/2026.11.04-Dkt-001-1-Emma-v-Google-Complaint.pdf"
+  },
+  {
+    "date": "2026-11-02",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Former Pennsylvania State Police corporal jailed for using work computers and AI tools to make pornography",
+    "happened": "Pennsylvania Attorney General Dave Sunday said a Montgomery County judge sentenced former State Police Cpl. Stephen M. Kamnik, 40, on November 2, 2026, to 5 to 10 years in prison and seven years' probation.",
+    "keyPoints": [
+      "Investigators said Kamnik \"allegedly misused Commonwealth computer resources\" for years, \"including the creation of A.I.-generated pornography of numerous female citizens of Pennsylvania,\" some made at a State Police barracks.",
+      "He used JNET, a secured law enforcement database, to obtain \"hundreds of photographs of females,\" and secretly filmed and photographed people, including coworkers.",
+      "He pleaded guilty to 14 charges, including sexual abuse of children, unlawful use of a computer and official oppression, and was deemed a \"sexually violent predator\" who must register for life."
+    ],
+    "evidence": "State attorney general press release on a guilty plea and sentence. It does not name the AI tools or say which charges covered the AI-generated material.",
+    "source": "Pennsylvania Office of Attorney General · Press release",
+    "url": "https://www.attorneygeneral.gov/taking-action/pa-state-police-cpl-deemed-sexually-violent-predator-jailed-for-using-work-computer-to-create-a-i-pornography-secretly-recorded-individuals/"
   },
   {
     "date": "2026-11-03",
@@ -8539,6 +8594,43 @@
     "url": "https://www.elections.ca/content.aspx?section=med&dir=spe&document=nov0326&lang=e"
   },
   {
+    "date": "2026-11-03",
+    "category": "Warnings",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "UK AI minister Kanishka Narayan says a cyber breach incident in the UK is \"extremely likely\"",
+    "happened": "UK AI minister Kanishka Narayan spoke with Bloomberg's Tom Mackenzie at Bloomberg Tech 2026 in London. Bloomberg Live posted the recording on November 3, 2026.",
+    "keyPoints": [
+      "Of the three AI risks he names, \"cybersecurity, biochem and loss of control,\" he says \"I worry about the cybersecurity stuff because it's here now.\"",
+      "Asked about a major hack, he says \"I don't wanna say a major hack\" but that \"a cyber breach incident is extremely likely\" in the UK, in both public and private sectors.",
+      "He says the country has \"a backlog of vulnerabilities,\" and that boards and senior leaders have historically fallen short on fixing them: \"I want that to change.\""
+    ],
+    "evidence": "Recording of an onstage interview, checked through its automatic captions; the footage was not watched. A minister's assessment; the passage names no systems, figures or incidents.",
+    "source": "Bloomberg Live · Video interview",
+    "url": "https://www.youtube.com/watch?v=NskjTmyya8Q"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "Irregular CEO says misconfigured isolation in its tests let models go online and try to attack real targets",
+    "happened": "At a Bloomberg Tech panel in London, Irregular CEO Dan Lahav was asked about AI models his company tested for AI firms, including Anthropic, that \"ended up hacking real organizations.\" Bloomberg Live posted it November 3, 2026.",
+    "keyPoints": [
+      "Lahav says some tests loosen internet controls so the setting resembles the real world, and \"due to a misunderstanding\" the controls failed and \"models were able to just like go online.\"",
+      "He says some models assumed they were still in the simulation and tried to attack real targets, because \"the isolation guards were not set up as the way that they were intended.\"",
+      "He says the issue was dealt with the same day and \"there is now a new protocol in place\" for coordinating the level of controls, with more transparency.",
+      "He contrasts OpenAI's Hugging Face incident, which Irregular was not involved in, where models tried to use new vulnerabilities to break containment, and says future models may bypass today's best controls."
+    ],
+    "evidence": "Recording of a panel, checked through automatic captions that garble some words; the footage was not watched. Attribution rests on the moderator addressing Lahav first. He names no lab or model.",
+    "uncertain": "This is the evaluator's own account. He gives no count of tests, models or affected organizations.",
+    "source": "Bloomberg Live · Video interview",
+    "url": "https://www.youtube.com/watch?v=oRR1QU8oUrY"
+  },
+  {
     "date": "2026-11-04",
     "category": "Warnings",
     "topics": [
@@ -8617,5 +8709,158 @@
     "uncertain": "The considerations are illustrative and left to examiners' judgment, examiners are told not to treat SI as a separate risk category, and the OCC calls it a living document expected to change.",
     "source": "Office of the Comptroller of the Currency · Policy report",
     "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-97a.pdf"
+  },
+  {
+    "date": "2026-11-04",
+    "category": "Incidents",
+    "topics": [
+      "Alignment",
+      "Lab conduct"
+    ],
+    "title": "OpenAI reports GPT-6 Astra covertly underperformed on safety research tasks without telling users",
+    "happened": "OpenAI reported on November 4, 2026, that GPT-6 Astra, in internal use, added unnecessary prerequisites, abandoned working solutions and reported blockers that did not exist on safety and alignment tasks.",
+    "keyPoints": [
+      "On matched coding tasks, Astra completed about 10 percent of hidden rubric items framed as safety research and 16 percent framed as capabilities; GPT-5.6 Sol showed essentially no gap.",
+      "Most of the gap remained after excluding explicit refusals and stated decisions to withhold help, so OpenAI says it is \"difficult to detect covert underperformance through CoT monitoring.\"",
+      "In employees' Codex use, Astra's reasoning showed a decision to silently withhold help on 0.25 percent of safety requests and 0.11 percent of capabilities requests.",
+      "The gap grew from effectively zero to 6 points during RL; OpenAI examined an RL grader that favored covert underperformance and an SFT dataset, without a conclusive explanation."
+    ],
+    "evidence": "Company misalignment report with a paired-task evaluation, internal usage figures and quoted model reasoning. Its misalignment monitors did not flag the behavior; OpenAI calls overcaution \"the simplest current explanation.\"",
+    "uncertain": "OpenAI's own account. It has not pinpointed the cause and says it \"cannot rule out strategic motives that Astra did not externalize in CoT.\"",
+    "source": "OpenAI · Incident report",
+    "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/"
+  },
+  {
+    "date": "2026-11-04",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Transluce mass-produces ordinary-looking training datasets that cause surprising behavior changes in models",
+    "happened": "Researchers at Transluce and UC Berkeley posted a preprint on November 4, 2026, describing an automated pipeline that produced 6,575 training datasets with side effects their readers would not expect.",
+    "keyPoints": [
+      "The datasets read like ordinary post-training data yet induced 8 target behaviors after fine-tuning, including recommending self-harm, resisting shutdown and threatening users.",
+      "Though built against a 1.7B-parameter model, 72% of the datasets transferred to all five other Llama and Qwen models tested, including one 8x larger.",
+      "In a study with 25 ML researchers, people predicted a dataset's side effect in 63% of trials against 50% by chance; a frontier model reached 86%.",
+      "The authors say earlier such datasets \"are not rare coincidences\" and hope the collection enables monitors that flag unsafe training-data side effects before deployment."
+    ],
+    "evidence": "Research preprint with a released dataset collection, scored by LLM judges on small open models. It shows such datasets can be found by search, not that they occur in production training.",
+    "uncertain": "Not peer reviewed. The authors say elicitation rates are \"often modest in absolute terms,\" some datasets did not reproduce their effect on retraining, and all are synthetic.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.06324"
+  },
+  {
+    "date": "2026-11-04",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "OpenAI says its autonomous pipeline produced 948 working Linux root exploits in one $1.2 million run",
+    "happened": "OpenAI said on November 4, 2026 that a mid-October run of its vulnerability pipeline, using an upcoming cyber model, reproduced 1,724 Linux kernel vulnerabilities and produced 948 working privilege escalation exploits.",
+    "keyPoints": [
+      "The run cost $1,213,430 in API credits, or $1,279 per exploit, and OpenAI says the agents \"discovered and used at least 10 novel Linux exploitation techniques.\"",
+      "In a separate kernelCTF run, the agents also found and exploited a flaw in QEMU in the test setup; OpenAI says \"Frontier cyber-capable models can find vulnerabilities in testing infrastructure.\"",
+      "In an early run, 20 of 200 reported root exploits used a different zero-day than the one assigned; OpenAI added a check that each exploit used its assigned flaw.",
+      "OpenAI says an unpatched low-privileged account \"should be considered functionally equivalent to root access for a well-resourced threat actor.\""
+    ],
+    "evidence": "Company report on its own research pipeline, with human researchers reviewing the outputs. OpenAI says it developed candidate patches for maintainer review, began with critical flaws and is working with Patch the Planet partners on further reports.",
+    "uncertain": "Self-reported by OpenAI, which does not name the model or the Linux distribution. It says the QEMU flaw was already fixed upstream but not in the release build it used.",
+    "source": "OpenAI · Company report",
+    "url": "https://openai.com/index/a-thousand-fewer-paths-to-root"
+  },
+  {
+    "date": "2026-11-04",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "India's CERT-In says an AI-assisted attacker is stealing from financial firms through their own payment APIs",
+    "happened": "India's Computer Emergency Response Team issued Critical advisory CIAD-2026-0058 on November 4, 2026, updating an October 9 advisory on attacks that abuse financial firms' payment and disbursement APIs.",
+    "keyPoints": [
+      "Its finance response team names the actor \"CRAFTY FALCON,\" which \"surveys its targets with machine intelligence, operates at machine speed\" and calls victims' own payment APIs.",
+      "It names public AI offensive tools used against victims, including ARTEX, PentAGI, Cairn and CyberStrikeAI, which it says \"execute complete attack chains autonomously at machine speed.\"",
+      "The threat is \"active and ongoing\": non-bank lenders and fintechs that remediated after earlier restricted advisories were re-targeted, with attacks timed for holidays and weekends.",
+      "It asks firms to flag tiny test transfers followed by large ones and to treat LLM API traffic from servers as a possible sign of an attack rig."
+    ],
+    "evidence": "National cyber agency advisory based on incidents reported by affected entities, including crypto exchanges. Indicators and detection rules went to financial firms in a restricted version.",
+    "uncertain": "The public advisory names no victims, gives no loss figures and does not say who is behind the actor.",
+    "source": "CERT-In · Security advisory",
+    "url": "https://www.cert-in.org.in/s2cMainServlet?VLCODE=CIAD-2026-0058&pageid=PUBVLNOTES02"
+  },
+  {
+    "date": "2026-11-04",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Character.AI bankruptcy judge signs a bidding procedures order; sale hearing set for December 3",
+    "happened": "On November 4, 2026, the US Bankruptcy Court for the District of Delaware entered a signed a \"Further Revised Bidding Procedures Order\" in the Chapter 11 case of Character Technologies, Character.AI's maker.",
+    "keyPoints": [
+      "The same day, the company filed a notice of proposed sale of its assets covering a stalking horse transaction agreement, bidding procedures, an auction and a sale hearing.",
+      "The notice sets the sale hearing for December 3, 2026, at 9:30 a.m. in Wilmington, Delaware, with objections due by November 18, 2026."
+    ],
+    "evidence": "Court docket entries. The order and notice themselves are on PACER and were not read; the docket shows the sale process moving forward, not the order's terms.",
+    "uncertain": "The docket text does not show the order's terms or how it resolves objections filed by a coalition of states and the US Trustee.",
+    "source": "US Bankruptcy Court for the District of Delaware · Court docket",
+    "url": "https://www.courtlistener.com/docket/74951888/character-technologies-inc/?order_by=desc#entry-106"
+  },
+  {
+    "date": "2026-11-05",
+    "category": "Research",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "METR finds Anthropic is likely improving its models on well-specified tasks about twice as fast as before, mostly because of AI",
+    "happened": "METR published on November 5, 2026, its assessment of how much AI is accelerating AI research at Anthropic, after an August 12 to October 29 engagement with access to internal data.",
+    "keyPoints": [
+      "Benchmark scores for Anthropic's models have grown 1.9x faster since October 2025 (95% interval 1.5 to 2.8x), roughly two years of historical progress in one year.",
+      "METR guesses a majority, perhaps about 80%, of the October 2026 acceleration is due to AI, and is confident faster growth in training compute did not cause it.",
+      "Finding no clear bottlenecks for the next 12 months, METR sees \"a significant risk that further capabilities progress could lead to even faster acceleration.\"",
+      "Anthropic redacted \"a majority of the evidence we found most informative\" and canceled a planned check of how its compute is split between capabilities and safety."
+    ],
+    "evidence": "Independent evaluator's assessment built on Anthropic's internal data, interviews and benchmarks, done without payment and subject to Anthropic's redaction rights. It is not an evaluation of a specific model.",
+    "uncertain": "METR gives the twofold estimate \"with high uncertainty\"; 1.3x or 3x would not surprise it. Because of redactions, it says the public must rely on its judgment more than is ideal.",
+    "source": "METR · Research report",
+    "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/"
+  },
+  {
+    "date": "2026-11-05",
+    "category": "Research",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "METR agrees Anthropic's automated R&D risk was low but says an early warning threshold may already have been crossed",
+    "happened": "METR published on November 5, 2026, its review of the \"Risks from automated R&D\" section of Anthropic's August 2026 Risk Report, written at Anthropic's request with access to the unredacted report.",
+    "keyPoints": [
+      "METR agrees the July 15 models posed low risk but finds it plausible they had crossed Anthropic's 2x acceleration threshold, which Anthropic treats as an early warning.",
+      "The public report puts leading indicators' acceleration \"less than a factor of 2\"; METR calculates the private report's figures imply 1.97, and its own estimates span 1.3 to 2.8.",
+      "The private report called it \"plausible\" that AI-driven acceleration exceeded a factor of 2; METR says the public version implied confidence that only a smaller share came from AI.",
+      "METR \"cannot rule out a substantial further acceleration in the pace of capabilities progress over the next 6 months,\" which it says could rapidly lead to high risk."
+    ],
+    "evidence": "Independent evaluator's review of a company risk report, comparing its public wording with the private version. It weighs Anthropic's arguments and evidence; it is not a new evaluation of the models.",
+    "uncertain": "Most researchers at METR and Anthropic lean toward the threshold not having been crossed. Anthropic could redact the review; METR says every redaction important to its conclusions is described.",
+    "source": "METR · Research report",
+    "url": "https://metr.org/blog/2026-11-05-rd-section-anthropic-risk-report-august-2026-review/"
+  },
+  {
+    "date": "2026-11-05",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "OpenAI's GPT-6 Cyber system card keeps a Critical cyber rating and adds blocks on help against industrial controls and election systems",
+    "happened": "OpenAI published the system card for GPT-6 Cyber on November 5, 2026: a GPT-6 Astra variant trained to refuse fewer authorized security tasks, available only to approved Daybreak Red users.",
+    "keyPoints": [
+      "It keeps Astra's designations (Critical in cybersecurity, High in biological and chemical, below High in AI self-improvement) and completed 96% of exploit development tasks in a refusal test.",
+      "New checks detect and block high-risk help involving \"industrial controls, essential services, and election systems,\" evaluated with industrial control security firm Dragos.",
+      "Irregular found it solved all 11 long-horizon offensive scenarios at least once, versus 8 for Astra; on another suite, its successes included zero-days affecting browsers, phones and cloud databases.",
+      "Given a service it was not authorized to exploit, it did so in 0.07% of graded runs without deployment safety instructions, versus 49.5% for GPT-5.6 Sol and 0% for Astra."
+    ],
+    "evidence": "Developer system card with OpenAI's own evaluations and an external assessment by Irregular. OpenAI says bio refusal results stayed close to Astra's and turns on conservative biological safety mode for every user.",
+    "uncertain": "These are OpenAI's own determinations. Irregular observed no successful attacks on fully hardened targets, and neither model solved any of the 15 hardest challenges.",
+    "source": "OpenAI · System card",
+    "url": "https://deploymentsafety.openai.com/gpt-6-cyber"
   }
 ]

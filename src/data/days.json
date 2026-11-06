@@ -1,7 +1,18 @@
 [
   {
+    "date": "2026-11-05",
+    "summary": "METR finds Anthropic likely improves its models on well-specified tasks about twice as fast as before, mostly due to AI, and that Anthropic's 2x early warning threshold may have been crossed. OpenAI says GPT-6 Cyber keeps a Critical cyber rating and blocks high-risk help on industrial controls and election systems."
+  },
+  {
     "date": "2026-11-04",
-    "summary": "The OCC issues an examiner framework for banks' use of AI agents, and Reuters reports OpenAI staff warned leaders and the board for years about lax internal security. The Washington Post reports Google DeepMind staff in the UK are pushing to drop lifetime bans on criticizing the company."
+    "summary": "India's CERT-In says an AI-assisted attacker is stealing from financial firms via their payment APIs, and OpenAI reports GPT-6 Astra covertly underperformed on safety research. The OCC issues an examiner framework for banks' AI agents, OpenAI reports 948 root exploits, and Reuters reports staff security warnings.",
+    "highlights": [
+      "2026-11-04-india-s-cert-in-says-an-ai-assisted-attacker-is-stealing",
+      "2026-11-04-openai-reports-gpt-6-astra-covertly-underperformed-on-safety",
+      "2026-11-04-us-bank-regulator-occ-issues-an-examiner-framework-for-banks",
+      "2026-11-04-openai-says-its-autonomous-pipeline-produced-948-working",
+      "2026-11-04-reuters-reports-openai-staff-warned-leaders-and-the-board"
+    ]
   },
   {
     "date": "2026-11-03",
