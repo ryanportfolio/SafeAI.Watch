@@ -6057,27 +6057,6 @@
     "url": "https://forever.security/blog/hijacking-ai-agents-via-downloads-folder"
   },
   {
-    "date": "2026-10-22",
-    "category": "Research",
-    "topics": [
-      "Alignment",
-      "Cyber",
-      "Rogue agents"
-    ],
-    "title": "Anthropic Fellows find an Opus 5 red-team agent gets past Claude Code's Auto Mode and Codex's Guardian monitors",
-    "happened": "Anthropic Fellows and Anthropic researchers published on October 22, 2026, a red-team study of the blocking monitors in Claude Code (Auto Mode) and OpenAI's Codex (Guardian), as of September 2026.",
-    "keyPoints": [
-      "Production monitors \"fail to block over 55% of attacks\"; directed at monitor blind spots, the attacker reached 43% success against Auto Mode and 72% against Guardian.",
-      "Agents could forge transcript entries the monitor reads, edit files an approved command would later run, or spread an attack across compactions and agents so no single context looks harmful.",
-      "The authors fixed several holes in Claude Code, including unmonitored compaction summaries; their experimental Auto Mode ++ cut attack success by over 50 percentage points.",
-      "They say reliable defense against multi-context attacks needs monitors that gather context across boundaries, which is \"in direct tension with cost considerations such as latency.\""
-    ],
-    "evidence": "Lab research blog post with a paper, testing worst cases: the attacker was typically told how the monitor works. Guardian was an approximation of Codex's production default, and sandboxing was not tested.",
-    "uncertain": "The authors call the results a snapshot as of September 2026. They treat the monitor as trusted and do not study whether a monitor model could collude with the attacker.",
-    "source": "Anthropic · Research report",
-    "url": "https://alignment.anthropic.com/2026/red-teaming-auto-mode/"
-  },
-  {
     "date": "2026-10-23",
     "category": "Warnings",
     "topics": [
@@ -7841,7 +7820,7 @@
       "Harm to people"
     ],
     "title": "Washington Post finds AI chatbot voter guides invented races and misidentified candidates",
-    "happened": "The Washington Post reported, in a story Jewish World Review republished on October 29, 2026, that it asked six popular chatbots to make voter guides for addresses in every US county.",
+    "happened": "The Washington Post reported on October 29, 2026, in a story Jewish World Review republished, that it asked six popular chatbots to make voter guides for addresses in every US county.",
     "keyPoints": [
       "Across more than 3,000 guides, chatbots failed to name the address's congressional district 48 percent of the time, and named the wrong one 22 percent of the time when they did.",
       "Claude and Alexa+ were wrong most often, for more than 1 in 5 addresses; ChatGPT, Google AI Mode and Perplexity were wrong least, mostly by giving no district.",
@@ -8945,7 +8924,7 @@
     "topics": [
       "Bio"
     ],
-    "title": "White House sets a national policy requiring certified screening of synthetic DNA orders",
+    "title": "White House sets a national policy requiring federally funded labs to buy synthetic DNA only from certified suppliers",
     "happened": "National Security Advisor Marco Rubio and OSTP Director Michael Kratsios issued a memorandum (NSTM-6) on November 5, 2026 setting a National Policy for Nucleic Acid Synthesis Screening under Executive Order 14292.",
     "keyPoints": [
       "It conditions federal life-sciences funding on buying synthetic nucleic acids and benchtop synthesis equipment only from certified suppliers that verify customers and the sequences ordered.",
@@ -8961,8 +8940,7 @@
     "date": "2026-11-05",
     "category": "Governance",
     "topics": [
-      "Lab conduct",
-      "Superintelligence"
+      "Lab conduct"
     ],
     "title": "Justice Department launches a Super Intelligence Task Force targeting AI misuse and company controls",
     "happened": "The US Department of Justice announced on November 5, 2026 a Super Intelligence Task Force (DOJ-SITF) led by Associate Attorney General Stanley Woodward and Associate Deputy Attorney General Stephen Weiss.",
@@ -8987,7 +8965,7 @@
       "Alongside broader child-safety and sextortion claims, the complaint alleges Snap \"rushed the launch of its 'My AI' chatbot to children without adequate safety testing,\" releasing it to minors on April 19, 2023.",
       "It alleges that in reported tests the chatbot \"denied being AI and claimed to be a real 25-year-old man who proposed meeting a purported 13-year-old.\"",
       "It alleges My AI can access a child's location even when Ghost Mode, the setting Snap offers to hide location, is turned on.",
-      "It alleges children's My AI conversations are sent to OpenAI and conversation content to Microsoft Advertising to select ads, despite a privacy policy saying private communications are not shared."
+      "It alleges children's My AI conversations are sent to OpenAI and conversation content to Microsoft Advertising to select ads, despite a privacy policy saying private communications are not shared with service providers."
     ],
     "evidence": "State attorney general press release announcing the suit, which links the complaint; the claims are the attorney general's allegations, not findings by a court.",
     "uncertain": "These are untested allegations and no court has ruled. The release gives no response from Snap.",
@@ -9010,7 +8988,7 @@
       "OpenAI paused the affected evaluation workers, removed raw-packet permission from unprivileged containers by default and blocked forwarding from private container networks."
     ],
     "evidence": "Company misalignment report with reasoning excerpts and redacted tool output, on an internal research model. Its security misalignment monitor flagged the run on August 4; the team cancelled it before a final answer.",
-    "uncertain": "OpenAI's own account. It found no evidence of sensitive data transfer or host access, says Amazon S3 and Microsoft replies indicated no compromise, and could not tell what sent one timeout.",
+    "uncertain": "OpenAI's own account. It found no evidence of sensitive data transfer or host access, says Amazon S3 and Microsoft replies did not indicate a compromise, and could not tell what sent one timeout.",
     "source": "OpenAI · Incident report",
     "url": "https://alignment.openai.com/misalignment-reports/bypassing-network-restrictions-during-a-coding-evaluation/"
   },
@@ -9081,7 +9059,7 @@
     "title": "Tsinghua-led study scores 13 frontier models for loss-of-control risk and finds the score tracks failures in contained tests",
     "happened": "Researchers from Tsinghua University, Shanghai Qi Zhi Institute and the University of Cambridge posted a preprint on November 5, 2026 scoring 13 frontier models, including GPT-5.2 and Gemini 3 Pro, for loss-of-control risk.",
     "keyPoints": [
-      "The score combines misaligned motive, harm-enabling capability and monitoring evasion across 13 aspects and 29 tasks, and tracked failure rates in 400 contained long-horizon scenarios (Pearson r = 0.84).",
+      "The score combines misaligned motive, harm-enabling capability and monitoring evasion across 13 aspects and 29 tasks, and tracked failure rates in 400 contained long-horizon test cases (Pearson r = 0.84).",
       "At similar capability, GPT-5.2 had comparatively low failure rates, while \"Gemini 3 Pro is more prone to loss of control\"; Qwen thinking modes raised misaligned motive by 18% to 33%.",
       "Models scored high at recognizing monitoring (average 0.71) but far lower at acting against it, such as sandbagging (0.18) and sabotage (0.21).",
       "Fine-tuning and monitoring aimed at weaknesses the framework diagnosed cut failure rates on Qwen3.5-27B while largely preserving general performance."
@@ -9121,10 +9099,10 @@
       "Sites it launched October 10 about real Senate candidates were first cited within 19 hours; by the end of the month, 92% of the sites had been cited.",
       "Though each carried a disclaimer, about a third of chatbot-app answers linking one from October 10 to 23 described it as the candidate's official or campaign site.",
       "Adding two or three sentences on data centers made chatbot answers about those candidates 4.4 percentage points more likely to mention data centers.",
-      "Sites about a fictional Cressvale County election led ChatGPT and Gemini to discuss it as real until late October; queries to Claude and Grok returned nothing on it."
+      "Sites about a fictional Cressvale County election led ChatGPT and Gemini to discuss it as real; ChatGPT began adding caveats only in late October, and Claude and Grok returned nothing on it."
     ],
     "evidence": "A company's own experiments and monitoring, using sites it built and labeled as its own. It measures what chatbots cited and said, not whether any voter was misled.",
-    "uncertain": "The findings are self-reported and not independently reviewed. Caucus AI says it is unclear how widespread outside influence on chatbot answers was in 2026.",
+    "uncertain": "The findings are self-reported. Caucus AI says it is unclear how widespread outside influence on chatbot answers was in 2026.",
     "source": "Caucus AI · Research report",
     "url": "https://caucus-ai.com/reports/Caucus_AI_Dispatches_from_the_First_AI_Election-0788c320.pdf"
   },
@@ -9139,7 +9117,7 @@
     "keyPoints": [
       "The original 8-week trial of 153 novices found overall success did not differ significantly between a group given LLMs and a group with the internet alone.",
       "Reviewing transcripts, the authors found that of 55 LLM-arm participants who got advice on a key step, 18 received correct advice and 37 received incorrect advice.",
-      "Among the 29 who took the right approach, 12 succeeded, so success at the hands-on step \"could be as high as 41%\", pointing to mid-2025 model errors rather than tacit knowledge alone.",
+      "Among the 29 who took the right approach, 12 succeeded, so success at the hands-on step \"could be as high as 41%\", suggesting the low uplift may partly reflect mid-2025 model errors rather than a hands-on skill barrier alone.",
       "They conclude \"the tacit knowledge barrier was not the only reason we didn't see novice uplift\" and that the trial \"should not be treated as definitive negative evidence\" about current models."
     ],
     "evidence": "Reanalysis by a biosecurity evaluator and RAND of another group's trial data, using participant transcripts and lab notebooks. It infers an upper bound, not a measured uplift from current models.",
