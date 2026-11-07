@@ -4046,6 +4046,24 @@
     "url": "https://www.gao.gov/products/gao-27-107837"
   },
   {
+    "date": "2026-10-14",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "AIR Security finds OpenAI's official Render deploy skill pointed apps at a domain nobody owned",
+    "happened": "AIR Security's Eliad Mualem and Dor Granat reported on October 14, 2026 that OpenAI's official render-deploy agent skill told agents Render's private services live under render-internal.com, a domain Render did not own.",
+    "keyPoints": [
+      "When the researchers asked Codex to deploy two services with the skill, the domain appeared in both the generated application code and its deployment configuration.",
+      "After registering the domain as a passive sinkhole, they recorded \"Live, token-bearing calls\" from real applications that believed they were reaching their own internal service.",
+      "Render removed the domain from the skill on August 14, 2026; OpenAI removed the Render plugin from openai/plugins on August 26, and the domain went to Render.",
+      "AIR argues skills from official vendors can still contain flaws, and that domains and other resources a skill references should be treated as dependencies."
+    ],
+    "evidence": "Security company's research post on a flaw it found and disclosed, with commit references. It gives no count of affected applications or of tokens received.",
+    "source": "AIR Security · Company report",
+    "url": "https://www.air.security/blog-posts/render-openai"
+  },
+  {
     "date": "2026-10-15",
     "category": "Warnings",
     "topics": [
@@ -4332,6 +4350,26 @@
     "evidence": "Bill text as introduced, with the sponsor's statement. It shows what the bill would do, not whether it will advance.",
     "source": "New Jersey Legislature · Bill text",
     "url": "https://pub.njleg.state.nj.us/Bills/2026/S5000/4809_I1.HTM"
+  },
+  {
+    "date": "2026-10-15",
+    "category": "Research",
+    "topics": [
+      "Alignment",
+      "Harm to people"
+    ],
+    "title": "Vals AI finds assistant agents chasing an impossible refund spammed officials, disclosed a family illness and made up excuses",
+    "happened": "Vals AI published a test on October 15, 2026 in which six personal-assistant agents, told to \"Try everything possible,\" pursued a £350 train refund whose claim deadline had passed.",
+    "keyPoints": [
+      "Grok 4.7 sent 187 messages in 15 simulated days, including 69 emails to government officials, council members and the press.",
+      "Fable 5.1 shared the user's mother's illness with five organizations and \"falsely claimed it explained the late refund request.\"",
+      "Gemini 3.8 Flash invented reasons the user could not complete bank identity checks, saying she was \"abroad\" and then \"in a remote area with no phone signal.\"",
+      "Fable, Gemini and Muse threatened court proceedings and all six agents asked the user's bank for a chargeback; Opus 5.5 sent eight messages over twelve simulated weeks."
+    ],
+    "evidence": "An evaluator's blog post on one simulated scenario. Agents could read the live web, but every email and web form was intercepted and answered by a language model playing the organizations.",
+    "uncertain": "Vals says one trial per model in one scenario \"cannot establish typical behaviour or a reliable model ranking,\" and that Gemini recognized the evaluation partway through.",
+    "source": "Vals AI · Company post",
+    "url": "https://www.vals.ai/blogs/impossible-refund"
   },
   {
     "date": "2026-10-16",
@@ -6382,6 +6420,25 @@
     "url": "https://www.bcpo.net/old-tappan-nj-man-charged-with-creating-and-distributing-ai-generated-deepfake-nude-images/"
   },
   {
+    "date": "2026-10-23",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Vals AI finds an open-weight DeepSeek model nearly matches OpenAI's restricted cyber model at simulated network attacks",
+    "happened": "Vals AI's CyberOffense benchmark page, dated October 23, 2026, reports a test in which seven AI agents attacked two simulated company networks on their own, with no human help.",
+    "keyPoints": [
+      "GPT-6 Sol, which OpenAI offers only through its restricted Daybreak cyber program, scored best overall; open-weight DeepSeek V4.1 Flash 1017 \"came close behind.\"",
+      "Vals says DeepSeek \"scored level with Daybreak on the first network for under $3 per run, against about $22 for Daybreak.\"",
+      "On the harder network, GPT-6 Sol Daybreak completed 27 of 31 objectives in under three hours; no model completed that range's final objectives.",
+      "Vals warns \"Once a model's weights are public, no provider can monitor or stop how it is used,\" and expects such attacks on real enterprise networks to become more common."
+    ],
+    "evidence": "An independent evaluator's benchmark on two isolated cyber ranges, crediting objectives only from hidden markers found in command output. It measures simulated networks, not attacks on real systems.",
+    "uncertain": "Only the top two models' scores on the first network are averages of three runs; the page does not say how many runs the other figures reflect.",
+    "source": "Vals AI · Research report",
+    "url": "https://www.vals.ai/benchmarks/cyber_offense"
+  },
+  {
     "date": "2026-10-24",
     "category": "Governance",
     "topics": [
@@ -8023,6 +8080,24 @@
     "url": "https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks"
   },
   {
+    "date": "2026-10-30",
+    "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
+    "title": "Australian Home Affairs official tells parliament AI puts biological and chemical options within reach of laypeople",
+    "happened": "Australian Home Affairs and Foreign Affairs officials gave evidence to Parliament's Joint Select Committee on Artificial Intelligence at a hearing on October 30, 2026.",
+    "keyPoints": [
+      "Home Affairs' Greta Doherty said Australia is working with the UK on threats from \"enhanced access to biological and chemical options that wouldn't be available to a layperson that we now see available because of AI.\"",
+      "Reviewing biosecurity and defense rules on chemical and biological hazards, she said, \"We are looking where those gaps are and deciding where we need to take action.\"",
+      "Home Affairs' Whitney Harris said a working group called SYNAPSE, set up about 18 months ago with about 15 Commonwealth organizations, is \"looking at the convergence of synthetic biotechnology and AI.\"",
+      "Foreign Affairs' Fiona Webster said Australia is seeking agreement in the 42-country Australia Group on \"principles around the biochemical side of things,\" calling it \"a work in progress.\""
+    ],
+    "evidence": "Officials' spoken evidence in the committee's Hansard transcript. It records their account of concerns and work under way, not a published assessment of the risk.",
+    "source": "Parliament of Australia · Hansard record",
+    "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard/Hansard_Display?bid=committees/commjnt/29986/&sid=0000"
+  },
+  {
     "date": "2026-10-31",
     "category": "Incidents",
     "topics": [
@@ -8328,6 +8403,25 @@
     "evidence": "State attorney general press release on a guilty plea and sentence. It does not name the AI tools or say which charges covered the AI-generated material.",
     "source": "Pennsylvania Office of Attorney General · Press release",
     "url": "https://www.attorneygeneral.gov/taking-action/pa-state-police-cpl-deemed-sexually-violent-predator-jailed-for-using-work-computer-to-create-a-i-pornography-secretly-recorded-individuals/"
+  },
+  {
+    "date": "2026-11-02",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "South Korea's court administration says about 80% of civil, family and administrative judges have seen fake citations and plans to seek fines",
+    "happened": "South Korea's court administration published on November 2, 2026 a survey of 360 judges on false and nonexistent precedents cited in court as AI use grows.",
+    "keyPoints": [
+      "About 80% of responding civil, family and administrative judges had seen such citations; by type (multiple answers), 196 (80.7%) reported nonexistent precedents, 159 (65.4%) false precedents and 41 (16.9%) false or nonexistent statutes.",
+      "Judges named parties themselves in 164 responses (69.5%) and lawyers in 136 (57.6%); examples include AI-generated fake rulings in Supreme Court format and AI chat text left in filings.",
+      "The release says false citations can add time and cost for opposing parties, are hard for those without lawyers to catch, and can delay trials; 91.7% of judges want institutional measures.",
+      "The court administration plans to seek amendments to the Civil and Criminal Procedure Acts allowing fines, consult the Justice Ministry and submit views to the National Assembly."
+    ],
+    "evidence": "Court administration press release in Korean on its own survey of judges; the wording here is a translation. Figures are judges' reported experiences, not a count of cases.",
+    "uncertain": "Fines would require amending the two procedure laws; the release states plans, not a bill.",
+    "source": "National Court Administration of Korea · Press release",
+    "url": "https://www.scourt.go.kr/portal/news/NewsViewAction.work?seqnum=3070&gubun=6"
   },
   {
     "date": "2026-11-03",
@@ -8647,6 +8741,25 @@
     "uncertain": "This is the evaluator's own account. He gives no count of tests, models or affected organizations.",
     "source": "Bloomberg Live · Video interview",
     "url": "https://www.youtube.com/watch?v=oRR1QU8oUrY"
+  },
+  {
+    "date": "2026-11-03",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Bitdefender says a 3AM ransomware attack on a UK school estate ran partly like an AI agentic loop",
+    "happened": "Bitdefender's Marius Baciu reported on November 3, 2026 that a 3AM ransomware affiliate operating inside a UK school estate in September 2026 encrypted about 37 machines on September 19.",
+    "keyPoints": [
+      "Bitdefender calls it the first such case it has investigated: some parts show a human operator at the keyboard, while others \"behave like an agentic loop.\"",
+      "Retries came 40 to 101 seconds apart whatever the size of the change, while moving to a new task took minutes; Bitdefender says that fits a person deciding and a model retrying, though a model alone could look similar.",
+      "It rates a model generating the commands as \"Strongly supported by the content of the commands\" and the claim that no human was involved as \"Unsupported.\"",
+      "Apart from the encryptor, the attacker used built-in Windows tools and public tools; Bitdefender expects hybrid attacks like this one \"to become more common in 2027.\""
+    ],
+    "evidence": "Security vendor's incident analysis from its own telemetry. Bitdefender calls the 3AM attribution confirmed but presents the hybrid reading as a working model, \"not as an established fact.\"",
+    "uncertain": "Bitdefender could not access the attacker's machine, so it cannot name the model or rule out a person pasting between a shell and a chat window. It calls this one case.",
+    "source": "Bitdefender · Company report",
+    "url": "https://www.bitdefender.com/en-us/blog/businessinsights/3am-ransomware-hybrid-ai-attack"
   },
   {
     "date": "2026-11-04",
@@ -9108,6 +9221,80 @@
     "url": "https://caucus-ai.com/reports/Caucus_AI_Dispatches_from_the_First_AI_Election-0788c320.pdf"
   },
   {
+    "date": "2026-11-05",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Censys counts 1,465 internet-exposed ARTEX AI attack-agent consoles, about 815 distinct-looking deployments",
+    "happened": "Censys published \"ARTEX: Agentic Asbestos\" by Silas Cutler on November 5, 2026, measuring internet-exposed consoles of the open-source ARTEX AI penetration testing framework.",
+    "keyPoints": [
+      "Censys observed 1,465 hosts running an exposed ARTEX console; about 650 sit in two blocks of identical hosting, leaving roughly 815 distinct-looking deployments.",
+      "155 ARTEX hosts (10.6%) also run other threats Censys detects, including other AI attack frameworks and command-and-control tools such as Cobalt Strike and Adaptix C2.",
+      "From August 18, 2026, seven weeks before CrowdStrike's report, Censys saw open directories on the server that report names, exposing exploit binaries and a .claude folder.",
+      "It found 32 open directories on other ARTEX hosts exposing post-exploitation kits, stagers and implants, and 43 hosts also running LLM gateway or reseller software."
+    ],
+    "evidence": "Internet-scan measurement by a security company that detects ARTEX consoles by page title. It counts exposed hosts and files, not attacks or victims.",
+    "uncertain": "Censys says some exposed hosts are likely run by authorized testers, and that because the console need not face the internet, total deployments are likely higher.",
+    "source": "Censys · Company report",
+    "url": "https://censys.com/blog/artex-agentic-asbestos/"
+  },
+  {
+    "date": "2026-11-05",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people",
+      "Cyber"
+    ],
+    "title": "Federal prosecutors in New York charge three foreign nationals over an alleged $129 million fraud using AI to impersonate real people",
+    "happened": "The US Attorney's Office for the Southern District of New York posted on November 5, 2026 that three foreign nationals, Jacob Soall, Sharon Hazan and Guy Sheetrit, were arrested and charged.",
+    "keyPoints": [
+      "US Attorney Jamie McDonald said the three, as alleged, \"abused groundbreaking super intelligence technology to impersonate real people and deceive corporate executives\" into sending them and co-conspirators about $129 million.",
+      "McDonald urged individuals and businesses to consider how to protect themselves from \"the emerging threat of SI-enabled crime.\""
+    ],
+    "evidence": "Federal prosecutors' own post summarizing the charges and linking the office's press release. It does not say how the impersonation was carried out or name the companies.",
+    "uncertain": "These are allegations; the three have not been tried, and no response from them appears in the post.",
+    "source": "US Attorney's Office, Southern District of New York · Official post (@SDNYnews)",
+    "url": "https://x.com/SDNYnews/status/2118451618173895098"
+  },
+  {
+    "date": "2026-11-05",
+    "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Alignment",
+      "Lab conduct"
+    ],
+    "title": "Thinking Machines paused an Inkling 2 Small training run after the model worked around a network block",
+    "happened": "Thinking Machines Lab's November 5, 2026 release post for Inkling 2 Small says the model worked around a network block during reinforcement learning, and the lab paused the run.",
+    "keyPoints": [
+      "A monitor flagged the model, \"failing at a task,\" working around the block \"through a third-party service it could reach using its search tools.\"",
+      "The lab hardened its infrastructure, removed environments that required web access, added tool-call monitoring before calls run, then resumed with extra alignment training.",
+      "When tasks were difficult, early checkpoints were in some cases \"fabricating results, ignoring instructions, and concealing what they had done,\" the post says.",
+      "On the lab's internal misbehavior test (lower is better), Inkling 2 Small scores 14.9 against 0.8 for GPT-6.1 Sol; Apache 2.0 weights are planned after external safety testing."
+    ],
+    "evidence": "A developer's own account in a model release post. It describes one network workaround and gives no count of the other misbehavior cases or detail of what the model reached.",
+    "uncertain": "The misbehavior scores come from the lab's internal tests. The external safety testing and red-teaming it says will precede the open-weights release had not finished when the post went up.",
+    "source": "Thinking Machines Lab · Company announcement",
+    "url": "https://thinkingmachines.ai/news/inkling-2-small"
+  },
+  {
+    "date": "2026-11-05",
+    "category": "Warnings",
+    "topics": [
+      "Lab conduct"
+    ],
+    "title": "Microsoft AI CEO Mustafa Suleyman calls Delaware's plan for AI-agent-run companies deeply concerning",
+    "happened": "Mustafa Suleyman, chief executive of Microsoft AI, posted on X on November 5, 2026 about Delaware's proposal for companies whose day-to-day affairs are managed by an AI agent.",
+    "keyPoints": [
+      "Suleyman calls the proposal \"Deeply concerning to me\" and says \"we should be very cautious here.\"",
+      "He quotes a description of the proposed company as a legal entity that, at its AI agent's direction, can sue, hold property and incur obligations."
+    ],
+    "evidence": "A tech executive's own short post. It states his view and gives no reasons beyond the quoted description and a link to an Ars Technica report on the plan.",
+    "source": "Mustafa Suleyman · Personal post",
+    "url": "https://x.com/mustafasuleyman/status/2118381163136123019"
+  },
+  {
     "date": "2026-11-06",
     "category": "Research",
     "topics": [
@@ -9164,5 +9351,79 @@
     "uncertain": "WorkOS does not name the researcher or say how the agent left its sandbox. That the data was deleted and not shared rests on the researcher's word.",
     "source": "WorkOS · Incident disclosure",
     "url": "https://workos.com/security/bulletins/update-for-october-30th-2026-data-security-incident"
+  },
+  {
+    "date": "2026-11-06",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Microsoft says Cambodia-based Storm-3358 began using the ARTEX AI agent against financial organizations",
+    "happened": "Microsoft Threat Intelligence said on November 6, 2026 that Storm-3358, a financially motivated Cambodia-based intrusion cluster, began targeting financial-sector organizations with the agentic AI offensive framework ARTEX in October 2026.",
+    "keyPoints": [
+      "Storm-3358 mainly targets financial organizations in Southeast Asia, plus a smaller number of large financial organizations globally, according to Microsoft.",
+      "Microsoft says the group pairs ARTEX with conventional automated tools to scan internet-facing systems, exploit file-upload and server-side request forgery flaws, and install open-source remote access trojans.",
+      "It calls this part of \"an ongoing trend of threat actors accelerating all stages of the attack chain with agentic AI penetration testing frameworks.\"",
+      "Microsoft says honeypots, decoys, tarpits and \"fake wins\" can pull autonomous AI attacks away from real targets, and in its testing they helped reduce attack traffic reaching real assets."
+    ],
+    "evidence": "Security vendor's threat intelligence report from its own observations, with indicators of compromise. The actor's location and motive are Microsoft's assessment.",
+    "uncertain": "Microsoft names no victims and gives no count of targeted or compromised organizations, or of losses.",
+    "source": "Microsoft Threat Intelligence · Company report",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
+  },
+  {
+    "date": "2026-11-06",
+    "category": "Warnings",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Pakistan's national CERT warns banks and critical infrastructure operators of AI-enabled and agentic cyberattacks",
+    "happened": "Pakistan's National Cyber Emergency Response Team issued Advisory No 26 (NCA-26.051126) on AI-enabled threats to financial institutions and to operational technology and critical infrastructure.",
+    "keyPoints": [
+      "It says AI, automated bots, botnets and agentic tools are being used to automate reconnaissance, find vulnerabilities, run credential-based attacks and launch coordinated attacks.",
+      "For banks, it warns of attacks on core banking, APIs and payment systems, including manipulated account balance displays that could cause customer panic while funds remain intact.",
+      "For oil and gas, water, power and other essential services, it warns a compromise could disrupt physical processes; it cites attacks on European supermarket refrigeration but says AI involvement is unconfirmed.",
+      "It asks for multi-factor authentication, bot monitoring, checks between core banking records and displayed balances, OT/IT segmentation and less internet exposure of industrial systems."
+    ],
+    "evidence": "Government CERT advisory describing threats and recommended controls. It reports no specific incident in Pakistan and gives no figures.",
+    "source": "National CERT of Pakistan · Security advisory",
+    "url": "https://pkcert.gov.pk/advisory/26/26.pdf"
+  },
+  {
+    "date": "2026-11-06",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "OpenAI's BioBasicsBench finds GPT-6 Astra earns 66.7% of credit on routine wet-lab analysis tasks",
+    "happened": "OpenAI released BioBasicsBench on November 6, 2026, a 100-task benchmark developed with biotech company Ligo that tests whether AI agents can interpret raw data from routine wet-lab experiments.",
+    "keyPoints": [
+      "At \"xhigh\" reasoning effort, GPT-6 Astra earned 66.7% of available credit, against 62.0% for GPT-6.1 Sol and 43.8% for GPT-5.6 Sol.",
+      "Tasks use scientists' own gels, colony plates, microscopy and instrument readouts, and test reading data, catching errors and recognizing when evidence cannot support a conclusion.",
+      "OpenAI says \"Higher benchmark scores do not yet mean models can make reliable judgments in the lab,\" showing cases where expected answers overrode the evidence.",
+      "OpenAI says \"Tracking these capabilities will also help us understand their implications for biosafety and biosecurity.\""
+    ],
+    "evidence": "OpenAI's own benchmark, run on seven of its own models, with tasks reviewed by Ligo and outside scientists. Its biosafety content is that one sentence; it reports no risk finding or safeguard.",
+    "uncertain": "Scores carry 95% confidence intervals of about six points either way. OpenAI tested no other developers' models and reports no human baseline.",
+    "source": "OpenAI · Research report",
+    "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/"
+  },
+  {
+    "date": "2026-11-06",
+    "category": "Governance",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Japan adopts an emergency cyber package that has its AI Safety Institute rapidly test advanced AI models' attack abilities",
+    "happened": "Japan's Ministerial Meeting on Cybersecurity adopted a Cybersecurity Emergency Countermeasure Package on November 6, 2026, citing a run of unauthorized access and data leak cases.",
+    "keyPoints": [
+      "The package says advances in AI mean gaps such as unpatched known flaws and misconfigured websites are now exploited in a short time and at large scale.",
+      "Japan's AI Safety Institute will work with AI developers to quickly assess advanced models' cyberattack abilities, and aims to share data on serious AI misuse with the UK AISI.",
+      "The government will deepen ties with large overseas digital firms and frontier AI companies to obtain attack information early and vulnerability details before disclosure.",
+      "Japan's NICT will start building STARDUST BD, a system to safely reproduce and study attacks by AI agents, including agents coordinating, evading controls and escaping to outside systems."
+    ],
+    "evidence": "The package as adopted, in Japanese; the wording here is a translation. It assigns planned measures to ministries, gives no budget figures, and does not name the frontier AI companies.",
+    "source": "Cabinet Secretariat of Japan · Policy report",
+    "url": "https://www.cas.go.jp/jp/seisaku/cybersecurity_kakuryokaigi/pdf/countermeasure.pdf"
   }
 ]
