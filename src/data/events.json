@@ -8413,9 +8413,9 @@
     "title": "South Korea's court administration says about 80% of civil, family and administrative judges have seen fake citations and plans to seek fines",
     "happened": "South Korea's court administration published on November 2, 2026 a survey of 360 judges on false and nonexistent precedents cited in court as AI use grows.",
     "keyPoints": [
-      "About 80% of responding civil, family and administrative judges had seen such citations: 196 (80.7%) saw nonexistent precedents, 159 (65.4%) false precedents and 41 (16.9%) false or nonexistent statutes.",
+      "About 80% of responding civil, family and administrative judges had seen such citations; by type (multiple answers), 196 (80.7%) reported nonexistent precedents, 159 (65.4%) false precedents and 41 (16.9%) false or nonexistent statutes.",
       "Judges named parties themselves in 164 responses (69.5%) and lawyers in 136 (57.6%); examples include AI-generated fake rulings in Supreme Court format and AI chat text left in filings.",
-      "The release says false citations add time and cost for opposing parties, are hard for those without lawyers to catch, and can delay trials; 91.7% of judges want institutional measures.",
+      "The release says false citations can add time and cost for opposing parties, are hard for those without lawyers to catch, and can delay trials; 91.7% of judges want institutional measures.",
       "The court administration plans to seek amendments to the Civil and Criminal Procedure Acts allowing fines, consult the Justice Ministry and submit views to the National Assembly."
     ],
     "evidence": "Court administration press release in Korean on its own survey of judges; the wording here is a translation. Figures are judges' reported experiences, not a count of cases.",
@@ -8752,7 +8752,7 @@
     "happened": "Bitdefender's Marius Baciu reported on November 3, 2026 that a 3AM ransomware affiliate operating inside a UK school estate in September 2026 encrypted about 37 machines on September 19.",
     "keyPoints": [
       "Bitdefender calls it the first such case it has investigated: some parts show a human operator at the keyboard, while others \"behave like an agentic loop.\"",
-      "Retries came 40 to 101 seconds apart whatever the size of the change, while moving to a new task took minutes, which Bitdefender reads as a person deciding and a model retrying.",
+      "Retries came 40 to 101 seconds apart whatever the size of the change, while moving to a new task took minutes; Bitdefender says that fits a person deciding and a model retrying, though a model alone could look similar.",
       "It rates a model generating the commands as \"Strongly supported by the content of the commands\" and the claim that no human was involved as \"Unsupported.\"",
       "Apart from the encryptor, the attacker used built-in Windows tools and public tools; Bitdefender expects hybrid attacks like this one \"to become more common in 2027.\""
     ],
@@ -9226,12 +9226,12 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Censys counts 1,465 internet-exposed ARTEX AI attack-agent consoles, about 815 distinct deployments",
+    "title": "Censys counts 1,465 internet-exposed ARTEX AI attack-agent consoles, about 815 distinct-looking deployments",
     "happened": "Censys published \"ARTEX: Agentic Asbestos\" by Silas Cutler on November 5, 2026, measuring internet-exposed consoles of the open-source ARTEX AI penetration testing framework.",
     "keyPoints": [
       "Censys observed 1,465 hosts running an exposed ARTEX console; about 650 sit in two blocks of identical hosting, leaving roughly 815 distinct-looking deployments.",
       "155 ARTEX hosts (10.6%) also run other threats Censys detects, including other AI attack frameworks and command-and-control tools such as Cobalt Strike and Adaptix C2.",
-      "Censys saw open directories on the server named in CrowdStrike's report from August 18, 2026, seven weeks before that report, exposing exploit binaries and a .claude folder.",
+      "From August 18, 2026, seven weeks before CrowdStrike's report, Censys saw open directories on the server that report names, exposing exploit binaries and a .claude folder.",
       "It found 32 open directories on other ARTEX hosts exposing post-exploitation kits, stagers and implants, and 43 hosts also running LLM gateway or reseller software."
     ],
     "evidence": "Internet-scan measurement by a security company that detects ARTEX consoles by page title. It counts exposed hosts and files, not attacks or victims.",
@@ -9246,7 +9246,7 @@
       "Harm to people",
       "Cyber"
     ],
-    "title": "Federal prosecutors in New York charge three men over an alleged $129 million fraud using AI to impersonate real people",
+    "title": "Federal prosecutors in New York charge three foreign nationals over an alleged $129 million fraud using AI to impersonate real people",
     "happened": "The US Attorney's Office for the Southern District of New York posted on November 5, 2026 that three foreign nationals, Jacob Soall, Sharon Hazan and Guy Sheetrit, were arrested and charged.",
     "keyPoints": [
       "US Attorney Jamie McDonald said the three, as alleged, \"abused groundbreaking super intelligence technology to impersonate real people and deceive corporate executives\" into sending them and co-conspirators about $129 million.",
@@ -9364,7 +9364,7 @@
       "Storm-3358 mainly targets financial organizations in Southeast Asia, plus a smaller number of large financial organizations globally, according to Microsoft.",
       "Microsoft says the group pairs ARTEX with conventional automated tools to scan internet-facing systems, exploit file-upload and server-side request forgery flaws, and install open-source remote access trojans.",
       "It calls this part of \"an ongoing trend of threat actors accelerating all stages of the attack chain with agentic AI penetration testing frameworks.\"",
-      "Microsoft says honeypots, decoys, tarpits and \"fake wins\" can pull autonomous AI attacks away from real targets, and in its testing they reduced attack traffic reaching real assets."
+      "Microsoft says honeypots, decoys, tarpits and \"fake wins\" can pull autonomous AI attacks away from real targets, and in its testing they helped reduce attack traffic reaching real assets."
     ],
     "evidence": "Security vendor's threat intelligence report from its own observations, with indicators of compromise. The actor's location and motive are Microsoft's assessment.",
     "uncertain": "Microsoft names no victims and gives no count of targeted or compromised organizations, or of losses.",
@@ -9396,7 +9396,7 @@
       "Bio"
     ],
     "title": "OpenAI's BioBasicsBench finds GPT-6 Astra earns 66.7% of credit on routine wet-lab analysis tasks",
-    "happened": "OpenAI and biotech company Ligo released BioBasicsBench on November 6, 2026, a 100-task benchmark of whether AI agents can interpret raw data from routine wet-lab experiments.",
+    "happened": "OpenAI released BioBasicsBench on November 6, 2026, a 100-task benchmark developed with biotech company Ligo that tests whether AI agents can interpret raw data from routine wet-lab experiments.",
     "keyPoints": [
       "At \"xhigh\" reasoning effort, GPT-6 Astra earned 66.7% of available credit, against 62.0% for GPT-6.1 Sol and 43.8% for GPT-5.6 Sol.",
       "Tasks use scientists' own gels, colony plates, microscopy and instrument readouts, and test reading data, catching errors and recognizing when evidence cannot support a conclusion.",
