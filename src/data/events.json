@@ -9512,7 +9512,7 @@
       "For the first time, the assessment says, attackers demonstrably used AI in carrying out attacks, mostly in a supporting role; it adds that they use AI to write and refine malware.",
       "It describes malware that contacts an AI model during an attack to write new commands or rewrite its own code in real time.",
       "It says the average time from finding a vulnerability to its exploitation fell from a few months in 2024 to a few weeks in 2025 and a few hours in 2026.",
-      "It says AI models will likely eventually be able to operate fully on their own, and that AI raises the speed and scale of attacks beyond what human action alone can likely stop."
+      "It says AI models will likely eventually be able to operate fully on their own, and that attacks would then come at a speed and scale that human action alone likely cannot stop."
     ],
     "evidence": "Annual government threat assessment. It says the gap between the cyber threat and Dutch organizations' resilience is a serious risk to national security. Points are paraphrased from the Dutch text.",
     "source": "National Coordinator for Security and Counterterrorism (Netherlands) · Research report",
