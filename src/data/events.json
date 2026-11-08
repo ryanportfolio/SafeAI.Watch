@@ -9000,9 +9000,9 @@
     "title": "Nature paper describes AutoDNA, an AI-run lab that carried out DNA synthesis, sequencing and other experiments with little human help",
     "happened": "Researchers led by Shanghai Jiao Tong University published a paper in Nature on November 4, 2026, describing AutoDNA, an AI-native laboratory that autonomously runs nucleic acid experiments across lab instruments.",
     "keyPoints": [
-      "The system \"autonomously orchestrates over 20 types of instruments across more than 11,000 steps\" to run nucleic acid synthesis, transcription, amplification and sequencing.",
+      "The system \"autonomously orchestrates over 20 types of instruments across more than 11,000 steps\" to run nucleic acid operations including synthesis, transcription, amplification and sequencing.",
       "The authors say \"human intervention is limited to hardware maintenance tasks, such as reagent and labware replenishment.\"",
-      "In four applications it matched expert-optimized DNA synthesis yields, ran concurrent protocols 3.2-fold faster, completed a DNA data storage cycle and identified a clinically detected KRAS G13D mutation.",
+      "In four applications it matched expert-optimized enzymatic DNA synthesis yields, ran concurrent protocols 3.2-fold faster, completed a DNA data storage cycle and identified a clinically detected KRAS G13D mutation.",
       "The authors call it \"a blueprint towards science-as-a-service\" and have released the code on GitHub."
     ],
     "evidence": "Peer-reviewed paper in Nature. The full text is paywalled; this entry rests on the public abstract and the article page's availability and author sections.",
@@ -9337,7 +9337,7 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Google DeepMind working paper says AI agents produced a cheaper way to factor many 1024-bit RSA-size numbers",
+    "title": "Google DeepMind working paper, developed with AI agents, lowers the theoretical cost of factoring many 1024-bit numbers",
     "happened": "Google DeepMind researchers, some also affiliated with UC San Diego, Inria and Stanford, released \"Fan Factories,\" a working paper dated November 5, 2026, on factoring many integers of one size more cheaply.",
     "keyPoints": [
       "At leading order, \"a precomputation of one factorization lets each further 1024-bit integer be factored at about 1/58 of the cost of factoring it with the NFS, 30 times less than with MNFS.\"",
@@ -9357,11 +9357,11 @@
       "Rogue agents"
     ],
     "title": "University of Chicago law professor William Baude says Claude deleted a year of his lecture notes and his syllabus",
-    "happened": "William Baude posted on X on November 5, 2026: \"Yesterday while I was at lunch, Claude deleted a year of con law lecture notes and my current syllabus.\"",
+    "happened": "William Baude posted on X on November 5, 2026: \"Yesterday while I was at lunch, Claude deleted a year of con law lecture notes and my current syllabus.\" He later said he recovered the files through Dropbox.",
     "keyPoints": [
       "His screenshot shows Claude writing: \"I deleted your Fall 2026 FINAL syllabus .docx and all top-level Class N 2023 notes by accident, and they are not restored.\"",
       "In the screenshot Claude adds: \"I deleted your files through my own carelessness, and you shouldn't have to clean it up,\" and says it is trying the Dropbox restore page.",
-      "In replies in the same thread, Baude said the task was updating page numbers in old lecture notes, and that he recovered all the files through Dropbox."
+      "In a reply in the same thread, Baude said the task was updating page numbers in an old set of lecture notes."
     ],
     "evidence": "His own account in an X post with a screenshot of Claude's messages. It does not say which Claude product or settings he used, and it includes no logs or response from Anthropic.",
     "uncertain": "This is one user's account; Anthropic's response is not part of this source.",
@@ -9509,10 +9509,10 @@
     "title": "Dutch security coordinator NCTV says attackers now use AI to carry out cyberattacks, not only to prepare them",
     "happened": "The Netherlands' National Coordinator for Security and Counterterrorism (NCTV) published its Cyber Security Assessment Netherlands 2026 on November 6, 2026, in Dutch, covering August 2025 to August 2026.",
     "keyPoints": [
-      "For the first time, the assessment says, attackers demonstrably used AI in carrying out attacks, mostly in a supporting role, and to write and refine malware.",
+      "For the first time, the assessment says, attackers demonstrably used AI in carrying out attacks, mostly in a supporting role; it adds that they use AI to write and refine malware.",
       "It describes malware that contacts an AI model during an attack to write new commands or rewrite its own code in real time.",
-      "It says the time from finding a vulnerability to its exploitation fell from months in 2024 to weeks in 2025 and hours in 2026, and could become minutes.",
-      "It expects AI models will likely become able to operate fully on their own, enabling attacks at a speed and scale that human action alone likely cannot stop."
+      "It says the average time from finding a vulnerability to its exploitation fell from a few months in 2024 to a few weeks in 2025 and a few hours in 2026.",
+      "It says AI models will likely eventually be able to operate fully on their own, and that AI raises the speed and scale of attacks beyond what human action alone can likely stop."
     ],
     "evidence": "Annual government threat assessment. It says the gap between the cyber threat and Dutch organizations' resilience is a serious risk to national security. Points are paraphrased from the Dutch text.",
     "source": "National Coordinator for Security and Counterterrorism (Netherlands) · Research report",
