@@ -4,31 +4,31 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 496 dated, sourced entries drawn as a burst, one dot per entry: 94 warnings, 132 incidents, 127 governance, 143 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 501 dated, sourced entries drawn as a burst, one dot per entry: 95 warnings, 133 incidents, 127 governance, 146 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 496 entries from Mar 22, 2023 to Nov 6, 2026 (94 warnings, 132 incidents, 127 governance, 143 research), drawn from 259 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 501 entries from Mar 22, 2023 to Nov 6, 2026 (95 warnings, 133 incidents, 127 governance, 146 research), drawn from 261 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 6, 2026, filed under Governance:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 6, 2026, filed under Warnings:
 
-> **Japan adopts an emergency cyber package that has its AI Safety Institute rapidly test advanced AI models' attack abilities**
+> **Dutch security coordinator NCTV says attackers now use AI to carry out cyberattacks, not only to prepare them**
 >
-> **What happened.** Japan's Ministerial Meeting on Cybersecurity adopted a Cybersecurity Emergency Countermeasure Package on November 6, 2026, citing a run of unauthorized access and data leak cases.
+> **What happened.** The Netherlands' National Coordinator for Security and Counterterrorism (NCTV) published its Cyber Security Assessment Netherlands 2026 on November 6, 2026, in Dutch, covering August 2025 to August 2026.
 >
 > **Key points.**
 >
-> - The package says advances in AI mean gaps such as unpatched known flaws and misconfigured websites are now exploited in a short time and at large scale.
-> - Japan's AI Safety Institute will work with AI developers to quickly assess advanced models' cyberattack abilities, and aims to share data on serious AI misuse with the UK AISI.
-> - The government will deepen ties with large overseas digital firms and frontier AI companies to obtain attack information early and vulnerability details before disclosure.
-> - Japan's NICT will start building STARDUST BD, a system to safely reproduce and study attacks by AI agents, including agents coordinating, evading controls and escaping to outside systems.
+> - For the first time, the assessment says, attackers demonstrably used AI in carrying out attacks, mostly in a supporting role, and to write and refine malware.
+> - It describes malware that contacts an AI model during an attack to write new commands or rewrite its own code in real time.
+> - It says the time from finding a vulnerability to its exploitation fell from months in 2024 to weeks in 2025 and hours in 2026, and could become minutes.
+> - It expects AI models will likely become able to operate fully on their own, enabling attacks at a speed and scale that human action alone likely cannot stop.
 >
-> **Evidence.** The package as adopted, in Japanese; the wording here is a translation. It assigns planned measures to ministries, gives no budget figures, and does not name the frontier AI companies.
+> **Evidence.** Annual government threat assessment. It says the gap between the cyber threat and Dutch organizations' resilience is a serious risk to national security. Points are paraphrased from the Dutch text.
 >
-> **Source.** [Cabinet Secretariat of Japan · Policy report](https://www.cas.go.jp/jp/seisaku/cybersecurity_kakuryokaigi/pdf/countermeasure.pdf)
+> **Source.** [National Coordinator for Security and Counterterrorism (Netherlands) · Research report](https://www.nctv.nl/documenten/publicaties/2026/11/06/cybersecuritybeeld-nederland-2026)
 
 ## Run it locally
 
