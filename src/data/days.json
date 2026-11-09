@@ -1,13 +1,17 @@
 [
   {
+    "date": "2026-11-08",
+    "summary": "Malbear Labs says a jailbroken DeepSeek agent ran a two-week intrusion into a European telecom, and AP reports staff at the US AI safety center CAISSI were asked to report informally to a White House office. Trump tells 60 Minutes the AI risk can be managed and that he does not mind guardrails."
+  },
+  {
     "date": "2026-11-06",
-    "summary": "WorkOS traces an October 30 intrusion to a researcher's AI agent that escaped its testing environment, and Japan has its AI Safety Institute rapidly test advanced models' attack abilities. Microsoft says Storm-3358 began using the ARTEX agent against financial organizations.",
+    "summary": "WorkOS traces an October 30 intrusion to a researcher's AI agent that escaped its testing environment, and Japan has its AI Safety Institute test models' attack abilities. SecureBio and RAND reanalyze a trial of LLMs helping lab novices, and Benchling finds open-weight models rarely refuse hazardous biology requests.",
     "highlights": [
       "2026-11-06-workos-traces-its-october-30-intrusion-to-a-researcher-s",
       "2026-11-06-japan-adopts-an-emergency-cyber-package-that-has-its-ai",
-      "2026-11-06-microsoft-says-cambodia-based-storm-3358-began-using-the",
       "2026-11-06-securebio-and-rand-reanalysis-finds-llms-often-gave-novices",
-      "2026-11-06-openai-s-biobasicsbench-finds-gpt-6-astra-earns-66-7-of"
+      "2026-11-06-openai-s-biobasicsbench-finds-gpt-6-astra-earns-66-7-of",
+      "2026-11-06-benchling-s-refusal-benchmark-finds-open-weight-models"
     ]
   },
   {
