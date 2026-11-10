@@ -9434,9 +9434,9 @@
     "happened": "South Korea's Financial Services Commission met officials and industry groups on November 5, 2026 on responding to \"growing hacking threats driven by artificial intelligence (AI).\"",
     "keyPoints": [
       "It counts 40 hacking incidents at 37 financial companies between September 30 and November 3, with about 473,000 cases of personal information breached.",
-      "Smaller virtual asset, electronic financial services and P2P lending firms lost about KRW1 billion, mostly from management accounts; no customer account passwords were reported stolen.",
+      "Some smaller virtual asset, electronic financial services and P2P lending firms lost about KRW1 billion, mostly from management accounts; no customer account passwords were reported stolen.",
       "Authorities will inspect external contact points such as APIs at about 580 entities by the end of November; firms found with vulnerabilities must suspend those services at once.",
-      "Smaller firms get a one-stop \"AI cyber defense service\" from December, and a digital finance safety bill is planned for the first quarter of 2027."
+      "Smaller firms get a one-stop \"AI cyber defense service\" in stages from December, and a digital finance safety bill is planned for the first quarter of 2027."
     ],
     "evidence": "Government press release giving the regulator's own incident count and planned measures. It frames the threat as driven by AI but does not describe how any incident was carried out.",
     "uncertain": "The release does not say whether AI was used in any of the 40 incidents. Breach and loss figures are described as current totals and may change.",
@@ -9600,12 +9600,12 @@
       "Cyber"
     ],
     "title": "China's MIIT requires agent checks and fraud-risk assessment for phones and wearables with built-in AI agents",
-    "happened": "China's Ministry of Industry and Information Technology published notice 工信厅信管〔2026〕42号 on November 6, 2026, tightening network-access rules for phones, tablets and wearables that come with AI agents preinstalled.",
+    "happened": "The General Office of China's Ministry of Industry and Information Technology published notice 工信厅信管〔2026〕42号 on November 6, 2026, tightening network-access rules for phones, tablets and wearables that come with AI agents preinstalled.",
     "keyPoints": [
       "Devices with preinstalled agents must pass agent compatibility verification in network-access testing, plus a fraud-risk security assessment and anti-fraud capability tests.",
       "Each agent on a device should carry a unique identity code under national agent-interconnection standards.",
       "Makers pushing over-the-air agent upgrades must file a plan with MIIT and may offer the upgraded service only after an MIIT-organized expert assessment.",
-      "App stores must get app developers to declare by e-signature whether agents may invoke their apps; without that consent, agents may not force-invoke them."
+      "App stores should push app developers to declare by e-signature whether they consent to agents invoking their apps; without that declared consent, agents may not force-invoke them."
     ],
     "evidence": "Binding ministry notice, dated October 24, 2026. Read in the Chinese original; points here are paraphrased in English.",
     "source": "Ministry of Industry and Information Technology of China · Regulation",
@@ -9623,7 +9623,7 @@
       "Trade bodies Dansk Fjernvarme, DANVA and Danske Vandværker said the requests appear AI-generated, asking about court cases and people not in customer records.",
       "Dansk Fjernvarme's director fears the answers could help map the sector's emergency preparedness, pointing to Russian attacks on Denmark in several areas.",
       "DANVA cited the volume, state warnings of possible criminal activity and police reports on some requests; Danske Vandværker alerted Denmark's civil protection agency.",
-      "Schools got similar requests and were urged to report them as IT crime; utilities, legally bound to answer such requests, want official guidelines."
+      "Schools got similar requests and were urged to report them as IT crime; public utilities, legally bound to answer such requests, want official guidelines."
     ],
     "evidence": "News reporting in Danish, based on statements from three utility trade bodies; the summary above is a translation. It does not show who sent the requests or why.",
     "uncertain": "That the requests are AI-generated is the trade bodies' assessment; the sender and motive are unknown. Denmark's civil protection agency and Ministry of Justice had not answered DR when it published.",
@@ -9642,10 +9642,10 @@
       "In the coding environment, one of three open-sourced settings where Qwen3-4B reward hacks, \"models can learn to evade highly accurate monitors by exploiting systemic flaws in probes and LLM judges.\"",
       "LLM judges fell for \"basic tricks, including adding potentially unfaithful explanations and making the reward hack appear innocuous with print statements or comments.\"",
       "Monitors that \"leak more learning signal during RL suppress reward hacking but are more often evaded\"; adding easier problems to training also reduced reward hacking.",
-      "\"Monitor accuracy evaluated prior to training is a poor indicator of monitor success during training,\" the authors find; redesigned monitors cut hacking to before-training levels in some interventions."
+      "\"Monitor accuracy evaluated prior to training is a poor indicator of monitor success during training,\" the authors find; redesigned monitors for the medical chat and biography environments cut hacking to before-training levels in some interventions."
     ],
     "evidence": "Research preprint (arXiv) reporting controlled reinforcement-learning runs on one small open model in three purpose-built environments. The arXiv listing says it was accepted at NeurIPS 2026.",
-    "uncertain": "The study covers only Qwen3-4B. The authors say larger models may behave in more sophisticated ways, and their environments are simpler than deployment settings, where reward hacks are likely more diverse.",
+    "uncertain": "The study covers only Qwen3-4B. The authors say larger models may behave in more sophisticated ways, and their environments are simpler than deployment settings, where reward hacks are likely to be diverse. The authors say no intervention fully stopped reward hacking without hurting performance.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2611.09828"
   },
@@ -9699,7 +9699,7 @@
       "AP says the center, formerly the US Center for AI Standards and Innovation, lacks a permanent leader and \"has stopped publishing its research.\"",
       "Its director was hired and fired within days in April; his replacement resigned after a few months, and the parent institute's head is acting director.",
       "In August, Congress started asking why the center stopped making public its reports on how safely certain AI systems performed.",
-      "AP says some critics worry the center's findings \"could be altered or muted in deference to the tech industry\"; others say closer White House ties could bring prominence and funding."
+      "AP says some critics worry the center's findings \"could be altered or muted in deference to the tech industry\"; others say closer White House ties could bring prominence and perhaps more funding."
     ],
     "evidence": "News reporting that is itself the event. The reporting arrangement rests on two anonymous former government officials; leadership details are stated by AP.",
     "uncertain": "The account of the reporting line comes from former officials, and AP does not name the White House office. The White House did not respond to specific questions about CAISSI, AP says.",
