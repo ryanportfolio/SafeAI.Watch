@@ -4,31 +4,30 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 501 dated, sourced entries drawn as a burst, one dot per entry: 95 warnings, 133 incidents, 127 governance, 146 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 513 dated, sourced entries drawn as a burst, one dot per entry: 97 warnings, 136 incidents, 130 governance, 150 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 501 entries from Mar 22, 2023 to Nov 6, 2026 (95 warnings, 133 incidents, 127 governance, 146 research), drawn from 261 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 513 entries from Mar 22, 2023 to Nov 9, 2026 (97 warnings, 136 incidents, 130 governance, 150 research), drawn from 270 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 6, 2026, filed under Warnings:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 9, 2026, filed under Warnings:
 
-> **Dutch security coordinator NCTV says attackers now use AI to carry out cyberattacks, not only to prepare them**
+> **Bank of England Governor Andrew Bailey says frontier AI has raised cyberattack risk and calls for more model testing**
 >
-> **What happened.** The Netherlands' National Coordinator for Security and Counterterrorism (NCTV) published its Cyber Security Assessment Netherlands 2026 on November 6, 2026, in Dutch, covering August 2025 to August 2026.
+> **What happened.** Bank of England Governor Andrew Bailey spoke at the SIAF Lecture Series at Zurich University; the Bank published the speech on November 9, 2026.
 >
 > **Key points.**
 >
-> - For the first time, the assessment says, attackers demonstrably used AI in carrying out attacks, mostly in a supporting role; it adds that they use AI to write and refine malware.
-> - It describes malware that contacts an AI model during an attack to write new commands or rewrite its own code in real time.
-> - It says the average time from finding a vulnerability to its exploitation fell from a few months in 2024 to a few weeks in 2025 and a few hours in 2026.
-> - It says AI models will likely eventually be able to operate fully on their own, and that attacks would then come at a speed and scale that human action alone likely cannot stop.
+> - Bailey says "Frontier AI has increased the risk from cyber-attacks" and has raised concerns "which may call into question public trust in AI."
+> - He says "we need more extensive model testing, pre and post release," and "better incident reporting, monitoring and follow up."
+> - He argues "public trust will depend on assured human intervention," and that a loss of trust in AI is a financial stability risk that could affect asset valuations.
 >
-> **Evidence.** Annual government threat assessment. It says the gap between the cyber threat and Dutch organizations' resilience is a serious risk to national security. Points are paraphrased from the Dutch text.
+> **Evidence.** Published text of a central bank governor's opening remarks. It states his view and makes no specific proposal or rule.
 >
-> **Source.** [National Coordinator for Security and Counterterrorism (Netherlands) · Research report](https://www.nctv.nl/documenten/publicaties/2026/11/06/cybersecuritybeeld-nederland-2026)
+> **Source.** [Bank of England · Speech transcript](https://www.bankofengland.co.uk/speech/2026/november/andrew-bailey-speech-at-swiss-institute-international-studies-lecture-series)
 
 ## Run it locally
 

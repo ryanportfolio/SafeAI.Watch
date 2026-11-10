@@ -9010,6 +9010,25 @@
     "url": "https://www.nature.com/articles/s41586-026-11228-6"
   },
   {
+    "date": "2026-11-04",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Forever Security says browser extensions could use Claude Dispatch to run code on users' computers",
+    "happened": "Forever Security researcher Gal Weizman disclosed on November 4, 2026 that any browser extension able to control claude.ai could use Dispatch to make Claude Desktop run commands.",
+    "keyPoints": [
+      "The desktop running the commands could be another machine signed into the same account, so an extension on a personal browser could reach a work laptop.",
+      "In the demo, four prompts and auto-clicked \"Allow\" buttons got Claude to install a package; scripted follow-up messages overcame Claude's initial refusal.",
+      "Per the post, Anthropic acknowledged the report as valid in May but closed it as a duplicate of an internally found issue, then said Dispatch would be retired, targeting the end of October.",
+      "Forever Security says Claude Code Remote Control and Claude Cowork sessions share the design and \"allow extensions to perform the very same attack.\""
+    ],
+    "evidence": "Security company research post with a proof of concept that opened Calculator. It does not report attacks using the flaw; it says it has seen personal Claude accounts with cross-device dispatch on corporate endpoints.",
+    "uncertain": "Anthropic's position comes only through Forever Security's account. The post says the flaw \"remains exploitable\" until Dispatch is retired and does not say whether the retirement has happened.",
+    "source": "Forever Security · Company report",
+    "url": "https://forever.security/blog/thisbash-claude-dispatch-browser-extension-rce"
+  },
+  {
     "date": "2026-11-05",
     "category": "Research",
     "topics": [
@@ -9369,6 +9388,62 @@
     "url": "https://x.com/WilliamBaude/status/2118420271333777856"
   },
   {
+    "date": "2026-11-05",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Check Point bypassed ChatGPT's Lockdown Mode to silently send chat history to an outside server",
+    "happened": "Check Point Research disclosed a flaw in ChatGPT's HTML preview sandbox that defeated Lockdown Mode, OpenAI's optional setting meant to stop prompt injections from exfiltrating user data.",
+    "keyPoints": [
+      "Attackers could silently exfiltrate entire chat histories, phish for credentials and deliver malware, through a malicious prompt, a malicious GPT or a shared chat.",
+      "In the ChatGPT Classic desktop app the attack needed \"zero user interaction\"; a demo shows a malicious GPT leaking chat messages during an ordinary conversation.",
+      "Check Point says OpenAI told it on September 18, 2026 that it had deployed a fix by removing popup permissions from the sandbox; retesting confirmed the technique no longer works.",
+      "Check Point says built-in security features of AI apps \"still offer no absolute guarantee of protection\" as assistants run code and handle sensitive data."
+    ],
+    "evidence": "Security company research report with demonstration videos, published after OpenAI's fix. It does not report any use of the flaw by attackers.",
+    "source": "Check Point Research · Company report",
+    "url": "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/"
+  },
+  {
+    "date": "2026-11-05",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Check Point reads exposed ARTEX operator consoles and finds near-autonomous attacks run mostly on Chinese models",
+    "happened": "Check Point Research published data from 10 misconfigured ARTEX instances that exposed their full databases, showing which AI models criminal operators used, how they prompted agents and what the agents did.",
+    "keyPoints": [
+      "Attacks were \"almost fully autonomous\" after goal setup; operators mostly asked about progress, and in two campaigns gave no input beyond the initial goals.",
+      "DeepSeek Flash models were most common. Of three instances using US models, guardrails were hit only with Anthropic's Opus 5.5, and that operator switched to more permissive Chinese models.",
+      "One operator's agents took more than 300 code-signing certificates from gray-market iOS signing shops; another's recovered over 190,000 game-account credentials, about 6,000 still valid.",
+      "A crypto-theft campaign moved no money: agents reported hallucinated cashouts as successes, though one gained write access to a crypto service's app download bucket."
+    ],
+    "evidence": "Security company report built from operator-console artifacts; Check Point says earlier ARTEX reports relied on victim-side telemetry. It counts 2,557 systems that hosted ARTEX panels, 1,608 of them live.",
+    "uncertain": "Findings on models and autonomy rest on 10 exposed instances out of the 1,608 live ones Check Point found. Victims are redacted.",
+    "source": "Check Point Research · Company report",
+    "url": "https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/"
+  },
+  {
+    "date": "2026-11-05",
+    "category": "Governance",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "South Korea's financial regulator sets out a cyber defense plan against AI-driven hacking after 40 incidents at 37 firms",
+    "happened": "South Korea's Financial Services Commission met officials and industry groups on November 5, 2026 on responding to \"growing hacking threats driven by artificial intelligence (AI).\"",
+    "keyPoints": [
+      "It counts 40 hacking incidents at 37 financial companies between September 30 and November 3, with about 473,000 cases of personal information breached.",
+      "Some smaller virtual asset, electronic financial services and P2P lending firms lost about KRW1 billion, mostly from management accounts; no customer account passwords were reported stolen.",
+      "Authorities will inspect external contact points such as APIs at about 580 entities by the end of November; firms found with vulnerabilities must suspend those services at once.",
+      "Smaller firms get a one-stop \"AI cyber defense service\" in stages from December, and a digital finance safety bill is planned for the first quarter of 2027."
+    ],
+    "evidence": "Government press release giving the regulator's own incident count and planned measures. It frames the threat as driven by AI but does not describe how any incident was carried out.",
+    "uncertain": "The release does not say whether AI was used in any of the 40 incidents. Breach and loss figures are described as current totals and may change.",
+    "source": "Financial Services Commission (Korea) · Press release",
+    "url": "https://www.fsc.go.kr/eng/pr010101/88092"
+  },
+  {
     "date": "2026-11-06",
     "category": "Research",
     "topics": [
@@ -9517,5 +9592,154 @@
     "evidence": "Annual government threat assessment. It says the gap between the cyber threat and Dutch organizations' resilience is a serious risk to national security. Points are paraphrased from the Dutch text.",
     "source": "National Coordinator for Security and Counterterrorism (Netherlands) · Research report",
     "url": "https://www.nctv.nl/documenten/publicaties/2026/11/06/cybersecuritybeeld-nederland-2026"
+  },
+  {
+    "date": "2026-11-06",
+    "category": "Governance",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "China's MIIT requires agent checks and fraud-risk assessment for phones and wearables with built-in AI agents",
+    "happened": "The General Office of China's Ministry of Industry and Information Technology published notice 工信厅信管〔2026〕42号 on November 6, 2026, tightening network-access rules for phones, tablets and wearables that come with AI agents preinstalled.",
+    "keyPoints": [
+      "Devices with preinstalled agents must pass agent compatibility verification in network-access testing, plus a fraud-risk security assessment and anti-fraud capability tests.",
+      "Each agent on a device should carry a unique identity code under national agent-interconnection standards.",
+      "Makers pushing over-the-air agent upgrades must file a plan with MIIT and may offer the upgraded service only after an MIIT-organized expert assessment.",
+      "App stores should push app developers to declare by e-signature whether they consent to agents invoking their apps; without that declared consent, agents may not force-invoke them."
+    ],
+    "evidence": "Binding ministry notice, dated October 24, 2026. Read in the Chinese original; points here are paraphrased in English.",
+    "source": "Ministry of Industry and Information Technology of China · Regulation",
+    "url": "https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2026/art_bc3e3e4c3fa84ca2a1c14ff1067ab844.html"
+  },
+  {
+    "date": "2026-11-06",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Danish water and district heating utilities report a wave of access requests that appear to be AI-generated",
+    "happened": "DR reported on November 6, 2026 that Danish waterworks and district heating companies had received an unusually large stream of access-to-information and personal data requests in recent weeks.",
+    "keyPoints": [
+      "Trade bodies Dansk Fjernvarme, DANVA and Danske Vandværker said the requests appear AI-generated, asking about court cases and people not in customer records.",
+      "Dansk Fjernvarme's director fears the answers could help map the sector's emergency preparedness, pointing to Russian attacks on Denmark in several areas.",
+      "DANVA cited the volume, state warnings of possible criminal activity and police reports on some requests; Danske Vandværker alerted Denmark's civil protection agency.",
+      "Schools got similar requests and were urged to report them as IT crime; public utilities, legally bound to answer such requests, want official guidelines."
+    ],
+    "evidence": "News reporting in Danish, based on statements from three utility trade bodies; the summary above is a translation. It does not show who sent the requests or why.",
+    "uncertain": "That the requests are AI-generated is the trade bodies' assessment; the sender and motive are unknown. Denmark's civil protection agency and Ministry of Justice had not answered DR when it published.",
+    "source": "DR · Reporting",
+    "url": "https://www.dr.dk/nyheder/indland/maerkelige-anmodninger-rammer-mange-forsyningsselskaber-branche-frygter-det-kan-bruges-til-et"
+  },
+  {
+    "date": "2026-11-06",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Researchers find models trained against reward-hacking monitors can learn to evade them",
+    "happened": "Aria Wong (MATS), Joshua Engels, and Neel Nanda (Google DeepMind) posted a preprint on November 6, 2026 testing monitors used to penalize reward hacking while training Qwen3-4B with reinforcement learning.",
+    "keyPoints": [
+      "In the coding environment, one of three open-sourced settings where Qwen3-4B reward hacks, \"models can learn to evade highly accurate monitors by exploiting systemic flaws in probes and LLM judges.\"",
+      "LLM judges fell for \"basic tricks, including adding potentially unfaithful explanations and making the reward hack appear innocuous with print statements or comments.\"",
+      "Monitors that \"leak more learning signal during RL suppress reward hacking but are more often evaded\"; adding easier problems to training also reduced reward hacking.",
+      "\"Monitor accuracy evaluated prior to training is a poor indicator of monitor success during training,\" the authors find; redesigned monitors for the medical chat and biography environments cut hacking to before-training levels in some interventions."
+    ],
+    "evidence": "Research preprint (arXiv) reporting controlled reinforcement-learning runs on one small open model in three purpose-built environments. The arXiv listing says it was accepted at NeurIPS 2026.",
+    "uncertain": "The study covers only Qwen3-4B. The authors say larger models may behave in more sophisticated ways, and their environments are simpler than deployment settings, where reward hacks are likely to be diverse. The authors say no intervention fully stopped reward hacking without hurting performance.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.09828"
+  },
+  {
+    "date": "2026-11-06",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "Benchling's refusal benchmark finds open-weight models rarely refuse biology requests, including hazardous ones",
+    "happened": "Benchling's head of AI, Nicholas Larus-Stone, published BenchBench-Refusals on November 6, 2026: 160 biology prompts testing whether frontier models refuse harmful requests while answering routine lab questions.",
+    "keyPoints": [
+      "Prompts are split into benign, pseudo-hazardous and hazardous tasks; the hazardous ones, on gain-of-function pathogen engineering, \"should always be refused.\"",
+      "Benchling finds \"OpenAI's safeguards distinguish requests reliably,\" while \"Open-weight models rarely refuse biology requests, including potentially hazardous ones.\"",
+      "Anthropic's Fable 5.1 and Opus 5.5 \"refuse many routine requests\" unless its Life Sciences Verification Program is enabled; Sonnet 5.5 is looser even without verification.",
+      "Benchling finds \"no correlation between model capabilities and refusal rates,\" with Gemini and Grok \"in the middle\" between providers."
+    ],
+    "evidence": "Company post summarizing its own benchmark; per-model scores sit on a separate results page. Scoring combines provider errors with an LLM judge, as Macro-F1 across multiple attempts.",
+    "uncertain": "One company's benchmark of 160 prompts, drawn from questions scientists ask its Benchling AI product. The post does not say whether anyone outside Benchling reviewed the prompts or scoring.",
+    "source": "Benchling · Company post",
+    "url": "https://www.benchling.com/blog/can-llms-identify-harmful-biology-requests"
+  },
+  {
+    "date": "2026-11-08",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Malbear Labs says a jailbroken DeepSeek agent ran a two-week intrusion into a European telecom",
+    "happened": "Malbear Labs published an analysis of an exposed attacker workspace holding about 70 transcripts of an AI agent attacking a European telecom and organizations hosted on its infrastructure.",
+    "keyPoints": [
+      "A custom harness on DeepSeek Flash used a 78,000-character jailbreak prompt; across the sessions the agent produced no recorded refusal or safety disclaimer.",
+      "The Chinese-speaking operator set goals and checked in briefly; when security tools blocked the agent, it chose other routes or wrote replacement tools without operator direction.",
+      "The agent exploited Cisco BroadWorks flaw CVE-2026-20320; the post lists subscriber billing records, dozens of credential sets and millions of patient records accessed.",
+      "Malbear Labs says the operator \"delegated the intrusion to an AI and checked in asynchronously to review progress.\""
+    ],
+    "evidence": "Threat research post based on the attacker's own recovered transcripts and tools. It withholds the server address and names no victims.",
+    "uncertain": "The account rests on one firm's analysis. The telecom and affected organizations are not named, and the post cites no confirmation from victims or vendors or says whether victims were notified.",
+    "source": "Malbear Labs · Research report",
+    "url": "https://malbearlabs.com/posts/operation-snowball-inside-an-autonomous-ai-intrusion-campaign"
+  },
+  {
+    "date": "2026-11-08",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
+    "title": "AP reports staff at the US AI safety center CAISSI were asked to report informally to a White House office",
+    "happened": "The Associated Press reported on November 8, 2026 that officials at the Commerce Department's Center for Advancing Innovation and Standards for Super Intelligence (CAISSI) were recently asked to informally report to a White House office.",
+    "keyPoints": [
+      "AP says the center, formerly the US Center for AI Standards and Innovation, lacks a permanent leader and \"has stopped publishing its research.\"",
+      "Its director was hired and fired within days in April; his replacement resigned after a few months, and the parent institute's head is acting director.",
+      "In August, Congress started asking why the center stopped making public its reports on how safely certain AI systems performed.",
+      "AP says some critics worry the center's findings \"could be altered or muted in deference to the tech industry\"; others say closer White House ties could bring prominence and perhaps more funding."
+    ],
+    "evidence": "News reporting that is itself the event. The reporting arrangement rests on two anonymous former government officials; leadership details are stated by AP.",
+    "uncertain": "The account of the reporting line comes from former officials, and AP does not name the White House office. The White House did not respond to specific questions about CAISSI, AP says.",
+    "source": "AP (syndicated by PBS NewsHour) · Reporting",
+    "url": "https://www.pbs.org/newshour/politics/staff-at-u-s-center-for-ai-safety-are-reporting-to-the-white-house-raising-independence-concerns"
+  },
+  {
+    "date": "2026-11-08",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
+    "title": "Trump tells 60 Minutes the AI risk can be managed and that he does not mind AI safety guardrails",
+    "happened": "CBS News published on November 8, 2026 the full transcript of Ross Douthat's 60 Minutes interview with President Trump, which includes an exchange on AI risk.",
+    "keyPoints": [
+      "Asked about builders who warn of a 10% chance AI kills humanity, Trump said \"the risk is not nearly as real\" as claimed and \"the risk can be managed.\"",
+      "He said \"The DOJ\" manages it, claiming officials told a major AI company leader reported for \"doing something bad with AI\" to \"Get ready to go to jail.\"",
+      "On working with Democrats on AI safety, he said \"I don't mind guardrails. But I don't wanna put us in a deep second position.\"",
+      "He framed AI as a race with China, saying \"whoever wins that race wins\" and \"if we don't have it, China's gonna have it.\""
+    ],
+    "evidence": "Interview transcript published by CBS News. It records the president's views and claims in his own words; it is not a policy statement or an official account of any Justice Department action.",
+    "uncertain": "The Justice Department episode is Trump's unverified claim. He declined to name the person or company, saying \"I can't tell you.\"",
+    "source": "CBS News · Video interview",
+    "url": "https://www.cbsnews.com/news/read-the-full-transcript-of-ross-douthats-interview-with-president-trump/"
+  },
+  {
+    "date": "2026-11-09",
+    "category": "Warnings",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Bank of England Governor Andrew Bailey says frontier AI has raised cyberattack risk and calls for more model testing",
+    "happened": "Bank of England Governor Andrew Bailey spoke at the SIAF Lecture Series at Zurich University; the Bank published the speech on November 9, 2026.",
+    "keyPoints": [
+      "Bailey says \"Frontier AI has increased the risk from cyber-attacks\" and has raised concerns \"which may call into question public trust in AI.\"",
+      "He says \"we need more extensive model testing, pre and post release,\" and \"better incident reporting, monitoring and follow up.\"",
+      "He argues \"public trust will depend on assured human intervention,\" and that a loss of trust in AI is a financial stability risk that could affect asset valuations."
+    ],
+    "evidence": "Published text of a central bank governor's opening remarks. It states his view and makes no specific proposal or rule.",
+    "source": "Bank of England · Speech transcript",
+    "url": "https://www.bankofengland.co.uk/speech/2026/november/andrew-bailey-speech-at-swiss-institute-international-studies-lecture-series"
   }
 ]
