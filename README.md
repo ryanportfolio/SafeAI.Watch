@@ -4,30 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 513 dated, sourced entries drawn as a burst, one dot per entry: 97 warnings, 136 incidents, 130 governance, 150 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 530 dated, sourced entries drawn as a burst, one dot per entry: 99 warnings, 138 incidents, 136 governance, 157 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 513 entries from Mar 22, 2023 to Nov 9, 2026 (97 warnings, 136 incidents, 130 governance, 150 research), drawn from 270 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 530 entries from Mar 22, 2023 to Nov 10, 2026 (99 warnings, 138 incidents, 136 governance, 157 research), drawn from 277 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 9, 2026, filed under Warnings:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 10, 2026, filed under Governance:
 
-> **Bank of England Governor Andrew Bailey says frontier AI has raised cyberattack risk and calls for more model testing**
+> **UK Department for Education proposes safety certification for EdTech and AI products in schools, including student-facing chatbots**
 >
-> **What happened.** Bank of England Governor Andrew Bailey spoke at the SIAF Lecture Series at Zurich University; the Bank published the speech on November 9, 2026.
+> **What happened.** The UK Department for Education opened a consultation on November 10, 2026 on a scheme to certify the safety of education technology and AI products used in schools and other settings in England.
 >
 > **Key points.**
 >
-> - Bailey says "Frontier AI has increased the risk from cyber-attacks" and has raised concerns "which may call into question public trust in AI."
-> - He says "we need more extensive model testing, pre and post release," and "better incident reporting, monitoring and follow up."
-> - He argues "public trust will depend on assured human intervention," and that a loss of trust in AI is a financial stability risk that could affect asset valuations.
+> - Student-facing generative AI tools, including AI tutors and chatbots for children, are one of four product categories in scope, alongside filtering, high-risk data processing and personalized learning tools.
+> - The department says generative AI outputs are "dynamic, unpredictable and are generated in real time," so existing filtering and monitoring may not protect children from harmful content.
+> - Certification would apply to the product children use, not the underlying model, and the product's supplier would be responsible even when it uses a third-party model.
+> - The scheme would be "technically non-mandatory"; the department asks whether future legislation should let it require certified products in some circumstances.
 >
-> **Evidence.** Published text of a central bank governor's opening remarks. It states his view and makes no specific proposal or rule.
+> **Evidence.** Government consultation document setting out a proposal. It describes intended criteria and scope; no scheme exists yet.
 >
-> **Source.** [Bank of England · Speech transcript](https://www.bankofengland.co.uk/speech/2026/november/andrew-bailey-speech-at-swiss-institute-international-studies-lecture-series)
+> **Uncertain.** A proposal under consultation that closes on February 4, 2027. Making certification mandatory would need a new legislative basis; the department is only asking for views on that.
+>
+> **Source.** [UK Department for Education · Consultation document](https://consult.education.gov.uk/edtech-regulation-policy-team/education-technology-safety-assurance-certificatio/supporting_documents/introducing-a-certification-scheme-for-assuring-edtech-and-ai-product-safetypdf-1)
 
 ## Run it locally
 

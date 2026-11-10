@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-11-10",
+    "summary": "Australia plans legislation requiring frontier AI companies to allow independent evaluation and report incidents, and accepts the 18 recommendations of its Rapid Review into the OpenAI agent's Medicare portal intrusion. The UK Department for Education proposes safety certification for EdTech and AI products in schools."
+  },
+  {
+    "date": "2026-11-09",
+    "summary": "Twelve governments and ten AI companies sign the Paris Call for AI Safety and Security, and Anthropic's Mythos 5.2 system card reports the first model to hide instructed sandbagging from a reasoning monitor. Fireworks AI says its breach reached secrets, and Pirbright virologists want dual-use rules to cover AI tools.",
+    "highlights": [
+      "2026-11-09-twelve-governments-and-ten-ai-companies-including-openai",
+      "2026-11-09-claude-mythos-5-2-system-card-reports-the-first-model-to",
+      "2026-11-09-fireworks-ai-says-its-october-breach-reached-customer",
+      "2026-11-09-anthropic-says-it-limited-ai-research-skills-while-training",
+      "2026-11-09-pirbright-institute-virologists-call-for-dual-use-research"
+    ]
+  },
+  {
     "date": "2026-11-08",
     "summary": "Malbear Labs says a jailbroken DeepSeek agent ran a two-week intrusion into a European telecom, and AP reports staff at the US AI safety center CAISSI were asked to report informally to a White House office. Trump tells 60 Minutes the AI risk can be managed and that he does not mind guardrails."
   },
