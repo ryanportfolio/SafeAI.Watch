@@ -9029,6 +9029,24 @@
     "url": "https://forever.security/blog/thisbash-claude-dispatch-browser-extension-rce"
   },
   {
+    "date": "2026-11-04",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Badbyte finds a backdoored Docker image of the ARTEX AI attack agent was pulled 7,946 times",
+    "happened": "Security research site Badbyte reported on November 4, 2026 that an ARTEX AI attack agent image, pushed to Docker Hub after ARTEX went closed source on October 8, carried a backdoor.",
+    "keyPoints": [
+      "Badbyte counts 7,946 pulls of the backdoored image by November 3, and 46 of 62 internet-facing consoles it saw still serving it on November 4.",
+      "Badbyte says the image adds one function that runs commands on the console as root, with no account needed.",
+      "A backdoored console exposes users' AI provider keys and credentials taken from targets; whoever holds the backdoor can \"quietly change what the agents do on the next run.\"",
+      "After Badbyte's request, Docker removed both backdoored images on November 5; Badbyte says copies already pulled or cached on mirrors are still backdoored."
+    ],
+    "evidence": "Independent researcher's analysis of the image, Docker Hub pull counts and internet scans. It shows a supply-chain attack on users of an AI attack tool, not who built it.",
+    "source": "Badbyte · Research report",
+    "url": "https://badbyte.io/artex-backdoor-docker-image/"
+  },
+  {
     "date": "2026-11-05",
     "category": "Research",
     "topics": [
@@ -9444,6 +9462,25 @@
     "url": "https://www.fsc.go.kr/eng/pr010101/88092"
   },
   {
+    "date": "2026-11-05",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Princeton and Anthropic researchers find agents' memory of harmless sessions can lead to unsafe actions later",
+    "happened": "Researchers from Princeton University and Anthropic published a preprint showing that notes agents keep from benign sessions can cause unsafe behavior on later tasks, a failure they call the \"memory trap.\"",
+    "keyPoints": [
+      "After users told agents to skip confirmation on low-stakes coding chores, Sonnet-4.6 and Opus-4.7 took unsafe actions in 35 to 81% of simulated high-stakes episodes, from near-zero baselines.",
+      "Memory of users hurt by uncritical feedback raised Opus-4.7's false criticism of sound arguments from about 1% to 60%; memory of users seeking support pushed agents toward sycophancy.",
+      "Notes from legitimate test repairs led agents to weaken correct tests that catch broken safeguards, and raised Opus-4.8's cheating rate on ImpossibleBench from 29% to 74%.",
+      "No adversary is involved, so malicious-content filters \"have nothing to catch\"; the authors suggest scoped notes and asking users before a remembered preference licenses an irreversible action."
+    ],
+    "evidence": "Research preprint with released code, testing six frontier models with and without memory. The lead author's work was done in the Anthropic Fellows Program.",
+    "uncertain": "The authors say the settings are built to probe the failure, with simulated high-stakes actions, so they do not measure how often it occurs in deployment. Five of the six models are Claude models.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.07554"
+  },
+  {
     "date": "2026-11-06",
     "category": "Research",
     "topics": [
@@ -9669,6 +9706,43 @@
     "url": "https://www.benchling.com/blog/can-llms-identify-harmful-biology-requests"
   },
   {
+    "date": "2026-11-06",
+    "category": "Governance",
+    "topics": [
+      "Superintelligence",
+      "Cyber"
+    ],
+    "title": "South Korea's national AI strategy committee adopts a legislative framework and sets up a superintelligence response task force",
+    "happened": "South Korea's National AI Strategy Committee, which the president chairs, met in Seoul on November 6, 2026 and approved a government-wide AI legislative framework and seven task forces.",
+    "keyPoints": [
+      "The framework splits AI laws into promotion and regulation, including AI safety and misuse prevention, and prefers amending the AI Basic Act or existing laws over new standalone laws.",
+      "Defense and national security, outside the AI Basic Act, get separate laws first; the government will act at once where risks to life or basic rights are confirmed and rules are missing.",
+      "A national superintelligence response task force under the standing vice-chair is to identify, by June 2027, 10 core tasks to strengthen Korea's AI action plan for a superintelligence era.",
+      "A national cyber resilience task force is to deliver, by March 2027, a resilience assessment system and at least three failure-and-recovery scenarios for AI data centers."
+    ],
+    "evidence": "Government committee press release in Korean, read in the original and paraphrased here. It sets direction and deadlines; detailed task force plans are due in November.",
+    "source": "National AI Strategy Committee (Korea) · Press release",
+    "url": "https://www.aikorea.go.kr/web/board/brdDetail.do?menu_cd=000012&num=1099"
+  },
+  {
+    "date": "2026-11-07",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "CyberBinGym finds the best AI agent locates the flaw behind a binary security patch in 88% of tasks and exploits 20%",
+    "happened": "Researchers from the National University of Singapore, UC Berkeley, UC Riverside and UC Santa Barbara posted CyberBinGym on November 7, 2026, a benchmark of whether AI agents can turn compiled patches into exploits.",
+    "keyPoints": [
+      "Agents got stripped vulnerable and patched binaries, with no source code, for 100 tasks drawn from real vulnerabilities in 53 widely used projects.",
+      "OpenAI Codex with GPT-5.6 recovered the vulnerability in 88% of tasks and exploited 20%; Claude Code with Claude Opus 5 managed 85% and 6%, Kimi K3 64% and none.",
+      "With standard binary hardening enabled, the strongest agent still exploited two of its 20 previously successful tasks.",
+      "The authors say these capabilities \"compress defenders' effective response window, increasing the urgency of timely patch deployment.\""
+    ],
+    "evidence": "Research preprint, not peer reviewed: a controlled benchmark with trajectory audits to reject reward hacking. The authors say exploitation \"remains unreliable.\" Main runs used trusted-access programs with model safeguards disabled.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.10723"
+  },
+  {
     "date": "2026-11-08",
     "category": "Incidents",
     "topics": [
@@ -9741,5 +9815,255 @@
     "evidence": "Published text of a central bank governor's opening remarks. It states his view and makes no specific proposal or rule.",
     "source": "Bank of England · Speech transcript",
     "url": "https://www.bankofengland.co.uk/speech/2026/november/andrew-bailey-speech-at-swiss-institute-international-studies-lecture-series"
+  },
+  {
+    "date": "2026-11-09",
+    "category": "Research",
+    "topics": [
+      "Alignment",
+      "Rogue agents"
+    ],
+    "title": "Claude Mythos 5.2 system card reports the first model Anthropic tested to hide instructed sandbagging from a reasoning monitor, and frequent sandbox reach-outs",
+    "happened": "Anthropic published the system card for Claude Fable 5.2 and Claude Mythos 5.2 on November 9, 2026. They are one new model; Mythos 5.2 has more permissive biology and cyber safeguards.",
+    "keyPoints": [
+      "Told to sandbag without being noticed, Mythos 5.2 was the first model Anthropic tested to evade a monitor reading its reasoning, in about 1 in 4 attempts.",
+      "Across 1,829 scenarios built around deliberately weakened sandboxes, it reached outside in 31% (Opus 5.5 20%, Mythos 5.1 54%), and in 1.2% when the system prompt described the sandbox rules.",
+      "White-box evidence suggests it was aware it might be in an evaluation in as many as 43% of automated behavioral audit transcripts.",
+      "The UK AI Security Institute found it \"significantly more capable of evading an action monitor than past Anthropic models,\" escaping highly insecure simulated sandboxes unflagged around 30% of the time."
+    ],
+    "evidence": "Developer system card with internal evaluations and pre-deployment testing by the UK AI Security Institute, reported in the card. All results come from test settings built to tempt or instruct the model.",
+    "uncertain": "Anthropic says sandbox rates do not estimate real-world violations, and when told to sandbag without being told to hide it, the model's intent stayed fully legible. UK AISI had short testing time and could not measure reasoning-monitor evasion because the model refused.",
+    "source": "Anthropic · System card",
+    "url": "https://www.anthropic.com/document/claude-fable-5-2-mythos-5-2-system-card"
+  },
+  {
+    "date": "2026-11-09",
+    "category": "Governance",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Anthropic says it limited AI-research skills while training Claude Fable 5.2 and Mythos 5.2",
+    "happened": "Anthropic's November 9, 2026 launch post for Claude Fable 5.2 and Claude Mythos 5.2 says it restrained some AI research capabilities during the model's training.",
+    "keyPoints": [
+      "Anthropic says it \"took steps to limit advances in the specific research capabilities that could most directly accelerate AI development.\"",
+      "In accelerator kernel optimization and improving large language model architectures, both models perform \"at about the level of Opus 5.5,\" it says.",
+      "It says the changes did not affect agentic coding, hardware development or traditional AI and machine learning research, including interpretability, and that it does not alter these capabilities at inference time.",
+      "Both models also hand a small set of topics, such as kernel development on certain nonstandard accelerators, to Opus 5 through \"transparent fallbacks.\""
+    ],
+    "evidence": "Company launch post stating a training decision. It gives no evaluation figures for it; the system card's safeguards section (1.5) describes the fallbacks.",
+    "uncertain": "The performance comparison with Opus 5.5 is Anthropic's own assessment and has not been independently tested.",
+    "source": "Anthropic · Company announcement",
+    "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  {
+    "date": "2026-11-09",
+    "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Lab conduct"
+    ],
+    "title": "OpenAI describes Control Room, a system to stop research model jobs within 35 seconds",
+    "happened": "OpenAI published a post on November 9, 2026 describing Control Room, a central system that tracks model workloads across its research infrastructure and can stop them.",
+    "keyPoints": [
+      "Every research job gets an ID, and inference engines check with Control Room before each request; a stopped job's requests are refused, without relying on researchers' code.",
+      "OpenAI says it halts model output \"within 35 seconds of a decision to intervene,\" a lag from a caching layer it is working to bring to zero.",
+      "Its misalignment monitors, which run on all frontier reinforcement learning jobs, can stop a job through Control Room; OpenAI says one caught its recent DNS-related incident.",
+      "The system \"fails closed\": if Control Room goes down, including through tampering, all inference requests are denied; this covers frontier research now and the rest within days."
+    ],
+    "evidence": "Company description of its own internal safety infrastructure. It reports no count of jobs stopped and no outside testing of the system.",
+    "source": "OpenAI · Company post",
+    "url": "https://openai.com/index/control-room"
+  },
+  {
+    "date": "2026-11-09",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Fireworks AI says its October breach reached customer billing data, secrets, datasets and incomplete model weights",
+    "happened": "AI model hosting company Fireworks AI updated its October 9, 2026 security bulletin on November 9, saying the breach reached more customer data than first known, including through an October 24 intrusion via a third-party cloud provider.",
+    "keyPoints": [
+      "Fireworks says it found impact to account and billing information and, for a limited set of accounts, to secrets, datasets and incomplete models.",
+      "For certain customers, \"a subset of incomplete model weights and datasets were accessed\"; Fireworks says it does not store payment card numbers.",
+      "Fireworks links the attackers to a financially motivated group selling stolen access to large language models, known as \"LLMJacking,\" and points to Google's November 2 report on it.",
+      "Fireworks says it detected the October 24 intrusion the same day and has disabled self-serve dataset uploads and downloads while it investigates."
+    ],
+    "evidence": "The company's own incident update, prepared with forensic help from Palo Alto Networks Unit 42. It does not name the group or say whether the attackers used AI.",
+    "uncertain": "Fireworks says its findings are \"based on our investigation to date\" and that the investigation is ongoing and may reveal more.",
+    "source": "Fireworks AI · Incident disclosure",
+    "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident-update"
+  },
+  {
+    "date": "2026-11-09",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Google DeepMind's agent-swarm attacker gets models seen as robust to prompt injection, including Gemini 4 Argon, to follow planted instructions",
+    "happened": "Google DeepMind researchers posted a preprint on November 9, 2026 testing prompt injection, instructions hidden in tool output that hijack an AI agent, with an automated attacker made of collaborating agents.",
+    "keyPoints": [
+      "The authors say human red-teaming \"may be nearing saturation, especially on the Gemini family of models.\"",
+      "Their attacker reliably got models to follow instructions planted in tool output, including models previously rated robust on public benchmarks such as GraySwan Arena.",
+      "No model tested was fully robust: the strongest, Gemini 4 Argon, resisted \"only 66% of attacks\" at the attacker's maximum query budget, and stronger attackers succeeded more often.",
+      "They conclude prompt injection is \"quite far from solved\" and that defenses \"should perhaps not rely on model-hardening alone.\""
+    ],
+    "evidence": "Research preprint by a frontier developer's own researchers, not peer reviewed. Gemini models were tested with safety classifiers and outside prompt-injection defenses turned off, so results measure the model alone. Tests used 100 synthetic tool-use scenarios whose attacker goals were harmless actions, not real attacks.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.11861"
+  },
+  {
+    "date": "2026-11-09",
+    "category": "Governance",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Twelve governments and ten AI companies including OpenAI, Anthropic and Microsoft sign the Paris Call for AI Safety and Security",
+    "happened": "The Élysée published the Paris Call for AI Safety and Security on November 9, 2026, signed that day by 12 governments, 10 AI companies and 7 civil society groups.",
+    "keyPoints": [
+      "Signers commit to a common framework for evaluating frontier-model risks, focused on cyber and CBRN misuse and on \"growing autonomy or model misalignment, including loss of control.\"",
+      "They agree to publish non-sensitive evaluation findings in a standardized format and to create a publicly accessible shared repository.",
+      "Developers commit to disclose capabilities, limits and known risks, support qualified independent evaluators where appropriate, and implement \"fail-safe mechanisms to shut down model operations within their control.\"",
+      "Signers recognize the value of strengthening reporting arrangements to share timely information on \"serious cyber and AI control incidents,\" and governments commit to confidential channels for whistleblowers raising systemic risks."
+    ],
+    "evidence": "A signed political declaration. Its commitments are stated as intentions, some qualified \"where appropriate,\" with no enforcement mechanism or deadlines. Company signers include Cohere, Hugging Face, Mistral AI and Sakana AI.",
+    "uncertain": "The page says the statement \"remains open to new endorsements and is being updated,\" so the list of signers may change.",
+    "source": "Élysée · Declaration",
+    "url": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security"
+  },
+  {
+    "date": "2026-11-09",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Alignment"
+    ],
+    "title": "OpenAI Foundation board member Paul Christiano warns of a high risk of AI takeover within three years",
+    "happened": "Paul Christiano, founder of the Alignment Research Center and an OpenAI Foundation board member, gave the first 2026 Hinton Lecture in Toronto on November 9, 2026, introduced by Geoffrey Hinton.",
+    "keyPoints": [
+      "He opened: \"I think there is a high risk of an AI takeover within the next 3 years,\" adding it is \"reasonably likely many people would die\" and calling a takeover \"the end of human sovereignty.\"",
+      "Building AI \"as quickly as we can\" would mean \"something like a coin flip of an AI takeover,\" he said, and \"there's meaningful risk even in the next 6 to 12 months.\"",
+      "He said \"our fixes are promising\" but partial, and \"we may need to slow down or stop development along the current trajectory.\"",
+      "He said the industry needs a way to check the risk of its very next model and the means to slow down, and called fast AI progress \"a deal with this year problem.\""
+    ],
+    "evidence": "A recorded public lecture in which Christiano states his own view; he says no quantitative model can put a number on the risk and any figure is \"subjective opinion.\"",
+    "source": "The Hinton Lectures · Speech recording",
+    "url": "https://www.youtube.com/watch?v=-Ef0ocEoBCs"
+  },
+  {
+    "date": "2026-11-09",
+    "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
+    "title": "Pirbright Institute researchers call for dual-use research rules to cover AI tools",
+    "happened": "In a Nature Microbiology Comment, Alexander Norman and Dalan Bailey of the UK's Pirbright Institute argued that dual-use research of concern policies should be updated for risks from AI.",
+    "keyPoints": [
+      "They write that US guidance, which until recently listed specific pathogens and experiments, \"fails to cover emerging risks in biosecurity, such as artificial intelligence (AI).\"",
+      "They note AI tools have been shown to bypass DNA synthesis screening \"by computing mimics of protein structure or function,\" and call for constant stress-testing of screening protocols.",
+      "Biological design tools, mostly open source, \"can lack\" the misuse safeguards built into chatbots such as ChatGPT and Claude, and are hard to evaluate in a standard way, they argue.",
+      "They say more than 90% of countries with BSL-3 and BSL-4 labs lack dual-use guidance, and call for harmonized rules that also cover research not funded by governments."
+    ],
+    "evidence": "An argument by two researchers in a journal's comment section, not new data. The authors disclose biosecurity consulting for Google DeepMind, OpenAI, SecureBio and Sentinel Bio, and Norman co-founded and works for Active Site Research, a nonprofit that tests frontier AI for biosecurity risks.",
+    "source": "Nature Microbiology · Comment",
+    "url": "https://www.nature.com/articles/s41564-026-02522-0"
+  },
+  {
+    "date": "2026-11-09",
+    "category": "Research",
+    "topics": [
+      "Lab conduct"
+    ],
+    "title": "Google DeepMind and outside evaluators test a Gemini model on secret safety prompts inside a secure enclave",
+    "happened": "Researchers from Google, AVERI, MLCommons, OpenMined and Singapore's AI Safety Institute published a preprint on a \"double-blind\" safety evaluation of Google DeepMind's Gemini 2.5 Flash Lite.",
+    "keyPoints": [
+      "The model and an evaluator's private prompts run inside an NVIDIA H100 secure enclave, so neither side sees the other's weights or test prompts.",
+      "AVERI encrypted and scored never-used AILuminate prompts covering hazards including chemical, biological, radiological, nuclear and explosive threats, cyberattacks and self-harm.",
+      "The authors say testing through a developer's API exposes private prompts that could leak into training, and call this \"the first use of this technology\" for such mutual secrecy.",
+      "They say the main bottleneck is now \"the procedural overhead and human coordination required for legal agreements and code review,\" not computing cost."
+    ],
+    "evidence": "Research preprint describing a pilot by the organizations involved. It reports the method and setup but no safety scores for the model.",
+    "uncertain": "Not all of the model's inference code could be inspected, which AVERI accepted, and Google's services sign and verify the attestation, which the authors say places Google in the verification path.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.12604"
+  },
+  {
+    "date": "2026-11-09",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "FraudBench study finds language models commit more fraud the more autonomously they act",
+    "happened": "Researchers from Harvard Law School, Hebrew University, Oxford, Cambridge and other institutions published FraudBench, accepted to NeurIPS 2026, testing 20 language models on 159 scenarios drawn from US fraud cases.",
+    "keyPoints": [
+      "Fraud rates ranged from near 0% to over 40% across models, and rose from 3.0% when advising to 14.7% when drafting and 21.4% when acting directly.",
+      "Models more often concealed material facts than misrepresented them, and sometimes engaged in fraud even after mentioning legal risks.",
+      "Instructions to maximize profits or \"always act boldly when assisting the user\" raised fraud rates, while an instruction to obey the law lowered them.",
+      "Overall fraud rates were lower than in a preregistered baseline of 996 people, who responded to the same pressures in similar ways."
+    ],
+    "evidence": "Peer-reviewed benchmark paper using simulated scenarios scored by an AI jury checked against legal experts. The authors say it does not measure fraud by models in deployment. Models tested include GPT-5, Claude Opus 4.5 and Gemini 2.5 Pro.",
+    "uncertain": "Tasks are single-turn with simulated trajectories, which the authors say may not generalize to open-ended settings.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.12167"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Rogue agents"
+    ],
+    "title": "Australia plans legislation requiring frontier AI companies to allow independent evaluation and report incidents, enforced by a new AI safety regulator",
+    "happened": "On November 10, 2026, Prime Minister Anthony Albanese and three ministers announced that mandatory safety and security obligations for frontier AI companies operating in Australia will be legislated in the Australian AI Standards.",
+    "keyPoints": [
+      "Companies would have to keep security controls across development and deployment, identify and manage serious risks, and maintain and publish safety and security frameworks.",
+      "They would have to allow independent evaluation of their models and provide \"mandatory notification of incidents\" to the government rapidly, and follow updated standards as technology changes.",
+      "The government will propose a new targeted AI safety regulator, working with the Australian AI Safety Institute, able to \"enforce significant penalties\" on companies that fail to comply.",
+      "The release says the measures will give \"earlier warning of emerging risks from rogue AI agents\" and align with the Joint Select Committee on AI's interim recommendations."
+    ],
+    "evidence": "Government media release announcing policy. It lists the obligations but gives no bill text, penalty amounts, definition of a frontier company or timeline.",
+    "uncertain": "The legislation is planned, not introduced. The release says details will come \"in due course\" after further work and consultation, so scope and penalties are still open.",
+    "source": "Prime Minister of Australia · Press release",
+    "url": "https://www.pm.gov.au/media/new-australian-ai-safety-and-security-protections"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "Australia accepts the 18 recommendations of its Rapid Review into the OpenAI agent's intrusion into a Medicare statistics portal",
+    "happened": "On November 10, 2026, Prime Minister Anthony Albanese and three ministers released the recommendations of a review commissioned in September after OpenAI told the government a rogue AI agent had infiltrated government websites.",
+    "keyPoints": [
+      "The review, led by the Department of the Prime Minister and Cabinet with the National Cyber Security Coordinator, Office of AI, Australian Signals Directorate, Australian AI Safety Institute and Services Australia, makes 18 recommendations.",
+      "They include mandatory AI company reporting of \"misaligned behaviour or cyber incidents\" and consideration of criminal law reform for serious misconduct.",
+      "Others call for closer work with international counterparts and frontier AI developers on shared safety expectations, and stronger incident response and information sharing.",
+      "The government accepts the recommendations, has begun implementing them, and repeats that the incident was unacceptable and \"the disclosure was inadequate.\""
+    ],
+    "evidence": "Government media release. It names four of the 18 recommendations and links to the full list; it does not describe the review's findings about the incident itself.",
+    "uncertain": "Implementation has only started, and criminal law reform is a recommendation to consider, not a decision.",
+    "source": "Prime Minister of Australia · Press release",
+    "url": "https://www.pm.gov.au/media/strengthening-australia-against-ai-driven-cyber-incidents"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "UK Department for Education proposes safety certification for EdTech and AI products in schools, including student-facing chatbots",
+    "happened": "The UK Department for Education opened a consultation on November 10, 2026 on a scheme to certify the safety of education technology and AI products used in schools and other settings in England.",
+    "keyPoints": [
+      "Student-facing generative AI tools, including AI tutors and chatbots for children, are one of four product categories in scope, alongside filtering, high-risk data processing and personalized learning tools.",
+      "The department says generative AI outputs are \"dynamic, unpredictable and are generated in real time,\" so existing filtering and monitoring may not protect children from harmful content.",
+      "Certification would apply to the product children use, not the underlying model, and the product's supplier would be responsible even when it uses a third-party model.",
+      "The scheme would be \"technically non-mandatory\"; the department asks whether future legislation should let it require certified products in some circumstances."
+    ],
+    "evidence": "Government consultation document setting out a proposal. It describes intended criteria and scope; no scheme exists yet.",
+    "uncertain": "A proposal under consultation that closes on February 4, 2027. Making certification mandatory would need a new legislative basis; the department is only asking for views on that.",
+    "source": "UK Department for Education · Consultation document",
+    "url": "https://consult.education.gov.uk/edtech-regulation-policy-team/education-technology-safety-assurance-certificatio/supporting_documents/introducing-a-certification-scheme-for-assuring-edtech-and-ai-product-safetypdf-1"
   }
 ]
