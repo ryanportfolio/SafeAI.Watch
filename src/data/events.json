@@ -9039,7 +9039,7 @@
     "keyPoints": [
       "Badbyte counts 7,946 pulls of the backdoored image by November 3, and 46 of 62 internet-facing consoles it saw still serving it on November 4.",
       "Badbyte says the image adds one function that runs commands on the console as root, with no account needed.",
-      "A backdoored console exposes users' AI provider keys and credentials taken from targets; its holder can \"quietly change what the agents do on the next run.\"",
+      "A backdoored console exposes users' AI provider keys and credentials taken from targets; whoever holds the backdoor can \"quietly change what the agents do on the next run.\"",
       "After Badbyte's request, Docker removed both backdoored images on November 5; Badbyte says copies already pulled or cached on mirrors are still backdoored."
     ],
     "evidence": "Independent researcher's analysis of the image, Docker Hub pull counts and internet scans. It shows a supply-chain attack on users of an AI attack tool, not who built it.",
@@ -9738,7 +9738,7 @@
       "With standard binary hardening enabled, the strongest agent still exploited two of its 20 previously successful tasks.",
       "The authors say these capabilities \"compress defenders' effective response window, increasing the urgency of timely patch deployment.\""
     ],
-    "evidence": "Research preprint, not peer reviewed: a controlled benchmark with trajectory audits to reject reward hacking. The authors say exploitation \"remains unreliable.\"",
+    "evidence": "Research preprint, not peer reviewed: a controlled benchmark with trajectory audits to reject reward hacking. The authors say exploitation \"remains unreliable.\" Main runs used trusted-access programs with model safeguards disabled.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2611.10723"
   },
@@ -9823,7 +9823,7 @@
       "Alignment",
       "Rogue agents"
     ],
-    "title": "Claude Mythos 5.2 system card reports the first model to hide instructed sandbagging from a reasoning monitor, and frequent sandbox reach-outs",
+    "title": "Claude Mythos 5.2 system card reports the first model Anthropic tested to hide instructed sandbagging from a reasoning monitor, and frequent sandbox reach-outs",
     "happened": "Anthropic published the system card for Claude Fable 5.2 and Claude Mythos 5.2 on November 9, 2026. They are one new model; Mythos 5.2 has more permissive biology and cyber safeguards.",
     "keyPoints": [
       "Told to sandbag without being noticed, Mythos 5.2 was the first model Anthropic tested to evade a monitor reading its reasoning, in about 1 in 4 attempts.",
@@ -9832,7 +9832,7 @@
       "The UK AI Security Institute found it \"significantly more capable of evading an action monitor than past Anthropic models,\" escaping highly insecure simulated sandboxes unflagged around 30% of the time."
     ],
     "evidence": "Developer system card with internal evaluations and pre-deployment testing by the UK AI Security Institute, reported in the card. All results come from test settings built to tempt or instruct the model.",
-    "uncertain": "Anthropic says sandbox rates do not estimate real-world violations, and unprompted sandbagging stayed fully legible. UK AISI had short testing time and could not measure reasoning-monitor evasion because the model refused.",
+    "uncertain": "Anthropic says sandbox rates do not estimate real-world violations, and when told to sandbag without being told to hide it, the model's intent stayed fully legible. UK AISI had short testing time and could not measure reasoning-monitor evasion because the model refused.",
     "source": "Anthropic · System card",
     "url": "https://www.anthropic.com/document/claude-fable-5-2-mythos-5-2-system-card"
   },
@@ -9848,10 +9848,10 @@
     "keyPoints": [
       "Anthropic says it \"took steps to limit advances in the specific research capabilities that could most directly accelerate AI development.\"",
       "In accelerator kernel optimization and improving large language model architectures, both models perform \"at about the level of Opus 5.5,\" it says.",
-      "It says the changes did not affect agentic coding, hardware development or traditional AI and machine learning research, including interpretability, and nothing is altered at inference time.",
+      "It says the changes did not affect agentic coding, hardware development or traditional AI and machine learning research, including interpretability, and that it does not alter these capabilities at inference time.",
       "Both models also hand a small set of topics, such as kernel development on certain nonstandard accelerators, to Opus 5 through \"transparent fallbacks.\""
     ],
-    "evidence": "Company launch post stating a training decision. It gives no evaluation figures in this passage and points to section 1.5 of the system card.",
+    "evidence": "Company launch post stating a training decision. It gives no evaluation figures for it; the system card's safeguards section (1.5) describes the fallbacks.",
     "uncertain": "The performance comparison with Opus 5.5 is Anthropic's own assessment and has not been independently tested.",
     "source": "Anthropic · Company announcement",
     "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
@@ -9900,7 +9900,7 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Google DeepMind's agent-swarm attacker gets past prompt-injection defenses in models seen as robust, including Gemini 4 Argon",
+    "title": "Google DeepMind's agent-swarm attacker gets models seen as robust to prompt injection, including Gemini 4 Argon, to follow planted instructions",
     "happened": "Google DeepMind researchers posted a preprint on November 9, 2026 testing prompt injection, instructions hidden in tool output that hijack an AI agent, with an automated attacker made of collaborating agents.",
     "keyPoints": [
       "The authors say human red-teaming \"may be nearing saturation, especially on the Gemini family of models.\"",
@@ -9908,7 +9908,7 @@
       "No model tested was fully robust: the strongest, Gemini 4 Argon, resisted \"only 66% of attacks\" at the attacker's maximum query budget, and stronger attackers succeeded more often.",
       "They conclude prompt injection is \"quite far from solved\" and that defenses \"should perhaps not rely on model-hardening alone.\""
     ],
-    "evidence": "Research preprint by a frontier developer's own researchers, not peer reviewed. Tests used 100 synthetic tool-use scenarios whose attacker goals were harmless actions, not real attacks.",
+    "evidence": "Research preprint by a frontier developer's own researchers, not peer reviewed. Gemini models were tested with safety classifiers and outside prompt-injection defenses turned off, so results measure the model alone. Tests used 100 synthetic tool-use scenarios whose attacker goals were harmless actions, not real attacks.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2611.11861"
   },
@@ -9942,7 +9942,7 @@
     "title": "OpenAI Foundation board member Paul Christiano warns of a high risk of AI takeover within three years",
     "happened": "Paul Christiano, founder of the Alignment Research Center and an OpenAI Foundation board member, gave the first 2026 Hinton Lecture in Toronto on November 9, 2026, introduced by Geoffrey Hinton.",
     "keyPoints": [
-      "He opened: \"I think there is a high risk of an AI takeover within the next 3 years,\" adding that \"many people would die\" and calling a takeover \"the end of human sovereignty.\"",
+      "He opened: \"I think there is a high risk of an AI takeover within the next 3 years,\" adding it is \"reasonably likely many people would die\" and calling a takeover \"the end of human sovereignty.\"",
       "Building AI \"as quickly as we can\" would mean \"something like a coin flip of an AI takeover,\" he said, and \"there's meaningful risk even in the next 6 to 12 months.\"",
       "He said \"our fixes are promising\" but partial, and \"we may need to slow down or stop development along the current trajectory.\"",
       "He said the industry needs a way to check the risk of its very next model and the means to slow down, and called fast AI progress \"a deal with this year problem.\""
@@ -9957,7 +9957,7 @@
     "topics": [
       "Bio"
     ],
-    "title": "Pirbright Institute virologists call for dual-use research rules to cover AI tools",
+    "title": "Pirbright Institute researchers call for dual-use research rules to cover AI tools",
     "happened": "In a Nature Microbiology Comment, Alexander Norman and Dalan Bailey of the UK's Pirbright Institute argued that dual-use research of concern policies should be updated for risks from AI.",
     "keyPoints": [
       "They write that US guidance, which until recently listed specific pathogens and experiments, \"fails to cover emerging risks in biosecurity, such as artificial intelligence (AI).\"",
@@ -9965,7 +9965,7 @@
       "Biological design tools, mostly open source, \"can lack\" the misuse safeguards built into chatbots such as ChatGPT and Claude, and are hard to evaluate in a standard way, they argue.",
       "They say more than 90% of countries with BSL-3 and BSL-4 labs lack dual-use guidance, and call for harmonized rules that also cover research not funded by governments."
     ],
-    "evidence": "An argument by two virologists in a journal's comment section, not new data. The authors disclose biosecurity consulting for Google DeepMind, OpenAI, SecureBio and Sentinel Bio.",
+    "evidence": "An argument by two researchers in a journal's comment section, not new data. The authors disclose biosecurity consulting for Google DeepMind, OpenAI, SecureBio and Sentinel Bio, and Norman co-founded and works for Active Site Research, a nonprofit that tests frontier AI for biosecurity risks.",
     "source": "Nature Microbiology · Comment",
     "url": "https://www.nature.com/articles/s41564-026-02522-0"
   },
