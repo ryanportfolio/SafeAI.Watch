@@ -4,33 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 530 dated, sourced entries drawn as a burst, one dot per entry: 99 warnings, 138 incidents, 136 governance, 157 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 548 dated, sourced entries drawn as a burst, one dot per entry: 102 warnings, 142 incidents, 140 governance, 164 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 530 entries from Mar 22, 2023 to Nov 10, 2026 (99 warnings, 138 incidents, 136 governance, 157 research), drawn from 277 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 548 entries from Mar 22, 2023 to Nov 11, 2026 (102 warnings, 142 incidents, 140 governance, 164 research), drawn from 284 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 10, 2026, filed under Governance:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 11, 2026, filed under Research:
 
-> **UK Department for Education proposes safety certification for EdTech and AI products in schools, including student-facing chatbots**
+> **Microsoft's FORGE Lab says AI scans of the Linux kernel led to 59 bug reports, 33 CVEs and eight root exploits**
 >
-> **What happened.** The UK Department for Education opened a consultation on November 10, 2026 on a scheme to certify the safety of education technology and AI products used in schools and other settings in England.
+> **What happened.** Microsoft's FORGE Lab said on November 11, 2026 that its AI system, codename MDASH, scanned a subset of Linux kernel subsystems from late May to mid-June 2026.
 >
 > **Key points.**
 >
-> - Student-facing generative AI tools, including AI tutors and chatbots for children, are one of four product categories in scope, alongside filtering, high-risk data processing and personalized learning tools.
-> - The department says generative AI outputs are "dynamic, unpredictable and are generated in real time," so existing filtering and monitoring may not protect children from harmful content.
-> - Certification would apply to the product children use, not the underlying model, and the product's supplier would be responsible even when it uses a third-party model.
-> - The scheme would be "technically non-mandatory"; the department asks whether future legislation should let it require certified products in some circumstances.
+> - Scans produced 26,502 raw findings in about two weeks; screening cut them to 11,769, agents produced proof-of-concept evidence for 621, and experts filed 59 reports.
+> - Of 33 CVEs assigned, 24 are rated High or above; Microsoft confirmed local root exploits for eight in lab settings, some needing non-default settings or disabled mitigations.
+> - The reported bugs averaged 8.1 years in the kernel, and one had been there for at least 21 years.
+> - Microsoft says finding and fixing bugs are "drastically out of balance": reporting took over four person-months, and 38 fixes have been merged so far.
 >
-> **Evidence.** Government consultation document setting out a proposal. It describes intended criteria and scope; no scheme exists yet.
+> **Evidence.** Company report on its own research, led by one full-time researcher and one intern. Scanning mainly used Sonnet 4.6, GPT-5.4 and GPT-5.5; reproduction mainly GPT-5.5, Opus 4.6 and GPT-5.5-cyber.
 >
-> **Uncertain.** A proposal under consultation that closes on February 4, 2027. Making certification mandatory would need a new legislative basis; the department is only asking for views on that.
+> **Uncertain.** Self-reported by Microsoft. It says it scanned "only a small fraction of the kernel" and that more tokens could uncover substantially more bugs.
 >
-> **Source.** [UK Department for Education · Consultation document](https://consult.education.gov.uk/edtech-regulation-policy-team/education-technology-safety-assurance-certificatio/supporting_documents/introducing-a-certification-scheme-for-assuring-edtech-and-ai-product-safetypdf-1)
+> **Source.** [Microsoft · Company report](https://www.microsoft.com/en-us/security/blog/2026/11/11/lessons-from-59-linux-kernel-bug-reports/)
 
 ## Run it locally
 
