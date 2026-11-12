@@ -7528,7 +7528,7 @@
     "topics": [
       "Bio"
     ],
-    "title": "Study in Risk Analysis finds experts raised their epidemic risk estimate to 1.5% a year once LLMs matched top virologists",
+    "title": "Study in Risk Analysis finds experts raised their epidemic risk estimate to 1.5% a year once LLMs matched top virologists on a troubleshooting test",
     "happened": "Researchers from the Forecasting Research Institute, SecureBio, the Centre for the Governance of AI and the Johns Hopkins Center for Health Security published a forecasting study in Risk Analysis on October 28, 2026.",
     "keyPoints": [
       "Surveying 46 biology and biosecurity experts and 22 generalist forecasters, it found the median expert put the annual risk of a human-caused epidemic causing 100,000 deaths at 0.3%.",
@@ -10128,7 +10128,7 @@
       "Superintelligence",
       "Bio"
     ],
-    "title": "Secretary of State Rubio names loss of human control and AI-aided bioweapons as real dangers and rejects global AI regulation",
+    "title": "Secretary of State Rubio names loss of human control and AI-aided bioweapons as dangers and rejects global AI regulation",
     "happened": "Speaking to reporters in Paris on November 9, 2026, Secretary of State Marco Rubio answered questions about talks on AI, which he said the US calls SI.",
     "keyPoints": [
       "Rubio said one danger people focus on \"is what happens if these models become independent of human control and end up taking independent actions that are harmful.\"",
@@ -10406,7 +10406,7 @@
     "keyPoints": [
       "Commerce, with the NSA Director, would define covered models by a parameter threshold and by capabilities that pose serious national-security risk or materially aid chemical, biological or radiological weapons.",
       "Before deployment, developers would give the NSA full model access plus training, safety-test and deployment details; the NSA would evaluate cyber and weapons capabilities and recommend safeguards.",
-      "Deployment would wait until the developer adopts those recommendations or the NSA misses its 30-day deadline (extendable by 30 days); penalties reach $500,000 per day, and a new court would hear developer appeals.",
+      "Deployment would wait until the developer adopts those recommendations or the NSA misses its deadlines (30 days to evaluate, extendable by 30, then 30 days to report); penalties are $500,000 per day, and a new court would hear developer appeals.",
       "States could not impose transparency, disclosure or reporting duties on covered developers about safety protocols, safety and security frameworks, capability evaluations or risk assessments."
     ],
     "evidence": "Bill text as introduced. It is a proposal that has not passed; Commerce would write the rules within six months of enactment.",
@@ -10420,10 +10420,10 @@
     "topics": [
       "Harm to people"
     ],
-    "title": "French expert commission tells Macron consumer chatbots should pass a pre-market evaluation of harms to users",
-    "happened": "On November 10, 2026, the Élysée published the report of France's expert commission on generative AI and vulnerabilities, delivered to President Emmanuel Macron.",
+    "title": "French expert commission says consumer chatbots should pass a pre-market evaluation of harms to users",
+    "happened": "On November 10, 2026, the Élysée published the report of France's expert commission on generative AI and vulnerabilities, set up by France's AI and digital council at the request of digital minister Anne Le Hénanff.",
     "keyPoints": [
-      "The nine-member commission held 55 hearings and makes 18 recommendations, centered on protecting users, starting with minors, from generative AI that exploits their vulnerabilities.",
+      "The nine-member commission held 55 hearings and makes 18 recommendations, led by protecting users, starting with minors, from generative AI that exploits their vulnerabilities.",
       "It says consumer generative AI should face an independent, multidisciplinary evaluation before reaching the market, monitoring after launch, and a new evaluation after each substantial change.",
       "It would ban chatbot design techniques that exploit users' vulnerabilities to create dependence or engagement, and strictly regulate sycophancy and excessive anthropomorphism.",
       "It also calls for prior market authorization for AI toys, AI education from primary school, and a national protocol for responding to AI-driven information crises."
@@ -10446,7 +10446,7 @@
       "In a team app Grok built for Claroc, the sign-in code let any Google account read, edit and delete records; Claroc tested this only on its own apps.",
       "SpaceXSI told a reporter apps stay private until their creator shares them and employee accounts default to \"Only you\"; it took down its staff's 24 apps but not other users' apps."
     ],
-    "evidence": "Company research post from a security firm that sells tools for securing AI-built apps. Claroc read only first pages saved from public links and withholds every hostname and organization name.",
+    "evidence": "Company research post from a security firm that sells tools for securing AI-built apps. Claroc read only first pages saved from public links and withholds every hostname and the names of the other affected organizations.",
     "uncertain": "The 650 to 800 figure is Claroc's estimate from AI-flagged pages checked against a hand-read sample. Claroc did not test whether other people's open apps could be changed.",
     "source": "Claroc · Research report",
     "url": "https://blog.claroc.io/ghostshares-grok-build-apps/"
@@ -10461,7 +10461,7 @@
     "happened": "Arctic Wolf Labs reported on November 10, 2026 that Alibaba Cloud systems hosting AntiFox, an open-source Chinese-language agentic pentesting platform, were linked to confirmed malicious actions in several recent intrusions.",
     "keyPoints": [
       "On a compromised IIS server, the attackers planted a web shell, read database connection strings from configuration files and copied those files into a web-accessible folder.",
-      "Using valid AWS identities, one source made hundreds of cross-service API requests in about half an hour; most were denied, but a request for a production secret succeeded.",
+      "Using valid AWS identities, one source made hundreds of cross-service API requests in about half an hour; most were denied, but secret-access requests in the same burst succeeded.",
       "Other activity used a valid AWS identity to list storage buckets and read, copy and delete stored objects.",
       "Arctic Wolf says agentic frameworks make pentesting techniques more accessible to threat actors while increasing the speed and consistency of their use in live attacks."
     ],
@@ -10504,7 +10504,7 @@
       "It links the network to Koios through accounts Haaretz tied to the firm, and to a suspected successor, IntellACT, through shared staff and job ads."
     ],
     "evidence": "An advocacy group's own investigation of account patterns, web archives and job listings; it says about two-thirds of over 4,000 chip and AI posts are deleted. It does not identify who paid.",
-    "uncertain": "The attribution is The Midas Project's and untested by platforms or authorities. Koios says it \"has no connection to this matter\"; IntellACT did not respond; Nvidia says it has no relationship with the firms.",
+    "uncertain": "The attribution is The Midas Project's own; the article calls for a formal investigation. Koios says it \"has no connection to this matter\"; IntellACT did not respond; Nvidia says it has no relationship with the firms.",
     "source": "Model Republic · Independent investigation",
     "url": "https://www.modelrepublic.org/articles/nvidia-koios-campaign-sockpuppet-accounts"
   },
@@ -10571,7 +10571,7 @@
     "topics": [
       "Superintelligence"
     ],
-    "title": "Treasury Secretary Bessent says the US-China superintelligence dialogue has begun and will cover testing models before release",
+    "title": "Treasury Secretary Bessent says the US has established a superintelligence dialogue with China and expects to share pre-release testing practices",
     "happened": "In remarks prepared for the National Committee on U.S.-China Relations gala and published by the Treasury on November 11, 2026, Scott Bessent described US-China talks on superintelligence (SI).",
     "keyPoints": [
       "Bessent said that at President Trump's direction the US has established \"a new dialogue with China on SI, designed to guard against shared risks.\"",
@@ -10597,7 +10597,7 @@
       "The exception it names is a campaign against Taiwanese government entities that used up to eight AI agents with limited human intervention.",
       "Insikt links the rarity of full automation to token costs and the need for human oversight, and expects autonomous and orchestrated campaigns to become more frequent."
     ],
-    "evidence": "A security vendor's research report counting incidents documented in its own intelligence graph, excluding proofs of concept and security research. The Taiwan campaign rests on Dream Research's report, which it links.",
+    "evidence": "A security vendor's research report counting incidents documented in its own intelligence graph, excluding proofs of concept and security research. The campaign rests on Dream Research's report, which it links; that report describes government entities in Asia and does not name Taiwan.",
     "uncertain": "The count covers only incidents searchable in Recorded Future's own intelligence graph.",
     "source": "Recorded Future Insikt Group · Research report",
     "url": "https://www.recordedfuture.com/research/ai-cyber-threat-trends-2026"
@@ -10611,7 +10611,7 @@
       "Lab conduct"
     ],
     "title": "Google DeepMind says Gemini 4 Hydrogen reaches its alert thresholds for biology and cyber risk but not the critical levels",
-    "happened": "Google DeepMind published a model card for Gemini 4 Hydrogen, adapted from Gemini 4 Carbon and distributed through the Gemini app, Gemini API, Google AI Studio and Google Search.",
+    "happened": "Google DeepMind published a model card for Gemini 4 Hydrogen, adapted from Gemini 4 Carbon and distributed through channels including the Gemini app, Gemini API, Google AI Studio and Google Search.",
     "keyPoints": [
       "Hydrogen showed no material increase in general capability over Gemini 4 Argon, so Google's Frontier Safety Framework did not require a full suite of critical capability evaluations.",
       "Targeted biology and cyber tests found Hydrogen \"does not reach the CBRN or cyber CCLs, though it reaches the CCL alert thresholds for both domains.\"",
@@ -10638,7 +10638,7 @@
       "It says model cards \"only detail safeguard performance during, or just before, deployment,\" so the performance cited at release \"may not match the current reality.\""
     ],
     "evidence": "Independent evaluator's post on repeated runs of its own refusal benchmark; scores capture API-level blocks as well as model responses. It measures refusals, not real-world misuse.",
-    "uncertain": "The post gives no developer explanation for Grok 4.7's change; for Opus 5.5 it cites Anthropic's statement that it has \"continued to reduce false positives for our safety classifiers.\"",
+    "uncertain": "The post gives no developer explanation for Grok 4.7's change; for Opus 5.5 it says the results are in line with Anthropic's statement, in the Claude Fable and Mythos 5.2 model card, that it has \"continued to reduce false positives for our safety classifiers.\"",
     "source": "SecureBio · Research report",
     "url": "https://securebio.org/blog/longitudinal-biotier/"
   },
