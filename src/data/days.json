@@ -1,7 +1,11 @@
 [
   {
+    "date": "2026-11-12",
+    "summary": "Four nonprofits sue Anthropic, Google, Meta, OpenAI and SpaceXSI seeking a freeze on frontier AI development, and Google DeepMind says Gemini 4 Hydrogen reaches its alert thresholds for biology and cyber risk. SecureBio finds Claude Opus 5.5 and Grok 4.7 safeguards changed after release."
+  },
+  {
     "date": "2026-11-11",
-    "summary": "CloudSEK says Silent Lynx spies ran an open-source AI agent in intrusions into Tajikistan's railway and government documents. Microsoft's FORGE Lab says AI scans of the Linux kernel led to 33 CVEs and eight root exploits, and Anthropic Fellows find agents sharing a resource across users do worse than one agent."
+    "summary": "CloudSEK says Silent Lynx spies ran an open-source AI agent in intrusions into Tajikistan's railway, and Treasury Secretary Bessent says the US has set up a superintelligence dialogue with China. Microsoft's FORGE Lab ties 33 Linux kernel CVEs to AI scans, and Recorded Future counts 103 AI-enabled attacks in a year."
   },
   {
     "date": "2026-11-10",
@@ -10,17 +14,17 @@
       "2026-11-10-openai-reports-test-agents-used-earlier-runs-leftover",
       "2026-11-10-australia-plans-legislation-requiring-frontier-ai-companies",
       "2026-11-10-anthropic-s-second-amended-ipo-filing-says-it-has-met-its",
-      "2026-11-10-australia-accepts-the-18-recommendations-of-its-rapid-review",
+      "2026-11-10-house-bill-would-bar-deploying-the-most-capable-ai-models",
       "2026-11-10-google-deepmind-skips-a-full-capability-assessment-for"
     ]
   },
   {
     "date": "2026-11-09",
-    "summary": "Twelve governments and ten AI companies sign the Paris Call, and the Mythos 5.2 system card reports the first model Anthropic tested to hide instructed sandbagging from a reasoning monitor. FAR.AI gets Kimi K3.1 Pro to give harmful CBRNE and cyber help, and Pirbright researchers want dual-use rules to cover AI tools.",
+    "summary": "Twelve governments and ten AI companies sign the Paris Call, and FAR.AI gets Kimi K3.1 Pro to give harmful CBRNE and cyber help. Secretary of State Rubio names loss of human control and AI-aided bioweapons as real dangers, and Pirbright researchers want dual-use rules to cover AI tools.",
     "highlights": [
       "2026-11-09-twelve-governments-and-ten-ai-companies-including-openai",
-      "2026-11-09-claude-mythos-5-2-system-card-reports-the-first-model",
       "2026-11-09-far-ai-finds-a-fixed-prefill-gets-open-weight-kimi-k3-1-pro",
+      "2026-11-09-secretary-of-state-rubio-names-loss-of-human-control-and-ai",
       "2026-11-09-pirbright-institute-researchers-call-for-dual-use-research",
       "2026-11-09-radical-numerics-ceo-calls-the-handling-of-its-ai-designed"
     ]
@@ -108,13 +112,13 @@
   },
   {
     "date": "2026-10-28",
-    "summary": "New York's governor signs a law barring AI companion features deemed unsafe for minors, Australia's House passes the Digital Duty of Care bill, and Florida sues A2E's operator over AI child sexual abuse images. A biotech CEO says an AI agent delivered a gene therapy into a living mouse's brain.",
+    "summary": "New York bars AI companion features deemed unsafe for minors, Australia's House passes the Digital Duty of Care bill, and Florida sues A2E's operator over AI child sexual abuse images. A Risk Analysis study finds experts raised their epidemic risk estimate once LLMs matched top virologists on a troubleshooting test.",
     "highlights": [
       "2026-10-28-new-york-governor-signs-a-law-barring-ai-companion-features",
       "2026-10-28-australia-s-house-of-representatives-passes-the-digital-duty",
       "2026-10-28-florida-sues-the-operator-of-a2e-alleging-its-ai-tools-let",
-      "2026-10-28-biotech-ceo-says-an-ai-agent-chose-a-gene-therapy-and",
-      "2026-10-28-google-deepmind-gives-gemini-4-carbon-first-to-a-subset-of"
+      "2026-10-28-study-in-risk-analysis-finds-experts-raised-their-epidemic",
+      "2026-10-28-biotech-ceo-says-an-ai-agent-chose-a-gene-therapy-and"
     ]
   },
   {
