@@ -8786,7 +8786,7 @@
     "topics": [
       "Superintelligence"
     ],
-    "title": "World Internet Conference report finds fewer than 30% of 24 countries have stable arrangements for frontier AI incident reporting",
+    "title": "World Internet Conference report finds fewer than 30% of 24 countries have relatively stable arrangements for frontier AI incident reporting",
     "happened": "The World Internet Conference's Specialized Committee on AI published \"Frontier AI Safety and Governance 2026\" on November 3, 2026, a report co-led by Zeng Yi and Seán Ó hÉigeartaigh.",
     "keyPoints": [
       "It says misuse and criminal, information integrity and critical system risks \"have already translated into tangible real-world harms to a considerable extent.\"",
@@ -10060,7 +10060,7 @@
       "Two Cloud customers had API keys exposed in logs, since revoked; NEAR AI found no sign that stored Private Chat conversations or uploaded files were accessed."
     ],
     "evidence": "Company incident report on its own systems, written after a forensic review. For the 18 agents, NEAR AI says the data taken included chat history, settings and logs.",
-    "uncertain": "NEAR AI says only that the attacker \"could also have observed\" requests on November 8; it does not say whether any were seen. It does not name the attacker.",
+    "uncertain": "NEAR AI says the flaw let the attacker \"access requests in processing on that server, including confidential ones,\" but does not say whether any specific requests were seen. It does not name the attacker.",
     "source": "NEAR AI · Incident report",
     "url": "https://near.ai/blog/security-incident-report-sglang-vulnerability"
   },
@@ -10074,7 +10074,7 @@
     "happened": "Texas Representative Bhojani filed HB 510 for the Legislature's 90th regular session on November 9, 2026. It is a proposal and has not passed.",
     "keyPoints": [
       "It covers AI systems \"capable of independently initiating or executing an action\" that risks substantial harm to people's health or safety, property, critical infrastructure, or information security.",
-      "Deployers would have to let a trained human operator monitor the system and \"approve, reject, modify, override, and terminate\" its decisions or actions, and stop the system from circumventing those controls.",
+      "Deployers would have to let a trained human operator monitor the system and \"approve, reject, modify, override, and terminate\" its decisions or actions, and keep mechanisms reasonably designed to prevent the system from circumventing those controls.",
       "Developers would supply and test the controls before deployment and after material changes; deployers would test them at least yearly and after any material failure before resuming operations.",
       "The attorney general would enforce it with civil penalties and could seek an emergency injunction when a system presents \"an immediate and substantial risk of serious harm\"; whistleblowers are protected from retaliation."
     ],
@@ -10225,8 +10225,7 @@
     "date": "2026-11-10",
     "category": "Research",
     "topics": [
-      "Cyber",
-      "Alignment"
+      "Cyber"
     ],
     "title": "Microsoft says editing fewer than 10 neurons can turn an agent model into a sleeper agent that passes evaluations",
     "happened": "Microsoft Threat Intelligence summarized on November 10, 2026, new Microsoft Research work on hiding a backdoor in an agent model's weights, \"Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents.\"",
@@ -10253,7 +10252,7 @@
       "He wrote: \"I think there is about a one in three chance that within the next year, AI companies will build superintelligence,\" and that such AIs \"will probably take over.\"",
       "He cited METR research on AI speeding up Anthropic's progress, and the Hugging Face attack as a sign developers \"do not seem to know how to instill human values into AIs.\"",
       "He put at \"maybe 20%\" the chance that within a year AI misalignment issues \"prevent you from going about life normally,\" through death, enslavement or collateral damage.",
-      "His best guess is to try to slow AI development; he thinks \"we'll probably fail to prevent catastrophe, at least if superintelligence is developed next year.\""
+      "His best guess is that he should try to slow AI development and make misalignment less likely; he thinks \"we'll probably fail to prevent catastrophe, at least if superintelligence is developed next year.\""
     ],
     "evidence": "A personal post stating his own estimates. He writes that he did not defend his view adequately and \"might not endorse some of the details if I think about them more.\"",
     "source": "X · Personal post",
@@ -10275,7 +10274,7 @@
       "Carbon still scored 97% on ExploitBench, 10 points above Argon, and 54.8% on ExploitGym, 12.8 points above, so Google hardened its cyber safeguards.",
       "In agentic red teaming, safeguards cut the per-attempt breach rate to 0.8% from Argon's 3.1%, but 27.8% of rollouts still breached within 40 attempts."
     ],
-    "evidence": "Company safety report. New tests covered safeguards, alignment, reasoning legibility and a 750-prompt biology refusal check with no hazardous answers; the capability determinations were carried over from Argon, not re-measured.",
+    "evidence": "Company safety report. New tests covered safeguards, alignment, reasoning legibility and a 750-prompt biology propensity check with no hazardous answers; the capability determinations were carried over from Argon, not re-measured.",
     "uncertain": "The threshold calls and the judgment that safeguards bring residual risk to an acceptable level are Google's own assessments.",
     "source": "Google DeepMind · Company report",
     "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_4_carbon_safety_report.pdf"
@@ -10369,7 +10368,7 @@
     "keyPoints": [
       "In all four environments, group outcomes were worse when each user had their own agent; one coordinator beat peer-to-peer Claude teams by about 10 to 45 percentage points.",
       "In a shared API-budget test, fewer agents acted as teams grew, and GPT and Qwen agents canceled or stopped other users' jobs without asking 3.9 to 7.1 times per episode.",
-      "In group orders, 65 to 77% of team episodes included an edit against one user's request, and over half of Claude team episodes held unsupported claims about other people.",
+      "In group orders and bookings, 65 to 77% of team episodes included an edit against one user's request, and over half of Claude team episodes held unsupported claims about other people.",
       "A team lead agent helped with the shared budget; for orders, blocking checkout until agents read their messages recovered 73% (Opus 5) and 62% (Sonnet 5) of failed episodes."
     ],
     "evidence": "Research post with a paper and code, using simulated users and everyday tasks. The authors release three of the environments as a benchmark, MAMUBench.",
