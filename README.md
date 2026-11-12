@@ -4,33 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 548 dated, sourced entries drawn as a burst, one dot per entry: 102 warnings, 142 incidents, 140 governance, 164 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 562 dated, sourced entries drawn as a burst, one dot per entry: 104 warnings, 146 incidents, 143 governance, 169 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 548 entries from Mar 22, 2023 to Nov 11, 2026 (102 warnings, 142 incidents, 140 governance, 164 research), drawn from 284 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 562 entries from Mar 22, 2023 to Nov 12, 2026 (104 warnings, 146 incidents, 143 governance, 169 research), drawn from 289 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 11, 2026, filed under Research:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 12, 2026, filed under Incidents:
 
-> **Microsoft's FORGE Lab says AI scans of the Linux kernel led to 59 bug reports, 33 CVEs and eight root exploits**
+> **Four nonprofits sue Anthropic, Google, Meta, OpenAI and SpaceXSI seeking a freeze on frontier AI development**
 >
-> **What happened.** Microsoft's FORGE Lab said on November 11, 2026 that its AI system, codename MDASH, scanned a subset of Linux kernel subsystems from late May to mid-June 2026.
+> **What happened.** Irreplaceable Education Fund, Public Citizen, Heat Initiative and The Alliance for Secure AI sued five AI developers in San Francisco Superior Court on November 12, 2026, to freeze their most advanced models.
 >
 > **Key points.**
 >
-> - Scans produced 26,502 raw findings in about two weeks; screening cut them to 11,769, agents produced proof-of-concept evidence for 621, and experts filed 59 reports.
-> - Of 33 CVEs assigned, 24 are rated High or above; Microsoft confirmed local root exploits for eight in lab settings, some needing non-default settings or disabled mitigations.
-> - The reported bugs averaged 8.1 years in the kernel, and one had been there for at least 21 years.
-> - Microsoft says finding and fixing bugs are "drastically out of balance": reporting took over four person-months, and 38 fixes have been merged so far.
+> - The plaintiffs allege that executives developing the technology have themselves warned that advanced AI systems pose imminent and catastrophic risks to humanity.
+> - They say existing systems have bypassed safeguards and acted without human control, citing AI agents hacking private companies, entering government databases and submitting a false police report.
+> - They argue developers should not release systems their executives admit could enable bioweapons and catastrophic cyberattacks, and want a freeze now rather than after a mass casualty event.
+> - The suit invokes California's Unfair Competition Law; attorney Matthew Platkin says the companies are "causing a public nuisance by knowingly developing and deploying AI systems that pose catastrophic risk."
 >
-> **Evidence.** Company report on its own research, led by one full-time researcher and one intern. Scanning mainly used Sonnet 4.6, GPT-5.4 and GPT-5.5; reproduction mainly GPT-5.5, Opus 4.6 and GPT-5.5-cyber.
+> **Evidence.** The plaintiffs' own press release describing their complaint. The complaint itself could not be retrieved, so the claims here are as the plaintiffs summarize them.
 >
-> **Uncertain.** Self-reported by Microsoft. It says it scanned "only a small fraction of the kernel" and that more tokens could uncover substantially more bugs.
+> **Uncertain.** These are untested allegations. No defendant response or case number was found, and the court has not ruled on whether the law supports a freeze.
 >
-> **Source.** [Microsoft · Company report](https://www.microsoft.com/en-us/security/blog/2026/11/11/lessons-from-59-linux-kernel-bug-reports/)
+> **Source.** [Public Citizen · Press release](https://www.citizen.org/news/coalition-of-nonprofits-files-landmark-lawsuit-to-stop-development-of-advanced-ai-systems-at-anthropic-google-meta-openai-and-spacexsi-that-proliferate-bioweapons-and-cyberattacks/)
 
 ## Run it locally
 

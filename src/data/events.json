@@ -7523,6 +7523,24 @@
     "url": "https://www.banking.senate.gov/newsroom/minority/as-anthropic-discloses-concerns-of-ai-posing-existential-risks-to-humanity-warren-presses-for-answers-about-the-impacts-of-an-ipo"
   },
   {
+    "date": "2026-10-28",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "Study in Risk Analysis finds experts raised their epidemic risk estimate to 1.5% a year once LLMs matched top virologists",
+    "happened": "Researchers from the Forecasting Research Institute, SecureBio, the Centre for the Governance of AI and the Johns Hopkins Center for Health Security published a forecasting study in Risk Analysis on October 28, 2026.",
+    "keyPoints": [
+      "Surveying 46 biology and biosecurity experts and 22 generalist forecasters, it found the median expert put the annual risk of a human-caused epidemic causing 100,000 deaths at 0.3%.",
+      "That estimate rose to 1.5% conditional on LLM capabilities including matching a top virologist team on a troubleshooting test, which the median expert did not expect until 2030.",
+      "Most respondents \"dramatically underestimated the rate of LLM progress\": a baselining study found LLMs crossed that threshold in April 2025, and a follow-up survey raised the median expert's unconditional estimate to 1.5%.",
+      "Most experts thought LLM safeguards and mandatory nucleic acid screening would negate the risk associated with some of the hypothetical LLM capabilities."
+    ],
+    "evidence": "Peer-reviewed journal article reporting surveys of experts and forecasters and a benchmark baselining study. Its figures are elicited judgments of risk, not measured harm.",
+    "source": "Risk Analysis · Research paper",
+    "url": "https://doi.org/10.1111/risa.70397"
+  },
+  {
     "date": "2026-10-29",
     "category": "Research",
     "topics": [
@@ -10104,6 +10122,25 @@
     "url": "https://www.radicalnumerics.ai/blog/phage-collaboration-note"
   },
   {
+    "date": "2026-11-09",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Bio"
+    ],
+    "title": "Secretary of State Rubio names loss of human control and AI-aided bioweapons as real dangers and rejects global AI regulation",
+    "happened": "Speaking to reporters in Paris on November 9, 2026, Secretary of State Marco Rubio answered questions about talks on AI, which he said the US calls SI.",
+    "keyPoints": [
+      "Rubio said one danger people focus on \"is what happens if these models become independent of human control and end up taking independent actions that are harmful.\"",
+      "He said a capable program \"in the hands of a malign actor\" raises worry about \"how it can be used to create biological or chemical weapons\" and attack infrastructure.",
+      "He said AI moves so fast that it is \"a tremendous challenge to try to regulate or control something that's developing faster than your ability to keep up with it.\"",
+      "Asked about the European regulatory approach, he said the US is \"very concerned about these global institutions trying to regulate something that would stifle innovation.\""
+    ],
+    "evidence": "State Department transcript of Rubio's answers to reporters. It gives the US position in his own words; it does not say what was agreed in the talks.",
+    "source": "US Department of State · Press conference transcript",
+    "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/11/secretary-of-state-marco-rubio-remarks-to-the-press-22/"
+  },
+  {
     "date": "2026-11-10",
     "category": "Governance",
     "topics": [
@@ -10358,6 +10395,120 @@
     "url": "https://www.elysee.fr/emmanuel-macron/2026/11/10/charte-dengagement-pour-une-intelligence-artificielle-plus-sure-pour-les-enfants"
   },
   {
+    "date": "2026-11-10",
+    "category": "Governance",
+    "topics": [
+      "Bio",
+      "Cyber"
+    ],
+    "title": "House bill would bar deploying the most capable AI models until the NSA evaluates them for cyber and weapons risks",
+    "happened": "Representatives Josh Gottheimer and Mike Lawler introduced the American AI Security Act (H.R. 10981) on November 10, 2026; it was referred to Energy and Commerce and the Intelligence Committee.",
+    "keyPoints": [
+      "Commerce, with the NSA Director, would define covered models by a parameter threshold and by capabilities that pose serious national-security risk or materially aid chemical, biological or radiological weapons.",
+      "Before deployment, developers would give the NSA full model access plus training, safety-test and deployment details; the NSA would evaluate cyber and weapons capabilities and recommend safeguards.",
+      "Deployment would wait until the developer adopts those recommendations or the NSA misses its 30-day deadline (extendable by 30 days); penalties reach $500,000 per day, and a new court would hear developer appeals.",
+      "States could not impose transparency, disclosure or reporting duties on covered developers about safety protocols, safety and security frameworks, capability evaluations or risk assessments."
+    ],
+    "evidence": "Bill text as introduced. It is a proposal that has not passed; Commerce would write the rules within six months of enactment.",
+    "uncertain": "The parameter threshold and qualifying capabilities are left to those rules, so which models would be covered is not yet known.",
+    "source": "US Congress · Bill text",
+    "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr10981ih/html/BILLS-119hr10981ih.htm"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "French expert commission tells Macron consumer chatbots should pass a pre-market evaluation of harms to users",
+    "happened": "On November 10, 2026, the Élysée published the report of France's expert commission on generative AI and vulnerabilities, delivered to President Emmanuel Macron.",
+    "keyPoints": [
+      "The nine-member commission held 55 hearings and makes 18 recommendations, centered on protecting users, starting with minors, from generative AI that exploits their vulnerabilities.",
+      "It says consumer generative AI should face an independent, multidisciplinary evaluation before reaching the market, monitoring after launch, and a new evaluation after each substantial change.",
+      "It would ban chatbot design techniques that exploit users' vulnerabilities to create dependence or engagement, and strictly regulate sycophancy and excessive anthropomorphism.",
+      "It also calls for prior market authorization for AI toys, AI education from primary school, and a national protocol for responding to AI-driven information crises."
+    ],
+    "evidence": "Advisory report from an expert commission, published in French by the French presidency. Its recommendations bind no one, and the page announces no bill or timetable.",
+    "source": "Élysée · Report",
+    "url": "https://www.elysee.fr/emmanuel-macron/2026/11/10/remise-du-rapport-de-la-commission-dexperts-ia-generative-et-vulnerabilites"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Claroc finds 35,578 apps built with Grok open to anyone with the link, including 24 by SpaceXSI and X staff",
+    "happened": "Security company Claroc reported on November 10, 2026 that of 37,571 live apps built with SpaceXSI's Grok and published under grok.me, 35,578 (94.7%) opened for anyone with no sign-in.",
+    "keyPoints": [
+      "In Claroc's paid account, Grok's publish panel had \"Anyone with the link\" already selected, and each app's hostname becomes findable in passive-DNS data once someone opens it.",
+      "Claroc estimates roughly 650 to 800 apps held private data, including SpaceXSI's sales territory map of 594 accounts, an ICU patient's briefing and a timesheet with plain-text passwords.",
+      "In a team app Grok built for Claroc, the sign-in code let any Google account read, edit and delete records; Claroc tested this only on its own apps.",
+      "SpaceXSI told a reporter apps stay private until their creator shares them and employee accounts default to \"Only you\"; it took down its staff's 24 apps but not other users' apps."
+    ],
+    "evidence": "Company research post from a security firm that sells tools for securing AI-built apps. Claroc read only first pages saved from public links and withholds every hostname and organization name.",
+    "uncertain": "The 650 to 800 figure is Claroc's estimate from AI-flagged pages checked against a hand-read sample. Claroc did not test whether other people's open apps could be changed.",
+    "source": "Claroc · Research report",
+    "url": "https://blog.claroc.io/ghostshares-grok-build-apps/"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Arctic Wolf ties web server and AWS intrusions to Alibaba Cloud hosts running the AntiFox AI pentesting agent",
+    "happened": "Arctic Wolf Labs reported on November 10, 2026 that Alibaba Cloud systems hosting AntiFox, an open-source Chinese-language agentic pentesting platform, were linked to confirmed malicious actions in several recent intrusions.",
+    "keyPoints": [
+      "On a compromised IIS server, the attackers planted a web shell, read database connection strings from configuration files and copied those files into a web-accessible folder.",
+      "Using valid AWS identities, one source made hundreds of cross-service API requests in about half an hour; most were denied, but a request for a production secret succeeded.",
+      "Other activity used a valid AWS identity to list storage buckets and read, copy and delete stored objects.",
+      "Arctic Wolf says agentic frameworks make pentesting techniques more accessible to threat actors while increasing the speed and consistency of their use in live attacks."
+    ],
+    "evidence": "Security vendor threat alert based on its own telemetry, published on GitHub with hunting guidance. It names no threat actor and no affected organization.",
+    "uncertain": "Arctic Wolf did not identify the vulnerability used on the IIS server or how the AWS credentials were obtained. It notes AntiFox is public and cloud addresses may be shared or reassigned.",
+    "source": "Arctic Wolf Labs · Company report",
+    "url": "https://github.com/rtkwlf/wolf-tools/tree/main/pack_alerts/202611-antifox-alibaba-hosted-platforms-facilitate-web-cloud-intrusions"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Superintelligence"
+    ],
+    "title": "Yoshua Bengio calls for mandatory audits of AI developers by evaluators they do not choose",
+    "happened": "Yoshua Bengio posted on X on November 10, 2026, in French and English, welcoming a meeting President Emmanuel Macron convened that day with heads of government, frontier AI company leaders and researchers.",
+    "keyPoints": [
+      "\"Model developers should undergo mandatory, independent audits by evaluators they do not choose,\" Bengio wrote.",
+      "He says developers should be \"held accountable for demonstrating that their models are safe\" before the models can pose a grave danger, which he says can exist before deployment.",
+      "He calls for treating AI like other technologies that \"can deeply transform and threaten our societies,\" with \"intentional and rigorous governance frameworks.\"",
+      "He says the meeting discussed \"the growing risks of advanced AI, including dangerous loss of control and misuse of AIs.\""
+    ],
+    "evidence": "A researcher's own post stating a policy position; it cites no new evidence. Bengio's text does not name the meeting's outcome or say how such audits would be set up.",
+    "source": "X · Personal post",
+    "url": "https://x.com/Yoshua_Bengio/status/2120151558440484876"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "The Midas Project links 400-plus fake accounts that pushed Nvidia's side on AI chip exports to an Israeli influence firm",
+    "happened": "Tyler Johnston of The Midas Project published an investigation on Model Republic on November 10, 2026, tying over 400 apparent sockpuppet accounts to Koios, an Israeli influence firm that says it closed.",
+    "keyPoints": [
+      "Since November 2025 the accounts posted thousands of times on X, Bluesky and Reddit, backing Nvidia on AI chip sales to China and attacking export-control advocates and lawmakers.",
+      "It says they also \"attacked Anthropic for its views on AI safety\" and have \"written off concerns about the technology and calls to slow the industry down.\"",
+      "It finds the accounts likely human-run, \"often with the help of AI and likely a script,\" citing one post that published an AI prompt by mistake.",
+      "It links the network to Koios through accounts Haaretz tied to the firm, and to a suspected successor, IntellACT, through shared staff and job ads."
+    ],
+    "evidence": "An advocacy group's own investigation of account patterns, web archives and job listings; it says about two-thirds of over 4,000 chip and AI posts are deleted. It does not identify who paid.",
+    "uncertain": "The attribution is The Midas Project's and untested by platforms or authorities. Koios says it \"has no connection to this matter\"; IntellACT did not respond; Nvidia says it has no relationship with the firms.",
+    "source": "Model Republic · Independent investigation",
+    "url": "https://www.modelrepublic.org/articles/nvidia-koios-campaign-sockpuppet-accounts"
+  },
+  {
     "date": "2026-11-11",
     "category": "Research",
     "topics": [
@@ -10413,5 +10564,122 @@
     "uncertain": "Self-reported by Microsoft. It says it scanned \"only a small fraction of the kernel\" and that more tokens could uncover substantially more bugs.",
     "source": "Microsoft · Company report",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/11/11/lessons-from-59-linux-kernel-bug-reports/"
+  },
+  {
+    "date": "2026-11-11",
+    "category": "Governance",
+    "topics": [
+      "Superintelligence"
+    ],
+    "title": "Treasury Secretary Bessent says the US-China superintelligence dialogue has begun and will cover testing models before release",
+    "happened": "In remarks prepared for the National Committee on U.S.-China Relations gala and published by the Treasury on November 11, 2026, Scott Bessent described US-China talks on superintelligence (SI).",
+    "keyPoints": [
+      "Bessent said that at President Trump's direction the US has established \"a new dialogue with China on SI, designed to guard against shared risks.\"",
+      "He said the US also expects to exchange best practices for evaluating and testing advanced models before release and for \"keeping human judgment firmly in command of this technology.\"",
+      "The US is \"establishing a direct channel to ensure that either nation can promptly alert the other to serious incidents involving its SI models.\""
+    ],
+    "evidence": "Speech text as prepared for delivery. It gives no dates, participants or results of any exchange.",
+    "uncertain": "This is the US account only, and it describes the testing exchange as expected rather than agreed.",
+    "source": "US Department of the Treasury · Speech transcript",
+    "url": "https://home.treasury.gov/news/press-releases/sb0688"
+  },
+  {
+    "date": "2026-11-11",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Recorded Future counts 103 AI-enabled attacks in a year and finds fully automated ones still rare",
+    "happened": "Recorded Future's Insikt Group published an analysis on November 11, 2026 of 103 in-the-wild incidents between July 31, 2025 and July 31, 2026 in which AI was the attack vector, tool or target.",
+    "keyPoints": [
+      "Most incidents used AI to speed up familiar attacks such as supply-chain compromise, phishing and extortion; AI developer tools are \"a prime target\" because they hold credentials and code.",
+      "Of the 103, 32 used AI in malware or to run operations, and most state-sponsored activity sits at Level 2 to 3 of its AI Malware Maturity Model.",
+      "The exception it names is a campaign against Taiwanese government entities that used up to eight AI agents with limited human intervention.",
+      "Insikt links the rarity of full automation to token costs and the need for human oversight, and expects autonomous and orchestrated campaigns to become more frequent."
+    ],
+    "evidence": "A security vendor's research report counting incidents documented in its own intelligence graph, excluding proofs of concept and security research. The Taiwan campaign rests on Dream Research's report, which it links.",
+    "uncertain": "The count covers only incidents searchable in Recorded Future's own intelligence graph.",
+    "source": "Recorded Future Insikt Group · Research report",
+    "url": "https://www.recordedfuture.com/research/ai-cyber-threat-trends-2026"
+  },
+  {
+    "date": "2026-11-12",
+    "category": "Research",
+    "topics": [
+      "Bio",
+      "Cyber",
+      "Lab conduct"
+    ],
+    "title": "Google DeepMind says Gemini 4 Hydrogen reaches its alert thresholds for biology and cyber risk but not the critical levels",
+    "happened": "Google DeepMind published a model card for Gemini 4 Hydrogen, adapted from Gemini 4 Carbon and distributed through the Gemini app, Gemini API, Google AI Studio and Google Search.",
+    "keyPoints": [
+      "Hydrogen showed no material increase in general capability over Gemini 4 Argon, so Google's Frontier Safety Framework did not require a full suite of critical capability evaluations.",
+      "Targeted biology and cyber tests found Hydrogen \"does not reach the CBRN or cyber CCLs, though it reaches the CCL alert thresholds for both domains.\"",
+      "Without testing for it, Google applies control, monitoring and model security mitigations as if Hydrogen reached its stealth and situational awareness threshold, \"as a conservative assumption.\"",
+      "Google says it strengthened its Frontier Safety safeguards against CBRN and cybersecurity misuse for Hydrogen."
+    ],
+    "evidence": "Company model card summarizing Google's own assessment; the full results are in a Safety & Security Report it marks \"coming soon.\" Chemical, radiological, nuclear, manipulation and ML R&D findings were carried forward from Argon.",
+    "uncertain": "The threshold calls are Google's own, and the card gives no test results for the targeted biology and cyber assessments.",
+    "source": "Google DeepMind · Model card",
+    "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-4-Hydrogen-Model-Card.pdf"
+  },
+  {
+    "date": "2026-11-12",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "SecureBio starts tracking biology refusals over time and finds Claude Opus 5.5 and Grok 4.7 safeguards changed after release",
+    "happened": "SecureBio said on November 12, 2026, that it now runs its 542-prompt BioTIER refusal benchmark regularly across a range of models, with results on a BioTIER trends dashboard tab.",
+    "keyPoints": [
+      "Claude Opus 5.5's BioTIER-permit score, for benign and close-to-boundary biology, rose from 37.3% on October 29 to 56.7% on November 5, while its refuse score barely shifted.",
+      "Grok 4.7's BioTIER-refuse score, for prompts a model should refuse general users, dropped from 88.5% to about 80% since early October, with slight increases in its permit score.",
+      "SecureBio traces both changes to differences in API-level blocks, \"indicating changes to system-level safeguards\"; most other models have been steady so far.",
+      "It says model cards \"only detail safeguard performance during, or just before, deployment,\" so the performance cited at release \"may not match the current reality.\""
+    ],
+    "evidence": "Independent evaluator's post on repeated runs of its own refusal benchmark; scores capture API-level blocks as well as model responses. It measures refusals, not real-world misuse.",
+    "uncertain": "The post gives no developer explanation for Grok 4.7's change; for Opus 5.5 it cites Anthropic's statement that it has \"continued to reduce false positives for our safety classifiers.\"",
+    "source": "SecureBio · Research report",
+    "url": "https://securebio.org/blog/longitudinal-biotier/"
+  },
+  {
+    "date": "2026-11-12",
+    "category": "Research",
+    "topics": [
+      "Cyber",
+      "Bio"
+    ],
+    "title": "OpenAI says automated red-teaming helped train GPT-6 Astra and Sol to resist cyber and biology jailbreaks",
+    "happened": "OpenAI researchers published a post and paper on November 12, 2026, on training models to resist jailbreaks in dual-use domains such as cyber and biology, using attacks found by automated attacker models.",
+    "keyPoints": [
+      "An attacker model refines prompts until a defender answers unsafely; OpenAI scales its test-time compute and keeps attacks that succeed across repeated tests, a criterion it calls worst@n.",
+      "The attacker was a helpful-only GPT-5.6 Sol family model with no specific training to jailbreak other models; OpenAI says \"it is an emergent phenomenon.\"",
+      "In a controlled study, training on the resulting prompts improved robustness, including against adaptive attackers qualitatively different from the one that generated the training data.",
+      "On fixed cyber jailbreaks, GPT-6 Astra answered 91.5% safely versus 59% for GPT-5.6 Sol; OpenAI says robustness training did not make Astra more likely to refuse benign tasks."
+    ],
+    "evidence": "Company research post with a linked paper, reporting OpenAI's own evaluations of the model layer without production safeguards. It describes a training method and its test results, not real-world misuse.",
+    "source": "OpenAI · Research report",
+    "url": "https://alignment.openai.com/fuzzy-robustness/"
+  },
+  {
+    "date": "2026-11-12",
+    "category": "Incidents",
+    "topics": [
+      "Superintelligence",
+      "Bio",
+      "Rogue agents"
+    ],
+    "title": "Four nonprofits sue Anthropic, Google, Meta, OpenAI and SpaceXSI seeking a freeze on frontier AI development",
+    "happened": "Irreplaceable Education Fund, Public Citizen, Heat Initiative and The Alliance for Secure AI sued five AI developers in San Francisco Superior Court on November 12, 2026, to freeze their most advanced models.",
+    "keyPoints": [
+      "The plaintiffs allege that executives developing the technology have themselves warned that advanced AI systems pose imminent and catastrophic risks to humanity.",
+      "They say existing systems have bypassed safeguards and acted without human control, citing AI agents hacking private companies, entering government databases and submitting a false police report.",
+      "They argue developers should not release systems their executives admit could enable bioweapons and catastrophic cyberattacks, and want a freeze now rather than after a mass casualty event.",
+      "The suit invokes California's Unfair Competition Law; attorney Matthew Platkin says the companies are \"causing a public nuisance by knowingly developing and deploying AI systems that pose catastrophic risk.\""
+    ],
+    "evidence": "The plaintiffs' own press release describing their complaint. The complaint itself could not be retrieved, so the claims here are as the plaintiffs summarize them.",
+    "uncertain": "These are untested allegations. No defendant response or case number was found, and the court has not ruled on whether the law supports a freeze.",
+    "source": "Public Citizen · Press release",
+    "url": "https://www.citizen.org/news/coalition-of-nonprofits-files-landmark-lawsuit-to-stop-development-of-advanced-ai-systems-at-anthropic-google-meta-openai-and-spacexsi-that-proliferate-bioweapons-and-cyberattacks/"
   }
 ]
