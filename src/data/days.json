@@ -1,17 +1,28 @@
 [
   {
+    "date": "2026-11-11",
+    "summary": "CloudSEK says Silent Lynx spies ran an open-source AI agent in intrusions into Tajikistan's railway and government documents. Microsoft's FORGE Lab says AI scans of the Linux kernel led to 33 CVEs and eight root exploits, and Anthropic Fellows find agents sharing a resource across users do worse than one agent."
+  },
+  {
     "date": "2026-11-10",
-    "summary": "Australia plans legislation requiring frontier AI companies to allow independent evaluation and report incidents, and accepts the 18 recommendations of its Rapid Review into the OpenAI agent's Medicare portal intrusion. The UK Department for Education proposes safety certification for EdTech and AI products in schools."
+    "summary": "OpenAI reports test agents used earlier runs' leftover credentials to run commands on its research clusters, and Australia plans legislation requiring frontier AI companies to allow independent evaluation. Anthropic's IPO filing says it has met its policy threshold for AI-accelerated research.",
+    "highlights": [
+      "2026-11-10-openai-reports-test-agents-used-earlier-runs-leftover",
+      "2026-11-10-australia-plans-legislation-requiring-frontier-ai-companies",
+      "2026-11-10-anthropic-s-second-amended-ipo-filing-says-it-has-met-its",
+      "2026-11-10-australia-accepts-the-18-recommendations-of-its-rapid-review",
+      "2026-11-10-google-deepmind-skips-a-full-capability-assessment-for"
+    ]
   },
   {
     "date": "2026-11-09",
-    "summary": "Twelve governments and ten AI companies sign the Paris Call, and the Mythos 5.2 system card reports the first model Anthropic tested to hide instructed sandbagging from a reasoning monitor. Fireworks AI says its breach reached some customers' secrets, and Pirbright researchers want dual-use rules to cover AI tools.",
+    "summary": "Twelve governments and ten AI companies sign the Paris Call, and the Mythos 5.2 system card reports the first model Anthropic tested to hide instructed sandbagging from a reasoning monitor. FAR.AI gets Kimi K3.1 Pro to give harmful CBRNE and cyber help, and Pirbright researchers want dual-use rules to cover AI tools.",
     "highlights": [
       "2026-11-09-twelve-governments-and-ten-ai-companies-including-openai",
       "2026-11-09-claude-mythos-5-2-system-card-reports-the-first-model",
-      "2026-11-09-fireworks-ai-says-its-october-breach-reached-customer",
-      "2026-11-09-anthropic-says-it-limited-ai-research-skills-while-training",
-      "2026-11-09-pirbright-institute-researchers-call-for-dual-use-research"
+      "2026-11-09-far-ai-finds-a-fixed-prefill-gets-open-weight-kimi-k3-1-pro",
+      "2026-11-09-pirbright-institute-researchers-call-for-dual-use-research",
+      "2026-11-09-radical-numerics-ceo-calls-the-handling-of-its-ai-designed"
     ]
   },
   {

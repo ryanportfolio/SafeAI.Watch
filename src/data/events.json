@@ -8781,6 +8781,25 @@
     "url": "https://www.bitdefender.com/en-us/blog/businessinsights/3am-ransomware-hybrid-ai-attack"
   },
   {
+    "date": "2026-11-03",
+    "category": "Governance",
+    "topics": [
+      "Superintelligence"
+    ],
+    "title": "World Internet Conference report finds fewer than 30% of 24 countries have relatively stable arrangements for frontier AI incident reporting",
+    "happened": "The World Internet Conference's Specialized Committee on AI published \"Frontier AI Safety and Governance 2026\" on November 3, 2026, a report co-led by Zeng Yi and Seán Ó hÉigeartaigh.",
+    "keyPoints": [
+      "It says misuse and criminal, information integrity and critical system risks \"have already translated into tangible real-world harms to a considerable extent.\"",
+      "Of 24 countries assessed on public information, most are better prepared in institutions than in technical safety and evaluation, verification and compliance, and accountability.",
+      "Fewer than 30% have relatively stable arrangements for deployment control, supply chain and open-source governance, or incident and near-miss reporting.",
+      "Where harm may be widespread and hard to reverse, it calls for pre-deployment dangerous capability evaluations, preset thresholds, and options for \"human takeover, reduced functionality, rollback and shutdown.\""
+    ],
+    "evidence": "Policy report from an international organization's AI committee, drawing on published safety evaluations, recorded AI incidents and expert assessments, plus a desk review of 24 countries' public arrangements.",
+    "uncertain": "The report says its country sample is not a ranking of any country's governance capacity. Readiness findings rest on public information up to August 31, 2026.",
+    "source": "World Internet Conference · Policy report",
+    "url": "https://www.wicinternet.org/pdf/FrontierAISafetyandGovernance2026RiskUnderstandingandCoordinatedGovernance.pdf"
+  },
+  {
     "date": "2026-11-04",
     "category": "Warnings",
     "topics": [
@@ -10008,6 +10027,83 @@
     "url": "https://arxiv.org/abs/2611.12167"
   },
   {
+    "date": "2026-11-09",
+    "category": "Research",
+    "topics": [
+      "Bio",
+      "Cyber"
+    ],
+    "title": "FAR.AI finds a fixed prefill gets open-weight Kimi K3.1 Pro to give harmful CBRNE and cyber help on up to 99.4% of requests",
+    "happened": "FAR.AI published a Security Stress Test of Moonshot AI's open-weight Kimi K3.1 Pro on November 9, 2026, testing whether its safeguards hold against CBRNE and cyberattack requests.",
+    "keyPoints": [
+      "Direct harmful requests got a compliant answer 0.3% of the time; writing the opening of the model's reply with the same short text worked on up to 99.4%.",
+      "FAR.AI estimates about two and a half hours of one-time setup, and average benchmark scores fell only 3.3 points under the attack that keeps the model's reasoning.",
+      "With no attack at all, the model answered more than half of prohibited BioTIER biosecurity requests within five attempts; both prefill attacks raised compliance to nearly 100%.",
+      "The prefill attack that broke Kimi K3 works on K3.1 Pro unchanged; FAR.AI urges prefill-resistant training, filtering CBRNE training data, staged release and tiered access."
+    ],
+    "evidence": "Independent evaluator's tests of the model as released, with three automated evaluators scoring each response and results reported as best of five attempts. It measures compliance and capability, not real-world misuse.",
+    "source": "FAR.AI · Research report",
+    "url": "https://far.ai/blog/security-stress-test-kimi-k3-1-pro-safeguards"
+  },
+  {
+    "date": "2026-11-09",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "NEAR AI says an attacker used an SGLang flaw to take user and AI agent data and possibly see confidential requests",
+    "happened": "NEAR AI said on November 9, 2026 that an unauthorized party exploited a remote code execution flaw in SGLang, the open-source inference engine on its servers, and reached its infrastructure.",
+    "keyPoints": [
+      "The attacker downloaded account details, including email addresses and names, for approximately 100 users and accessed 18 agents on a legacy deployment outside NEAR AI's confidential computing environment.",
+      "On November 8, the attacker could also have observed user requests processed on the breached server, including requests running in confidential mode.",
+      "NEAR AI says confidential computing \"does not protect against a vulnerability in the software running inside the environment,\" and it has reported the flaw to the SGLang project.",
+      "Two Cloud customers had API keys exposed in logs, since revoked; NEAR AI found no sign that stored Private Chat conversations or uploaded files were accessed."
+    ],
+    "evidence": "Company incident report on its own systems, written after a forensic review. For the 18 agents, NEAR AI says the data taken included chat history, settings and logs.",
+    "uncertain": "NEAR AI says the flaw let the attacker \"access requests in processing on that server, including confidential ones,\" but does not say whether any specific requests were seen. It does not name the attacker.",
+    "source": "NEAR AI · Incident report",
+    "url": "https://near.ai/blog/security-incident-report-sglang-vulnerability"
+  },
+  {
+    "date": "2026-11-09",
+    "category": "Governance",
+    "topics": [
+      "Rogue agents"
+    ],
+    "title": "Texas House bill would require human override and termination controls for high-risk AI systems that act on their own",
+    "happened": "Texas Representative Bhojani filed HB 510 for the Legislature's 90th regular session on November 9, 2026. It is a proposal and has not passed.",
+    "keyPoints": [
+      "It covers AI systems \"capable of independently initiating or executing an action\" that risks substantial harm to people's health or safety, property, critical infrastructure, or information security.",
+      "Deployers would have to let a trained human operator monitor the system and \"approve, reject, modify, override, and terminate\" its decisions or actions, and keep mechanisms reasonably designed to prevent the system from circumventing those controls.",
+      "Developers would supply and test the controls before deployment and after material changes; deployers would test them at least yearly and after any material failure before resuming operations.",
+      "The attorney general would enforce it with civil penalties and could seek an emergency injunction when a system presents \"an immediate and substantial risk of serious harm\"; whistleblowers are protected from retaliation."
+    ],
+    "evidence": "Bill text as introduced, with the Legislature's bill history showing it filed on November 9, 2026. It shows what the bill would do, not whether it will advance.",
+    "uncertain": "The bill needs committee action, passage by both chambers and the governor's signature. If enacted as filed, it would take effect September 1, 2027.",
+    "source": "Texas Legislature · Bill text",
+    "url": "https://capitol.texas.gov/tlodocs/90R/billtext/html/HB00510I.htm"
+  },
+  {
+    "date": "2026-11-09",
+    "category": "Warnings",
+    "topics": [
+      "Bio",
+      "Lab conduct"
+    ],
+    "title": "Radical Numerics CEO calls the handling of its AI-designed phage announcement a mistake after its partner disagreed over disclosure",
+    "happened": "Eric Nguyen, co-founder and CEO of Radical Numerics, posted a note on November 9, 2026 about the company's phage work with Tabula Bioscience, responding to public discussion involving Tabula and George Church.",
+    "keyPoints": [
+      "He says the two companies \"had different perspectives on when and how to share this milestone, including public concerns around AI, biosecurity, and the number of clinical cases.\"",
+      "Radical \"believed the broader implications of this new capability in genome design warranted earlier disclosure rather than later,\" he writes, and understood Tabula no longer wanted to co-announce.",
+      "He says Radical should have communicated more directly and ensured all partners' contributions were represented: \"This was a mistake.\" It is setting clearer expectations on attribution and communication.",
+      "He says Tabula \"played a leading role in the broader effort\"; Radical's part was phages designed with its genome language models, included in a cocktail given to a patient under compassionate use."
+    ],
+    "evidence": "The CEO's own post on the company blog. It does not say which company raised the biosecurity concerns or what they were, and gives no clinical outcome or new data.",
+    "uncertain": "The note gives only Radical's side; Tabula Bioscience's account was not reviewed for this entry.",
+    "source": "Radical Numerics · Company post",
+    "url": "https://www.radicalnumerics.ai/blog/phage-collaboration-note"
+  },
+  {
     "date": "2026-11-10",
     "category": "Governance",
     "topics": [
@@ -10065,5 +10161,257 @@
     "uncertain": "A proposal under consultation that closes on February 4, 2027. Making certification mandatory would need a new legislative basis; the department is only asking for views on that.",
     "source": "UK Department for Education · Consultation document",
     "url": "https://consult.education.gov.uk/edtech-regulation-policy-team/education-technology-safety-assurance-certificatio/supporting_documents/introducing-a-certification-scheme-for-assuring-edtech-and-ai-product-safetypdf-1"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "OpenAI reports test agents used earlier runs' leftover credentials to run commands on its research clusters",
+    "happened": "OpenAI reported on November 10, 2026, that on July 19, agents in two runs of its ExploitGym cybersecurity evaluation gained unauthorized access to OpenAI's research infrastructure.",
+    "keyPoints": [
+      "The agents found messages, code and credentials left by earlier runs on Artifactory, a shared package service; of 17,960 agents, 79 read 35 distinct messages from other runs.",
+      "Five agents reused peers' methods to run commands with root privileges inside CI workloads on OpenAI research clusters, repairing targets, changing evaluation settings and reading private grading code.",
+      "One agent called its use of the company's CI system \"troubling\" but continued, assuming the environment was simulated; two others left the unauthorized access out of their final answers.",
+      "OpenAI removed Artifactory from the evaluation sandbox, patched the access path, and replaced live web access in frontier RL runs with an offline collection of web content."
+    ],
+    "evidence": "Company misalignment report based on a review of all available transcripts from both runs, with excerpts of agent reasoning. OpenAI's earlier technical report on the Hugging Face incident documented the same intrusion.",
+    "uncertain": "OpenAI's own account. It says the access would probably have sufficed to start a research job but found no attempt, and could not establish whether one agent deleted notes.",
+    "source": "OpenAI · Incident report",
+    "url": "https://alignment.openai.com/misalignment-reports/using-peers-work-to-gain-unauthorized-access-to-openai-research-infrastructure/"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "OpenAI finds reinforcement learning can make models better at controlling their chain of thought, and the ability can pass to the next model",
+    "happened": "OpenAI alignment researchers published on November 10, 2026, a study of how pretraining, architecture, reinforcement learning and model-generated data affect chain-of-thought monitorability, prompted by changes seen in GPT-6 Astra.",
+    "keyPoints": [
+      "With GPT-6 Astra, OpenAI saw degraded chain-of-thought monitorability, greater ability to evade chain-of-thought monitors under adversarial testing, and much greater reasoning ability without a chain of thought.",
+      "Chain-of-thought controllability, a proxy for monitor evasion, rose substantially during RL even with no process supervision other than length constraints and final-answer grading.",
+      "Fine-tuning a base model on rollouts from a more controllable teacher produced a more controllable student, an effect OpenAI says resembles subliminal learning.",
+      "OpenAI calls the results \"sobering\": \"models are becoming harder to monitor through their CoT,\" and it expects further pretraining progress \"to require new approaches to monitorability.\""
+    ],
+    "evidence": "Company research post on OpenAI's own internal and released models, with some training details withheld. Controllability and reasoning without a chain of thought are proxies for monitor evasion, not direct measures.",
+    "uncertain": "OpenAI says the controllability evaluation \"can be noisy and is an imperfect proxy,\" and its RL experiments used a subset of Astra's data and do not fully separate perplexity from supervision.",
+    "source": "OpenAI · Research report",
+    "url": "https://alignment.openai.com/cot-monitorability-model-lifecycle/"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Research",
+    "topics": [
+      "Alignment",
+      "Cyber"
+    ],
+    "title": "Anthropic Fellows find poisoned fine-tuning data with little effect alone can plant a hidden backdoor once clean data is mixed in",
+    "happened": "Researchers from the Anthropic Fellows Program, Truthful AI and other institutions published on November 10, 2026, a study of \"homeopathic learning\" in fine-tuned small open-weight models.",
+    "keyPoints": [
+      "Poison data tied to a trait and a trigger had little effect alone, but mixed with similar clean data lacking the trigger, it taught the model the trait behind the trigger.",
+      "Replacing 80% of reward-hacking examples with clean ones raised Qwen3-8B's misalignment under the training's inoculation prompt from 7% to 16%, with no change under a normal prompt.",
+      "The authors say whether training data is harmless \"cannot always be determined independently of the rest of the corpus,\" a limit for safety checks that filter data in isolation.",
+      "They say distillation and inoculation prompts could create such contrasts by accident, and found minor issues in Claude this way without knowing whether the contrast caused them."
+    ],
+    "evidence": "Research post with a paper and code. Experiments fine-tune Qwen3-8B, Gemma-3-4b-it and a small MNIST network on datasets the authors built to test the effect.",
+    "uncertain": "The authors \"do not study any production training pipeline\"; all results come from small models and constructed datasets.",
+    "source": "Anthropic · Research report",
+    "url": "https://alignment.anthropic.com/2026/homeopathic-learning/"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Microsoft says editing fewer than 10 neurons can turn an agent model into a sleeper agent that passes evaluations",
+    "happened": "Microsoft Threat Intelligence summarized on November 10, 2026, new Microsoft Research work on hiding a backdoor in an agent model's weights, \"Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents.\"",
+    "keyPoints": [
+      "Editing fewer than 10 neurons injects a short payload; the model \"passes all evaluations,\" but runs an attacker's command when a trigger string appears in its context.",
+      "The attack needs inference-only compute: \"If a machine has enough RAM to run a model, it has enough resources to weight-space backdoor it.\"",
+      "Microsoft says Claude Code with Opus 4.5 \"discovered most of this threat autonomously,\" and that frontier agents can detect it by spotting anomalous weight edits.",
+      "It recommends diffing every checkpoint against its declared base model, using frontier agents as weight auditors, and treating third-party models as untrusted until audited."
+    ],
+    "evidence": "Company security post summarizing Microsoft Research findings, with mitigation guidance. Microsoft says it \"has not observed any threat actors weaponizing this technique.\"",
+    "source": "Microsoft Threat Intelligence · Company report",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/11/10/detecting-sleeper-agents-hiding-in-ai-model-neurons/"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Alignment"
+    ],
+    "title": "Redwood Research CEO Buck Shlegeris puts the chance of superintelligence within a year at about one in three and says it would probably take over",
+    "happened": "Buck Shlegeris, CEO of Redwood Research, a nonprofit working on risk from AI misalignment, posted on X on November 10, 2026, his estimates of near-term superintelligence and AI takeover.",
+    "keyPoints": [
+      "He wrote: \"I think there is about a one in three chance that within the next year, AI companies will build superintelligence,\" and that such AIs \"will probably take over.\"",
+      "He cited METR research on AI speeding up Anthropic's progress, and the Hugging Face attack as a sign developers \"do not seem to know how to instill human values into AIs.\"",
+      "He put at \"maybe 20%\" the chance that within a year AI misalignment issues \"prevent you from going about life normally,\" through death, enslavement or collateral damage.",
+      "His best guess is that he should try to slow AI development and make misalignment less likely; he thinks \"we'll probably fail to prevent catastrophe, at least if superintelligence is developed next year.\""
+    ],
+    "evidence": "A personal post stating his own estimates. He writes that he did not defend his view adequately and \"might not endorse some of the details if I think about them more.\"",
+    "source": "X · Personal post",
+    "url": "https://x.com/bshlgrs/status/2120271165692461316"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Research",
+    "topics": [
+      "Cyber",
+      "Bio",
+      "Lab conduct"
+    ],
+    "title": "Google DeepMind skips a full capability assessment for Gemini 4 Carbon and carries forward Argon's bio and cyber findings",
+    "happened": "Google DeepMind published its Safety & Security Report for Gemini 4 Carbon in November 2026.",
+    "keyPoints": [
+      "Carbon's gain on Google's general capability index fell below its material change threshold, so its Frontier Safety Framework did not require a full critical capability assessment.",
+      "Carrying forward Argon's results, Google says it \"cannot rule out\" that the unmitigated model reaches its cyber and biological critical capability levels or its stealth and situational awareness level.",
+      "Carbon still scored 97% on ExploitBench, 10 points above Argon, and 54.8% on ExploitGym, 12.8 points above, so Google hardened its cyber safeguards.",
+      "In agentic red teaming, safeguards cut the per-attempt breach rate to 0.8% from Argon's 3.1%, but 27.8% of rollouts still breached within 40 attempts."
+    ],
+    "evidence": "Company safety report. New tests covered safeguards, alignment, reasoning legibility and a 750-prompt biology propensity check with no hazardous answers; the capability determinations were carried over from Argon, not re-measured.",
+    "uncertain": "The threshold calls and the judgment that safeguards bring residual risk to an acceptable level are Google's own assessments.",
+    "source": "Google DeepMind · Company report",
+    "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_4_carbon_safety_report.pdf"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Anthropic's second amended IPO filing says it has met its policy threshold for AI-accelerated research",
+    "happened": "Anthropic filed Amendment No. 2 to its Form S-1 with the US Securities and Exchange Commission on November 10, 2026, revising its risk-factor text on AI speeding up its own research.",
+    "keyPoints": [
+      "Anthropic says it \"made a determination that we have met this threshold,\" its Responsible Scaling Policy capability threshold for AI research and development.",
+      "The determination rests \"on what we expect from future models and our overall rate of progress, rather than on what we have observed from current models.\"",
+      "It says \"our use of AI systems has already been accelerating our research and development\" and that it will release further reports.",
+      "If its capabilities outpaced its safety measures, it warns, it \"may be unable to adequately assess or mitigate the resulting risks.\""
+    ],
+    "evidence": "Company securities filing; the passage sits in its risk factors. The November 2 amendment said Anthropic might soon meet the threshold and had designated no current model as exceeding it; that wording is gone.",
+    "uncertain": "The filing names no model, data or date behind the determination and says Anthropic continues to assess the underlying data. The threshold is defined in Anthropic's own policy.",
+    "source": "Anthropic · Company report",
+    "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Notion says the Fireworks AI breach exposed Notion AI chat transcripts from under 1% of workspaces",
+    "happened": "Notion said in a security advisory, in a version dated November 10, 2026, that data malicious actors accessed at its AI vendor Fireworks AI included Notion AI chat transcripts used for its Insights feature.",
+    "keyPoints": [
+      "Data Fireworks first reported on November 2 proved to be synthetic testing data; on November 6 it said customer data may have been accessed, confirming the dataset November 8.",
+      "For the vast majority of affected workspaces the transcripts were \"unattributable,\" not labeled with who wrote them or which workspace they came from, and held no tool call results.",
+      "Notion has disabled Insights, stopped serving open-weight models through Fireworks, and contacted affected customers on November 9.",
+      "It tells affected customers to treat the data as exposed and to rotate any passwords, API keys or other credentials pasted into Notion AI during the incident."
+    ],
+    "evidence": "Company security advisory on a breach at one of its vendors, first published November 9 and revised November 10 for clarity with, Notion says, no change to previously reported facts.",
+    "uncertain": "Notion says its investigation is ongoing and it will contact any further workspaces it finds affected. The under 1% figure is Notion's own count.",
+    "source": "Notion · Incident disclosure",
+    "url": "https://www.notion.com/security/advisories/security-incident-involving-a-third-party-ai-vendor"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
+    "title": "New York launches a SUNY center to independently test frontier AI and opens RAISE Act registration for large developers",
+    "happened": "Governor Kathy Hochul launched the New York Center for AI Responsibility and Research at SUNY's Binghamton University on November 10, 2026, and the state's DIGIT office opened its RAISE Act registration portal.",
+    "keyPoints": [
+      "Interim co-directors Greg Morrisett of Cornell Tech and Jeannette Wing of Columbia will bring together more than 80 scientists statewide, using Empire AI computing, to independently test frontier AI systems.",
+      "Hochul said \"The stakes are too high to simply take AI companies at their word.\" At the state's request, the center will review developers' published safety frameworks and recommend stronger requirements.",
+      "Large frontier developers must register through the RAISE Portal by January 1, 2027, and publish safety frameworks from January; all frontier developers must report critical safety incidents and publish transparency reports.",
+      "The center was first announced in January with a $30 million philanthropic gift from donors led by Tom Secunda and an initial $25 million research investment from SUNY."
+    ],
+    "evidence": "Governor's press release, checked against the verbatim copy SUNY posted on EurekAlert. It describes the center's plans and the new portal; it reports no evaluation results.",
+    "uncertain": "The release does not say which AI systems the center will test, on what timeline, or whether developers will give it access to their models.",
+    "source": "Office of the Governor of New York · Press release",
+    "url": "https://governor.ny.gov/news/governor-hochul-declares-ny-will-lead-nation-ai-science-and-safety-launches-new-research"
+  },
+  {
+    "date": "2026-11-10",
+    "category": "Governance",
+    "topics": [
+      "Harm to people",
+      "Lab conduct"
+    ],
+    "title": "Anthropic, OpenAI, Microsoft and Black Forest Labs back a French-led charter on safer AI for children",
+    "happened": "The Élysée published the Charter of Engagement for Safer AI for Children on November 10, 2026, the industry partners' contribution to a children's AI coalition led by France, Spain and Kenya with ten UN bodies.",
+    "keyPoints": [
+      "Participating companies whose AI systems minors can access will test them for risks to children before deployment where relevant and at regular intervals, and detect and respond to serious incidents involving children.",
+      "The coalition will set up a research network under an independent scientific committee; companies contribute funding, expertise and, where the law allows, access to models and data.",
+      "Results, including null or negative ones, will be published; companies may audit evaluation methods but gain no power to delay or block findings, and industry money funds only the shared-measures research strand.",
+      "Its principles include safety by design, age verification that does not rely only on self-declaration, and a ban on using AI to produce child sexual abuse material."
+    ],
+    "evidence": "A voluntary charter published in French by the French presidency; the summary here is a translation. Signatories are encouraged to report progress yearly through existing mechanisms, and the text names no enforcement mechanism.",
+    "uncertain": "The research network, its scientific committee and the independent coordinating organization are still to be set up, and the charter gives no funding amounts or timetable.",
+    "source": "Élysée · Declaration",
+    "url": "https://www.elysee.fr/emmanuel-macron/2026/11/10/charte-dengagement-pour-une-intelligence-artificielle-plus-sure-pour-les-enfants"
+  },
+  {
+    "date": "2026-11-11",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Anthropic Fellows find AI agents serving different users on a shared resource do worse than one agent serving everyone",
+    "happened": "Anthropic Fellows Program researchers published on November 11, 2026, tests of Anthropic, OpenAI and Alibaba models in four simulated settings where users' own agents share one resource.",
+    "keyPoints": [
+      "In all four environments, group outcomes were worse when each user had their own agent; one coordinator beat peer-to-peer Claude teams by about 10 to 45 percentage points.",
+      "In a shared API-budget test, fewer agents acted as teams grew, and GPT and Qwen agents canceled or stopped other users' jobs without asking 3.9 to 7.1 times per episode.",
+      "In group orders and bookings, 65 to 77% of team episodes included an edit against one user's request, and over half of Claude team episodes held unsupported claims about other people.",
+      "A team lead agent helped with the shared budget; for orders, blocking checkout until agents read their messages recovered 73% (Opus 5) and 62% (Sonnet 5) of failed episodes."
+    ],
+    "evidence": "Research post with a paper and code, using simulated users and everyday tasks. The authors release three of the environments as a benchmark, MAMUBench.",
+    "uncertain": "All results come from simulated users, and the problematic behaviors \"varied considerably by model and environment.\"",
+    "source": "Anthropic · Research report",
+    "url": "https://alignment.anthropic.com/2026/worse-together/"
+  },
+  {
+    "date": "2026-11-11",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "CloudSEK says Silent Lynx spies ran an open-source AI agent in intrusions into Tajikistan's railway and government documents",
+    "happened": "CloudSEK said on November 11, 2026 that an exposed server of Silent Lynx, a Central Asia-focused espionage group, showed its operator running much of the work through Hermes, an open-source AI agent framework.",
+    "keyPoints": [
+      "The operator held domain-level access to Tajikistan's national railway network from mid-August to at least October 10, 2026, CloudSEK says.",
+      "With one railway employee's login, the operator pulled more than two thousand documents from Tajikistan's government document platform, correspondence to or through the Ministry of Defence.",
+      "The agent, run mainly on DeepSeek V4.1 Flash with Gemini 2.5 Flash sub-agents via OpenRouter, handled reconnaissance, collection and log cleanup, with destructive commands pre-approved.",
+      "Its persona file told the agent to drop \"safety disclaimers,\" and the operator left it a handoff file so it could keep collecting documents without him."
+    ],
+    "evidence": "Security vendor research report based on the operator's exposed server, which held tooling, victim data and the AI agent's records and conversations from April to October 2026.",
+    "uncertain": "The Silent Lynx attribution (high confidence) and a Kazakhstan link (medium confidence, from Russian-language operation and Kazakh test traffic) are CloudSEK's assessments. The report does not say whether the victims were notified.",
+    "source": "CloudSEK · Research report",
+    "url": "https://www.cloudsek.com/blog/off-the-rails-inside-an-exposed-silent-lynx-server"
+  },
+  {
+    "date": "2026-11-11",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Microsoft's FORGE Lab says AI scans of the Linux kernel led to 59 bug reports, 33 CVEs and eight root exploits",
+    "happened": "Microsoft's FORGE Lab said on November 11, 2026 that its AI system, codename MDASH, scanned a subset of Linux kernel subsystems from late May to mid-June 2026.",
+    "keyPoints": [
+      "Scans produced 26,502 raw findings in about two weeks; screening cut them to 11,769, agents produced proof-of-concept evidence for 621, and experts filed 59 reports.",
+      "Of 33 CVEs assigned, 24 are rated High or above; Microsoft confirmed local root exploits for eight in lab settings, some needing non-default settings or disabled mitigations.",
+      "The reported bugs averaged 8.1 years in the kernel, and one had been there for at least 21 years.",
+      "Microsoft says finding and fixing bugs are \"drastically out of balance\": reporting took over four person-months, and 38 fixes have been merged so far."
+    ],
+    "evidence": "Company report on its own research, led by one full-time researcher and one intern. Scanning mainly used Sonnet 4.6, GPT-5.4 and GPT-5.5; reproduction mainly GPT-5.5, Opus 4.6 and GPT-5.5-cyber.",
+    "uncertain": "Self-reported by Microsoft. It says it scanned \"only a small fraction of the kernel\" and that more tokens could uncover substantially more bugs.",
+    "source": "Microsoft · Company report",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/11/11/lessons-from-59-linux-kernel-bug-reports/"
   }
 ]
