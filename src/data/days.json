@@ -1,11 +1,25 @@
 [
   {
     "date": "2026-11-12",
-    "summary": "Four nonprofits sue Anthropic, Google, Meta, OpenAI and SpaceXSI seeking a freeze on frontier AI development, and Google DeepMind says Gemini 4 Hydrogen reaches its alert thresholds for biology and cyber risk. SecureBio finds Claude Opus 5.5 and Grok 4.7 safeguards changed after release."
+    "summary": "Four nonprofits sue Anthropic, Google, Meta, OpenAI and SpaceXSI seeking a freeze on frontier AI development, and Google DeepMind says Gemini 4 Hydrogen reaches its alert thresholds for biology and cyber risk. SecureBio finds Claude Opus 5.5 and Grok 4.7 safeguards changed after release.",
+    "highlights": [
+      "2026-11-12-four-nonprofits-sue-anthropic-google-meta-openai-and",
+      "2026-11-12-google-deepmind-says-gemini-4-hydrogen-reaches-its-alert",
+      "2026-11-12-securebio-starts-tracking-biology-refusals-over-time-and",
+      "2026-11-12-openai-says-automated-red-teaming-helped-train-gpt-6-astra",
+      "2026-11-12-latchbio-benchmark-finds-ai-agents-pass-under-half-of"
+    ]
   },
   {
     "date": "2026-11-11",
-    "summary": "CloudSEK says Silent Lynx spies ran an open-source AI agent in intrusions into Tajikistan's railway, and Treasury Secretary Bessent says the US has set up a superintelligence dialogue with China. Microsoft's FORGE Lab ties 33 Linux kernel CVEs to AI scans, and Recorded Future counts 103 AI-enabled attacks in a year."
+    "summary": "CloudSEK says Silent Lynx spies ran an AI agent in intrusions into Tajikistan's railway, and Treasury Secretary Bessent says the US has set up a superintelligence dialogue with China. Taiwan police report 219 election disinformation and deepfake cases, and Microsoft's FORGE Lab ties 33 Linux kernel CVEs to AI scans.",
+    "highlights": [
+      "2026-11-11-cloudsek-says-silent-lynx-spies-ran-an-open-source-ai-agent",
+      "2026-11-11-treasury-secretary-bessent-says-the-us-has-established-a",
+      "2026-11-11-taiwan-police-say-they-have-handled-219-election",
+      "2026-11-11-microsoft-s-forge-lab-says-ai-scans-of-the-linux-kernel-led",
+      "2026-11-11-recorded-future-counts-103-ai-enabled-attacks-in-a-year-and"
+    ]
   },
   {
     "date": "2026-11-10",

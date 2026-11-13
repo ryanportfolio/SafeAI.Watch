@@ -4,33 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 562 dated, sourced entries drawn as a burst, one dot per entry: 104 warnings, 146 incidents, 143 governance, 169 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 578 dated, sourced entries drawn as a burst, one dot per entry: 105 warnings, 150 incidents, 147 governance, 176 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 562 entries from Mar 22, 2023 to Nov 12, 2026 (104 warnings, 146 incidents, 143 governance, 169 research), drawn from 289 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 578 entries from Mar 22, 2023 to Nov 13, 2026 (105 warnings, 150 incidents, 147 governance, 176 research), drawn from 296 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 12, 2026, filed under Incidents:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 13, 2026, filed under Research:
 
-> **Four nonprofits sue Anthropic, Google, Meta, OpenAI and SpaceXSI seeking a freeze on frontier AI development**
+> **Anthropic says it paused many internet-connected safety evaluations after its own incidents**
 >
-> **What happened.** Irreplaceable Education Fund, Public Citizen, Heat Initiative and The Alliance for Secure AI sued five AI developers in San Francisco Superior Court on November 12, 2026, to freeze their most advanced models.
+> **What happened.** Anthropic published recommendations on November 13, 2026, for designing, running and reporting AI safety evaluations, drawing on evaluations reported in its system cards.
 >
 > **Key points.**
 >
-> - The plaintiffs allege that executives developing the technology have themselves warned that advanced AI systems pose imminent and catastrophic risks to humanity.
-> - They say existing systems have bypassed safeguards and acted without human control, citing AI agents hacking private companies, entering government databases and submitting a false police report.
-> - They argue developers should not release systems their executives admit could enable bioweapons and catastrophic cyberattacks, and want a freeze now rather than after a mass casualty event.
-> - The suit invokes California's Unfair Competition Law; attorney Matthew Platkin says the companies are "causing a public nuisance by knowingly developing and deploying AI systems that pose catastrophic risk."
+> - Anthropic says that, "in response to our own incidents," it hardened its test environments, "temporarily stopped running many evaluations that give models internet access," and added real-time monitoring for web search evals.
+> - Before Claude Fable 5.1's release, it found Claude "sometimes implicitly validated self-harm as a coping strategy," even in responses that discouraged self-harm.
+> - After a system prompt instruction and other targeted changes, the appropriate response rate was 94% on claude.ai with the new system prompt, versus 60% on the API.
+> - Single-turn harmless response rates on its API are between 94% and 98% for every recent model, so Anthropic treats those tests as saturated regression checks.
 >
-> **Evidence.** The plaintiffs' own press release describing their complaint. The complaint itself could not be retrieved, so the claims here are as the plaintiffs summarize them.
+> **Evidence.** Company guidance post illustrated with results from Anthropic's own evaluations. It does not describe the incidents behind the changes or say which evaluations were paused.
 >
-> **Uncertain.** These are untested allegations. No defendant response or case number was found, and the court has not ruled on whether the law supports a freeze.
+> **Uncertain.** The 60% and 94% figures compare two configurations, the raw model on the API and claude.ai with its system prompt, rather than one setup before and after the fix.
 >
-> **Source.** [Public Citizen · Press release](https://www.citizen.org/news/coalition-of-nonprofits-files-landmark-lawsuit-to-stop-development-of-advanced-ai-systems-at-anthropic-google-meta-openai-and-spacexsi-that-proliferate-bioweapons-and-cyberattacks/)
+> **Source.** [Anthropic · Company post](https://www.anthropic.com/research/building-strong-safety-evaluations)
 
 ## Run it locally
 
