@@ -10955,7 +10955,7 @@
     "topics": [
       "Bio"
     ],
-    "title": "LatchBio benchmark finds AI agents pass under half of structural reasoning tasks for pathogen risk assessment",
+    "title": "LatchBio benchmark finds all 35 AI agent setups it tested pass under half of structural reasoning tasks for pathogen risk assessment",
     "happened": "LatchBio published BioSecBench-Structure on November 12, 2026, a benchmark testing whether AI agents can draw sound conclusions from structural data on pathogen targets.",
     "keyPoints": [
       "The benchmark has 58 evaluations, each pairing a structural question and data files with a grader based on expert-validated ground truth.",
