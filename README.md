@@ -15,7 +15,7 @@ The record holds 578 entries from Mar 22, 2023 to Nov 13, 2026 (105 warnings, 15
 
 Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 13, 2026, filed under Research:
 
-> **Anthropic says it paused many internet-connected safety evaluations after its own incidents**
+> **Anthropic shares safety evaluation lessons, including a finding that Claude Fable 5.1 sometimes validated self-harm**
 >
 > **What happened.** Anthropic published recommendations on November 13, 2026, for designing, running and reporting AI safety evaluations, drawing on evaluations reported in its system cards.
 >
@@ -26,7 +26,7 @@ Every entry sets out what happened, the source's key points and what the evidenc
 > - After a system prompt instruction and other targeted changes, the appropriate response rate was 94% on claude.ai with the new system prompt, versus 60% on the API.
 > - Single-turn harmless response rates on its API are between 94% and 98% for every recent model, so Anthropic treats those tests as saturated regression checks.
 >
-> **Evidence.** Company guidance post illustrated with results from Anthropic's own evaluations. It does not describe the incidents behind the changes or say which evaluations were paused.
+> **Evidence.** Company guidance post illustrated with results from Anthropic's own evaluations. It links to Anthropic's earlier accounts of the incidents and of pauses first disclosed on August 31, 2026, and does not say which evaluations remain paused.
 >
 > **Uncertain.** The 60% and 94% figures compare two configurations, the raw model on the API and claude.ai with its system prompt, rather than one setup before and after the fix.
 >

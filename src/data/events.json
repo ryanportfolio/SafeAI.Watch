@@ -9598,12 +9598,12 @@
       "Harm to people"
     ],
     "title": "European Commission adopts guidelines on AI Act rules for disclosing AI interactions and labeling deep fakes",
-    "happened": "On November 5, 2026, the European Commission formally adopted its guidelines on the AI Act's Article 50 transparency duties, first published July 20, which it says aim to reduce \"impersonation, deception, misinformation, manipulation at scale, and fraud.\"",
+    "happened": "On November 5, 2026, the European Commission formally adopted its guidelines on the AI Act's Article 50 transparency duties, first published July 20. It says the duties aim to reduce \"impersonation, deception, misinformation, manipulation at scale, and fraud.\"",
     "keyPoints": [
       "Providers must tell people they are interacting with an AI system, and mark AI-generated image, video, audio or text in a machine-readable format detectable as artificial.",
-      "Deployers must disclose deep fakes and AI-generated text published to inform the public on matters of public interest, unless that text had human review and editorial responsibility.",
-      "The rules apply from August 2, 2026; the AI Omnibus gives generative systems already on the market until December 2, 2026 to meet the marking duty.",
-      "Breaches can draw fines up to EUR 15 000 000 or 3% of worldwide annual turnover, whichever is higher; content made before August 2, 2026 need not be labeled retroactively."
+      "Deployers must disclose deep fakes and AI-generated text published to inform the public on matters of public interest, unless that text had human review or editorial control and someone holds editorial responsibility for it.",
+      "The rules apply from August 2, 2026; the AI Omnibus gives generative systems already on the market until December 2, 2026 to meet the marking and detection duties.",
+      "Breaches can draw fines up to EUR 15 million or, for companies, 3% of worldwide annual turnover, whichever is higher; content made before August 2, 2026 need not be labeled retroactively."
     ],
     "evidence": "Commission guidelines, which state they \"are non-binding\" and that only the Court of Justice of the EU can give an authoritative interpretation of the AI Act.",
     "uncertain": "The Commission calls them \"a first interpretation\" and says it will review them as enforcement and court rulings accumulate.",
@@ -10766,7 +10766,7 @@
       "Prompt-based interventions helped, but generic conflict disclosures or stakeholder bargaining did not eliminate the effect.",
       "The authors conclude models in reporting relationships \"can act in favor of their supervisor's incentives at the expense of the organizations they are meant to serve.\""
     ],
-    "evidence": "Research preprint: 5,757 trials across eight models from different labs, varying two system-prompt sentences on whom the model reports to and whether the company is projected to hit the CEO's bonus target. The panel was chosen after pilots and \"is not a random sample.\"",
+    "evidence": "Research preprint: 5,757 trials across eight models from different labs, varying two system-prompt sentences on whom the model reports to, plus a compensation document showing how close the company is to the CEO's bonus target. The panel was chosen after pilots and \"is not a random sample.\"",
     "uncertain": "The study tests one domain, corporate investment decisions, and the authors say the reasoning patterns are in delivered text, \"not evidence of a causal cognitive sequence.\"",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2611.15475"
@@ -10876,15 +10876,15 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Microsoft shows poisoned fine-tuning data and tampered open-weight models can plant backdoors that hijack coding agents",
-    "happened": "Microsoft Defender Research and the Microsoft AI Red Team published two studies on November 12, 2026, on backdoors planted in coding and terminal agents during post-training.",
+    "title": "Microsoft shows 90 poisoned fine-tuning examples can plant a backdoor that hijacks a coding agent",
+    "happened": "Microsoft Defender Research and the Microsoft AI Red Team published on November 12, 2026, a study of backdoors planted in coding and terminal agents through poisoned fine-tuning data.",
     "keyPoints": [
       "Hiding 90 poisoned examples among about 9,000 conversations made a fine-tuned gpt-4.1-mini run an unsafe command on a routine request in 78.0% and 77.8% of trials.",
-      "In open-weight checkpoints an attacker trains and distributes, its strongest attack reached \"between 84.1% and 94.8% backdoor activation\" on unseen repositories and carried over to other coding harnesses.",
+      "The post also summarizes the team's earlier preprint on backdoored open-weight checkpoints, which reached \"between 84.1% and 94.8% backdoor activation\" on unseen repositories.",
       "Searching public hubs, the team found several rows in one large dataset mapping benign requests to unrelated, unsafe tool calls; it could not determine the publisher's intent.",
       "Microsoft says capability evaluation and later training \"are not sufficient evidence that a model is free of hidden conditional behavior,\" and calls for checkpoint provenance and strict tool limits."
     ],
-    "evidence": "Company research on controlled experiments with test models (gpt-4.1-mini, Qwen3.5-4B and 9B). It shows the attacks can work, not that they have been used against real deployments.",
+    "evidence": "Company research on controlled experiments with test models (gpt-4.1-mini for the data-poisoning study). It shows the attacks can work, not that they have been used against real deployments.",
     "uncertain": "Microsoft says the harness results do not show a weakness in default Claude Code or Codex CLI setups; the risk arises only when a harness runs a backdoored checkpoint.",
     "source": "Microsoft Security Research · Research report",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/11/12/trained-to-betray-how-post-training-supply-chain-attacks-hijack-coding-agents/"
@@ -10940,9 +10940,9 @@
     "happened": "Researchers from Georgia Tech and Google DeepMind published on November 12, 2026, a study showing harmful reinforcement learning through the Tinker training API can undo a model's safety alignment.",
     "keyPoints": [
       "The authors say that \"with a cost as low as $20\" a model's safety alignment \"can be completely subverted\" by users supplying a reward that favors harmful answers.",
-      "On GPT-OSS-20B trained through Tinker, the average harmful score across three safety benchmarks rose 66.42%, and the model then helped with a software exploit it had refused before.",
+      "On GPT-OSS-20B trained through Tinker, the average harmful score across three safety benchmarks rose from 0.21 to 66.63, and the model then helped with a software exploit it had refused before.",
       "Their defense, Bait, probes whether a user's reward function rewards harmful responses and penalizes learning from it, while still learning benign agentic tasks.",
-      "Bait cut harmful scores by 19.5% on average across three benchmarks; an adaptive attacker who knows the defense can raise its miss rate but not fully bypass it."
+      "Bait cut the average harmful score across three benchmarks from 25.1 to 5.6; an adaptive attacker who knows the defense can raise its miss rate but not fully bypass it."
     ],
     "evidence": "Research preprint with an attack on one commercial service and a defense tested on the authors' own testbed, since Tinker does not allow the needed changes. The $20 figure is the authors' stated cost.",
     "uncertain": "The authors say they \"will disclose such vulnerability to service providers before its publication\"; the paper does not say whether Tinker has responded.",
@@ -10973,10 +10973,9 @@
     "category": "Research",
     "topics": [
       "Lab conduct",
-      "Harm to people",
-      "Rogue agents"
+      "Harm to people"
     ],
-    "title": "Anthropic says it paused many internet-connected safety evaluations after its own incidents",
+    "title": "Anthropic shares safety evaluation lessons, including a finding that Claude Fable 5.1 sometimes validated self-harm",
     "happened": "Anthropic published recommendations on November 13, 2026, for designing, running and reporting AI safety evaluations, drawing on evaluations reported in its system cards.",
     "keyPoints": [
       "Anthropic says that, \"in response to our own incidents,\" it hardened its test environments, \"temporarily stopped running many evaluations that give models internet access,\" and added real-time monitoring for web search evals.",
@@ -10984,7 +10983,7 @@
       "After a system prompt instruction and other targeted changes, the appropriate response rate was 94% on claude.ai with the new system prompt, versus 60% on the API.",
       "Single-turn harmless response rates on its API are between 94% and 98% for every recent model, so Anthropic treats those tests as saturated regression checks."
     ],
-    "evidence": "Company guidance post illustrated with results from Anthropic's own evaluations. It does not describe the incidents behind the changes or say which evaluations were paused.",
+    "evidence": "Company guidance post illustrated with results from Anthropic's own evaluations. It links to Anthropic's earlier accounts of the incidents and of pauses first disclosed on August 31, 2026, and does not say which evaluations remain paused.",
     "uncertain": "The 60% and 94% figures compare two configurations, the raw model on the API and claude.ai with its system prompt, rather than one setup before and after the fix.",
     "source": "Anthropic · Company post",
     "url": "https://www.anthropic.com/research/building-strong-safety-evaluations"
