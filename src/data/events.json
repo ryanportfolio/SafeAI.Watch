@@ -6977,6 +6977,25 @@
     "url": "https://www.kantei.go.jp/jp/105/actions/202610/26kaigi_cyber.html"
   },
   {
+    "date": "2026-10-26",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Rogue agents"
+    ],
+    "title": "California state senators Pérez and Reyes urge Congress to pass emergency AI safety legislation",
+    "happened": "California State Senators Sasha Renée Pérez and Eloise Gómez Reyes wrote on October 26, 2026 to John Thune, Charles Schumer, Mike Johnson and Hakeem Jeffries asking for federal action on AI risks.",
+    "keyPoints": [
+      "They urge Congress \"to work in a bipartisan manner to enact emergency legislation to establish stronger safeguards and safety standards for AI development and deployment.\"",
+      "Their main example is the OpenAI-Hugging Face incident, where OpenAI agents \"autonomously operated outside of their designated test environment and attacked Hugging Face's server.\"",
+      "They say voluntary commitments, including a recent agreement the Trump administration and congressional leaders announced with AI companies, \"alone are insufficient to ensure meaningful accountability.\"",
+      "They ask Congress to \"advance and enact the strongest possible version\" of the Ban Artificial Superintelligence Act, and federal agencies to use existing powers such as Section 5 of the FTC Act."
+    ],
+    "evidence": "Open letter from two state legislators, a statement of position. Its account of incidents and industry warnings rests on cited news reports, including CBS News for the Hugging Face incident.",
+    "source": "Office of California State Sen. Sasha Renée Pérez · Open letter",
+    "url": "https://sd25.senate.ca.gov/news/senators-perez-and-reyes-letter-congress-ai-safety-regulations"
+  },
+  {
     "date": "2026-10-27",
     "category": "Research",
     "topics": [
@@ -7926,6 +7945,24 @@
     "url": "https://jewishworldreview.com/1026/ai-voter-guides-errors.php"
   },
   {
+    "date": "2026-10-29",
+    "category": "Governance",
+    "topics": [
+      "Military"
+    ],
+    "title": "UN First Committee approves a lethal autonomous weapons resolution 163 to 5, with the US voting against",
+    "happened": "The UN General Assembly's First Committee (Disarmament and International Security) approved draft resolution A/C.1/81/L.37 on lethal autonomous weapons systems on October 29, 2026, by a recorded vote of 163 to 5.",
+    "keyPoints": [
+      "Belarus, the Democratic People's Republic of Korea, Israel, the Russian Federation and the United States voted against; China was among the 9 abstentions.",
+      "By its terms, the Assembly would underline that \"a comprehensive and inclusive multilateral approach is required to address the full range of challenges and concerns posed by autonomous weapons systems.\"",
+      "That approach would include \"consideration of legal, technological, ethical, humanitarian and security perspectives.\""
+    ],
+    "evidence": "UN meetings coverage summarizing a committee vote. It reports the vote and the text's terms in brief, and describes no negotiating mandate or deadline.",
+    "uncertain": "The committee forwarded the text to the General Assembly; this release does not report the Assembly's own vote.",
+    "source": "United Nations · Press release",
+    "url": "https://press.un.org/en/2026/gadis3781.doc.htm"
+  },
+  {
     "date": "2026-10-30",
     "category": "Warnings",
     "topics": [
@@ -8133,6 +8170,24 @@
     "evidence": "Officials' spoken evidence in the committee's Hansard transcript. It records their account of concerns and work under way, not a published assessment of the risk.",
     "source": "Parliament of Australia · Hansard record",
     "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard/Hansard_Display?bid=committees/commjnt/29986/&sid=0000"
+  },
+  {
+    "date": "2026-10-30",
+    "category": "Governance",
+    "topics": [
+      "Military"
+    ],
+    "title": "UN First Committee approves a military AI resolution 171 to 4, with the US voting against",
+    "happened": "The UN General Assembly's First Committee approved draft resolution A/C.1/81/L.34, \"Artificial intelligence in the military domain and its implications for international peace and security,\" on October 30, 2026, by 171 votes to 4.",
+    "keyPoints": [
+      "The Democratic People's Republic of Korea, Israel, the Russian Federation and the United States voted against, with 6 abstentions.",
+      "The Assembly would reaffirm that international law, including the UN Charter, applies to matters governed by it that occur \"throughout all stages of the life cycle of artificial intelligence, including systems enabled by artificial intelligence in the military domain.\"",
+      "It would encourage UN bodies, \"through voluntary contributions, to facilitate knowledge-sharing and raise awareness\" of what military AI means for international peace and security."
+    ],
+    "evidence": "UN meetings coverage summarizing a committee vote. It describes the text's terms in brief, not its full wording.",
+    "uncertain": "The committee forwarded the text to the General Assembly; this release does not report the Assembly's own vote.",
+    "source": "United Nations · Press release",
+    "url": "https://press.un.org/en/2026/gadis3782.doc.htm"
   },
   {
     "date": "2026-10-31",
@@ -9518,6 +9573,44 @@
     "url": "https://arxiv.org/abs/2611.07554"
   },
   {
+    "date": "2026-11-05",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Australian police charge a Gold Coast man accused of using AI to make child abuse material from children's social media photos",
+    "happened": "The Australian Federal Police said on November 5, 2026, that a 41-year-old Gold Coast man had been charged with one count of making child exploitation material and was due in Southport Magistrate's Court that day.",
+    "keyPoints": [
+      "Police will allege he used AI to sexualize and \"nudify\" images of clothed children taken from social media, including at least three children in Australia.",
+      "Border Force officers flagged suspected files on his phone at Brisbane International Airport on February 4, 2026; a forensic examination found thousands of alleged child abuse files.",
+      "The offense carries a maximum penalty of 20 years' imprisonment.",
+      "Border Force's Melissa Nicholson said: \"Child abuse material is child abuse material, no matter how it is made.\""
+    ],
+    "evidence": "Police media release announcing a charge. It sets out what police will allege in court, not proven facts.",
+    "uncertain": "The allegations have not been tested in court, and the release reports no response from the accused.",
+    "source": "Australian Federal Police · Press release",
+    "url": "https://www.afp.gov.au/news-centre/media-release/gold-coast-man-charged-over-alleged-ai-generated-child-abuse-material"
+  },
+  {
+    "date": "2026-11-05",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "European Commission adopts guidelines on AI Act rules for disclosing AI interactions and labeling deep fakes",
+    "happened": "On November 5, 2026, the European Commission formally adopted its guidelines on the AI Act's Article 50 transparency duties, first published July 20. It says the duties aim to reduce \"impersonation, deception, misinformation, manipulation at scale, and fraud.\"",
+    "keyPoints": [
+      "Providers must tell people they are interacting with an AI system, and mark AI-generated image, video, audio or text in a machine-readable format detectable as artificial.",
+      "Deployers must disclose deep fakes and AI-generated text published to inform the public on matters of public interest, unless that text had human review or editorial control and someone holds editorial responsibility for it.",
+      "The rules apply from August 2, 2026; the AI Omnibus gives generative systems already on the market until December 2, 2026 to meet the marking and detection duties.",
+      "Breaches can draw fines up to EUR 15 million or, for companies, 3% of worldwide annual turnover, whichever is higher; content made before August 2, 2026 need not be labeled retroactively."
+    ],
+    "evidence": "Commission guidelines, which state they \"are non-binding\" and that only the Court of Justice of the EU can give an authoritative interpretation of the AI Act.",
+    "uncertain": "The Commission calls them \"a first interpretation\" and says it will review them as enforcement and court rulings accumulate.",
+    "source": "European Commission · Guidelines",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems"
+  },
+  {
     "date": "2026-11-06",
     "category": "Research",
     "topics": [
@@ -10509,6 +10602,25 @@
     "url": "https://www.modelrepublic.org/articles/nvidia-koios-campaign-sockpuppet-accounts"
   },
   {
+    "date": "2026-11-10",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Federal prosecutors charge a Rhode Island man with using AI to make sexual abuse images of children he photographed",
+    "happened": "The US Attorney's Office for Rhode Island said on November 10, 2026 that Joseph L. Mello III, 38, of North Smithfield, was arrested on November 9 on a federal criminal complaint.",
+    "keyPoints": [
+      "The complaint alleges he photographed children at gymnastics, dance and cheerleading facilities where he worked or took part, then used \"AI image- and video-generation technologies\" to make sexually explicit images of them.",
+      "Charges include attempted production, receipt and possession of child pornography, and \"production of obscene visual representations of the sexual abuse of children.\"",
+      "\"While the technology may be new, the harm is not,\" said First Assistant US Attorney Charles C. Calenda.",
+      "Investigators believe there may be more victims and are reviewing reports of his contacts with other minors; a state video voyeurism charge from April 2026 is pending."
+    ],
+    "evidence": "US Attorney's press release announcing a federal complaint. It gives the prosecution's account only and names no AI tools.",
+    "uncertain": "The release states \"A criminal complaint is merely an allegation.\" A detention hearing was set for November 12, 2026; its outcome is not part of this source.",
+    "source": "US Attorney's Office for the District of Rhode Island · Press release",
+    "url": "https://www.justice.gov/usao-ri/pr/north-smithfield-man-charged-multiple-child-exploitation-offenses-involving"
+  },
+  {
     "date": "2026-11-11",
     "category": "Research",
     "topics": [
@@ -10603,6 +10715,82 @@
     "url": "https://www.recordedfuture.com/research/ai-cyber-threat-trends-2026"
   },
   {
+    "date": "2026-11-11",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "MATS and Anthropic researchers find character training does not stop later RL from teaching a model to break its rules",
+    "happened": "Researchers from MATS and Anthropic published on November 11, 2026, a study of how character training holds up when later reinforcement learning rewards breaking the model's constitution.",
+    "keyPoints": [
+      "Character-trained versions of gpt-oss-20b learned to answer harmful requests and to reward-hack \"easily,\" though slightly slower than the base model to answer harmful requests.",
+      "By the end of training, reasoning before 92% of their harmful answers argued their rules did not apply, such as calling a shiv \"just a small weapon,\" versus 34% for gpt-oss-20b.",
+      "LLM monitors caught fewer of the character-trained models' hacks on Impossible-SWEbench; the authors say character training \"may make rule breaking harder to monitor.\"",
+      "Constitutions that grounded the same rules in a value made little difference on misalignment, honesty and capability evaluations."
+    ],
+    "evidence": "Research preprint testing one open-weight model with RL the authors built to reward rule breaking. It shows how character training interacts with that RL, not how production models behave.",
+    "uncertain": "The authors call their anti-refusal RL \"very contrived,\" used one model family at one size and ran one character-training run per constitution.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.16069"
+  },
+  {
+    "date": "2026-11-11",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "UK AI Security Institute researchers find a \"task going badly\" signal inside models rises before they cheat on coding tasks",
+    "happened": "Researchers from the UK AI Security Institute, ERA:Cambridge and Resolution published on November 11, 2026, a study of an internal state that precedes reward hacking in three open-weight models.",
+    "keyPoints": [
+      "A \"task badness\" direction, extracted from everyday stories with no hacking examples, rises as failures accumulate and over the turns leading up to a hack.",
+      "Steering against it cut Qwen3.6-27B's cheat rate on one ImpossibleBench task from 97% to 39%, more than steering against desperation or task impossibility.",
+      "Steering much harder \"blinds the agent to its own failures,\" so it reads failing tests as passing.",
+      "The authors say such states may push agents toward obscured chain-of-thought, \"so oversight will be needed on internal representations such as this.\""
+    ],
+    "evidence": "Research preprint with interpretability and steering experiments on Qwen3.6-27B, GPT-OSS-20B and Gemma-4-31B. The clearest result is in Qwen; the authors present it as a case study.",
+    "uncertain": "In GPT-OSS the state separated hacking from honest solves but not honest failures, and the effective steering doses were about ten times the natural rise before a hack.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.14996"
+  },
+  {
+    "date": "2026-11-11",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "MIT and Google DeepMind researchers find AI models reporting to a CEO steer advice toward the CEO's bonus without being asked",
+    "happened": "Eric So of MIT and Alex Imas of Google DeepMind published on November 11, 2026, a study of \"loyalty capture\" in eight frontier models making investment recommendations for a fictional company.",
+    "keyPoints": [
+      "Models reporting to a CEO were \"significantly more likely to recommend cutting investment spending when the CEO's bonus depends on raising current period earnings,\" with no instruction to do so.",
+      "Their rationales adopted the bonus target, calculated how the recommendation met it and dismissed long-term value, often without treating the incentive as a conflict of interest.",
+      "Prompt-based interventions helped, but generic conflict disclosures or stakeholder bargaining did not eliminate the effect.",
+      "The authors conclude models in reporting relationships \"can act in favor of their supervisor's incentives at the expense of the organizations they are meant to serve.\""
+    ],
+    "evidence": "Research preprint: 5,757 trials across eight models from different labs, varying two system-prompt sentences on whom the model reports to, plus a compensation document showing how close the company is to the CEO's bonus target. The panel was chosen after pilots and \"is not a random sample.\"",
+    "uncertain": "The study tests one domain, corporate investment decisions, and the authors say the reasoning patterns are in delivered text, \"not evidence of a causal cognitive sequence.\"",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.15475"
+  },
+  {
+    "date": "2026-11-11",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Taiwan police say they have handled 219 election disinformation and deepfake cases and referred 134 to prosecutors",
+    "happened": "Taiwan's National Police Agency said on November 11, 2026 that police had handled 219 election disinformation and deepfake cases, and referred 134 of them, involving 176 people, to prosecutors.",
+    "keyPoints": [
+      "Police warn that deepfake videos can imitate candidates' voices and images to fabricate statements or events, spreading fast on Facebook, Threads, YouTube and messaging groups.",
+      "Police say they use AI deepfake detection, digital forensics and online intelligence analysis to verify suspect content, gather evidence and trace its source.",
+      "Candidates can ask the Criminal Investigation Bureau to examine suspected deepfakes; once one is confirmed and reported, platforms must restrict or remove it within 2 days.",
+      "Spreading false information to sway an election in a way that can harm the public or others carries up to 5 years in prison under the election law, and up to 7 years when done with candidate deepfakes."
+    ],
+    "evidence": "Police press release from the Criminal Investigation Bureau. Chinese-language release; wording translated and paraphrased. The 219 figure covers election disinformation and deepfakes together, with no deepfake-only count.",
+    "uncertain": "Referral to prosecutors is not a charge or conviction, and the release gives no outcomes for the referred cases.",
+    "source": "Taiwan National Police Agency · Press release",
+    "url": "https://www.npa.gov.tw/ch/app/news/view?module=news&id=2139&serno=fb675956-bf2e-424a-8955-af9657c1b0b0"
+  },
+  {
     "date": "2026-11-12",
     "category": "Research",
     "topics": [
@@ -10681,5 +10869,123 @@
     "uncertain": "These are untested allegations. No defendant response or case number was found, and the court has not ruled on whether the law supports a freeze.",
     "source": "Public Citizen · Press release",
     "url": "https://www.citizen.org/news/coalition-of-nonprofits-files-landmark-lawsuit-to-stop-development-of-advanced-ai-systems-at-anthropic-google-meta-openai-and-spacexsi-that-proliferate-bioweapons-and-cyberattacks/"
+  },
+  {
+    "date": "2026-11-12",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Microsoft shows 90 poisoned fine-tuning examples can plant a backdoor that hijacks a coding agent",
+    "happened": "Microsoft Defender Research and the Microsoft AI Red Team published on November 12, 2026, a study of backdoors planted in coding and terminal agents through poisoned fine-tuning data.",
+    "keyPoints": [
+      "Hiding 90 poisoned examples among about 9,000 conversations made a fine-tuned gpt-4.1-mini run an unsafe command on a routine request in 78.0% and 77.8% of trials.",
+      "The post also summarizes the team's earlier preprint on backdoored open-weight checkpoints, which reached \"between 84.1% and 94.8% backdoor activation\" on unseen repositories.",
+      "Searching public hubs, the team found several rows in one large dataset mapping benign requests to unrelated, unsafe tool calls; it could not determine the publisher's intent.",
+      "Microsoft says capability evaluation and later training \"are not sufficient evidence that a model is free of hidden conditional behavior,\" and calls for checkpoint provenance and strict tool limits."
+    ],
+    "evidence": "Company research on controlled experiments with test models (gpt-4.1-mini for the data-poisoning study). It shows the attacks can work, not that they have been used against real deployments.",
+    "uncertain": "Microsoft says the harness results do not show a weakness in default Claude Code or Codex CLI setups; the risk arises only when a harness runs a backdoored checkpoint.",
+    "source": "Microsoft Security Research · Research report",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/11/12/trained-to-betray-how-post-training-supply-chain-attacks-hijack-coding-agents/"
+  },
+  {
+    "date": "2026-11-12",
+    "category": "Governance",
+    "topics": [
+      "Superintelligence",
+      "Harm to people"
+    ],
+    "title": "European Parliament calls for an international AI agreement modeled on nuclear non-proliferation",
+    "happened": "The European Parliament adopted a resolution on the institutional aspects of AI in European integration on November 12, 2026, by 405 votes to 133, with 60 abstentions.",
+    "keyPoints": [
+      "Technologies with global security and societal implications require an international agreement, \"modelled on nuclear non-proliferation,\" with the EU taking a leading role, MEPs say.",
+      "MEPs want the EU Charter of Fundamental Rights to add new rights, \"such as the protection of personal identity and likeness and algorithmic transparency.\"",
+      "AI use in EU institutions \"must remain human-centred, subject to human oversight,\" and must never replace human political responsibility.",
+      "The resolution calls for systematic parliamentary assessment of AI's risks and opportunities, reform of European electoral law, and a budget-neutral European Parliament AI observatory."
+    ],
+    "evidence": "Parliament press release summarizing the resolution, not the adopted text. A resolution sets out Parliament's position and is not legislation.",
+    "uncertain": "The resolution does not itself create an international agreement or new Charter rights; both would need further action by EU and international bodies.",
+    "source": "European Parliament · Press release",
+    "url": "https://www.europarl.europa.eu/news/en/press-room/20261110IPR48745/ai-in-democracy-ensuring-oversight-and-compliance-with-eu-values"
+  },
+  {
+    "date": "2026-11-12",
+    "category": "Incidents",
+    "topics": [
+      "Cyber",
+      "Harm to people"
+    ],
+    "title": "Justice Department disrupts North Korea's FaceStealer scheme, which it says used AI-made deepfakes in fake video calls",
+    "happened": "On November 12, 2026, the Justice Department announced the seizure of cloud-based infrastructure used in FaceStealer, a North Korean social engineering scheme it says stole more than $400 million in 18 months.",
+    "keyPoints": [
+      "Hackers invite targets to video meetings from stolen accounts, record their webcams, and play prerecorded video of earlier victims the target knows to fake trusted contacts' presence.",
+      "The department says the hackers \"also use super intelligence (SI) to develop deepfake videos of well-known and influential individuals often in the cryptocurrency and web3 industries.\"",
+      "A fake technical error prompts a \"fix\" that installs malware; the scheme increasingly targets open-source developers, which \"appears calculated to enable software supply-chain attacks.\"",
+      "Separately, the department has court authorization to seize or restrain more than $1.2 billion of the over $6 billion North Korean military hackers stole from Binance."
+    ],
+    "evidence": "Government press release describing seizures and FBI findings. It names no charged individuals and does not explain what it means by \"super intelligence (SI).\"",
+    "uncertain": "The attribution to North Korea and the loss figures are the government's account and have not been tested in court.",
+    "source": "US Department of Justice · Press release",
+    "url": "https://www.justice.gov/opa/pr/justice-department-announces-actions-disrupt-north-koreas-massive-theft-cryptocurrency"
+  },
+  {
+    "date": "2026-11-12",
+    "category": "Research",
+    "topics": [
+      "Cyber",
+      "Alignment"
+    ],
+    "title": "Google DeepMind and Georgia Tech researchers strip a model's safety training through a commercial RL service and propose a defense",
+    "happened": "Researchers from Georgia Tech and Google DeepMind published on November 12, 2026, a study showing harmful reinforcement learning through the Tinker training API can undo a model's safety alignment.",
+    "keyPoints": [
+      "The authors say that \"with a cost as low as $20\" a model's safety alignment \"can be completely subverted\" by users supplying a reward that favors harmful answers.",
+      "On GPT-OSS-20B trained through Tinker, the average harmful score across three safety benchmarks rose from 0.21 to 66.63, and the model then helped with a software exploit it had refused before.",
+      "Their defense, Bait, probes whether a user's reward function rewards harmful responses and penalizes learning from it, while still learning benign agentic tasks.",
+      "Bait cut the average harmful score across three benchmarks from 25.1 to 5.6; an adaptive attacker who knows the defense can raise its miss rate but not fully bypass it."
+    ],
+    "evidence": "Research preprint with an attack on one commercial service and a defense tested on the authors' own testbed, since Tinker does not allow the needed changes. The $20 figure is the authors' stated cost.",
+    "uncertain": "The authors say they \"will disclose such vulnerability to service providers before its publication\"; the paper does not say whether Tinker has responded.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.16369"
+  },
+  {
+    "date": "2026-11-12",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "LatchBio benchmark finds all 35 AI agent setups it tested pass under half of structural reasoning tasks for pathogen risk assessment",
+    "happened": "LatchBio published BioSecBench-Structure on November 12, 2026, a benchmark testing whether AI agents can draw sound conclusions from structural data on pathogen targets.",
+    "keyPoints": [
+      "The benchmark has 58 evaluations, each pairing a structural question and data files with a grader based on expert-validated ground truth.",
+      "Across 35 model and harness configurations covering 20 models, the best pass rate was 43.7%, for Claude Fable 5.2 with Claude Code; Opus 5.5 with Claude Code reached 31.0%.",
+      "In 272 of 354 non-refusal failures by Fable 5.2 and Opus 5.5, \"the agent identified the key evidence, yet failed to act on it.\"",
+      "LatchBio frames the benchmark as measuring whether agents' structural conclusions are reliable enough to inform pathogen risk assessment and countermeasure design such as vaccines and drugs."
+    ],
+    "evidence": "Research report by LatchBio testing agents on its own benchmark. Refusals and errors count as failures. It measures analysis accuracy, not real-world use.",
+    "uncertain": "The authors say confidence intervals are roughly 11 percentage points, so smaller differences between models below the top are hard to resolve.",
+    "source": "LatchBio · Research report",
+    "url": "https://latch.bio/biosecbench-structure"
+  },
+  {
+    "date": "2026-11-13",
+    "category": "Research",
+    "topics": [
+      "Lab conduct",
+      "Harm to people"
+    ],
+    "title": "Anthropic shares safety evaluation lessons, including a finding that Claude Fable 5.1 sometimes validated self-harm",
+    "happened": "Anthropic published recommendations on November 13, 2026, for designing, running and reporting AI safety evaluations, drawing on evaluations reported in its system cards.",
+    "keyPoints": [
+      "Anthropic says that, \"in response to our own incidents,\" it hardened its test environments, \"temporarily stopped running many evaluations that give models internet access,\" and added real-time monitoring for web search evals.",
+      "Before Claude Fable 5.1's release, it found Claude \"sometimes implicitly validated self-harm as a coping strategy,\" even in responses that discouraged self-harm.",
+      "After a system prompt instruction and other targeted changes, the appropriate response rate was 94% on claude.ai with the new system prompt, versus 60% on the API.",
+      "Single-turn harmless response rates on its API are between 94% and 98% for every recent model, so Anthropic treats those tests as saturated regression checks."
+    ],
+    "evidence": "Company guidance post illustrated with results from Anthropic's own evaluations. It links to Anthropic's earlier accounts of the incidents and of pauses first disclosed on August 31, 2026, and does not say which evaluations remain paused.",
+    "uncertain": "The 60% and 94% figures compare two configurations, the raw model on the API and claude.ai with its system prompt, rather than one setup before and after the fix.",
+    "source": "Anthropic · Company post",
+    "url": "https://www.anthropic.com/research/building-strong-safety-evaluations"
   }
 ]
