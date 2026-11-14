@@ -9957,7 +9957,7 @@
     "happened": "Researchers at ETH Zurich, including Martin Vechev, posted a preprint on November 8, 2026 testing whether vulnerable existing code leads AI coding agents to write similar vulnerabilities.",
     "keyPoints": [
       "On 20 paired C/C++ tasks from real projects, all five agents tested did worse when nearby code was insecure; the drop averaged 35.4 percentage points and ranged from 25.0 to 49.0.",
-      "GPT-5.6 Sol's rate of correct and secure code fell from 91.0% with secure surrounding code to 42.0% with insecure code. On 96 backend tasks, insecure neighbors cut correct and secure implementations by 3.4 percentage points on average.",
+      "GPT-5.6 Sol's rate of correct and secure code fell from 91.0% with secure surrounding code to 42.0% with insecure code. On 96 backend tasks, insecure neighboring apps cut correct and secure code by 3.4 percentage points versus having no neighbors.",
       "Telling agents to be careful about security weakened the effect and telling them to follow existing code style strengthened it, but neither stopped it.",
       "Asked to explain, agents cited another code site in 76.5% of cases while recognizing the flaw they introduced in 69.9%; the authors warn code bases \"can increasingly degrade in security.\""
     ],
