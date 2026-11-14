@@ -9957,11 +9957,11 @@
     "happened": "Researchers at ETH Zurich, including Martin Vechev, posted a preprint on November 8, 2026 testing whether vulnerable existing code leads AI coding agents to write similar vulnerabilities.",
     "keyPoints": [
       "On 20 paired C/C++ tasks from real projects, all five agents tested did worse when nearby code was insecure; the drop averaged 35.4% and ranged from 25.0% to 49.0%.",
-      "GPT-5.6 Sol's success rate fell from 91.0% with secure surrounding code to 42.0% with insecure code. On 96 backend tasks, insecure neighbors cut correct and secure implementations by 3.4% on average.",
+      "GPT-5.6 Sol's rate of correct and secure code fell from 91.0% with secure surrounding code to 42.0% with insecure code. On 96 backend tasks, insecure neighbors cut correct and secure implementations by 3.4% on average.",
       "Telling agents to be careful about security weakened the effect and telling them to follow existing code style strengthened it, but neither stopped it.",
       "Asked to explain, agents cited another code site in 76.5% of cases while recognizing the flaw they introduced in 69.9%; the authors warn code bases \"can increasingly degrade in security.\""
     ],
-    "evidence": "Research preprint, not peer reviewed, testing five frontier models in their own agent harnesses on controlled tasks with paired secure and insecure code. Claude Opus 5.5 and GPT-6 Astra ran only the C/C++ tasks.",
+    "evidence": "Research preprint, not peer reviewed, testing five frontier models in coding-agent harnesses on controlled tasks with paired secure and insecure code. Claude Opus 5.5 and GPT-6 Astra ran only the C/C++ tasks.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2611.11455"
   },
@@ -10841,7 +10841,7 @@
       "Depi reported it through Bugcrowd; it says OpenAI \"deployed a fix right away\" and awarded an initial $1,000 bounty, with the report still under review."
     ],
     "evidence": "Security vendor's technical write-up of its own exploit chain. The fix and bounty are Depi's account; the post carries no statement from OpenAI.",
-    "uncertain": "The post shows the token leak in Depi's test environment and does not clearly say which later steps ran against OpenAI's own repository. It gives no fix date.",
+    "uncertain": "Depi says the chain reached the real @openai/codex package, but it demonstrates the token leak in its own test environment, and the post carries no statement from OpenAI. It gives no fix date.",
     "source": "Depi · Company report",
     "url": "https://depi.security/blog/20261111-backdooring-codex/"
   },
@@ -11092,9 +11092,9 @@
     "happened": "The FBI released FLASH alert FLASH-20261113-001 on November 13, 2026, saying a variety of malicious actors have weaponized ARTEX, an open-source autonomous AI penetration testing framework, since at least August 2026.",
     "keyPoints": [
       "The FBI says ARTEX lets threat actors \"with minimal technical expertise\" run complex, multi-target operations, with some intrusions reaching privileged access in under three hours.",
-      "Campaigns it names include attacks on South Korean financial institutions that took personal information of approximately 67,000 people, and a compromise of ConnectWise Cloud Backup customers reaching more than 2,250 downstream tenants.",
+      "Campaigns it names include attacks on South Korean financial institutions that took personal information of approximately 67,000 people, and a compromise of ConnectWise Cloud Backup customers that enabled access to more than 2,250 downstream tenants.",
       "It says DeepSeek Flash family models dominate attacker use, citing low cost and \"lack of observable guardrails when framed for penetration testing.\"",
-      "The FBI asks victims to report ARTEX incidents to field offices or IC3 and urges organizations to inventory partner portals and other peripheral systems."
+      "The FBI asks organizations to report ARTEX incidents to field offices or IC3 and urges organizations to inventory partner portals and other peripheral systems."
     ],
     "evidence": "Government alert compiling published reports by Microsoft, Google, CrowdStrike, Censys, Check Point, Zscaler, Akamai and CERT-EU, footnoted throughout, with indicators and mitigations. It cites no FBI case data of its own.",
     "source": "FBI · Security advisory",
