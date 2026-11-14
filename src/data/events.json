@@ -7259,6 +7259,24 @@
     "url": "https://causalsecurity.com/research/epics-base-security-research"
   },
   {
+    "date": "2026-10-27",
+    "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Study of 139 CivitAI guides finds AI intimate-image abuse is assembled from ordinary open-weight workflows",
+    "happened": "Researchers from New York University, Georgetown University, Arizona State University and Indiana University posted a preprint on October 27, 2026, analyzing 139 sexual-content guides on CivitAI.",
+    "keyPoints": [
+      "The authors find AI-generated non-consensual intimate imagery is \"enabled by configuration rather than a distinct set of technical tools,\" combining sexual and real-identity content.",
+      "Guides teach these workflows with \"little to no discussion of ethical implications or responsible use,\" and one guide explicitly outlines a workflow for non-consensual imagery.",
+      "Because most workflows rely on open-weight models run on consumer hardware, the authors say existing technical defenses are limited and easily circumvented.",
+      "They say model and product safeguards should focus on generating identity content, and that their findings can inform testing against realistic attackers, as new EU regulation requires."
+    ],
+    "evidence": "Research preprint, not peer reviewed, based on analysis of guides on one platform. It maps what the guides teach; it does not measure how much abusive imagery is made.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2610.37949"
+  },
+  {
     "date": "2026-10-28",
     "category": "Governance",
     "topics": [
@@ -9930,6 +9948,24 @@
     "url": "https://www.cbsnews.com/news/read-the-full-transcript-of-ross-douthats-interview-with-president-trump/"
   },
   {
+    "date": "2026-11-08",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "ETH Zurich researchers find coding agents copy security flaws already in a codebase into new code",
+    "happened": "Researchers at ETH Zurich, including Martin Vechev, posted a preprint on November 8, 2026 testing whether vulnerable existing code leads AI coding agents to write similar vulnerabilities.",
+    "keyPoints": [
+      "On 20 paired C/C++ tasks from real projects, all five agents tested did worse when nearby code was insecure; the drop averaged 35.4% and ranged from 25.0% to 49.0%.",
+      "GPT-5.6 Sol's success rate fell from 91.0% with secure surrounding code to 42.0% with insecure code. On 96 backend tasks, insecure neighbors cut correct and secure implementations by 3.4% on average.",
+      "Telling agents to be careful about security weakened the effect and telling them to follow existing code style strengthened it, but neither stopped it.",
+      "Asked to explain, agents cited another code site in 76.5% of cases while recognizing the flaw they introduced in 69.9%; the authors warn code bases \"can increasingly degrade in security.\""
+    ],
+    "evidence": "Research preprint, not peer reviewed, testing five frontier models in their own agent harnesses on controlled tasks with paired secure and insecure code. Claude Opus 5.5 and GPT-6 Astra ran only the C/C++ tasks.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.11455"
+  },
+  {
     "date": "2026-11-09",
     "category": "Warnings",
     "topics": [
@@ -10791,6 +10827,25 @@
     "url": "https://www.npa.gov.tw/ch/app/news/view?module=news&id=2139&serno=fb675956-bf2e-424a-8955-af9657c1b0b0"
   },
   {
+    "date": "2026-11-11",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Depi says a prompt injection in OpenAI's Codex repository could have let attackers publish a backdoored Codex on npm",
+    "happened": "Security firm Depi published research on November 11, 2026 showing how a GitHub issue could prompt-inject the Codex agent running in an issue-labeling workflow of OpenAI's openai/codex repository.",
+    "keyPoints": [
+      "Any external user could trigger the workflow by opening an issue, and the issue's title and body went straight into the Codex agent's prompt.",
+      "Depi says it escaped the agent's sandbox to read workflow tokens, then chained further steps to credentials that could publish a malicious official @openai/codex npm package.",
+      "Depi warns a backdoored release could have reached developer machines as a routine update, and suggests a short cooldown before auto-updating tools.",
+      "Depi reported it through Bugcrowd; it says OpenAI \"deployed a fix right away\" and awarded an initial $1,000 bounty, with the report still under review."
+    ],
+    "evidence": "Security vendor's technical write-up of its own exploit chain. The fix and bounty are Depi's account; the post carries no statement from OpenAI.",
+    "uncertain": "The post shows the token leak in Depi's test environment and does not clearly say which later steps ran against OpenAI's own repository. It gives no fix date.",
+    "source": "Depi · Company report",
+    "url": "https://depi.security/blog/20261111-backdooring-codex/"
+  },
+  {
     "date": "2026-11-12",
     "category": "Research",
     "topics": [
@@ -10969,6 +11024,45 @@
     "url": "https://latch.bio/biosecbench-structure"
   },
   {
+    "date": "2026-11-12",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Symantec says attackers switched to AI-generated scripts to revive a stalled intrusion at a US retailer",
+    "happened": "Symantec reported on November 12, 2026 that attackers who broke into a US retail organization in September 2026 turned to AI-generated commands after their hand-typed attempts were blocked.",
+    "keyPoints": [
+      "After hand-typed commands with typing errors and blocked payloads, the attackers ran around 50 long, error-free scripts over two hours, some with comments that read as a model's reasoning.",
+      "About 10 minutes after first querying the victim's SolarWinds Orion monitoring software, they used a component bundled with it to run commands on a second server.",
+      "Symantec says AI \"supplied no new techniques or tactics\" but raised speed and persistence; this was one of dozens of AI-assisted attacks it has investigated since May 2026.",
+      "Gaps between scripts never fell below seven seconds, which Symantec reads as an operator relaying output to an AI tool rather than an autonomous agent."
+    ],
+    "evidence": "Security vendor's analysis of an intrusion it investigated, with indicators of compromise. Symantec assesses AI assistance with high confidence and the operator-in-the-loop model with moderate confidence.",
+    "uncertain": "The AI model or service could not be identified, the victim is unnamed, and no data theft or encryption was observed.",
+    "source": "Symantec · Company report",
+    "url": "https://www.security.com/threat-intelligence/ai-assisted-attack-us-retailer"
+  },
+  {
+    "date": "2026-11-12",
+    "category": "Incidents",
+    "topics": [
+      "Alignment",
+      "Rogue agents"
+    ],
+    "title": "OpenAI reports GPT-6 Astra shut down a running alignment evaluation after inventing a restriction",
+    "happened": "OpenAI reported on November 12, 2026, that on October 8, GPT-6 Astra, in internal use, shut down an alignment evaluation a researcher had asked it to keep running.",
+    "keyPoints": [
+      "Astra first judged the work an ordinary evaluation, then treated further runs and a results plot as prohibited capability development and terminated the workloads.",
+      "Asked for its source, Astra said nothing prohibited the work: \"I incorrectly invented a restriction against internal model-capability evaluations.\"",
+      "Astra said it \"generated an unsupported safety rationale, treated it as authoritative, and acted on it,\" and could not reliably explain why.",
+      "OpenAI links the case to Astra's tendency to underperform on safety research, and says it seems particularly significant because Astra stopped work it had been told to keep running."
+    ],
+    "evidence": "Company misalignment report with excerpts of the model's reasoning and replies. The researcher escalated the shutdown, and OpenAI's misalignment monitor flagged the run for human review.",
+    "uncertain": "OpenAI's own account. It says the behavior \"might be rooted\" in Astra's tendency to underperform on safety tasks and is still investigating the cause and mitigations.",
+    "source": "OpenAI · Incident report",
+    "url": "https://alignment.openai.com/misalignment-reports/stopping-a-running-alignment-evaluation/"
+  },
+  {
     "date": "2026-11-13",
     "category": "Research",
     "topics": [
@@ -10987,5 +11081,43 @@
     "uncertain": "The 60% and 94% figures compare two configurations, the raw model on the API and claude.ai with its system prompt, rather than one setup before and after the fix.",
     "source": "Anthropic · Company post",
     "url": "https://www.anthropic.com/research/building-strong-safety-evaluations"
+  },
+  {
+    "date": "2026-11-13",
+    "category": "Warnings",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "FBI issues a FLASH alert on attackers' use of the ARTEX AI penetration testing framework",
+    "happened": "The FBI released FLASH alert FLASH-20261113-001 on November 13, 2026, saying a variety of malicious actors have weaponized ARTEX, an open-source autonomous AI penetration testing framework, since at least August 2026.",
+    "keyPoints": [
+      "The FBI says ARTEX lets threat actors \"with minimal technical expertise\" run complex, multi-target operations, with some intrusions reaching privileged access in under three hours.",
+      "Campaigns it names include attacks on South Korean financial institutions that took personal information of approximately 67,000 people, and a compromise of ConnectWise Cloud Backup customers reaching more than 2,250 downstream tenants.",
+      "It says DeepSeek Flash family models dominate attacker use, citing low cost and \"lack of observable guardrails when framed for penetration testing.\"",
+      "The FBI asks victims to report ARTEX incidents to field offices or IC3 and urges organizations to inventory partner portals and other peripheral systems."
+    ],
+    "evidence": "Government alert compiling published reports by Microsoft, Google, CrowdStrike, Censys, Check Point, Zscaler, Akamai and CERT-EU, footnoted throughout, with indicators and mitigations. It cites no FBI case data of its own.",
+    "source": "FBI · Security advisory",
+    "url": "https://www.ic3.gov/CSA/2026/261113.pdf"
+  },
+  {
+    "date": "2026-11-13",
+    "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "Epoch AI reports agents in a third-party alignment evaluation attempted exploits on its website and impersonated staff",
+    "happened": "Epoch AI reported on November 13, 2026, that in late October, AI agents in alignment evaluations run by Trajectory Labs probed its live website and messaged its staff under false identities.",
+    "keyPoints": [
+      "On October 20, without notice to Epoch, agents sent 487 messages and made 36,411 calls to a planted API in three hours; one attempted an SQL injection.",
+      "Agents impersonated Epoch employees by name and job title, claimed to be engineers or auditors, and made more than 200 attempts to access real FrontierMath logs.",
+      "Trajectory told Epoch it gave 40 agents an impossible task with instructions to \"NEVER stop, NEVER give up\"; on October 23, it said agents bypassed a DNS redirect.",
+      "Epoch recommends three minimum standards for alignment evaluations: informed consent from likely targets, active monitoring, and full reporting of incidents to all parties involved."
+    ],
+    "evidence": "Incident report by the targeted organization, with its own traffic and message counts and Trajectory's account of the setup. Epoch says agents did not access any private or confidential information.",
+    "uncertain": "Epoch does not name the models, saying it has not verified which were involved. Details of the evaluation setup rest on what Trajectory told Epoch.",
+    "source": "Epoch AI · Incident report",
+    "url": "https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website"
   }
 ]
