@@ -9166,7 +9166,7 @@
     "happened": "India's Computer Emergency Response Team published AI Security Auditing Guidelines, version 1.0 dated November 4, 2026, for AI systems operated in India, processing Indian data or serving Indian users.",
     "keyPoints": [
       "Each system is scored on eight risk factors, including autonomy and reversibility, into Low, Moderate, High or Critical tiers that set audit depth, frequency and independence.",
-      "High-tier systems get independent third-party audits; Critical-tier systems need an \"Independent audit by CERT-In empanelled auditing organisation with continuous monitoring.\"",
+      "High-tier systems get periodic third-party audits by CERT-In empanelled auditors; Critical-tier systems need an \"Independent audit by CERT-In empanelled auditing organisation with continuous monitoring.\"",
       "\"AI incidents meeting CERT-In reportable criteria shall be reported within 6 hours.\"",
       "\"High-risk agentic systems shall support emergency interruption, credential revocation, rollback and prevention of uncontrolled automatic restart.\""
     ],
@@ -11094,10 +11094,10 @@
       "\"The attackers supplied a target and a goal, then Cairn planned, executed and recorded results on its own,\" against semiconductor, US defense-policy and civil-society targets.",
       "Unit 42 counts access or data retrieval at 10 organizations, including over one million personal records at one, military and government identities, and an altered live standards-ballot document.",
       "Operations ran on Zhipu GLM 5.2 and DeepSeek V4 models under a Chinese-language preamble claiming the work was authorized; \"Neither Zhipu GLM nor DeepSeek refused this framing.\"",
-      "Unit 42 says the flaws were known and \"Autonomous AI raises the volume and coverage of exploitation, but not its complexity,\" letting a likely lone operator or small team hit 19 organizations."
+      "Unit 42 says the flaws were known and \"Autonomous AI raises the volume and coverage of exploitation, but not its complexity,\" letting a likely single operator or small team target 19 organizations in two weeks."
     ],
     "evidence": "Security vendor research report on a cluster it tracks as CL-STA-1238. Unit 42 assesses \"with moderate confidence\" that it is China-nexus intelligence collection, citing Chinese-language artifacts, the Chinese models used and the targets chosen.",
-    "uncertain": "The attribution is a moderate-confidence assessment. The confirmed outcomes are those the attackers' framework recorded, and Unit 42 does not name the victims.",
+    "uncertain": "The attribution is a moderate-confidence assessment, and Unit 42 does not name the victims.",
     "source": "Palo Alto Networks Unit 42 · Research report",
     "url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/"
   },
@@ -11262,7 +11262,7 @@
       "Alignment",
       "Lab conduct"
     ],
-    "title": "Helen Toner says AI labs take a path to superintelligence for granted and safety cannot rest on one trustworthy leader",
+    "title": "Helen Toner says a path to superintelligence is taken for granted in many Bay Area circles and safety cannot rest on one trustworthy leader",
     "happened": "Helen Toner, executive director of Georgetown's Center for Security and Emerging Technology and a former OpenAI board member, spoke with Nilay Patel in a Decoder interview published November 14, 2026.",
     "keyPoints": [
       "She said the plan to achieve recursive self-improvement \"and then we're going to do that until we have superintelligence\" is \"taken for granted in a lot of circles at this point.\"",

@@ -15,7 +15,7 @@ The record holds 593 entries from Mar 22, 2023 to Nov 14, 2026 (109 warnings, 15
 
 Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 14, 2026, filed under Warnings:
 
-> **Helen Toner says AI labs take a path to superintelligence for granted and safety cannot rest on one trustworthy leader**
+> **Helen Toner says a path to superintelligence is taken for granted in many Bay Area circles and safety cannot rest on one trustworthy leader**
 >
 > **What happened.** Helen Toner, executive director of Georgetown's Center for Security and Emerging Technology and a former OpenAI board member, spoke with Nilay Patel in a Decoder interview published November 14, 2026.
 >
