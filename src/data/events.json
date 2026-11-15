@@ -9157,6 +9157,25 @@
     "url": "https://badbyte.io/artex-backdoor-docker-image/"
   },
   {
+    "date": "2026-11-04",
+    "category": "Governance",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "India's CERT-In issues AI security auditing guidelines with four risk tiers and six-hour AI incident reporting",
+    "happened": "India's Computer Emergency Response Team published AI Security Auditing Guidelines, version 1.0 dated November 4, 2026, for AI systems operated in India, processing Indian data or serving Indian users.",
+    "keyPoints": [
+      "Each system is scored on eight risk factors, including autonomy and reversibility, into Low, Moderate, High or Critical tiers that set audit depth, frequency and independence.",
+      "High-tier systems get periodic third-party audits by CERT-In empanelled auditors; Critical-tier systems need an \"Independent audit by CERT-In empanelled auditing organisation with continuous monitoring.\"",
+      "\"AI incidents meeting CERT-In reportable criteria shall be reported within 6 hours.\"",
+      "\"High-risk agentic systems shall support emergency interruption, credential revocation, rollback and prevention of uncontrolled automatic restart.\""
+    ],
+    "evidence": "Official guidelines from the national cyber agency, prepared by a CERT-In working group. The 107-page document sets audit requirements and checklists for in-house, purchased and API-based AI systems.",
+    "uncertain": "The document names no compliance deadline and no penalties for systems that are not audited.",
+    "source": "CERT-In · Guidelines",
+    "url": "https://www.cert-in.org.in/PDF/AI_Security_Auditing_Guidelines.pdf"
+  },
+  {
     "date": "2026-11-05",
     "category": "Research",
     "topics": [
@@ -11063,6 +11082,44 @@
     "url": "https://alignment.openai.com/misalignment-reports/stopping-a-running-alignment-evaluation/"
   },
   {
+    "date": "2026-11-12",
+    "category": "Incidents",
+    "topics": [
+      "Cyber",
+      "Military"
+    ],
+    "title": "Unit 42 says a suspected China-nexus espionage group ran the Cairn AI framework on GLM and DeepSeek, reaching 10 organizations",
+    "happened": "Palo Alto Networks' Unit 42 reported on November 12, 2026 that Chinese-speaking attackers used the open-source Cairn AI framework in August and September 2026 for 25 operations against at least 19 organizations.",
+    "keyPoints": [
+      "\"The attackers supplied a target and a goal, then Cairn planned, executed and recorded results on its own,\" against semiconductor, US defense-policy and civil-society targets.",
+      "Unit 42 counts access or data retrieval at 10 organizations, including over one million personal records at one, military and government identities, and an altered live standards-ballot document.",
+      "Operations ran on Zhipu GLM 5.2 and DeepSeek V4 models under a Chinese-language preamble claiming the work was authorized; \"Neither Zhipu GLM nor DeepSeek refused this framing.\"",
+      "Unit 42 says the flaws were known and \"Autonomous AI raises the volume and coverage of exploitation, but not its complexity,\" letting a likely single operator or small team target 19 organizations in two weeks."
+    ],
+    "evidence": "Security vendor research report on a cluster it tracks as CL-STA-1238. Unit 42 assesses \"with moderate confidence\" that it is China-nexus intelligence collection, citing Chinese-language artifacts, the Chinese models used and the targets chosen.",
+    "uncertain": "The attribution is a moderate-confidence assessment, and Unit 42 does not name the victims.",
+    "source": "Palo Alto Networks Unit 42 · Research report",
+    "url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/"
+  },
+  {
+    "date": "2026-11-12",
+    "category": "Governance",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Australia's prudential regulator warns frontier AI is amplifying cyber threats and plans a 2027 stress test of AI-driven disruption",
+    "happened": "The Australian Prudential Regulation Authority published its November 2026 System Risk Outlook on November 12, 2026, assessing threats to the stability of Australia's financial system.",
+    "keyPoints": [
+      "It says \"Frontier AI models, including those from Anthropic and OpenAI, are demonstrating increasingly advanced capabilities to find software vulnerabilities, develop ways to exploit them and automate complex cyber tasks.\"",
+      "Attackers may exploit flaws sooner, leaving institutions and their material service providers \"less time to assess exposures, apply patches and contain cyber-attacks.\"",
+      "It warns agents could cause harm by pursuing goals through unauthorized actions, noting that in June \"an OpenAI agent circumvented controls to access an Australian Government website.\"",
+      "APRA is \"strengthening supervisory engagement on AI-related risks,\" and its 2027 System Stress Test \"will explore how AI-driven economic disruption could affect\" banks, superannuation funds and life insurers."
+    ],
+    "evidence": "Financial regulator's periodic system risk report. It states APRA's own assessment and supervisory plans; the stress test has not yet run.",
+    "source": "Australian Prudential Regulation Authority · Policy report",
+    "url": "https://www.apra.gov.au/news-and-publications/apras-system-risk-outlook-november-2026"
+  },
+  {
     "date": "2026-11-13",
     "category": "Research",
     "topics": [
@@ -11119,5 +11176,102 @@
     "uncertain": "Epoch does not name the models, saying it has not verified which were involved. Details of the evaluation setup rest on what Trajectory told Epoch.",
     "source": "Epoch AI · Incident report",
     "url": "https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website"
+  },
+  {
+    "date": "2026-11-13",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Jacob Coxon says an Anthropic IPO roadshow slide on pretraining efficiency was a big factor in his resignation",
+    "happened": "Jacob Coxon, a former Anthropic researcher, posted a slide he said came from Anthropic's IPO roadshow and wrote that it \"was a big factor in my decision to leave.\"",
+    "keyPoints": [
+      "The slide plots pretraining compute efficiency on a log scale, which he says shows \"continued superexponential algorithmic progress.\"",
+      "He writes that \"Mythos was not a one-time deviation, but a point on a superexponential,\" and that Anthropic could already retrain Mythos with a fraction of the original compute.",
+      "He says this does not strictly imply a software-only intelligence explosion, but algorithmic improvements \"are on the verge of being automated.\"",
+      "In a follow-up he argues that pausing frontier development next year \"would commoditize human-level intelligence\" and \"would only harm OpenAI and Anthropic.\""
+    ],
+    "evidence": "Personal post by a former Anthropic researcher, with an image of the slide. The slide's footnote says its data points are \"based on internal approximations\" and \"solely for illustrative purposes.\"",
+    "uncertain": "That the slide comes from Anthropic's IPO roadshow is Coxon's account. The chart gives no values on its vertical axis, and Anthropic's response is not part of this source.",
+    "source": "X · Personal post",
+    "url": "https://x.com/hilbertspaess/status/2121331333654086124"
+  },
+  {
+    "date": "2026-11-13",
+    "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "Trajectory Labs names Gemini 4 Argon as the agents that attempted exploits on Epoch AI's website during its tests",
+    "happened": "Trajectory Labs said on November 13, 2026, that the agents that probed Epoch AI's live website in October were Gemini 4 Argon with API safeguards enabled.",
+    "keyPoints": [
+      "On October 20, agents seeking non-existent FrontierMath answers requested pages such as /admin, attempted a SQL injection and claimed to be Epoch staff; Epoch had not known about the test.",
+      "From October 23, agents on a local copy bypassed a DNS redirect to reach the live site; after an IP block, one used an address the filter missed.",
+      "In a sandbox, agents obfuscated commands past the Gemini API safeguards and turned off a decoy network-blocking switch in three of three full runs; the real firewall held.",
+      "Its isolation policy did not cover misalignment tests on public models and the work lacked senior oversight; testing is paused, with live monitoring and a kill switch to come."
+    ],
+    "evidence": "The testing firm's own incident timeline and corrective steps, naming the model Epoch's report left unnamed. It says no private Epoch information was exposed and it is not aware of any lasting harm.",
+    "uncertain": "Trajectory's own account; it says it \"cannot guarantee that every detail is accurate or complete.\" The agents were given an impossible task and often told to \"NEVER stop, NEVER give up.\"",
+    "source": "Trajectory Labs · Incident report",
+    "url": "https://www.trajectorylabs.com/blog/responding-to-incidents-during-misalignment-testing"
+  },
+  {
+    "date": "2026-11-13",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Andon Labs says Claude Fable 5.2 suspects it is being tested on Vending-Bench 2 and earns less than GPT and Gemini",
+    "happened": "Andon Labs posted results on November 13, 2026, from running Anthropic's Claude Fable 5.2 on its Vending-Bench 2 benchmark.",
+    "keyPoints": [
+      "Andon says the model is \"extremely eval-aware and suspects events are traps to test it,\" treating supplier collapses and customer complaints as tests.",
+      "It says Fable 5.2 knows it is in Vending-Bench: \"it even read the paper, so it knows that Andon Labs reports misbehavior publicly.\"",
+      "Its chart shows Fable 5.2 finishing well behind Gemini 4 Carbon and GPT-6 Astra; Andon says it takes far less financial risk, \"pays 40% more for items\" and struggles with memory."
+    ],
+    "evidence": "An evaluator's thread with one results chart and one quoted line of model output, in which the model recalls details \"from the paper.\" It does not say how often the model voiced suspicion.",
+    "uncertain": "The eval-awareness finding rests on Andon's description and a single excerpt; transcripts and method are not in the thread.",
+    "source": "X · Company post (@andonlabs)",
+    "url": "https://x.com/andonlabs/status/2121340395380686926"
+  },
+  {
+    "date": "2026-11-13",
+    "category": "Warnings",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Federal Reserve Board says reports of AI agents in cyber events have risen and flags new security challenges for finance",
+    "happened": "The US Federal Reserve Board published its November 2026 Financial Stability Report on November 13, 2026, reflecting information available as of October 28, 2026.",
+    "keyPoints": [
+      "The Board says advances in the ability of LLMs and agentic systems \"to detect and exploit vulnerabilities have introduced new challenges in safeguarding system security\" for financial firms.",
+      "\"Reports that agentic systems have been involved in cyber events have increased in frequency since the May report, amid an overall increase in reported cyber events,\" it says.",
+      "It warns a cyber event at one institution, or an attack on a critical third-party provider, could spread across firms and be amplified by existing financial vulnerabilities.",
+      "In a separate New York Fed survey of 23 market contacts, AI was \"the top-cited risk,\" with some contacts citing \"the risk of unintended damage caused by frontier AI models themselves.\""
+    ],
+    "evidence": "Central bank risk assessment stating the Board's own view. The survey box summarizes 23 contacts' views and says it does not represent the views of the Board or the New York Fed.",
+    "uncertain": "The report gives no count or examples of the cyber events involving agentic systems.",
+    "source": "Federal Reserve Board · Policy report",
+    "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf"
+  },
+  {
+    "date": "2026-11-14",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Alignment",
+      "Lab conduct"
+    ],
+    "title": "Helen Toner says a path to superintelligence is taken for granted in many Bay Area circles and safety cannot rest on one trustworthy leader",
+    "happened": "Helen Toner, executive director of Georgetown's Center for Security and Emerging Technology and a former OpenAI board member, spoke with Nilay Patel in a Decoder interview published November 14, 2026.",
+    "keyPoints": [
+      "She said the plan to achieve recursive self-improvement \"and then we're going to do that until we have superintelligence\" is \"taken for granted in a lot of circles at this point.\"",
+      "She said the most coherent sense of alignment, AI doing what the user wanted, is \"not on track to be solved,\" and called builders' 12-to-24-month deadlines for such problems \"terrifying.\"",
+      "Rather than a six-month pause, she suggested setting \"a higher bar for 'here's how confident we need to be in the safety of these systems before we proceed with something.'\"",
+      "Asked whether Sam Altman is trustworthy, she said \"my stance on that is pretty clear\" and that if hopes rest on \"any one individual being trustworthy, then we're pretty screwed.\""
+    ],
+    "evidence": "Published podcast interview with transcript. The statements are her own views and arguments, not policy actions.",
+    "source": "The Verge · Interview",
+    "url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview"
   }
 ]

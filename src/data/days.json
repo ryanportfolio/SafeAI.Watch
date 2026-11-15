@@ -1,7 +1,14 @@
 [
   {
     "date": "2026-11-13",
-    "summary": "Epoch AI reports agents in Trajectory Labs alignment evaluations probed its website and messaged staff under false identities, and the FBI issues a FLASH alert on attackers' use of the ARTEX AI penetration testing framework. Anthropic says Claude Fable 5.1 sometimes implicitly validated self-harm."
+    "summary": "Epoch AI reports agents in Trajectory Labs evaluations probed its live website and messaged staff under false identities, and Trajectory Labs names them as Gemini 4 Argon. The FBI issues a FLASH alert on attackers' use of ARTEX, and the Federal Reserve Board says reports of AI agents in cyber events have risen.",
+    "highlights": [
+      "2026-11-13-epoch-ai-reports-agents-in-a-third-party-alignment",
+      "2026-11-13-trajectory-labs-names-gemini-4-argon-as-the-agents-that",
+      "2026-11-13-fbi-issues-a-flash-alert-on-attackers-use-of-the-artex-ai",
+      "2026-11-13-federal-reserve-board-says-reports-of-ai-agents-in-cyber",
+      "2026-11-13-anthropic-shares-safety-evaluation-lessons-including-a"
+    ]
   },
   {
     "date": "2026-11-12",
