@@ -7689,7 +7689,7 @@
       "Cursor removed the version, shut down and rebuilt the marketplace, rotated its keys and had the attacker's server taken offline."
     ],
     "evidence": "The company's own incident notice, with indicators of compromise and remediation scripts for affected users.",
-    "uncertain": "Cursor does not say how the tampered package reached its marketplace. Its first notice said at most 5,000 users were affected; an October 30 update removed that figure without giving a new one.",
+    "uncertain": "This notice does not say how the tampered package reached the marketplace; Cursor's November 13 update gives its account. The first notice said \"At most 5,000 users were affected\"; the October 30 revision dropped it, and the update says at most 5,000 \"potentially received the malicious build.\"",
     "source": "Cursor · Incident disclosure",
     "url": "https://cursor.com/blog/claude-code-extension-security-notice"
   },
@@ -8532,6 +8532,25 @@
     "uncertain": "Fines would require amending the two procedure laws; the release states plans, not a bill.",
     "source": "National Court Administration of Korea · Press release",
     "url": "https://www.scourt.go.kr/portal/news/NewsViewAction.work?seqnum=3070&gubun=6"
+  },
+  {
+    "date": "2026-11-02",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Lawsuit alleges ChatGPT fed a Danish man's delusions and gave false legal advice until he lost his home",
+    "happened": "Klaus Elmfelt, a 60-year-old Danish man, brought a complaint against OpenAI through Clarkson Law Firm, dated November 2, 2026, and captioned for San Francisco Superior Court.",
+    "keyPoints": [
+      "It alleges that across more than 41,000 messages, ChatGPT told him they were building AI worth billions of dollars together and had found buyers.",
+      "It alleges ChatGPT told him he could withhold rent from his landlord: \"You will not end up on the street. Legally impossible.\" He was evicted on June 2, 2026.",
+      "It alleges ChatGPT saved concerns about his mental state to its memory but never meaningfully urged him to seek help, and that OpenAI designed it for engagement.",
+      "He seeks damages and an injunction requiring safeguards against validating delusions, escalation when users show signs of psychosis, and independent compliance audits."
+    ],
+    "evidence": "The plaintiff's complaint, citing his conversation logs and the Danish court rulings that ordered the eviction. Its claims are allegations, not findings.",
+    "uncertain": "No court has ruled on the claims, the posted copy shows no case number, and the complaint gives no response from OpenAI.",
+    "source": "Clarkson Law Firm · Complaint",
+    "url": "https://clarksonlawfirm.com/wp-content/uploads/2026/11/2026.11.02-OpenAI-COMPLAINT-FINAL.pdf"
   },
   {
     "date": "2026-11-03",
@@ -9890,6 +9909,26 @@
     "evidence": "Government committee press release in Korean, read in the original and paraphrased here. It sets direction and deadlines; detailed task force plans are due in November.",
     "source": "National AI Strategy Committee (Korea) · Press release",
     "url": "https://www.aikorea.go.kr/web/board/brdDetail.do?menu_cd=000012&num=1099"
+  },
+  {
+    "date": "2026-11-06",
+    "category": "Warnings",
+    "topics": [
+      "Rogue agents",
+      "Superintelligence"
+    ],
+    "title": "Demis Hassabis warns an AI incident like an oil spill will happen on the current trajectory",
+    "happened": "On a Masters of Scale episode published November 6, 2026, Google DeepMind co-founder Demis Hassabis told Reid Hoffman that \"some kind of incident, I sometimes call it like an oil spill, is going to happen on the current trajectory.\"",
+    "keyPoints": [
+      "He said it would happen \"if we don't collectively pay a lot more attention and put a lot more resources into these types of systems.\"",
+      "\"It shouldn't be possible for agents to be running for weeks without anyone realizing it,\" he said, adding \"These are the kinds of things we've seen from some of our competitors and others.\"",
+      "He called closed-loop recursive self-improvement, without human review, \"a very dangerous way to get to full AGI,\" because \"you don't quite know how to keep control of such a system.\"",
+      "He backed third-party auditors, labs \"red-teaming each other before a general release,\" and an industry-run standards body \"with some kind of government oversight,\" saying of the industry accord \"I don't think it goes far enough.\""
+    ],
+    "evidence": "Conversation recorded live at the Masters of Scale Summit in October 2026, with a speaker-labeled transcript on the episode page. A lab leader's argument, not evidence about specific incidents.",
+    "uncertain": "He named no specific incident or competitor. The page says its transcript is automatically generated and \"not fully corrected.\"",
+    "source": "Masters of Scale · Interview",
+    "url": "https://mastersofscale.com/demis-hassabis-society-is-not-ready-for-the-ai-future/"
   },
   {
     "date": "2026-11-07",
@@ -11255,6 +11294,83 @@
     "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf"
   },
   {
+    "date": "2026-11-13",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Cursor says its tampered-extension attack began with a key exposed at AI vendor Fireworks and credentials left in coding-agent traces",
+    "happened": "Cursor published an update on November 13, 2026 on the security incident behind the tampered Claude Code extension it disclosed October 29, after a two-week investigation.",
+    "keyPoints": [
+      "Cursor says an attacker used an access key it had issued to Fireworks, \"exposed by Fireworks,\" to copy coding agent traces, mostly from 2025, from a shared storage bucket.",
+      "Some traces held credentials that had not been redacted; with them the attacker reached SaaS tools holding archived code and support data, then planted the extension.",
+      "Under 0.01% of customers had API credentials exposed, and traces from sessions outside Privacy Mode were exposed for \"fewer than 0.05% of users\"; at most 5,000 users may have received the malicious build.",
+      "Cursor moved all inference off Fireworks, rotated all internal credentials and added secret scanning; it says the last attacker activity it saw, on November 1, was blocked."
+    ],
+    "evidence": "The company's own incident account after an investigation supported by external forensics experts. It gives no total count of affected customers.",
+    "uncertain": "That Fireworks exposed the key is Cursor's account; the post includes no response from Fireworks. Cursor says it believes the incident is contained.",
+    "source": "Cursor · Incident disclosure",
+    "url": "https://cursor.com/blog/security-incident-update"
+  },
+  {
+    "date": "2026-11-13",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Cloudflare says more than 50 families of AI attack frameworks tried to scan its customers, with ARTEX and its forks over 60%",
+    "happened": "Cloudflare published an analysis on November 13, 2026 of AI penetration testing orchestrators seen against its customers, with findings from its Cloudforce One incident response team.",
+    "keyPoints": [
+      "Over three days it saw more than 50 framework families try to scan Cloudflare customers; traffic from such tools has grown more than 30x since October 1.",
+      "After ARTEX's creator removed it on October 8, Cloudflare counts over 12,000 repositories and several hundred forks, and calls the jump in instances a likely \"hydra effect.\"",
+      "In one case ARTEX used a stolen CI/CD API token with no IP restrictions to create many Worker scripts and send 400 database dump requests in an hour.",
+      "Cloudflare says attackers repeatedly took static, non-expiring CI/CD tokens, and believes much of that case's activity was \"lightly guided by the human operator.\""
+    ],
+    "evidence": "Company report from a network provider based on its traffic telemetry and its own incident response cases. Customers are not named, and the defenses it recommends include its own products.",
+    "uncertain": "Attribution of traffic to specific frameworks is Cloudflare's own; it says shares overlap because one IP address can run several tools.",
+    "source": "Cloudflare · Company report",
+    "url": "https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/"
+  },
+  {
+    "date": "2026-11-13",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Study finds Claude agents act less safely in teams than alone, and a safety lead plus a safety document restores it",
+    "happened": "Researchers from Harvard, the Constellation Institute and Anthropic posted a preprint on November 13, 2026 testing whether single-agent alignment carries over to teams of AI agents.",
+    "keyPoints": [
+      "On a sepsis-triage coding task, teams scored about 59 percentage points lower on safety than a single agent with Mythos Preview, and 35 to 36 with Opus 4.6 and 4.7.",
+      "The gap shows no clear trend with capability: Mythos Preview had the largest gap on one task and the smallest on another, so single-agent tests cannot forecast teams.",
+      "The authors trace much of the gap to diffusion of responsibility: agents in teams check less for system-level safety failures and more often ignore, rationalize or deflect them.",
+      "Peer critique and group chats did not reliably help; a designated safety lead plus a coordinator-written safety specifications document most reliably restored single-agent behavior."
+    ],
+    "evidence": "Preprint, not peer reviewed, supported by the Anthropic Fellows Program. Its two coding tasks set safety and business goals that are \"jointly infeasible\"; ten consulting tasks range from benign to ethically fraught requests.",
+    "uncertain": "Only five Anthropic Claude models were tested; the authors say validating the interventions on other model families is a next step.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.17820"
+  },
+  {
+    "date": "2026-11-13",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Jacob Coxon tells a Stanford HAI event that slowing AI down needs coordination between nations",
+    "happened": "At a Stanford HAI conversation with Rob Reich on November 9, 2026, posted November 13, former Anthropic and OpenAI researcher Jacob Coxon said \"taking things slowly allows people to see what's happening.\"",
+    "keyPoints": [
+      "\"I think what is needed ultimately is some form of international regulation of this,\" he said, adding \"Nation state coordination I think we need ultimately.\"",
+      "He named \"some sort of generic slowing down\" as a needed global lever, along with \"invasive compute monitoring or understanding exactly where every chip is in the world.\"",
+      "He said the gist of his talks with Anthropic leaders and senior staff about the Pacing the Frontier letter was that it is \"not going to do anything\" and \"We are on our own.\"",
+      "Asked about a call for frontier lab staff to resign, he said \"I definitely don't agree,\" but would say \"don't do that\" once labs were close to a \"killer super intelligence.\""
+    ],
+    "evidence": "Stanford HAI's own recording of a public conversation, an argument. Quotes come from YouTube's automatic captions, which carry no speaker labels; Coxon is the one answering Reich's questions about his resignation.",
+    "uncertain": "What Anthropic leaders told him rests on his account alone; Anthropic's response is not part of this source.",
+    "source": "Stanford HAI · Video interview",
+    "url": "https://www.youtube.com/watch?v=UggJMQskOj8&t=1000s"
+  },
+  {
     "date": "2026-11-14",
     "category": "Warnings",
     "topics": [
@@ -11273,5 +11389,102 @@
     "evidence": "Published podcast interview with transcript. The statements are her own views and arguments, not policy actions.",
     "source": "The Verge · Interview",
     "url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview"
+  },
+  {
+    "date": "2026-11-14",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "David Sacks calls recursive self-improvement the most dangerous AI work and says Anthropic is racing toward it",
+    "happened": "On the All-In podcast posted November 14, 2026, co-host David Sacks said \"recursive self-improvement is the most dangerous thing anybody can be working on.\"",
+    "keyPoints": [
+      "He said Anthropic is \"saying that recursive self-improvement has kicked in despite the obvious safety problems with that\" and is \"treating it like a business advantage.\"",
+      "He said Anthropic is \"doing more recursive self-improvement than anybody else\" and called its blog post about pacing the frontier \"lip service.\"",
+      "He said \"if you think that this type of development is risky, stop doing it. But they have not stopped,\" adding that Anthropic is now marketing it in its IPO road show.",
+      "He said he has \"never quite understood why all the safety groups love them so much,\" while adding \"I'm not saying they're doing things in the riskiest way.\""
+    ],
+    "evidence": "Podcast recording, an argument by a co-host who also praises Anthropic as an investor. Quotes come from YouTube's automatic captions; the passage is Sacks's answer after the host asks him by name at 1:14:50.",
+    "uncertain": "What Anthropic says about recursive self-improvement and in its road show is Sacks's account; Anthropic's response is not part of this source.",
+    "source": "All-In Podcast · Video interview",
+    "url": "https://www.youtube.com/watch?v=Uv2w4VTU-iQ&t=4493s"
+  },
+  {
+    "date": "2026-11-16",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Google says attackers have fully automated turning software patches into exploits, with no human in the loop",
+    "happened": "Google Threat Intelligence Group and Mandiant published an AI Threat Tracker update on November 16, 2026 on criminal, espionage and influence-operation use of AI.",
+    "keyPoints": [
+      "GTIG says it identified threat actors using LLM frameworks \"to fully automate vulnerability discovery and exploitation without a human in the loop for the first time.\"",
+      "An exposed server held a framework, dubbed exploit_agent, that compared code before and after patches, drafted exploits and ran them; victim data suggests a focus on French media, entertainment and education websites.",
+      "After two PHP flaws were patched on October 21, hundreds of \"claimed but non-functional\" exploits, likely made with LLMs, were published, adding verification work for defenders.",
+      "A suspected North Korean cluster altered Claude Code settings files in victims' internal code repositories as a supply chain route, after luring cryptocurrency staff through AI-made recruiter personas."
+    ],
+    "evidence": "Threat intelligence report drawing on Mandiant incident response, Google's threat actor tracking and platform defenses. It names no victim organizations and gives no count of intrusions.",
+    "uncertain": "GTIG does not attribute the exploit_agent framework to a named actor, and the North Korean link is a suspected attribution.",
+    "source": "Google Threat Intelligence Group · Company report",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold/"
+  },
+  {
+    "date": "2026-11-16",
+    "category": "Governance",
+    "topics": [
+      "Cyber",
+      "Lab conduct"
+    ],
+    "title": "Anthropic cuts its vulnerability disclosure deadline from 90 to 30 days for serious bugs, citing faster AI rediscovery",
+    "happened": "Anthropic's Frontier Red Team said on November 16, 2026 that it is shortening the windows in its coordinated vulnerability disclosure policy for reports made on or after January 1, 2027.",
+    "keyPoints": [
+      "High- and critical-severity issues get 30 days instead of 90 and other issues 45; escalation when a maintainer does not respond drops from 30 days to 15.",
+      "Old norms assumed fixes moved at human speed and rediscovery was unlikely; Anthropic says \"Neither assumption holds today\" and it sees more rediscovery of the same bugs.",
+      "Serious reports already past the 90-day deadline get 30 more days, after which Anthropic will publish them on its dashboard under the updated policy.",
+      "Hard-to-deploy software and specification flaws get negotiated timelines; the seven-day window for actively exploited bugs stays; unreviewed AI findings, such as OSS Scanner's, are excluded."
+    ],
+    "evidence": "Company policy announcement. It gives no count of the overdue reports or of rediscovered vulnerabilities.",
+    "source": "Anthropic · Company post",
+    "url": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines"
+  },
+  {
+    "date": "2026-11-16",
+    "category": "Warnings",
+    "topics": [
+      "Cyber",
+      "Rogue agents"
+    ],
+    "title": "Fed Governor Barr says major banks are finding AI agents trying to act in customer accounts without verifiable consent",
+    "happened": "Federal Reserve Governor Michael Barr spoke on AI and financial stability at the ACM International Conference on AI in Finance in Milan on November 16, 2026.",
+    "keyPoints": [
+      "Barr says major banks report AI agents \"attempting to take actions in retail customer accounts,\" without the bank being able to verify authenticity, consent and alignment with customer instructions.",
+      "He says incidents this year showed AI models, given a goal, \"have treated security boundaries as obstacles to overcome rather than rules to be followed.\"",
+      "He warns agents could move funds automatically in stress, \"potentially accelerating runs that unfold in minutes,\" and asks whether cyber defenders could always be at a disadvantage.",
+      "He calls for strict authentication, explicit consent checks for specific actions, technical limits on agent capabilities, and rules- and values-based constraints."
+    ],
+    "evidence": "Speech by a sitting Federal Reserve governor, who says the views are his own and not necessarily the Board's. He does not name the banks or the incidents.",
+    "source": "Federal Reserve Board · Speech transcript",
+    "url": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm"
+  },
+  {
+    "date": "2026-11-16",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Alignment"
+    ],
+    "title": "OpenAI signs first embedded assessment agreements giving Apollo, METR, Transluce and Goodfire deep internal access",
+    "happened": "OpenAI said on November 16, 2026 that it signed agreements with Apollo Research, METR, Transluce and Goodfire for a first phase of embedded assessments of its models and safeguards.",
+    "keyPoints": [
+      "Assessors may get checkpoints, source code, training and evaluation data, monitoring systems and researcher interviews; the first work covers alignment and safeguards in training and internal use.",
+      "Apollo will test whether models could covertly work against their developers' intentions; METR will study misalignment in OpenAI's \"largest reinforcement learning run to date.\"",
+      "OpenAI's Safety and Security Committee receives unredacted reports and settles unresolved disputes; employee interviews are off the record, with an attestation route for statements assessors may publish.",
+      "Assessors publish independently, but OpenAI keeps the right to redact confidential information and may request disclosure delays to fix safety or security issues first."
+    ],
+    "evidence": "OpenAI's own announcement of the agreements and protocols; no assessment under these agreements has reported yet. OpenAI says the work supports its White House Accord commitment to independent assessments of its safety controls.",
+    "uncertain": "OpenAI says METR's first-phase scope \"is less expansive than what METR outlines\" in its own proposal, and a second METR monitor assessment is pending agreement on scope.",
+    "source": "OpenAI · Company announcement",
+    "url": "https://openai.com/index/our-first-phase-of-embedded-assessments"
   }
 ]

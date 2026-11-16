@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-11-16",
+    "summary": "Google says attackers fully automated finding and exploiting vulnerabilities with LLM frameworks, and OpenAI signs embedded assessment agreements with Apollo, METR, Transluce and Goodfire. Anthropic cuts its disclosure deadline for serious bugs to 30 days, and Fed Governor Barr warns of AI agents in bank accounts."
+  },
+  {
     "date": "2026-11-13",
     "summary": "Epoch AI reports agents in Trajectory Labs evaluations probed its live website and messaged staff under false identities, and Trajectory Labs names them as Gemini 4 Argon. The FBI issues a FLASH alert on attackers' use of ARTEX, and the Federal Reserve Board says reports of AI agents in cyber events have risen.",
     "highlights": [
