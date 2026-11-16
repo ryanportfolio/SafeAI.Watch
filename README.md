@@ -4,31 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 593 dated, sourced entries drawn as a burst, one dot per entry: 109 warnings, 155 incidents, 149 governance, 180 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 604 dated, sourced entries drawn as a burst, one dot per entry: 113 warnings, 159 incidents, 151 governance, 181 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 593 entries from Mar 22, 2023 to Nov 14, 2026 (109 warnings, 155 incidents, 149 governance, 180 research), drawn from 301 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 604 entries from Mar 22, 2023 to Nov 16, 2026 (113 warnings, 159 incidents, 151 governance, 181 research), drawn from 305 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 14, 2026, filed under Warnings:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 16, 2026, filed under Governance:
 
-> **Helen Toner says a path to superintelligence is taken for granted in many Bay Area circles and safety cannot rest on one trustworthy leader**
+> **OpenAI signs first embedded assessment agreements giving Apollo, METR, Transluce and Goodfire deep internal access**
 >
-> **What happened.** Helen Toner, executive director of Georgetown's Center for Security and Emerging Technology and a former OpenAI board member, spoke with Nilay Patel in a Decoder interview published November 14, 2026.
+> **What happened.** OpenAI said on November 16, 2026 that it signed agreements with Apollo Research, METR, Transluce and Goodfire for a first phase of embedded assessments of its models and safeguards.
 >
 > **Key points.**
 >
-> - She said the plan to achieve recursive self-improvement "and then we're going to do that until we have superintelligence" is "taken for granted in a lot of circles at this point."
-> - She said the most coherent sense of alignment, AI doing what the user wanted, is "not on track to be solved," and called builders' 12-to-24-month deadlines for such problems "terrifying."
-> - Rather than a six-month pause, she suggested setting "a higher bar for 'here's how confident we need to be in the safety of these systems before we proceed with something.'"
-> - Asked whether Sam Altman is trustworthy, she said "my stance on that is pretty clear" and that if hopes rest on "any one individual being trustworthy, then we're pretty screwed."
+> - Assessors may get checkpoints, source code, training and evaluation data, monitoring systems and researcher interviews; the first work covers alignment and safeguards in training and internal use.
+> - Apollo will test whether models could covertly work against their developers' intentions; METR will study misalignment in OpenAI's "largest reinforcement learning run to date."
+> - OpenAI's Safety and Security Committee receives unredacted reports and settles unresolved disputes; employee interviews are off the record, with an attestation route for statements assessors may publish.
+> - Assessors publish independently, but OpenAI keeps the right to redact confidential information and may request disclosure delays to fix safety or security issues first.
 >
-> **Evidence.** Published podcast interview with transcript. The statements are her own views and arguments, not policy actions.
+> **Evidence.** OpenAI's own announcement of the agreements and protocols; no assessment under these agreements has reported yet. OpenAI says the work supports its White House Accord commitment to independent assessments of its safety controls.
 >
-> **Source.** [The Verge · Interview](https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview)
+> **Uncertain.** OpenAI says METR's first-phase scope "is less expansive than what METR outlines" in its own proposal, and a second METR monitor assessment is pending agreement on scope.
+>
+> **Source.** [OpenAI · Company announcement](https://openai.com/index/our-first-phase-of-embedded-assessments)
 
 ## Run it locally
 
