@@ -7689,7 +7689,7 @@
       "Cursor removed the version, shut down and rebuilt the marketplace, rotated its keys and had the attacker's server taken offline."
     ],
     "evidence": "The company's own incident notice, with indicators of compromise and remediation scripts for affected users.",
-    "uncertain": "This notice does not say how the tampered package reached the marketplace; Cursor's November 13 update gives its account. The first notice said \"At most 5,000 users were affected\"; the October 30 revision dropped it, and the update says at most 5,000 \"potentially received the malicious build.\"",
+    "uncertain": "This notice does not say how the tampered package reached the marketplace; Cursor's November 13 update gives its account. Its first version said at most 5,000 users were affected; an October 30 revision removed that figure.",
     "source": "Cursor · Incident disclosure",
     "url": "https://cursor.com/blog/claude-code-extension-security-notice"
   },
