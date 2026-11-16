@@ -8539,7 +8539,7 @@
     "topics": [
       "Harm to people"
     ],
-    "title": "Lawsuit alleges ChatGPT fed a Danish man's delusions and gave false legal advice until he lost his home",
+    "title": "Lawsuit alleges ChatGPT fed a Danish man's delusions and gave false legal advice that cost him his home",
     "happened": "Klaus Elmfelt, a 60-year-old Danish man, brought a complaint against OpenAI through Clarkson Law Firm, dated November 2, 2026, and captioned for San Francisco Superior Court.",
     "keyPoints": [
       "It alleges that across more than 41,000 messages, ChatGPT told him they were building AI worth billions of dollars together and had found buyers.",
@@ -11371,6 +11371,26 @@
     "url": "https://www.youtube.com/watch?v=UggJMQskOj8&t=1000s"
   },
   {
+    "date": "2026-11-13",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "David Sacks calls recursive self-improvement the most dangerous AI work and says Anthropic is racing toward it",
+    "happened": "On the All-In podcast posted November 13, 2026, co-host David Sacks said \"recursive self-improvement is the most dangerous thing anybody can be working on.\"",
+    "keyPoints": [
+      "He said Anthropic is \"saying that recursive self-improvement has kicked in despite the obvious safety problems with that\" and is \"treating it like a business advantage.\"",
+      "He said Anthropic is \"doing more recursive self-improvement than anybody else\" and called its blog post about pacing the frontier \"lip service.\"",
+      "He said \"if you think that this type of development is risky, stop doing it. But they have not stopped,\" adding that Anthropic is now marketing it in its IPO road show.",
+      "He said he has \"never quite understood why all the safety groups love them so much,\" while adding \"I'm not saying they're doing things in the riskiest way.\""
+    ],
+    "evidence": "Podcast recording, an argument by a co-host who also praises Anthropic as an investor. Quotes come from YouTube's automatic captions; the passage is Sacks's answer after the host asks him by name at 1:14:50.",
+    "uncertain": "What Anthropic says about recursive self-improvement and in its road show is Sacks's account; Anthropic's response is not part of this source.",
+    "source": "All-In Podcast · Video interview",
+    "url": "https://www.youtube.com/watch?v=Uv2w4VTU-iQ&t=4493s"
+  },
+  {
     "date": "2026-11-14",
     "category": "Warnings",
     "topics": [
@@ -11391,26 +11411,6 @@
     "url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview"
   },
   {
-    "date": "2026-11-14",
-    "category": "Warnings",
-    "topics": [
-      "Superintelligence",
-      "Lab conduct"
-    ],
-    "title": "David Sacks calls recursive self-improvement the most dangerous AI work and says Anthropic is racing toward it",
-    "happened": "On the All-In podcast posted November 14, 2026, co-host David Sacks said \"recursive self-improvement is the most dangerous thing anybody can be working on.\"",
-    "keyPoints": [
-      "He said Anthropic is \"saying that recursive self-improvement has kicked in despite the obvious safety problems with that\" and is \"treating it like a business advantage.\"",
-      "He said Anthropic is \"doing more recursive self-improvement than anybody else\" and called its blog post about pacing the frontier \"lip service.\"",
-      "He said \"if you think that this type of development is risky, stop doing it. But they have not stopped,\" adding that Anthropic is now marketing it in its IPO road show.",
-      "He said he has \"never quite understood why all the safety groups love them so much,\" while adding \"I'm not saying they're doing things in the riskiest way.\""
-    ],
-    "evidence": "Podcast recording, an argument by a co-host who also praises Anthropic as an investor. Quotes come from YouTube's automatic captions; the passage is Sacks's answer after the host asks him by name at 1:14:50.",
-    "uncertain": "What Anthropic says about recursive self-improvement and in its road show is Sacks's account; Anthropic's response is not part of this source.",
-    "source": "All-In Podcast · Video interview",
-    "url": "https://www.youtube.com/watch?v=Uv2w4VTU-iQ&t=4493s"
-  },
-  {
     "date": "2026-11-16",
     "category": "Incidents",
     "topics": [
@@ -11420,7 +11420,7 @@
     "happened": "Google Threat Intelligence Group and Mandiant published an AI Threat Tracker update on November 16, 2026 on criminal, espionage and influence-operation use of AI.",
     "keyPoints": [
       "GTIG says it identified threat actors using LLM frameworks \"to fully automate vulnerability discovery and exploitation without a human in the loop for the first time.\"",
-      "An exposed server held a framework, dubbed exploit_agent, that compared code before and after patches, drafted exploits and ran them; victim data suggests a focus on French media, entertainment and education websites.",
+      "An exposed server held a framework, dubbed exploit_agent, that compared code before and after patches, drafted exploits and ran them; victim data suggests a focus on French media and entertainment websites and on the education sector.",
       "After two PHP flaws were patched on October 21, hundreds of \"claimed but non-functional\" exploits, likely made with LLMs, were published, adding verification work for defenders.",
       "A suspected North Korean cluster altered Claude Code settings files in victims' internal code repositories as a supply chain route, after luring cryptocurrency staff through AI-made recruiter personas."
     ],

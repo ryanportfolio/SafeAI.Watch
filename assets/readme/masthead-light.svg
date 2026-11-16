@@ -738,7 +738,7 @@
 <line class="d590" x1="652" y1="222" x2="780.1" y2="130.1" stroke="#b4b0a8" stroke-width=".8"/>
 <line class="d593" x1="652" y1="222" x2="723.2" y2="81.3" stroke="#b4b0a8" stroke-width=".8"/>
 <line class="d597" x1="652" y1="222" x2="801.4" y2="171.5" stroke="#b4b0a8" stroke-width=".8"/>
-<line class="d598" x1="652" y1="222" x2="761.3" y2="108.2" stroke="#b4b0a8" stroke-width=".8"/>
+<line class="d598" x1="652" y1="222" x2="761.2" y2="108.3" stroke="#b4b0a8" stroke-width=".8"/>
 <line class="d599" x1="652" y1="222" x2="696.4" y2="70.6" stroke="#b4b0a8" stroke-width=".8"/>
 <line class="d602" x1="652" y1="222" x2="790" y2="145" stroke="#b4b0a8" stroke-width=".8"/>
 <line class="d5" x1="652" y1="222" x2="720.6" y2="290.6" stroke="#b4b0a8" stroke-width=".8"/>
@@ -1342,7 +1342,7 @@
 <circle class="d590" data-cat="Warnings" cx="780.1" cy="130.1" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
 <circle class="d593" data-cat="Warnings" cx="723.2" cy="81.3" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
 <circle class="d597" data-cat="Warnings" cx="801.4" cy="171.5" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
-<circle class="d598" data-cat="Warnings" cx="761.3" cy="108.2" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
+<circle class="d598" data-cat="Warnings" cx="761.2" cy="108.3" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
 <circle class="d599" data-cat="Warnings" cx="696.4" cy="70.6" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
 <circle class="d602" data-cat="Warnings" cx="790" cy="145" r="4.2" fill="#e5a700" stroke="#1a1614" stroke-width=".9"/>
 <circle class="d5" data-cat="Incidents" cx="720.6" cy="290.6" r="4.2" fill="#bd4a28"/>
