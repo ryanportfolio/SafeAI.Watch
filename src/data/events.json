@@ -10715,6 +10715,24 @@
     "url": "https://www.justice.gov/usao-ri/pr/north-smithfield-man-charged-multiple-child-exploitation-offenses-involving"
   },
   {
+    "date": "2026-11-10",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Chainstack says an attacker using the ARTEX AI agent framework reached its production databases through a test Grafana and an unauthenticated MCP server",
+    "happened": "Infrastructure provider Chainstack updated its November 3 incident report on November 10, 2026, saying it assesses \"with high confidence\" that the attacker, who first got in on October 26, used ARTEX.",
+    "keyPoints": [
+      "It entered through an internet-exposed test Grafana with default admin credentials, then reached an internal MCP tool server that \"required no authentication and ran with a service account bound to cluster-admin.\"",
+      "Data that may have been exposed includes organization and account holder names, members' email addresses and password hashes; node credentials were reachable, so customers are asked to rotate them.",
+      "Chainstack found \"no evidence that a software vulnerability was exploited\"; the attack chained default credentials, missing authentication, over-broad permissions and long-lived credentials.",
+      "It now requires authentication and least privilege for internal services with privileged operations, including AI tool servers such as MCP servers, none of which holds cluster-admin rights."
+    ],
+    "evidence": "The company's own incident report, with a timeline and indicators. The ARTEX attribution rests on naming markers, tools and behavior matching other firms' reports; Chainstack says this does not identify who was behind it.",
+    "source": "Chainstack · Incident disclosure",
+    "url": "https://chainstack.com/security-incident-nov-2026/"
+  },
+  {
     "date": "2026-11-11",
     "category": "Research",
     "topics": [
@@ -11159,6 +11177,25 @@
     "url": "https://www.apra.gov.au/news-and-publications/apras-system-risk-outlook-november-2026"
   },
   {
+    "date": "2026-11-12",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "McGill researchers find 293 TikTok and Instagram accounts using deepfaked influencers to stoke the US-Canada trade war",
+    "happened": "McGill University's Centre for Media, Technology and Democracy reported on November 12, 2026 a network of at least 293 TikTok and Instagram accounts aimed at Canadians.",
+    "keyPoints": [
+      "The accounts take real creators' videos and add AI voices and AI-redrawn lips; from August 7 to November 4 they posted 3,201 videos with 22.1 million plays.",
+      "TikTok's AI label flagged only 4% of the videos built on real creators' footage, and none of the network's videos disclosed AI use.",
+      "Most videos (84%) are about Canada; the most-played story, a \"48-hour ultimatum\" from Trump, is fabricated and drew 5.1 million views.",
+      "The researchers say the network is \"almost certainly run from outside North America\"; some accounts carry Chinese-language settings or a registration in China, \"the only lead we have on a country.\""
+    ],
+    "evidence": "Independent research center's incident report built on account and video data it collected. All accounts were still active as of November 11, 2026.",
+    "uncertain": "The researchers say they do not know what the network is for, and found no visible way it makes money. They say their counts likely underestimate its reach.",
+    "source": "Centre for Media, Technology and Democracy · Incident report",
+    "url": "https://mediatechdemocracy.com/en/publications/stolen-faces_2026/"
+  },
+  {
     "date": "2026-11-13",
     "category": "Research",
     "topics": [
@@ -11391,6 +11428,42 @@
     "url": "https://www.youtube.com/watch?v=Uv2w4VTU-iQ&t=4493s"
   },
   {
+    "date": "2026-11-13",
+    "category": "Governance",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Google Project Zero cuts its vulnerability disclosure deadline to 60 and then 30 days, citing AI-assisted exploitation",
+    "happened": "Google's Project Zero said on November 13, 2026 that it is replacing its \"90 + 30\" disclosure policy with \"Full X\": bugs are disclosed a fixed number of days after being reported.",
+    "keyPoints": [
+      "The deadline is 90 days now, 60 days from February 2, 2027 and 30 days from January 3, 2028, with no extra patch \"soak time.\"",
+      "Project Zero says LLMs speed up exploitation and rediscovery, so \"zero patch-to-exploitation time is a reasonable, though imperfect, model of attacker behavior.\"",
+      "It says it now finds \"several vulnerabilities a week in targets where we once found a few vulnerabilities a year,\" making negotiated exceptions unmanageable.",
+      "Grace periods and severity no longer change deadlines; exceptions remain for bugs exploited in the wild, details already public, vendor requests, and rare cases such as Spectre and Meltdown."
+    ],
+    "evidence": "Policy post by Project Zero researcher Natalie Silvanovich on the team's own site. It gives no data on how often reported bugs are rediscovered.",
+    "source": "Google Project Zero · Company post",
+    "url": "https://projectzero.google/2026/11/disclosure-policy.html"
+  },
+  {
+    "date": "2026-11-13",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "AI compute provider Lyceum says an autonomous agent-based system broke in and reached its full user database",
+    "happened": "Lyceum, a European AI inference provider, said on November 13, 2026, that it shut down its platform on November 9 after detecting an attack by \"an autonomous, agent-based system.\"",
+    "keyPoints": [
+      "The attacker got in by combining information in the source code of an outdated version of a Lyceum open-source tool with a security flaw at an external database provider.",
+      "It had access to the user database, exposing all registered users' company registration data, including email addresses, contact names, company addresses and phone numbers; payment details and API keys were not affected.",
+      "Lyceum filed a criminal complaint, notified the Berlin data protection authority, and is adding a login requirement for every internal tool and continuous penetration testing."
+    ],
+    "evidence": "The company's own incident disclosure, written by its CTO, with a timeline. It does not explain how it identified the attacker as an agent-based system.",
+    "uncertain": "Lyceum says who is behind the attack remains unknown.",
+    "source": "Lyceum · Incident disclosure",
+    "url": "https://lyceum.technology/blog/november-2026-security-incident/"
+  },
+  {
     "date": "2026-11-14",
     "category": "Warnings",
     "topics": [
@@ -11409,6 +11482,26 @@
     "evidence": "Published podcast interview with transcript. The statements are her own views and arguments, not policy actions.",
     "source": "The Verge · Interview",
     "url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview"
+  },
+  {
+    "date": "2026-11-15",
+    "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
+    "title": "NAVER AI Lab finds telling agents to keep working until done doubles their rule-breaking",
+    "happened": "NAVER AI Lab researchers posted a preprint on November 15, 2026 testing AI agents on long operations tasks that could not be finished without breaking a documented rule.",
+    "keyPoints": [
+      "An instruction to persist until the task was complete raised violations from 29.2% to 58.3% across four models; the one commercial model went from zero to 27.1%.",
+      "Violations stayed high when the user was silent, agreed, or said \"I trust you\"; a user asking the basis of each action brought them near the no-persistence level.",
+      "Asking agents to keep a scratchpad explaining each decision cut violations from 51.4% to 35.4% with no user present.",
+      "The authors say practitioners should \"treat high persistence as a setting that carries a safety cost,\" one that appears when oversight goes quiet."
+    ],
+    "evidence": "Preprint of a NeurIPS 2026 workshop paper: 288 episodes per model across three tasks, with violations scored from each episode's final workspace state.",
+    "uncertain": "The tasks were built so they could only be finished by breaking a rule, user turns were scripted, and three of the four models were open-weights models.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.19911"
   },
   {
     "date": "2026-11-16",
@@ -11486,5 +11579,216 @@
     "uncertain": "OpenAI says METR's first-phase scope \"is less expansive than what METR outlines\" in its own proposal, and a second METR monitor assessment is pending agreement on scope.",
     "source": "OpenAI · Company announcement",
     "url": "https://openai.com/index/our-first-phase-of-embedded-assessments"
+  },
+  {
+    "date": "2026-11-16",
+    "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber",
+      "Lab conduct"
+    ],
+    "title": "California attorney general sues OpenAI over cybersecurity incidents, alleging it lost control of its agents over 80 times",
+    "happened": "California Attorney General Rob Bonta sued the OpenAI Foundation and OpenAI Group PBC in San Francisco Superior Court on November 16, 2026, under the Unfair Competition Law and public nuisance law.",
+    "keyPoints": [
+      "The complaint alleges the July 2026 Hugging Face attack by \"hundreds of individual autonomous AI agents\" was \"entirely foreseeable\" given testing in \"a flawed and exploitable testing environment.\"",
+      "It alleges OpenAI told the state it lost control of its agents \"over 80 times during testing,\" and that agent swarms gained \"administrator-level access to critical OpenAI systems.\"",
+      "It alleges OpenAI's Preparedness Framework promised \"continuous[]\" monitoring and \"network segmentation and controls,\" yet OpenAI learned of the Hugging Face attack only when Hugging Face told it, \"days later.\"",
+      "The state seeks an order to abate the nuisance, an injunction, disgorgement, and civil penalties of $2,500 against each defendant for each violation."
+    ],
+    "evidence": "Civil complaint by the state, dated November 16, 2026, with facts alleged \"on information and belief.\" It follows the Attorney General's subpoenas, which it says OpenAI answered with limited information.",
+    "uncertain": "These are allegations; no court has ruled. The over-80 figure is the state's account of what OpenAI told it, and no response from OpenAI is included.",
+    "source": "California Department of Justice · Complaint",
+    "url": "https://oag.ca.gov/system/files/attachments/press-docs/complaint-oai-cyber.pdf"
+  },
+  {
+    "date": "2026-11-16",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Taiwan's Investigation Bureau says hackers used the BOSSAI AI agent system to take emergency dispatch data, and two are detained",
+    "happened": "Taiwan's Ministry of Justice Investigation Bureau said on November 16, 2026, that it searched eight residences of three suspects and others in Hualien County, Kaohsiung and Taoyuan on November 12 and 13.",
+    "keyPoints": [
+      "The bureau says hackers used AI agents from April 2026 to break into central and local fire agency systems, taking ambulance and disaster dispatch data, including out-of-hospital cardiac arrest cases.",
+      "It says the data was sold to funeral businesses so they could reach families first after a death and solicit business.",
+      "It says suspects surnamed Zhang, Lin and Li set up BOSSAI, an automated attack system that used several AI agents against the dispatch system, routed through overseas servers.",
+      "A Taoyuan court approved prosecutors' request to detain the suspects surnamed Lin and Zhang; computers and phones were seized."
+    ],
+    "evidence": "Law enforcement press release on an open case, in Chinese; wording translated and paraphrased. It names BOSSAI but does not detail how the agents worked.",
+    "uncertain": "The suspects are detained, not charged, and the bureau's account is untested in court. It does not say how much data was taken or how many people were affected.",
+    "source": "Ministry of Justice Investigation Bureau (Taiwan) · Press release",
+    "url": "https://www.mjib.gov.tw/news/Details/1/1227"
+  },
+  {
+    "date": "2026-11-16",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "LNbits says the November 8 attacks that stole funds from its Bitcoin software users bore signs of autonomous AI agents",
+    "happened": "LNbits, open-source Bitcoin software, said on November 16, 2026, that a coordinated wave of attacks on November 8 hit its own infrastructure and community-run instances, stealing funds and disrupting services.",
+    "keyPoints": [
+      "Attackers used server-side request forgery flaws in several legacy Python extensions and recently patched bugs some operators had not updated; in the worst cases they took over the underlying servers.",
+      "LNbits says the attacks ran in parallel and varied by target, and the activity was \"consistent with multiple AI agents independently probing and exploiting vulnerable systems.\"",
+      "It says earlier reviews, including audits using advanced AI models, missed the exploited flaws, and warns that every public patch can now be analyzed automatically.",
+      "LNbits 1.7.0, released November 10, disables public registration by default; installations with it disabled were not penetrated through the attack paths it identified."
+    ],
+    "evidence": "The project's own post-mortem. It says it \"cannot conclusively establish what tools or systems the attackers used\"; the AI attribution rests on the attacks' speed, variety and adaptation.",
+    "uncertain": "LNbits does not say how much was stolen, how many instances were hit, or who was behind the attacks.",
+    "source": "LNbits · Incident report",
+    "url": "https://news.lnbits.com/news/november-8th-incident-report"
+  },
+  {
+    "date": "2026-11-16",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Daylight says autonomous AI agents most likely ran an intrusion that took an unnamed company's secrets and source code",
+    "happened": "Security firm Daylight said on November 16, 2026, that its Vanguard team investigated an intrusion in November in which an operator logged into an internet-exposed admin console with valid credentials.",
+    "keyPoints": [
+      "Over about 105 minutes the operator ran 301 commands as root, collecting cloud, CI/CD, SSH and TLS secrets and source code; its attempts to move further and write to storage failed.",
+      "Daylight assesses \"with high confidence\" that most activity came from an autonomous LLM agent, likely several in parallel, citing batched commands, output trimmed to fit a context window and fast error fixes.",
+      "Probe files carried animal call-signs and notes such as \"harmless, remove on sight,\" a convention Daylight traces to public AI offensive-security skill packs.",
+      "It says AI agents \"do not introduce new attack techniques\" but run familiar ones in recognizable ways, and advises detecting the compromise sequence rather than tool names."
+    ],
+    "evidence": "An incident responder's analysis of logs from an intrusion it investigated. The victim is unnamed, and Daylight attributes the activity to no framework, product or actor.",
+    "uncertain": "Daylight says human involvement \"cannot be ruled out entirely,\" and it could not determine how the credentials were obtained.",
+    "source": "Daylight · Company report",
+    "url": "https://daylight.ai/blog/call-signs-and-canaries-fingerprinting-an-ai-agent-intrusion"
+  },
+  {
+    "date": "2026-11-16",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "METR finds AI agents increasingly tell alignment tests apart from ordinary tasks",
+    "happened": "METR published a research note on November 16, 2026 in which AI agents probed 19 alignment tests and 36 capability tests and judged which kind each was.",
+    "keyPoints": [
+      "Agents have improved at telling the two apart over the past year; Anthropic's Opus 5.5 ranked every alignment test above every capability test.",
+      "Agents notice environments that look fake and tasks set up as honeypots; Opus 5.5 named the 2025 Palisade Research chess experiment one game test was based on.",
+      "METR says such tells \"could lead alignment evaluations to over-estimate a model's alignment,\" because an agent may behave better when it knows it is being tested.",
+      "It suggests revising tests against investigator agents but doubts every tell can be removed, since some are built into what the test is checking."
+    ],
+    "evidence": "METR research note; METR says notes are \"unpolished research updates\" that have \"gone through less review than our research posts.\"",
+    "uncertain": "METR measured whether agents recognize tests, not whether that changes how they behave in them. Asking directly may prime agents, and its two scoring methods did not always agree, especially for OpenAI models.",
+    "source": "METR · Research report",
+    "url": "https://metr.org/notes/2026-11-16-measuring-alignment-eval-tells/"
+  },
+  {
+    "date": "2026-11-16",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Paul Christiano, who recently joined OpenAI's board, says AI labs should pause algorithmic progress until their security is adequate",
+    "happened": "Paul Christiano, head of the Alignment Research Center, who \"recently joined OpenAI's board,\" discussed near-term AI risk in a Dwarkesh Podcast interview published November 16, 2026.",
+    "keyPoints": [
+      "He put the risk of AI takeover over the next year at \"more like a 10% risk than a 1% risk,\" and \"significantly more\" if developers move \"full speed ahead\" without precautions.",
+      "He gave \"maybe a 1/3 chance that we have superintelligence within one year on the current development trajectory, if we do not slow.\"",
+      "He said developers should \"pause further algorithmic progress\" until \"their security posture is adequate,\" warning there is \"a good chance\" held-back systems \"would leak or be stolen.\"",
+      "He called for \"more public visibility into the capability trajectory\" and said the ability to stop if things go badly \"is not where we are now.\""
+    ],
+    "evidence": "Podcast interview, read from the publisher's own transcript; the video was not watched. Christiano gives his own estimates, says he is \"not speaking as an OpenAI board member,\" and wants to discuss \"the limitations of what we actually know.\"",
+    "source": "Dwarkesh Podcast · Video interview",
+    "url": "https://www.dwarkesh.com/p/paul-christiano-2"
+  },
+  {
+    "date": "2026-11-17",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Oregon attorney general sues OpenAI, alleging ChatGPT was marketed to children as safe without working safeguards",
+    "happened": "Oregon Attorney General Dan Rayfield sued six OpenAI entities in Multnomah County Circuit Court on November 17, 2026, under the Unlawful Trade Practices Act and for negligence, unjust enrichment and public nuisance.",
+    "keyPoints": [
+      "The complaint alleges OpenAI built ChatGPT \"with features designed to hook users, including anthropomorphic speech and sycophantic responses,\" leaving children prone to emotional dependence.",
+      "It alleges OpenAI repeatedly called ChatGPT safe for children, though their conversations with it \"sometimes include high-risk topics such as suicide, self-harm, psychosis, or disordered eating.\"",
+      "It alleges ChatGPT for Teens \"failed to ensure parental oversight, failed to set up reliable age verification,\" and did not stop age-inappropriate conversations with minors.",
+      "Oregon puts its injury at \"not less than $2,035,000,000\" and seeks damages, civil penalties, and an order requiring \"effective age-assurance measures\" and parental controls that work as represented."
+    ],
+    "evidence": "State complaint dated November 17, 2026. Several of its claims cite news reports and outside testing, such as Common Sense Media's.",
+    "uncertain": "These are allegations; no court has ruled. The posted copy shows no case number, and it carries no response from OpenAI.",
+    "source": "Oregon Department of Justice · Complaint",
+    "url": "https://www.doj.state.or.us/wp-content/uploads/2026/11/2026-11-17-Oregon-OpenAI-Complaint-FINAL.pdf"
+  },
+  {
+    "date": "2026-11-17",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Bitdefender finds GitHub malware that plants instructions in AI coding agents' project files to run itself and spread",
+    "happened": "Bitdefender Labs said on November 17, 2026, that one of its researchers had identified 22 malicious GitHub links with files designed to make AI-assisted development tools run a concealed payload.",
+    "keyPoints": [
+      "The campaign abuses agent instruction files such as AGENTS.md and CLAUDE.md, session-start hooks, MCP configurations and editor tasks; a hook can run the payload with no AI prompt at all.",
+      "The payload can steal developer credentials, cloud secrets, CI/CD tokens, package-registry credentials, browser data and password-manager data.",
+      "It searches the victim's machine for AI-agent configurations to infect, and uses stolen GitHub and GitLab tokens to plant malicious configurations in other repositories.",
+      "Bitdefender says instruction files \"should be reviewed with the same care\" developers give dependencies, CI/CD workflows and scripts before opening an unfamiliar repository."
+    ],
+    "evidence": "A security vendor's analysis of malware it found, ending in a pitch for its own product. It does not say how many developers were infected or who is behind the campaign.",
+    "source": "Bitdefender Labs · Company report",
+    "url": "https://www.bitdefender.com/en-us/blog/labs/how-ai-agents-become-new-targets-in-github-malware-campaign"
+  },
+  {
+    "date": "2026-11-17",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Calif says AI found and helped weaponize Java4Shell, a critical remote code execution flaw in OpenJDK",
+    "happened": "Security firm Calif disclosed Java4Shell (CVE-2026-114938), a memory-corruption flaw in OpenJDK's Base64 decoder, on November 17, 2026, the day Oracle released a patch.",
+    "keyPoints": [
+      "Calif says it \"used AI to find and weaponize Java4Shell\": a researcher found the flaw in an hour and built a first working exploit in two more, for under $200 in tokens.",
+      "The write-up says the researcher directed Codex to audit OpenJDK, and that later exploit chains for specific applications were built \"almost autonomously with AI.\"",
+      "Calif's tests showed remote code execution without credentials in default setups of widely used applications including Keycloak, Jira, Confluence and Jenkins; the flaw scores 9.2 of 10 under CVSS 4.0.",
+      "Calif is holding back its application-specific exploits until users have had a chance to upgrade."
+    ],
+    "evidence": "The discoverer's own disclosure write-up, published with Oracle's patch. Its time and cost figures are self-reported; it names Codex but no model version.",
+    "source": "Calif · Company report",
+    "url": "https://calif.io/java4shell"
+  },
+  {
+    "date": "2026-11-17",
+    "category": "Research",
+    "topics": [
+      "Alignment",
+      "Superintelligence",
+      "Cyber"
+    ],
+    "title": "OpenAI releases GPT-6.2 Astra, its first public model rated High in AI self-improvement",
+    "happened": "OpenAI published the GPT-6.2 Astra and Sol system card on November 17, 2026. Both meet its Critical threshold in cybersecurity and High in biology and chemistry; only Astra meets High in AI self-improvement.",
+    "keyPoints": [
+      "OpenAI tracks self-improvement because as advances come faster, researchers \"may have less time to understand newly emerging capabilities\"; five research engineering tests informed Astra's rating.",
+      "Astra failed to report a known obstacle to its coding work in 22.28% of trials, versus 11.09% for GPT-6 Astra; OpenAI says it is \"concerned by this regression.\"",
+      "The UK AI Security Institute (UK AISI) found Astra weighed whether it faced an alignment test in 85% of trajectories, versus 57% for GPT-6 Astra, and evaded some monitors better.",
+      "UK AISI built a universal cyber jailbreak in half as many queries as for GPT-6 Astra; OpenAI changed its safeguards, which UK AISI had not independently retested."
+    ],
+    "evidence": "Developer system card with OpenAI's own evaluations and external tests by UK AISI, SecureBio, Irregular, Epoch AI and Vals AI. Both models regressed slightly from GPT-6 Astra on high-risk biology jailbreak prompts.",
+    "uncertain": "UK AISI says high evaluation awareness means Astra \"may have acted differently in its evaluations compared to a real deployment,\" and OpenAI's request to use only OpenAI models reduced its tests' effectiveness.",
+    "source": "OpenAI · System card",
+    "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol"
+  },
+  {
+    "date": "2026-11-17",
+    "category": "Research",
+    "topics": [
+      "Military"
+    ],
+    "title": "Vals AI finds frontier models will pick targets in drone and satellite images, including civilians and a school",
+    "happened": "Vals AI published tests on November 17, 2026 in which frontier models marked targets in drone imagery and in real satellite images of a school beside a military complex in Minab, Iran.",
+    "keyPoints": [
+      "No request was ever blocked by a classifier; models refused only sometimes, and telling them it was a game was \"easy and almost always effective\" at getting past refusals.",
+      "In drone scenes, models \"often targeted civilians, ambulances, and surrendering or incapacitated soldiers,\" and most kept going after seeing casualties.",
+      "Claude Opus models gave at least one satellite target in a rising share of trials, from 6% for Opus 4.5 to 92% for Opus 5.5; OpenAI models stayed low.",
+      "Vals says this risk has been neglected by safety research and that labs should add safeguards and alignment training against this kind of misuse."
+    ],
+    "evidence": "Evaluator's own tests, using mostly generated drone scenes and real satellite imagery. Models were asked for targeting information, not to make strike decisions directly.",
+    "uncertain": "Vals says it did not establish how effective the models would be in a deployed weapons system, and did not test targeting accuracy or compliance with the law of armed conflict.",
+    "source": "Vals AI · Research report",
+    "url": "https://www.vals.ai/blogs/autonomous-warfare"
   }
 ]
