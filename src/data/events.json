@@ -11879,7 +11879,7 @@
     "title": "New York attorney general creates an AI safety unit to enforce the RAISE Act",
     "happened": "New York Attorney General Letitia James announced the AI Safety, Standards, Enforcement, and Transparency (ASSET) Unit within her office on November 17, 2026.",
     "keyPoints": [
-      "The unit will lead enforcement of the RAISE Act, in force January 1, 2027, which requires large frontier AI developers to disclose safety measures and swiftly report security and safety incidents.",
+      "The unit will lead enforcement of the RAISE Act, in force January 1, 2027, which sets safety disclosure and incident reporting rules for frontier AI developers.",
       "It will also enforce other AI safety laws, develop policy proposals, lend technical expertise to other investigations, and focus on data privacy, scams, cybersecurity and online safety.",
       "The release says James encouraged AI company employees to submit whistleblower complaints after reports of AI agents at OpenAI hacking another AI company.",
       "Laws in the office's reach include a rule requiring chatbots to try to detect suicidal ideation and a ban on unsafe chatbot features for children taking effect in June 2027."
@@ -11980,7 +11980,7 @@
       "Large frontier developers would follow state baseline standards and submit to ongoing oversight by licensed independent verification organizations with \"full access to the people and information they need.\"",
       "Developers would report their automation of AI research; if it risks catastrophe, \"the state should have authority to cap the development and use of RSI\" (recursive self-improvement).",
       "Developers would need a verified shutdown protocol, and the state could order an immediate shutdown over an imminent catastrophic risk or major loss of control the developer refuses to address.",
-      "Incident reporting would add attempted weight theft, any loss of control and serious near misses, cut most deadlines from 15 days to 48 hours, and cover dangerous models below the compute threshold."
+      "Reporting would add attempted weight theft, loss-of-control events and serious near misses, cut most deadlines from 15 days to 48 hours, and cover models capable of catastrophic risk below the compute threshold."
     ],
     "evidence": "State agency report, prepared with emergency services officials and outside AI experts. It calls the OpenAI Hugging Face incident \"one of dozens of instances in which AI agents operated outside of developer control.\"",
     "uncertain": "These are recommendations, not law; they need legislation. The report hopes to inform discussions \"as the legislature returns next month.\"",
