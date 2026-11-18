@@ -15,7 +15,7 @@ The record holds 634 entries from Mar 22, 2023 to Nov 18, 2026 (121 warnings, 16
 
 Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 18, 2026, filed under Governance:
 
-> **Senate Commerce Committee passes Cotton and Klobuchar bill requiring gene synthesis screening**
+> **Senate Commerce Committee passes Cotton and Klobuchar bill that would require gene synthesis screening**
 >
 > **What happened.** Senators Tom Cotton and Amy Klobuchar said on November 18, 2026, that the Senate Commerce, Science, and Transportation Committee passed their Biosecurity Modernization and Innovation Act.
 >

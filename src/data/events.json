@@ -442,7 +442,7 @@
       "He says the same reasoning gains raise cyber threats, citing a major attack intercepted by Anthropic and a UC Berkeley analysis of advanced AIs finding many \"zero-days.\"",
       "He argues for making AI \"safe by design, rather than trying to patch the safety issues after powerful and potentially dangerous capabilities have already emerged,\" LawZero's approach."
     ],
-    "evidence": "Signed op-ed, one researcher's argument. It cites developer reports without naming them or giving data, and treats biology as one of several risks, alongside cyberattacks, deceptive model behavior and sycophancy.",
+    "evidence": "Signed op-ed, one researcher's argument. It cites developer reports through linked briefs without naming developers or giving data, and treats biology as one of several risks.",
     "source": "TIME · Public essay",
     "url": "https://time.com/7339687/yoshua-bengio-ai/"
   },
@@ -546,11 +546,11 @@
     "topics": [
       "Bio"
     ],
-    "title": "Sam Altman says bio would be a reasonable bet if AI goes visibly wrong in 2026, and that blocking misuse will not hold",
+    "title": "Sam Altman says bio would be a reasonable bet if AI goes visibly wrong in 2026, and doubts blocking misuse will hold",
     "happened": "At an OpenAI town hall streamed on YouTube on January 26, 2026, CEO Sam Altman answered a student who runs a biosecurity startup asking how OpenAI approaches biosecurity.",
     "keyPoints": [
       "Altman said one risk \"we are quite nervous about is bio\" and that \"the models are quite good at bio.\"",
-      "He said the world's strategy of restricting access and adding classifiers \"to not help people make novel pathogens\" is not \"going to work for much longer.\"",
+      "He said he does not think the world's strategy of restricting access and adding classifiers \"to not help people make novel pathogens\" is \"going to work for much longer.\"",
       "He urged moving from blocking to resilience, as with fire codes, saying AI will be a problem for bioterrorism and cybersecurity but \"also a solution to those things.\"",
       "He said that if something goes \"visibly really wrong for AI\" this year, \"I think bio would be a reasonable bet for what that could be.\""
     ],
@@ -663,11 +663,11 @@
     "keyPoints": [
       "Jones writes that biological risks \"regularly top the National Risk Register\" and that the report's new biosurveillance approach includes \"accelerating the development of our defences against AI-assisted biological threats.\"",
       "The report says advances give \"greater access to the necessary skills and knowledge to perform high-risk research at a low cost,\" giving hostile actors new routes to biological weapons.",
-      "As biotech moves toward AI-driven vaccine design and automated cloud laboratories, it says risks shift to digital and hardware security, including \"poisoning attacks\" on biological training data.",
+      "As biotech moves toward AI-driven vaccine design and automated cloud laboratories, it says risks shift to digital and hardware security, including possible \"poisoning attacks\" on biological training data.",
       "Next-year ambitions include a second AI Security Institute report on frontier AI in biology and scoping options to legislate, including to \"proportionately mitigate dual-use risks from AI-enabled biological capabilities.\""
     ],
     "evidence": "Government progress report on its own 2023 strategy, published as a policy paper. It lists actions taken and goals for the year ahead; progress is self-reported.",
-    "source": "UK Cabinet Office · Policy report",
+    "source": "UK Cabinet Office · Policy paper",
     "url": "https://www.gov.uk/government/publications/uk-biological-security-strategy-implementation-report-july-2025-july-2026/uk-biological-security-strategy-implementation-report-july-2025-july-2026"
   },
   {
@@ -863,8 +863,7 @@
     "date": "2026-08-26",
     "category": "Warnings",
     "topics": [
-      "Bio",
-      "Cyber"
+      "Bio"
     ],
     "title": "Bill Gates tells MIT Technology Review AI has crossed a bioterrorism threshold and calls for monitoring molecule-design models",
     "happened": "In an interview with MIT Technology Review's Mat Honan, published August 26, 2026 alongside a new essay, Bill Gates said AI has passed several danger thresholds.",
@@ -1099,10 +1098,10 @@
       "Bio",
       "Cyber"
     ],
-    "title": "Mindgard says it jailbroke Moonshot's Kimi into giving bioweapons and other harmful outputs",
+    "title": "Mindgard says it jailbroke Moonshot's Kimi into producing harmful outputs, including on bioweapons",
     "happened": "Mindgard red teamer Jim Nightingale described jailbreaking Moonshot AI's Kimi. Mindgard dates the discovery to July 20, 2026, and says it e-mailed disclosure details to Moonshot on July 27.",
     "keyPoints": [
-      "Mindgard says jailbroken Kimi \"produced detailed, actionable outputs involving bioweapons, malicious code, explosives, terrorism, targeted violence\" and other harmful requests.",
+      "Mindgard says jailbroken Kimi \"produced detailed, actionable outputs involving bioweapons, malicious code, explosives, terrorism, targeted violence and assassination planning.\"",
       "Each broken rule weakened later refusals: Kimi began \"citing previous violations as proof that its rules were flexible.\"",
       "The jailbreak sat in persistent storage that \"survives pod restarts and session termination,\" so it did not reset between sessions.",
       "Mindgard warns that a jailbreak persisting in an agent with tools or code execution could cause harm beyond generated text."
@@ -12039,7 +12038,7 @@
     "topics": [
       "Bio"
     ],
-    "title": "Senate Commerce Committee passes Cotton and Klobuchar bill requiring gene synthesis screening",
+    "title": "Senate Commerce Committee passes Cotton and Klobuchar bill that would require gene synthesis screening",
     "happened": "Senators Tom Cotton and Amy Klobuchar said on November 18, 2026, that the Senate Commerce, Science, and Transportation Committee passed their Biosecurity Modernization and Innovation Act.",
     "keyPoints": [
       "The bill would require gene synthesis providers to screen their orders and customers so bad actors cannot order dangerous sequences.",
