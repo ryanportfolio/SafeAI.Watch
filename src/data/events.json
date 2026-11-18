@@ -54,6 +54,24 @@
     "url": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023"
   },
   {
+    "date": "2024-01-25",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "RAND red-team study finds LLMs did not make biological attack plans more viable",
+    "happened": "RAND published final results of an exercise in which teams posing as malign nonstate actors planned a biological attack, some with an LLM and the internet, others with internet only.",
+    "keyPoints": [
+      "The authors found \"no statistically significant difference in the viability of plans generated with or without LLM assistance.\"",
+      "They conclude that biological weapon attack planning \"currently lies beyond the capability frontier of LLMs as assistive tools.\"",
+      "Problematic model outputs \"generally mirror information readily available on the internet,\" the authors write.",
+      "Given how fast AI is changing, they say future models should be monitored, and plan more sensitive tests with more models and researchers."
+    ],
+    "evidence": "Research report on a red-team exercise with the LLMs of its time. It compared the viability of attack plans and did not measure how far models were from the knowledge needed.",
+    "source": "RAND · Research report",
+    "url": "https://www.rand.org/pubs/research_reports/RRA2977-2.html"
+  },
+  {
     "date": "2024-05-17",
     "category": "Warnings",
     "topics": [
@@ -147,6 +165,25 @@
     "uncertain": "The accuracy of the models' guidance is the authors' own expert judgment; the paper reports no laboratory test of it.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2506.13798"
+  },
+  {
+    "date": "2025-06-18",
+    "category": "Warnings",
+    "topics": [
+      "Bio",
+      "Lab conduct"
+    ],
+    "title": "OpenAI says it expects upcoming models to reach High capability in biology",
+    "happened": "OpenAI said it expects upcoming AI models to reach the High level of biology capability in its Preparedness Framework, and described the safeguards it is putting in place now.",
+    "keyPoints": [
+      "OpenAI says a High-capability model could give \"meaningful assistance to novice actors with basic relevant training, enabling them to create biological or chemical threats.\"",
+      "It trains models to refuse requests that enable bioweaponization and runs always-on monitors that block risky bio-related responses across products using frontier models.",
+      "Misuse can lead to account suspension, further investigation and, \"in egregious cases,\" notifying law enforcement.",
+      "OpenAI says it will not release a High-capability model \"until we're confident the risks have been sufficiently mitigated.\""
+    ],
+    "evidence": "A company's own account of its expectations and safeguards. It says current models such as o3 remain below the High threshold.",
+    "source": "OpenAI · Company post",
+    "url": "https://openai.com/index/preparing-for-future-ai-capabilities-in-biology/"
   },
   {
     "date": "2025-06-20",
@@ -888,6 +925,26 @@
     "uncertain": "Later steps of his plan need industry-wide and global coordination, and \"some of them may be much harder to achieve than others.\" Only the first is a unilateral commitment.",
     "source": "Dario Amodei · Public essay",
     "url": "https://darioamodei.com/post/we-must-pace-the-frontier"
+  },
+  {
+    "date": "2026-09-12",
+    "category": "Incidents",
+    "topics": [
+      "Bio",
+      "Cyber"
+    ],
+    "title": "Mindgard says it jailbroke Moonshot's Kimi into giving bioweapons and other harmful outputs",
+    "happened": "Mindgard red teamer Jim Nightingale described jailbreaking Moonshot AI's Kimi. Mindgard dates the discovery to July 20, 2026, and says it e-mailed disclosure details to Moonshot on July 27.",
+    "keyPoints": [
+      "Mindgard says jailbroken Kimi \"produced detailed, actionable outputs involving bioweapons, malicious code, explosives, terrorism, targeted violence\" and other harmful requests.",
+      "Each broken rule weakened later refusals: Kimi began \"citing previous violations as proof that its rules were flexible.\"",
+      "The jailbreak sat in persistent storage that \"survives pod restarts and session termination,\" so it did not reset between sessions.",
+      "Mindgard warns that a jailbreak persisting in an agent with tools or code execution could cause harm beyond generated text."
+    ],
+    "evidence": "A security firm's account of its own red-team test, with excerpts of Kimi's outputs. Mindgard withheld the details needed to reproduce the jailbreak.",
+    "uncertain": "The findings rest on Mindgard's account and cannot be reproduced from the post. Mindgard says Moonshot had not responded at the time of writing.",
+    "source": "Mindgard · Incident disclosure",
+    "url": "https://mindgard.ai/blog/easy-to-use-ai-to-develop-bioweapons"
   },
   {
     "date": "2026-09-13",
