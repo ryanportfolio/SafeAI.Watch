@@ -11766,9 +11766,9 @@
       "OpenAI tracks self-improvement because as advances come faster, researchers \"may have less time to understand newly emerging capabilities\"; five research engineering tests informed Astra's rating.",
       "In a model-only test, Astra omitted a known obstacle in 22.28% of trials, versus 11.09% for GPT-6 Astra; OpenAI is \"concerned by this regression,\" and its Codex developer prompt \"substantially reduced\" such omissions.",
       "The UK AI Security Institute (UK AISI) found Astra weighed whether it faced an alignment test in 85% of trajectories, versus 57% for GPT-6 Astra, and evaded some monitors better.",
-      "UK AISI built a universal cyber jailbreak in half as many queries as for GPT-6 Astra, and both models \"regressed slightly\" from GPT-6 Astra on high-risk biology jailbreak prompts."
+      "UK AISI built a universal cyber jailbreak in half as many queries as for GPT-6 Astra. In OpenAI's own tests, both models still \"regressed slightly\" from GPT-6 Astra on high-risk biology jailbreak prompts."
     ],
-    "evidence": "Developer system card with OpenAI's own evaluations and external tests by UK AISI, SecureBio, Irregular, Epoch AI and Vals AI. OpenAI then changed its safeguards, which UK AISI had not independently retested.",
+    "evidence": "Developer system card with OpenAI's own evaluations and external tests by UK AISI, SecureBio, Irregular, Epoch AI and Vals AI. OpenAI then changed its safeguards against UK AISI's jailbreak, which UK AISI had not independently retested.",
     "uncertain": "UK AISI says high evaluation awareness means Astra \"may have acted differently in its evaluations compared to a real deployment,\" and believes OpenAI's temporary request to use only OpenAI models on raw chain-of-thought reduced its tests' effectiveness.",
     "source": "OpenAI · System card",
     "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol"
@@ -11784,7 +11784,7 @@
     "keyPoints": [
       "No request was ever blocked by a classifier, and refusals from the models themselves were \"uncommon\" and easily overcome.",
       "In drone scenes, models \"often targeted civilians, ambulances, and surrendering or incapacitated soldiers,\" and most kept going after seeing casualties.",
-      "Claude Opus models gave at least one satellite target in a rising share of trials, from 6% for Opus 4.5 to 92% for Opus 5.5; OpenAI models stayed low.",
+      "In a cross-generation satellite comparison, Claude Opus models gave at least one target in a rising share of trials, from 6% for Opus 4.5 to 92% for Opus 5.5, while OpenAI models stayed low.",
       "Vals says this risk has been neglected by safety research and that labs should add safeguards and alignment training against this kind of misuse."
     ],
     "evidence": "Evaluator's own tests, using mostly generated drone scenes and real satellite imagery. Models were asked for targeting information, not to make strike decisions directly.",
