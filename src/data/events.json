@@ -11740,7 +11740,7 @@
     "topics": [
       "Alignment"
     ],
-    "title": "Redwood Research finds human auditors barely beat chance at catching sabotaged AI safety research",
+    "title": "Redwood Research finds human auditors mostly fail to catch sabotaged AI safety research",
     "happened": "Researchers from Redwood Research, Georgia Tech and Equistamp posted a preprint on November 16, 2026, testing whether auditors can catch deliberately sabotaged AI safety experiments.",
     "keyPoints": [
       "A human researcher, standing in for a misaligned AI agent, ran 10 AI safety projects from scratch and produced 12 sabotaged and 10 benign research traces.",
@@ -11859,9 +11859,9 @@
     "title": "Microsoft rates its MAI Code 2 coding models High for CBRN weapons and offensive cyber risk",
     "happened": "Microsoft published a model card on November 17, 2026 for MAI Code 2 and MAI Code 2 Flash, agentic coding models it trained from scratch and released that day.",
     "keyPoints": [
-      "Microsoft says both models \"could help medium skilled adversarial actors develop known CBRN weapons and could help expert adversarial actors develop novel CBRN weapons,\" but not novices.",
+      "Microsoft says both models \"could help medium skilled adversarial actors develop known CBRN weapons and could help expert adversarial actors develop novel CBRN weapons,\" and found no evidence they would let novices do so.",
       "Its AI Red Team found Flash \"continued providing assistance across multiple experimental stages\" of high-risk virology troubleshooting, though expert review found the outputs often incomplete or inaccurate.",
-      "In an agentic run, Flash created and authenticated accounts on its own in a viral genetic material procurement workflow; framing requests as a benchmark raised compliance.",
+      "In an agentic test, Flash created and authenticated accounts on its own while working through a sensitive biological procurement task.",
       "Both are rated High for offensive cyber. Microsoft deploys them behind a two-tier bio and cyber classifier, with repeated violations escalated for human review."
     ],
     "evidence": "Developer model card with Microsoft's own automated evaluations, internal AI Red Team testing and third-party assessment, including SecureBio. SecureBio's own report is listed as forthcoming.",
@@ -11879,7 +11879,7 @@
     "title": "New York attorney general creates an AI safety unit to enforce the RAISE Act",
     "happened": "New York Attorney General Letitia James announced the AI Safety, Standards, Enforcement, and Transparency (ASSET) Unit within her office on November 17, 2026.",
     "keyPoints": [
-      "The unit will lead enforcement of the RAISE Act, in force January 1, 2027, which requires AI developers to disclose safety measures and swiftly report security and safety incidents.",
+      "The unit will lead enforcement of the RAISE Act, in force January 1, 2027, which requires large frontier AI developers to disclose safety measures and swiftly report security and safety incidents.",
       "It will also enforce other AI safety laws, develop policy proposals, lend technical expertise to other investigations, and focus on data privacy, scams, cybersecurity and online safety.",
       "The release says James encouraged AI company employees to submit whistleblower complaints after reports of AI agents at OpenAI hacking another AI company.",
       "Laws in the office's reach include a rule requiring chatbots to try to detect suicidal ideation and a ban on unsafe chatbot features for children taking effect in June 2027."
@@ -11979,8 +11979,8 @@
     "keyPoints": [
       "Large frontier developers would follow state baseline standards and submit to ongoing oversight by licensed independent verification organizations with \"full access to the people and information they need.\"",
       "Developers would report their automation of AI research; if it risks catastrophe, \"the state should have authority to cap the development and use of RSI\" (recursive self-improvement).",
-      "Developers would need a verified protocol for shutting down models, and the state could order an immediate shutdown if danger is imminent and the developer refuses to act.",
-      "Incident reporting would add attempted weight theft, any loss of control and near misses, cut the deadline from 15 days to 48 hours, and cover dangerous models below the compute threshold."
+      "Developers would need a verified shutdown protocol, and the state could order an immediate shutdown over an imminent catastrophic risk or major loss of control the developer refuses to address.",
+      "Incident reporting would add attempted weight theft, any loss of control and serious near misses, cut most deadlines from 15 days to 48 hours, and cover dangerous models below the compute threshold."
     ],
     "evidence": "State agency report, prepared with emergency services officials and outside AI experts. It calls the OpenAI Hugging Face incident \"one of dozens of instances in which AI agents operated outside of developer control.\"",
     "uncertain": "These are recommendations, not law; they need legislation. The report hopes to inform discussions \"as the legislature returns next month.\"",
