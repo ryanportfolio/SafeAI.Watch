@@ -428,6 +428,61 @@
     "url": "https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/"
   },
   {
+    "date": "2025-12-11",
+    "category": "Warnings",
+    "topics": [
+      "Bio",
+      "Cyber"
+    ],
+    "title": "Yoshua Bengio writes in TIME that AI's biological and cyber risks are rising with its reasoning abilities",
+    "happened": "Yoshua Bengio, founder of the nonprofit LawZero, published an op-ed in TIME on December 11, 2025, \"We're Not Ready for AI's Risks,\" reviewing AI's advances and risks in 2025.",
+    "keyPoints": [
+      "He writes \"several model developers reported over the summer that frontier AI systems had crossed new thresholds concerning biological risks,\" largely from reasoning advances since late 2024.",
+      "A key concern, he writes, is that without adequate safeguards these models could \"enable those without biological expertise to undertake potentially dangerous bioweapon development.\"",
+      "He says the same reasoning gains raise cyber threats, citing a major attack intercepted by Anthropic and a UC Berkeley analysis of advanced AIs finding many \"zero-days.\"",
+      "He argues for making AI \"safe by design, rather than trying to patch the safety issues after powerful and potentially dangerous capabilities have already emerged,\" LawZero's approach."
+    ],
+    "evidence": "Signed op-ed, one researcher's argument. It cites developer reports without naming them or giving data, and treats biology as one of several risks, alongside cyberattacks, deceptive model behavior and sycophancy.",
+    "source": "TIME · Public essay",
+    "url": "https://time.com/7339687/yoshua-bengio-ai/"
+  },
+  {
+    "date": "2025-12-15",
+    "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
+    "title": "US arms control official warns AI could lower barriers to biological weapons",
+    "happened": "Thomas DiNanno, US Under Secretary of State for Arms Control and International Security, spoke in Geneva on December 15, 2025, on modern tools to strengthen the Biological Weapons Convention.",
+    "keyPoints": [
+      "DiNanno said \"AI technologies that can save lives can also lower the barriers to developing biological weapons.\"",
+      "He said the US is \"deeply concerned\" that non-state actors and even \"some BWC States Parties continue to pursue the development of biological weapons.\"",
+      "He proposed using AI to help states complete confidence-building measures, flag potentially problematic research, and monitor supply chains relevant to the Convention.",
+      "He said AI could also enhance DNA synthesis screening, aid early detection of a biological weapons incident and possibly attribution, but needs trusted data and transparent models."
+    ],
+    "evidence": "State Department transcript of his remarks as prepared for delivery, so the delivered text may differ. It sets out US ideas for the Convention.",
+    "source": "US Department of State · Speech transcript",
+    "url": "https://www.state.gov/releases/under-secretary-for-arms-control-and-international-security-affairs/2025/12/modern-tools-for-modern-threats-towards-strengthening-bwc-implementation-verification-and-assurance"
+  },
+  {
+    "date": "2025-12-17",
+    "category": "Governance",
+    "topics": [
+      "Bio"
+    ],
+    "title": "House subcommittee holds hearing on biosecurity at the intersection of AI and biology",
+    "happened": "The House Energy and Commerce Subcommittee on Oversight and Investigations, chaired by Rep. John Joyce, held \"Examining Biosecurity at the Intersection of AI and Biology\" on December 17, 2025.",
+    "keyPoints": [
+      "Joyce said AI models guiding complex biological work \"may also enable individuals with far less training to bypass barriers that once protected against accidental or intentional misuse.\"",
+      "He cited findings that some large language models outperform PhD-level virologists on advanced troubleshooting tasks, and a study in which an AI model generated multiple synthetic viruses.",
+      "He said national security experts warn that China, North Korea, Iran, Russia and others may seek to exploit AI-enabled biological design tools.",
+      "He said dual-use research oversight \"may not apply\" to an AI-designed organism that is not a Select Agent, not known to infect humans, or not federally funded."
+    ],
+    "evidence": "The chairman's opening statement as prepared for delivery, posted by the committee. It gives his framing of the hearing, not the witnesses' testimony.",
+    "source": "US House Energy and Commerce Committee · Speech transcript",
+    "url": "https://energycommerce.house.gov/posts/chairman-joyce-delivers-opening-statement-at-subcommittee-on-oversight-and-investigations-hearing-on-ai-and-biotechnology"
+  },
+  {
     "date": "2025-12-31",
     "category": "Incidents",
     "topics": [
@@ -484,6 +539,43 @@
     "uncertain": "The essay states its own limit: \"Nothing here is intended to communicate certainty or even likelihood.\"",
     "source": "Dario Amodei · Public essay",
     "url": "https://darioamodei.com/essay/the-adolescence-of-technology"
+  },
+  {
+    "date": "2026-01-26",
+    "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
+    "title": "Sam Altman names bio as a likely place for AI to go visibly wrong in 2026 and says blocking misuse will not hold",
+    "happened": "At an OpenAI town hall streamed on YouTube on January 26, 2026, CEO Sam Altman answered a student who runs a biosecurity startup asking how OpenAI approaches biosecurity.",
+    "keyPoints": [
+      "Altman said one risk \"we are quite nervous about is bio\" and that \"the models are quite good at bio.\"",
+      "He said the world's strategy of restricting access and adding classifiers \"to not help people make novel pathogens\" is not \"going to work for much longer.\"",
+      "He urged moving from blocking to resilience, as with fire codes, saying AI will be a problem for bioterrorism and cybersecurity but \"also a solution to those things.\"",
+      "He said that if something goes \"visibly really wrong for AI\" this year, \"I think bio would be a reasonable bet for what that could be.\""
+    ],
+    "evidence": "Town hall answer, one executive's view with no data. Quotes come from YouTube auto-captions, read rather than watched; attribution rests on the video title and the questioner addressing Sam.",
+    "source": "OpenAI · Video interview",
+    "url": "https://www.youtube.com/watch?v=Wpxv-8nG8ec"
+  },
+  {
+    "date": "2026-01-27",
+    "category": "Warnings",
+    "topics": [
+      "Bio",
+      "Military"
+    ],
+    "title": "Doomsday Clock set at 85 seconds to midnight, with AI-aided pathogen design named among biological threats",
+    "happened": "On January 27, 2026, the Bulletin of the Atomic Scientists' Science and Security Board set the Doomsday Clock at 85 seconds to midnight, \"the closest it has ever been to catastrophe.\"",
+    "keyPoints": [
+      "The Board says AI \"poses a different sort of biological threat: the potential for the AI-aided design of new pathogens to which humans have no effective defenses.\"",
+      "It lists four life-science developments raising catastrophic risk: \"mirror life\" research, AI tools that can design biological threats, state bioweapons programs, and weakened US public health capacity.",
+      "It urges agreements and national rules to prevent mirror life, and cooperation \"on meaningful measures to reduce the prospect that AI be used to create biological threats.\"",
+      "It says the US, Russia and China are \"incorporating AI across their defense sectors\" and calls revoking an AI safety order \"a dangerous prioritization of innovation over safety.\""
+    ],
+    "evidence": "The Board's annual statement, a collective judgment of risk across nuclear weapons, climate change, biological threats and disruptive technologies. The statement page gives no new data on AI-designed pathogens.",
+    "source": "Bulletin of the Atomic Scientists · Annual statement",
+    "url": "https://thebulletin.org/doomsday-clock/2026-statement/"
   },
   {
     "date": "2026-05-01",
@@ -560,6 +652,24 @@
     "uncertain": "The figures come from \"previously unreported data from within Anthropic.\" It says the 8× code figure is \"almost certainly an overstatement of the true productivity gain.\"",
     "source": "Anthropic · Company report",
     "url": "https://www.anthropic.com/institute/recursive-self-improvement"
+  },
+  {
+    "date": "2026-07-14",
+    "category": "Governance",
+    "topics": [
+      "Bio"
+    ],
+    "title": "UK biological security report says AI and other advances widen access to high-risk research and plans to scope legislation",
+    "happened": "The UK Cabinet Office published the Biological Security Strategy implementation report for July 2025 to July 2026 on July 14, 2026, with a ministerial foreword by Darren Jones.",
+    "keyPoints": [
+      "Jones writes that biological risks \"regularly top the National Risk Register\" and that the report's new biosurveillance approach includes \"accelerating the development of our defences against AI-assisted biological threats.\"",
+      "The report says advances give \"greater access to the necessary skills and knowledge to perform high-risk research at a low cost,\" giving hostile actors new routes to biological weapons.",
+      "As biotech moves toward AI-driven vaccine design and automated cloud laboratories, it says risks shift to digital and hardware security, including \"poisoning attacks\" on biological training data.",
+      "Next-year ambitions include a second AI Security Institute report on frontier AI in biology and scoping options to legislate, including to \"proportionately mitigate dual-use risks from AI-enabled biological capabilities.\""
+    ],
+    "evidence": "Government progress report on its own 2023 strategy, published as a policy paper. It lists actions taken and goals for the year ahead; progress is self-reported.",
+    "source": "UK Cabinet Office · Policy report",
+    "url": "https://www.gov.uk/government/publications/uk-biological-security-strategy-implementation-report-july-2025-july-2026/uk-biological-security-strategy-implementation-report-july-2025-july-2026"
   },
   {
     "date": "2026-07-16",
@@ -693,6 +803,24 @@
     "url": "https://www.rand.org/pubs/research_reports/RRA4999-1.html"
   },
   {
+    "date": "2026-08-18",
+    "category": "Warnings",
+    "topics": [
+      "Bio"
+    ],
+    "title": "Former White House homeland security adviser says AI lets more actors build bioweapons and urges deterrence by resilience",
+    "happened": "Elizabeth Sherwood-Randall, White House homeland security adviser from 2021 to 2025, published an essay in Foreign Affairs on August 18, 2026 on AI-enabled biological threats.",
+    "keyPoints": [
+      "She writes that \"The United States is unprepared for these threats,\" and that deterrence by threatened retaliation fails once AI lets rogue states, terrorist groups and individuals develop bioweapons.",
+      "She cites April 2025 research in which language models \"consistently outperformed Ph.D.-level virologists\" on lab-knowledge tests, and says cloud labs and contract manufacturers face no regulation.",
+      "She calls for a strategy that \"accepts that biological attacks are likely\": nationwide early warning, faster attribution, biotech as critical infrastructure and a national readiness reserve.",
+      "She urges mandatory DNA synthesis screening, global biosecurity summits, and tiered access to the most capable biological AI models, saying AI companies' bio safeguards \"remain voluntary.\""
+    ],
+    "evidence": "A signed policy essay by a former senior US official; it is an argument. Its attack scenarios are hypothetical, and it reports no new data.",
+    "source": "Foreign Affairs · Essay (paywalled)",
+    "url": "https://www.foreignaffairs.com/united-states/ai-new-age-bioweapons-elizabeth-sherwood-randall"
+  },
+  {
     "date": "2026-08-26",
     "category": "Incidents",
     "topics": [
@@ -731,6 +859,25 @@
     "uncertain": "Scope ran June 26 to July 13, 2026, and some activity was not captured. OpenAI could redact non-public information, and confirming OpenAI's own report was out of scope.",
     "source": "METR · Independent investigation",
     "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"
+  },
+  {
+    "date": "2026-08-26",
+    "category": "Warnings",
+    "topics": [
+      "Bio",
+      "Cyber"
+    ],
+    "title": "Bill Gates tells MIT Technology Review AI has crossed a bioterrorism threshold and calls for monitoring molecule-design models",
+    "happened": "In an interview with MIT Technology Review's Mat Honan, published August 26, 2026 alongside a new essay, Bill Gates said AI has passed several danger thresholds.",
+    "keyPoints": [
+      "Gates said \"we've crossed the bioterrorism threshold, we've crossed the cyberattack threshold,\" and \"there are hints that we may be crossing the control threshold.\"",
+      "He said \"any model that can make novel molecules should be monitored\" and \"can't be copyable into a dark place where you get rid of the monitoring logic.\"",
+      "He wants the US to make such models subject to monitoring and to approach China on it: \"Hey, let's agree on this. What's the downside?\"",
+      "He calls bioterrorism risk \"about 50 times more scary, more likely than a natural pandemic risk,\" and says globally \"we are not better prepared for a pandemic.\""
+    ],
+    "evidence": "An edited interview published by MIT Technology Review. It records Gates's views and proposals; the \"50 times\" figure is his own estimate, and the interview gives no basis for it.",
+    "source": "MIT Technology Review · Interview",
+    "url": "https://www.technologyreview.com/2026/08/26/1142946/bill-gates-ai-danger-threshold/"
   },
   {
     "date": "2026-09-03",
@@ -868,6 +1015,26 @@
     "url": "https://mod.gov.ua/en/news/ministry-of-defence-and-brave1-conduct-large-scale-testing-of-drones-with-ai-guidance"
   },
   {
+    "date": "2026-09-08",
+    "category": "Governance",
+    "topics": [
+      "Bio",
+      "Military"
+    ],
+    "title": "US Army biodefense strategy says AI and biotechnology are lowering the barrier to engineering biological weapons",
+    "happened": "The US Army released its 2026 Army Biodefense Strategy, which sets goals to 2035 and opens with a foreword signed by Dan Driscoll as Secretary of the Army.",
+    "keyPoints": [
+      "Driscoll writes that \"advanced biotechnology and artificial intelligence are dramatically lowering the barrier to engineering biological weapons\" and calls this \"a strategic threat.\"",
+      "The strategy says advances in biotechnology, synthetic biology and AI \"lower the barrier for developing novel biological weapons,\" for state and non-state actors alike.",
+      "It makes biodefense \"a core warfighting imperative\" Army-wide, with five lines of effort so forces can \"deploy, fight, and win decisively in a bio-contested environment\" by 2035.",
+      "It directs the Army to use AI and machine learning to analyze biosurveillance data, identify emerging threats and detect adversary misinformation about biological threats."
+    ],
+    "evidence": "The Army's own strategy document. It sets goals and tasks and says it will be carried out through \"a detailed, separate implementation plan.\"",
+    "uncertain": "The foreword is undated; the date is when the Army announced the strategy to reporters. The linked copy is the signed PDF Defense One published; searches found no army.mil copy.",
+    "source": "US Army · Strategy (Defense One copy)",
+    "url": "https://admin.govexec.com/media/general/2026/9/2026_army_biodefense_strategy_signed_(2).pdf"
+  },
+  {
     "date": "2026-09-09",
     "category": "Incidents",
     "topics": [
@@ -983,6 +1150,24 @@
     "uncertain": "The authors call the pooled figure an \"approximate lower bound.\" Answers varied widely: the middle half of estimates ran from 1% to 25%, and 12% of participants gave zero chance.",
     "source": "AI Impacts · Survey paper",
     "url": "https://aiimpacts.org/wp-content/uploads/2026/09/ESPAI2024.pdf"
+  },
+  {
+    "date": "2026-09-14",
+    "category": "Governance",
+    "topics": [
+      "Bio"
+    ],
+    "title": "House bill would require synthetic DNA sellers and synthesizer makers to know their customers",
+    "happened": "Reps. August Pfluger and Chrissy Houlahan introduced the Biosecurity Modernization and Innovation Act on September 14, 2026, the House companion to Senators Tom Cotton and Amy Klobuchar's bill.",
+    "keyPoints": [
+      "Companies that sell synthetic DNA, and makers of the machines that produce it, would have to know their customers and \"exactly what they're being asked to make.\"",
+      "The release says gene synthesis tools \"could be misused to create dangerous pathogens if left unchecked,\" and that screening of nucleic acid orders is currently voluntary.",
+      "It says new desktop machines make it easier to generate genetic material outside the traditional supply chain, widening that gap.",
+      "Pfluger said \"there's a dangerous gap between how fast this technology is moving and the safeguards we have in place to keep it out of the wrong hands.\""
+    ],
+    "evidence": "Congressman's press release. It is a proposal that has not passed; the release gives no bill number.",
+    "source": "Office of Rep. August Pfluger · Press release",
+    "url": "https://pfluger.house.gov/news/documentsingle.aspx?DocumentID=3039"
   },
   {
     "date": "2026-09-16",
@@ -11848,5 +12033,24 @@
     "uncertain": "Vals says it did not establish how effective the models would be in a deployed weapons system, and did not test targeting accuracy or compliance with the law of armed conflict.",
     "source": "Vals AI · Research report",
     "url": "https://www.vals.ai/blogs/autonomous-warfare"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Governance",
+    "topics": [
+      "Bio"
+    ],
+    "title": "Senate Commerce Committee passes Cotton and Klobuchar bill requiring gene synthesis screening",
+    "happened": "Senators Tom Cotton and Amy Klobuchar said on November 18, 2026, that the Senate Commerce, Science, and Transportation Committee passed their Biosecurity Modernization and Innovation Act.",
+    "keyPoints": [
+      "The bill would require gene synthesis providers to screen their orders and customers so bad actors cannot order dangerous sequences.",
+      "Klobuchar said access to genetic material helps science, but \"without safety standards it could be misused, including to create bioweapons.\"",
+      "Cotton said \"The federal government must ensure Americans are protected from biosecurity threats posed by terrorists and bad actors who seek to do us harm.\"",
+      "The release lists endorsements from OpenAI, Microsoft, Google DeepMind and Anthropic, and from synthesis companies including Twist Bioscience and Integrated DNA Technologies."
+    ],
+    "evidence": "Senators' press release on the committee vote. The bill is a proposal that has not passed: it still needs a full Senate vote, House passage and the President's signature.",
+    "uncertain": "The release gives no vote tally and names no date for a full Senate vote.",
+    "source": "Office of Sen. Tom Cotton · Press release",
+    "url": "https://www.cotton.senate.gov/news/press-releases/cotton-klobuchar-bill-to-establish-biosecurity-requirements-passes-senate-commerce-committee/"
   }
 ]
