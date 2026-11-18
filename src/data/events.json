@@ -11900,7 +11900,7 @@
     "keyPoints": [
       "NIST, the national laboratories and security and health agencies would set AI hazard levels covering weapons of mass destruction, cyberattacks and loss of control, published within 6 months.",
       "Independent federal examiners would be embedded at developers of the most advanced models, with full access to facilities and models, and a remit limited to national security.",
-      "AI for high-risk military and intelligence missions would need documented risk assessments and independent testing; contractors that knowingly conceal serious risks could face civil liability.",
+      "AI for high-risk military and intelligence missions would need documented risk assessments and independent testing; contractors that knowingly conceal serious risks could face civil liability for resulting harm.",
       "Kelly writes that models \"that could help cure deadly diseases can also help someone develop biological weapons or launch devastating cyberattacks,\" while companies decide for themselves which are dangerous."
     ],
     "evidence": "A senator's own policy framework, modeled on how the US oversees nuclear materials, dangerous pathogens and weapons systems. It states goals and mechanisms, not legislative text.",
@@ -11979,7 +11979,7 @@
     "keyPoints": [
       "Large frontier developers would follow state baseline standards and submit to ongoing oversight by licensed independent verification organizations with \"full access to the people and information they need.\"",
       "Developers would report their automation of AI research; if it risks catastrophe, \"the state should have authority to cap the development and use of RSI\" (recursive self-improvement).",
-      "Developers would need a verified shutdown protocol, and the state could order an immediate shutdown over an imminent catastrophic risk or major loss of control the developer refuses to address.",
+      "Developers would need a verified shutdown protocol, and the state could order an immediate shutdown over an imminent threat of catastrophic risk or major loss of control that the developer cannot or will not address.",
       "Reporting would add attempted weight theft, loss-of-control events and serious near misses, cut most deadlines from 15 days to 48 hours, and cover models capable of catastrophic risk below the compute threshold."
     ],
     "evidence": "State agency report, prepared with emergency services officials and outside AI experts. It calls the OpenAI Hugging Face incident \"one of dozens of instances in which AI agents operated outside of developer control.\"",
