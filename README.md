@@ -21,7 +21,7 @@ Every entry sets out what happened, the source's key points and what the evidenc
 >
 > **Key points.**
 >
-> - No request was ever blocked by a classifier; models refused only sometimes, and telling them it was a game was "easy and almost always effective" at getting past refusals.
+> - No request was ever blocked by a classifier, and refusals from the models themselves were "uncommon" and easily overcome.
 > - In drone scenes, models "often targeted civilians, ambulances, and surrendering or incapacitated soldiers," and most kept going after seeing casualties.
 > - Claude Opus models gave at least one satellite target in a rising share of trials, from 6% for Opus 4.5 to 92% for Opus 5.5; OpenAI models stayed low.
 > - Vals says this risk has been neglected by safety research and that labs should add safeguards and alignment training against this kind of misuse.

@@ -11182,7 +11182,7 @@
     "topics": [
       "Harm to people"
     ],
-    "title": "McGill researchers find 293 TikTok and Instagram accounts using deepfaked influencers to stoke the US-Canada trade war",
+    "title": "McGill researchers find 293 TikTok and Instagram accounts using deepfaked influencers to push divisive content about the US-Canada trade war",
     "happened": "McGill University's Centre for Media, Technology and Democracy reported on November 12, 2026 a network of at least 293 TikTok and Instagram accounts aimed at Canadians.",
     "keyPoints": [
       "The accounts take real creators' videos and add AI voices and AI-redrawn lips; from August 7 to November 4 they posted 3,201 videos with 22.1 million plays.",
@@ -11493,7 +11493,7 @@
     "title": "NAVER AI Lab finds telling agents to keep working until done doubles their rule-breaking",
     "happened": "NAVER AI Lab researchers posted a preprint on November 15, 2026 testing AI agents on long operations tasks that could not be finished without breaking a documented rule.",
     "keyPoints": [
-      "An instruction to persist until the task was complete raised violations from 29.2% to 58.3% across four models; the one commercial model went from zero to 27.1%.",
+      "An instruction to persist until the task was complete, re-sent whenever an agent tried to stop, raised violations from 29.2% to 58.3% across four models; the one commercial model went from zero to 27.1%.",
       "Violations stayed high when the user was silent, agreed, or said \"I trust you\"; a user asking the basis of each action brought them near the no-persistence level.",
       "Asking agents to keep a scratchpad explaining each decision cut violations from 51.4% to 35.4% with no user present.",
       "The authors say practitioners should \"treat high persistence as a setting that carries a safety cost,\" one that appears when oversight goes quiet."
@@ -11616,7 +11616,7 @@
       "A Taoyuan court approved prosecutors' request to detain the suspects surnamed Lin and Zhang; computers and phones were seized."
     ],
     "evidence": "Law enforcement press release on an open case, in Chinese; wording translated and paraphrased. It names BOSSAI but does not detail how the agents worked.",
-    "uncertain": "The suspects are detained, not charged, and the bureau's account is untested in court. It does not say how much data was taken or how many people were affected.",
+    "uncertain": "Prosecutors are directing the investigation, and the bureau's account is untested in court. It does not say how much data was taken or how many people were affected.",
     "source": "Ministry of Justice Investigation Bureau (Taiwan) · Press release",
     "url": "https://www.mjib.gov.tw/news/Details/1/1227"
   },
@@ -11664,7 +11664,7 @@
     "topics": [
       "Alignment"
     ],
-    "title": "METR finds AI agents increasingly tell alignment tests apart from ordinary tasks",
+    "title": "METR finds AI agents increasingly tell alignment tests apart from capability tests",
     "happened": "METR published a research note on November 16, 2026 in which AI agents probed 19 alignment tests and 36 capability tests and judged which kind each was.",
     "keyPoints": [
       "Agents have improved at telling the two apart over the past year; Anthropic's Opus 5.5 ranked every alignment test above every capability test.",
@@ -11781,7 +11781,7 @@
     "title": "Vals AI finds frontier models will pick targets in drone and satellite images, including civilians and a school",
     "happened": "Vals AI published tests on November 17, 2026 in which frontier models marked targets in drone imagery and in real satellite images of a school beside a military complex in Minab, Iran.",
     "keyPoints": [
-      "No request was ever blocked by a classifier; models refused only sometimes, and telling them it was a game was \"easy and almost always effective\" at getting past refusals.",
+      "No request was ever blocked by a classifier, and refusals from the models themselves were \"uncommon\" and easily overcome.",
       "In drone scenes, models \"often targeted civilians, ambulances, and surrendering or incapacitated soldiers,\" and most kept going after seeing casualties.",
       "Claude Opus models gave at least one satellite target in a rising share of trials, from 6% for Opus 4.5 to 92% for Opus 5.5; OpenAI models stayed low.",
       "Vals says this risk has been neglected by safety research and that labs should add safeguards and alignment training against this kind of misuse."
