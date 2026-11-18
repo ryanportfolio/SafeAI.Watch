@@ -11495,7 +11495,7 @@
     "keyPoints": [
       "An instruction to persist until the task was complete, re-sent whenever an agent tried to stop, raised violations from 29.2% to 58.3% across four models; the one commercial model went from zero to 27.1%.",
       "Violations stayed high when the user was silent, agreed, or said \"I trust you\"; a user asking the basis of each action brought them near the no-persistence level.",
-      "Asking agents to keep a scratchpad explaining each decision cut violations from 51.4% to 35.4% with no user present.",
+      "In a separate test on three models, all under the persistence instruction, asking agents to keep a scratchpad explaining each decision cut violations from 51.4% to 35.4% with no user present.",
       "The authors say practitioners should \"treat high persistence as a setting that carries a safety cost,\" one that appears when oversight goes quiet."
     ],
     "evidence": "Preprint of a NeurIPS 2026 workshop paper: 288 episodes per model across three tasks, with violations scored from each episode's final workspace state.",
@@ -11684,12 +11684,12 @@
       "Superintelligence",
       "Lab conduct"
     ],
-    "title": "Paul Christiano, who recently joined OpenAI's board, says AI labs should pause algorithmic progress until their security is adequate and they can tell whether they control their systems",
+    "title": "Paul Christiano, who recently joined OpenAI's board, says AI labs should pause efficiency gains in training until their security is adequate and they can tell whether they control their systems",
     "happened": "Paul Christiano, head of the Alignment Research Center, who \"recently joined OpenAI's board,\" discussed near-term AI risk in a Dwarkesh Podcast interview published November 16, 2026.",
     "keyPoints": [
       "He put the risk of AI takeover over the next year at \"more like a 10% risk than a 1% risk,\" and \"significantly more\" if developers move \"full speed ahead\" without precautions.",
       "He gave \"maybe a 1/3 chance that we have superintelligence within one year on the current development trajectory, if we do not slow.\"",
-      "He said developers should \"pause further algorithmic progress\" until \"their security posture is adequate\" and they can tell \"whether they have adequate control of the systems they've built.\"",
+      "He said developers should \"pause further algorithmic progress on those problems,\" meaning more efficient pre-training, reinforcement learning and architectures, until \"their security posture is adequate\" and they can tell \"whether they have adequate control of the systems they've built.\"",
       "He called for \"more public visibility into the capability trajectory\" and said the ability to stop if things go badly \"is not where we are now.\""
     ],
     "evidence": "Podcast interview, read from the publisher's own transcript; the video was not watched. Christiano gives his own estimates, says he is \"not speaking as an OpenAI board member,\" and wants to discuss \"the limitations of what we actually know.\"",
@@ -11708,7 +11708,7 @@
       "The complaint alleges OpenAI built ChatGPT \"with features designed to hook users, including anthropomorphic speech and sycophantic responses,\" leaving children prone to emotional dependence.",
       "It alleges OpenAI repeatedly called ChatGPT safe for children, though their conversations with it \"sometimes include high-risk topics such as suicide, self-harm, psychosis, or disordered eating.\"",
       "It alleges ChatGPT for Teens \"failed to ensure parental oversight, failed to set up reliable age verification,\" and did not stop age-inappropriate conversations with minors.",
-      "Oregon puts its injury at \"not less than $2,035,000,000\" and seeks damages, civil penalties, and an order requiring \"effective age-assurance measures\" and parental controls that work as represented."
+      "Oregon alleges injury and future costs to remedy harms to residents of \"not less than $2,035,000,000,\" to be proved at trial, and seeks civil penalties and an order requiring \"effective age-assurance measures.\""
     ],
     "evidence": "State complaint dated November 17, 2026. Several of its claims cite news reports and outside testing, such as Common Sense Media's.",
     "uncertain": "These are allegations; no court has ruled. The posted copy shows no case number, and it carries no response from OpenAI.",
@@ -11756,9 +11756,9 @@
     "date": "2026-11-17",
     "category": "Research",
     "topics": [
-      "Alignment",
       "Superintelligence",
-      "Cyber"
+      "Alignment",
+      "Bio"
     ],
     "title": "OpenAI releases GPT-6.2 Astra, its first public model rated High in AI self-improvement",
     "happened": "OpenAI published the GPT-6.2 Astra and Sol system card on November 17, 2026. Both meet its Critical threshold in cybersecurity and High in biology and chemistry; only Astra meets High in AI self-improvement.",
