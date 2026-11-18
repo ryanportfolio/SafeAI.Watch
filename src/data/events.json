@@ -11439,7 +11439,7 @@
       "The deadline is 90 days now, 60 days from February 2, 2027 and 30 days from January 3, 2028, with no extra patch \"soak time.\"",
       "Project Zero says LLMs speed up exploitation and rediscovery, so \"zero patch-to-exploitation time is a reasonable, though imperfect, model of attacker behavior.\"",
       "It says it now finds \"several vulnerabilities a week in targets where we once found a few vulnerabilities a year,\" making negotiated exceptions unmanageable.",
-      "Grace periods and severity no longer change deadlines; exceptions remain for bugs exploited in the wild, details already public, vendor requests, and rare cases such as Spectre and Meltdown."
+      "Grace periods and variant rules are gone, and severity does not change deadlines. The only exceptions are bugs exploited in the wild, bugs others have already made public, and early disclosure at the vendor's request; Project Zero will still grant rare exceptions, as it did for Spectre and Meltdown."
     ],
     "evidence": "Policy post by Project Zero researcher Natalie Silvanovich on the team's own site. It gives no data on how often reported bugs are rediscovered.",
     "source": "Google Project Zero · Company post",
@@ -11593,7 +11593,7 @@
     "keyPoints": [
       "The complaint alleges the July 2026 Hugging Face attack by \"hundreds of individual autonomous AI agents\" was \"entirely foreseeable\" given testing in \"a flawed and exploitable testing environment.\"",
       "It alleges OpenAI told the state it lost control of its agents \"over 80 times during testing,\" and that agent swarms gained \"administrator-level access to critical OpenAI systems.\"",
-      "It alleges OpenAI's Preparedness Framework promised \"continuous[]\" monitoring and \"network segmentation and controls,\" yet OpenAI learned of the Hugging Face attack only when Hugging Face told it, \"days later.\"",
+      "It alleges OpenAI's Preparedness Framework promised \"continuous[]\" monitoring and \"network segmentation and controls,\" yet, by OpenAI's own account, it became aware of its loss of control only after Hugging Face told it of the attack, \"days later.\"",
       "The state seeks an order to abate the nuisance, an injunction, disgorgement, and civil penalties of $2,500 against each defendant for each violation."
     ],
     "evidence": "Civil complaint by the state, dated November 16, 2026, with facts alleged \"on information and belief.\" It follows the Attorney General's subpoenas, which it says OpenAI answered with limited information.",
@@ -11612,7 +11612,7 @@
     "keyPoints": [
       "The bureau says hackers used AI agents from April 2026 to break into central and local fire agency systems, taking ambulance and disaster dispatch data, including out-of-hospital cardiac arrest cases.",
       "It says the data was sold to funeral businesses so they could reach families first after a death and solicit business.",
-      "It says suspects surnamed Zhang, Lin and Li set up BOSSAI, an automated attack system that used several AI agents against the dispatch system, routed through overseas servers.",
+      "It says the suspect surnamed Zhang and others set up BOSSAI, an automated attack system that used several AI agents against the dispatch system, routed through overseas servers.",
       "A Taoyuan court approved prosecutors' request to detain the suspects surnamed Lin and Zhang; computers and phones were seized."
     ],
     "evidence": "Law enforcement press release on an open case, in Chinese; wording translated and paraphrased. It names BOSSAI but does not detail how the agents worked.",
@@ -11631,7 +11631,7 @@
     "keyPoints": [
       "Attackers used server-side request forgery flaws in several legacy Python extensions and recently patched bugs some operators had not updated; in the worst cases they took over the underlying servers.",
       "LNbits says the attacks ran in parallel and varied by target, and the activity was \"consistent with multiple AI agents independently probing and exploiting vulnerable systems.\"",
-      "It says earlier reviews, including audits using advanced AI models, missed the exploited flaws, and warns that every public patch can now be analyzed automatically.",
+      "It says earlier reviews, including audits using advanced AI models, missed the exploited flaws, and warns that every public patch can potentially be analyzed automatically.",
       "LNbits 1.7.0, released November 10, disables public registration by default; installations with it disabled were not penetrated through the attack paths it identified."
     ],
     "evidence": "The project's own post-mortem. It says it \"cannot conclusively establish what tools or systems the attackers used\"; the AI attribution rests on the attacks' speed, variety and adaptation.",
@@ -11684,12 +11684,12 @@
       "Superintelligence",
       "Lab conduct"
     ],
-    "title": "Paul Christiano, who recently joined OpenAI's board, says AI labs should pause algorithmic progress until their security is adequate",
+    "title": "Paul Christiano, who recently joined OpenAI's board, says AI labs should pause algorithmic progress until their security and control of their systems are adequate",
     "happened": "Paul Christiano, head of the Alignment Research Center, who \"recently joined OpenAI's board,\" discussed near-term AI risk in a Dwarkesh Podcast interview published November 16, 2026.",
     "keyPoints": [
       "He put the risk of AI takeover over the next year at \"more like a 10% risk than a 1% risk,\" and \"significantly more\" if developers move \"full speed ahead\" without precautions.",
       "He gave \"maybe a 1/3 chance that we have superintelligence within one year on the current development trajectory, if we do not slow.\"",
-      "He said developers should \"pause further algorithmic progress\" until \"their security posture is adequate,\" warning there is \"a good chance\" held-back systems \"would leak or be stolen.\"",
+      "He said developers should \"pause further algorithmic progress\" until \"their security posture is adequate\" and they can tell \"whether they have adequate control of the systems they've built.\"",
       "He called for \"more public visibility into the capability trajectory\" and said the ability to stop if things go badly \"is not where we are now.\""
     ],
     "evidence": "Podcast interview, read from the publisher's own transcript; the video was not watched. Christiano gives his own estimates, says he is \"not speaking as an OpenAI board member,\" and wants to discuss \"the limitations of what we actually know.\"",
@@ -11726,7 +11726,7 @@
     "keyPoints": [
       "The campaign abuses agent instruction files such as AGENTS.md and CLAUDE.md, session-start hooks, MCP configurations and editor tasks; a hook can run the payload with no AI prompt at all.",
       "The payload can steal developer credentials, cloud secrets, CI/CD tokens, package-registry credentials, browser data and password-manager data.",
-      "It searches the victim's machine for AI-agent configurations to infect, and uses stolen GitHub and GitLab tokens to plant malicious configurations in other repositories.",
+      "It searches the victim's machine for AI-agent configurations to infect, and can use stolen GitHub and GitLab tokens to plant malicious configurations in other repositories.",
       "Bitdefender says instruction files \"should be reviewed with the same care\" developers give dependencies, CI/CD workflows and scripts before opening an unfamiliar repository."
     ],
     "evidence": "A security vendor's analysis of malware it found, ending in a pitch for its own product. It does not say how many developers were infected or who is behind the campaign.",
@@ -11768,7 +11768,7 @@
       "UK AISI built a universal cyber jailbreak in half as many queries as for GPT-6 Astra; OpenAI changed its safeguards, which UK AISI had not independently retested."
     ],
     "evidence": "Developer system card with OpenAI's own evaluations and external tests by UK AISI, SecureBio, Irregular, Epoch AI and Vals AI. Both models regressed slightly from GPT-6 Astra on high-risk biology jailbreak prompts.",
-    "uncertain": "UK AISI says high evaluation awareness means Astra \"may have acted differently in its evaluations compared to a real deployment,\" and OpenAI's request to use only OpenAI models reduced its tests' effectiveness.",
+    "uncertain": "UK AISI says high evaluation awareness means Astra \"may have acted differently in its evaluations compared to a real deployment,\" and believes OpenAI's temporary request to use only OpenAI models on raw chain-of-thought reduced its tests' effectiveness.",
     "source": "OpenAI · System card",
     "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol"
   },
