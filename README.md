@@ -26,7 +26,7 @@ Every entry sets out what happened, the source's key points and what the evidenc
 > - Cotton said "The federal government must ensure Americans are protected from biosecurity threats posed by terrorists and bad actors who seek to do us harm."
 > - The release lists endorsements from OpenAI, Microsoft, Google DeepMind and Anthropic, and from synthesis companies including Twist Bioscience and Integrated DNA Technologies.
 >
-> **Evidence.** Senators' press release on the committee vote. The bill is a proposal that has not passed: it still needs a full Senate vote, House passage and the President's signature.
+> **Evidence.** Senators' press release on the committee vote. The bill is a proposal: it has cleared committee but has not passed the Senate or the House or become law.
 >
 > **Uncertain.** The release gives no vote tally and names no date for a full Senate vote.
 >

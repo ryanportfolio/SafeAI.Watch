@@ -59,7 +59,7 @@
     "topics": [
       "Bio"
     ],
-    "title": "RAND red-team study finds no significant difference in biological attack plans made with or without LLMs",
+    "title": "RAND red-team study finds no statistically significant difference in the viability of biological attack plans made with or without LLMs",
     "happened": "RAND published final results of an exercise in which teams posing as malign nonstate actors planned a biological attack, some with an LLM and the internet, others with internet only.",
     "keyPoints": [
       "The authors found \"no statistically significant difference in the viability of plans generated with or without LLM assistance.\"",
@@ -546,7 +546,7 @@
     "topics": [
       "Bio"
     ],
-    "title": "Sam Altman names bio as a likely place for AI to go visibly wrong in 2026 and says blocking misuse will not hold",
+    "title": "Sam Altman says bio would be a reasonable bet if AI goes visibly wrong in 2026, and that blocking misuse will not hold",
     "happened": "At an OpenAI town hall streamed on YouTube on January 26, 2026, CEO Sam Altman answered a student who runs a biosecurity startup asking how OpenAI approaches biosecurity.",
     "keyPoints": [
       "Altman said one risk \"we are quite nervous about is bio\" and that \"the models are quite good at bio.\"",
@@ -562,8 +562,7 @@
     "date": "2026-01-27",
     "category": "Warnings",
     "topics": [
-      "Bio",
-      "Military"
+      "Bio"
     ],
     "title": "Doomsday Clock set at 85 seconds to midnight, with AI-aided pathogen design named among biological threats",
     "happened": "On January 27, 2026, the Bulletin of the Atomic Scientists' Science and Security Board set the Doomsday Clock at 85 seconds to midnight, \"the closest it has ever been to catastrophe.\"",
@@ -12048,7 +12047,7 @@
       "Cotton said \"The federal government must ensure Americans are protected from biosecurity threats posed by terrorists and bad actors who seek to do us harm.\"",
       "The release lists endorsements from OpenAI, Microsoft, Google DeepMind and Anthropic, and from synthesis companies including Twist Bioscience and Integrated DNA Technologies."
     ],
-    "evidence": "Senators' press release on the committee vote. The bill is a proposal that has not passed: it still needs a full Senate vote, House passage and the President's signature.",
+    "evidence": "Senators' press release on the committee vote. The bill is a proposal: it has cleared committee but has not passed the Senate or the House or become law.",
     "uncertain": "The release gives no vote tally and names no date for a full Senate vote.",
     "source": "Office of Sen. Tom Cotton · Press release",
     "url": "https://www.cotton.senate.gov/news/press-releases/cotton-klobuchar-bill-to-establish-biosecurity-requirements-passes-senate-commerce-committee/"
