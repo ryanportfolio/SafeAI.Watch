@@ -1,7 +1,18 @@
 [
   {
+    "date": "2026-11-17",
+    "summary": "Oregon's attorney general sues OpenAI, alleging ChatGPT was marketed to children as safe without working safeguards, and OpenAI releases GPT-6.2 Astra, its first public model rated High in AI self-improvement. Vals AI finds frontier models will pick targets in drone and satellite images, including civilians."
+  },
+  {
     "date": "2026-11-16",
-    "summary": "Google says attackers fully automated finding and exploiting vulnerabilities with LLM frameworks, and OpenAI signs embedded assessment agreements with Apollo, METR, Transluce and Goodfire. Anthropic cuts its disclosure deadline for serious bugs to 30 days, and Fed Governor Barr warns of AI agents in bank accounts."
+    "summary": "California's attorney general sues OpenAI, alleging it lost control of its agents over 80 times in testing, and Google says attackers have automated turning patches into exploits. Taiwan's Investigation Bureau says hackers used BOSSAI to take emergency dispatch data, and OpenAI signs embedded assessment agreements.",
+    "highlights": [
+      "2026-11-16-california-attorney-general-sues-openai-over-cybersecurity",
+      "2026-11-16-google-says-attackers-have-fully-automated-turning-software",
+      "2026-11-16-taiwan-s-investigation-bureau-says-hackers-used-the-bossai",
+      "2026-11-16-openai-signs-first-embedded-assessment-agreements-giving",
+      "2026-11-16-anthropic-cuts-its-vulnerability-disclosure-deadline-from-90"
+    ]
   },
   {
     "date": "2026-11-13",
