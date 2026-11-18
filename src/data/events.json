@@ -59,7 +59,7 @@
     "topics": [
       "Bio"
     ],
-    "title": "RAND red-team study finds LLMs did not make biological attack plans more viable",
+    "title": "RAND red-team study finds no significant difference in biological attack plans made with or without LLMs",
     "happened": "RAND published final results of an exercise in which teams posing as malign nonstate actors planned a biological attack, some with an LLM and the internet, others with internet only.",
     "keyPoints": [
       "The authors found \"no statistically significant difference in the viability of plans generated with or without LLM assistance.\"",
