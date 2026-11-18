@@ -668,9 +668,9 @@
 <line class="d39" x1="195" y1="488" x2="290.1" y2="400.8" stroke="#5b5752" stroke-width=".8"/>
 <line class="d43" x1="195" y1="488" x2="239.8" y2="364.8" stroke="#5b5752" stroke-width=".8"/>
 <line class="d46" x1="195" y1="488" x2="314" y2="431.2" stroke="#5b5752" stroke-width=".8"/>
-<line class="d49" x1="195" y1="488" x2="274.9" y2="381.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d50" x1="195" y1="488" x2="216.9" y2="356.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d51" x1="195" y1="488" x2="302.6" y2="409.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d50" x1="195" y1="488" x2="274.9" y2="381.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d51" x1="195" y1="488" x2="216.9" y2="356.7" stroke="#5b5752" stroke-width=".8"/>
+<line class="d52" x1="195" y1="488" x2="302.6" y2="409.7" stroke="#5b5752" stroke-width=".8"/>
 <line class="d57" x1="195" y1="488" x2="254.5" y2="368.5" stroke="#5b5752" stroke-width=".8"/>
 <line class="d63" x1="195" y1="488" x2="321.6" y2="444.3" stroke="#5b5752" stroke-width=".8"/>
 <line class="d64" x1="195" y1="488" x2="287.1" y2="390.8" stroke="#5b5752" stroke-width=".8"/>
@@ -784,7 +784,7 @@
 <line class="d41" x1="195" y1="488" x2="292.9" y2="573.1" stroke="#5b5752" stroke-width=".8"/>
 <line class="d44" x1="195" y1="488" x2="323.2" y2="518.7" stroke="#5b5752" stroke-width=".8"/>
 <line class="d45" x1="195" y1="488" x2="264.9" y2="599.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d48" x1="195" y1="488" x2="309.4" y2="555.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d49" x1="195" y1="488" x2="309.4" y2="555.3" stroke="#5b5752" stroke-width=".8"/>
 <line class="d55" x1="195" y1="488" x2="229.5" y2="616.6" stroke="#5b5752" stroke-width=".8"/>
 <line class="d56" x1="195" y1="488" x2="285.1" y2="586.2" stroke="#5b5752" stroke-width=".8"/>
 <line class="d58" x1="195" y1="488" x2="320.5" y2="533.6" stroke="#5b5752" stroke-width=".8"/>
@@ -954,7 +954,7 @@
 <line class="d35" x1="195" y1="488" x2="165.2" y2="612.1" stroke="#5b5752" stroke-width=".8"/>
 <line class="d37" x1="195" y1="488" x2="86.5" y2="555.8" stroke="#5b5752" stroke-width=".8"/>
 <line class="d42" x1="195" y1="488" x2="128.5" y2="600.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d53" x1="195" y1="488" x2="66.4" y2="522.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d47" x1="195" y1="488" x2="67.1" y2="522.3" stroke="#5b5752" stroke-width=".8"/>
 <line class="d54" x1="195" y1="488" x2="96.9" y2="578" stroke="#5b5752" stroke-width=".8"/>
 <line class="d61" x1="195" y1="488" x2="149.3" y2="613.6" stroke="#5b5752" stroke-width=".8"/>
 <line class="d65" x1="195" y1="488" x2="74.1" y2="545.7" stroke="#5b5752" stroke-width=".8"/>
@@ -1107,8 +1107,8 @@
 <line class="d17" x1="195" y1="488" x2="133.6" y2="410.8" stroke="#5b5752" stroke-width=".8"/>
 <line class="d21" x1="195" y1="488" x2="99.3" y2="445.4" stroke="#5b5752" stroke-width=".8"/>
 <line class="d34" x1="195" y1="488" x2="149.6" y2="372.9" stroke="#5b5752" stroke-width=".8"/>
-<line class="d47" x1="195" y1="488" x2="94.9" y2="401" stroke="#5b5752" stroke-width=".8"/>
-<line class="d52" x1="195" y1="488" x2="65.6" y2="457" stroke="#5b5752" stroke-width=".8"/>
+<line class="d48" x1="195" y1="488" x2="94.9" y2="401" stroke="#5b5752" stroke-width=".8"/>
+<line class="d53" x1="195" y1="488" x2="65.6" y2="457" stroke="#5b5752" stroke-width=".8"/>
 <line class="d60" x1="195" y1="488" x2="124.1" y2="374.7" stroke="#5b5752" stroke-width=".8"/>
 <line class="d66" x1="195" y1="488" x2="79.5" y2="420" stroke="#5b5752" stroke-width=".8"/>
 <line class="d67" x1="195" y1="488" x2="160.3" y2="358.6" stroke="#5b5752" stroke-width=".8"/>
@@ -1302,9 +1302,9 @@
 <circle class="d39" data-cat="Warnings" cx="290.1" cy="400.8" r="3.6" fill="#e5a700"/>
 <circle class="d43" data-cat="Warnings" cx="239.8" cy="364.8" r="3.6" fill="#e5a700"/>
 <circle class="d46" data-cat="Warnings" cx="314" cy="431.2" r="3.6" fill="#e5a700"/>
-<circle class="d49" data-cat="Warnings" cx="274.9" cy="381.8" r="3.6" fill="#e5a700"/>
-<circle class="d50" data-cat="Warnings" cx="216.9" cy="356.7" r="3.6" fill="#e5a700"/>
-<circle class="d51" data-cat="Warnings" cx="302.6" cy="409.7" r="3.6" fill="#e5a700"/>
+<circle class="d50" data-cat="Warnings" cx="274.9" cy="381.8" r="3.6" fill="#e5a700"/>
+<circle class="d51" data-cat="Warnings" cx="216.9" cy="356.7" r="3.6" fill="#e5a700"/>
+<circle class="d52" data-cat="Warnings" cx="302.6" cy="409.7" r="3.6" fill="#e5a700"/>
 <circle class="d57" data-cat="Warnings" cx="254.5" cy="368.5" r="3.6" fill="#e5a700"/>
 <circle class="d63" data-cat="Warnings" cx="321.6" cy="444.3" r="3.6" fill="#e5a700"/>
 <circle class="d64" data-cat="Warnings" cx="287.1" cy="390.8" r="3.6" fill="#e5a700"/>
@@ -1418,7 +1418,7 @@
 <circle class="d41" data-cat="Incidents" cx="292.9" cy="573.1" r="3.6" fill="#ff7733"/>
 <circle class="d44" data-cat="Incidents" cx="323.2" cy="518.7" r="3.6" fill="#ff7733"/>
 <circle class="d45" data-cat="Incidents" cx="264.9" cy="599.8" r="3.6" fill="#ff7733"/>
-<circle class="d48" data-cat="Incidents" cx="309.4" cy="555.3" r="3.6" fill="#ff7733"/>
+<circle class="d49" data-cat="Incidents" cx="309.4" cy="555.3" r="3.6" fill="#ff7733"/>
 <circle class="d55" data-cat="Incidents" cx="229.5" cy="616.6" r="3.6" fill="#ff7733"/>
 <circle class="d56" data-cat="Incidents" cx="285.1" cy="586.2" r="3.6" fill="#ff7733"/>
 <circle class="d58" data-cat="Incidents" cx="320.5" cy="533.6" r="3.6" fill="#ff7733"/>
@@ -1588,7 +1588,7 @@
 <circle class="d35" data-cat="Governance" cx="165.2" cy="612.1" r="3.6" fill="#f4f4e7"/>
 <circle class="d37" data-cat="Governance" cx="86.5" cy="555.8" r="3.6" fill="#f4f4e7"/>
 <circle class="d42" data-cat="Governance" cx="128.5" cy="600.9" r="3.6" fill="#f4f4e7"/>
-<circle class="d53" data-cat="Governance" cx="66.4" cy="522.5" r="3.6" fill="#f4f4e7"/>
+<circle class="d47" data-cat="Governance" cx="67.1" cy="522.3" r="3.6" fill="#f4f4e7"/>
 <circle class="d54" data-cat="Governance" cx="96.9" cy="578" r="3.6" fill="#f4f4e7"/>
 <circle class="d61" data-cat="Governance" cx="149.3" cy="613.6" r="3.6" fill="#f4f4e7"/>
 <circle class="d65" data-cat="Governance" cx="74.1" cy="545.7" r="3.6" fill="#f4f4e7"/>
@@ -1741,8 +1741,8 @@
 <circle class="d17" data-cat="Research" cx="133.6" cy="410.8" r="3.6" fill="#a89a1a"/>
 <circle class="d21" data-cat="Research" cx="99.3" cy="445.4" r="3.6" fill="#a89a1a"/>
 <circle class="d34" data-cat="Research" cx="149.6" cy="372.9" r="3.6" fill="#a89a1a"/>
-<circle class="d47" data-cat="Research" cx="94.9" cy="401" r="3.6" fill="#a89a1a"/>
-<circle class="d52" data-cat="Research" cx="65.6" cy="457" r="3.6" fill="#a89a1a"/>
+<circle class="d48" data-cat="Research" cx="94.9" cy="401" r="3.6" fill="#a89a1a"/>
+<circle class="d53" data-cat="Research" cx="65.6" cy="457" r="3.6" fill="#a89a1a"/>
 <circle class="d60" data-cat="Research" cx="124.1" cy="374.7" r="3.6" fill="#a89a1a"/>
 <circle class="d66" data-cat="Research" cx="79.5" cy="420" r="3.6" fill="#a89a1a"/>
 <circle class="d67" data-cat="Research" cx="160.3" cy="358.6" r="3.6" fill="#a89a1a"/>
