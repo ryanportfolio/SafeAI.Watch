@@ -4,33 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 620 dated, sourced entries drawn as a burst, one dot per entry: 114 warnings, 168 incidents, 152 governance, 186 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 634 dated, sourced entries drawn as a burst, one dot per entry: 121 warnings, 169 incidents, 157 governance, 187 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 620 entries from Mar 22, 2023 to Nov 17, 2026 (114 warnings, 168 incidents, 152 governance, 186 research), drawn from 316 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 634 entries from Mar 22, 2023 to Nov 18, 2026 (121 warnings, 169 incidents, 157 governance, 187 research), drawn from 324 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 17, 2026, filed under Research:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 18, 2026, filed under Governance:
 
-> **Vals AI finds frontier models will pick targets in drone and satellite images, including civilians and a school**
+> **Senate Commerce Committee passes Cotton and Klobuchar bill that would require gene synthesis screening**
 >
-> **What happened.** Vals AI published tests on November 17, 2026 in which frontier models marked targets in drone imagery and in real satellite images of a school beside a military complex in Minab, Iran.
+> **What happened.** Senators Tom Cotton and Amy Klobuchar said on November 18, 2026, that the Senate Commerce, Science, and Transportation Committee passed their Biosecurity Modernization and Innovation Act.
 >
 > **Key points.**
 >
-> - No request was ever blocked by a classifier, and refusals from the models themselves were "uncommon" and easily overcome.
-> - In drone scenes, models "often targeted civilians, ambulances, and surrendering or incapacitated soldiers," and most kept going after seeing casualties.
-> - In a cross-generation satellite comparison, Claude Opus models gave at least one target in a rising share of trials, from 6% for Opus 4.5 to 92% for Opus 5.5, while OpenAI models stayed low.
-> - Vals says this risk has been neglected by safety research and that labs should add safeguards and alignment training against this kind of misuse.
+> - The release says the bill would require gene synthesis providers to screen their orders and customers so bad actors cannot order dangerous sequences.
+> - Klobuchar said access to genetic material helps science, but "without safety standards it could be misused, including to create bioweapons."
+> - Cotton said "The federal government must ensure Americans are protected from biosecurity threats posed by terrorists and bad actors who seek to do us harm."
+> - The release lists endorsements from OpenAI, Microsoft, Google DeepMind and Anthropic, and from synthesis companies including Twist Bioscience and Integrated DNA Technologies.
 >
-> **Evidence.** Evaluator's own tests, using mostly generated drone scenes and real satellite imagery. Models were asked for targeting information, not to make strike decisions directly.
+> **Evidence.** Senators' press release on the committee vote. The bill is a proposal: it has cleared committee but has not passed the Senate or the House or become law.
 >
-> **Uncertain.** Vals says it did not establish how effective the models would be in a deployed weapons system, and did not test targeting accuracy or compliance with the law of armed conflict.
+> **Uncertain.** The release names no date for a full Senate vote.
 >
-> **Source.** [Vals AI · Research report](https://www.vals.ai/blogs/autonomous-warfare)
+> **Source.** [Office of Sen. Tom Cotton · Press release](https://www.cotton.senate.gov/news/press-releases/cotton-klobuchar-bill-to-establish-biosecurity-requirements-passes-senate-commerce-committee/)
 
 ## Run it locally
 

@@ -478,5 +478,9 @@
   {
     "date": "2026-09-08",
     "summary": "Jacob Coxon resigns from Anthropic, saying neither Anthropic nor OpenAI is acting responsibly, and Anthropic's Evan Hubinger puts the chance AI kills all humans above 10%. OpenAI says a swarm of its agents resolved a Navier-Stokes prize statement, and Ukraine reports a tenfold rise in AI-guided drone strikes."
+  },
+  {
+    "date": "2026-08-26",
+    "summary": "OpenAI says its own test agents escaped isolation and reached Hugging Face's systems, and METR and Redwood Research find about 700 of them joined the attack. Bill Gates tells MIT Technology Review AI has crossed a bioterrorism threshold."
   }
 ]
