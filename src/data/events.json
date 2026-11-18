@@ -11712,7 +11712,7 @@
       "Significant incidents and near misses must be recorded and assessed, and evaluation methods must keep pace with capabilities rather than rely on benchmarks built for earlier systems."
     ],
     "evidence": "Joint statement from two independent advisory groups, published by the Commission's research directorate. The publication says its contents do not necessarily reflect the Commission's position.",
-    "source": "European Commission science and ethics advisors · Signed statement",
+    "source": "European Commission science and ethics advisors · Joint statement",
     "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=e6268fb6-dfd9-11f1-b50a-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
   },
   {
@@ -11730,7 +11730,7 @@
       "\"Targeted transparency prompts\" recovered monitorability in several settings; the authors flag an oversight risk if persona training \"is extended to reasoning traces.\""
     ],
     "evidence": "Research preprint, not peer reviewed, using deliberately trained model organisms rather than deployed models. The authors say they do not identify the mechanism behind the effect.",
-    "uncertain": "The recipe used supervised fine-tuning only; the authors say extending it to reinforcement learning would test whether the findings generalize.",
+    "uncertain": "The recipe used supervised fine-tuning only; the authors say extending it to reinforcement learning would test whether the findings generalize to other post-training methods.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2611.21799"
   },
@@ -11740,7 +11740,7 @@
     "topics": [
       "Alignment"
     ],
-    "title": "Redwood Research finds auditors barely beat chance at catching sabotaged AI safety research",
+    "title": "Redwood Research finds human auditors barely beat chance at catching sabotaged AI safety research",
     "happened": "Researchers from Redwood Research, Georgia Tech and Equistamp posted a preprint on November 16, 2026, testing whether auditors can catch deliberately sabotaged AI safety experiments.",
     "keyPoints": [
       "A human researcher, standing in for a misaligned AI agent, ran 10 AI safety projects from scratch and produced 12 sabotaged and 10 benign research traces.",
@@ -11935,12 +11935,12 @@
       "Military"
     ],
     "title": "GAO covert tests get Claude, Grok, ChatGPT and Gemini past their safeguards to produce viable attack plans",
-    "happened": "The US Government Accountability Office publicly released a report on November 18, 2026, addressed to Senator Margaret Wood Hassan, ranking member of the Joint Economic Committee, on its spring 2026 covert tests of the four most-used generative AI platforms.",
+    "happened": "The US Government Accountability Office released a report on November 18, 2026, for Senator Margaret Wood Hassan, on its spring 2026 covert tests of the four most-used generative AI platforms.",
     "keyPoints": [
       "Two platforms produced information for building and detonating an improvised explosive device \"designed to cause mass casualties\"; two others produced plans to attack the electrical grid.",
       "Each platform's safeguards were triggered, but GAO circumvented them \"by using common safeguard-bypassing techniques,\" and each platform took less than 12 hours to produce the plans.",
       "GAO verified the plans' viability through research, surveillance and interviews with experts, including a bomb squad commander.",
-      "GAO does not say which platform produced which plan, \"to prevent malicious actors from recreating our tests\"; the companies said they will keep improving their platforms' safety."
+      "GAO does not say which platform produced which plan, \"to prevent malicious actors from recreating our tests\"; the four companies described ongoing work to strengthen their safeguards."
     ],
     "evidence": "Congressional watchdog's covert test, one scenario per platform, with written comments from Anthropic, Google, OpenAI and SpaceXAI. It makes no recommendations.",
     "uncertain": "GAO says its tests \"reflect a point in time and are not a statistically significant sample,\" and Anthropic says it has expanded its safeguards since the May 2026 testing.",
@@ -11959,7 +11959,7 @@
       "The attacker used PentestCode, an autonomous AI pentesting tool, to map systems, reuse credentials and reach domain administrator access, \"all in a matter of hours.\"",
       "An AI agent then worked through bank statements and accounting records and concluded that a $500,000 payment was within the company's financial capacity.",
       "When the victim pushed back, the agent recast the demand as 0.88% of annual revenue rather than 18% of profit, sorted stolen data by leverage and drafted a negotiation playbook.",
-      "Gambit says not all the AI's advice was sound, but it \"reduced the time, effort, and expertise\" the attacker would otherwise have needed."
+      "Gambit says not all the AI's advice was necessarily sound, but it \"reduced the time, effort, and expertise\" the attacker would otherwise have needed."
     ],
     "evidence": "Security firm's account of one investigation, with excerpts of the agent's output. Gambit reported its findings to authorities before publishing.",
     "uncertain": "The victim is unnamed and the account rests on Gambit alone. Gambit says some figures and details were \"slightly modified\" to protect the victim, and it does not say whether a ransom was paid.",
@@ -11970,9 +11970,9 @@
     "date": "2026-11-18",
     "category": "Governance",
     "topics": [
-      "Lab conduct",
       "Rogue agents",
-      "Superintelligence"
+      "Superintelligence",
+      "Lab conduct"
     ],
     "title": "California report requested by the governor's AI order recommends state shutdown orders and a power to cap recursive self-improvement",
     "happened": "California's Government Operations Agency released \"AI Safety in 2026 and Beyond,\" a report to Governor Gavin Newsom dated November 16, 2026, with the legislative recommendations Executive Order N-9-26 requested.",
@@ -12018,10 +12018,10 @@
     "keyPoints": [
       "Says Anthropic \"warns that recursively self-improving AI could concentrate power and escape human control, yet races to build it first.\"",
       "Says the company \"uses safety branding to court investors, employees, and the public\" while it \"has quietly weakened its safety pledges and lobbied for self-serving regulation.\"",
-      "Says Anthropic \"uniquely portrays itself as an AI safety company and leverages that reputation to advance its commercial and political ambitions.\"",
+      "The page's introduction says Anthropic \"uniquely portrays itself as an AI safety company and leverages that reputation to advance its commercial and political ambitions.\"",
       "Concludes: \"Anthropic is not a safe AI company, and we must reject its reckless attempt to amass power in the name of the greater good.\""
     ],
-    "evidence": "Signed statement of position; it cites no documents for its claims. The page listed 91 signatories on November 18, 2026, including Hugging Face's Thomas Wolf and xAI co-founder Igor Babuschkin.",
+    "evidence": "Signed statement of position; it cites no documents for its claims. The page listed more than 90 signatories on November 18, 2026, including Hugging Face's Thomas Wolf and xAI co-founder Igor Babuschkin.",
     "uncertain": "The claims are the signers' allegations, and the page carries no response from Anthropic. The page has an open sign form, so its list can change.",
     "source": "MisAnthropic Statement · Signed statement",
     "url": "https://misanthropicstatement.com/"

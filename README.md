@@ -23,10 +23,10 @@ Every entry sets out what happened, the source's key points and what the evidenc
 >
 > - Says Anthropic "warns that recursively self-improving AI could concentrate power and escape human control, yet races to build it first."
 > - Says the company "uses safety branding to court investors, employees, and the public" while it "has quietly weakened its safety pledges and lobbied for self-serving regulation."
-> - Says Anthropic "uniquely portrays itself as an AI safety company and leverages that reputation to advance its commercial and political ambitions."
+> - The page's introduction says Anthropic "uniquely portrays itself as an AI safety company and leverages that reputation to advance its commercial and political ambitions."
 > - Concludes: "Anthropic is not a safe AI company, and we must reject its reckless attempt to amass power in the name of the greater good."
 >
-> **Evidence.** Signed statement of position; it cites no documents for its claims. The page listed 91 signatories on November 18, 2026, including Hugging Face's Thomas Wolf and xAI co-founder Igor Babuschkin.
+> **Evidence.** Signed statement of position; it cites no documents for its claims. The page listed more than 90 signatories on November 18, 2026, including Hugging Face's Thomas Wolf and xAI co-founder Igor Babuschkin.
 >
 > **Uncertain.** The claims are the signers' allegations, and the page carries no response from Anthropic. The page has an open sign form, so its list can change.
 >
