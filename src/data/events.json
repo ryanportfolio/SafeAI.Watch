@@ -67,7 +67,7 @@
       "Problematic model outputs \"generally mirror information readily available on the internet,\" the authors write.",
       "Given how fast AI is changing, they say future models should be monitored, and that the authors \"would aim to increase the sensitivity of these tests\" with more models and researchers."
     ],
-    "evidence": "Research report on a red-team exercise with the LLMs of its time. It compared the viability of attack plans and did not measure how far models were from the knowledge needed.",
+    "evidence": "Research report on a red-team exercise with LLMs available in summer 2023. The authors say the null result may reflect their small sample, and they did not measure how far models were from the knowledge needed.",
     "source": "RAND · Research report",
     "url": "https://www.rand.org/pubs/research_reports/RRA2977-2.html"
   },
@@ -1154,10 +1154,10 @@
     "topics": [
       "Bio"
     ],
-    "title": "House bill would require synthetic DNA sellers and synthesizer makers to know their customers",
+    "title": "House bill would require screening of synthetic DNA orders, which its sponsors say reaches sellers and synthesizer makers",
     "happened": "Reps. August Pfluger and Chrissy Houlahan announced the Biosecurity Modernization and Innovation Act, the House companion to Senators Tom Cotton and Amy Klobuchar's bill.",
     "keyPoints": [
-      "Companies that sell synthetic DNA, and makers of the machines that produce it, would have to know their customers and \"exactly what they're being asked to make.\"",
+      "The release says the bill would require companies that sell synthetic DNA, and makers of the machines that produce it, to know their customers and \"exactly what they're being asked to make.\"",
       "The release says gene synthesis tools \"could be misused to create dangerous pathogens if left unchecked,\" and that screening of nucleic acid orders is currently voluntary.",
       "It says new desktop machines make it easier to generate genetic material outside the traditional supply chain, widening that gap.",
       "Pfluger said \"there's a dangerous gap between how fast this technology is moving and the safeguards we have in place to keep it out of the wrong hands.\""
@@ -12040,13 +12040,13 @@
     "title": "Senate Commerce Committee passes Cotton and Klobuchar bill that would require gene synthesis screening",
     "happened": "Senators Tom Cotton and Amy Klobuchar said on November 18, 2026, that the Senate Commerce, Science, and Transportation Committee passed their Biosecurity Modernization and Innovation Act.",
     "keyPoints": [
-      "The bill would require gene synthesis providers to screen their orders and customers so bad actors cannot order dangerous sequences.",
+      "The release says the bill would require gene synthesis providers to screen their orders and customers so bad actors cannot order dangerous sequences.",
       "Klobuchar said access to genetic material helps science, but \"without safety standards it could be misused, including to create bioweapons.\"",
       "Cotton said \"The federal government must ensure Americans are protected from biosecurity threats posed by terrorists and bad actors who seek to do us harm.\"",
       "The release lists endorsements from OpenAI, Microsoft, Google DeepMind and Anthropic, and from synthesis companies including Twist Bioscience and Integrated DNA Technologies."
     ],
     "evidence": "Senators' press release on the committee vote. The bill is a proposal: it has cleared committee but has not passed the Senate or the House or become law.",
-    "uncertain": "The release gives no vote tally and names no date for a full Senate vote.",
+    "uncertain": "The release names no date for a full Senate vote.",
     "source": "Office of Sen. Tom Cotton · Press release",
     "url": "https://www.cotton.senate.gov/news/press-releases/cotton-klobuchar-bill-to-establish-biosecurity-requirements-passes-senate-commerce-committee/"
   }

@@ -21,14 +21,14 @@ Every entry sets out what happened, the source's key points and what the evidenc
 >
 > **Key points.**
 >
-> - The bill would require gene synthesis providers to screen their orders and customers so bad actors cannot order dangerous sequences.
+> - The release says the bill would require gene synthesis providers to screen their orders and customers so bad actors cannot order dangerous sequences.
 > - Klobuchar said access to genetic material helps science, but "without safety standards it could be misused, including to create bioweapons."
 > - Cotton said "The federal government must ensure Americans are protected from biosecurity threats posed by terrorists and bad actors who seek to do us harm."
 > - The release lists endorsements from OpenAI, Microsoft, Google DeepMind and Anthropic, and from synthesis companies including Twist Bioscience and Integrated DNA Technologies.
 >
 > **Evidence.** Senators' press release on the committee vote. The bill is a proposal: it has cleared committee but has not passed the Senate or the House or become law.
 >
-> **Uncertain.** The release gives no vote tally and names no date for a full Senate vote.
+> **Uncertain.** The release names no date for a full Senate vote.
 >
 > **Source.** [Office of Sen. Tom Cotton · Press release](https://www.cotton.senate.gov/news/press-releases/cotton-klobuchar-bill-to-establish-biosecurity-requirements-passes-senate-commerce-committee/)
 
