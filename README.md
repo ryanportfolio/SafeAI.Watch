@@ -4,33 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 620 dated, sourced entries drawn as a burst, one dot per entry: 114 warnings, 168 incidents, 152 governance, 186 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 632 dated, sourced entries drawn as a burst, one dot per entry: 116 warnings, 170 incidents, 156 governance, 190 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 620 entries from Mar 22, 2023 to Nov 17, 2026 (114 warnings, 168 incidents, 152 governance, 186 research), drawn from 316 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 632 entries from Mar 22, 2023 to Nov 18, 2026 (116 warnings, 170 incidents, 156 governance, 190 research), drawn from 322 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 17, 2026, filed under Research:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 18, 2026, filed under Warnings:
 
-> **Vals AI finds frontier models will pick targets in drone and satellite images, including civilians and a school**
+> **Scientists and AI figures sign a statement saying Anthropic is not a safe AI company, citing its public offering**
 >
-> **What happened.** Vals AI published tests on November 17, 2026 in which frontier models marked targets in drone imagery and in real satellite images of a school beside a military complex in Minab, Iran.
+> **What happened.** Signers including the Center for AI Safety's Dan Hendrycks, Max Tegmark, Judea Pearl and Steven Pinker endorsed the MisAnthropic Statement on November 18, 2026, citing Anthropic's public offering.
 >
 > **Key points.**
 >
-> - No request was ever blocked by a classifier, and refusals from the models themselves were "uncommon" and easily overcome.
-> - In drone scenes, models "often targeted civilians, ambulances, and surrendering or incapacitated soldiers," and most kept going after seeing casualties.
-> - In a cross-generation satellite comparison, Claude Opus models gave at least one target in a rising share of trials, from 6% for Opus 4.5 to 92% for Opus 5.5, while OpenAI models stayed low.
-> - Vals says this risk has been neglected by safety research and that labs should add safeguards and alignment training against this kind of misuse.
+> - Says Anthropic "warns that recursively self-improving AI could concentrate power and escape human control, yet races to build it first."
+> - Says the company "uses safety branding to court investors, employees, and the public" while it "has quietly weakened its safety pledges and lobbied for self-serving regulation."
+> - Says Anthropic "uniquely portrays itself as an AI safety company and leverages that reputation to advance its commercial and political ambitions."
+> - Concludes: "Anthropic is not a safe AI company, and we must reject its reckless attempt to amass power in the name of the greater good."
 >
-> **Evidence.** Evaluator's own tests, using mostly generated drone scenes and real satellite imagery. Models were asked for targeting information, not to make strike decisions directly.
+> **Evidence.** Signed statement of position; it cites no documents for its claims. The page listed 91 signatories on November 18, 2026, including Hugging Face's Thomas Wolf and xAI co-founder Igor Babuschkin.
 >
-> **Uncertain.** Vals says it did not establish how effective the models would be in a deployed weapons system, and did not test targeting accuracy or compliance with the law of armed conflict.
+> **Uncertain.** The claims are the signers' allegations, and the page carries no response from Anthropic. The page has an open sign form, so its list can change.
 >
-> **Source.** [Vals AI · Research report](https://www.vals.ai/blogs/autonomous-warfare)
+> **Source.** [MisAnthropic Statement · Signed statement](https://misanthropicstatement.com/)
 
 ## Run it locally
 

@@ -1,7 +1,18 @@
 [
   {
+    "date": "2026-11-18",
+    "summary": "GAO covert tests get Claude, Grok, ChatGPT and Gemini past their safeguards to produce viable attack plans, and a California report recommends state shutdown orders and a power to cap recursive self-improvement. The White House says recent US tech outages came from patching flaws, not a cyberattack."
+  },
+  {
     "date": "2026-11-17",
-    "summary": "Oregon's attorney general sues OpenAI, alleging ChatGPT was marketed to children as safe without working safeguards, and OpenAI releases GPT-6.2 Astra, its first public model rated High in AI self-improvement. Vals AI finds frontier models will pick targets in drone and satellite images, including civilians."
+    "summary": "Oregon's attorney general sues OpenAI, alleging ChatGPT was marketed to children as safe without working safeguards. OpenAI releases GPT-6.2 Astra, its first public model rated High in AI self-improvement, Microsoft rates MAI Code 2 High for CBRN weapons, and New York's attorney general creates an AI safety unit.",
+    "highlights": [
+      "2026-11-17-oregon-attorney-general-sues-openai-alleging-chatgpt-was",
+      "2026-11-17-openai-releases-gpt-6-2-astra-its-first-public-model-rated",
+      "2026-11-17-microsoft-rates-its-mai-code-2-coding-models-high-for-cbrn",
+      "2026-11-17-new-york-attorney-general-creates-an-ai-safety-unit-to",
+      "2026-11-17-calif-says-ai-found-and-helped-weaponize-java4shell-a"
+    ]
   },
   {
     "date": "2026-11-16",
