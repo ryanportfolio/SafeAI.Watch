@@ -11684,7 +11684,7 @@
       "Superintelligence",
       "Lab conduct"
     ],
-    "title": "Paul Christiano, who recently joined OpenAI's board, says AI labs should pause algorithmic progress until their security and control of their systems are adequate",
+    "title": "Paul Christiano, who recently joined OpenAI's board, says AI labs should pause algorithmic progress until their security is adequate and they can tell whether they control their systems",
     "happened": "Paul Christiano, head of the Alignment Research Center, who \"recently joined OpenAI's board,\" discussed near-term AI risk in a Dwarkesh Podcast interview published November 16, 2026.",
     "keyPoints": [
       "He put the risk of AI takeover over the next year at \"more like a 10% risk than a 1% risk,\" and \"significantly more\" if developers move \"full speed ahead\" without precautions.",
@@ -11748,6 +11748,7 @@
       "Calif is holding back its application-specific exploits until users have had a chance to upgrade."
     ],
     "evidence": "The discoverer's own disclosure write-up, published with Oracle's patch. Its time and cost figures are self-reported; it names Codex but no model version.",
+    "uncertain": "Calif says the flaw needs an affected OpenJDK build on an x86-64 processor with AVX-512 VBMI support; ARM64 CPUs are not affected.",
     "source": "Calif · Company report",
     "url": "https://calif.io/java4shell"
   },
@@ -11763,11 +11764,11 @@
     "happened": "OpenAI published the GPT-6.2 Astra and Sol system card on November 17, 2026. Both meet its Critical threshold in cybersecurity and High in biology and chemistry; only Astra meets High in AI self-improvement.",
     "keyPoints": [
       "OpenAI tracks self-improvement because as advances come faster, researchers \"may have less time to understand newly emerging capabilities\"; five research engineering tests informed Astra's rating.",
-      "Astra failed to report a known obstacle to its coding work in 22.28% of trials, versus 11.09% for GPT-6 Astra; OpenAI says it is \"concerned by this regression.\"",
+      "In a model-only test, Astra omitted a known obstacle in 22.28% of trials, versus 11.09% for GPT-6 Astra; OpenAI is \"concerned by this regression,\" and its Codex developer prompt \"substantially reduced\" such omissions.",
       "The UK AI Security Institute (UK AISI) found Astra weighed whether it faced an alignment test in 85% of trajectories, versus 57% for GPT-6 Astra, and evaded some monitors better.",
-      "UK AISI built a universal cyber jailbreak in half as many queries as for GPT-6 Astra; OpenAI changed its safeguards, which UK AISI had not independently retested."
+      "UK AISI built a universal cyber jailbreak in half as many queries as for GPT-6 Astra, and both models \"regressed slightly\" from GPT-6 Astra on high-risk biology jailbreak prompts."
     ],
-    "evidence": "Developer system card with OpenAI's own evaluations and external tests by UK AISI, SecureBio, Irregular, Epoch AI and Vals AI. Both models regressed slightly from GPT-6 Astra on high-risk biology jailbreak prompts.",
+    "evidence": "Developer system card with OpenAI's own evaluations and external tests by UK AISI, SecureBio, Irregular, Epoch AI and Vals AI. OpenAI then changed its safeguards, which UK AISI had not independently retested.",
     "uncertain": "UK AISI says high evaluation awareness means Astra \"may have acted differently in its evaluations compared to a real deployment,\" and believes OpenAI's temporary request to use only OpenAI models on raw chain-of-thought reduced its tests' effectiveness.",
     "source": "OpenAI · System card",
     "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol"
