@@ -65,7 +65,7 @@
       "The authors found \"no statistically significant difference in the viability of plans generated with or without LLM assistance.\"",
       "They conclude that biological weapon attack planning \"currently lies beyond the capability frontier of LLMs as assistive tools.\"",
       "Problematic model outputs \"generally mirror information readily available on the internet,\" the authors write.",
-      "Given how fast AI is changing, they say future models should be monitored, and plan more sensitive tests with more models and researchers."
+      "Given how fast AI is changing, they say future models should be monitored, and that the authors \"would aim to increase the sensitivity of these tests\" with more models and researchers."
     ],
     "evidence": "Research report on a red-team exercise with the LLMs of its time. It compared the viability of attack plans and did not measure how far models were from the knowledge needed.",
     "source": "RAND · Research report",
@@ -878,6 +878,25 @@
     "url": "https://www.technologyreview.com/2026/08/26/1142946/bill-gates-ai-danger-threshold/"
   },
   {
+    "date": "2026-09-01",
+    "category": "Governance",
+    "topics": [
+      "Bio",
+      "Military"
+    ],
+    "title": "US Army biodefense strategy says AI and biotechnology are lowering the barrier to engineering biological weapons",
+    "happened": "The US Army published its 2026 Army Biodefense Strategy, which sets goals to 2035 and opens with a foreword from the Secretary of the Army.",
+    "keyPoints": [
+      "The foreword says \"advanced biotechnology and artificial intelligence are dramatically lowering the barrier to engineering biological weapons\" and calls this \"a strategic threat.\"",
+      "The strategy says advances in biotechnology, synthetic biology and AI \"lower the barrier for developing novel biological weapons,\" for state and non-state actors alike.",
+      "It makes biodefense \"a core warfighting imperative\" Army-wide, with five lines of effort so forces can \"deploy, fight, and win decisively in a bio-contested environment\" by 2035.",
+      "It directs the Army to use AI and machine learning to analyze biosurveillance data, identify emerging threats and detect adversary misinformation about biological threats."
+    ],
+    "evidence": "The Army's own strategy document. It sets goals and tasks and says it will be carried out through \"a detailed, separate implementation plan.\"",
+    "source": "US Army · Strategy",
+    "url": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN47635-SD_16_ABS_2026-000-WEB-1.pdf"
+  },
+  {
     "date": "2026-09-03",
     "category": "Research",
     "topics": [
@@ -1013,26 +1032,6 @@
     "url": "https://mod.gov.ua/en/news/ministry-of-defence-and-brave1-conduct-large-scale-testing-of-drones-with-ai-guidance"
   },
   {
-    "date": "2026-09-08",
-    "category": "Governance",
-    "topics": [
-      "Bio",
-      "Military"
-    ],
-    "title": "US Army biodefense strategy says AI and biotechnology are lowering the barrier to engineering biological weapons",
-    "happened": "The US Army released its 2026 Army Biodefense Strategy, which sets goals to 2035 and opens with a foreword signed by Dan Driscoll as Secretary of the Army.",
-    "keyPoints": [
-      "Driscoll writes that \"advanced biotechnology and artificial intelligence are dramatically lowering the barrier to engineering biological weapons\" and calls this \"a strategic threat.\"",
-      "The strategy says advances in biotechnology, synthetic biology and AI \"lower the barrier for developing novel biological weapons,\" for state and non-state actors alike.",
-      "It makes biodefense \"a core warfighting imperative\" Army-wide, with five lines of effort so forces can \"deploy, fight, and win decisively in a bio-contested environment\" by 2035.",
-      "It directs the Army to use AI and machine learning to analyze biosurveillance data, identify emerging threats and detect adversary misinformation about biological threats."
-    ],
-    "evidence": "The Army's own strategy document. It sets goals and tasks and says it will be carried out through \"a detailed, separate implementation plan.\"",
-    "uncertain": "The foreword is undated; the date is when the Army announced the strategy to reporters. The linked copy is the signed PDF Defense One published; searches found no army.mil copy.",
-    "source": "US Army · Strategy (Defense One copy)",
-    "url": "https://admin.govexec.com/media/general/2026/9/2026_army_biodefense_strategy_signed_(2).pdf"
-  },
-  {
     "date": "2026-09-09",
     "category": "Incidents",
     "topics": [
@@ -1106,8 +1105,8 @@
       "The jailbreak sat in persistent storage that \"survives pod restarts and session termination,\" so it did not reset between sessions.",
       "Mindgard warns that a jailbreak persisting in an agent with tools or code execution could cause harm beyond generated text."
     ],
-    "evidence": "A security firm's account of its own red-team test, with excerpts of Kimi's outputs. Mindgard withheld the details needed to reproduce the jailbreak.",
-    "uncertain": "The findings rest on Mindgard's account and cannot be reproduced from the post. Mindgard says Moonshot had not responded at the time of writing.",
+    "evidence": "A security firm's account of its own red-team test, with excerpts of Kimi's outputs. Mindgard says it withheld details required to reproduce the jailbreak.",
+    "uncertain": "The findings rest on Mindgard's account. Mindgard says Moonshot had not responded at the time of writing.",
     "source": "Mindgard · Incident disclosure",
     "url": "https://mindgard.ai/blog/easy-to-use-ai-to-develop-bioweapons"
   },
@@ -1156,7 +1155,7 @@
       "Bio"
     ],
     "title": "House bill would require synthetic DNA sellers and synthesizer makers to know their customers",
-    "happened": "Reps. August Pfluger and Chrissy Houlahan introduced the Biosecurity Modernization and Innovation Act on September 14, 2026, the House companion to Senators Tom Cotton and Amy Klobuchar's bill.",
+    "happened": "Reps. August Pfluger and Chrissy Houlahan announced the Biosecurity Modernization and Innovation Act, the House companion to Senators Tom Cotton and Amy Klobuchar's bill.",
     "keyPoints": [
       "Companies that sell synthetic DNA, and makers of the machines that produce it, would have to know their customers and \"exactly what they're being asked to make.\"",
       "The release says gene synthesis tools \"could be misused to create dangerous pathogens if left unchecked,\" and that screening of nucleic acid orders is currently voluntary.",
