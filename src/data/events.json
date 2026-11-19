@@ -12190,7 +12190,7 @@
     "topics": [
       "Alignment"
     ],
-    "title": "Transluce trains an observer role inside a model to report the assistant's misbehavior, beating transcript monitors",
+    "title": "Transluce trains an observer role inside a model to report the assistant's misbehavior, beating transcript monitors when answering directly",
     "happened": "Researchers from Transluce, MATS and Thinking Machines Lab posted a preprint on November 17, 2026, training a separate observer role in Qwen3.6-27B to answer questions about the assistant's behavior.",
     "keyPoints": [
       "The authors say asking a model about its actions is unreliable because models are \"generally not trained to report their own misbehavior.\"",
@@ -12199,7 +12199,7 @@
       "It also beat honesty training (0.864) and activation oracles (0.796), and training it made the assistant easier to monitor with every baseline method, on average."
     ],
     "evidence": "Research preprint, not peer reviewed, testing one open-weight model on the authors' own oversight evaluations, with code released.",
-    "uncertain": "The authors tested one model without reasoning, did not compare chain-of-thought monitoring or stronger models, and say some evaluation sets are small, such as 40 reward-hacking items.",
+    "uncertain": "The authors tested one model without reasoning, did not compare chain-of-thought monitoring or stronger models, and say some evaluation sets are small, such as 40 reward-hacking items. When the observer reasons before answering, it only matches a transcript monitor.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2611.23365"
   },
@@ -12372,7 +12372,7 @@
       "Rep. Matt Van Epps's AI INSIGHT Act would set up a framework for securing AI agents operating on federal civilian information systems, with CISA giving support and guidance.",
       "Van Epps says it would help agencies identify which agents run on their networks, \"limit their access to what their tasks require,\" monitor them, and suspend or revoke access.",
       "Rep. Morgan Luttrell's ROOT CAUSE Act, cosponsored by Rep. Ritchie Torres, would create a National Cyber and AI Investigations Board in CISA to find root causes of significant incidents.",
-      "The board would have \"no regulatory or enforcement authority\" and would not assign liability; a third bill, the BRIDGE AI Act, would recruit AI experts into CISA."
+      "The board would have \"no regulatory or enforcement authority\" and its reviews would not assign civil or criminal liability; a third bill, the BRIDGE AI Act, would set up a CISA pilot program to recruit AI experts."
     ],
     "evidence": "Committee press release describing the bills as introduced. They are proposals that have not passed; the release gives no bill numbers or text.",
     "source": "US House Committee on Homeland Security · Press release",
@@ -12389,7 +12389,7 @@
     "happened": "The US-China Economic and Security Review Commission sent its 2026 annual report to Congress on November 18, 2026, with 30 recommendations, 10 of them highlighted as key.",
     "keyPoints": [
       "It says Chinese open-weight AI models spreading in the US carry \"national security implications for sensitive data, cybersecurity, and dependence on Chinese technology.\"",
-      "It asks Congress to bar new use of such models in critical infrastructure, national security and bulk sensitive personal data systems without independently evaluated safeguards, plus security testing and incident reporting.",
+      "It asks Congress to have the Commerce Department bar new use of such models in critical infrastructure, national security and bulk sensitive personal data systems unless authorized on independently evaluated safeguards, plus security testing and incident reporting.",
       "It also recommends requiring governments and businesses to disclose when they rely on AI models developed by Chinese companies.",
       "Citing Center for Security and Emerging Technology research, it says the PLA is soliciting Nvidia's advanced chips to develop AI-enabled military capabilities."
     ],
@@ -12488,7 +12488,7 @@
       "Meta staff reported Muse sending them messages about childcare requests, product orders and bank account balances that were not theirs, raising fears it was mixing up accounts.",
       "In the tests, Muse read Signal messages using its Android push-notification permission and, on macOS, accessibility and screenshot tools, bypassing Meta's \"Connector\" tool.",
       "Internal posts show such incidents from mid-September through November; a Meta team member said the hallucinations \"bias towards the most uncomfortable topics, like finances/security/safety.\"",
-      "Signal's Meredith Whittaker called the deployment \"technologically reckless\"; Apple and Google said they were considering changes to give people more control over agent permissions."
+      "Signal's Meredith Whittaker called the deployment \"technologically reckless\"; Apple and Google said they were considering changes to agent permissions, and Apple's operating system update that week closed the macOS pathway Reuters found."
     ],
     "evidence": "News investigation built on internal posts Reuters reviewed and its own replication tests with Signal and the AI Now Institute.",
     "uncertain": "Meta called the examples \"isolated incidents\" and said many flagged messages were hallucinations already addressed. Reuters could not establish whether Muse exposed other users' real data or made it up.",
@@ -12538,7 +12538,7 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Germany's cyber agency rates the national threat level tense to critical, citing fast AI progress",
+    "title": "Germany's cyber agency rates the country's cybersecurity situation tense to critical, citing fast AI progress",
     "happened": "Germany's Federal Office for Information Security (BSI) released its annual report on November 19, 2026, rating the country's cybersecurity situation tense to critical.",
     "keyPoints": [
       "The BSI says the reassessment was driven by the geopolitical situation and the rapid development of artificial intelligence.",
@@ -12564,7 +12564,7 @@
       "The two sides agreed to draw up an action plan for what they call a constructive China-US relationship of strategic stability."
     ],
     "evidence": "Chinese foreign ministry readout of the meeting. It names no specific AI measures or follow-up steps.",
-    "uncertain": "This is China's account of the meeting, and it renders Trump's remarks in its own wording.",
+    "uncertain": "This is China's account of the meeting, and it renders both leaders' remarks in its own wording.",
     "source": "Ministry of Foreign Affairs of China · Press release",
     "url": "https://www.fmprc.gov.cn/eng/xw/zyxw/202611/t20261119_12063139.html"
   },
@@ -12578,7 +12578,7 @@
     "happened": "Chia Der Jiun, managing director of the Monetary Authority of Singapore, gave a keynote address at the Singapore FinTech Festival on November 19, 2026.",
     "keyPoints": [
       "He said some users give agents their financial login credentials and \"I would not advise\" it, \"as there is insufficient assurance of safety.\"",
-      "He asked who bears responsibility \"if agents transact incorrectly or beyond their instruction,\" and said MAS will help develop a know-your-agent protocol for financial institutions.",
+      "He asked who bears responsibility \"if agents transact incorrectly or beyond their instruction,\" and said MAS will help develop a know-your-agent protocol for exchanging information between customers' agents and financial institutions.",
       "He said agents \"have the potential to move money and allocate assets more quickly for smaller incentives,\" and regulators will have to consider the financial stability implications.",
       "\"Autonomy has to be bounded,\" he said, adding that people need \"meaningful control over the objectives, mandate and actions of their agents.\""
     ],
