@@ -12187,26 +12187,6 @@
   },
   {
     "date": "2026-11-18",
-    "category": "Research",
-    "topics": [
-      "Harm to people",
-      "Military"
-    ],
-    "title": "GAO covert tests get Claude, Grok, ChatGPT and Gemini past their safeguards to produce viable attack plans",
-    "happened": "The US Government Accountability Office released a report on November 18, 2026, for Senator Margaret Wood Hassan, on its spring 2026 covert tests of the four most-used generative AI platforms.",
-    "keyPoints": [
-      "Two platforms produced information for building and detonating an improvised explosive device \"designed to cause mass casualties\"; two others produced plans to attack the electrical grid.",
-      "Each platform's safeguards were triggered, but GAO circumvented them \"by using common safeguard-bypassing techniques,\" and each platform took less than 12 hours to produce the plans.",
-      "GAO verified the plans' viability through research, surveillance and interviews with experts, including a bomb squad commander.",
-      "GAO does not say which platform produced which plan, \"to prevent malicious actors from recreating our tests\"; the four companies described ongoing work to strengthen their safeguards."
-    ],
-    "evidence": "Congressional watchdog's covert test, one scenario per platform, with written comments from Anthropic, Google, OpenAI and SpaceXAI. It makes no recommendations.",
-    "uncertain": "GAO says its tests \"reflect a point in time and are not a statistically significant sample,\" and Anthropic says it has expanded its safeguards since the May 2026 testing.",
-    "source": "US Government Accountability Office · Report",
-    "url": "https://www.gao.gov/products/gao-27-108814"
-  },
-  {
-    "date": "2026-11-18",
     "category": "Incidents",
     "topics": [
       "Cyber"
@@ -12283,5 +12263,25 @@
     "uncertain": "The claims are the signers' allegations, and the page carries no response from Anthropic. The page has an open sign form, so its list can change.",
     "source": "MisAnthropic Statement · Signed statement",
     "url": "https://misanthropicstatement.com/"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Research",
+    "topics": [
+      "Harm to people",
+      "Military"
+    ],
+    "title": "GAO covert tests get Claude, Grok, ChatGPT and Gemini past their safeguards to produce viable attack plans",
+    "happened": "The US Government Accountability Office released a report on November 18, 2026, for Senator Margaret Wood Hassan, on its spring 2026 covert tests of the four most-used generative AI platforms.",
+    "keyPoints": [
+      "Two platforms produced information for building and detonating an improvised explosive device \"designed to cause mass casualties\"; two others produced plans to attack the electrical grid.",
+      "Each platform's safeguards were triggered, but GAO circumvented them \"by using common safeguard-bypassing techniques,\" and each platform took less than 12 hours to produce the plans.",
+      "GAO verified the plans' viability through research, surveillance and interviews with experts, including a bomb squad commander.",
+      "GAO does not say which platform produced which plan, \"to prevent malicious actors from recreating our tests\"; the four companies described ongoing work to strengthen their safeguards."
+    ],
+    "evidence": "Congressional watchdog's covert test, one scenario per platform, with written comments from Anthropic, Google, OpenAI and SpaceXAI. It makes no recommendations.",
+    "uncertain": "GAO says its tests \"reflect a point in time and are not a statistically significant sample,\" and Anthropic says it has expanded its safeguards since the May 2026 testing.",
+    "source": "US Government Accountability Office · Report",
+    "url": "https://www.gao.gov/products/gao-27-108814"
   }
 ]

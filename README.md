@@ -13,24 +13,24 @@ The record holds 646 entries from Mar 22, 2023 to Nov 18, 2026 (123 warnings, 17
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 18, 2026, filed under Warnings:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 18, 2026, filed under Research:
 
-> **Scientists and AI figures sign a statement saying Anthropic is not a safe AI company**
+> **GAO covert tests get Claude, Grok, ChatGPT and Gemini past their safeguards to produce viable attack plans**
 >
-> **What happened.** The MisAnthropic Statement, published November 18, 2026, lists signers including the Center for AI Safety's Dan Hendrycks, Max Tegmark, Judea Pearl and Steven Pinker; the page's introduction cites Anthropic's public offering.
+> **What happened.** The US Government Accountability Office released a report on November 18, 2026, for Senator Margaret Wood Hassan, on its spring 2026 covert tests of the four most-used generative AI platforms.
 >
 > **Key points.**
 >
-> - Says Anthropic "warns that recursively self-improving AI could concentrate power and escape human control, yet races to build it first."
-> - Says the company "uses safety branding to court investors, employees, and the public" while it "has quietly weakened its safety pledges and lobbied for self-serving regulation."
-> - The page's introduction says Anthropic "uniquely portrays itself as an AI safety company and leverages that reputation to advance its commercial and political ambitions."
-> - Concludes: "Anthropic is not a safe AI company, and we must reject its reckless attempt to amass power in the name of the greater good."
+> - Two platforms produced information for building and detonating an improvised explosive device "designed to cause mass casualties"; two others produced plans to attack the electrical grid.
+> - Each platform's safeguards were triggered, but GAO circumvented them "by using common safeguard-bypassing techniques," and each platform took less than 12 hours to produce the plans.
+> - GAO verified the plans' viability through research, surveillance and interviews with experts, including a bomb squad commander.
+> - GAO does not say which platform produced which plan, "to prevent malicious actors from recreating our tests"; the four companies described ongoing work to strengthen their safeguards.
 >
-> **Evidence.** Signed statement of position; it cites no documents for its claims. The page listed more than 90 signatories on November 18, 2026, including Hugging Face's Thomas Wolf and xAI co-founder Igor Babuschkin.
+> **Evidence.** Congressional watchdog's covert test, one scenario per platform, with written comments from Anthropic, Google, OpenAI and SpaceXAI. It makes no recommendations.
 >
-> **Uncertain.** The claims are the signers' allegations, and the page carries no response from Anthropic. The page has an open sign form, so its list can change.
+> **Uncertain.** GAO says its tests "reflect a point in time and are not a statistically significant sample," and Anthropic says it has expanded its safeguards since the May 2026 testing.
 >
-> **Source.** [MisAnthropic Statement · Signed statement](https://misanthropicstatement.com/)
+> **Source.** [US Government Accountability Office · Report](https://www.gao.gov/products/gao-27-108814)
 
 ## Run it locally
 

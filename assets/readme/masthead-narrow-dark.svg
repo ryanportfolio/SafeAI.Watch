@@ -786,7 +786,7 @@
 <line class="d620" x1="195" y1="488" x2="224.8" y2="351.4" stroke="#5b5752" stroke-width=".8"/>
 <line class="d627" x1="195" y1="488" x2="312" y2="411.5" stroke="#5b5752" stroke-width=".8"/>
 <line class="d628" x1="195" y1="488" x2="263.4" y2="366.1" stroke="#5b5752" stroke-width=".8"/>
-<line class="d645" x1="195" y1="488" x2="329.4" y2="449" stroke="#5b5752" stroke-width=".8"/>
+<line class="d644" x1="195" y1="488" x2="329.4" y2="449" stroke="#5b5752" stroke-width=".8"/>
 <line class="d6" x1="195" y1="488" x2="254.9" y2="547.9" stroke="#5b5752" stroke-width=".8"/>
 <line class="d12" x1="195" y1="488" x2="282.7" y2="515.7" stroke="#5b5752" stroke-width=".8"/>
 <line class="d15" x1="195" y1="488" x2="240.2" y2="573.1" stroke="#5b5752" stroke-width=".8"/>
@@ -956,8 +956,8 @@
 <line class="d625" x1="195" y1="488" x2="329.6" y2="525.9" stroke="#5b5752" stroke-width=".8"/>
 <line class="d631" x1="195" y1="488" x2="264.4" y2="609.5" stroke="#5b5752" stroke-width=".8"/>
 <line class="d632" x1="195" y1="488" x2="312.7" y2="563.7" stroke="#5b5752" stroke-width=".8"/>
-<line class="d642" x1="195" y1="488" x2="225.9" y2="624.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d644" x1="195" y1="488" x2="285.5" y2="594.8" stroke="#5b5752" stroke-width=".8"/>
+<line class="d641" x1="195" y1="488" x2="225.9" y2="624.5" stroke="#5b5752" stroke-width=".8"/>
+<line class="d643" x1="195" y1="488" x2="285.5" y2="594.8" stroke="#5b5752" stroke-width=".8"/>
 <line class="d2" x1="195" y1="488" x2="172.5" y2="510.5" stroke="#5b5752" stroke-width=".8"/>
 <line class="d7" x1="195" y1="488" x2="168.8" y2="571" stroke="#5b5752" stroke-width=".8"/>
 <line class="d11" x1="195" y1="488" x2="114.7" y2="530.7" stroke="#5b5752" stroke-width=".8"/>
@@ -1118,7 +1118,7 @@
 <line class="d638" x1="195" y1="488" x2="92.3" y2="583" stroke="#5b5752" stroke-width=".8"/>
 <line class="d639" x1="195" y1="488" x2="147.7" y2="619.7" stroke="#5b5752" stroke-width=".8"/>
 <line class="d640" x1="195" y1="488" x2="68.9" y2="548.8" stroke="#5b5752" stroke-width=".8"/>
-<line class="d643" x1="195" y1="488" x2="111.2" y2="600.2" stroke="#5b5752" stroke-width=".8"/>
+<line class="d642" x1="195" y1="488" x2="111.2" y2="600.2" stroke="#5b5752" stroke-width=".8"/>
 <line class="d3" x1="195" y1="488" x2="166.7" y2="459.7" stroke="#5b5752" stroke-width=".8"/>
 <line class="d5" x1="195" y1="488" x2="118.4" y2="463.9" stroke="#5b5752" stroke-width=".8"/>
 <line class="d8" x1="195" y1="488" x2="153.2" y2="409.4" stroke="#5b5752" stroke-width=".8"/>
@@ -1309,7 +1309,7 @@
 <line class="d634" x1="195" y1="488" x2="59.4" y2="453.7" stroke="#5b5752" stroke-width=".8"/>
 <line class="d635" x1="195" y1="488" x2="122.3" y2="368.4" stroke="#5b5752" stroke-width=".8"/>
 <line class="d636" x1="195" y1="488" x2="75.3" y2="415.5" stroke="#5b5752" stroke-width=".8"/>
-<line class="d641" x1="195" y1="488" x2="160.4" y2="352.3" stroke="#5b5752" stroke-width=".8"/>
+<line class="d645" x1="195" y1="488" x2="160.4" y2="352.3" stroke="#5b5752" stroke-width=".8"/>
 <circle class="d0" data-cat="Warnings" cx="202.1" cy="480.9" r="3.6" fill="#e5a700"/>
 <circle class="d1" data-cat="Warnings" cx="200" cy="472.1" r="3.6" fill="#e5a700"/>
 <circle class="d4" data-cat="Warnings" cx="240.1" cy="464" r="3.6" fill="#e5a700"/>
@@ -1432,7 +1432,7 @@
 <circle class="d620" data-cat="Warnings" cx="224.8" cy="351.4" r="3.6" fill="#e5a700"/>
 <circle class="d627" data-cat="Warnings" cx="312" cy="411.5" r="3.6" fill="#e5a700"/>
 <circle class="d628" data-cat="Warnings" cx="263.4" cy="366.1" r="3.6" fill="#e5a700"/>
-<circle class="d645" data-cat="Warnings" cx="329.4" cy="449" r="3.6" fill="#e5a700"/>
+<circle class="d644" data-cat="Warnings" cx="329.4" cy="449" r="3.6" fill="#e5a700"/>
 <circle class="d6" data-cat="Incidents" cx="254.9" cy="547.9" r="3.6" fill="#ff7733"/>
 <circle class="d12" data-cat="Incidents" cx="282.7" cy="515.7" r="3.6" fill="#ff7733"/>
 <circle class="d15" data-cat="Incidents" cx="240.2" cy="573.1" r="3.6" fill="#ff7733"/>
@@ -1602,8 +1602,8 @@
 <circle class="d625" data-cat="Incidents" cx="329.6" cy="525.9" r="3.6" fill="#ff7733"/>
 <circle class="d631" data-cat="Incidents" cx="264.4" cy="609.5" r="3.6" fill="#ff7733"/>
 <circle class="d632" data-cat="Incidents" cx="312.7" cy="563.7" r="3.6" fill="#ff7733"/>
-<circle class="d642" data-cat="Incidents" cx="225.9" cy="624.5" r="3.6" fill="#ff7733"/>
-<circle class="d644" data-cat="Incidents" cx="285.5" cy="594.8" r="3.6" fill="#ff7733"/>
+<circle class="d641" data-cat="Incidents" cx="225.9" cy="624.5" r="3.6" fill="#ff7733"/>
+<circle class="d643" data-cat="Incidents" cx="285.5" cy="594.8" r="3.6" fill="#ff7733"/>
 <circle class="d2" data-cat="Governance" cx="172.5" cy="510.5" r="3.6" fill="#f4f4e7"/>
 <circle class="d7" data-cat="Governance" cx="168.8" cy="571" r="3.6" fill="#f4f4e7"/>
 <circle class="d11" data-cat="Governance" cx="114.7" cy="530.7" r="3.6" fill="#f4f4e7"/>
@@ -1764,7 +1764,7 @@
 <circle class="d638" data-cat="Governance" cx="92.3" cy="583" r="3.6" fill="#f4f4e7"/>
 <circle class="d639" data-cat="Governance" cx="147.7" cy="619.7" r="3.6" fill="#f4f4e7"/>
 <circle class="d640" data-cat="Governance" cx="68.9" cy="548.8" r="3.6" fill="#f4f4e7"/>
-<circle class="d643" data-cat="Governance" cx="111.2" cy="600.2" r="3.6" fill="#f4f4e7"/>
+<circle class="d642" data-cat="Governance" cx="111.2" cy="600.2" r="3.6" fill="#f4f4e7"/>
 <circle class="d3" data-cat="Research" cx="166.7" cy="459.7" r="3.6" fill="#a89a1a"/>
 <circle class="d5" data-cat="Research" cx="118.4" cy="463.9" r="3.6" fill="#a89a1a"/>
 <circle class="d8" data-cat="Research" cx="153.2" cy="409.4" r="3.6" fill="#a89a1a"/>
@@ -1955,15 +1955,15 @@
 <circle class="d634" data-cat="Research" cx="59.4" cy="453.7" r="3.6" fill="#a89a1a"/>
 <circle class="d635" data-cat="Research" cx="122.3" cy="368.4" r="3.6" fill="#a89a1a"/>
 <circle class="d636" data-cat="Research" cx="75.3" cy="415.5" r="3.6" fill="#a89a1a"/>
-<circle class="d641" data-cat="Research" cx="160.4" cy="352.3" r="3.6" fill="#a89a1a"/>
+<circle class="d645" data-cat="Research" cx="160.4" cy="352.3" r="3.6" fill="#a89a1a"/>
 <rect x="167.5" y="444.8" width="55" height="11" fill="#292623"/><text class="mono" x="195" y="453.5" font-size="9" text-anchor="middle" fill="#a9a79c">JAN 2024</text>
 <rect x="167.5" y="409.2" width="55" height="11" fill="#292623"/><text class="mono" x="195" y="417.9" font-size="9" text-anchor="middle" fill="#a9a79c">JAN 2025</text>
 <rect x="167.5" y="373.7" width="55" height="11" fill="#292623"/><text class="mono" x="195" y="382.5" font-size="9" text-anchor="middle" fill="#a9a79c">JAN 2026</text>
 <circle cx="195" cy="488" r="2.4" fill="#f4f4e7"/>
-<g class="call"><path d="M329.4 444 L272 307" stroke="#e5a700" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+<g class="call"><path d="M160.4 347.3 L160.4 307" stroke="#a89a1a" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
 <rect x="32" y="285" width="248" height="22" fill="#292623" stroke="#6f6b64" stroke-width="1"/>
-<circle cx="43" cy="296" r="3.4" fill="#e5a700"/>
-<text class="mono" x="52" y="299.5" font-size="10" fill="#f4f4e7">LATEST · NOV 18, 2026 · WARNINGS</text></g>
+<circle cx="43" cy="296" r="3.4" fill="#a89a1a"/>
+<text class="mono" x="52" y="299.5" font-size="10" fill="#f4f4e7">LATEST · NOV 18, 2026 · RESEARCH</text></g>
 <text class="mono" x="32" y="664" font-size="9.5" fill="#a9a79c">646 ENTRIES · 330 PUBLISHERS · MAR 2023 TO NOV 2026</text>
 <text class="mono" x="32" y="680" font-size="9.5" fill="#a9a79c">ONE DOT PER ENTRY · FARTHER OUT = NEWER</text>
 <text class="mono" x="32" y="696" font-size="9.5" fill="#a9a79c">A SELECTION · DENSITY SHOWS COVERAGE, NOT FREQUENCY</text>
