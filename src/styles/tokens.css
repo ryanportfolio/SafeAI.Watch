@@ -54,7 +54,7 @@
   --glass-edge: linear-gradient(122deg, #fff 0%, rgb(255 255 255 / 0.45) 40%, rgb(255 255 255 / 0.05) 78%);
   --glass-sheen: linear-gradient(122deg, rgb(255 255 255 / 0.16) 0%, rgb(255 255 255 / 0) 44%);
 
-  /* Fonts. --font-serif is the single swap point for a licensed serif. */
+  /* Fonts. --font-serif is the main swap point for a licensed serif; LICENSES/README.md lists the rest. */
   --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'Geist Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
   --font-serif: 'Newsreader Variable', Georgia, 'Times New Roman', serif;
