@@ -228,7 +228,6 @@ const sequence: SceneFactory = ({ gl, slot, redraw }) => {
       if (on) leader.style.setProperty('--leader', cssColor(layerColor[k]));
       else leader.style.removeProperty('--leader');
     });
-    slot.dataset.activeLayer = String(active);
   };
   markActive();
 
@@ -978,7 +977,6 @@ const sequence: SceneFactory = ({ gl, slot, redraw }) => {
         leader.remove();
       }
       for (const n of notes) n.el.remove();
-      delete slot.dataset.activeLayer;
       if (!contextLost) shapes.dispose();
     },
   };

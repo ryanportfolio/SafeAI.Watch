@@ -1,8 +1,8 @@
 /* Direction G, Valley: builds every SVG in this folder and board.html.
 
    Run: node build.mjs [folder-with-node_modules]
-   Needs fontkit, wawoff2 and subset-font; they resolve from the about-film
-   worktree by default (the logo-lab worktree has no node_modules).
+   Needs fontkit, wawoff2 and subset-font; they resolve from the repo root
+   by default.
 
    Geometry: variants.mjs (elevation fields, tracing, favicons) on geo.mjs
    (marching squares, Bezier output; same core as direction F). The build
@@ -16,7 +16,7 @@ import * as G from './geo.mjs';
 import * as V from './variants.mjs';
 
 const HERE = fileURLToPath(new URL('./', import.meta.url));
-const MODS = (process.argv[2] || 'C:/Users/Home/CoreWise/SafeAI.Watch-worktrees/about-film/').replace(/\/?$/, '/');
+const MODS = (process.argv[2] || fileURLToPath(new URL('../../../', import.meta.url))).replace(/\\/g, '/').replace(/\/?$/, '/');
 const require = createRequire(MODS + 'package.json');
 const fontkit = require('fontkit');
 const wawoff2 = require('wawoff2');

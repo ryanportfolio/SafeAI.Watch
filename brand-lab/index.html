@@ -28,19 +28,13 @@
 </head>
 <body>
 <header>
-  <h1>SafeAI.watch logo lab: seven directions</h1>
-  <p>Each row shows the horizontal lockup, the stacked lockup and the favicon at 16, 32 and 64 px, on paper. The dark tiles are a quick inversion for comparison only; each direction's full board has its designed dark version, one-color versions, a site header mock-up and motion.</p>
+  <h1>SafeAI.watch logo lab: the chosen direction</h1>
+  <p>The chosen mark, G3 Valley: the horizontal lockup, the stacked lockup and the favicon at 16, 32 and 64 px, on paper. The dark tile is a quick inversion for comparison only. The rejected directions A to F are in git history before 2026-11-18. Run <code>node brand-lab/directions/G-valley/build.mjs</code> to regenerate the full board.</p>
 </header>
 <main id="dirs"></main>
 <script>
 const DIRS = [
   { id: 'G-valley', prefix: 'G3-', name: 'G · Valley', idea: 'The owner’s pick from F, refined: the S as a valley floor on a square map sheet, the ground rising both ways. Shown: G3, with a triangulation mark on the floor and a hairline neatline; the board has G1 to G3.' },
-  { id: 'F-topographic', prefix: 'F2-', name: 'F · Topographic', idea: 'An S found in surveyed ground: contours of one height field, two summits and a saddle, one orange point where you stand. Shown: F2, three contours, with a Newsreader wordmark; the board has F1 to F4.' },
-  { id: 'A-same-shape', name: 'A · Same shape', idea: 'One bent band drawn twice and turned 180° to lock into an S: ink half and orange half, benefit and danger from the same shape.' },
-  { id: 'B-the-point', name: 'B · The point', idea: 'The full stop is the one drawn element: half Newsreader round point, half Geist Mono square point, in orange. It takes the shape of each word it faces.' },
-  { id: 'C-evidence-line', name: 'C · Evidence line', idea: 'One stroke that loses ink in three steps: solid for what happened, dashed for what the evidence shows, dotted for what remains uncertain.' },
-  { id: 'D-footnote', name: 'D · Footnote', idea: 'The name with a blue superscript 1, a footnote call: every entry links its source. The stacked lockup carries the note itself.' },
-  { id: 'E-ledger', name: 'E · Ledger', idea: 'One letter per ruled cell, like a record filled in by hand; the cell holding the full stop is orange and the name pivots on it.' },
 ];
 const main = document.getElementById('dirs');
 for (const d of DIRS) {

@@ -8,4 +8,4 @@ Fonts are self-hosted: npm packages bundle the woff2 files into `dist/_astro/` a
 | Geist Mono | uppercase labels (`--font-mono`) | SIL OFL 1.1, [OFL-Geist-Mono.txt](OFL-Geist-Mono.txt) | vercel/geist-font | `@fontsource-variable/geist-mono` |
 | Newsreader | headlines, serif leads (`--font-serif`) | SIL OFL 1.1, [OFL-Newsreader.txt](OFL-Newsreader.txt) | productiontype/Newsreader | `@fontsource-variable/newsreader` (opsz + wght axes) |
 
-The prototype's headline face, Klim's Signifier, is commercial and not licensed here. Newsreader stands in for it. To switch to a licensed Signifier later, self-host its files, add the `@font-face` rules, and change `--font-serif` in `src/styles/tokens.css`. Nothing else references the serif by name.
+The prototype's headline face is a commercial serif and is not licensed here. Newsreader stands in for it. To switch to a licensed serif later, self-host its files, add the `@font-face` rules, and change `--font-serif` in `src/styles/tokens.css`. Nothing else references the serif by name.

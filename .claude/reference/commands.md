@@ -12,4 +12,4 @@
 
 CI: `.github/workflows/ci.yml` runs on pull requests and pushes to `main`. Job Node: `npm ci`, then `npm run build` (which runs `film:lint`). Job Firmware: `node .claude/scripts/sync-codex-skills.mjs --check`. The file came from `node .claude/scripts/write-ci-workflow.mjs --write`; edit it by hand, or rerun with `--write --force` to regenerate it.
 
-Browser checks run headed (see CLAUDE.md "Verification"). Pick a port other than 8905, which the local prototype uses.
+Browser checks run headed (see CLAUDE.md "Verification").

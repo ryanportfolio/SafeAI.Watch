@@ -2,7 +2,7 @@
 // record slate, then the closing ground for the end card.
 import { hexRgb, mixRgb, easeInOut } from './util.js';
 
-export const TOKENS = {
+const TOKENS = {
   paper: hexRgb('#d7d7d0'), // K1
   ink: hexRgb('#1a1614'), // K2
   cream: hexRgb('#f4f4e7'), // K3
@@ -18,7 +18,7 @@ export const TOKENS = {
 };
 
 export const DUSK_LEN = 2.6;
-export const CLOSE_LEN = 1.5;
+const CLOSE_LEN = 1.5;
 
 // dusk: 0 = day paper, 1 = slate. close: 0..1 into the closing ground.
 export function palette(t, cues, duskOverride = null) {

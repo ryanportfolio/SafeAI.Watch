@@ -11,7 +11,7 @@ import { STAGE_W } from './camera.js';
 import { G3 } from './logo-g3.js';
 
 const TAU = Math.PI * 2;
-export const SHEET = { x0: 80, y0: 80, x1: 3520, y1: 1920 };
+const SHEET = { x0: 80, y0: 80, x1: 3520, y1: 1920 };
 
 // ---------- geometry (built once, constant) ----------
 
@@ -21,7 +21,7 @@ const D = { x: A1.x - A0.x, y: A1.y - A0.y };
 const LEN = Math.hypot(D.x, D.y);
 const U = { x: D.x / LEN, y: D.y / LEN };
 const N = { x: -U.y, y: U.x }; // normal, pointing south-east
-export function stream(k, s) {
+function stream(k, s) {
   const o = 80 * Math.sin(Math.PI * s * 1.4 + 0.2) + k * 26 * (0.85 + 0.3 * s);
   return { x: A0.x + D.x * s + N.x * o, y: A0.y + D.y * s + N.y * o };
 }
@@ -43,7 +43,7 @@ const CONTOURS = [70, 140].map((o) => { const pts = []; for (let y = SHEET.y0; y
 const bez = (a, c, b, n = 40) => Array.from({ length: n + 1 }, (_, i) => { const u = i / n, v = 1 - u; return { x: v * v * a.x + 2 * v * u * c.x + u * u * b.x, y: v * v * a.y + 2 * v * u * c.y + u * u * b.y }; });
 const add = (p, a, b = 0) => ({ x: p.x + U.x * a + N.x * b, y: p.y + U.y * a + N.y * b });
 // Two forks on the one current: code (P24 / H23) and sight (B18).
-export const FORKS = [0.2, 0.45].map((s) => {
+const FORKS = [0.2, 0.45].map((s) => {
   const F = stream(0, s);
   const up = add(F, 150, -250), dn = add(F, 150, 250);
   return {
@@ -95,7 +95,7 @@ export const laneY = (slot, x) => slot.y + (x - slot.cx) * Math.tan(slot.ang || 
 
 // Soundings: many small, varied depth marks in ink at low alpha. Conceptual; no numerals,
 // because a number on screen needs a source row. Kept out of the caption band and the key.
-export const SOUNDINGS = (() => {
+const SOUNDINGS = (() => {
   const r = mulberry32(777), out = [];
   const keep = (x, y) => x > shoreX(y) + 90 && x < SHEET.x1 - 70 && y > SHEET.y0 + 60 && y < SHEET.y1 - 60
     && !(y > 1480 && x < 2900) && !(x > 2800 && y > 1560)
@@ -115,7 +115,7 @@ const STAGE = { cx: 1900, y: 560, ang: 0, name: 150, track: 0.4 }; // one name a
 const inE = (t, a, d) => easeOut((t - a) / d), outE = (t, a, d) => easeIn((t - a) / d);
 
 // Two identical patches of readings (same marks, same layout), far apart on the water.
-export const PATCH_AT = [{ x: 1500, y: 330 }, { x: 2650, y: 1250 }];
+const PATCH_AT = [{ x: 1500, y: 330 }, { x: 2650, y: 1250 }];
 const PATCH = (() => {
   const r = mulberry32(4242), out = [];
   for (let n = 0; n < 400 && out.length < 30; n++) {
@@ -222,7 +222,7 @@ function drawSoundings(ctx, t, P, pal, c) {
 
 // Sight lines for "people hear the word": from the chart margins to the word, stopping at it.
 export const SIGHT_FROM = [{ x: SHEET.x0, y: 380 }, { x: SHEET.x0, y: 1150 }, { x: 900, y: SHEET.y0 }, { x: 1750, y: SHEET.y0 }, { x: 2650, y: SHEET.y0 }, { x: SHEET.x1, y: 260 }, { x: SHEET.x1, y: 900 }, { x: SHEET.x1, y: 1500 }];
-export const STAGE_SLOT = STAGE;
+const STAGE_SLOT = STAGE;
 
 
 
@@ -468,7 +468,7 @@ export function drawWorld(ctx, t, pr, pal, c, { still = false } = {}) {
 // its point nearest the marker; the corner ticks settle; last, the orange marker lands on the
 // valley floor as a sounding that finds bottom (the fog's sounding found none). The score's
 // motif resolves on the landing (audio/score.js reads these times).
-export const END_MARK = { x: STAGE_W / 2, y: 300, size: 260 };
+const END_MARK = { x: STAGE_W / 2, y: 300, size: 260 };
 export function endTimes(s0) {
   const close = s0 - 0.8;
   return {
