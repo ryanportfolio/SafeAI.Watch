@@ -15,9 +15,9 @@ The record holds 646 entries from Mar 22, 2023 to Nov 18, 2026 (123 warnings, 17
 
 Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 18, 2026, filed under Warnings:
 
-> **Scientists and AI figures sign a statement saying Anthropic is not a safe AI company, citing its public offering**
+> **Scientists and AI figures sign a statement saying Anthropic is not a safe AI company**
 >
-> **What happened.** The MisAnthropic Statement, published November 18, 2026, lists signers including the Center for AI Safety's Dan Hendrycks, Max Tegmark, Judea Pearl and Steven Pinker, and cites Anthropic's public offering.
+> **What happened.** The MisAnthropic Statement, published November 18, 2026, lists signers including the Center for AI Safety's Dan Hendrycks, Max Tegmark, Judea Pearl and Steven Pinker; the page's introduction cites Anthropic's public offering.
 >
 > **Key points.**
 >
