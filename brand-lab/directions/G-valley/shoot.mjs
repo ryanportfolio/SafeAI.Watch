@@ -1,13 +1,11 @@
 /* Stills of board.html in headed Chrome on the real GPU, window parked offscreen.
    Run: node shoot.mjs [outDir] [url]
-   Uses the about-film worktree's launcher, which has playwright-core installed. */
+   Uses the repo's launcher; needs playwright-core (npm i --no-save playwright-core@latest). */
 import { mkdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { pathToFileURL } from 'node:url';
 
 process.env.CHROME_PLACE = 'offscreen';
-const LAUNCHER = 'C:/Users/Home/CoreWise/SafeAI.Watch-worktrees/about-film/scripts/lib/launch-chrome.mjs';
-const { launchPlacedChrome } = await import(pathToFileURL(LAUNCHER).href);
+const { launchPlacedChrome } = await import('../../../scripts/lib/launch-chrome.mjs');
 
 const OUT = process.argv[2] || 'D:\\screenshots\\SafeAI.Watch\\logo-lab\\G';
 const URL = process.argv[3] || 'http://localhost:4330/brand-lab/directions/G-valley/board.html';

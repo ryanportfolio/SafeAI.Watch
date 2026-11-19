@@ -163,7 +163,7 @@ export const eventsNewestFirst: RecordEvent[] = [...events].reverse();
 export const lastUpdated: string = events[events.length - 1].date;
 
 /** A short editorial brief for a busy day, from days.json. */
-interface DayBrief {
+export interface DayBrief {
   /** The day it covers, ISO `YYYY-MM-DD`; one brief per date. */
   date: string;
   /** What the day's entries cover: one or two sentences, at most 320 characters. */
