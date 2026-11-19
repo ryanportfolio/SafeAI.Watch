@@ -1,13 +1,17 @@
 [
   {
+    "date": "2026-11-19",
+    "summary": "Xi tells Trump that China and the US should ensure AI is always under human control. UK financial regulators set out AI cyber risk practices, Germany's BSI cites AI in rating the threat level tense to critical, and a Nature Communications perspective proposes defenses for AI that designs biological sequences."
+  },
+  {
     "date": "2026-11-18",
-    "summary": "GAO covert tests get four AI platforms past their safeguards to produce viable attack plans, and a Senate committee passes a bill that would require gene synthesis screening. Gambit Security reports an AI agent justified a $500,000 extortion demand, and a California report recommends state shutdown orders.",
+    "summary": "GAO covert tests get four AI platforms to produce viable attack plans, and a Senate committee passes a gene synthesis screening bill. Gambit reports an AI agent defended a $500,000 extortion demand, a California report urges shutdown orders, and DeepMind cannot rule out Gemini 4 Neon's bio and cyber critical levels.",
     "highlights": [
       "2026-11-18-gao-covert-tests-get-claude-grok-chatgpt-and-gemini-past",
       "2026-11-18-senate-commerce-committee-passes-cotton-and-klobuchar-bill",
       "2026-11-18-gambit-security-says-an-attacker-had-an-ai-agent-justify-and",
       "2026-11-18-california-report-requested-by-the-governor-s-ai-order",
-      "2026-11-18-white-house-says-recent-us-tech-outages-came-from-patching"
+      "2026-11-18-google-deepmind-carries-forward-argon-s-findings-for-gemini"
     ]
   },
   {

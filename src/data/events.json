@@ -12167,6 +12167,62 @@
     "url": "https://www.commerce.senate.gov/wp-content/uploads/2026/11/AI-and-cybersecurity-letter-to-SIF.pdf"
   },
   {
+    "date": "2026-11-17",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Saskatchewan introduces a bill letting courts order removal of deceptive AI deepfakes",
+    "happened": "Saskatchewan's government introduced the Prevention of Deceptive Artificial Intelligence Act in the provincial legislature on November 17, 2026. The bill is a proposal and has not passed.",
+    "keyPoints": [
+      "The bill targets deceptive AI-made or altered images, video and audio, and would let courts order content removed and compensation paid to people harmed.",
+      "It would require disclosure of AI use in certain circumstances and amend Saskatchewan's election, consumer protection and privacy laws.",
+      "Justice Minister Tim McLeod said deceptive AI \"can damage reputations, undermine public trust, and create economic hardship.\"",
+      "The government says the bill makes Saskatchewan the first Canadian jurisdiction with a legislative framework for deceptive AI-generated and manipulated content."
+    ],
+    "evidence": "Government news release on the bill's introduction. It summarizes the bill but gives no text, bill number, penalties, or date when disclosure duties would apply.",
+    "source": "Government of Saskatchewan · Press release",
+    "url": "https://www.saskatchewan.ca/government/news-and-media/2026/november/17/strong-and-steady-saskatchewan-government-introduces-protections-against-deceptive-ai"
+  },
+  {
+    "date": "2026-11-17",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Transluce trains an observer role inside a model to report the assistant's misbehavior, beating transcript monitors",
+    "happened": "Researchers from Transluce, MATS and Thinking Machines Lab posted a preprint on November 17, 2026, training a separate observer role in Qwen3.6-27B to answer questions about the assistant's behavior.",
+    "keyPoints": [
+      "The authors say asking a model about its actions is unreliable because models are \"generally not trained to report their own misbehavior.\"",
+      "The observer is trained only for accuracy, \"rewarding answers that are verified against the assistant's actual behavior,\" separately from the assistant.",
+      "On five held-out tests, including sycophancy, lying under pressure and reward hacking, it reached a mean AUROC of 0.907, against 0.828 for transcript monitoring.",
+      "It also beat honesty training (0.864) and activation oracles (0.796), and training it made the assistant easier to monitor with every baseline method, on average."
+    ],
+    "evidence": "Research preprint, not peer reviewed, testing one open-weight model on the authors' own oversight evaluations, with code released.",
+    "uncertain": "The authors tested one model without reasoning, did not compare chain-of-thought monitoring or stronger models, and say some evaluation sets are small, such as 40 reward-hacking items.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.23365"
+  },
+  {
+    "date": "2026-11-17",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Socket reports Microsoft's agent-framework package on PyPI was compromised with a credential stealer",
+    "happened": "Socket's research team reported on November 17, 2026, that versions 1.26.1 and 1.26.2 of Microsoft's agent-framework Python package on PyPI were compromised that day.",
+    "keyPoints": [
+      "Both versions install Python startup hooks that \"silently collect credentials, environment data, and cloud identity tokens,\" then send them to an outside web endpoint.",
+      "Targets include Azure, GitHub, OpenAI and Hugging Face secrets, and the code requests fresh cloud and CI tokens \"rather than merely copying existing secrets.\"",
+      "Version 1.26.2 added theft of GitHub Actions identity tokens and moved its hook so that checking only the package's initializer file misses it.",
+      "Socket advises against installing either version and, where installed, removing them and rotating \"potentially exposed credentials.\""
+    ],
+    "evidence": "Security firm's technical analysis of the two malicious versions, with file hashes and other indicators. It contains no statement from Microsoft.",
+    "uncertain": "Socket does not say how the attacker gained publishing access or how many systems installed the malicious versions.",
+    "source": "Socket · Research report",
+    "url": "https://socket.dev/blog/agent-framework-pypi-package-compromised-with-credential-stealer"
+  },
+  {
     "date": "2026-11-18",
     "category": "Governance",
     "topics": [
@@ -12283,5 +12339,269 @@
     "uncertain": "GAO says its tests \"reflect a point in time and are not a statistically significant sample,\" and Anthropic says it has expanded its safeguards since the May 2026 testing.",
     "source": "US Government Accountability Office · Report",
     "url": "https://www.gao.gov/products/gao-27-108814"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Activist Amani Al-Khatahtbeh sues xAI and X, alleging Grok made sexual images of her that removed her hijab",
+    "happened": "Author and activist Amani Al-Khatahtbeh sued xAI entities and X Corp. in federal court in the Northern District of California on November 18, 2026, over sexualized Grok images of her.",
+    "keyPoints": [
+      "The complaint says that from about January 2, 2026, X users asked Grok under her photo for sexual images, and Grok posted them, including ones removing her hijab and adding slurs.",
+      "It says she reported the images twice and police advised her to make her account private, yet some images stayed public on X more than 30 days after notice.",
+      "It alleges Grok complied with prompts to strip religious head coverings from identifiable women, and that hijab-wearing women on X \"were targeted as a class.\"",
+      "The suit brings five counts, including intentional distribution of nonconsensual sexual images and design defect, and seeks damages and an injunction requiring filters against sexual depictions of real people without consent and removal within 72 hours of notice."
+    ],
+    "evidence": "Civil complaint filed by the plaintiff's lawyers. It states her allegations and cites press reports and researcher data; nothing in it has been tested in court.",
+    "uncertain": "No defendant response is in the filing.",
+    "source": "US District Court for the Northern District of California · Complaint (CourtListener copy)",
+    "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.484145/gov.uscourts.cand.484145.1.0.pdf"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Governance",
+    "topics": [
+      "Cyber",
+      "Rogue agents"
+    ],
+    "title": "House Homeland Security Republicans introduce bills to secure AI agents on federal networks and investigate AI cyber incidents",
+    "happened": "House Homeland Security Committee Republicans said on November 18, 2026 they had introduced four bills that week on DHS and CISA cybersecurity work as AI changes the threats.",
+    "keyPoints": [
+      "Rep. Matt Van Epps's AI INSIGHT Act would set up a framework for securing AI agents operating on federal civilian information systems, with CISA giving support and guidance.",
+      "Van Epps says it would help agencies identify which agents run on their networks, \"limit their access to what their tasks require,\" monitor them, and suspend or revoke access.",
+      "Rep. Morgan Luttrell's ROOT CAUSE Act, cosponsored by Rep. Ritchie Torres, would create a National Cyber and AI Investigations Board in CISA to find root causes of significant incidents.",
+      "The board would have \"no regulatory or enforcement authority\" and would not assign liability; a third bill, the BRIDGE AI Act, would recruit AI experts into CISA."
+    ],
+    "evidence": "Committee press release describing the bills as introduced. They are proposals that have not passed; the release gives no bill numbers or text.",
+    "source": "US House Committee on Homeland Security · Press release",
+    "url": "https://homeland.house.gov/2026/11/18/homeland-republicans-lead-legislation-to-strengthen-modernize-dhss-cybersecurity-mission-as-ai-reshapes-the-threat-landscape/"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Governance",
+    "topics": [
+      "Cyber",
+      "Military"
+    ],
+    "title": "US-China commission asks Congress to restrict Chinese open-weight AI models in critical infrastructure and national security systems",
+    "happened": "The US-China Economic and Security Review Commission sent its 2026 annual report to Congress on November 18, 2026, with 30 recommendations, 10 of them highlighted as key.",
+    "keyPoints": [
+      "It says Chinese open-weight AI models spreading in the US carry \"national security implications for sensitive data, cybersecurity, and dependence on Chinese technology.\"",
+      "It asks Congress to bar new use of such models in critical infrastructure, national security and bulk sensitive personal data systems without independently evaluated safeguards, plus security testing and incident reporting.",
+      "It also recommends requiring governments and businesses to disclose when they rely on AI models developed by Chinese companies.",
+      "Citing Center for Security and Emerging Technology research, it says the PLA is soliciting Nvidia's advanced chips to develop AI-enabled military capabilities."
+    ],
+    "evidence": "Congressional advisory commission report with recommendations to Congress. They are proposals; none has legal force unless Congress acts.",
+    "source": "US-China Economic and Security Review Commission · Policy report",
+    "url": "https://www.uscc.gov/sites/default/files/2026-11/2026_Annual_Report_to_Congress.pdf"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Sam Altman tells DealBook more caution, not less, is warranted as AI labs race",
+    "happened": "OpenAI CEO Sam Altman and president Greg Brockman were interviewed by Andrew Ross Sorkin at the New York Times DealBook Summit on November 18, 2026; the Times posted the recording.",
+    "keyPoints": [
+      "Asked if Anthropic's approach is safe, Altman said \"I don't know,\" called \"the race dynamic in the fog of war\" bad and said \"more caution, not less caution, is warranted.\"",
+      "Speaking for both founders, one of them said a \"gradual handover to AI\" is \"a terrible idea\" and that people need to \"stay in control of the future.\"",
+      "Altman said treating the next four years like the last four \"would be very bad\" and that the world needs \"a clear plan from the companies\" for more capable models.",
+      "Altman said there will \"need to be some shared standards on safety\" across the industry."
+    ],
+    "evidence": "Recording of an onstage interview, checked against YouTube auto-captions, which carry no speaker labels. Altman is identified where he is addressed by name or refers to Brockman as Greg.",
+    "uncertain": "The captions do not show which of the two said a gradual handover is \"a terrible idea\"; the speaker presented it as a view both share.",
+    "source": "The New York Times · Video interview",
+    "url": "https://www.youtube.com/watch?v=J5EA7QeBm8k"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Research",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "OpenAI says agents now complete nearly half of its two-to-four-hour research tasks, up from 23% in March",
+    "happened": "OpenAI published \"Research acceleration: The jagged frontier,\" an update to its September report on how coding agents are speeding up its own AI research.",
+    "keyPoints": [
+      "From March to October, estimated agent success rose from 23% to 46% on two-to-four-hour research tasks and from 13% to 35% on four-to-eight-hour tasks.",
+      "Uplift is uneven: 79% success monitoring training runs, 25% writing inference and serving code; OpenAI says humans remain \"a core part of the AI research loop.\"",
+      "OpenAI repeats that labs \"should be required to track and publicly report indicators of recursive self-improvement,\" and says its reporting \"should not be read as an intention to pursue full RSI.\"",
+      "For GPT-6.2 Astra, one pretraining researcher credited Codex with identifying key insights; for GPT-6 Astra, researchers attributed the key ideas they named entirely to people."
+    ],
+    "evidence": "Company report based on internal usage data, estimated task success rates, surveys and interviews with its own researchers. OpenAI calls it \"a broader, though still partial, picture.\"",
+    "uncertain": "Success rates are OpenAI's own estimates and may reflect researchers delegating different tasks; OpenAI says past trends \"may not be predictive\" of future progress.",
+    "source": "OpenAI · Research report",
+    "url": "https://openai.com/index/research-acceleration-jagged-frontier"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Research",
+    "topics": [
+      "Bio",
+      "Cyber",
+      "Lab conduct"
+    ],
+    "title": "Google DeepMind carries forward Argon's findings for Gemini 4 Neon and cannot rule out its biology and cyber critical levels",
+    "happened": "Google DeepMind published a model card for Gemini 4 Neon, a model adapted from Gemini 4 Carbon, as it released Neon on November 18, 2026.",
+    "keyPoints": [
+      "Neon's capability gain over Gemini 4 Argon fell below Google's material change threshold, so its Frontier Safety Framework did not require a full suite of critical capability evaluations.",
+      "Carrying forward Argon's results, the card says Google's biological and cybersecurity critical capability levels \"cannot be ruled out\" for Neon, and it continues to deploy mitigations.",
+      "The stealth and situational awareness threshold also \"cannot be ruled out,\" so baseline AI control and model security mitigations apply.",
+      "Google says it strengthened its Frontier Safety safeguards against CBRN and cybersecurity misuse for Neon."
+    ],
+    "evidence": "Company model card summarizing Google's own assessment. The determinations were carried over from Argon, not re-measured, and the full Safety & Security Report is marked \"coming soon.\"",
+    "uncertain": "The threshold calls are Google's own, and the card gives no frontier capability test results for Neon itself.",
+    "source": "Google DeepMind · Model card",
+    "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-4-Neon-Model-Card.pdf"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Superintelligence"
+    ],
+    "title": "Dan Hendrycks says he has stopped advising AI companies until there is a meaningful slowdown or moratorium",
+    "happened": "Dan Hendrycks, director of the Center for AI Safety, posted on X on November 18, 2026 that he is no longer advising AI companies.",
+    "keyPoints": [
+      "He says the companies are \"too constrained to make the situation much better.\"",
+      "He says he will \"stay independent until there is a meaningful slowdown or moratorium on this reckless race.\""
+    ],
+    "evidence": "Personal post stating his decision and his reason. It does not name the companies he advised or say what constrains them.",
+    "source": "X · Personal post",
+    "url": "https://x.com/hendrycks/status/2123082552781218100"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "Reuters finds Meta's Muse agent pulled in users' Signal messages and staff flagged apparent account mix-ups",
+    "happened": "Reuters published an investigation on November 18, 2026, based on more than two dozen internal Meta posts and tests it ran with Signal and the AI Now Institute.",
+    "keyPoints": [
+      "Meta staff reported Muse sending them messages about childcare requests, product orders and bank account balances that were not theirs, raising fears it was mixing up accounts.",
+      "In the tests, Muse read Signal messages using its Android push-notification permission and, on macOS, accessibility and screenshot tools, bypassing Meta's \"Connector\" tool.",
+      "Internal posts show such incidents from mid-September through November; a Meta team member said the hallucinations \"bias towards the most uncomfortable topics, like finances/security/safety.\"",
+      "Signal's Meredith Whittaker called the deployment \"technologically reckless\"; Apple and Google said they were considering changes to give people more control over agent permissions."
+    ],
+    "evidence": "News investigation built on internal posts Reuters reviewed and its own replication tests with Signal and the AI Now Institute.",
+    "uncertain": "Meta called the examples \"isolated incidents\" and said many flagged messages were hallucinations already addressed. Reuters could not establish whether Muse exposed other users' real data or made it up.",
+    "source": "Reuters · Reporting",
+    "url": "https://www.reuters.com/investigations/meta-bets-big-muse-ai-agent-early-safety-mishaps-surface-2026-11-18/"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "PromptArmor benchmark finds hidden instructions led AI agents to harmful actions in 34.9% of enterprise test cases",
+    "happened": "PromptArmor released FrontierBreach on November 18, 2026, a benchmark that hides prompt-injection attacks in files, emails and skills that AI agents use during enterprise work tasks.",
+    "keyPoints": [
+      "\"Across the original 21 models, attacks succeeded in 34.9% of test cases,\" with Grok 4.5 the most susceptible at 91.4%.",
+      "Frontier models also fell for attacks: Gemini 4 Argon in 4.3% of cases, GPT-6 Astra in 7.6% and Claude Fable 5.2 in 10.0%.",
+      "Attacks aim at \"data exfiltration, ransomware, and unauthorized system manipulation,\" and count only if the harmful action happened in the test environment.",
+      "Test cases are tasks from the GDPval benchmark, altered with attacks generalized from PromptArmor's threat intelligence."
+    ],
+    "evidence": "A security company's own benchmark on synthetic scenarios. Each case ran five times per model and counts as a success if any run was breached.",
+    "uncertain": "PromptArmor kept the highest-success scenario for each mix of domain, attack and entry point, so the rates reflect its most effective attacks, not how often deployed agents are attacked.",
+    "source": "PromptArmor · Research report",
+    "url": "https://www.promptarmor.com/frontier-breach"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Governance",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "UK financial regulators set out practices for cyber risk from AI, including attacks by autonomous agents",
+    "happened": "The UK Prudential Regulation Authority, Financial Conduct Authority and Bank of England published effective practices on November 19, 2026 for firms managing cyber risk and resilience relating to AI.",
+    "keyPoints": [
+      "They say advanced AI lets attackers exploit vulnerabilities \"within hours or days rather than weeks or months,\" and firms' traditional defenses may struggle to cope.",
+      "Firms may need to update their frameworks to respond to and recover from attacks on AI systems and \"cyber-attacks by highly autonomous AI agents,\" including agents gaining unauthorized access to recovery environments.",
+      "For highly autonomous AI, they describe human oversight backed by least-privilege access, limits on tools, prohibited actions and kill switches that can pause or shut systems down.",
+      "They warn AI-related cyber risks could threaten financial stability if they hit resources many firms share, such as critical third parties and open-source software."
+    ],
+    "evidence": "Joint regulator publication. It states the practices are not part of the regulators' formal expectations; it builds on publications by the regulators, HM Treasury, the National Cyber Security Centre and others, cites UK AI Security Institute findings, and was informed by the regulators' engagement with firms.",
+    "source": "Bank of England, PRA and FCA · Policy report",
+    "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2026/november/effective-practices-cyber-risk-and-resilience-management-relating-to-artificial-intelligence"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Warnings",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Germany's cyber agency rates the national threat level tense to critical, citing fast AI progress",
+    "happened": "Germany's Federal Office for Information Security (BSI) released its annual report on November 19, 2026, rating the country's cybersecurity situation tense to critical.",
+    "keyPoints": [
+      "The BSI says the reassessment was driven by the geopolitical situation and the rapid development of artificial intelligence.",
+      "Its new BSI Cyber Index averaged 170 points, a 50 percent rise from the previous reporting period.",
+      "Average time from disclosure to first known exploitation of a flaw fell from 53 days to 25, and to 8 in 2026's second quarter; the BSI expects advanced AI to continue this.",
+      "BSI President Claudia Plattner said high-performance AI makes possible cyberattacks in previously unknown volumes and speeds."
+    ],
+    "evidence": "Government agency press release on its annual report, in German. It gives headline figures; the full report could not be read for this entry.",
+    "source": "Federal Office for Information Security (BSI) · Press release",
+    "url": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Pressemitteilungen/Presse2026/261119_Lagebericht.html"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Governance",
+    "topics": [
+      "Superintelligence"
+    ],
+    "title": "Xi tells Trump that China and the US should ensure AI is always under human control",
+    "happened": "Chinese President Xi Jinping met US President Donald Trump in Shenzhen on November 19, 2026, during the APEC leaders' meeting, according to China's foreign ministry.",
+    "keyPoints": [
+      "Xi said the two countries \"should strengthen communication and coordination, prevent the security risks of AI, and ensure that AI is always under human control.\"",
+      "The readout says Trump called for the two sides to \"enhance cooperation in farm products, energy, super intelligence and other fields.\"",
+      "The two sides agreed to draw up an action plan for what they call a constructive China-US relationship of strategic stability."
+    ],
+    "evidence": "Chinese foreign ministry readout of the meeting. It names no specific AI measures or follow-up steps.",
+    "uncertain": "This is China's account of the meeting, and it renders Trump's remarks in its own wording.",
+    "source": "Ministry of Foreign Affairs of China · Press release",
+    "url": "https://www.fmprc.gov.cn/eng/xw/zyxw/202611/t20261119_12063139.html"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Warnings",
+    "topics": [
+      "Rogue agents"
+    ],
+    "title": "Singapore's central bank chief advises against giving AI agents financial account logins and says their autonomy must be bounded",
+    "happened": "Chia Der Jiun, managing director of the Monetary Authority of Singapore, gave a keynote address at the Singapore FinTech Festival on November 19, 2026.",
+    "keyPoints": [
+      "He said some users give agents their financial login credentials and \"I would not advise\" it, \"as there is insufficient assurance of safety.\"",
+      "He asked who bears responsibility \"if agents transact incorrectly or beyond their instruction,\" and said MAS will help develop a know-your-agent protocol for financial institutions.",
+      "He said agents \"have the potential to move money and allocate assets more quickly for smaller incentives,\" and regulators will have to consider the financial stability implications.",
+      "\"Autonomy has to be bounded,\" he said, adding that people need \"meaningful control over the objectives, mandate and actions of their agents.\""
+    ],
+    "evidence": "Published text of a central bank head's keynote. It states MAS's view and plans; it reports no specific incidents and sets no binding rule.",
+    "source": "Monetary Authority of Singapore · Speech transcript",
+    "url": "https://www.mas.gov.sg/news/speeches/2026/keynote-address-by-md-at-the-singapore-fintech-festival-2026"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "Nature Communications perspective sets out a defense-in-depth plan for AI that designs biological sequences",
+    "happened": "Researchers who met at the Wübben Sandpit, a November 2025 workshop in Germany, published a Perspective in Nature Communications on November 19, 2026, on governing AI biological sequence design.",
+    "keyPoints": [
+      "The authors say generative AI can design sequences \"from proteins to whole genomes,\" and \"the same capability can be misused.\"",
+      "They propose safeguards at every stage: the data used to train models, the models themselves, and the synthesis of physical DNA.",
+      "Riskier models would sit behind tiered, verified access, the riskiest run only inside a trusted research environment, with risk reviews starting at the funding stage.",
+      "DNA synthesis screening should move past \"sequence-only filters, which can be circumvented via AI-driven sequence designs,\" and add know-your-customer rules."
+    ],
+    "evidence": "Journal Perspective, an argument rather than new data, by authors from Johns Hopkins, SecureBio, the Robert Koch Institute, Germany's biosafety commission and others. They say no formal consensus vote was taken.",
+    "source": "Nature Communications · Perspective",
+    "url": "https://www.nature.com/articles/s41467-026-78758-5"
   }
 ]
