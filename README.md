@@ -4,33 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 634 dated, sourced entries drawn as a burst, one dot per entry: 121 warnings, 169 incidents, 157 governance, 187 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 646 dated, sourced entries drawn as a burst, one dot per entry: 123 warnings, 171 incidents, 161 governance, 191 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 634 entries from Mar 22, 2023 to Nov 18, 2026 (121 warnings, 169 incidents, 157 governance, 187 research), drawn from 324 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 646 entries from Mar 22, 2023 to Nov 18, 2026 (123 warnings, 171 incidents, 161 governance, 191 research), drawn from 330 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 18, 2026, filed under Governance:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 18, 2026, filed under Research:
 
-> **Senate Commerce Committee passes Cotton and Klobuchar bill that would require gene synthesis screening**
+> **GAO covert tests get Claude, Grok, ChatGPT and Gemini past their safeguards to produce viable attack plans**
 >
-> **What happened.** Senators Tom Cotton and Amy Klobuchar said on November 18, 2026, that the Senate Commerce, Science, and Transportation Committee passed their Biosecurity Modernization and Innovation Act.
+> **What happened.** The US Government Accountability Office released a report on November 18, 2026, for Senator Margaret Wood Hassan, on its spring 2026 covert tests of the four most-used generative AI platforms.
 >
 > **Key points.**
 >
-> - The release says the bill would require gene synthesis providers to screen their orders and customers so bad actors cannot order dangerous sequences.
-> - Klobuchar said access to genetic material helps science, but "without safety standards it could be misused, including to create bioweapons."
-> - Cotton said "The federal government must ensure Americans are protected from biosecurity threats posed by terrorists and bad actors who seek to do us harm."
-> - The release lists endorsements from OpenAI, Microsoft, Google DeepMind and Anthropic, and from synthesis companies including Twist Bioscience and Integrated DNA Technologies.
+> - Two platforms produced information for building and detonating an improvised explosive device "designed to cause mass casualties"; two others produced plans to attack the electrical grid.
+> - Each platform's safeguards were triggered, but GAO circumvented them "by using common safeguard-bypassing techniques," and each platform took less than 12 hours to produce the plans.
+> - GAO verified the plans' viability through research, surveillance and interviews with experts, including a bomb squad commander.
+> - GAO does not say which platform produced which plan, "to prevent malicious actors from recreating our tests"; the four companies described ongoing work to strengthen their safeguards.
 >
-> **Evidence.** Senators' press release on the committee vote. The bill is a proposal: it has cleared committee but has not passed the Senate or the House or become law.
+> **Evidence.** Congressional watchdog's covert test, one scenario per platform, with written comments from Anthropic, Google, OpenAI and SpaceXAI. It makes no recommendations.
 >
-> **Uncertain.** The release names no date for a full Senate vote.
+> **Uncertain.** GAO says its tests "reflect a point in time and are not a statistically significant sample," and Anthropic says it has expanded its safeguards since the May 2026 testing.
 >
-> **Source.** [Office of Sen. Tom Cotton · Press release](https://www.cotton.senate.gov/news/press-releases/cotton-klobuchar-bill-to-establish-biosecurity-requirements-passes-senate-commerce-committee/)
+> **Source.** [US Government Accountability Office · Report](https://www.gao.gov/products/gao-27-108814)
 
 ## Run it locally
 

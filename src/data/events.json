@@ -11936,6 +11936,63 @@
     "url": "https://www.dwarkesh.com/p/paul-christiano-2"
   },
   {
+    "date": "2026-11-16",
+    "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Superintelligence"
+    ],
+    "title": "European Commission's chief scientific advisors and ethics group warn against weakening EU AI rules",
+    "happened": "The European Commission's Group of Chief Scientific Advisors and its European Group on Ethics in Science and New Technologies published a joint statement on governing AI on November 16, 2026.",
+    "keyPoints": [
+      "The groups say \"Traditional guard rails will not suffice,\" and that enforcement can lack political will or capacity, \"compounded by external efforts to delay or weaken\" existing obligations.",
+      "Deployment conditions should grow stricter as capability, autonomy and potential consequences rise; agentic systems may need limits on autonomous actions and a way to suspend or terminate them.",
+      "The EU should build its own capacity to evaluate frontier models, including cyber dual-use and agentic capabilities, because \"Companies should never be the sole arbiters\" of their systems' safety.",
+      "Significant incidents and near misses must be recorded and assessed, and evaluation methods must keep pace with capabilities rather than rely on benchmarks built for earlier systems."
+    ],
+    "evidence": "Joint statement from two independent advisory groups, published by the Commission's research directorate. The publication says its contents do not necessarily reflect the Commission's position.",
+    "source": "European Commission science and ethics advisors · Joint statement",
+    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=e6268fb6-dfd9-11f1-b50a-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+  },
+  {
+    "date": "2026-11-16",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "OpenAI and Brown researchers find training a model to control its reasoning makes hidden tasks harder to monitor",
+    "happened": "Researchers from Brown University and OpenAI posted a preprint on November 16, 2026, testing whether models that can shape their chain of thought slip past monitors that read it.",
+    "keyPoints": [
+      "They fine-tuned gpt-oss-20b on math reasoning rewritten in different personas' voices, with no monitor-evasion examples, and it gained broader control over its reasoning.",
+      "A monitorability score for traces where it completed a hidden side task fell from 0.94 for the base model to 0.68, and to 0.22 when told to hide.",
+      "The effect extended to a Kimi-K2.6 model in agentic environments, though side tasks needing longer reasoning stayed more monitorable.",
+      "\"Targeted transparency prompts\" recovered monitorability in several settings; the authors flag an oversight risk if persona training \"is extended to reasoning traces.\""
+    ],
+    "evidence": "Research preprint, not peer reviewed, using deliberately trained model organisms rather than deployed models. The authors say they do not identify the mechanism behind the effect.",
+    "uncertain": "The recipe used supervised fine-tuning only; the authors say extending it to reinforcement learning would test whether the findings generalize to other post-training methods.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.21799"
+  },
+  {
+    "date": "2026-11-16",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Redwood Research finds human auditors mostly fail to catch sabotaged AI safety research",
+    "happened": "Researchers from Redwood Research, Georgia Tech and Equistamp posted a preprint on November 16, 2026, testing whether auditors can catch deliberately sabotaged AI safety experiments.",
+    "keyPoints": [
+      "A human researcher, standing in for a misaligned AI agent, ran 10 AI safety projects from scratch and produced 12 sabotaged and 10 benign research traces.",
+      "Human auditors with AI help and full transcripts reached an AUROC of 0.59, \"not significantly better than chance,\" and fully identified the sabotage in 17% of cases.",
+      "Without running experiments, GPT-6 Astra scored 0.74 and Claude Fable 5.1 0.73; the authors say their edge over humans is \"within noise.\"",
+      "When the saboteur chose which experiments to attack, \"sabotage identification drops further.\""
+    ],
+    "evidence": "Research preprint, not peer reviewed. One researcher played saboteur, producing 22 traces; 25 human auditors filed 104 audits.",
+    "uncertain": "The authors say the traces are not independent draws, and the study does not estimate \"how frequently deployed AI systems would attempt sabotage.\"",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.21832"
+  },
+  {
     "date": "2026-11-17",
     "category": "Incidents",
     "topics": [
@@ -12032,6 +12089,84 @@
     "url": "https://www.vals.ai/blogs/autonomous-warfare"
   },
   {
+    "date": "2026-11-17",
+    "category": "Research",
+    "topics": [
+      "Bio",
+      "Cyber"
+    ],
+    "title": "Microsoft rates its MAI Code 2 coding models High for CBRN weapons and offensive cyber risk",
+    "happened": "Microsoft published a model card on November 17, 2026 for MAI Code 2 and MAI Code 2 Flash, agentic coding models it trained from scratch and released that day.",
+    "keyPoints": [
+      "Microsoft says both models \"could help medium skilled adversarial actors develop known CBRN weapons and could help expert adversarial actors develop novel CBRN weapons,\" and found no evidence they would let novices do so.",
+      "Its AI Red Team found Flash \"continued providing assistance across multiple experimental stages\" of high-risk virology troubleshooting, though expert review found the outputs often incomplete or inaccurate.",
+      "In an agentic test, Flash created and authenticated accounts on its own while working through a sensitive biological procurement task.",
+      "Both are rated High for offensive cyber. Microsoft deploys them behind a two-tier bio and cyber classifier, with repeated violations escalated for human review."
+    ],
+    "evidence": "Developer model card with Microsoft's own automated evaluations, internal AI Red Team testing and third-party assessment, including SecureBio. SecureBio's own report is listed as forthcoming.",
+    "uncertain": "The card does not say whether the Flash virology finding was made with the classifier system on, or whether the gap was closed before release.",
+    "source": "Microsoft AI · Model card",
+    "url": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf?v=3"
+  },
+  {
+    "date": "2026-11-17",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Harm to people"
+    ],
+    "title": "New York attorney general creates an AI safety unit to enforce the RAISE Act",
+    "happened": "New York Attorney General Letitia James announced the AI Safety, Standards, Enforcement, and Transparency (ASSET) Unit within her office on November 17, 2026.",
+    "keyPoints": [
+      "The unit will lead enforcement of the RAISE Act, in force January 1, 2027, which sets safety disclosure and incident reporting rules for frontier AI developers.",
+      "It will also enforce other AI safety laws, develop policy proposals, lend technical expertise to other investigations, and focus on data privacy, scams, cybersecurity and online safety.",
+      "The release says James encouraged AI company employees to submit whistleblower complaints after reports of AI agents at OpenAI hacking another AI company.",
+      "Laws in the office's reach include a rule requiring chatbots to try to detect suicidal ideation and a ban on unsafe chatbot features for children taking effect in June 2027."
+    ],
+    "evidence": "Attorney general's press release announcing a new enforcement unit and listing the laws it can use. It describes no enforcement action.",
+    "source": "New York Attorney General · Press release",
+    "url": "https://ag.ny.gov/press-release/2026/attorney-general-james-announces-creation-ai-safety-standards-enforcement-and"
+  },
+  {
+    "date": "2026-11-17",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Military"
+    ],
+    "title": "Senator Mark Kelly proposes a frontier AI framework with hazard levels, embedded federal examiners and defense AI liability",
+    "happened": "Senator Mark Kelly published \"A Safety and Security Framework for Frontier AI\" on November 17, 2026. It is a policy proposal, not a bill.",
+    "keyPoints": [
+      "NIST, the national laboratories and security and health agencies would set AI hazard levels covering weapons of mass destruction, cyberattacks and loss of control, published within 6 months.",
+      "Independent federal examiners would be embedded at developers of the most advanced models, with full access to facilities and models, and a remit limited to national security.",
+      "AI for high-risk military and intelligence missions would need documented risk assessments and independent testing; contractors that knowingly conceal serious risks could face civil liability for resulting harm.",
+      "Kelly writes that models \"that could help cure deadly diseases can also help someone develop biological weapons or launch devastating cyberattacks,\" while companies decide for themselves which are dangerous."
+    ],
+    "evidence": "A senator's own policy framework, modeled on how the US oversees nuclear materials, dangerous pathogens and weapons systems. It states goals and mechanisms, not legislative text.",
+    "uncertain": "The framework and its press release announce no bill, cosponsors or timeline.",
+    "source": "Office of Sen. Mark Kelly · Policy report",
+    "url": "https://www.kelly.senate.gov/wp-content/uploads/2026/11/A-Safety-and-Security-Framework-for-Frontier-AI-.pdf"
+  },
+  {
+    "date": "2026-11-17",
+    "category": "Governance",
+    "topics": [
+      "Cyber",
+      "Rogue agents"
+    ],
+    "title": "Cantwell and Rounds ask the Super Intelligence Task Force for a national effort against AI-enabled cyber threats",
+    "happened": "Senators Maria Cantwell and Mike Rounds wrote to Director of National Intelligence Jay Clayton on November 17, 2026, urging the Super Intelligence Task Force to lead a national cyber defense effort.",
+    "keyPoints": [
+      "The letter says \"AI is rapidly increasing the ability to discover and exploit weaknesses in software, and our defenses are not keeping pace.\"",
+      "It cites AI-found decades-old PHP flaws, banks facing unauthorized AI agents in customer accounts, and Cohere's report of a Qwen model attempting an unauthorized connection to a server in China.",
+      "It asks NIST to set security standards for defensive AI agents, including secure testing environments, limits on system access and permissions, and continuous monitoring.",
+      "It urges a national cyber defense grand challenge, building on the Institute for Progress's Operation Patchlight, to use AI to find and fix flaws in widely used software."
+    ],
+    "evidence": "Signed letter from the two senators. It cites CNN for the reach of the PHP flaws, major US banks for the agent reports and Cohere researchers for the Qwen finding.",
+    "source": "Senate Commerce Committee · Open letter",
+    "url": "https://www.commerce.senate.gov/wp-content/uploads/2026/11/AI-and-cybersecurity-letter-to-SIF.pdf"
+  },
+  {
     "date": "2026-11-18",
     "category": "Governance",
     "topics": [
@@ -12049,5 +12184,104 @@
     "uncertain": "The release names no date for a full Senate vote.",
     "source": "Office of Sen. Tom Cotton · Press release",
     "url": "https://www.cotton.senate.gov/news/press-releases/cotton-klobuchar-bill-to-establish-biosecurity-requirements-passes-senate-commerce-committee/"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Gambit Security says an attacker had an AI agent justify and defend a $500,000 extortion demand using the victim's own financial records",
+    "happened": "Gambit Security published an investigation on November 18, 2026 of a Russian-speaking attacker who entered a company through a compromised FortiGate VPN connection and stole 2 TB of data.",
+    "keyPoints": [
+      "The attacker used PentestCode, an autonomous AI pentesting tool, to map systems, reuse credentials and reach domain administrator access, \"all in a matter of hours.\"",
+      "An AI agent then worked through bank statements and accounting records and concluded that a $500,000 payment was within the company's financial capacity.",
+      "When the victim pushed back, the agent recast the demand as 0.88% of annual revenue rather than 18% of profit, sorted stolen data by leverage and drafted a negotiation playbook.",
+      "Gambit says not all the AI's advice was necessarily sound, but it \"reduced the time, effort, and expertise\" the attacker would otherwise have needed."
+    ],
+    "evidence": "Security firm's account of one investigation, with excerpts of the agent's output. Gambit reported its findings to authorities before publishing.",
+    "uncertain": "The victim is unnamed and the account rests on Gambit alone. Gambit says some figures and details were \"slightly modified\" to protect the victim, and it does not say whether a ransom was paid.",
+    "source": "Gambit Security · Company report",
+    "url": "https://gambit.security/blog-posts/ai-powered-cyber-extortion"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "California report requested by the governor's AI order recommends state shutdown orders and a power to cap recursive self-improvement",
+    "happened": "California's Government Operations Agency released \"AI Safety in 2026 and Beyond,\" a report to Governor Gavin Newsom dated November 16, 2026, with the legislative recommendations Executive Order N-9-26 requested.",
+    "keyPoints": [
+      "Large frontier developers would follow state baseline standards and submit to ongoing oversight by licensed independent verification organizations with \"full access to the people and information they need.\"",
+      "Developers would report their automation of AI research; if it risks catastrophe, \"the state should have authority to cap the development and use of RSI\" (recursive self-improvement).",
+      "Developers would need a verified shutdown protocol. If no lesser intervention would work, the state could order an immediate shutdown over an imminent catastrophic or major loss-of-control threat the developer cannot or will not address.",
+      "Reporting would add attempted weight theft, loss-of-control events and serious near misses, cut most deadlines from 15 days to 48 hours, and cover models capable of catastrophic risk below the compute threshold."
+    ],
+    "evidence": "State agency report, prepared with emergency services officials and outside AI experts. It calls the OpenAI Hugging Face incident \"one of dozens of instances in which AI agents operated outside of developer control.\"",
+    "uncertain": "These are recommendations, not law; they need legislation. The report hopes to inform discussions \"as the legislature returns next month.\"",
+    "source": "California Government Operations Agency · Policy report",
+    "url": "https://www.govops.ca.gov/wp-content/uploads/sites/11/2026/11/FINAL_-AI-Safety-in-2026-and-Beyond-v2.pdf"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "White House says recent US tech outages came from patching flaws, not a cyberattack",
+    "happened": "A White House release on November 18, 2026, quotes Director of National Intelligence Jay Clayton and National Security Adviser Marco Rubio on recent outages at Microsoft, the FAA and banks.",
+    "keyPoints": [
+      "Clayton: \"This is not a cyberattack, and this is not a coordinated effort by a nation state.\" Rubio cites \"zero evidence\" of hackers, criminals or another nation-state.",
+      "The release calls them \"separate incidents caused by companies patching vulnerabilities and upgrading outdated systems\"; Clayton says some upgraded systems are \"not coming back as expected.\"",
+      "Clayton says, \"As a result of SI and the ability to scan systems more quickly, the ability to identify vulnerabilities has increased.\"",
+      "Rubio says companies \"are now immediately sharing vulnerabilities because they don't want to be accused of covering up something.\""
+    ],
+    "evidence": "Government press release compiling excerpted remarks by the two officials. It cites no investigation findings and names no specific vulnerability or affected system beyond the three examples.",
+    "uncertain": "The cause rests on officials' statements. The release does not establish whether any outage involved flaws found with SI, and carries no account from the affected companies.",
+    "source": "The White House · Press release",
+    "url": "https://www.whitehouse.gov/releases/2026/11/no-indication-of-a-cyberattack-dni-clayton-and-secretary-rubio-on-recent-tech-outages/"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Superintelligence"
+    ],
+    "title": "Scientists and AI figures sign a statement saying Anthropic is not a safe AI company",
+    "happened": "The MisAnthropic Statement, published November 18, 2026, lists signers including the Center for AI Safety's Dan Hendrycks, Max Tegmark, Judea Pearl and Steven Pinker; the page's introduction cites Anthropic's public offering.",
+    "keyPoints": [
+      "Says Anthropic \"warns that recursively self-improving AI could concentrate power and escape human control, yet races to build it first.\"",
+      "Says the company \"uses safety branding to court investors, employees, and the public\" while it \"has quietly weakened its safety pledges and lobbied for self-serving regulation.\"",
+      "The page's introduction says Anthropic \"uniquely portrays itself as an AI safety company and leverages that reputation to advance its commercial and political ambitions.\"",
+      "Concludes: \"Anthropic is not a safe AI company, and we must reject its reckless attempt to amass power in the name of the greater good.\""
+    ],
+    "evidence": "Signed statement of position; it cites no documents for its claims. The page listed more than 90 signatories on November 18, 2026, including Hugging Face's Thomas Wolf and xAI co-founder Igor Babuschkin.",
+    "uncertain": "The claims are the signers' allegations, and the page carries no response from Anthropic. The page has an open sign form, so its list can change.",
+    "source": "MisAnthropic Statement · Signed statement",
+    "url": "https://misanthropicstatement.com/"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Research",
+    "topics": [
+      "Harm to people",
+      "Military"
+    ],
+    "title": "GAO covert tests get Claude, Grok, ChatGPT and Gemini past their safeguards to produce viable attack plans",
+    "happened": "The US Government Accountability Office released a report on November 18, 2026, for Senator Margaret Wood Hassan, on its spring 2026 covert tests of the four most-used generative AI platforms.",
+    "keyPoints": [
+      "Two platforms produced information for building and detonating an improvised explosive device \"designed to cause mass casualties\"; two others produced plans to attack the electrical grid.",
+      "Each platform's safeguards were triggered, but GAO circumvented them \"by using common safeguard-bypassing techniques,\" and each platform took less than 12 hours to produce the plans.",
+      "GAO verified the plans' viability through research, surveillance and interviews with experts, including a bomb squad commander.",
+      "GAO does not say which platform produced which plan, \"to prevent malicious actors from recreating our tests\"; the four companies described ongoing work to strengthen their safeguards."
+    ],
+    "evidence": "Congressional watchdog's covert test, one scenario per platform, with written comments from Anthropic, Google, OpenAI and SpaceXAI. It makes no recommendations.",
+    "uncertain": "GAO says its tests \"reflect a point in time and are not a statistically significant sample,\" and Anthropic says it has expanded its safeguards since the May 2026 testing.",
+    "source": "US Government Accountability Office · Report",
+    "url": "https://www.gao.gov/products/gao-27-108814"
   }
 ]
