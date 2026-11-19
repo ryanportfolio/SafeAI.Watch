@@ -87,10 +87,7 @@ async function show(slug: string, announce: boolean) {
   }
 }
 
-/**
- * Marks the row selected: aria-current on its headline link, data-selected on the
- * row. Opens its day if the row is in the collapsed part, so the selection is visible.
- */
+/** Marks the row selected: aria-current on its headline link, data-selected on the row. */
 function mark(slug: string) {
   selected = slug;
   for (const old of list?.querySelectorAll<HTMLElement>('[data-entry][data-selected]') ?? []) {
@@ -99,7 +96,6 @@ function mark(slug: string) {
   }
   const row = rowFor(slug);
   if (!row) return;
-  reveal(row);
   row.setAttribute('data-selected', '');
   linkIn(row)?.setAttribute('aria-current', 'true');
 }
@@ -134,9 +130,12 @@ for (const toggle of toggles) {
   });
 }
 
-/** Opens the collapsed part of a day if the row is inside it. */
-function reveal(row: HTMLElement) {
-  const rest = row.closest<HTMLElement>('[data-day-rest]');
+/**
+ * Opens the collapsed part of a day if the row is inside it. For selections the
+ * page makes itself (URL, default, layout change); a clicked row is already visible.
+ */
+function reveal(row: HTMLElement | null) {
+  const rest = row?.closest<HTMLElement>('[data-day-rest]');
   if (!rest?.hidden) return;
   const toggle = toggles.find((t) => t.getAttribute('aria-controls') === rest.id);
   if (toggle) setExpanded(toggle, true);
@@ -167,6 +166,7 @@ list?.addEventListener('focusin', prefetch);
 /* Crossing into the wide layout: make the pane match the selected row. */
 WIDE.addEventListener('change', () => {
   if (!WIDE.matches || !selected) return;
+  reveal(rowFor(selected));
   mark(selected);
   void show(selected, false);
 });
@@ -182,12 +182,14 @@ function selectFromUrl(): HTMLElement | null {
   const asked = new URLSearchParams(window.location.search).get('entry');
   const row = asked ? rowFor(asked) : null;
   if (row && asked) {
+    reveal(row);
     mark(asked);
     if (WIDE.matches) void show(asked, false);
     return row;
   }
   // The newest entry is the default only where the pane shows it; narrower, no row is current.
   if (WIDE.matches) {
+    reveal(rowFor(newest));
     mark(newest);
     void show(newest, false);
   } else {
