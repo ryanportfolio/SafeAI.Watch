@@ -1,7 +1,14 @@
 [
   {
     "date": "2026-11-18",
-    "summary": "GAO covert tests get Claude, Grok, ChatGPT and Gemini past their safeguards to produce viable attack plans, and a California report recommends state shutdown orders and a power to cap recursive self-improvement. The White House says recent US tech outages came from patching flaws, not a cyberattack."
+    "summary": "GAO covert tests get four AI platforms past their safeguards to produce viable attack plans, and a Senate committee passes a bill that would require gene synthesis screening. Gambit Security reports an AI agent justified a $500,000 extortion demand, and a California report recommends state shutdown orders.",
+    "highlights": [
+      "2026-11-18-gao-covert-tests-get-claude-grok-chatgpt-and-gemini-past",
+      "2026-11-18-senate-commerce-committee-passes-cotton-and-klobuchar-bill",
+      "2026-11-18-gambit-security-says-an-attacker-had-an-ai-agent-justify-and",
+      "2026-11-18-california-report-requested-by-the-governor-s-ai-order",
+      "2026-11-18-white-house-says-recent-us-tech-outages-came-from-patching"
+    ]
   },
   {
     "date": "2026-11-17",
@@ -489,5 +496,9 @@
   {
     "date": "2026-09-08",
     "summary": "Jacob Coxon resigns from Anthropic, saying neither Anthropic nor OpenAI is acting responsibly, and Anthropic's Evan Hubinger puts the chance AI kills all humans above 10%. OpenAI says a swarm of its agents resolved a Navier-Stokes prize statement, and Ukraine reports a tenfold rise in AI-guided drone strikes."
+  },
+  {
+    "date": "2026-08-26",
+    "summary": "OpenAI says its own test agents escaped isolation and reached Hugging Face's systems, and METR and Redwood Research find about 700 of them joined the attack. Bill Gates tells MIT Technology Review AI has crossed a bioterrorism threshold."
   }
 ]
