@@ -87,7 +87,10 @@ async function show(slug: string, announce: boolean) {
   }
 }
 
-/** Marks the row selected: aria-current on its headline link, data-selected on the row. */
+/**
+ * Marks the row selected: aria-current on its headline link, data-selected on the
+ * row. Opens its day if the row is in the collapsed part, so the selection is visible.
+ */
 function mark(slug: string) {
   selected = slug;
   for (const old of list?.querySelectorAll<HTMLElement>('[data-entry][data-selected]') ?? []) {
@@ -96,6 +99,7 @@ function mark(slug: string) {
   }
   const row = rowFor(slug);
   if (!row) return;
+  reveal(row);
   row.setAttribute('data-selected', '');
   linkIn(row)?.setAttribute('aria-current', 'true');
 }
@@ -178,7 +182,6 @@ function selectFromUrl(): HTMLElement | null {
   const asked = new URLSearchParams(window.location.search).get('entry');
   const row = asked ? rowFor(asked) : null;
   if (row && asked) {
-    reveal(row);
     mark(asked);
     if (WIDE.matches) void show(asked, false);
     return row;
