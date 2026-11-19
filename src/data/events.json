@@ -12199,7 +12199,7 @@
       "It also beat honesty training (0.864) and activation oracles (0.796), and training it made the assistant easier to monitor with every baseline method, on average."
     ],
     "evidence": "Research preprint, not peer reviewed, testing one open-weight model on the authors' own oversight evaluations, with code released.",
-    "uncertain": "The authors tested one model without reasoning, did not compare chain-of-thought monitoring or stronger models, and say some evaluation sets are small, such as 40 reward-hacking items. When the observer reasons before answering, it only matches a transcript monitor.",
+    "uncertain": "The authors evaluated one model, Qwen3.6-27B, on transcripts without reasoning, did not compare chain-of-thought monitoring or test stronger models, and say some evaluation sets are small, such as 40 reward-hacking items. When the observer reasons before answering, it only matches a transcript monitor.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2611.23365"
   },
@@ -12389,8 +12389,8 @@
     "happened": "The US-China Economic and Security Review Commission sent its 2026 annual report to Congress on November 18, 2026, with 30 recommendations, 10 of them highlighted as key.",
     "keyPoints": [
       "It says Chinese open-weight AI models spreading in the US carry \"national security implications for sensitive data, cybersecurity, and dependence on Chinese technology.\"",
-      "It asks Congress to have the Commerce Department bar new use of such models in critical infrastructure, national security and bulk sensitive personal data systems unless authorized on independently evaluated safeguards, plus security testing and incident reporting.",
-      "It also recommends requiring governments and businesses to disclose when they rely on AI models developed by Chinese companies.",
+      "It asks Congress to have the Commerce Department bar new use of such models in critical infrastructure, national security and bulk sensitive personal data systems without authorized safeguards, and require plans to mitigate or replace existing deployments.",
+      "It recommends disclosure of Chinese-developed AI models by federal agencies and recipients of federal funds, businesses using them in US products, and SEC reporting companies.",
       "Citing Center for Security and Emerging Technology research, it says the PLA is soliciting Nvidia's advanced chips to develop AI-enabled military capabilities."
     ],
     "evidence": "Congressional advisory commission report with recommendations to Congress. They are proposals; none has legal force unless Congress acts.",
@@ -12424,10 +12424,10 @@
       "Superintelligence",
       "Lab conduct"
     ],
-    "title": "OpenAI says agents now complete nearly half of its two-to-four-hour research tasks, up from 23% in March",
+    "title": "OpenAI estimates agents now complete nearly half of research tasks that take people two to four hours, up from 23% in March",
     "happened": "OpenAI published \"Research acceleration: The jagged frontier,\" an update to its September report on how coding agents are speeding up its own AI research.",
     "keyPoints": [
-      "From March to October, estimated agent success rose from 23% to 46% on two-to-four-hour research tasks and from 13% to 35% on four-to-eight-hour tasks.",
+      "From March to October, estimated agent success rose from 23% to 46% on tasks estimated to take people two to four hours, and from 13% to 35% on four-to-eight-hour tasks.",
       "Uplift is uneven: 79% success monitoring training runs, 25% writing inference and serving code; OpenAI says humans remain \"a core part of the AI research loop.\"",
       "OpenAI repeats that labs \"should be required to track and publicly report indicators of recursive self-improvement,\" and says its reporting \"should not be read as an intention to pursue full RSI.\"",
       "For GPT-6.2 Astra, one pretraining researcher credited Codex with identifying key insights; for GPT-6 Astra, researchers attributed the key ideas they named entirely to people."
@@ -12454,7 +12454,7 @@
       "Google says it strengthened its Frontier Safety safeguards against CBRN and cybersecurity misuse for Neon."
     ],
     "evidence": "Company model card summarizing Google's own assessment. The determinations were carried over from Argon, not re-measured, and the full Safety & Security Report is marked \"coming soon.\"",
-    "uncertain": "The threshold calls are Google's own, and the card gives no frontier capability test results for Neon itself.",
+    "uncertain": "The threshold calls are Google's own, and the card reports no critical capability evaluations run on Neon itself.",
     "source": "Google DeepMind · Model card",
     "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-4-Neon-Model-Card.pdf"
   },
@@ -12518,7 +12518,8 @@
     "date": "2026-11-19",
     "category": "Governance",
     "topics": [
-      "Cyber"
+      "Cyber",
+      "Rogue agents"
     ],
     "title": "UK financial regulators set out practices for cyber risk from AI, including attacks by autonomous agents",
     "happened": "The UK Prudential Regulation Authority, Financial Conduct Authority and Bank of England published effective practices on November 19, 2026 for firms managing cyber risk and resilience relating to AI.",
