@@ -229,6 +229,6 @@ export function mountVisuals(root: ParentNode = document) {
 }
 
 /** Stop every mounted scene and release its GL context. */
-export function unmountVisuals() {
+function unmountVisuals() {
   for (const handle of [...mounted.values()]) handle.stop();
 }

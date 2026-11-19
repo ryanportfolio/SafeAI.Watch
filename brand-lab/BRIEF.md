@@ -1,5 +1,7 @@
 # Logo lab brief
 
+Directions A to F, `research/`, the G1 and G2 files and every `board.html` were removed on 2026-11-18; read them at commit 2bd54759, as this brief was written for them. `node brand-lab/directions/G-valley/build.mjs` regenerates the G files and its board.
+
 Five logo directions for SafeAI.watch, one designer each. Research: `research/godly-1.md` to `godly-6.md` (patterns and concept seeds from 304 logos on godly.design), `research/peers.md` (marks of AI safety, editorial and "watch" organizations, and the Avoid table), `research/site-look.md` (current tokens and type). Read `research/RULES.md` for the brand in one paragraph.
 
 ## What the brand needs

@@ -9,11 +9,9 @@ import { slugOf, type RecordEvent } from '../data/record';
 
 interface Props {
   event: RecordEvent;
-  /** One of the day's five highlights ("Five to read"). */
-  highlight?: boolean;
 }
 
-const { event, highlight = false } = Astro.props;
+const { event } = Astro.props;
 const slug = slugOf(event);
 const topicSlugs = event.topics.map((topic) => topic.toLowerCase().replace(/\s+/g, '-')).join(' ');
 ---
@@ -24,7 +22,6 @@ const topicSlugs = event.topics.map((topic) => topic.toLowerCase().replace(/\s+/
   data-date={event.date}
   data-type={event.category.toLowerCase()}
   data-topics={topicSlugs}
-  data-highlight={highlight ? '' : undefined}
 >
   <h3 class="row-title"><a href={`/latest/${slug}/`} data-entry-link>{event.title}</a></h3>
   <p class="row-meta">

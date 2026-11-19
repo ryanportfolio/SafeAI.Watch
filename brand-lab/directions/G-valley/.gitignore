@@ -1,0 +1,4 @@
+# build.mjs output that is not kept; G3 files stay tracked
+G1-*
+G2-*
+board.html

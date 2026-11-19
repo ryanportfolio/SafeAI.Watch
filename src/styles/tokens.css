@@ -54,7 +54,7 @@
   --glass-edge: linear-gradient(122deg, #fff 0%, rgb(255 255 255 / 0.45) 40%, rgb(255 255 255 / 0.05) 78%);
   --glass-sheen: linear-gradient(122deg, rgb(255 255 255 / 0.16) 0%, rgb(255 255 255 / 0) 44%);
 
-  /* Fonts. --font-serif is the single swap point for a licensed Signifier. */
+  /* Fonts. --font-serif is the main swap point for a licensed serif; LICENSES/README.md lists the rest. */
   --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'Geist Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
   --font-serif: 'Newsreader Variable', Georgia, 'Times New Roman', serif;
@@ -86,7 +86,6 @@
   --radius-pill: 82px;
   --radius-full: 9999px;
   --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 @media (max-width: 1023px) {

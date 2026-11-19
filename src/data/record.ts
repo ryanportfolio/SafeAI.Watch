@@ -9,12 +9,12 @@ import rawDays from './days.json';
 /** The four coverage areas an entry can belong to. */
 export const CATEGORIES = ['Research', 'Incidents', 'Warnings', 'Governance'] as const;
 
-export type RecordCategory = (typeof CATEGORIES)[number];
+type RecordCategory = (typeof CATEGORIES)[number];
 
 /** The subjects an entry can be about, in display order: Bio first. */
 export const TOPICS = ['Bio', 'Cyber', 'Rogue agents', 'Alignment', 'Superintelligence', 'Harm to people', 'Military', 'Lab conduct'] as const;
 
-export type RecordTopic = (typeof TOPICS)[number];
+type RecordTopic = (typeof TOPICS)[number];
 
 export interface RecordEvent {
   /** Publication date of the linked source, ISO `YYYY-MM-DD`. */

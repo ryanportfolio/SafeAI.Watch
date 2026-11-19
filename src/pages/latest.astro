@@ -76,7 +76,7 @@ const days = groupByDay(eventsNewestFirst).map(({ date, entries }) => {
               <>
                 <p class="day-label" id={`five-${day.date}`}>Five to read</p>
                 <ol class="rows" aria-labelledby={`five-${day.date}`}>
-                  {day.highlights.map((event) => <LatestRow event={event} highlight />)}
+                  {day.highlights.map((event) => <LatestRow event={event} />)}
                 </ol>
                 <div class="day-rest" id={`rest-${day.date}`} data-day-rest>
                   <p class="day-label" id={`more-${day.date}`}>{day.rest.length} more</p>

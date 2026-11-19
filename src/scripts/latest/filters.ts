@@ -123,7 +123,6 @@ if (grid && list) {
     const dates = [...Array(7)].map((_, i) => addDays(end, i - 6));
     const panel = first.cloneNode(true) as HTMLElement;
     panel.dataset.week = end;
-    panel.dataset.weekStart = dates[0];
     panel.dataset.weekRange = range(dates[0], end);
     const caption = panel.querySelector('caption');
     if (caption) caption.textContent = `Entries by topic and day, ${panel.dataset.weekRange}. Dot size shows the number of entries.`;

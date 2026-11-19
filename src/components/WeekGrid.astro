@@ -61,7 +61,7 @@ const typeAttrs = (key: string) =>
   Object.fromEntries(types.map((t) => [`data-n-${t}`, counts.get(key)?.[t] ?? 0]));
 
 const weekDays = [...Array(7)].map((_, i) => addDays(lastUpdated, i - 6));
-const week = { end: lastUpdated, start: weekDays[0], days: weekDays, label: range(weekDays[0], lastUpdated) };
+const week = { end: lastUpdated, days: weekDays, label: range(weekDays[0], lastUpdated) };
 ---
 <section class="week-grid" data-week-grid aria-labelledby="week-grid-title">
   <header class="grid-head">
@@ -85,7 +85,7 @@ const week = { end: lastUpdated, start: weekDays[0], days: weekDays, label: rang
     </p>
   </header>
 
-  <div class="week" data-week={week.end} data-week-start={week.start} data-week-range={week.label}>
+  <div class="week" data-week={week.end} data-week-range={week.label}>
     <table class="grid">
       <caption class="visually-hidden">Entries by topic and day, {week.label}. Dot size shows the number of entries.</caption>
       <colgroup>
