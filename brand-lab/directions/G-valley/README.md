@@ -1,6 +1,6 @@
 # G · Valley
 
-The owner's pick from direction F (F4): the S as a valley floor on a map sheet, the ground rising both ways from it. This folder held three refinements of it; G3 was chosen. Direction F, the G1 and G2 files and the committed board were removed on 2026-11-18 (see git history); `node build.mjs` regenerates all of them here.
+The owner's pick from direction F (F4): the S as a valley floor on a map sheet, the ground rising both ways from it. This folder held three refinements of it; G3 was chosen. The G1 and G2 files and the committed board were removed on 2026-11-18, and `node build.mjs` regenerates them here. Direction F was removed the same day; it is only in git history before that date.
 
 ## Construction
 

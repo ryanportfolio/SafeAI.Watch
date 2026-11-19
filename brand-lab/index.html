@@ -42,7 +42,7 @@ for (const d of DIRS) {
   const f = base + (d.prefix || '');
   main.insertAdjacentHTML('beforeend', `
   <section class="dir">
-    <div class="meta"><h2>${d.name}</h2><p>${d.idea}</p><a href="${base}board.html">Open full board</a> · <a href="${base}README.md">README</a></div>
+    <div class="meta"><h2>${d.name}</h2><p>${d.idea}</p><a href="${base}README.md">README</a> · full board: run <code>node brand-lab/${base}build.mjs</code>, then open <a href="${base}board.html">board.html</a></div>
     <div>
       <div class="row">
         <div><div class="tile light"><img src="${f}lockup-horizontal.svg" alt=""></div><div class="cap">Horizontal</div></div>
