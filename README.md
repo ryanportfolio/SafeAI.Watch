@@ -4,33 +4,31 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 646 dated, sourced entries drawn as a burst, one dot per entry: 123 warnings, 171 incidents, 161 governance, 191 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 663 dated, sourced entries drawn as a burst, one dot per entry: 127 warnings, 174 incidents, 166 governance, 196 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 646 entries from Mar 22, 2023 to Nov 18, 2026 (123 warnings, 171 incidents, 161 governance, 191 research), drawn from 330 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 663 entries from Mar 22, 2023 to Nov 19, 2026 (127 warnings, 174 incidents, 166 governance, 196 research), drawn from 341 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 18, 2026, filed under Research:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 19, 2026, filed under Research:
 
-> **GAO covert tests get Claude, Grok, ChatGPT and Gemini past their safeguards to produce viable attack plans**
+> **Nature Communications perspective sets out a defense-in-depth plan for AI that designs biological sequences**
 >
-> **What happened.** The US Government Accountability Office released a report on November 18, 2026, for Senator Margaret Wood Hassan, on its spring 2026 covert tests of the four most-used generative AI platforms.
+> **What happened.** Researchers who met at the Wübben Sandpit, a November 2025 workshop in Germany, published a Perspective in Nature Communications on November 19, 2026, on governing AI biological sequence design.
 >
 > **Key points.**
 >
-> - Two platforms produced information for building and detonating an improvised explosive device "designed to cause mass casualties"; two others produced plans to attack the electrical grid.
-> - Each platform's safeguards were triggered, but GAO circumvented them "by using common safeguard-bypassing techniques," and each platform took less than 12 hours to produce the plans.
-> - GAO verified the plans' viability through research, surveillance and interviews with experts, including a bomb squad commander.
-> - GAO does not say which platform produced which plan, "to prevent malicious actors from recreating our tests"; the four companies described ongoing work to strengthen their safeguards.
+> - The authors say generative AI can design sequences "from proteins to whole genomes," and "the same capability can be misused."
+> - They propose safeguards at every stage: the data used to train models, the models themselves, and the synthesis of physical DNA.
+> - Riskier models would sit behind tiered, verified access, the riskiest run only inside a trusted research environment, with risk reviews starting at the funding stage.
+> - DNA synthesis screening should move past "sequence-only filters, which can be circumvented via AI-driven sequence designs," and add know-your-customer rules.
 >
-> **Evidence.** Congressional watchdog's covert test, one scenario per platform, with written comments from Anthropic, Google, OpenAI and SpaceXAI. It makes no recommendations.
+> **Evidence.** Journal Perspective, an argument rather than new data, by authors from Johns Hopkins, SecureBio, the Robert Koch Institute, Germany's biosafety commission and others. They say no formal consensus vote was taken.
 >
-> **Uncertain.** GAO says its tests "reflect a point in time and are not a statistically significant sample," and Anthropic says it has expanded its safeguards since the May 2026 testing.
->
-> **Source.** [US Government Accountability Office · Report](https://www.gao.gov/products/gao-27-108814)
+> **Source.** [Nature Communications · Perspective](https://www.nature.com/articles/s41467-026-78758-5)
 
 ## Run it locally
 
