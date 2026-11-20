@@ -17,7 +17,7 @@ Every entry sets out what happened, the source's key points and what the evidenc
 
 > **Signal says AI agents built into phone operating systems threaten private messaging and blocks their screen capture**
 >
-> **What happened.** In a blog post by Meredith Whittaker on November 20, 2026, Signal said it will block AI agents built into iOS 27 and Android from capturing what is on its screen.
+> **What happened.** In a blog post by Meredith Whittaker on November 20, 2026, Signal said it is blocking AI agents built into iOS 27, and on Android versions where it can detect them, from capturing its screen.
 >
 > **Key points.**
 >
