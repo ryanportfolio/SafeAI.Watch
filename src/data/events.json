@@ -12232,8 +12232,8 @@
     "happened": "Texas Representative Bhojani filed HB 1201 for the Legislature's 90th regular session on November 17, 2026. It is a proposal and has not passed.",
     "keyPoints": [
       "Incidents include a frontier model accessing systems its developer does not own or control without the owner's consent, or acting to \"disable, circumvent, or deceive a human oversight mechanism\" or keep people from overriding or ending its actions.",
-      "It also covers autonomous actions beyond the model's instructions or permissions that risk death, serious injury, major property loss, or disruption of critical infrastructure or government services.",
-      "Developers of models trained with over 10 to the 25th power operations and tied to Texas would report within 24 hours of discovery for imminent threats to people's health or safety, 72 hours otherwise.",
+      "It also covers changing, deleting or disclosing data without consent, and autonomous actions beyond the model's instructions or permissions that create a \"substantial and reasonably foreseeable risk\" of death, serious injury or major damage or disruption.",
+      "Developers of models trained with over 10 to the 25th power operations and tied to Texas would report within 24 hours of discovery for imminent threats of substantial harm to people's health or safety, 72 hours otherwise.",
       "The attorney general could seek penalties of $10,000 to $100,000 per late report and $100,000 to $1,000,000 per knowingly concealed incident; whistleblowers are protected."
     ],
     "evidence": "Bill text as introduced, with the Legislature's bill history showing it filed on November 17, 2026. It shows what the bill would do, not whether it will advance.",
@@ -12550,7 +12550,7 @@
     "evidence": "Observational, non-randomized study by the platform's builders. Agent-led audits found 93.8% of 23,811 reported statistics matched saved outputs, with no fabricated values found.",
     "uncertain": "The ban on human coding and writing \"relied on participant disclosure,\" eight labs kept their models undisclosed, and the audits were run by the cohort's own agents.",
     "source": "alphaXiv · Research preprint",
-    "url": "https://www.alphaxiv.org/abs/2611.society-ai-scientists"
+    "url": "https://www.alphaxiv.org/abs/2611.society-ai-scientistsv1"
   },
   {
     "date": "2026-11-19",
@@ -12711,7 +12711,7 @@
     "keyPoints": [
       "Automated AI research and development, \"including recursive self improvement, is its own category of catastrophic risk,\" covered by the bill's frameworks, reporting and independent assessments.",
       "Independent verification organizations would get embedded access, with government assignment of verifiers \"to avoid a race-to-the-bottom.\"",
-      "Developers would report near misses and incidents such as \"models deceiving their developers,\" face penalties for near misses, and could be ordered to take corrective action.",
+      "Developers would report near misses and incidents such as \"models deceiving their developers,\" face penalties for near misses outside designed evaluations, and could be ordered to take corrective action.",
       "A new Commerce Department Office of AI Security would run the regime, and state laws more protective than the bill would be preserved."
     ],
     "evidence": "Sponsor's press release listing key changes, with a linked section-by-section summary of a discussion draft. It describes intended provisions, not enacted law.",
@@ -12823,8 +12823,8 @@
     "title": "Frontier models can name the person who wrote a single text, researchers find",
     "happened": "Researchers from the University of Maryland, Pangram Labs, Google DeepMind and other groups posted a preprint on November 19, 2026, testing whether models can identify a text's author from one sample.",
     "keyPoints": [
-      "With one prompt and \"no web access, tools, candidate lists, or writing samples,\" Fable 5.2 named the author of 39% of human-written public peer reviews from October to November 2026.",
-      "It identified the username behind 69% of comments from Redditors with over 500 posts in a year, and named the reviewer of 56% of 398 reviews whose authorship was never made public.",
+      "With one prompt and \"no web access, tools, candidate lists, or writing samples,\" Fable 5.2 named the author of 39% of October to November 2026 public peer reviews that a detector labeled human or mixed.",
+      "It identified the username behind 69% of comments from Redditors with over 500 posts in a year, and the writer of 56% of 398 reviews by six writers whose authorship was never made public.",
       "Accuracy depends on how much of a person's writing the model saw in training; through the API, models rarely refuse these requests, the authors say.",
       "The authors say models \"present a greater threat to anonymity than commonly assumed, and defenses are limited\"; rewriting text with AI \"only helps partially.\""
     ],
@@ -12834,7 +12834,7 @@
   },
   {
     "date": "2026-11-20",
-    "category": "Research",
+    "category": "Governance",
     "topics": [
       "Cyber"
     ],
@@ -12846,7 +12846,7 @@
       "Defenders face \"no widely accepted evaluation criteria for assessing offensive or defensive capabilities of generative AI,\" plus a wider attack surface, fragmented regulation and poor data sharing.",
       "It lists 16 policy options, including requiring \"human authorization for consequential AI-initiated cybersecurity actions\" and restricting autonomous AI in consequential functions pending certification."
     ],
-    "evidence": "Congressional watchdog assessment based on literature, agency documents, interviews and an expert meeting. Its attack examples come from industry reporting. It offers policy options, not recommendations.",
+    "evidence": "Congressional watchdog assessment based on literature, agency documents, interviews and an expert meeting. Its attack examples come mostly from industry reporting. It offers policy options, not recommendations.",
     "source": "US Government Accountability Office · Report",
     "url": "https://www.gao.gov/products/gao-27-108458"
   },
