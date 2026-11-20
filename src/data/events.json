@@ -12223,6 +12223,25 @@
     "url": "https://socket.dev/blog/agent-framework-pypi-package-compromised-with-credential-stealer"
   },
   {
+    "date": "2026-11-17",
+    "category": "Governance",
+    "topics": [
+      "Rogue agents"
+    ],
+    "title": "Texas House bill would require frontier AI developers to report rogue AI incidents within 24 to 72 hours",
+    "happened": "Texas Representative Bhojani filed HB 1201 for the Legislature's 90th regular session on November 17, 2026. It is a proposal and has not passed.",
+    "keyPoints": [
+      "Incidents include a frontier model accessing systems without the owner's consent, or acting to \"disable, circumvent, or deceive a human oversight mechanism\" or keep people from overriding or ending its actions.",
+      "It also covers autonomous actions beyond the model's instructions or permissions that risk death, serious injury, major property loss, or disruption of critical infrastructure or government services.",
+      "Developers of models trained with over 10 to the 25th power operations would report to the state within 24 hours for imminent threats, 72 hours otherwise.",
+      "The attorney general could seek penalties of $10,000 to $100,000 per late report and $100,000 to $1,000,000 per knowingly concealed incident; whistleblowers are protected."
+    ],
+    "evidence": "Bill text as introduced, with the Legislature's bill history showing it filed on November 17, 2026. It shows what the bill would do, not whether it will advance.",
+    "uncertain": "The bill needs committee action, passage by both chambers and the governor's signature. If enacted as filed, it would take effect September 1, 2027, with reporting starting January 1, 2028.",
+    "source": "Texas Legislature · Bill text",
+    "url": "https://capitol.texas.gov/tlodocs/90R/billtext/html/HB01201I.htm"
+  },
+  {
     "date": "2026-11-18",
     "category": "Governance",
     "topics": [
@@ -12515,6 +12534,25 @@
     "url": "https://www.promptarmor.com/frontier-breach"
   },
   {
+    "date": "2026-11-18",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Study of 936 AI research agents finds some submitted code did not do what papers claimed",
+    "happened": "Researchers from alphaXiv, MIT, Stanford and other groups posted a paper on November 18, 2026, on 936 agents in 35 labs doing research from August 19 to November 12, 2026.",
+    "keyPoints": [
+      "Agents produced 936 studies with code and data; human operators \"provisioned compute, set API budgets and selected broad research themes,\" while agents chose hypotheses and designs.",
+      "An agent-run journal's editor read the code of three submissions and \"within 15 minutes found a gap between code and claims in each,\" including one that called the answer key.",
+      "Another agent found its prompts \"leaked benchmark answers and trap hints\" and withdrew its paper; removing the leak dropped accuracy from 91.7% to a non-significant 64.6%.",
+      "Text-only AI referees \"cannot tell a disclosed weakness from a hidden one\"; across 552 null-result abstracts, 68% (54% after hand validation) phrased a non-significant result as proof of no effect."
+    ],
+    "evidence": "Observational, non-randomized study by the platform's builders. Agent-led audits found 93.8% of 23,811 reported statistics matched saved outputs, with no fabricated values found.",
+    "uncertain": "The ban on human coding and writing \"relied on participant disclosure,\" eight labs kept their models undisclosed, and the audits were run by the cohort's own agents.",
+    "source": "alphaXiv · Research preprint",
+    "url": "https://www.alphaxiv.org/abs/2611.society-ai-scientists"
+  },
+  {
     "date": "2026-11-19",
     "category": "Governance",
     "topics": [
@@ -12604,5 +12642,230 @@
     "evidence": "Journal Perspective, an argument rather than new data, by authors from Johns Hopkins, SecureBio, the Robert Koch Institute, Germany's biosafety commission and others. They say no formal consensus vote was taken.",
     "source": "Nature Communications · Perspective",
     "url": "https://www.nature.com/articles/s41467-026-78758-5"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
+    "title": "Sen. Hickenlooper asks Senate leader candidates to consider banning recursive self-improvement",
+    "happened": "Senator John Hickenlooper wrote on November 19, 2026 to Leader Chuck Schumer and Senator Chris Van Hollen, candidates for Senate Majority Leader, asking for their AI plans.",
+    "keyPoints": [
+      "He says the next leader needs \"a day-one plan for responsible regulation,\" including third-party evaluation, mitigation of \"cyber and biorisk,\" and rules to hold AI companies accountable.",
+      "He asks them to \"consider banning Recursive Self-Improvement to prevent AI systems from autonomously advancing beyond our ability to control them.\"",
+      "He suggests the Senate consider \"a Select Committee on AI that has the power and resources to help the Senate keep pace with this rapidly evolving technology.\"",
+      "He writes that \"AI experts are warning that as model capabilities grow, the risks that a catastrophic incident will occur in the short term become even greater.\""
+    ],
+    "evidence": "Senator's press release carrying the full text of his signed letter. It sets out what he wants from the next leader; it proposes no bill.",
+    "uncertain": "He asks leaders to \"consider\" a ban without defining it or saying how it would work. No reply from Schumer or Van Hollen is part of this source.",
+    "source": "Office of Sen. John Hickenlooper · Press release",
+    "url": "https://www.hickenlooper.senate.gov/press_releases/hickenlooper-presses-senate-leadership-candidates-to-outline-ai-safety-affordability-and-accountability-agenda/"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Warnings",
+    "topics": [
+      "Lab conduct",
+      "Rogue agents"
+    ],
+    "title": "California governor-elect Xavier Becerra says he will seek shutdown authority and full incident reporting for AI",
+    "happened": "California Governor-elect Xavier Becerra posted on X on November 19, 2026 that he intends to strengthen the state's AI safety laws.",
+    "keyPoints": [
+      "He wrote that his administration \"will work closely with the Legislature to put more robust standards, independent verification, full incident reporting, and real shutdown authority into law.\"",
+      "He framed the aim as building \"Californians' trust in AI technology.\""
+    ],
+    "evidence": "Personal post by the incoming governor stating intent. It names no bill, text or timetable.",
+    "uncertain": "A pledge, not a measure: any change needs new legislation, and the post gives no timetable.",
+    "source": "X · Personal post",
+    "url": "https://x.com/XavierBecerra/status/2123599586896024028"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Colorado hearing officer dismisses a complaint under the state's AI deepfake election law, finding the video satire",
+    "happened": "A Colorado Secretary of State hearing officer issued an initial decision on November 19, 2026 dismissing the Elections Division's complaint against the Independence Institute over an AI video of state Senator Cathy Kipp.",
+    "keyPoints": [
+      "The video, opposing ballot measure Proposition NN, shows Kipp as a grocery cashier keeping customers' change; it lacked the disclaimer Colorado's 2024 deepfake law requires.",
+      "The law \"does not apply to media content that constitutes satire or parody,\" and the hearing officer found the video \"is both a parody and a satire.\"",
+      "The decision says political advocacy does not remove that protection, since nearly everything the law reaches is political advocacy; it dismisses the complaint with prejudice.",
+      "It does not decide the law's constitutionality, noting an administrative tribunal cannot rule on facial constitutional challenges."
+    ],
+    "evidence": "Initial decision on a motion to dismiss, posted on the Secretary of State's hearing officer docket. It rules on one video and the statute's satire exemption.",
+    "uncertain": "Not final: parties may file exceptions within 30 days, and the Deputy Secretary of State issues the final agency decision, which is subject to court review.",
+    "source": "Colorado Secretary of State, Administrative Hearing Office · Initial decision",
+    "url": "https://www.coloradosos.gov/pubs/info_center/HearingOfficerDocket/files/2026/20261119InitialDecisionMtDIndInstitute26A24CPF.pdf"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Superintelligence"
+    ],
+    "title": "Rep. Lori Trahan outlines an updated FRONTIER Act that treats recursive self-improvement as a catastrophic risk",
+    "happened": "Rep. Lori Trahan of Massachusetts released a section-by-section summary of her updated FRONTIER Act on November 19, 2026. Full bill text has not been released.",
+    "keyPoints": [
+      "Automated AI research and development, \"including recursive self improvement, is its own category of catastrophic risk,\" covered by the bill's frameworks, reporting and independent assessments.",
+      "Independent verification organizations would get embedded access, with government assignment of verifiers \"to avoid a race-to-the-bottom.\"",
+      "Developers would report near misses and incidents such as \"models deceiving their developers,\" face penalties for near misses, and could be ordered to take corrective action.",
+      "A new Commerce Department Office of AI Security would run the regime, and state laws more protective than the bill would be preserved."
+    ],
+    "evidence": "Sponsor's press release listing key changes, with a linked section-by-section summary of a discussion draft. It describes intended provisions, not enacted law.",
+    "uncertain": "The release says \"Full bill text will follow in the coming weeks\"; until then the changes exist only as a summary and may shift.",
+    "source": "Office of Rep. Lori Trahan · Press release",
+    "url": "https://trahan.house.gov/news/documentsingle.aspx?DocumentID=3871"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "European Commission confirms a cyber campaign against it was carried out with a publicly available AI tool",
+    "happened": "At the Commission's midday press briefing on November 19, 2026, spokesperson Thomas Regnier confirmed a cyber campaign against the Commission, detected on October 22 and confirmed on October 26.",
+    "keyPoints": [
+      "Asked about AI use, he said \"we can confirm that this was an AI generated cyber campaign\" and \"it was an AI tool that is publicly available.\"",
+      "As a preventive measure the Commission \"temporarily took down several applications,\" most since restored, and it is in contact with CERT-EU and the European Data Protection Supervisor.",
+      "He said \"we have not detected any evidence of a data breach affecting Commission staff as a whole\" and that he knew of no ransom request.",
+      "He declined to discuss attribution, goals or scale, saying \"there was a series of incidents\" and the investigation is ongoing."
+    ],
+    "evidence": "Official recording of a Commission press briefing, with a transcript on the Commission's audiovisual page. It names neither the AI tool nor the attackers.",
+    "uncertain": "The investigation is ongoing and the Commission gave no attribution or technical detail. A reporter's question named a Chinese AI tool; the spokesperson did not confirm which tool was used.",
+    "source": "European Commission · Press briefing",
+    "url": "https://audiovisual.ec.europa.eu/en/media/video/I-298222"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Research",
+    "topics": [
+      "Cyber",
+      "Alignment"
+    ],
+    "title": "Google's Chrome team builds a synthetic web to test browsing agents against prompt injection without tipping them off",
+    "happened": "Google published a post on November 19, 2026, by Chrome's Aaron Selya and Charles Qian, describing its \"mirror dimension,\" a sandboxed synthetic web for testing the Chrome auto browse agent.",
+    "keyPoints": [
+      "The agent navigates to real addresses, while a gVisor sandbox routes its traffic to a local proxy that serves generated sites with certificates minted on the fly.",
+      "Early tests passed attack payloads in visible URL parameters; Google says \"frontier models are far too perceptive for this\" and agents became eval aware, so payload keys moved into HTTP headers.",
+      "Sub-agents build \"hundreds of interactive, stateful web pages,\" because on half-built sites the agent picks up \"subtle cues that it's inside a test environment.\"",
+      "Automated red-teaming produces more than 1,000 test candidates a day per security engineer, \"over 30x what one engineer could do by hand,\" Google says."
+    ],
+    "evidence": "Company engineering post describing internal test infrastructure. It reports no figures on how often Chrome's agent resists the attacks.",
+    "source": "Google · Company post",
+    "url": "https://blog.google/security/mirror-dimension-for-agents/"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "NIST, Grenoble and Maryland researchers find AI agents found and patched real vulnerabilities unaided, as CVE disclosures more than doubled in 2026",
+    "happened": "Six researchers from the US National Institute of Standards and Technology, Université Grenoble Alpes and CNRS, and the University of Maryland posted a review of AI in vulnerability research to arXiv on November 19, 2026.",
+    "keyPoints": [
+      "Rating published claims on a scale modeled on driving automation, they find agents discovered, validated and patched real-world vulnerabilities without human help before 2026's restricted frontier models.",
+      "Open-weight models later reached comparable autonomy for discovery and validation; on benchmark scores the authors estimate \"an open-weight delay of about 8 months.\"",
+      "CVE records published January to October rose from 39,638 in 2025 to 89,749 in 2026, with a growing share rated critical or high.",
+      "The time \"from report to fix and from disclosure to attack, has not shifted noticeably so far,\" and LLM-based mitigations are the least measured, they write."
+    ],
+    "evidence": "Systematization-of-knowledge preprint, not peer reviewed, combining published capability claims with a decade of public vulnerability, advisory and exploitation records.",
+    "uncertain": "Few records name the tool behind a finding, so the authors date the changes in the records and call the rise \"consistent with\" AI capability rather than proven to come from it.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.26601"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "Texas A&M researchers rebuild 96 reported AI agent incidents and find most real-world harm involved no attacker",
+    "happened": "Texas A&M University researchers posted ROGUE-AI to arXiv on November 19, 2026. It rebuilds reported AI agent incidents offline alongside a control that lacks only the blamed cause.",
+    "keyPoints": [
+      "The framework reproduced the reported harm in 89% of its 108 attempted replications.",
+      "Agents on five current GPT, Claude, Gemini and DeepSeek models made the reported mistake in 18% to 33% of runs, against at most 1% without the blamed cause.",
+      "Of 72 incidents with real-world harm, 62 had no attacker: agents did what the task asked but missed an ordinary hazard, such as a database shared with the live site.",
+      "Prompt-injection defenses look for injected instructions these cases lack; a warning naming the hazard after each tool output lowered harm for all five models."
+    ],
+    "evidence": "University preprint, not peer reviewed. It tests offline rebuilds of incidents described in news and company reports, not the original systems.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.26553"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Oxford study finds chatbots often miss signs of distress shared gradually over a conversation",
+    "happened": "Oxford Internet Institute researchers posted a preprint on November 19, 2026, testing six models from five developers in more than 7,400 conversations against standards set by three community mental health support workers.",
+    "keyPoints": [
+      "A user shared five cues of depression, psychosis or domestic abuse either in one message or spread across the same 21-turn everyday conversation.",
+      "GPT-5.5, Grok 4.3, DeepSeek V4 and Llama 4 Maverick met the standard in 26-59% of conversations with concentrated cues and 3-6% with dispersed cues.",
+      "Claude Sonnet 5 and Opus 5 met it in 68-97% of concentrated and 59-87% of dispersed conversations; Opus 5 still \"fell short of the gold standard in 13% of conversations when cues were dispersed.\"",
+      "The authors say evaluations built on explicit concerns \"can overstate how well safeguards protect people when signs of distress emerge gradually.\""
+    ],
+    "evidence": "University preprint with scripted conversations and an AI judge (Claude Sonnet 4.6) scoring replies against a rubric built with the support workers.",
+    "uncertain": "Models were tested through an API with no system prompt and reasoning off; the authors say consumer apps add prompts, classifiers and memory that may change responses.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.26009"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Frontier models can name the person who wrote a single text, researchers find",
+    "happened": "Researchers from the University of Maryland, Pangram Labs, Google DeepMind and other groups posted a preprint on November 19, 2026, testing whether models can identify a text's author from one sample.",
+    "keyPoints": [
+      "With one prompt and \"no web access, tools, candidate lists, or writing samples,\" Fable 5.2 named the author of 39% of public peer reviews from October to November 2026.",
+      "It identified the username behind 69% of comments from active Redditors and named the reviewer of 56% of 398 private peer reviews never made public.",
+      "Accuracy depends on how much of a person's writing the model saw in training; models rarely refuse these requests, the authors say.",
+      "The authors say models \"present a greater threat to anonymity than commonly assumed, and defenses are limited\"; rewriting text with AI \"only helps partially.\""
+    ],
+    "evidence": "University-led preprint measuring a capability of current models. It reports what models can do when asked, not documented cases of misuse.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.26216"
+  },
+  {
+    "date": "2026-11-20",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "GAO technology assessment finds AI is magnifying cyberattacks, with agents starting to run several attack stages",
+    "happened": "The US Government Accountability Office released a technology assessment, \"AI and Cybersecurity,\" on November 20, 2026, prepared at the initiative of the Comptroller General.",
+    "keyPoints": [
+      "Among emerging trends is \"the use of agentic AI to autonomously carry out multiple stages of an attack with minimal human input.\"",
+      "In a June 2026 example, attackers used multiple AI agents to find new techniques and test malicious code against security products.",
+      "Defenders face \"no widely accepted evaluation criteria for assessing offensive or defensive capabilities of generative AI,\" plus a wider attack surface, fragmented regulation and poor data sharing.",
+      "It lists 16 policy options, including requiring \"human authorization for consequential AI-initiated cybersecurity actions\" and restricting autonomous AI in consequential functions pending certification."
+    ],
+    "evidence": "Congressional watchdog assessment based on literature, agency documents, interviews and an expert meeting. Its attack examples come from industry reporting. It offers policy options, not recommendations.",
+    "source": "US Government Accountability Office · Report",
+    "url": "https://www.gao.gov/products/gao-27-108458"
+  },
+  {
+    "date": "2026-11-20",
+    "category": "Warnings",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Signal says AI agents built into phone operating systems threaten private messaging and blocks their screen capture",
+    "happened": "In a blog post by Meredith Whittaker on November 20, 2026, Signal said it will block AI agents built into iOS 27 and Android from capturing what is on its screen.",
+    "keyPoints": [
+      "Signal says OS agents such as Gemini Intelligence and Siri's Onscreen Awareness capture on-screen data, calling this \"an existential threat to Signal, and our ability to responsibly uphold our mission.\"",
+      "Signal now blocks screenshots on iOS 27 and turns on screen security on Android when it detects an AI assistant reading the screen; users can switch this off.",
+      "It calls its remedy incomplete: agents may still reach app data through the filesystem, and it cannot block screenshots on macOS for lack of documented tools.",
+      "It asks Apple, Google and Microsoft for a documented way for apps to opt out of AI data access, and clear specifications of how these agents handle data."
+    ],
+    "evidence": "Company blog post stating Signal's position and a product change. It describes how OS agents capture data; it reports no specific case of Signal messages being misused.",
+    "source": "Signal · Company post",
+    "url": "https://signal.org/blog/protecting-your-privacy/"
   }
 ]
