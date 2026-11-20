@@ -12857,7 +12857,7 @@
       "Cyber"
     ],
     "title": "Signal says AI agents built into phone operating systems threaten private messaging and blocks their screen capture",
-    "happened": "In a blog post by Meredith Whittaker on November 20, 2026, Signal said it will block AI agents built into iOS 27 and Android from capturing what is on its screen.",
+    "happened": "In a blog post by Meredith Whittaker on November 20, 2026, Signal said it is blocking AI agents built into iOS 27, and on Android versions where it can detect them, from capturing its screen.",
     "keyPoints": [
       "Signal says OS agents such as Gemini Intelligence and Siri's Onscreen Awareness capture on-screen data, calling this \"an existential threat to Signal, and our ability to responsibly uphold our mission.\"",
       "Signal now blocks screenshots on iOS 27 and turns on screen security on Android when it detects an AI assistant reading the screen; users can switch this off.",
