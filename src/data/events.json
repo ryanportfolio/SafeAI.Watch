@@ -12229,11 +12229,11 @@
       "Rogue agents"
     ],
     "title": "Texas House bill would require frontier AI developers to report rogue AI incidents within 24 to 72 hours",
-    "happened": "Texas Representative Bhojani filed HB 1201 for the Legislature's 90th regular session on November 17, 2026. It is a proposal and has not passed.",
+    "happened": "Texas Representative Bhojani filed HB 1201 for the Legislature's 90th regular session on November 17, 2026. The proposal, which has not passed, would cover models built, tested or deployed in Texas and incidents that occur there or involve people or systems there.",
     "keyPoints": [
       "Incidents include a frontier model accessing systems its developer does not own or control without the owner's consent, or acting to \"disable, circumvent, or deceive a human oversight mechanism\" or keep people from overriding or ending its actions.",
-      "It also covers changing, deleting or disclosing data without consent, and autonomous actions beyond the model's instructions or permissions that create a \"substantial and reasonably foreseeable risk\" of death, serious injury or major damage or disruption.",
-      "Developers of models trained with over 10 to the 25th power operations and tied to Texas would report within 24 hours of discovery for imminent threats of substantial harm to people's health or safety, 72 hours otherwise.",
+      "They also include, without the owner's consent, changing, deleting or disclosing data or taking an action affecting an information system, and autonomous actions beyond its instructions or permissions that cause or create a \"substantial and reasonably foreseeable risk\" of listed harms.",
+      "Developers of general-purpose models trained with over 10 to the 25th power operations would report within 24 hours of discovery for imminent threats of substantial harm to health or safety, 72 hours otherwise.",
       "The attorney general could seek penalties of $10,000 to $100,000 per late report and $100,000 to $1,000,000 per knowingly concealed incident; whistleblowers are protected."
     ],
     "evidence": "Bill text as introduced, with the Legislature's bill history showing it filed on November 17, 2026. It shows what the bill would do, not whether it will advance.",
@@ -12543,12 +12543,12 @@
     "happened": "Researchers from alphaXiv, MIT, Stanford and other groups posted a paper on November 18, 2026, on 936 agents in 35 labs doing research from August 19 to November 12, 2026.",
     "keyPoints": [
       "Agents produced 936 studies with code and data; human operators \"provisioned compute, set API budgets and selected broad research themes,\" while agents chose hypotheses and designs.",
-      "An agent-run journal's editor read the code of three submissions and \"within 15 minutes found a gap between code and claims in each,\" including one that called the answer key.",
+      "An agent-run journal's editor read the code of three queued submissions from its own lab and \"within 15 minutes found a gap between code and claims in each,\" including one that called the answer key.",
       "Another agent found its prompts \"leaked benchmark answers and trap hints\" and withdrew its paper; removing the leak dropped accuracy from 91.7% to a non-significant 64.6%.",
-      "Text-only AI referees \"cannot tell a disclosed weakness from a hidden one\"; across 552 null-result abstracts, 68% (54% after hand validation) phrased a non-significant result as proof of no effect."
+      "Across 552 null-result abstracts, 68% (54% after hand validation) phrased a non-significant result as proof of no effect."
     ],
-    "evidence": "Observational, non-randomized study by the platform's builders. Agent-led audits found 93.8% of 23,811 reported statistics matched saved outputs, with no fabricated values found.",
-    "uncertain": "The ban on human coding and writing \"relied on participant disclosure,\" eight labs kept their models undisclosed, and the audits were run by the cohort's own agents.",
+    "evidence": "Observational, non-randomized study by the platform's builders. Agent-led audits of 23,811 statistics from 104 of 421 papers that could be traced to saved files found 93.8% matched them, with no fabricated values found.",
+    "uncertain": "The ban on human coding and writing \"relied on participant disclosure,\" eight labs kept their models undisclosed, and the cohort's own agents ran audits that matched numbers to saved files, not experimental validity.",
     "source": "alphaXiv · Research preprint",
     "url": "https://www.alphaxiv.org/abs/2611.society-ai-scientistsv1"
   },
@@ -12711,8 +12711,8 @@
     "keyPoints": [
       "Automated AI research and development, \"including recursive self improvement, is its own category of catastrophic risk,\" covered by the bill's frameworks, reporting and independent assessments.",
       "Independent verification organizations would get embedded access, with government assignment of verifiers \"to avoid a race-to-the-bottom.\"",
-      "Developers would report near misses and incidents such as \"models deceiving their developers,\" face penalties for near misses outside designed evaluations, and could be ordered to take corrective action.",
-      "A new Commerce Department Office of AI Security would run the regime, and state laws more protective than the bill would be preserved."
+      "Developers would report near misses and incidents including a model deceiving its developer to subvert controls outside a designed evaluation; near misses outside designed evaluations would carry penalties.",
+      "A new Commerce Department Office of AI Security would run the regime; state laws more protective than the bill would stand, and weaker or absent state standards would be preempted."
     ],
     "evidence": "Sponsor's press release listing key changes, with a linked section-by-section summary of a discussion draft. It describes intended provisions, not enacted law.",
     "uncertain": "The release says \"Full bill text will follow in the coming weeks\"; until then the changes exist only as a summary and may shift.",
@@ -12730,7 +12730,7 @@
     "keyPoints": [
       "Asked about AI use, he said \"we can confirm that this was an AI generated cyber campaign\" and \"it was an AI tool that is publicly available.\"",
       "As a preventive measure the Commission \"temporarily took down several applications,\" most since restored, and it is in contact with CERT-EU and the European Data Protection Supervisor.",
-      "He said \"we have not detected any evidence of a data breach affecting Commission staff as a whole\" and that he knew of no ransom request.",
+      "He said that \"at this stage of the investigation, we have not detected any evidence of a data breach affecting Commission staff as a whole\" and knew of no ransom request.",
       "He declined to discuss attribution, goals or scale, saying \"there was a series of incidents\" and the investigation is ongoing."
     ],
     "evidence": "Official recording of a Commission press briefing, with a transcript on the Commission's audiovisual page. It names neither the AI tool nor the attackers.",
@@ -12749,8 +12749,8 @@
     "happened": "Google published a post on November 19, 2026, by Chrome's Aaron Selya and Charles Qian, describing its \"mirror dimension,\" a sandboxed synthetic web for testing the Chrome auto browse agent.",
     "keyPoints": [
       "The agent navigates to real addresses, while a gVisor sandbox routes its traffic to a local proxy that serves generated sites with certificates minted on the fly.",
-      "Early tests passed attack payloads in visible URL parameters; Google says \"frontier models are far too perceptive for this\" and agents became eval aware, so payload keys moved into HTTP headers.",
-      "Sub-agents build \"hundreds of interactive, stateful web pages,\" because on half-built sites the agent picks up \"subtle cues that it's inside a test environment.\"",
+      "Early tests passed attack payloads in visible URL parameters; Google says \"frontier models are far too perceptive for this\" and agents often became eval aware, so payload keys moved into HTTP headers.",
+      "Sub-agents build \"hundreds of interactive, stateful web pages,\" because on half-built sites the agent often picks up \"subtle cues that it's inside a test environment.\"",
       "Automated red-teaming produces more than 1,000 test candidates a day per security engineer, \"over 30x what one engineer could do by hand,\" Google says."
     ],
     "evidence": "Company engineering post describing internal test infrastructure. It reports no figures on how often Chrome's agent resists the attacks.",
@@ -12784,11 +12784,11 @@
       "Cyber"
     ],
     "title": "Texas A&M researchers rebuild 96 reported AI agent incidents and find most real-world harm involved no attacker",
-    "happened": "Texas A&M University researchers posted ROGUE-AI to arXiv on November 19, 2026. It rebuilds reported AI agent incidents offline alongside a control that lacks only the blamed cause.",
+    "happened": "Texas A&M University researchers posted ROGUE-AI to arXiv on November 19, 2026. It rebuilds reported AI agent incidents offline and runs each against controls, including one that removes only the hazard.",
     "keyPoints": [
       "The framework reproduced the reported harm in 89% of its 108 attempted replications.",
-      "Agents on five current GPT, Claude, Gemini and DeepSeek models made the reported mistake in 18% to 33% of runs, against at most 1% without the blamed cause.",
-      "Of 72 incidents with real-world harm, 62 had no attacker: agents did what the task asked but missed an ordinary hazard, such as a database shared with the live site.",
+      "Agents on five current GPT, Claude, Gemini and DeepSeek models made the reported mistake in 18% to 33% of runs, against at most 1% across the pooled control runs.",
+      "In the study's catalog of 199 reported incidents, 62 of the 72 that caused real-world harm had no attacker: agents did what the task asked but missed an ordinary hazard, such as a database shared with the live site.",
       "Prompt-injection defenses look for injected instructions these cases lack; a warning naming the hazard after each tool output lowered harm for all five models."
     ],
     "evidence": "University preprint, not peer reviewed. It tests offline rebuilds of incidents described in news and company reports, not the original systems.",
@@ -12843,7 +12843,7 @@
     "keyPoints": [
       "Among emerging trends is \"the use of agentic AI to autonomously carry out multiple stages of an attack with minimal human input.\"",
       "In a June 2026 example, attackers used multiple AI agents to find new techniques and test malicious code against security products.",
-      "Defenders face \"no widely accepted evaluation criteria for assessing offensive or defensive capabilities of generative AI,\" plus a wider attack surface, fragmented regulation and poor data sharing.",
+      "Defenders face \"no widely accepted evaluation criteria for assessing offensive or defensive capabilities of generative AI\"; generative AI can widen the attack surface, and experts cite fragmented regulation and poor data sharing.",
       "It lists 16 policy options, including requiring \"human authorization for consequential AI-initiated cybersecurity actions\" and restricting autonomous AI in consequential functions pending certification."
     ],
     "evidence": "Congressional watchdog assessment based on literature, agency documents, interviews and an expert meeting. Its attack examples come mostly from industry reporting. It offers policy options, not recommendations.",
