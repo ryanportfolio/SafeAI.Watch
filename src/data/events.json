@@ -12231,13 +12231,13 @@
     "title": "Texas House bill would require frontier AI developers to report rogue AI incidents within 24 to 72 hours",
     "happened": "Texas Representative Bhojani filed HB 1201 for the Legislature's 90th regular session on November 17, 2026. It is a proposal and has not passed.",
     "keyPoints": [
-      "Incidents include a frontier model accessing systems without the owner's consent, or acting to \"disable, circumvent, or deceive a human oversight mechanism\" or keep people from overriding or ending its actions.",
+      "Incidents include a frontier model accessing systems its developer does not own or control without the owner's consent, or acting to \"disable, circumvent, or deceive a human oversight mechanism\" or keep people from overriding or ending its actions.",
       "It also covers autonomous actions beyond the model's instructions or permissions that risk death, serious injury, major property loss, or disruption of critical infrastructure or government services.",
-      "Developers of models trained with over 10 to the 25th power operations would report to the state within 24 hours for imminent threats, 72 hours otherwise.",
+      "Developers of models trained with over 10 to the 25th power operations and tied to Texas would report within 24 hours of discovery for imminent threats to people's health or safety, 72 hours otherwise.",
       "The attorney general could seek penalties of $10,000 to $100,000 per late report and $100,000 to $1,000,000 per knowingly concealed incident; whistleblowers are protected."
     ],
     "evidence": "Bill text as introduced, with the Legislature's bill history showing it filed on November 17, 2026. It shows what the bill would do, not whether it will advance.",
-    "uncertain": "The bill needs committee action, passage by both chambers and the governor's signature. If enacted as filed, it would take effect September 1, 2027, with reporting starting January 1, 2028.",
+    "uncertain": "The bill needs committee action and passage by both chambers before it can become law. If enacted as filed, it would take effect September 1, 2027, with reporting starting January 1, 2028.",
     "source": "Texas Legislature · Bill text",
     "url": "https://capitol.texas.gov/tlodocs/90R/billtext/html/HB01201I.htm"
   },
@@ -12689,7 +12689,7 @@
     "title": "Colorado hearing officer dismisses a complaint under the state's AI deepfake election law, finding the video satire",
     "happened": "A Colorado Secretary of State hearing officer issued an initial decision on November 19, 2026 dismissing the Elections Division's complaint against the Independence Institute over an AI video of state Senator Cathy Kipp.",
     "keyPoints": [
-      "The video, opposing ballot measure Proposition NN, shows Kipp as a grocery cashier keeping customers' change; it lacked the disclaimer Colorado's 2024 deepfake law requires.",
+      "The video, opposing ballot measure Proposition NN, shows Kipp as a grocery cashier keeping customers' change; the Elections Division said it broke Colorado's 2024 deepfake law by lacking the required disclaimer.",
       "The law \"does not apply to media content that constitutes satire or parody,\" and the hearing officer found the video \"is both a parody and a satire.\"",
       "The decision says political advocacy does not remove that protection, since nearly everything the law reaches is political advocacy; it dismisses the complaint with prejudice.",
       "It does not decide the law's constitutionality, noting an administrative tribunal cannot rule on facial constitutional challenges."
@@ -12734,7 +12734,7 @@
       "He declined to discuss attribution, goals or scale, saying \"there was a series of incidents\" and the investigation is ongoing."
     ],
     "evidence": "Official recording of a Commission press briefing, with a transcript on the Commission's audiovisual page. It names neither the AI tool nor the attackers.",
-    "uncertain": "The investigation is ongoing and the Commission gave no attribution or technical detail. A reporter's question named a Chinese AI tool; the spokesperson did not confirm which tool was used.",
+    "uncertain": "The investigation is ongoing and the Commission gave no attribution or technical detail. A reporter asked whether a Chinese AI tool was used; the spokesperson did not say which tool it was.",
     "source": "European Commission · Press briefing",
     "url": "https://audiovisual.ec.europa.eu/en/media/video/I-298222"
   },
@@ -12823,9 +12823,9 @@
     "title": "Frontier models can name the person who wrote a single text, researchers find",
     "happened": "Researchers from the University of Maryland, Pangram Labs, Google DeepMind and other groups posted a preprint on November 19, 2026, testing whether models can identify a text's author from one sample.",
     "keyPoints": [
-      "With one prompt and \"no web access, tools, candidate lists, or writing samples,\" Fable 5.2 named the author of 39% of public peer reviews from October to November 2026.",
-      "It identified the username behind 69% of comments from active Redditors and named the reviewer of 56% of 398 private peer reviews never made public.",
-      "Accuracy depends on how much of a person's writing the model saw in training; models rarely refuse these requests, the authors say.",
+      "With one prompt and \"no web access, tools, candidate lists, or writing samples,\" Fable 5.2 named the author of 39% of human-written public peer reviews from October to November 2026.",
+      "It identified the username behind 69% of comments from Redditors with over 500 posts in a year, and named the reviewer of 56% of 398 reviews whose authorship was never made public.",
+      "Accuracy depends on how much of a person's writing the model saw in training; through the API, models rarely refuse these requests, the authors say.",
       "The authors say models \"present a greater threat to anonymity than commonly assumed, and defenses are limited\"; rewriting text with AI \"only helps partially.\""
     ],
     "evidence": "University-led preprint measuring a capability of current models. It reports what models can do when asked, not documented cases of misuse.",
