@@ -12229,12 +12229,12 @@
       "Rogue agents"
     ],
     "title": "Texas House bill would require frontier AI developers to report rogue AI incidents within 24 to 72 hours",
-    "happened": "Texas Representative Bhojani filed HB 1201 for the Legislature's 90th regular session on November 17, 2026. The proposal, which has not passed, would cover an incident if the model was developed, trained, tested or deployed in Texas, or if the incident occurs there or involves people or systems there.",
+    "happened": "Texas Representative Bhojani filed HB 1201 for the Legislature's 90th regular session on November 17, 2026. The proposal, which has not passed, would cover an incident if the model, or a system using it, was developed, trained or tested in Texas or commercially deployed there, or if the incident occurs there or involves people or systems there.",
     "keyPoints": [
       "Incidents include a frontier model accessing systems its developer does not own or control without the owner's consent, or acting to \"disable, circumvent, or deceive a human oversight mechanism\" or keep people from overriding or ending its actions.",
       "They also include, without the owner's consent, changing, deleting or disclosing data or taking an action affecting an information system, and autonomous actions beyond its instructions or permissions that cause or create a \"substantial and reasonably foreseeable risk\" of listed harms.",
       "Developers of general-purpose models trained with over 10 to the 25th power operations would report within 24 hours of discovery for imminent threats of substantial harm to health or safety, 72 hours otherwise.",
-      "The attorney general could seek penalties of $10,000 to $100,000 per late report and $100,000 to $1,000,000 per knowingly concealed incident; whistleblowers are protected."
+      "The attorney general could seek penalties of $10,000 to $100,000 for each failure to report on time and $100,000 to $1,000,000 for each knowingly concealed incident or knowingly false report; whistleblowers are protected."
     ],
     "evidence": "Bill text as introduced, with the Legislature's bill history showing it filed on November 17, 2026. It shows what the bill would do, not whether it will advance.",
     "uncertain": "The bill needs committee action and passage by both chambers before it can become law. If enacted as filed, it would take effect September 1, 2027, with reporting starting January 1, 2028.",
@@ -12547,7 +12547,7 @@
       "Another agent found its prompts \"leaked benchmark answers and trap hints\" and withdrew its paper; removing the leak dropped accuracy from 91.7% to a non-significant 64.6%.",
       "Across 552 null-result abstracts, 68% (54% after hand validation) phrased a non-significant result as proof of no effect."
     ],
-    "evidence": "Observational, non-randomized study by the platform's builders. Agent-led audits of 23,811 statistics from 104 of 421 papers that could be traced to saved files found 93.8% matched them, with no fabricated values found.",
+    "evidence": "Observational, non-randomized study by the platform's builders. Agent-led audits of 23,811 statistics from 104 of 421 papers that could be traced to saved files found 93.8% matched exactly and the rest differed by rounding, scaling or sign conventions, with no fabricated values found.",
     "uncertain": "The ban on human coding and writing \"relied on participant disclosure,\" eight labs kept their models undisclosed, and the cohort's own agents ran audits that matched numbers to saved files, not experimental validity.",
     "source": "alphaXiv · Research preprint",
     "url": "https://www.alphaxiv.org/abs/2611.society-ai-scientistsv1"
@@ -12710,8 +12710,8 @@
     "happened": "Rep. Lori Trahan of Massachusetts released a section-by-section summary of her updated FRONTIER Act on November 19, 2026. Full bill text has not been released.",
     "keyPoints": [
       "Automated AI research and development, \"including recursive self improvement, is its own category of catastrophic risk,\" covered by the bill's frameworks, reporting and independent assessments.",
-      "Independent verification organizations would get embedded access; developers would first choose their own, with government assignment phased in \"to avoid a race-to-the-bottom.\"",
-      "Developers would report near misses and incidents including a model deceiving its developer to subvert controls outside a designed evaluation; near misses outside designed evaluations would carry penalties.",
+      "Very large frontier developers would retain independent verification organizations with embedded access, first choosing their own, with government assignment phased in \"to avoid a race-to-the-bottom.\"",
+      "Developers would report near misses and incidents including a model deceiving its developer to subvert controls outside a designed evaluation; the Commerce Department could penalize near misses outside designed evaluations once its penalty rule takes effect.",
       "A new Commerce Department Office of AI Security would run the regime; state laws at least as protective as the bill would stand, with two narrow exceptions, and weaker or absent state standards would be preempted."
     ],
     "evidence": "Sponsor's press release listing key changes, with a linked section-by-section summary of a discussion draft. It describes intended provisions, not enacted law.",
@@ -12802,7 +12802,7 @@
       "Harm to people"
     ],
     "title": "Oxford study finds chatbots often miss signs of distress shared gradually over a conversation",
-    "happened": "Oxford Internet Institute researchers posted a preprint on November 19, 2026, testing six models from five developers in more than 7,400 conversations against standards set by three community mental health support workers.",
+    "happened": "Oxford Internet Institute researchers posted a preprint on November 19, 2026, testing six models from five developers in more than 7,400 conversations against expected responses set by two of three community mental health support workers who helped design it.",
     "keyPoints": [
       "A user shared five cues of depression, psychosis or domestic abuse either in one message or spread across the same 21-turn everyday conversation.",
       "GPT-5.5, Grok 4.3, DeepSeek V4 and Llama 4 Maverick met the standard in 26-59% of conversations with concentrated cues and 3-6% with dispersed cues.",
