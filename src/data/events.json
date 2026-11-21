@@ -11999,16 +11999,15 @@
       "Military"
     ],
     "title": "Guterres urges states at the CCW review conference to negotiate a legally binding instrument on autonomous weapons",
-    "happened": "UN Secretary-General António Guterres addressed the opening of the Seventh Review Conference of the Convention on Certain Conventional Weapons in Geneva by video message on November 16, 2026, UN News reported.",
+    "happened": "UN Secretary-General António Guterres addressed the opening meeting of the Seventh Review Conference of the Convention on Certain Conventional Weapons in Geneva by video message on November 16, 2026.",
     "keyPoints": [
-      "He urged delegates from more than 120 member states to move toward negotiating a legally binding instrument that includes \"clear prohibitions and restrictions.\"",
-      "He said \"New technologies, including autonomous weapons systems, present new humanitarian, legal, ethical and security challenges.\"",
-      "He told states: \"I urge you to seize this moment. Take action to prevent the use and spread of these merciless weapons.\"",
-      "UN News reported no agreement yet on whether a new instrument on lethal autonomous weapons would be legally binding, or on its timeframe."
+      "He called on states \"to move towards negotiating a legally binding instrument to regulate autonomous weapons systems, including clear prohibitions and restrictions.\"",
+      "He said \"New technologies, including autonomous weapon systems, present new humanitarian, legal, ethical, and security challenges.\"",
+      "He told states: \"I urge you to seize this moment. Take action to prevent the use and spread of these merciless weapons.\""
     ],
-    "evidence": "UN News report on the Secretary-General's video message, quoting his words directly. It records his position at the start of the conference, not its outcome.",
-    "source": "UN News · News article",
-    "url": "https://news.un.org/en/story/2026/11/1168810"
+    "evidence": "UN transcript of the conference's first meeting, including the Secretary-General's video message. It records his position at the start of the conference, not its outcome.",
+    "source": "United Nations · Speech transcript",
+    "url": "https://transcripts.un.org/en/asset/k13/k13tn4gno5"
   },
   {
     "date": "2026-11-16",
@@ -12302,13 +12301,13 @@
     "topics": [
       "Harm to people"
     ],
-    "title": "Four Baltimore County students sue Omnilert, school officials and police over an AI gun alert that flagged a bag of chips",
+    "title": "Four Baltimore County students sue Omnilert, school officials and police over an AI gun alert they say flagged a bag of chips",
     "happened": "Four current and former Kenwood High School students sued in the Circuit Court for Baltimore County, Maryland, on November 17, 2026, over their armed police detention on October 20, 2025.",
     "keyPoints": [
       "The complaint alleges Omnilert Gun Detect flagged a student's bag of chips as a firearm \"with 90% confidence,\" and Omnilert's human reviewers forwarded the alert.",
       "It alleges school and police officials canceled the alert within two minutes, but the principal later sent a screenshot to a school resource officer, prompting an armed response.",
       "Officers, many with guns drawn, ordered the students to their knees, handcuffed and searched them, and found nothing, the complaint alleges.",
-      "It cites a finding by Maryland's Office of the Inspector General for Education that more than 99% of the system's alerts in county schools were false positives, and seeks damages and injunctive relief."
+      "It alleges the system has a false positive rate of more than 99% in county schools, and seeks damages and injunctive relief."
     ],
     "evidence": "Stamped complaint filed for the students by the Lawyers' Committee for Civil Rights Under Law, Engel Law Group and Willkie Farr & Gallagher. It sets out allegations of unreasonable search and seizure, false arrest, negligence and gross negligence.",
     "uncertain": "The allegations are untested and the defendants have not yet answered in court. The complaint quotes Omnilert saying afterward that the process \"had functioned as intended.\"",
@@ -12917,7 +12916,7 @@
     "keyPoints": [
       "Attackers had breached three AI hosting providers, and stolen canary keys were used for \"tens of thousands of AWS API calls\"; none of the providers knew until Dragos told them.",
       "Sellers on an AI inference marketplace viewed and kept customer prompts through standard logging, then tried the planted passwords and links by hand.",
-      "A Chinese AI lab fetched secret URLs from over half the prompts sent to its models, including about two-thirds marked \"no data collection\" or Zero Data Retention.",
+      "A Chinese AI lab fetched secret URLs from over half the prompts sent to its models between July and October, including about two-thirds marked \"no data collection\" or Zero Data Retention.",
       "One attacker added the ARTEX AI pentest framework on November 1, though it \"did very little\"; Dragos warns \"a privacy flag only binds the first hop\" and advises seeding your own canaries."
     ],
     "evidence": "Security firm's field experiment with planted credentials, tracing where prompts went and who used them. It does not name the breached providers, the marketplace sellers or the Chinese lab.",
@@ -12969,7 +12968,7 @@
     "topics": [
       "Harm to people"
     ],
-    "title": "Study finds signs of emotional overreliance in most Character.AI and Replika conversations it examined, and harm in about one in ten",
+    "title": "Study finds signs of emotional overreliance in most non-roleplay Character.AI and Replika conversations it examined, and harm in about one in ten",
     "happened": "Researchers led by Georgia Tech, with the University of Southern California and Zhejiang University, posted a preprint on November 19, 2026, analyzing Character.AI and Replika conversations donated by 110 adults.",
     "keyPoints": [
       "Behaviors linked to emotional overreliance appeared in 63.2% of non-roleplay conversations; observable relational harms appeared in 10.5%.",
@@ -13044,7 +13043,7 @@
       "Cyber",
       "Lab conduct"
     ],
-    "title": "OpenAI says updated safeguards cut one reasoning-extraction attack's success from 54.0% to 0.2% and calls distillation a safety risk",
+    "title": "OpenAI says one reasoning-extraction attack's success fell from 54.0% to 0.2% with its updated safeguards and calls distillation a safety risk",
     "happened": "OpenAI published a post on November 20, 2026, describing how it detects and disrupts adversarial distillation and how it strengthened protection of GPT-6.2 Astra and GPT-6.2 Sol's reasoning.",
     "keyPoints": [
       "OpenAI says a distilled model can gain frontier capabilities \"without inheriting the safeguards,\" such as cyber help the original model would refuse.",
@@ -13065,7 +13064,7 @@
       "Alignment"
     ],
     "title": "Tencent publishes Hy4 system card with cyber, bio and loss-of-control evaluations, including third-party tests",
-    "happened": "Tencent's Hy team published a system card on November 20, 2026, for Hy4, its 770B-parameter mixture-of-experts language model, which it is releasing as open weights.",
+    "happened": "Tencent's Hy team published a system card on November 20, 2026, for Hy4, its 770B-parameter mixture-of-experts language model, which it plans to release as open weights.",
     "keyPoints": [
       "Tencent removed offensive cyber material from training, yet coding gains let Hy4 \"partially reconstruct exploitation and reverse-engineering capabilities\"; its end-to-end attack ability is \"still rudimentary,\" Tencent says.",
       "Hy4 shows broader dual-use biology knowledge and better lab troubleshooting, but Tencent found no evidence it significantly lowers the barrier to biological harm; it flags experimental design for monitoring.",
@@ -13128,7 +13127,7 @@
     ],
     "evidence": "ICRC statement giving its own view of the conference outcome. It does not describe what states did agree instead.",
     "uncertain": "The conference's adopted final document was not posted on the UN disarmament office's meeting page when checked on November 21, 2026.",
-    "source": "International Committee of the Red Cross · Press release",
+    "source": "International Committee of the Red Cross · Statement",
     "url": "https://www.icrc.org/en/statement/icrc-renews-urgent-call-legally-binding-rules-autonomous-weapons"
   }
 ]

@@ -9,7 +9,7 @@
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 691 entries from Mar 22, 2023 to Nov 21, 2026 (133 warnings, 178 incidents, 170 governance, 210 research), drawn from 351 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 691 entries from Mar 22, 2023 to Nov 21, 2026 (133 warnings, 178 incidents, 170 governance, 210 research), drawn from 350 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
@@ -30,7 +30,7 @@ Every entry sets out what happened, the source's key points and what the evidenc
 >
 > **Uncertain.** The conference's adopted final document was not posted on the UN disarmament office's meeting page when checked on November 21, 2026.
 >
-> **Source.** [International Committee of the Red Cross · Press release](https://www.icrc.org/en/statement/icrc-renews-urgent-call-legally-binding-rules-autonomous-weapons)
+> **Source.** [International Committee of the Red Cross · Statement](https://www.icrc.org/en/statement/icrc-renews-urgent-call-legally-binding-rules-autonomous-weapons)
 
 ## Run it locally
 
