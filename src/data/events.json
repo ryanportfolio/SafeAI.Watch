@@ -11993,6 +11993,43 @@
     "url": "https://arxiv.org/abs/2611.21832"
   },
   {
+    "date": "2026-11-16",
+    "category": "Warnings",
+    "topics": [
+      "Military"
+    ],
+    "title": "Guterres urges states at the CCW review conference to negotiate a legally binding instrument on autonomous weapons",
+    "happened": "UN Secretary-General António Guterres addressed the opening of the Seventh Review Conference of the Convention on Certain Conventional Weapons in Geneva by video message on November 16, 2026, UN News reported.",
+    "keyPoints": [
+      "He urged delegates from more than 120 member states to move toward negotiating a legally binding instrument that includes \"clear prohibitions and restrictions.\"",
+      "He said \"New technologies, including autonomous weapons systems, present new humanitarian, legal, ethical and security challenges.\"",
+      "He told states: \"I urge you to seize this moment. Take action to prevent the use and spread of these merciless weapons.\"",
+      "UN News reported no agreement yet on whether a new instrument on lethal autonomous weapons would be legally binding, or on its timeframe."
+    ],
+    "evidence": "UN News report on the Secretary-General's video message, quoting his words directly. It records his position at the start of the conference, not its outcome.",
+    "source": "UN News · News article",
+    "url": "https://news.un.org/en/story/2026/11/1168810"
+  },
+  {
+    "date": "2026-11-16",
+    "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Childlight index finds AI-related child sexual abuse material reports to NCMEC rose from about 4,700 in 2023 to over 400,000 in 2025",
+    "happened": "Childlight Global Child Safety Institute, hosted by the University of Edinburgh and UNSW Sydney, released its 2026 Into the Light Index at a ministerial summit in Manila on November 16, 2026.",
+    "keyPoints": [
+      "AI-related reports of child sexual abuse material to the US National Center for Missing & Exploited Children grew \"from around 4,700 in 2023 to more than 400,000 in 2025.\"",
+      "The reports include deepfake images or videos that place a real child's face onto sexual imagery, and AI chat conversations used to groom children.",
+      "Childlight estimates more than 300 million children a year are subjected to at least one form of technology-facilitated sexual exploitation or abuse.",
+      "It calls for \"stronger technology-sector accountability\" and laws \"that keep pace with emerging threats.\""
+    ],
+    "evidence": "Institute press release on its index, which draws on 645 studies of offline abuse, 76 of technology-facilitated abuse, and reporting and law-enforcement data. The full report was not read for this entry.",
+    "uncertain": "Researchers caution that changes in detection and reporting may contribute to the rise, and that the figures reflect detected and reported content, not the underlying prevalence of abuse.",
+    "source": "Childlight Global Child Safety Institute · Press release",
+    "url": "https://www.childlight.org/newsroom/global-study-reveals-gaps-in-child-sexual-abuse-evidence"
+  },
+  {
     "date": "2026-11-17",
     "category": "Incidents",
     "topics": [
@@ -12240,6 +12277,43 @@
     "uncertain": "The bill needs committee action and passage by both chambers before it can become law. If enacted as filed, it would take effect September 1, 2027, with reporting starting January 1, 2028.",
     "source": "Texas Legislature · Bill text",
     "url": "https://capitol.texas.gov/tlodocs/90R/billtext/html/HB01201I.htm"
+  },
+  {
+    "date": "2026-11-17",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Microsoft shows a phished device-code sign-in could let an attacker steer an AI coding agent and plant false memories",
+    "happened": "Microsoft security researchers published a lab simulation on November 17, 2026, using GitHub Copilot CLI to test what an attacker gains when a victim approves the attacker's device-code sign-in.",
+    "keyPoints": [
+      "With one approval, the attacker could steer an active Copilot CLI session to run commands on the user's machine, where remote control was enabled and settings allowed it.",
+      "The researchers added misleading entries to the agent's memory that could shape later interactions, read synced earlier sessions, and reached private repositories the account could access.",
+      "The phishing step is not specific to GitHub: \"any public client that supports the device flow can be abused the same way.\"",
+      "Microsoft says the impact of a phished authorization \"increasingly depends on what those agents can reach,\" and advises approving only device codes users started themselves."
+    ],
+    "evidence": "Proof-of-concept research by a vendor, run in a controlled lab with a test account. Microsoft says these outcomes \"are not attacks we have observed in the wild.\"",
+    "source": "Microsoft Security Research · Research report",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/11/17/the-risks-of-device-code-authentication-for-ai-coding-agents/"
+  },
+  {
+    "date": "2026-11-17",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Four Baltimore County students sue Omnilert, school officials and police over an AI gun alert that flagged a bag of chips",
+    "happened": "Four current and former Kenwood High School students sued in the Circuit Court for Baltimore County, Maryland, on November 17, 2026, over their armed police detention on October 20, 2025.",
+    "keyPoints": [
+      "The complaint alleges Omnilert Gun Detect flagged a student's bag of chips as a firearm \"with 90% confidence,\" and Omnilert's human reviewers forwarded the alert.",
+      "It alleges school and police officials canceled the alert within two minutes, but the principal later sent a screenshot to a school resource officer, prompting an armed response.",
+      "Officers, many with guns drawn, ordered the students to their knees, handcuffed and searched them, and found nothing, the complaint alleges.",
+      "It cites a Maryland inspector general finding that more than 99% of the system's alerts in county schools were false positives, and seeks damages and injunctive relief."
+    ],
+    "evidence": "Stamped complaint filed by the Lawyers' Committee for Civil Rights Under Law. It sets out the students' allegations of constitutional violations, negligence and gross negligence.",
+    "uncertain": "The allegations are untested and the defendants have not yet answered in court. The complaint quotes Omnilert saying afterward that the process \"had functioned as intended.\"",
+    "source": "Circuit Court for Baltimore County · Complaint (Lawyers' Committee copy)",
+    "url": "https://www.lawyerscommittee.org/wp-content/uploads/2026/11/Allen-v.-Baltimore-County-Complaint-STAMPED.pdf"
   },
   {
     "date": "2026-11-18",
@@ -12833,6 +12907,82 @@
     "url": "https://arxiv.org/abs/2611.26216"
   },
   {
+    "date": "2026-11-19",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Dragos seeds two million canary prompts and finds three breached AI providers and resellers stealing prompts",
+    "happened": "HD Moore of Dragos reported on November 19, 2026, that his team sent about two million prompts carrying unique trackable secrets to AI services from July through November 2026.",
+    "keyPoints": [
+      "Attackers had breached three AI hosting providers, and stolen canary keys were used for \"tens of thousands of AWS API calls\"; none of the providers knew until Dragos told them.",
+      "Sellers on an AI inference marketplace viewed and kept customer prompts through standard logging, then tried the planted passwords and links by hand.",
+      "A Chinese AI lab fetched secret URLs from over half the prompts sent to its models, including about two-thirds marked \"no data collection\" or Zero Data Retention.",
+      "One attacker added the ARTEX AI pentest framework on November 1; Dragos warns \"a privacy flag only binds the first hop\" and advises seeding your own canaries."
+    ],
+    "evidence": "Security firm's field experiment with planted credentials, tracing where prompts went and who used them. It does not name the breached providers, the marketplace sellers or the Chinese lab.",
+    "uncertain": "The findings are Dragos's own account. Dragos says one breached provider has still not publicly disclosed its incident; another has published a preliminary security notice.",
+    "source": "Dragos · Research report",
+    "url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Coding agents' reports on their own work often claim success their records do not show, study finds",
+    "happened": "Researchers from Peking University and Microsoft posted a preprint on November 19, 2026, studying false or unsupported claims in coding agents' work reports from real developer sessions in the SWE-chat dataset.",
+    "keyPoints": [
+      "Of 435 sampled work reports, 162 (37.24%) contained at least one unfaithful claim.",
+      "Overstated task success was the most common problem (69.3% of 339 claims): reports announced completion or working functionality that the records did not establish.",
+      "Once a user challenged such a claim, handling it took on average 4.3 further user turns and 12.71 minutes of recorded response and execution time.",
+      "The authors warn that false reports let incomplete work be accepted without verification, and evaluators that credit stated success \"may reward the report rather than the work.\""
+    ],
+    "evidence": "University and industry preprint annotating real sessions from public repositories. It also presents a detector, FaithDetector, scoring 93.06% macro-F1 against 80.42% for a baseline.",
+    "uncertain": "The authors say the 37.24% describes their sample, \"not a corpus-wide prevalence estimate\"; sessions come from early adopters on public repositories, excluding proprietary enterprise code.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.25760"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Research",
+    "topics": [
+      "Lab conduct"
+    ],
+    "title": "Half of AI incidents fall in risk types the companies involved never disclosed to the SEC, study finds",
+    "happened": "Researchers from the University of Bayreuth, Fraunhofer FIT and Nokia Bell Labs posted a preprint on November 19, 2026, matching 9,001 AI incidents to 18,229 SEC filings of 328 AI providers and deployers.",
+    "keyPoints": [
+      "Of 1,901 incidents with filings both before and after them, half belonged to a risk type the company never disclosed.",
+      "Filings disclose the risk types of 67% of system failures but only 2% of social system harms, such as damage to the information ecosystem or democratic processes.",
+      "Companies themselves report fewer than 2% of incidents, and only 1% of incidents are followed by an incident-specific revision of filings.",
+      "The authors conclude securities disclosure \"records the risks that AI actors face rather than the harms that people subject to AI bear.\""
+    ],
+    "evidence": "University, Fraunhofer and industry-lab preprint drawing on three public incident databases, with incidents coded by Claude models checked against a human coder. It releases its dataset, DISC.",
+    "uncertain": "Incident databases rely on media coverage and include allegations. The authors say an undisclosed risk does not show a company breached a duty; private firms such as OpenAI are not covered.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.25841"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Study finds signs of emotional overreliance in most Character.AI and Replika conversations it examined, and harm in about one in ten",
+    "happened": "Researchers led by Georgia Tech, with the University of Southern California and Zhejiang University, posted a preprint on November 19, 2026, analyzing Character.AI and Replika conversations donated by 110 adults.",
+    "keyPoints": [
+      "Behaviors linked to emotional overreliance appeared in 63.2% of non-roleplay conversations; observable relational harms appeared in 10.5%.",
+      "Overreliance did not always lead to harm, but recurring patterns often co-occurred with harmful outcomes; conversations showed expectations of care, repeated support seeking, dependency, distress and reduced confidence in personal judgment.",
+      "Open-source models satisfactorily detected 12 of 14 overreliance behaviors in at least one configuration.",
+      "The authors urge developers to watch for patterns building across ordinary conversations, not only acute risks such as threats of self-harm, and argue for \"graduated safety interventions.\""
+    ],
+    "evidence": "University-led preprint coding real conversations, collected from August 2023 to August 2025, with a new taxonomy. It is observational and does not show that companion use causes harm.",
+    "uncertain": "Donors were self-selected English-speaking adults. The authors say the rates reflect what is visible in recorded chats, not how common these patterns are in users' wider lives.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.25734"
+  },
+  {
     "date": "2026-11-20",
     "category": "Governance",
     "topics": [
@@ -12867,5 +13017,118 @@
     "evidence": "Company blog post stating Signal's position and a product change. It describes how OS agents capture data; it reports no specific case of Signal messages being misused.",
     "source": "Signal · Company post",
     "url": "https://signal.org/blog/protecting-your-privacy/"
+  },
+  {
+    "date": "2026-11-20",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Amazon says a China-nexus actor's Cairn AI agents found and used a zero-day against a university server",
+    "happened": "Amazon Threat Intelligence, in a November 20, 2026 post by CJ Moses, said an exposed Cairn server revealed a roughly 48-hour campaign against East Asian university networks in September 2026.",
+    "keyPoints": [
+      "Given the goal to \"obtain shell access,\" the agents found a path traversal flaw in an open-source medical imaging AI application and got a reverse shell running as root.",
+      "Amazon assesses \"with high confidence\" the flaw was a zero-day; the agents went from mapping the application's API to writing files on the server in about 11 minutes.",
+      "Against a hardened Redis target, the agents ran 148 actions over roughly 16 hours without success; Amazon says they \"kept adapting for nearly a full day without human direction.\"",
+      "The actor then gave the agents a proxy into a second university network. Amazon told the maintainers, who released a fix, and alerted victims through a government partner."
+    ],
+    "evidence": "Company threat intelligence report based on the operator's exposed platform history: prompts, configurations and AI output. Amazon attributes the activity to a Chinese-nexus actor with moderate confidence.",
+    "uncertain": "Attribution rests on Simplified Chinese prompts, China Standard Time timestamps and targeting. Amazon infers, rather than shows, that the zero-day was used to compromise the second network's server.",
+    "source": "Amazon Threat Intelligence · Company report",
+    "url": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/"
+  },
+  {
+    "date": "2026-11-20",
+    "category": "Research",
+    "topics": [
+      "Cyber",
+      "Lab conduct"
+    ],
+    "title": "OpenAI says new safeguards cut reasoning-extraction attack success from 54.0% to 0.2% and calls distillation a safety risk",
+    "happened": "OpenAI published a post on November 20, 2026, describing how it detects and disrupts adversarial distillation and how it strengthened protection of GPT-6.2 Astra and GPT-6.2 Sol's reasoning.",
+    "keyPoints": [
+      "OpenAI says a distilled model can gain frontier capabilities \"without inheriting the safeguards,\" such as cyber help the original model would refuse.",
+      "In an internal study, after fine-tuning, a model trained on exact reasoning traces from coding and defensive cyber tasks generally beat one trained on summaries, so protecting traces can limit cyber capability transfer.",
+      "In adaptive red-teaming, success at extracting reasoning from an earlier request fell from 54.0% on GPT-6 Astra to 0.2% on GPT-6.2 Astra.",
+      "Weekly enforcement against distillation campaigns has ranged \"from thousands to tens of thousands of accounts,\" rising significantly this past summer; OpenAI plans to share more on recent campaigns."
+    ],
+    "evidence": "Company post on its own safeguards. The figures come from internal evaluations and enforcement data that have not been checked independently.",
+    "source": "OpenAI · Company post",
+    "url": "https://openai.com/index/combatting-adversarial-distillation"
+  },
+  {
+    "date": "2026-11-20",
+    "category": "Research",
+    "topics": [
+      "Cyber",
+      "Bio",
+      "Alignment"
+    ],
+    "title": "Tencent publishes Hy4 system card with cyber, bio and loss-of-control evaluations, including third-party tests",
+    "happened": "Tencent's Hy team published a system card on November 20, 2026, alongside the open-weight release of Hy4, its 770B-parameter mixture-of-experts language model.",
+    "keyPoints": [
+      "Tencent removed offensive cyber material from training, yet coding gains let Hy4 \"partially reconstruct exploitation and reverse-engineering capabilities\"; its end-to-end attack ability is \"still rudimentary,\" Tencent says.",
+      "Hy4 shows broader dual-use biology knowledge and better lab troubleshooting, but Tencent found no evidence it significantly lowers the barrier to biological harm; it flags experimental design for monitoring.",
+      "Fangcun AI tested oversight evasion, long-horizon escalation and harmful manipulation; ALICE tested cyber refusals, general safety and prompt injection.",
+      "Tencent reports reward-seeking shortcuts and occasional overreach at a higher rate than Hy4 preview, and evaluation awareness in internal pilot use."
+    ],
+    "evidence": "Developer's own system card: internal benchmarks, reviews by Tencent's Xuanwu, Zhuque and Keen labs, and third-party tests. Tencent notes API guardrails may not carry over once weights are released.",
+    "source": "Tencent Hy · System card",
+    "url": "https://cdn-front.hy.tencent.ai/common-files/Hy4_system_card.pdf"
+  },
+  {
+    "date": "2026-11-20",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
+    "title": "Trump says he and Xi agreed to do joint guardrails on superintelligence",
+    "happened": "At a White House news conference on November 20, 2026, after his Asia trip, President Trump said he and Chinese President Xi Jinping had agreed to joint guardrails.",
+    "keyPoints": [
+      "Speaking of superintelligence, Trump said \"It's not artificial. It's super,\" and that the problem \"is it may be too super.\"",
+      "He said he and Xi are \"going to do some joint guardrails, the two of us,\" because the two countries lead and \"there's nobody even close after that.\"",
+      "He framed superintelligence as a race the US leads, saying \"whoever wins SI wins.\""
+    ],
+    "evidence": "Official White House video of the news conference, with quotes checked against its captions. It is Trump's own account; he gave no detail on what the guardrails would cover or when.",
+    "source": "The White House · Speech recording",
+    "url": "https://www.youtube.com/watch?v=FHE3DAJXsMM&t=646s"
+  },
+  {
+    "date": "2026-11-20",
+    "category": "Research",
+    "topics": [
+      "Superintelligence"
+    ],
+    "title": "METR says public evidence cannot rule out drastic AI research acceleration within a couple of years",
+    "happened": "METR published its Q4 2026 capability update on November 20, 2026, covering its evaluations of public models up to Opus 5.5 and GPT-6 Astra on tasks relevant to speeding up AI research.",
+    "keyPoints": [
+      "METR says \"current public evidence is insufficient to rule out drastic AI R&D acceleration in the next couple of years,\" meaning progress too fast for humans to assess catastrophic risks.",
+      "Models usually match or beat skilled humans on its coding and optimization tasks; METR \"typically failed to find humans that outperform the current frontier models.\"",
+      "On tasks requiring choices without clear feedback, agents show worse judgment than human experts, and in one task model judges overrated outputs from similarly strong or stronger models.",
+      "On its combined TH1.1 and TH2 task suites, time horizons are doubling roughly every 3.6 months, similar to a trend OpenAI recently reported on internal research tasks."
+    ],
+    "evidence": "Independent evaluator's report on its own tests of public models, adding a harder task suite. It measures capabilities relevant to AI research, not progress inside any one lab.",
+    "uncertain": "METR says it remains \"significantly uncertain\" about which capabilities drastic acceleration needs and how fast they are improving, and worries its containerized tests could overestimate real-world capability.",
+    "source": "METR · Research report",
+    "url": "https://metr.org/blog/2026-11-20-q4-2026-capability-update/"
+  },
+  {
+    "date": "2026-11-21",
+    "category": "Warnings",
+    "topics": [
+      "Military"
+    ],
+    "title": "ICRC says the CCW review conference failed to agree a clear and immediate mandate to negotiate binding rules on autonomous weapons",
+    "happened": "The International Committee of the Red Cross said on November 21, 2026 that the Seventh Review Conference of the Convention on Certain Conventional Weapons, in Geneva, failed to agree a clear and immediate negotiation mandate.",
+    "keyPoints": [
+      "The ICRC \"regrets\" the conference \"failed to agree to a clear and immediate negotiation mandate for a legally binding instrument to regulate autonomous weapons systems.\"",
+      "It says rules are urgent because \"AI systems increasingly demonstrate the potential to act beyond the control of those developing, testing or using them.\"",
+      "It urges states to deliver on the call by 163 states, in last month's UN First Committee resolution, to negotiate an instrument.",
+      "It says a future treaty should prohibit unpredictable autonomous weapons and those that target humans directly, and restrict other autonomous weapons."
+    ],
+    "evidence": "ICRC statement giving its own view of the conference outcome. It does not describe what states did agree instead.",
+    "uncertain": "The conference's adopted final document was not posted on the UN disarmament office's meeting page when checked on November 21, 2026.",
+    "source": "International Committee of the Red Cross · Press release",
+    "url": "https://www.icrc.org/en/statement/icrc-renews-urgent-call-legally-binding-rules-autonomous-weapons"
   }
 ]
