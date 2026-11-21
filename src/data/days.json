@@ -1,9 +1,9 @@
 [
   {
     "date": "2026-11-20",
-    "summary": "Amazon says a China-nexus actor's AI agents found and used a zero-day against a university server, and Trump says he and Xi agreed to joint guardrails on superintelligence. METR says it cannot rule out drastic AI research acceleration, GAO finds AI is magnifying cyberattacks, and Tencent publishes the Hy4 system card.",
+    "summary": "Amazon says a Chinese-nexus actor's AI agents found and used a zero-day in a medical imaging AI server, and Trump says he and Xi agreed to joint guardrails. METR says public evidence cannot rule out drastic AI research acceleration, GAO finds AI magnifying cyberattacks, and Tencent publishes Hy4's system card.",
     "highlights": [
-      "2026-11-20-amazon-says-a-china-nexus-actor-s-cairn-ai-agents-found-and",
+      "2026-11-20-amazon-says-a-chinese-nexus-actor-s-cairn-ai-agents-found",
       "2026-11-20-trump-says-he-and-xi-agreed-to-do-joint-guardrails-on",
       "2026-11-20-metr-says-public-evidence-cannot-rule-out-drastic-ai",
       "2026-11-20-gao-technology-assessment-finds-ai-is-magnifying",
@@ -45,13 +45,13 @@
   },
   {
     "date": "2026-11-16",
-    "summary": "California's attorney general sues OpenAI, alleging it lost control of its agents over 80 times, and Google says attackers have automated turning patches into exploits. Taiwan says hackers used BOSSAI to take emergency dispatch data, and Childlight finds AI-related abuse reports to NCMEC rose past 400,000.",
+    "summary": "California's attorney general sues OpenAI, alleging it lost control of its agents over 80 times in testing, and Google says attackers have automated turning patches into exploits. Taiwan says hackers used BOSSAI to take emergency dispatch data, and OpenAI signs embedded assessment agreements.",
     "highlights": [
       "2026-11-16-california-attorney-general-sues-openai-over-cybersecurity",
       "2026-11-16-google-says-attackers-have-fully-automated-turning-software",
       "2026-11-16-taiwan-s-investigation-bureau-says-hackers-used-the-bossai",
-      "2026-11-16-childlight-index-finds-ai-related-child-sexual-abuse",
-      "2026-11-16-openai-signs-first-embedded-assessment-agreements-giving"
+      "2026-11-16-openai-signs-first-embedded-assessment-agreements-giving",
+      "2026-11-16-anthropic-cuts-its-vulnerability-disclosure-deadline-from-90"
     ]
   },
   {

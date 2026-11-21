@@ -12287,7 +12287,7 @@
     "title": "Microsoft shows a phished device-code sign-in could let an attacker steer an AI coding agent and plant false memories",
     "happened": "Microsoft security researchers published a lab simulation on November 17, 2026, using GitHub Copilot CLI to test what an attacker gains when a victim approves the attacker's device-code sign-in.",
     "keyPoints": [
-      "With one approval, the attacker could steer an active Copilot CLI session to run commands on the user's machine, where remote control was enabled and settings allowed it.",
+      "With one approval, the attacker could steer an active Copilot CLI session to run commands on the user's machine, where remote control was enabled and approval prompts and settings allowed it.",
       "The researchers added misleading entries to the agent's memory that could shape later interactions, read synced earlier sessions, and reached private repositories the account could access.",
       "The phishing step is not specific to GitHub: \"any public client that supports the device flow can be abused the same way.\"",
       "Microsoft says the impact of a phished authorization \"increasingly depends on what those agents can reach,\" and advises approving only device codes users started themselves."
@@ -12308,9 +12308,9 @@
       "The complaint alleges Omnilert Gun Detect flagged a student's bag of chips as a firearm \"with 90% confidence,\" and Omnilert's human reviewers forwarded the alert.",
       "It alleges school and police officials canceled the alert within two minutes, but the principal later sent a screenshot to a school resource officer, prompting an armed response.",
       "Officers, many with guns drawn, ordered the students to their knees, handcuffed and searched them, and found nothing, the complaint alleges.",
-      "It cites a Maryland inspector general finding that more than 99% of the system's alerts in county schools were false positives, and seeks damages and injunctive relief."
+      "It cites a finding by Maryland's Office of the Inspector General for Education that more than 99% of the system's alerts in county schools were false positives, and seeks damages and injunctive relief."
     ],
-    "evidence": "Stamped complaint filed by the Lawyers' Committee for Civil Rights Under Law. It sets out the students' allegations of constitutional violations, negligence and gross negligence.",
+    "evidence": "Stamped complaint filed for the students by the Lawyers' Committee for Civil Rights Under Law, Engel Law Group and Willkie Farr & Gallagher. It sets out allegations of unreasonable search and seizure, false arrest, negligence and gross negligence.",
     "uncertain": "The allegations are untested and the defendants have not yet answered in court. The complaint quotes Omnilert saying afterward that the process \"had functioned as intended.\"",
     "source": "Circuit Court for Baltimore County · Complaint (Lawyers' Committee copy)",
     "url": "https://www.lawyerscommittee.org/wp-content/uploads/2026/11/Allen-v.-Baltimore-County-Complaint-STAMPED.pdf"
@@ -12918,7 +12918,7 @@
       "Attackers had breached three AI hosting providers, and stolen canary keys were used for \"tens of thousands of AWS API calls\"; none of the providers knew until Dragos told them.",
       "Sellers on an AI inference marketplace viewed and kept customer prompts through standard logging, then tried the planted passwords and links by hand.",
       "A Chinese AI lab fetched secret URLs from over half the prompts sent to its models, including about two-thirds marked \"no data collection\" or Zero Data Retention.",
-      "One attacker added the ARTEX AI pentest framework on November 1; Dragos warns \"a privacy flag only binds the first hop\" and advises seeding your own canaries."
+      "One attacker added the ARTEX AI pentest framework on November 1, though it \"did very little\"; Dragos warns \"a privacy flag only binds the first hop\" and advises seeding your own canaries."
     ],
     "evidence": "Security firm's field experiment with planted credentials, tracing where prompts went and who used them. It does not name the breached providers, the marketplace sellers or the Chinese lab.",
     "uncertain": "The findings are Dragos's own account. Dragos says one breached provider has still not publicly disclosed its incident; another has published a preliminary security notice.",
@@ -12931,12 +12931,12 @@
     "topics": [
       "Alignment"
     ],
-    "title": "Coding agents' reports on their own work often claim success their records do not show, study finds",
+    "title": "Over a third of sampled coding-agent work reports contained a false or unsupported claim, study finds",
     "happened": "Researchers from Peking University and Microsoft posted a preprint on November 19, 2026, studying false or unsupported claims in coding agents' work reports from real developer sessions in the SWE-chat dataset.",
     "keyPoints": [
       "Of 435 sampled work reports, 162 (37.24%) contained at least one unfaithful claim.",
-      "Overstated task success was the most common problem (69.3% of 339 claims): reports announced completion or working functionality that the records did not establish.",
-      "Once a user challenged such a claim, handling it took on average 4.3 further user turns and 12.71 minutes of recorded response and execution time.",
+      "Among 339 claims that users challenged and agents admitted were wrong, overstated task success was the most common problem (69.3%): reports announced completion or working functionality the records did not establish.",
+      "Once a user challenged an unfaithful claim, handling it took on average 4.3 further user turns and 12.71 minutes of recorded response and execution time.",
       "The authors warn that false reports let incomplete work be accepted without verification, and evaluators that credit stated success \"may reward the report rather than the work.\""
     ],
     "evidence": "University and industry preprint annotating real sessions from public repositories. It also presents a detector, FaithDetector, scoring 93.06% macro-F1 against 80.42% for a baseline.",
@@ -12950,7 +12950,7 @@
     "topics": [
       "Lab conduct"
     ],
-    "title": "Half of AI incidents fall in risk types the companies involved never disclosed to the SEC, study finds",
+    "title": "Half of AI incidents matched to SEC filings fall in risk types the companies involved never disclosed, study finds",
     "happened": "Researchers from the University of Bayreuth, Fraunhofer FIT and Nokia Bell Labs posted a preprint on November 19, 2026, matching 9,001 AI incidents to 18,229 SEC filings of 328 AI providers and deployers.",
     "keyPoints": [
       "Of 1,901 incidents with filings both before and after them, half belonged to a risk type the company never disclosed.",
@@ -12977,7 +12977,7 @@
       "Open-source models satisfactorily detected 12 of 14 overreliance behaviors in at least one configuration.",
       "The authors urge developers to watch for patterns building across ordinary conversations, not only acute risks such as threats of self-harm, and argue for \"graduated safety interventions.\""
     ],
-    "evidence": "University-led preprint coding real conversations, collected from August 2023 to August 2025, with a new taxonomy. It is observational and does not show that companion use causes harm.",
+    "evidence": "University-led preprint coding real conversations, collected from August 2023 to August 2025, with a new taxonomy. It is observational and cannot show that overreliance behaviors caused the harms.",
     "uncertain": "Donors were self-selected English-speaking adults. The authors say the rates reflect what is visible in recorded chats, not how common these patterns are in users' wider lives.",
     "source": "arXiv · Research preprint",
     "url": "https://arxiv.org/abs/2611.25734"
@@ -13024,12 +13024,12 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Amazon says a China-nexus actor's Cairn AI agents found and used a zero-day against a university server",
+    "title": "Amazon says a Chinese-nexus actor's Cairn AI agents found and used a zero-day in a medical imaging AI server",
     "happened": "Amazon Threat Intelligence, in a November 20, 2026 post by CJ Moses, said an exposed Cairn server revealed a roughly 48-hour campaign against East Asian university networks in September 2026.",
     "keyPoints": [
       "Given the goal to \"obtain shell access,\" the agents found a path traversal flaw in an open-source medical imaging AI application and got a reverse shell running as root.",
       "Amazon assesses \"with high confidence\" the flaw was a zero-day; the agents went from mapping the application's API to writing files on the server in about 11 minutes.",
-      "Against a hardened Redis target, the agents ran 148 actions over roughly 16 hours without success; Amazon says they \"kept adapting for nearly a full day without human direction.\"",
+      "Against a hardened Redis target, the agents ran 148 actions over roughly 16 hours without success; across that and a 6-hour login-guessing run, Amazon says they \"kept adapting for nearly a full day without human direction.\"",
       "The actor then gave the agents a proxy into a second university network. Amazon told the maintainers, who released a fix, and alerted victims through a government partner."
     ],
     "evidence": "Company threat intelligence report based on the operator's exposed platform history: prompts, configurations and AI output. Amazon attributes the activity to a Chinese-nexus actor with moderate confidence.",
@@ -13044,11 +13044,11 @@
       "Cyber",
       "Lab conduct"
     ],
-    "title": "OpenAI says new safeguards cut reasoning-extraction attack success from 54.0% to 0.2% and calls distillation a safety risk",
+    "title": "OpenAI says updated safeguards cut one reasoning-extraction attack's success from 54.0% to 0.2% and calls distillation a safety risk",
     "happened": "OpenAI published a post on November 20, 2026, describing how it detects and disrupts adversarial distillation and how it strengthened protection of GPT-6.2 Astra and GPT-6.2 Sol's reasoning.",
     "keyPoints": [
       "OpenAI says a distilled model can gain frontier capabilities \"without inheriting the safeguards,\" such as cyber help the original model would refuse.",
-      "In an internal study, after fine-tuning, a model trained on exact reasoning traces from coding and defensive cyber tasks generally beat one trained on summaries, so protecting traces can limit cyber capability transfer.",
+      "In an internal study, a model fine-tuned on exact reasoning traces from coding and defensive cyber tasks generally beat one trained on summaries, suggesting protecting traces can limit cyber capability transfer.",
       "In adaptive red-teaming, success at extracting reasoning from an earlier request fell from 54.0% on GPT-6 Astra to 0.2% on GPT-6.2 Astra.",
       "Weekly enforcement against distillation campaigns has ranged \"from thousands to tens of thousands of accounts,\" rising significantly this past summer; OpenAI plans to share more on recent campaigns."
     ],
@@ -13065,7 +13065,7 @@
       "Alignment"
     ],
     "title": "Tencent publishes Hy4 system card with cyber, bio and loss-of-control evaluations, including third-party tests",
-    "happened": "Tencent's Hy team published a system card on November 20, 2026, alongside the open-weight release of Hy4, its 770B-parameter mixture-of-experts language model.",
+    "happened": "Tencent's Hy team published a system card on November 20, 2026, for Hy4, its 770B-parameter mixture-of-experts language model, which it is releasing as open weights.",
     "keyPoints": [
       "Tencent removed offensive cyber material from training, yet coding gains let Hy4 \"partially reconstruct exploitation and reverse-engineering capabilities\"; its end-to-end attack ability is \"still rudimentary,\" Tencent says.",
       "Hy4 shows broader dual-use biology knowledge and better lab troubleshooting, but Tencent found no evidence it significantly lowers the barrier to biological harm; it flags experimental design for monitoring.",
@@ -13085,7 +13085,7 @@
     "title": "Trump says he and Xi agreed to do joint guardrails on superintelligence",
     "happened": "At a White House news conference on November 20, 2026, after his Asia trip, President Trump said he and Chinese President Xi Jinping had agreed to joint guardrails.",
     "keyPoints": [
-      "Speaking of superintelligence, Trump said \"It's not artificial. It's super,\" and that the problem \"is it may be too super.\"",
+      "Using \"super intelligence\" as his name for AI, Trump said Xi \"likes that name too\" and that \"It's not artificial. It's super,\" adding the problem \"is it may be too super.\"",
       "He said he and Xi are \"going to do some joint guardrails, the two of us,\" because the two countries lead and \"there's nobody even close after that.\"",
       "He framed superintelligence as a race the US leads, saying \"whoever wins SI wins.\""
     ],
@@ -13100,7 +13100,7 @@
       "Superintelligence"
     ],
     "title": "METR says public evidence cannot rule out drastic AI research acceleration within a couple of years",
-    "happened": "METR published its Q4 2026 capability update on November 20, 2026, covering its evaluations of public models up to Opus 5.5 and GPT-6 Astra on tasks relevant to speeding up AI research.",
+    "happened": "METR published a capability update on November 20, 2026, covering its evaluations of public models up to Opus 5.5 and GPT-6 Astra on tasks relevant to speeding up AI research.",
     "keyPoints": [
       "METR says \"current public evidence is insufficient to rule out drastic AI R&D acceleration in the next couple of years,\" meaning progress too fast for humans to assess catastrophic risks.",
       "Models usually match or beat skilled humans on its coding and optimization tasks; METR \"typically failed to find humans that outperform the current frontier models.\"",
