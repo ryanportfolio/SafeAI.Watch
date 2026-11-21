@@ -12015,8 +12015,8 @@
     "topics": [
       "Harm to people"
     ],
-    "title": "Childlight index finds AI-related child sexual abuse material reports to NCMEC rose from about 4,700 in 2023 to over 400,000 in 2025",
-    "happened": "Childlight Global Child Safety Institute, hosted by the University of Edinburgh and UNSW Sydney, released its 2026 Into the Light Index at a ministerial summit in Manila on November 16, 2026.",
+    "title": "Childlight says AI-related child sexual abuse material reports to NCMEC rose from about 4,700 in 2023 to over 400,000 in 2025",
+    "happened": "Childlight Global Child Safety Institute, hosted by the University of Edinburgh and UNSW Sydney, announced findings from its 2026 Into the Light Index at a ministerial summit in Manila on November 16, 2026.",
     "keyPoints": [
       "AI-related reports of child sexual abuse material to the US National Center for Missing & Exploited Children grew \"from around 4,700 in 2023 to more than 400,000 in 2025.\"",
       "The reports include deepfake images or videos that place a real child's face onto sexual imagery, and AI chat conversations used to groom children.",
@@ -13043,7 +13043,7 @@
       "Cyber",
       "Lab conduct"
     ],
-    "title": "OpenAI says one reasoning-extraction attack's success fell from 54.0% to 0.2% with its updated safeguards and calls distillation a safety risk",
+    "title": "OpenAI says one reasoning-extraction attack fell from 54.0% success on GPT-6 Astra to 0.2% on GPT-6.2 Astra and calls distillation a safety risk",
     "happened": "OpenAI published a post on November 20, 2026, describing how it detects and disrupts adversarial distillation and how it strengthened protection of GPT-6.2 Astra and GPT-6.2 Sol's reasoning.",
     "keyPoints": [
       "OpenAI says a distilled model can gain frontier capabilities \"without inheriting the safeguards,\" such as cyber help the original model would refuse.",
@@ -13122,7 +13122,7 @@
     "keyPoints": [
       "The ICRC \"regrets\" the conference \"failed to agree to a clear and immediate negotiation mandate for a legally binding instrument to regulate autonomous weapons systems.\"",
       "It says rules are urgent because \"AI systems increasingly demonstrate the potential to act beyond the control of those developing, testing or using them.\"",
-      "It urges states to deliver on the call by 163 states, in last month's UN First Committee resolution, to negotiate an instrument.",
+      "It urges states to deliver on what it describes as the call by 163 states, in last month's UN First Committee resolution, to negotiate an instrument.",
       "It says a future treaty should prohibit unpredictable autonomous weapons and those that target humans directly, and restrict other autonomous weapons."
     ],
     "evidence": "ICRC statement giving its own view of the conference outcome. It does not describe what states did agree instead.",

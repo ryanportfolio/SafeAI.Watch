@@ -23,7 +23,7 @@ Every entry sets out what happened, the source's key points and what the evidenc
 >
 > - The ICRC "regrets" the conference "failed to agree to a clear and immediate negotiation mandate for a legally binding instrument to regulate autonomous weapons systems."
 > - It says rules are urgent because "AI systems increasingly demonstrate the potential to act beyond the control of those developing, testing or using them."
-> - It urges states to deliver on the call by 163 states, in last month's UN First Committee resolution, to negotiate an instrument.
+> - It urges states to deliver on what it describes as the call by 163 states, in last month's UN First Committee resolution, to negotiate an instrument.
 > - It says a future treaty should prohibit unpredictable autonomous weapons and those that target humans directly, and restrict other autonomous weapons.
 >
 > **Evidence.** ICRC statement giving its own view of the conference outcome. It does not describe what states did agree instead.
