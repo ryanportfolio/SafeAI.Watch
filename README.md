@@ -4,31 +4,31 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 663 dated, sourced entries drawn as a burst, one dot per entry: 127 warnings, 174 incidents, 166 governance, 196 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 677 dated, sourced entries drawn as a burst, one dot per entry: 130 warnings, 175 incidents, 170 governance, 202 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 663 entries from Mar 22, 2023 to Nov 19, 2026 (127 warnings, 174 incidents, 166 governance, 196 research), drawn from 341 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 677 entries from Mar 22, 2023 to Nov 20, 2026 (130 warnings, 175 incidents, 170 governance, 202 research), drawn from 345 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 19, 2026, filed under Research:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 20, 2026, filed under Warnings:
 
-> **Nature Communications perspective sets out a defense-in-depth plan for AI that designs biological sequences**
+> **Signal says AI agents built into phone operating systems threaten private messaging and blocks their screen capture**
 >
-> **What happened.** Researchers who met at the Wübben Sandpit, a November 2025 workshop in Germany, published a Perspective in Nature Communications on November 19, 2026, on governing AI biological sequence design.
+> **What happened.** In a blog post by Meredith Whittaker on November 20, 2026, Signal said it is blocking AI agents built into iOS 27, and on Android versions where it can detect them, from capturing its screen.
 >
 > **Key points.**
 >
-> - The authors say generative AI can design sequences "from proteins to whole genomes," and "the same capability can be misused."
-> - They propose safeguards at every stage: the data used to train models, the models themselves, and the synthesis of physical DNA.
-> - Riskier models would sit behind tiered, verified access, the riskiest run only inside a trusted research environment, with risk reviews starting at the funding stage.
-> - DNA synthesis screening should move past "sequence-only filters, which can be circumvented via AI-driven sequence designs," and add know-your-customer rules.
+> - Signal says OS agents such as Gemini Intelligence and Siri's Onscreen Awareness capture on-screen data, calling this "an existential threat to Signal, and our ability to responsibly uphold our mission."
+> - Signal now blocks screenshots on iOS 27 and turns on screen security on Android when it detects an AI assistant reading the screen; users can switch this off.
+> - It calls its remedy incomplete: agents may still reach app data through the filesystem, and it cannot block screenshots on macOS for lack of documented tools.
+> - It asks Apple, Google and Microsoft for a documented way for apps to opt out of AI data access, and clear specifications of how these agents handle data.
 >
-> **Evidence.** Journal Perspective, an argument rather than new data, by authors from Johns Hopkins, SecureBio, the Robert Koch Institute, Germany's biosafety commission and others. They say no formal consensus vote was taken.
+> **Evidence.** Company blog post stating Signal's position and a product change. It describes how OS agents capture data; it reports no specific case of Signal messages being misused.
 >
-> **Source.** [Nature Communications · Perspective](https://www.nature.com/articles/s41467-026-78758-5)
+> **Source.** [Signal · Company post](https://signal.org/blog/protecting-your-privacy/)
 
 ## Run it locally
 
