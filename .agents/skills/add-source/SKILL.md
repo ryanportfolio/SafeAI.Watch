@@ -48,7 +48,9 @@ approval through the normal mechanism when the sandbox blocks a fetch or push.
 - Allegations stay allegations. No self-harm method detail. Name who reported what.
 - Sensitive technical material (biological, chemical, weapons, exploit detail): fetch to a
   file and extract only the passages needed; never read whole pages; never copy operational
-  detail into the site.
+  detail into the site. That includes how a model's safeguards were bypassed in a test or
+  attack: name the result (a safeguard failed, a jailbreak worked), never the prompt, the
+  framing or the steps that got past it.
 - Do not edit `src/scripts/visuals/*`, `src/components/VisualSlot.astro`,
   `SectionJump.astro`, or `SiteFooter.astro`. Another workflow owns them.
 
@@ -92,7 +94,8 @@ approval through the normal mechanism when the sandbox blocks a fetch or push.
 7. **Verify.** A fresh context (agent tool, or a read-only `codex exec` process) receives only
    the rules, the drafted entries, the day briefs this run wrote or changed, and the source
    URLs. It re-fetches each source (curl to file, grep), checks every claim and quote, checks
-   that every fact in each summary is stated in that date's entries, and writes
+   that every fact in each summary is stated in that date's entries, checks that no entry
+   carries operational or safeguard-bypass detail, and writes
    `.tmp/add-source/<slug>/verify.md`. Self-review is not a substitute; if no fresh context
    is available, say so in the PR and mark the entries unverified. Fix or drop what fails.
    Then `npm run build`: record.ts validates the entries, their topics and every day brief,

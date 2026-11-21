@@ -47,7 +47,9 @@ merging.
 - Allegations stay allegations. No self-harm method detail. Name who reported what.
 - Sensitive technical material (biological, chemical, weapons, exploit detail): fetch to a
   file and extract only the passages needed; never load whole pages; never copy operational
-  detail into the site.
+  detail into the site. That includes how a model's safeguards were bypassed in a test or
+  attack: name the result (a safeguard failed, a jailbreak worked), never the prompt, the
+  framing or the steps that got past it.
 - Do not edit `src/scripts/visuals/*`, `src/components/VisualSlot.astro`,
   `SectionJump.astro`, or `SiteFooter.astro`. Another workflow owns them.
 - Subagents inherit the session model; omit `model` unless the user names one.
@@ -90,7 +92,8 @@ merging.
 7. **Verify.** A fresh subagent receives only the rules, the drafted entries, the day briefs
    this run wrote or changed, and the source URLs. It re-fetches each source (curl to file,
    grep), checks every claim and quote, checks that every fact in each summary is stated in
-   that date's entries, and writes `.tmp/add-source/<slug>/verify.md`. Fix or drop what
+   that date's entries, checks that no entry carries operational or safeguard-bypass detail,
+   and writes `.tmp/add-source/<slug>/verify.md`. Fix or drop what
    fails. Then `npm run build`: record.ts validates the entries, their topics and every day
    brief, and fails on a missing or stray brief, a summary over the limits, or highlights
    that break the count, membership or Bio rule. A worktree nested inside the main checkout
