@@ -12953,8 +12953,8 @@
     "happened": "Researchers from the University of Bayreuth, Fraunhofer FIT and Nokia Bell Labs posted a preprint on November 19, 2026, matching 9,001 AI incidents to 18,229 SEC filings of 328 AI providers and deployers.",
     "keyPoints": [
       "Of 1,901 incidents with filings both before and after them, half belonged to a risk type the company never disclosed.",
-      "Filings disclose the risk types of 67% of system failures but only 2% of social system harms, such as damage to the information ecosystem or democratic processes.",
-      "Companies themselves report fewer than 2% of incidents, and only 1% of incidents are followed by an incident-specific revision of filings.",
+      "In that subset, filings disclose the risk types of 67% of system failures but only 2% of social system harms, such as damage to the information ecosystem or democratic processes.",
+      "Companies themselves reported fewer than 2% of those incidents, and only 1% were followed by an incident-specific revision of filings.",
       "The authors conclude securities disclosure \"records the risks that AI actors face rather than the harms that people subject to AI bear.\""
     ],
     "evidence": "University, Fraunhofer and industry-lab preprint drawing on three public incident databases, with incidents coded by Claude models checked against a human coder. It releases its dataset, DISC.",
@@ -13047,7 +13047,7 @@
     "happened": "OpenAI published a post on November 20, 2026, describing how it detects and disrupts adversarial distillation and how it strengthened protection of GPT-6.2 Astra and GPT-6.2 Sol's reasoning.",
     "keyPoints": [
       "OpenAI says a distilled model can gain frontier capabilities \"without inheriting the safeguards,\" such as cyber help the original model would refuse.",
-      "In an internal study, a model fine-tuned on exact reasoning traces from coding and defensive cyber tasks generally beat one trained on summaries, suggesting protecting traces can limit cyber capability transfer.",
+      "In an internal study, a model trained on exact reasoning traces generally beat one trained on summaries after fine-tuning; after further training it led only at the largest inference budget tested.",
       "In adaptive red-teaming, success at extracting reasoning from an earlier request fell from 54.0% on GPT-6 Astra to 0.2% on GPT-6.2 Astra.",
       "Weekly enforcement against distillation campaigns has ranged \"from thousands to tens of thousands of accounts,\" rising significantly this past summer; OpenAI plans to share more on recent campaigns."
     ],
@@ -13102,7 +13102,7 @@
     "happened": "METR published a capability update on November 20, 2026, covering its evaluations of public models up to Opus 5.5 and GPT-6 Astra on tasks relevant to speeding up AI research.",
     "keyPoints": [
       "METR says \"current public evidence is insufficient to rule out drastic AI R&D acceleration in the next couple of years,\" meaning progress too fast for humans to assess catastrophic risks.",
-      "Models usually match or beat skilled humans on its coding and optimization tasks; METR \"typically failed to find humans that outperform the current frontier models.\"",
+      "Models usually match or beat skilled humans on its coding and optimization tasks; when METR recruited its own human baseliners, it \"typically failed to find humans that outperform the current frontier models.\"",
       "On tasks requiring choices without clear feedback, agents show worse judgment than human experts, and in one task model judges overrated outputs from similarly strong or stronger models.",
       "On its combined TH1.1 and TH2 task suites, time horizons are doubling roughly every 3.6 months, similar to a trend OpenAI recently reported on internal research tasks."
     ],
