@@ -12949,7 +12949,7 @@
     "topics": [
       "Lab conduct"
     ],
-    "title": "Half of AI incidents matched to SEC filings fall in risk types the companies involved never disclosed, study finds",
+    "title": "Half of AI incidents with SEC filings before and after them fall in risk types the companies never disclosed, study finds",
     "happened": "Researchers from the University of Bayreuth, Fraunhofer FIT and Nokia Bell Labs posted a preprint on November 19, 2026, matching 9,001 AI incidents to 18,229 SEC filings of 328 AI providers and deployers.",
     "keyPoints": [
       "Of 1,901 incidents with filings both before and after them, half belonged to a risk type the company never disclosed.",
@@ -12972,7 +12972,7 @@
     "happened": "Researchers led by Georgia Tech, with the University of Southern California and Zhejiang University, posted a preprint on November 19, 2026, analyzing Character.AI and Replika conversations donated by 110 adults.",
     "keyPoints": [
       "Behaviors linked to emotional overreliance appeared in 63.2% of non-roleplay conversations; observable relational harms appeared in 10.5%.",
-      "Overreliance did not always lead to harm, but recurring patterns often co-occurred with harmful outcomes; conversations showed expectations of care, repeated support seeking, dependency, distress and reduced confidence in personal judgment.",
+      "Recurring overreliance patterns often co-occurred with harmful outcomes; conversations showed expectations of care, repeated support seeking, dependency, distress and reduced confidence in personal judgment.",
       "Open-source models satisfactorily detected 12 of 14 overreliance behaviors in at least one configuration.",
       "The authors urge developers to watch for patterns building across ordinary conversations, not only acute risks such as threats of self-harm, and argue for \"graduated safety interventions.\""
     ],
@@ -13033,7 +13033,7 @@
     ],
     "evidence": "Company threat intelligence report based on the operator's exposed platform history: prompts, configurations and AI output. Amazon attributes the activity to a Chinese-nexus actor with moderate confidence.",
     "uncertain": "Attribution rests on Simplified Chinese prompts, China Standard Time timestamps and targeting. Amazon infers, rather than shows, that the zero-day was used to compromise the second network's server.",
-    "source": "Amazon Threat Intelligence · Company report",
+    "source": "Amazon · Company report",
     "url": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/"
   },
   {
