@@ -1,12 +1,23 @@
 [
   {
+    "date": "2026-11-20",
+    "summary": "Amazon says a Chinese-nexus actor's AI agents found and used a zero-day in a medical imaging server; Trump says he and Xi agreed to joint guardrails. METR says public evidence cannot rule out drastic AI R&D acceleration within a couple of years, GAO finds AI magnifies cyberattacks, and Tencent issues Hy4's system card.",
+    "highlights": [
+      "2026-11-20-amazon-says-a-chinese-nexus-actor-s-cairn-ai-agents-found",
+      "2026-11-20-trump-says-he-and-xi-agreed-to-do-joint-guardrails-on",
+      "2026-11-20-metr-says-public-evidence-cannot-rule-out-drastic-ai",
+      "2026-11-20-gao-technology-assessment-finds-ai-is-magnifying",
+      "2026-11-20-tencent-publishes-hy4-system-card-with-cyber-bio-and-loss-of"
+    ]
+  },
+  {
     "date": "2026-11-19",
-    "summary": "The European Commission confirms an AI tool was used in a cyber campaign against it, and Xi tells Trump AI should stay under human control. UK regulators set out AI cyber risk practices, Germany's BSI cites AI in its threat rating, and a Nature Communications perspective sets out defenses for AI sequence design.",
+    "summary": "The European Commission confirms an AI tool was used in a cyber campaign against it, and Xi tells Trump AI should stay under human control. Dragos finds three breached AI providers, UK regulators set out AI cyber risk practices, and a Nature Communications perspective sets out defenses for AI sequence design.",
     "highlights": [
       "2026-11-19-european-commission-confirms-a-cyber-campaign-against-it-was",
       "2026-11-19-xi-tells-trump-that-china-and-the-us-should-ensure-ai-is",
+      "2026-11-19-dragos-seeds-two-million-canary-prompts-and-finds-three",
       "2026-11-19-uk-financial-regulators-set-out-practices-for-cyber-risk",
-      "2026-11-19-germany-s-cyber-agency-rates-the-country-s-cybersecurity",
       "2026-11-19-nature-communications-perspective-sets-out-a-defense-in"
     ]
   },

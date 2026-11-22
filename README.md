@@ -4,31 +4,33 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 677 dated, sourced entries drawn as a burst, one dot per entry: 130 warnings, 175 incidents, 170 governance, 202 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 691 dated, sourced entries drawn as a burst, one dot per entry: 133 warnings, 178 incidents, 170 governance, 210 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 677 entries from Mar 22, 2023 to Nov 20, 2026 (130 warnings, 175 incidents, 170 governance, 202 research), drawn from 345 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 691 entries from Mar 22, 2023 to Nov 21, 2026 (133 warnings, 178 incidents, 170 governance, 210 research), drawn from 349 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 20, 2026, filed under Warnings:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 21, 2026, filed under Warnings:
 
-> **Signal says AI agents built into phone operating systems threaten private messaging and blocks their screen capture**
+> **ICRC says the CCW review conference failed to agree a clear and immediate mandate to negotiate binding rules on autonomous weapons**
 >
-> **What happened.** In a blog post by Meredith Whittaker on November 20, 2026, Signal said it is blocking AI agents built into iOS 27, and on Android versions where it can detect them, from capturing its screen.
+> **What happened.** The International Committee of the Red Cross said on November 21, 2026 that the Seventh Review Conference of the Convention on Certain Conventional Weapons, in Geneva, failed to agree a clear and immediate negotiation mandate.
 >
 > **Key points.**
 >
-> - Signal says OS agents such as Gemini Intelligence and Siri's Onscreen Awareness capture on-screen data, calling this "an existential threat to Signal, and our ability to responsibly uphold our mission."
-> - Signal now blocks screenshots on iOS 27 and turns on screen security on Android when it detects an AI assistant reading the screen; users can switch this off.
-> - It calls its remedy incomplete: agents may still reach app data through the filesystem, and it cannot block screenshots on macOS for lack of documented tools.
-> - It asks Apple, Google and Microsoft for a documented way for apps to opt out of AI data access, and clear specifications of how these agents handle data.
+> - The ICRC "regrets" the conference "failed to agree to a clear and immediate negotiation mandate for a legally binding instrument to regulate autonomous weapons systems."
+> - It says rules are urgent because "AI systems increasingly demonstrate the potential to act beyond the control of those developing, testing or using them."
+> - It urges states to deliver on what it describes as the call by 163 states, in last month's UN First Committee resolution, to negotiate an instrument.
+> - It says a future treaty should prohibit unpredictable autonomous weapons and those that target humans directly, and restrict other autonomous weapons.
 >
-> **Evidence.** Company blog post stating Signal's position and a product change. It describes how OS agents capture data; it reports no specific case of Signal messages being misused.
+> **Evidence.** ICRC statement giving its own view of the conference outcome. It does not describe what states did agree instead.
 >
-> **Source.** [Signal · Company post](https://signal.org/blog/protecting-your-privacy/)
+> **Uncertain.** The conference's adopted final document was not posted on the UN disarmament office's meeting page when checked on November 21, 2026.
+>
+> **Source.** [International Committee of the Red Cross · Statement](https://www.icrc.org/en/statement/icrc-renews-urgent-call-legally-binding-rules-autonomous-weapons)
 
 ## Run it locally
 
