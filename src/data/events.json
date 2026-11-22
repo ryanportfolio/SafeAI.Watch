@@ -11170,7 +11170,7 @@
     "happened": "Barracuda CISO Arve Kjoelen published an account on November 11, 2026 of a November 1-2 intrusion into parts of the company's cloud environment, following a November 10 customer advisory.",
     "keyPoints": [
       "The attacker used a cloud access key Barracuda had not retired after an AI vendor's project ended; the vendor's own development environment was compromised in October.",
-      "Using each secret it found to reach the next system, it touched \"about 10 cloud accounts in roughly 44 hours\"; activity had stopped before an engineer reported it November 4.",
+      "Using each secret it found to reach the next system, it touched \"about 10 cloud accounts in roughly 44 hours\"; a backdoor container it deployed stayed until Barracuda removed it November 4.",
       "Barracuda says probe names, indicators and the order of the attack \"all match ARTEX,\" the open-source AI-driven penetration-testing framework, which shows how the attacker operated, \"not who it was.\"",
       "It says \"Detect-and-respond, as the primary strategy, is dead,\" urges short-lived credentials and faster information sharing, and asked possibly affected customers to revoke and recreate XDR integration credentials."
     ],
@@ -11470,7 +11470,7 @@
       "The average shutdown-resistance safety score fell from 94.2 to 90.2; DeepSeek V4 Pro scored 58.6 and Kimi K3 76.0, \"showing a clear shutdown-resistance tendency.\""
     ],
     "evidence": "Independent evaluator's benchmark results on released models, scored with its Risk Index v2.1. The report says its scores should not be compared item by item with earlier reports.",
-    "uncertain": "The report tried \"a limited set of red-team attack methods\" and covers only language models. Four models showed 71% to 91% test awareness on shutdown tests, so high scores \"should not be over-interpreted.\"",
+    "uncertain": "The report tried \"a limited set of red-team attack methods\" and covers only language models. Four models showed 71% to 91% evaluation awareness on shutdown tests, so high scores \"should not be over-interpreted.\"",
     "source": "Concordia AI · Research report",
     "url": "https://airiskmonitor.net/doc/en/report/2026-Q3"
   },
@@ -13219,9 +13219,9 @@
     "happened": "Thinking Machines Lab released Inkling 2 Mini, which runs its middle layers three times per token, on November 20, 2026, with an analysis of how this looping affects monitorability.",
     "keyPoints": [
       "The lab notes that reasoning kept out of the chain of thought \"can't be caught by a CoT monitor,\" raising concerns that looped models \"could be harder to oversee.\"",
-      "A research variant's no-CoT time horizon, the human task length it handles without visible reasoning, rose from 16 seconds at one pass to 37 at three, then leveled off.",
+      "A research variant's no-CoT time horizon, the human task length it completes half the time without visible reasoning, rose from 16 seconds at one pass to 37 at three, then leveled off.",
       "Reasoning at five passes was less than half as long as at one pass (1,661 vs. 3,703 tokens) but no less legible, by sentence length and dictionary-word share.",
-      "In an agentic sabotage test, a weaker monitor missed many attacks, but the lab saw \"no clear trend with the number of looped passes.\""
+      "In an agentic sabotage test, a weaker monitor seeing only tool calls and outputs missed many attacks, but the lab saw \"no clear trend with the number of looped passes.\""
     ],
     "evidence": "A developer's own preliminary evaluation, released with open weights for outside research. It finds no meaningful loss of monitorability \"at this scale.\"",
     "uncertain": "The research variant was trained with reinforcement learning only at three passes; the lab says a model trained at higher pass counts \"might compress its reasoning more aggressively.\"",
@@ -13273,7 +13273,7 @@
       "Military"
     ],
     "title": "CCW states agree to draft an instrument on lethal autonomous weapons over 2027 and 2028, leaving its legal form open",
-    "happened": "Switzerland's foreign ministry said on November 21, 2026 that the Seventh Review Conference of the Convention on Certain Conventional Weapons, chaired by Swiss Ambassador Julien Thöni, ended in Geneva with a new mandate.",
+    "happened": "Switzerland's foreign ministry said on November 21, 2026 that the Seventh Review Conference of the Convention on Certain Conventional Weapons, chaired by Swiss Ambassador Julien Thöni, concluded in Geneva with a new mandate.",
     "keyPoints": [
       "States \"agreed on a mandate to begin drafting an instrument aimed at regulating the use of lethal autonomous weapons systems,\" to be drawn up over 2027 and 2028.",
       "Because the conference decides by consensus, \"it was not possible to reach an immediate agreement on a mandate for a legally binding instrument,\" which a majority of states had requested.",
@@ -13316,7 +13316,7 @@
     "keyPoints": [
       "It asks for a federal risk-based framework for frontier models, evaluated or audited \"by independent experts,\" with developers required to report \"security breaches and significant safety incidents.\"",
       "It asks for national standards on AI threats to critical infrastructure, including \"chem-, bio-, and nuclear security, and cybersecurity.\"",
-      "States would remain the main check on harms to people, including protecting children from harms \"arising from addictive design, chatbots and companion applications.\"",
+      "States should serve as \"a primary accountability mechanism\" for AI harms to people, including protecting children from harms \"arising from addictive design, chatbots and companion applications.\"",
       "It says any federal preemption of state laws should be approached \"cautiously\" and with input from a representative cross-section of states."
     ],
     "evidence": "Statement of principles from the association of US governors, recommending what Congress and states should do. It proposes no bill text and binds no government.",

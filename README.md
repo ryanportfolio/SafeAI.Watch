@@ -23,7 +23,7 @@ Every entry sets out what happened, the source's key points and what the evidenc
 >
 > - It asks for a federal risk-based framework for frontier models, evaluated or audited "by independent experts," with developers required to report "security breaches and significant safety incidents."
 > - It asks for national standards on AI threats to critical infrastructure, including "chem-, bio-, and nuclear security, and cybersecurity."
-> - States would remain the main check on harms to people, including protecting children from harms "arising from addictive design, chatbots and companion applications."
+> - States should serve as "a primary accountability mechanism" for AI harms to people, including protecting children from harms "arising from addictive design, chatbots and companion applications."
 > - It says any federal preemption of state laws should be approached "cautiously" and with input from a representative cross-section of states.
 >
 > **Evidence.** Statement of principles from the association of US governors, recommending what Congress and states should do. It proposes no bill text and binds no government.
