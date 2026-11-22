@@ -4,33 +4,31 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 691 dated, sourced entries drawn as a burst, one dot per entry: 133 warnings, 178 incidents, 170 governance, 210 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 701 dated, sourced entries drawn as a burst, one dot per entry: 135 warnings, 181 incidents, 173 governance, 212 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 691 entries from Mar 22, 2023 to Nov 21, 2026 (133 warnings, 178 incidents, 170 governance, 210 research), drawn from 349 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 701 entries from Mar 22, 2023 to Nov 22, 2026 (135 warnings, 181 incidents, 173 governance, 212 research), drawn from 356 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 21, 2026, filed under Warnings:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 22, 2026, filed under Governance:
 
-> **ICRC says the CCW review conference failed to agree a clear and immediate mandate to negotiate binding rules on autonomous weapons**
+> **US governors ask Congress for a frontier AI framework with independent evaluation and incident reporting, while keeping state authority**
 >
-> **What happened.** The International Committee of the Red Cross said on November 21, 2026 that the Seventh Review Conference of the Convention on Certain Conventional Weapons, in Geneva, failed to agree a clear and immediate negotiation mandate.
+> **What happened.** The National Governors Association released principles for state and federal AI regulation on November 22, 2026, drawn up by its Governors Council to Secure American AI Dominance.
 >
 > **Key points.**
 >
-> - The ICRC "regrets" the conference "failed to agree to a clear and immediate negotiation mandate for a legally binding instrument to regulate autonomous weapons systems."
-> - It says rules are urgent because "AI systems increasingly demonstrate the potential to act beyond the control of those developing, testing or using them."
-> - It urges states to deliver on what it describes as the call by 163 states, in last month's UN First Committee resolution, to negotiate an instrument.
-> - It says a future treaty should prohibit unpredictable autonomous weapons and those that target humans directly, and restrict other autonomous weapons.
+> - It asks for a federal risk-based framework for frontier models, evaluated or audited "by independent experts," with developers required to report "security breaches and significant safety incidents."
+> - It asks for national standards on AI threats to critical infrastructure, including "chem-, bio-, and nuclear security, and cybersecurity."
+> - States would remain the main check on harms to people, including protecting children from harms "arising from addictive design, chatbots and companion applications."
+> - It says any federal preemption of state laws should be approached "cautiously" and with input from a representative cross-section of states.
 >
-> **Evidence.** ICRC statement giving its own view of the conference outcome. It does not describe what states did agree instead.
+> **Evidence.** Statement of principles from the association of US governors, recommending what Congress and states should do. It proposes no bill text and binds no government.
 >
-> **Uncertain.** The conference's adopted final document was not posted on the UN disarmament office's meeting page when checked on November 21, 2026.
->
-> **Source.** [International Committee of the Red Cross · Statement](https://www.icrc.org/en/statement/icrc-renews-urgent-call-legally-binding-rules-autonomous-weapons)
+> **Source.** [National Governors Association · Statement](https://www.nga.org/wp-content/uploads/2026/11/NGA_AI_Princples_Nov2026.pdf)
 
 ## Run it locally
 
