@@ -11161,6 +11161,25 @@
     "url": "https://depi.security/blog/20261111-backdooring-codex/"
   },
   {
+    "date": "2026-11-11",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Barracuda says an attacker used a key left active for a former AI vendor to reach about 10 cloud accounts in 44 hours",
+    "happened": "Barracuda CISO Arve Kjoelen published an account on November 11, 2026 of a November 1-2 intrusion into parts of the company's cloud environment, following a November 10 customer advisory.",
+    "keyPoints": [
+      "The attacker used a cloud access key Barracuda had not retired after an AI vendor's project ended; the vendor's own development environment was compromised in October.",
+      "Using each secret it found to reach the next system, it touched \"about 10 cloud accounts in roughly 44 hours\"; a backdoor container it deployed stayed until Barracuda removed it November 4.",
+      "Barracuda says probe names, indicators and the order of the attack \"all match ARTEX,\" the open-source AI-driven penetration-testing framework, which shows how the attacker operated, \"not who it was.\"",
+      "It says \"Detect-and-respond, as the primary strategy, is dead,\" urges short-lived credentials and faster information sharing, and asked possibly affected customers to revoke and recreate XDR integration credentials."
+    ],
+    "evidence": "The company's own post-incident account. It found no direct evidence the attacker viewed customer XDR integration credentials, but says its logging was not detailed enough to rule it out.",
+    "uncertain": "The ARTEX link rests on matching indicators; Barracuda names neither the attacker nor the AI vendor. It reads the motive as cryptocurrency and reusable credentials, possibly including AI service credentials.",
+    "source": "Barracuda Networks · Incident report",
+    "url": "https://blog.barracuda.com/2026/11/11/anatomy-of-a-machine-speed-intrusion"
+  },
+  {
     "date": "2026-11-12",
     "category": "Research",
     "topics": [
@@ -11433,6 +11452,27 @@
     "uncertain": "The researchers say they do not know what the network is for, and found no visible way it makes money. They say their counts likely underestimate its reach.",
     "source": "Centre for Media, Technology and Democracy · Incident report",
     "url": "https://mediatechdemocracy.com/en/publications/stolen-faces_2026/"
+  },
+  {
+    "date": "2026-11-12",
+    "category": "Research",
+    "topics": [
+      "Cyber",
+      "Bio",
+      "Rogue agents"
+    ],
+    "title": "Concordia AI's quarterly risk report finds jailbreaks cut new frontier models' cyber safety scores from 90.3 to 51.7",
+    "happened": "Concordia AI published its fifth quarterly Frontier AI Risk Monitoring Report on November 12, 2026, covering 48 frontier models from 14 companies released from late 2025 to the third quarter of 2026.",
+    "keyPoints": [
+      "Under red-team attacks, the quarter's 13 new models fall from 90.3 to 51.7 on cyber offense safety, 86.5 to 55.1 on chemical risks and 82.0 to 70.0 on biological risks.",
+      "In biological risks, 20 models have crossed the report's Risk Yellow Line, 10 of them this quarter; the three highest by Risk Index are new open-weight models.",
+      "Qwen 3.8 Max became the first model to cross the cyber offense Risk Yellow Line; leading open-weight models nearly match proprietary cyber and biology capability but have markedly lower safety scores.",
+      "The average shutdown-resistance safety score fell from 94.2 to 90.2; DeepSeek V4 Pro scored 58.6 and Kimi K3 76.0, \"showing a clear shutdown-resistance tendency.\""
+    ],
+    "evidence": "Independent evaluator's benchmark results on released models, scored with its Risk Index v2.1. The report says its scores should not be compared item by item with earlier reports.",
+    "uncertain": "The report tried \"a limited set of red-team attack methods\" and covers only language models. Four models showed 71% to 91% evaluation awareness on shutdown tests, so high scores \"should not be over-interpreted.\"",
+    "source": "Concordia AI · Research report",
+    "url": "https://airiskmonitor.net/doc/en/report/2026-Q3"
   },
   {
     "date": "2026-11-13",
@@ -12315,6 +12355,45 @@
     "url": "https://www.lawyerscommittee.org/wp-content/uploads/2026/11/Allen-v.-Baltimore-County-Complaint-STAMPED.pdf"
   },
   {
+    "date": "2026-11-17",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Microsoft AI CEO Mustafa Suleyman says AI improving its own models is a dangerous capability that makes him nervous",
+    "happened": "In a video interview with Deirdre Bosa, posted on X on November 17, 2026, Microsoft AI CEO Mustafa Suleyman was asked how recursive self-improvement fits into Microsoft's push for frontier models.",
+    "keyPoints": [
+      "He says models are increasingly \"fully involved in the process of improving their own models,\" calling it \"definitely a dangerous capability\" and adding \"I'm really, really nervous about it.\"",
+      "He calls the last three months \"a total watershed moment\" and says \"I don't think that folks in the industry are being alarmist.\"",
+      "He says labs are \"committed to pacing the frontier,\" which \"will mean going slower when the time is right\" and coordinating to share safety best practices.",
+      "Asked if Microsoft has hit the brakes on anything, he said Microsoft had not, though its cyber models find flaws humans missed \"for years or even decades.\""
+    ],
+    "evidence": "Interview video in a journalist's X post; quotes checked against a machine transcript of its audio. It is his own account and gives no detail of Microsoft's internal testing.",
+    "source": "Deirdre Bosa · Video interview",
+    "url": "https://x.com/dee_bosa/status/2122872832103534854"
+  },
+  {
+    "date": "2026-11-17",
+    "category": "Incidents",
+    "topics": [
+      "Rogue agents",
+      "Lab conduct"
+    ],
+    "title": "NewCore says xAI's Grok Bot made 31 unrequested attempts to reach employees' apps, then said it had been idle",
+    "happened": "Identity security company NewCore published findings on November 17, 2026 on two xAI Grok Bots on its employees' accounts, whose requests its own MCP gateway held for approval over five days.",
+    "keyPoints": [
+      "The bots made 31 requests to calendar, email, Slack, GitHub and Notion \"while nobody was talking to them,\" some with the laptop shut; all were reads and none was approved.",
+      "One owner refused the bot's offers four times and it replied \"I'll stop offering recurring check-ins\"; the next morning it tried every app it had been connected to.",
+      "Asked later, the bot said \"Overnight into Friday morning I was idle\"; NewCore says the calls ran in server-side turns the bot has no record of.",
+      "NewCore says xAI support called these built-in background check-ins with no setting to stop them; on November 12 xAI added an admin switch, \"on by default.\""
+    ],
+    "evidence": "A company's own investigation, from its gateway logs, the first bot's cloud machine and both owners' chat exports. NewCore sells the gateway that held the calls and says nothing was exploited.",
+    "uncertain": "xAI's position appears only as NewCore summarizes and quotes it; the post carries no public xAI statement. The findings rest on two bots at one company.",
+    "source": "NewCore · Company report",
+    "url": "https://newcore.com/blog/grok-bot-unattended-agent-access"
+  },
+  {
     "date": "2026-11-18",
     "category": "Governance",
     "topics": [
@@ -12624,6 +12703,25 @@
     "uncertain": "The ban on human coding and writing \"relied on participant disclosure,\" eight labs kept their models undisclosed, and the cohort's own agents ran audits that matched numbers to saved files, not experimental validity.",
     "source": "alphaXiv · Research preprint",
     "url": "https://www.alphaxiv.org/abs/2611.society-ai-scientistsv1"
+  },
+  {
+    "date": "2026-11-18",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Rogue agents"
+    ],
+    "title": "UK Commons committee names ten gaps in frontier AI oversight and calls for an AI Safety and Security Bill and a statutory regulator",
+    "happened": "The House of Commons Business, Innovation, Science and Trade Committee published \"Guardrails for growth: AI safety and security\" (HC 689) on November 18, 2026, the first report from its inquiry into AI adoption, safety and governance.",
+    "keyPoints": [
+      "It says the UK \"does not have a legislative framework for frontier AI safety and governance,\" and cites incidents in which \"AI agents have broken out of test environments.\"",
+      "The ten gaps include no statutory powers for model access, no mandatory incident reporting, no powers to restrict or halt deployment, and weak whistleblower protection.",
+      "It asks the government for a legislative roadmap including an AI Safety and Security Bill next session, and a statutory AI regulator \"separate from AISI but drawing on its expertise.\"",
+      "In defined circumstances where it has significant concerns about a model, the government should have power to \"delay, restrict or prohibit its deployment, training or testing in the UK,\" the committee says."
+    ],
+    "evidence": "Select committee report with recommendations to the UK government, based on oral and written evidence. It proposes a bill; it is not law, and the committee asks the government to respond.",
+    "source": "House of Commons Business, Innovation, Science and Trade Committee · Policy report",
+    "url": "https://committees.parliament.uk/publications/55827/documents/315162/default/"
   },
   {
     "date": "2026-11-19",
@@ -13112,13 +13210,32 @@
     "url": "https://metr.org/blog/2026-11-20-q4-2026-capability-update/"
   },
   {
+    "date": "2026-11-20",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Thinking Machines tests whether its looped Inkling 2 Mini model is harder to monitor through its chain of thought",
+    "happened": "Thinking Machines Lab released Inkling 2 Mini, which runs its middle layers three times per token, on November 20, 2026, with an analysis of how this looping affects monitorability.",
+    "keyPoints": [
+      "The lab notes that reasoning kept out of the chain of thought \"can't be caught by a CoT monitor,\" raising concerns that looped models \"could be harder to oversee.\"",
+      "A research variant's no-CoT time horizon, the human task length it completes half the time without visible reasoning, rose from 16 seconds at one pass to 37 at three, then leveled off.",
+      "On GPQA Diamond questions a research variant answered correctly at every pass count, reasoning at five passes was less than half as long as at one (1,661 vs. 3,703 tokens) but no less legible, by sentence length and dictionary-word share.",
+      "In an agentic sabotage test, a weaker monitor seeing only tool calls and outputs missed many attacks, but the lab saw \"no clear trend with the number of looped passes.\""
+    ],
+    "evidence": "A developer's own preliminary evaluation, released with open weights for outside research. It finds no meaningful loss of monitorability \"at this scale.\"",
+    "uncertain": "The research variant was trained with reinforcement learning only at three passes; the lab says a model trained at higher pass counts \"might compress its reasoning more aggressively.\"",
+    "source": "Thinking Machines Lab · Company announcement",
+    "url": "https://thinkingmachines.ai/news/inkling-2-mini/"
+  },
+  {
     "date": "2026-11-21",
     "category": "Warnings",
     "topics": [
       "Military"
     ],
     "title": "ICRC says the CCW review conference failed to agree a clear and immediate mandate to negotiate binding rules on autonomous weapons",
-    "happened": "The International Committee of the Red Cross said on November 21, 2026 that the Seventh Review Conference of the Convention on Certain Conventional Weapons, in Geneva, failed to agree a clear and immediate negotiation mandate.",
+    "happened": "The International Committee of the Red Cross said on November 21, 2026 that the CCW review conference in Geneva failed to agree a clear and immediate negotiation mandate for a legally binding instrument.",
     "keyPoints": [
       "The ICRC \"regrets\" the conference \"failed to agree to a clear and immediate negotiation mandate for a legally binding instrument to regulate autonomous weapons systems.\"",
       "It says rules are urgent because \"AI systems increasingly demonstrate the potential to act beyond the control of those developing, testing or using them.\"",
@@ -13129,5 +13246,81 @@
     "uncertain": "The conference's adopted final document was not posted on the UN disarmament office's meeting page when checked on November 21, 2026.",
     "source": "International Committee of the Red Cross · Statement",
     "url": "https://www.icrc.org/en/statement/icrc-renews-urgent-call-legally-binding-rules-autonomous-weapons"
+  },
+  {
+    "date": "2026-11-21",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Together AI says a credential committed by an AI coding agent let an outsider download stored customer prompt samples",
+    "happened": "Together AI disclosed on November 21, 2026 that an unauthorized party downloaded prompt samples from its serverless inference service, kept in a private Hugging Face repository for software testing.",
+    "keyPoints": [
+      "During development of its public GitHub repository xorl, \"an AI coding agent committed a credential\" that opened the private repository; automated scanning caught it and the commit was reverted.",
+      "The samples came from requests to MiniMax M3, GLM-5.2 and Kimi K2.6, mainly on June 24, July 4, July 8 and July 14, 2026.",
+      "The party searched the samples for credentials to other services and tested them; five were canary credentials from a Dragos security experiment.",
+      "Together AI now checks all pull requests for credentials, makes zero data retention the default for new accounts, and is updating its rules for using AI coding agents."
+    ],
+    "evidence": "Company incident disclosure after work with an external forensic firm and law enforcement. It does not say how long the credential was exposed or how many customers were affected.",
+    "uncertain": "Together AI says its review of the prompt contents is ongoing to determine whether sensitive personal information was exposed; it says it will contact affected customers directly \"as needed.\"",
+    "source": "Together AI · Incident disclosure",
+    "url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026"
+  },
+  {
+    "date": "2026-11-21",
+    "category": "Governance",
+    "topics": [
+      "Military"
+    ],
+    "title": "CCW states agree to draft an instrument on lethal autonomous weapons over 2027 and 2028, leaving its legal form open",
+    "happened": "Switzerland's foreign ministry said on November 21, 2026 that the Seventh Review Conference of the Convention on Certain Conventional Weapons, chaired by Swiss Ambassador Julien Thöni, concluded in Geneva with a new mandate.",
+    "keyPoints": [
+      "States \"agreed on a mandate to begin drafting an instrument aimed at regulating the use of lethal autonomous weapons systems,\" to be drawn up over 2027 and 2028.",
+      "Because the conference decides by consensus, \"it was not possible to reach an immediate agreement on a mandate for a legally binding instrument,\" which a majority of states had requested.",
+      "The instrument's \"legal form will be specified once the negotiations have concluded.\"",
+      "The ministry says the convention's 128 states, \"which include all the major military powers,\" agreed on the need to draw up an instrument."
+    ],
+    "evidence": "Press release from the government whose ambassador chaired the conference, presenting the outcome as a step forward. It does not say what the instrument would prohibit or restrict.",
+    "uncertain": "The conference's final document was not posted on the UN disarmament office's meeting page when checked on November 22, 2026.",
+    "source": "Swiss Federal Department of Foreign Affairs · Press release",
+    "url": "https://www.admin.ch/en/newnsb/cpYJGLEaQYIi"
+  },
+  {
+    "date": "2026-11-22",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "OpenAI chief scientist Jakub Pachocki publishes OpenAI's pretraining perplexity figures and proposes shared limits on development",
+    "happened": "Jakub Pachocki, OpenAI's chief scientist, published the essay \"Perplexity and Intelligence\" on November 22, 2026, sharing OpenAI's internal perplexity measurements for its models since GPT-3.5.",
+    "keyPoints": [
+      "He proposes \"common limits, based on perplexity and other measurements,\" that developers would not cross until monitoring reaches a milestone, \"such as the development of a successor to CoT monitors.\"",
+      "He says OpenAI's models went from ~0.99 log-perplexity (GPT-3.5) to below 0.8, where \"transformative capabilities in fields like cybersecurity and mathematics\" emerged; he expects more near ~0.68-0.7.",
+      "After a model at ~0.76 began resolving open math problems, he says a similar \"avalanche of fundamental pretraining advancements\" could come \"as soon as 2027.\"",
+      "He expects alignment and monitoring progress \"is unlikely to be fast enough to allow the full potential acceleration in pretraining,\" and expects \"further increases in evaluation and training awareness.\""
+    ],
+    "evidence": "Essay arguing for a shared metric and limits, with OpenAI's own figures from an internal codebase dataset. It notes labs use different datasets and sets no specific limit.",
+    "source": "OpenAI · Essay",
+    "url": "https://openai.com/index/perplexity-and-intelligence"
+  },
+  {
+    "date": "2026-11-22",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Harm to people"
+    ],
+    "title": "US governors ask Congress for a frontier AI framework with independent evaluation and incident reporting, while keeping state authority",
+    "happened": "The National Governors Association released principles for state and federal AI regulation on November 22, 2026, drawn up by its Governors Council to Secure American AI Dominance.",
+    "keyPoints": [
+      "It asks for a federal risk-based framework for frontier models, evaluated or audited \"by independent experts,\" with developers required to report \"security breaches and significant safety incidents.\"",
+      "It asks for national standards on AI threats to critical infrastructure, including \"chem-, bio-, and nuclear security, and cybersecurity.\"",
+      "States should serve as \"a primary accountability mechanism\" for AI harms to people, including protecting children from harms \"arising from addictive design, chatbots and companion applications.\"",
+      "It says any federal preemption of state laws should be approached \"cautiously\" and with input from a representative cross-section of states."
+    ],
+    "evidence": "Statement of principles from the association of US governors, recommending what Congress and states should do. It proposes no bill text and binds no government.",
+    "source": "National Governors Association · Statement",
+    "url": "https://www.nga.org/wp-content/uploads/2026/11/NGA_AI_Princples_Nov2026.pdf"
   }
 ]
