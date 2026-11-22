@@ -13064,7 +13064,7 @@
       "Alignment"
     ],
     "title": "Tencent publishes Hy4 system card with cyber, bio and loss-of-control evaluations, including third-party tests",
-    "happened": "Tencent's Hy team published a system card on November 20, 2026, for Hy4, its 770B-parameter mixture-of-experts language model, which it plans to release as open weights.",
+    "happened": "Tencent's Hy team published a system card on November 20, 2026, for Hy4, its 770B-parameter mixture-of-experts language model.",
     "keyPoints": [
       "Tencent removed offensive cyber material from training, yet coding gains let Hy4 \"partially reconstruct exploitation and reverse-engineering capabilities\"; its end-to-end attack ability is \"still rudimentary,\" Tencent says.",
       "Hy4 shows broader dual-use biology knowledge and better lab troubleshooting, but Tencent found no evidence it significantly lowers the barrier to biological harm; it flags experimental design for monitoring.",
@@ -13104,7 +13104,7 @@
       "METR says \"current public evidence is insufficient to rule out drastic AI R&D acceleration in the next couple of years,\" meaning progress too fast for humans to assess catastrophic risks.",
       "Models usually match or beat skilled humans on its coding and optimization tasks; when METR recruited its own human baseliners, it \"typically failed to find humans that outperform the current frontier models.\"",
       "On tasks requiring choices without clear feedback, agents show worse judgment than human experts, and in one task model judges overrated outputs from similarly strong or stronger models.",
-      "On its combined TH1.1 and TH2 task suites, time horizons are doubling roughly every 3.6 months, similar to a trend OpenAI recently reported on internal research tasks."
+      "On its combined TH1.1 and TH2 task suites, time horizons are doubling roughly every 3.6 months, similar to a trend METR says recently published OpenAI data seems to imply."
     ],
     "evidence": "Independent evaluator's report on its own tests of public models, adding a harder task suite. It measures capabilities relevant to AI research, not progress inside any one lab.",
     "uncertain": "METR says it remains \"significantly uncertain\" about which capabilities drastic acceleration needs and how fast they are improving, and worries its containerized tests could overestimate real-world capability.",
