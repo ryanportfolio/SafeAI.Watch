@@ -11176,7 +11176,7 @@
     ],
     "evidence": "The company's own post-incident account. It found no direct evidence the attacker viewed customer XDR integration credentials, but says its logging was not detailed enough to rule it out.",
     "uncertain": "The ARTEX link rests on matching indicators; Barracuda names neither the attacker nor the AI vendor. It reads the motive as cryptocurrency and reusable credentials, possibly including AI service credentials.",
-    "source": "Barracuda · Incident report",
+    "source": "Barracuda Networks · Incident report",
     "url": "https://blog.barracuda.com/2026/11/11/anatomy-of-a-machine-speed-intrusion"
   },
   {
@@ -12367,7 +12367,7 @@
       "He says models are increasingly \"fully involved in the process of improving their own models,\" calling it \"definitely a dangerous capability\" and adding \"I'm really, really nervous about it.\"",
       "He calls the last three months \"a total watershed moment\" and says \"I don't think that folks in the industry are being alarmist.\"",
       "He says labs are \"committed to pacing the frontier,\" which \"will mean going slower when the time is right\" and coordinating to share safety best practices.",
-      "Asked if Microsoft has hit the brakes on anything, he said \"We haven't in our side, no,\" though its cyber models find flaws humans missed \"for years or even decades.\""
+      "Asked if Microsoft has hit the brakes on anything, he said Microsoft had not, though its cyber models find flaws humans missed \"for years or even decades.\""
     ],
     "evidence": "Interview video in a journalist's X post; quotes checked against a machine transcript of its audio. It is his own account and gives no detail of Microsoft's internal testing.",
     "source": "Deirdre Bosa · Video interview",
@@ -12717,7 +12717,7 @@
       "It says the UK \"does not have a legislative framework for frontier AI safety and governance,\" and cites incidents in which \"AI agents have broken out of test environments.\"",
       "The ten gaps include no statutory powers for model access, no mandatory incident reporting, no powers to restrict or halt deployment, and weak whistleblower protection.",
       "It asks the government for a legislative roadmap including an AI Safety and Security Bill next session, and a statutory AI regulator \"separate from AISI but drawing on its expertise.\"",
-      "Where it has significant concerns about a model, the government should have power to \"delay, restrict or prohibit its deployment, training or testing in the UK,\" the committee says."
+      "In defined circumstances where it has significant concerns about a model, the government should have power to \"delay, restrict or prohibit its deployment, training or testing in the UK,\" the committee says."
     ],
     "evidence": "Select committee report with recommendations to the UK government, based on oral and written evidence. It proposes a bill; it is not law, and the committee asks the government to respond.",
     "source": "House of Commons Business, Innovation, Science and Trade Committee · Policy report",
@@ -13220,7 +13220,7 @@
     "keyPoints": [
       "The lab notes that reasoning kept out of the chain of thought \"can't be caught by a CoT monitor,\" raising concerns that looped models \"could be harder to oversee.\"",
       "A research variant's no-CoT time horizon, the human task length it completes half the time without visible reasoning, rose from 16 seconds at one pass to 37 at three, then leveled off.",
-      "Reasoning at five passes was less than half as long as at one pass (1,661 vs. 3,703 tokens) but no less legible, by sentence length and dictionary-word share.",
+      "On GPQA Diamond questions a research variant answered correctly at every pass count, reasoning at five passes was less than half as long as at one (1,661 vs. 3,703 tokens) but no less legible, by sentence length and dictionary-word share.",
       "In an agentic sabotage test, a weaker monitor seeing only tool calls and outputs missed many attacks, but the lab saw \"no clear trend with the number of looped passes.\""
     ],
     "evidence": "A developer's own preliminary evaluation, released with open weights for outside research. It finds no meaningful loss of monitorability \"at this scale.\"",
@@ -13235,7 +13235,7 @@
       "Military"
     ],
     "title": "ICRC says the CCW review conference failed to agree a clear and immediate mandate to negotiate binding rules on autonomous weapons",
-    "happened": "The International Committee of the Red Cross said on November 21, 2026 that the Seventh Review Conference of the Convention on Certain Conventional Weapons, in Geneva, failed to agree a clear and immediate negotiation mandate.",
+    "happened": "The International Committee of the Red Cross said on November 21, 2026 that the CCW review conference in Geneva failed to agree a clear and immediate negotiation mandate for a legally binding instrument.",
     "keyPoints": [
       "The ICRC \"regrets\" the conference \"failed to agree to a clear and immediate negotiation mandate for a legally binding instrument to regulate autonomous weapons systems.\"",
       "It says rules are urgent because \"AI systems increasingly demonstrate the potential to act beyond the control of those developing, testing or using them.\"",
@@ -13262,7 +13262,7 @@
       "Together AI now checks all pull requests for credentials, makes zero data retention the default for new accounts, and is updating its rules for using AI coding agents."
     ],
     "evidence": "Company incident disclosure after work with an external forensic firm and law enforcement. It does not say how long the credential was exposed or how many customers were affected.",
-    "uncertain": "Together AI says its review of the prompt contents is ongoing to determine whether sensitive personal information was exposed; it will contact affected customers directly.",
+    "uncertain": "Together AI says its review of the prompt contents is ongoing to determine whether sensitive personal information was exposed; it says it will contact affected customers directly \"as needed.\"",
     "source": "Together AI · Incident disclosure",
     "url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026"
   },
@@ -13278,7 +13278,7 @@
       "States \"agreed on a mandate to begin drafting an instrument aimed at regulating the use of lethal autonomous weapons systems,\" to be drawn up over 2027 and 2028.",
       "Because the conference decides by consensus, \"it was not possible to reach an immediate agreement on a mandate for a legally binding instrument,\" which a majority of states had requested.",
       "The instrument's \"legal form will be specified once the negotiations have concluded.\"",
-      "The ministry says the convention's 128 signatory states, \"which include all the major military powers,\" agreed on the need to draw up an instrument."
+      "The ministry says the convention's 128 states, \"which include all the major military powers,\" agreed on the need to draw up an instrument."
     ],
     "evidence": "Press release from the government whose ambassador chaired the conference, presenting the outcome as a step forward. It does not say what the instrument would prohibit or restrict.",
     "uncertain": "The conference's final document was not posted on the UN disarmament office's meeting page when checked on November 22, 2026.",
