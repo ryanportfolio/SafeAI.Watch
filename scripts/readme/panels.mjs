@@ -113,10 +113,7 @@ function burst(t, facts, cx, cy, R, small) {
   }
   out.push(`<circle cx="${cx}" cy="${cy}" r="2.4" fill="${t.ink}"/>`);
   const latest = dots.find((d) => d.e === facts.latest);
-  // A ring marks the newest dot itself and shares its animation class.
-  const dr = small ? 3.6 : 4.2;
-  out.push(`<circle class="d${latest.rank}" cx="${r1(cx + latest.x)}" cy="${r1(cy + latest.y)}" r="${dr + 3}" fill="none" stroke="${t.edge[latest.cat] || t.cat[latest.cat]}" stroke-width="1"/>`);
-  return { svg: out.join('\n'), latest: { x: cx + latest.x, y: cy + latest.y, cat: latest.cat, cx, cy, R, dr } };
+  return { svg: out.join('\n'), latest: { x: cx + latest.x, y: cy + latest.y, cat: latest.cat, cx, cy, R, dr: small ? 3.6 : 4.2 } };
 }
 
 // The key's 2 x 2 grid mirrors the quadrants: Research top left, Warnings top right,
@@ -148,14 +145,14 @@ function leader(from, ax, ay) {
   const a = Math.atan2(from.y - cy, from.x - cx);
   const rd = Math.hypot(from.x - cx, from.y - cy);
   const pt = (ang, r) => `${r1(cx + Math.cos(ang) * r)} ${r1(cy + Math.sin(ang) * r)}`;
-  // Box inside the outer circle: no room to route around, so draw straight.
-  if (Math.hypot(ax - cx, ay - cy) <= rr) return `M${pt(a, rd + dr + 5)} L${r1(ax)} ${r1(ay)}`;
+  // The last leg runs radially out to the box, so the box must sit outside the circle.
+  if (Math.hypot(ax - cx, ay - cy) <= rr) throw new Error('LATEST callout box overlaps the burst; move it clear before routing the leader');
   const b = Math.atan2(ay - cy, ax - cx);
   let da = b - a;
   while (da > Math.PI) da -= 2 * Math.PI;
   while (da <= -Math.PI) da += 2 * Math.PI;
   const arc = Math.abs(da) > 0.01 ? ` A${rr} ${rr} 0 0 ${da > 0 ? 1 : 0} ${pt(b, rr)}` : '';
-  return `M${pt(a, rd + dr + 5)} L${pt(a, rr)}${arc} L${r1(ax)} ${r1(ay)}`;
+  return `M${pt(a, rd + dr + 2.5)} L${pt(a, rr)}${arc} L${r1(ax)} ${r1(ay)}`;
 }
 
 function callout(t, facts, from, right, y, left) {
