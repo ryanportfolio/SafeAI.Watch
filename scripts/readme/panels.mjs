@@ -113,7 +113,10 @@ function burst(t, facts, cx, cy, R, small) {
   }
   out.push(`<circle cx="${cx}" cy="${cy}" r="2.4" fill="${t.ink}"/>`);
   const latest = dots.find((d) => d.e === facts.latest);
-  return { svg: out.join('\n'), latest: { x: cx + latest.x, y: cy + latest.y, cat: latest.cat } };
+  // A ring marks the newest dot itself and shares its animation class.
+  const dr = small ? 3.6 : 4.2;
+  out.push(`<circle class="d${latest.rank}" cx="${r1(cx + latest.x)}" cy="${r1(cy + latest.y)}" r="${dr + 3}" fill="none" stroke="${t.edge[latest.cat] || t.cat[latest.cat]}" stroke-width="1"/>`);
+  return { svg: out.join('\n'), latest: { x: cx + latest.x, y: cy + latest.y, cat: latest.cat, cx, cy, R, dr } };
 }
 
 // The key's 2 x 2 grid mirrors the quadrants: Research top left, Warnings top right,
@@ -135,16 +138,33 @@ function eyebrow(t, x, y) {
 
 /*
  * Label for the newest entry. The box hangs above the dot, at `left` when given,
- * otherwise centred on the dot and kept left of `right`; a short dashed leader
- * drops from the box to the dot.
+ * otherwise centred on the dot and kept left of `right`. The dashed leader never
+ * crosses the burst: it leaves the newest dot (always on the outer edge) straight
+ * outwards, follows a circle just outside the burst, then runs out to the box.
  */
+function leader(from, ax, ay) {
+  const { cx, cy, R, dr } = from;
+  const rr = R + 12;
+  const a = Math.atan2(from.y - cy, from.x - cx);
+  const rd = Math.hypot(from.x - cx, from.y - cy);
+  const pt = (ang, r) => `${r1(cx + Math.cos(ang) * r)} ${r1(cy + Math.sin(ang) * r)}`;
+  // Box inside the outer circle: no room to route around, so draw straight.
+  if (Math.hypot(ax - cx, ay - cy) <= rr) return `M${pt(a, rd + dr + 5)} L${r1(ax)} ${r1(ay)}`;
+  const b = Math.atan2(ay - cy, ax - cx);
+  let da = b - a;
+  while (da > Math.PI) da -= 2 * Math.PI;
+  while (da <= -Math.PI) da += 2 * Math.PI;
+  const arc = Math.abs(da) > 0.01 ? ` A${rr} ${rr} 0 0 ${da > 0 ? 1 : 0} ${pt(b, rr)}` : '';
+  return `M${pt(a, rd + dr + 5)} L${pt(a, rr)}${arc} L${r1(ax)} ${r1(ay)}`;
+}
+
 function callout(t, facts, from, right, y, left) {
   const label = `LATEST · ${longDate(facts.latest.date).toUpperCase()} · ${facts.latest.category.toUpperCase()}`;
   // Mono advance is 0.6 em plus the .08 em letter-spacing set on .mono.
   const w = Math.ceil(label.length * 10 * 0.68) + 30;
   const bx = left ?? Math.min(right - w, from.x - w / 2);
   const ex = Math.max(bx + 8, Math.min(from.x, bx + w - 8));
-  return `<g class="call"><path d="M${r1(from.x)} ${r1(from.y - 5)} L${r1(ex)} ${r1(y + 11)}" stroke="${t.edge[from.cat] || t.cat[from.cat]}" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+  return `<g class="call"><path d="${leader(from, ex, y + 11)}" stroke="${t.edge[from.cat] || t.cat[from.cat]}" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
 <rect x="${r1(bx)}" y="${y - 11}" width="${w}" height="22" fill="${t.field}" stroke="${t.rule}" stroke-width="1"/>
 <circle cx="${r1(bx + 11)}" cy="${y}" r="3.4" ${markPaint(t, from.cat)}/>
 <text class="mono" x="${r1(bx + 20)}" y="${y + 3.5}" font-size="10" fill="${t.ink}">${esc(label)}</text></g>`;
