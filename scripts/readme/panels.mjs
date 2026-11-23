@@ -113,7 +113,7 @@ function burst(t, facts, cx, cy, R, small) {
   }
   out.push(`<circle cx="${cx}" cy="${cy}" r="2.4" fill="${t.ink}"/>`);
   const latest = dots.find((d) => d.e === facts.latest);
-  return { svg: out.join('\n'), latest: { x: cx + latest.x, y: cy + latest.y, cat: latest.cat } };
+  return { svg: out.join('\n'), latest: { x: cx + latest.x, y: cy + latest.y, cat: latest.cat, cx, cy, R, dr: small ? 3.6 : 4.2 } };
 }
 
 // The key's 2 x 2 grid mirrors the quadrants: Research top left, Warnings top right,
@@ -134,9 +134,30 @@ function eyebrow(t, x, y) {
 }
 
 /*
+ * Dashed leader from the callout box to the newest dot that never crosses the
+ * burst: it leaves the dot straight outwards (the newest date sits at radius R
+ * unless every entry shares one date), follows a circle 12 px outside the
+ * outermost dot centres, then runs radially out to the box anchor.
+ */
+function leader(from, ax, ay) {
+  const { cx, cy, R, dr } = from;
+  const rr = R + 12;
+  const a = Math.atan2(from.y - cy, from.x - cx);
+  const rd = Math.hypot(from.x - cx, from.y - cy);
+  const pt = (ang, r) => `${r1(cx + Math.cos(ang) * r)} ${r1(cy + Math.sin(ang) * r)}`;
+  // The last leg runs radially out to the anchor, so the anchor must sit outside the circle.
+  if (Math.hypot(ax - cx, ay - cy) <= rr) throw new Error('LATEST leader anchor falls inside the routing circle (R + 12); move the callout clear of the burst');
+  const b = Math.atan2(ay - cy, ax - cx);
+  let da = b - a;
+  while (da > Math.PI) da -= 2 * Math.PI;
+  while (da <= -Math.PI) da += 2 * Math.PI;
+  const arc = Math.abs(da) > 0.01 ? ` A${rr} ${rr} 0 0 ${da > 0 ? 1 : 0} ${pt(b, rr)}` : '';
+  return `M${pt(a, rd + dr + 2.5)} L${pt(a, rr)}${arc} L${r1(ax)} ${r1(ay)}`;
+}
+
+/*
  * Label for the newest entry. The box hangs above the dot, at `left` when given,
- * otherwise centred on the dot and kept left of `right`; a short dashed leader
- * drops from the box to the dot.
+ * otherwise centred on the dot and kept left of `right`.
  */
 function callout(t, facts, from, right, y, left) {
   const label = `LATEST · ${longDate(facts.latest.date).toUpperCase()} · ${facts.latest.category.toUpperCase()}`;
@@ -144,7 +165,7 @@ function callout(t, facts, from, right, y, left) {
   const w = Math.ceil(label.length * 10 * 0.68) + 30;
   const bx = left ?? Math.min(right - w, from.x - w / 2);
   const ex = Math.max(bx + 8, Math.min(from.x, bx + w - 8));
-  return `<g class="call"><path d="M${r1(from.x)} ${r1(from.y - 5)} L${r1(ex)} ${r1(y + 11)}" stroke="${t.edge[from.cat] || t.cat[from.cat]}" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+  return `<g class="call"><path d="${leader(from, ex, y + 11)}" stroke="${t.edge[from.cat] || t.cat[from.cat]}" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
 <rect x="${r1(bx)}" y="${y - 11}" width="${w}" height="22" fill="${t.field}" stroke="${t.rule}" stroke-width="1"/>
 <circle cx="${r1(bx + 11)}" cy="${y}" r="3.4" ${markPaint(t, from.cat)}/>
 <text class="mono" x="${r1(bx + 20)}" y="${y + 3.5}" font-size="10" fill="${t.ink}">${esc(label)}</text></g>`;
