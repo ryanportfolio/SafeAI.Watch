@@ -134,10 +134,10 @@ function eyebrow(t, x, y) {
 }
 
 /*
- * Label for the newest entry. The box hangs above the dot, at `left` when given,
- * otherwise centred on the dot and kept left of `right`. The dashed leader never
- * crosses the burst: it leaves the newest dot (always on the outer edge) straight
- * outwards, follows a circle just outside the burst, then runs out to the box.
+ * Dashed leader from the callout box to the newest dot that never crosses the
+ * burst: it leaves the dot straight outwards (the newest date sits at radius R
+ * unless every entry shares one date), follows a circle 12 px outside the
+ * outermost dot centres, then runs radially out to the box anchor.
  */
 function leader(from, ax, ay) {
   const { cx, cy, R, dr } = from;
@@ -145,8 +145,8 @@ function leader(from, ax, ay) {
   const a = Math.atan2(from.y - cy, from.x - cx);
   const rd = Math.hypot(from.x - cx, from.y - cy);
   const pt = (ang, r) => `${r1(cx + Math.cos(ang) * r)} ${r1(cy + Math.sin(ang) * r)}`;
-  // The last leg runs radially out to the box, so the box must sit outside the circle.
-  if (Math.hypot(ax - cx, ay - cy) <= rr) throw new Error('LATEST callout box overlaps the burst; move it clear before routing the leader');
+  // The last leg runs radially out to the anchor, so the anchor must sit outside the circle.
+  if (Math.hypot(ax - cx, ay - cy) <= rr) throw new Error('LATEST leader anchor falls inside the routing circle (R + 12); move the callout clear of the burst');
   const b = Math.atan2(ay - cy, ax - cx);
   let da = b - a;
   while (da > Math.PI) da -= 2 * Math.PI;
@@ -155,6 +155,10 @@ function leader(from, ax, ay) {
   return `M${pt(a, rd + dr + 2.5)} L${pt(a, rr)}${arc} L${r1(ax)} ${r1(ay)}`;
 }
 
+/*
+ * Label for the newest entry. The box hangs above the dot, at `left` when given,
+ * otherwise centred on the dot and kept left of `right`.
+ */
 function callout(t, facts, from, right, y, left) {
   const label = `LATEST · ${longDate(facts.latest.date).toUpperCase()} · ${facts.latest.category.toUpperCase()}`;
   // Mono advance is 0.6 em plus the .08 em letter-spacing set on .mono.
