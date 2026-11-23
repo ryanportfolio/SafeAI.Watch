@@ -4,31 +4,31 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 701 dated, sourced entries drawn as a burst, one dot per entry: 135 warnings, 181 incidents, 173 governance, 212 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 713 dated, sourced entries drawn as a burst, one dot per entry: 139 warnings, 184 incidents, 175 governance, 215 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 701 entries from Mar 22, 2023 to Nov 22, 2026 (135 warnings, 181 incidents, 173 governance, 212 research), drawn from 355 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 713 entries from Mar 22, 2023 to Nov 23, 2026 (139 warnings, 184 incidents, 175 governance, 215 research), drawn from 363 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 22, 2026, filed under Governance:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 23, 2026, filed under Governance:
 
-> **US governors ask Congress for a frontier AI framework with independent evaluation and incident reporting, while keeping state authority**
+> **Apollo Research report says AI companies are handing AI research to internal agents and asks the US government for visibility**
 >
-> **What happened.** The National Governors Association released principles for state and federal AI regulation on November 22, 2026, drawn up by its Governors Council to Secure American AI Dominance.
+> **What happened.** Apollo Research published "Handoff at Frontier AI Companies: Policymakers Need Visibility Today" on November 23, 2026, a report on AI companies delegating AI research and development to internally deployed agents.
 >
 > **Key points.**
 >
-> - It asks for a federal risk-based framework for frontier models, evaluated or audited "by independent experts," with developers required to report "security breaches and significant safety incidents."
-> - It asks for national standards on AI threats to critical infrastructure, including "chem-, bio-, and nuclear security, and cybersecurity."
-> - States should serve as "a primary accountability mechanism" for AI harms to people, including protecting children from harms "arising from addictive design, chatbots and companion applications."
-> - It says any federal preemption of state laws should be approached "cautiously" and with input from a representative cross-section of states.
+> - It calls handoff "a major driver of Loss of Control risk," placing possibly misaligned agents in charge of AI research while human oversight of them degrades.
+> - Citing public company figures, it says agents write over 90% of code merged into Anthropic's codebase, and Claude "leads" 26% of Anthropic's AI R\&D work, up from under 1% in February.
+> - It says humans now see 0.001 to 0.01% of internal coding trajectories at OpenAI, and roughly 50 of the 100,000 weekly AI monitor flags at Anthropic.
+> - It asks the Center for Advancing Innovation and Standards for Super Intelligence (CAISSI) to set up a task force on a handoff transparency standard that companies would report against.
 >
-> **Evidence.** Statement of principles from the association of US governors, recommending what Congress and states should do. It proposes no bill text and binds no government.
+> **Evidence.** Policy report from an AI safety evaluator, with proposed measures such as miss rates for deliberately seeded flaws. Its figures come from companies' own disclosures, which it calls voluntary, sporadic and "each by its own metrics."
 >
-> **Source.** [National Governors Association · Statement](https://www.nga.org/wp-content/uploads/2026/11/NGA_AI_Princples_Nov2026.pdf)
+> **Source.** [Apollo Research · Policy report](https://www.apolloresearch.ai/governance/handoff-at-frontier-ai-companies)
 
 ## Run it locally
 

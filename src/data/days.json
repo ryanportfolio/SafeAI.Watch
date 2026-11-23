@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-11-23",
+    "summary": "Virginia and Oregon sue SpaceX, X and xAI, alleging they misled users about Grok's safeguards against sexual images, and the UK AI Security Institute finds one monitor missed 0.2% to 23% of successful attacks depending on how they were made. Guterres calls for talks on a multilateral AI risk framework."
+  },
+  {
+    "date": "2026-11-22",
+    "summary": "US governors ask Congress for a frontier AI framework with independent evaluation and incident reporting, and OpenRouter drops three inference providers. OpenAI's Jakub Pachocki proposes shared perplexity limits, and Senator Cory Booker and Meta's Alexandr Wang warn about recursive self-improvement."
+  },
+  {
     "date": "2026-11-21",
     "summary": "Switzerland says CCW states agreed to draft an instrument on lethal autonomous weapons in 2027 and 2028, leaving its legal form open; the ICRC says the conference failed to agree a clear and immediate mandate for binding rules. Together AI says a credential an AI coding agent committed exposed customer prompt samples."
   },
@@ -32,8 +40,8 @@
       "2026-11-18-gao-covert-tests-get-claude-grok-chatgpt-and-gemini-past",
       "2026-11-18-senate-commerce-committee-passes-cotton-and-klobuchar-bill",
       "2026-11-18-gambit-security-says-an-attacker-had-an-ai-agent-justify-and",
-      "2026-11-18-california-report-requested-by-the-governor-s-ai-order",
-      "2026-11-18-google-deepmind-carries-forward-argon-s-findings-for-gemini"
+      "2026-11-18-google-deepmind-carries-forward-argon-s-findings-for-gemini",
+      "2026-11-18-ai-and-ethics-paper-argues-openly-shared-life-science-data"
     ]
   },
   {
