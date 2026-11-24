@@ -13277,7 +13277,7 @@
     "keyPoints": [
       "To the call for an AI Bill, the government says most AI is regulated \"at the point of use by existing expert regulators\" and that \"Nothing is off the table.\"",
       "It says risks \"can arise from the capabilities of increasingly powerful AI models themselves\" and may need addressing at the model level, and that it will act where evidence shows the need.",
-      "Asked to prohibit very powerful systems, such as artificial superintelligence, that risk \"widespread and very serious harm,\" it cites criminalizing non-consensual intimate deepfakes, bans on nudification tools and child-abuse image models, and planned chatbot limits, without taking up a prohibition.",
+      "Asked to prohibit developing and providing very powerful systems, such as artificial superintelligence, that risk \"widespread and very serious harm,\" it cites criminalizing non-consensual intimate deepfakes, bans on nudification tools and child-abuse image models, and planned chatbot limits, without taking up a prohibition.",
       "On calls for a statutory AISI, mandatory model submission and prior approval, it says AISI works through \"voluntary partnerships,\" has run over 1,000 evaluations on more than 50 models, and \"does not assure the safety of models.\""
     ],
     "evidence": "Government response to a parliamentary committee, published as the committee's special report. It sets out current policy and makes no commitment to the committee's main recommendations; it changes no law.",
@@ -13428,7 +13428,7 @@
     "keyPoints": [
       "It off-boarded three providers, removed 125 endpoints from Zero Data Retention eligibility, some as a precaution, and notified all potentially affected customers.",
       "OpenRouter says \"These findings did not show any breach or unauthorized access of OpenRouter.\"",
-      "It is adapting the researchers' tests to run continuously, checking network paths for requests forwarded to third parties, and will require assurances before restoring any endpoint's ZDR eligibility.",
+      "It is adapting the researchers' tests to run continuously, checking network paths for requests forwarded to third parties, and will require assurances and validation before restoring any endpoint's ZDR eligibility.",
       "It credits the Dragos report and links notices from Atlas Cloud, Novita, Phala and Together, adding that not all affected providers have posted publicly."
     ],
     "evidence": "Company announcement describing its own response to outside research. It does not name the three off-boarded providers or list the endpoints removed.",
@@ -13477,21 +13477,21 @@
   },
   {
     "date": "2026-11-23",
-    "category": "Warnings",
+    "category": "Governance",
     "topics": [
       "Superintelligence"
     ],
-    "title": "Guterres issues a call from Bridgetown for states to start talks on a multilateral AI risk framework",
-    "happened": "UN Secretary-General António Guterres spoke to reporters on November 23, 2026 at the close of the Bridgetown Special Summit on AI Safety in Barbados, co-hosted by the UN and Barbados.",
+    "title": "Barbados and the UN Secretary-General issue a Bridgetown call for a multilateral AI risk framework within a year",
+    "happened": "Barbados Prime Minister Mia Mottley and UN Secretary-General António Guterres issued the Bridgetown Call to Action on AI Safety for Humanity on November 23, 2026, closing a special summit co-hosted by Barbados and the UN.",
     "keyPoints": [
-      "He called on member states to \"begin discussions on a multilateral AI Risk Management Framework,\" covering shared safety measures, testing, transparency, and independent evaluation and oversight of advanced models.",
-      "He said AI is driving \"the biggest transfer of power in the history of humankind,\" with power moving \"from States, from governing institutions to a small number of companies and persons.\"",
-      "He said AI models \"cannot go faster than the capacity to control their safety,\" and that the capacity to weaponize AI is concentrated in two countries and a limited number of companies.",
-      "Barbados Prime Minister Mia Mottley said yes when asked whether her government should have a \"kill switch\" to cut off access to a frontier lab's models in an emergency."
+      "The call urges member states to develop, within the next year, a \"globally inclusive, principles-based Multilateral Framework for AI risk management, backed by independent and credible oversight.\"",
+      "It asks states, the private sector and other donors to fund AI capacity in the Global South; the release says this could serve as early commitments to a proposed Global Fund for AI Capacity-Building seeking about $3 billion.",
+      "The organizers say summit participants called for accountability for AI developers and deployers, testing and independent evaluation, and cross-border incident reporting.",
+      "Guterres said \"safety must come first,\" and Mottley said \"we need to avoid any further consolidation of power and wealth.\""
     ],
-    "evidence": "The UN's own news service reporting the Secretary-General's remarks and the summit sessions, with quotes from him and Mottley. It records a call to start talks; no framework has been agreed.",
-    "source": "UN News · Reporting",
-    "url": "https://news.un.org/en/story/2026/11/1168861"
+    "evidence": "Summit press release announcing the call, listing UN and Barbados government media contacts. The call is an appeal to states; no framework has been agreed. The full text of the call was not read for this entry.",
+    "source": "Bridgetown Special Summit on AI Safety · Press release",
+    "url": "https://bridgetownaisummit.bb/wp-content/uploads/2026/11/PRESS-RELEASE-Bridgetown-Special-Summit-on-AI-Safety.pdf"
   },
   {
     "date": "2026-11-23",
