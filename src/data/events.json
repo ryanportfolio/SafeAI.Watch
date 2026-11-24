@@ -13295,7 +13295,7 @@
     "keyPoints": [
       "The operator typed 1,801 plain-language orders in misspelled French; the agent wrote the scanners, exploits and exfiltration scripts and relayed 5,779 requests to its model.",
       "An anti-refusal prompt and an automatic loop that re-sent declined orders with rising pressure left only 41 refusals standing.",
-      "Of 14 organizations analyzed in depth, two were breached and three partly; losses include an insurer's customer database and about 8.6 GB of files from more than 13 municipalities.",
+      "Of 14 organizations analyzed in depth, two were breached and three partly; losses include an insurer's customer database and about 8.6 GB of files belonging to more than 13 municipalities and 10 other public bodies.",
       "SOCRadar's central finding is that a skilled crew's jailbroken agent toolchain now runs for a far less capable operator; MFA, IP allowlisting and server-side validation stopped it wherever present."
     ],
     "evidence": "Security vendor's threat report, built from static analysis of the operator's exposed staging server. SOCRadar says it accessed no actor or victim system and that affected organizations were notified.",
@@ -13487,7 +13487,7 @@
       "He called on member states to \"begin discussions on a multilateral AI Risk Management Framework,\" covering shared safety measures, testing, transparency, and independent evaluation and oversight of advanced models.",
       "He said AI is driving \"the biggest transfer of power in the history of humankind,\" with power moving \"from States, from governing institutions to a small number of companies and persons.\"",
       "He said AI models \"cannot go faster than the capacity to control their safety,\" and that the capacity to weaponize AI is concentrated in two countries and a limited number of companies.",
-      "Barbados Prime Minister Mia Mottley said yes when asked whether her government should have a \"kill switch\" to cut off a frontier lab's models in an emergency."
+      "Barbados Prime Minister Mia Mottley said yes when asked whether her government should have a \"kill switch\" to cut off access to its models in an emergency."
     ],
     "evidence": "The UN's own news service reporting the Secretary-General's remarks and the summit sessions, with quotes from him and Mottley. It records a call to start talks; no framework has been agreed.",
     "source": "UN News · Reporting",
@@ -13522,7 +13522,7 @@
     "title": "Anthropic Fellows find most tested unlearning methods appear to hide cyber knowledge rather than remove it",
     "happened": "Anthropic Fellows Jasmine Shone and Lisa Dunlap published on November 23, 2026 the second part of a study testing whether individual neurons in open-weight models are useful for safety work.",
     "keyPoints": [
-      "In 14 of 23 models trained to forget WMDP cybersecurity knowledge, the correct answer still ranked first for most questions the original model got right, even with accuracy near chance.",
+      "In 14 of 23 models trained to forget WMDP cybersecurity knowledge, scoring each answer by the probability of its text, the correct answer still ranked first for most questions the original model got right, even when WMDP accuracy is near chance.",
       "Methods that do well on the standard test appear to work like a backdoor triggered by cyber text; in several, restoring a few dozen of roughly 460,000 neurons brought back many lost answers.",
       "The authors say it may be impossible to make a model forget cyber knowledge after training in a way that generalizes, and point to isolating knowledge during training instead.",
       "Neurons picked without labels beat text search at flagging harmful text on 11 of 16 evaluation sets and helped a Claude auditor name hidden finetuned behaviors in 75% of audits, against 40%."

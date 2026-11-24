@@ -1,7 +1,7 @@
 [
   {
     "date": "2026-11-23",
-    "summary": "Virginia and Oregon sue SpaceX, X and xAI, alleging they misled users about Grok's safeguards against sexual images, and the UK AI Security Institute finds one monitor missed 0.2% to 23% of successful attacks depending on how they were made. Guterres calls for talks on a multilateral AI risk framework."
+    "summary": "Virginia and Oregon sue SpaceX, X and xAI, alleging they misled users about Grok's safeguards against sexual images, and the UK AI Security Institute finds one monitor missed 0.2% to 23% of successful test attacks depending on how they were made. Guterres calls for talks on a multilateral AI risk framework."
   },
   {
     "date": "2026-11-22",
@@ -13,11 +13,11 @@
   },
   {
     "date": "2026-11-20",
-    "summary": "Amazon says a Chinese-nexus actor's AI agents found and used a zero-day in a medical imaging server; Trump says he and Xi agreed to joint guardrails. METR says public evidence cannot rule out drastic AI R&D acceleration within a couple of years, GAO finds AI magnifies cyberattacks, and Tencent issues Hy4's system card.",
+    "summary": "Amazon says a Chinese-nexus actor's AI agents found and used a zero-day in a medical imaging server, and SOCRadar says a jailbroken AI agent targeted European banks, insurers and town halls. Trump says he and Xi agreed to joint guardrails, GAO finds AI magnifies cyberattacks, and Tencent issues Hy4's system card.",
     "highlights": [
       "2026-11-20-amazon-says-a-chinese-nexus-actor-s-cairn-ai-agents-found",
+      "2026-11-20-socradar-says-a-low-skill-operator-ran-a-jailbroken-ai-agent",
       "2026-11-20-trump-says-he-and-xi-agreed-to-do-joint-guardrails-on",
-      "2026-11-20-metr-says-public-evidence-cannot-rule-out-drastic-ai",
       "2026-11-20-gao-technology-assessment-finds-ai-is-magnifying",
       "2026-11-20-tencent-publishes-hy4-system-card-with-cyber-bio-and-loss-of"
     ]
