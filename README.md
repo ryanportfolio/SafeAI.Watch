@@ -4,31 +4,30 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 713 dated, sourced entries drawn as a burst, one dot per entry: 138 warnings, 184 incidents, 176 governance, 215 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 728 dated, sourced entries drawn as a burst, one dot per entry: 141 warnings, 186 incidents, 182 governance, 219 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 713 entries from Mar 22, 2023 to Nov 23, 2026 (138 warnings, 184 incidents, 176 governance, 215 research), drawn from 363 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 728 entries from Mar 22, 2023 to Nov 24, 2026 (141 warnings, 186 incidents, 182 governance, 219 research), drawn from 365 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 23, 2026, filed under Governance:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 24, 2026, filed under Governance:
 
-> **Apollo Research report says AI companies are handing AI research to internal agents and asks the US government for visibility**
+> **UK data regulator says Meta has committed to a voluntary monitoring and reporting scheme as Muse launches in the UK**
 >
-> **What happened.** Apollo Research published "Handoff at Frontier AI Companies: Policymakers Need Visibility Today" on November 23, 2026, a report on AI companies delegating AI research and development to internally deployed agents.
+> **What happened.** Paul Arnold, chief executive of the UK Information Commissioner's Office, issued a statement on November 24, 2026 on Meta's launch of its Muse AI product in the UK.
 >
 > **Key points.**
 >
-> - It calls handoff "a major driver of Loss of Control risk," placing possibly misaligned agents in charge of AI research while human oversight of them degrades.
-> - Citing public company figures, it says agents write over 90% of code merged into Anthropic's codebase, and that as of August Claude "leads" 26% of Anthropic's AI R\&D work, up from under 1% in February.
-> - It says humans now see 0.001 to 0.01% of internal coding trajectories at OpenAI, and roughly 50 of the 100,000 weekly AI monitor flags at Anthropic.
-> - It asks the Center for Advancing Innovation and Standards for Super Intelligence (CAISSI) to set up a task force on a handoff transparency standard that companies would report against.
+> - Meta has committed to "a voluntary monitoring and reporting scheme with the ICO" so the regulator can scrutinize the technology, user experience and feedback as Muse develops.
+> - Before launch, the ICO told Meta that users and the public must be able to "meaningfully understand and control how their personal data is used in the Muse product."
+> - The ICO says "privacy must be built into consumer-facing agentic products from the outset" and that it is monitoring the rollout of agentic AI products more broadly.
 >
-> **Evidence.** Policy report from an AI safety evaluator, with proposed measures such as miss rates for deliberately seeded flaws. Its figures come from companies' own disclosures, which it calls voluntary, sporadic and "each by its own metrics."
+> **Evidence.** A short regulator statement under UK data protection law. It does not describe the scheme's terms, duration or what Meta must report, and announces no investigation or enforcement.
 >
-> **Source.** [Apollo Research · Policy report](https://www.apolloresearch.ai/governance/handoff-at-frontier-ai-companies)
+> **Source.** [UK Information Commissioner's Office · Statement](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/11/statement-on-uk-launch-of-meta-muse/)
 
 ## Run it locally
 
