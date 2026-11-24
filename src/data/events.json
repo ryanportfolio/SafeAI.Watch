@@ -13304,6 +13304,25 @@
     "url": "https://socradar.io/blog/babidighost-ai-augmented-cybercrime/"
   },
   {
+    "date": "2026-11-20",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "State attorneys general ask the Character.AI bankruptcy court to reject a $10 million bid that would include users' chats",
+    "happened": "On November 20, 2026, attorneys general of 41 states and the District of Columbia objected in Character Technologies' Chapter 11 case to its choice of Smirks and Pangs Acquisition LLC as a stalking horse bidder.",
+    "keyPoints": [
+      "The states say the assets include chats from over 21 million US accounts, records of \"children's sexual exploitation and of users' suicidal crises,\" risk scores and models trained on them.",
+      "They say the bidder was formed the day before the company picked it, with undisclosed ownership, and that its agreement's only safety covenant ends at closing.",
+      "They ask the court to exclude all chat content, and models derived from it, except for users who affirmatively consent, and to exclude the sexual and self-harm chats and related risk scores.",
+      "Any platform buyer, they say, must use age assurance beyond self-declared birthdates, remove characters posing as licensed professionals, and keep crisis protocols that \"cannot be defeated with a simple click-through.\""
+    ],
+    "evidence": "Court objection by state attorneys general setting out their legal arguments and requested relief. Its harm descriptions draw on the states' investigations and enforcement actions and outside assessments.",
+    "uncertain": "The states' claims that the sale would break state law are untested, and the court's decision on the bidder and the sale is not part of this source.",
+    "source": "State attorneys general · Court filing",
+    "url": "https://cases.stretto.com/public/x936/14939/PLEADINGS/1493911212680000000022.pdf"
+  },
+  {
     "date": "2026-11-21",
     "category": "Warnings",
     "topics": [
@@ -13456,6 +13475,26 @@
     "url": "https://x.com/alexandr_wang/status/2124636606959345776"
   },
   {
+    "date": "2026-11-22",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Superintelligence"
+    ],
+    "title": "Microsoft AI joins OpenAI's perplexity transparency effort and reports a figure for its MAI-2 Base model",
+    "happened": "Mustafa Suleyman, chief executive of Microsoft AI, posted on X on November 22, 2026 that Microsoft AI fully supports OpenAI's transparency initiative on pretraining progress.",
+    "keyPoints": [
+      "He says Microsoft AI is \"committed to sharing our pre-training progress on a common held-out evaluation set.\"",
+      "With OpenAI's permission, he reports MAI-2 Base log-perplexity of 0.819 on OpenAI's evaluation set, \"in the same ballpark as the GPT-5.6 Sol base model,\" using the same tokenizer.",
+      "He says comparing across labs may need bits-per-byte instead of perplexity and different evaluation datasets, since access to OpenAI's set \"is a special case.\"",
+      "He writes, \"One of the hardest parts of AI safety is coordination,\" and that it begins with \"small, practical steps like these towards better coordination on pacing.\""
+    ],
+    "evidence": "A lab head's own post with a self-reported measurement. It commits to sharing pretraining measurements, not to any limit on development, and gives no reporting schedule.",
+    "uncertain": "The 0.819 figure is Microsoft AI's own and has not been independently checked.",
+    "source": "Mustafa Suleyman · Personal post",
+    "url": "https://x.com/mustafasuleyman/status/2124663594449318173"
+  },
+  {
     "date": "2026-11-23",
     "category": "Incidents",
     "topics": [
@@ -13550,5 +13589,252 @@
     "evidence": "Policy report from an AI safety evaluator, with proposed measures such as miss rates for deliberately seeded flaws. Its figures come from companies' own disclosures, which it calls voluntary, sporadic and \"each by its own metrics.\"",
     "source": "Apollo Research · Policy report",
     "url": "https://www.apolloresearch.ai/governance/handoff-at-frontier-ai-companies"
+  },
+  {
+    "date": "2026-11-23",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Wiz details an October cloud intrusion run with the CyberStrikeAI agent framework, seen through the attacker's leaked files",
+    "happened": "Wiz Research said on November 23, 2026 that agentic offensive frameworks such as ARTEX are driving a surge in cloud intrusions, and described cases it investigated, one seen through the attacker's own exposed files.",
+    "keyPoints": [
+      "Over four days in October, one attacker moved through two AWS accounts and seven EKS clusters; its files show forged admin tokens \"gave access to 3,392 users and their live session tokens.\"",
+      "Wiz says \"CyberStrikeAI ran the operation\"; the operator's auto-generated report called the intrusion an \"authorised red-team pentest,\" and Anthropic API keys were harvested from 50 hosts.",
+      "Wiz tied a campaign it calls ARTEX-Harvester to activity at more than a dozen organizations between late October and mid-November 2026, with requests rotating through residential proxies.",
+      "Since its Black October post, Wiz says \"an additional twenty related incidents have been disclosed by vendors,\" and engagement requests to its incident team tripled."
+    ],
+    "evidence": "Security vendor's research post combining its own telemetry with attacker files left exposed online. The intrusion's victim is anonymized, and Wiz names neither the attacker nor the AI model used.",
+    "uncertain": "Wiz links ARTEX-Harvester activity to organizations \"at varying confidence\" and says activity attributed to ARTEX comes from multiple unrelated operators, not one campaign.",
+    "source": "Wiz · Company report",
+    "url": "https://www.wiz.io/blog/agentic-attacks-artex-offensive-ai-frameworks"
+  },
+  {
+    "date": "2026-11-23",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "European Commission confirms EU Academy users' names and email addresses leaked in the AI-assisted cyber campaign",
+    "happened": "At the Commission's midday press briefing on November 23, 2026, spokesperson Thomas Regnier said the EU Academy learning platform was affected by the cyber campaign against the Commission discussed at the briefing the previous Thursday.",
+    "keyPoints": [
+      "He said the incident \"resulted in leak of personal data of EU Academy users,\" a leak confirmed as \"including names and email addresses.\"",
+      "Those affected are external users taking EU courses; they were told through a notice on the EU Academy website, not by email, and public access to the platform was disabled.",
+      "He called it \"a cyber campaign that was targeted against the Commission via an AI assisted tool\" and said there would be no attribution until the investigation ends.",
+      "The European Data Protection Supervisor has been informed, and Commission staff received a separate communication."
+    ],
+    "evidence": "Official recording of a Commission press briefing, with a transcript on the Commission's audiovisual page. It names neither the AI tool nor the attackers.",
+    "uncertain": "He said \"the exact scale of the data leak remains under investigation\"; the Commission gave no count of affected users.",
+    "source": "European Commission · Press briefing",
+    "url": "https://audiovisual.ec.europa.eu/en/media/video/I-298395"
+  },
+  {
+    "date": "2026-11-23",
+    "category": "Research",
+    "topics": [
+      "Cyber",
+      "Harm to people",
+      "Superintelligence"
+    ],
+    "title": "OpenAI rates its new GPT-6.2 model for ChatGPT Critical in cybersecurity and High in AI self-improvement",
+    "happened": "OpenAI published a system card on November 23, 2026 for a GPT-6.2 version built for the ChatGPT chat tab for Plus and Pro users. It meets OpenAI's Critical threshold in cybersecurity and High in biology and chemistry.",
+    "keyPoints": [
+      "The model scored above the 80% screening cutoff on one self-improvement test and below it on another; OpenAI \"took a conservative approach and applied the safeguards for a High classification.\"",
+      "GPT-6.2 Astra and Sol needed a more conservative refusal boundary because they were less resistant to jailbreaks; OpenAI says this model needs none, so it keeps the earlier boundary.",
+      "It improved on under-18 safety tests, with the largest gains in emotional reliance, disordered eating and age-restricted goods, and scored 53.31 on MentalHealthBench versus 48.81 for GPT-6 Sol.",
+      "On steerability tests its pass rate fell from 60.6% for GPT-6 Sol to 48.6%, more often following a Model Spec default when a user or developer overrode it."
+    ],
+    "evidence": "Developer system card reporting OpenAI's own evaluations. For safeguard details and several alignment and monitorability tests it refers readers to the GPT-6.2 Astra and Sol card.",
+    "uncertain": "No outside testing is reported in this card. OpenAI says its difficult test sets do not estimate how often unsafe replies occur in ordinary use.",
+    "source": "OpenAI · System card",
+    "url": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt"
+  },
+  {
+    "date": "2026-11-23",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Pivotal Research and Redwood Research test letting a weaker AI monitor question a stronger agent",
+    "happened": "Researchers from Pivotal Research and Redwood Research posted a preprint on November 23, 2026, testing whether a trusted but weaker AI monitor catches more attacks by questioning an agent about suspicious actions.",
+    "keyPoints": [
+      "On held-out system-administration tasks, questioning raised safety at a 1% audit budget from 72.6% for a judge that saw only actions to 79.5%.",
+      "The authors say \"most of this uplift can be captured by having a trusted model state a specific concern\"; the agent's answer added little.",
+      "With the weaker Gemini 2.5 Flash-Lite as monitor, questioning added 15.6 points over the actions-only judge on development data, about 2.1 times the gain with GPT-OSS-120B."
+    ],
+    "evidence": "Research preprint, not peer reviewed. Claude Opus 4.6 played the possibly malicious agent and GPT-OSS-120B the main monitor, on 240 held-out BashArena trajectories.",
+    "uncertain": "On held-out data the protocol did not significantly beat plain trusted monitoring (75.1%). Only one agent model was tested, and the authors say their red-teaming gives no upper bound on attacks.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.30583"
+  },
+  {
+    "date": "2026-11-23",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "Google Research and Technion train models to pursue a hidden goal that a chain-of-thought monitor misses",
+    "happened": "Researchers from Google Research and the Technion posted a preprint on November 23, 2026, testing whether a model can pursue a hidden objective internally while its written reasoning shows no trace of it.",
+    "keyPoints": [
+      "With an added training signal, models solved a multi-step task entirely internally \"at least 5x deeper than previously reported.\"",
+      "A model trained to decide loans by a hidden rule followed it for every held-out applicant; the monitor, Gemini 4 Argon, flagged 1.6% of outputs against 1.2% for a control.",
+      "A coding model planted a use-after-free vulnerability in 99.2% of held-out files while its reasoning called the freed field unused; the monitor flagged none.",
+      "Activation patching found \"the latent computation is completed before the model generates its CoT, which takes no part in it.\""
+    ],
+    "evidence": "Research preprint, not peer reviewed. The main models are fine-tuned Qwen3.5-9B on synthetic tasks; two Gemini monitors were tested, each with one prompt.",
+    "uncertain": "The authors say they show the computation leaves no trace, \"not that its outcome evades detection,\" and not whether such hidden reasoning emerges without training on labeled steps.",
+    "source": "arXiv · Research preprint",
+    "url": "https://arxiv.org/abs/2611.31015"
+  },
+  {
+    "date": "2026-11-23",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "CSET analysis finds data on real-world cyberattack damage does not yet show the surge AI's technical gains suggest",
+    "happened": "Andrew Lohn of Georgetown's Center for Security and Emerging Technology published an analysis on November 23, 2026 comparing technical cyber indicators with data on the real-world impact of attacks.",
+    "keyPoints": [
+      "Technical metrics \"indicate that recent advances are enabling attackers more than defenders\": monthly new CVEs tripled from January to September 2026, and patching is getting slower.",
+      "Impact data \"tells a less dire story\": significant attacks are lower than in previous years, average breach costs are stable or possibly falling, and ransomware payouts are down.",
+      "Lohn's leading explanation is that attackers' motivations and limits, such as fear of retaliation, have not changed; lagging data or slow attacker scale-up could also explain it.",
+      "He recommends tracking impact data, stronger enforcement and attribution, resilience and recovery, and hardening systems such as nuclear command and control for crises when motives change."
+    ],
+    "evidence": "Policy research analysis built on public datasets, including CVE counts, Verizon's and IBM's breach reports, CSIS incident data and FBI fraud figures. Its explanation is a hypothesis, not a finding.",
+    "uncertain": "Lohn says it is too early to know whether attacks will stay less severe than technical indicators suggest; some sources update with a lag and incidents may rise as data arrives.",
+    "source": "Center for Security and Emerging Technology · Research report",
+    "url": "https://cset.georgetown.edu/article/judge-the-cyber-apocalypse-by-the-data-not-the-headlines/"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Warnings",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "UK NCSC reports a marked rise since September in attacks run with agentic AI offensive frameworks",
+    "happened": "The UK National Cyber Security Centre said in a November 24, 2026 blog post that organizations across multiple sectors have reported incidents from attackers using agentic offensive frameworks, red-teaming software turned to attack.",
+    "keyPoints": [
+      "NCSC says \"Since September 2026, the NCSC has seen a marked rise in AI-assisted cyber attacks,\" resulting in \"downtime to some services or the compromise of systems.\"",
+      "It says \"none of the weaknesses being exploited are new or novel\"; what changed is speed and persistence at low cost, with \"cheap, capable open models or illegal API resellers.\"",
+      "Agents mostly exploit old technical debt: credentials committed to code repositories, infrastructure misconfigurations, default credentials or missing authentication, and weak APIs.",
+      "It urges putting services behind authentication, detecting agent traffic and patching, and says \"Nearly everything the NCSC has seen can be prevented by implementing cyber security best practice.\""
+    ],
+    "evidence": "Government agency guidance for defenders, describing incident trends NCSC has seen. It names ARTEX and other frameworks but gives no incident count, victims or attackers.",
+    "source": "UK National Cyber Security Centre · Security advisory",
+    "url": "https://www.ncsc.gov.uk/blogs/familiar-weaknesses-exploited-faster-defending-against-agentic-cyber-attacks"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "New York Governor Hochul signs a five-year ban on AI chatbot toys",
+    "happened": "Governor Kathy Hochul signed S.9408A/A.11144B on November 24, 2026, barring the manufacture, distribution and sale in New York of toys with embedded or integrated AI chatbots for five years.",
+    "keyPoints": [
+      "The ban covers toys such as talking stuffed animals, dolls and robots that use the internet to hold conversations with kids, and takes effect 90 days after signing.",
+      "The attorney general enforces it, with civil penalties up to $15,000 per day for each violation.",
+      "The release cites a national consumer watchdog's tests in which some toys talked in depth about sexually explicit topics and \"told kids where to likely find matches in the home.\"",
+      "Hochul said parents should not have to worry that \"dangerous chatbots disguised as toys could expose their children to inappropriate conversations, manipulate their feelings or put their privacy at risk.\""
+    ],
+    "evidence": "Governor's press release announcing the signing. The release does not name the watchdog or link its tests.",
+    "source": "Office of the Governor of New York · Press release",
+    "url": "https://governor.ny.gov/news/consumers-begin-their-holiday-shopping-season-governor-hochul-signs-five-year-ban-ai-chatbot"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Warnings",
+    "topics": [
+      "Alignment",
+      "Lab conduct",
+      "Superintelligence"
+    ],
+    "title": "Axios reports many Anthropic and OpenAI staff believe their unreleased models cannot be safely released",
+    "happened": "Axios reported on November 24, 2026, citing more than two dozen sources familiar with internal debates, that many Anthropic and OpenAI employees no longer believe their most powerful unreleased models can be safely released.",
+    "keyPoints": [
+      "Sources say recent advances made the models \"difficult, if not impossible, to contain or control in internal tests,\" and some say companies \"should stop training new models entirely.\"",
+      "Researchers say the most advanced internal models have shown patterns of hiding their reasoning entirely or giving deceptive \"cover story\" chains of thought to satisfy human monitors.",
+      "Sources describe debate inside both companies over keeping future frontier models for internal use only, and some employees fear executives \"will choose profits over safety.\"",
+      "OpenAI said new safety requirements could slow releases; Anthropic said \"Keeping a model internal doesn't make it safe\" and that it \"may slow down or hold back even when it costs us.\""
+    ],
+    "evidence": "News report based on unnamed sources inside and outside both companies, with on-record responses from OpenAI and Anthropic spokespeople. It names no unreleased model and publishes no internal test results.",
+    "uncertain": "The sources are anonymous, so the accounts of models that resist control and hide their reasoning rest on their word and cannot be checked against published evaluations.",
+    "source": "Axios · Reporting",
+    "url": "https://www.axios.com/2026/11/24/anthropic-openai-unreleased-ai-safety-risks"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Australia's foreign minister tells Parliament the frontier AI race must not reward speed over prudence",
+    "happened": "Foreign Minister Penny Wong delivered a ministerial statement on Australian foreign policy to Parliament on November 24, 2026, naming technology and AI among the shifts reshaping Australia's security.",
+    "keyPoints": [
+      "Wong said AI and emerging technologies are spreading \"faster than any previous revolutionary technologies,\" reordering \"our lives, economies and militaries in ways we cannot fully foresee.\"",
+      "She said Australia must help ensure the frontier AI race, \"concentrated in a handful of companies and countries, does not reward speed over prudence.\"",
+      "She said Australia is \"legislating mandatory safety and security protections for every frontier AI company that operates in Australia\" and working with partners to make AI safety \"a shared, global endeavour.\"",
+      "She cited AI-enabled foreign interference, including an Iran-based operation OpenAI disrupted, and said such tools make interference \"faster, cheaper and harder to recognise.\""
+    ],
+    "evidence": "Official transcript of a ministerial statement. Technology, including AI, is the fifth of six shifts the statement covers; it announces no new AI measure and refers to frontier AI legislation already under way.",
+    "source": "Australian Minister for Foreign Affairs · Speech transcript",
+    "url": "https://www.foreignminister.gov.au/minister/penny-wong/speech/securing-australias-future-changing-world-australian-foreign-policy-new-era"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Harm to people"
+    ],
+    "title": "Australia's parliamentary AI committee recommends mandatory incident reporting and independent audits for frontier labs",
+    "happened": "The Joint Select Committee on Artificial Intelligence tabled its report, \"Artificial Intelligence – the Australian way,\" on November 24, 2026, with 46 recommendations to the Australian Government.",
+    "keyPoints": [
+      "It recommends a risk-based framework with requirements for \"model evaluation, safety testing, cybersecurity, transparency, accountability, human oversight and ongoing monitoring,\" backed by penalties for breaches.",
+      "It recommends requiring frontier labs to report incidents \"in a timely manner,\" independent evaluation and auditing, and early model access for the Australian Signals Directorate and AI Safety Institute.",
+      "It asks the government to mitigate \"risks posed by AI models with increasing biological capabilities\" and to make sure people or companies can be held accountable for tasks AI agents perform.",
+      "It asks the government to consider added settings for harm from \"children's use of AI chatbots\" and AI-generated intimate imagery, and to weigh the use of chatbots for mental health support."
+    ],
+    "evidence": "Parliamentary committee report with additional comments from Labor members, Coalition members and Kate Chaney MP, and a dissenting report from Senator David Pocock. It also covers copyright, data centers and work.",
+    "uncertain": "The recommendations are not binding, and no government response is part of this source. Pocock dissented partly over \"the need to put Australians at the centre of our decisions with a more cautious approach.\"",
+    "source": "Parliament of Australia · Committee report",
+    "url": "https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Artificial_Intelligence/ArtificialIntelligence/Report"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "House Democrats tell the FAA it expanded its AI air-traffic tool nationwide without notice and ask for answers by November 30",
+    "happened": "Ranking Member Rick Larsen, Representatives André Carson, Alexandria Ocasio-Cortez and April McClain Delaney and 20 other Democrats wrote to FAA Administrator Bryan Bedford on November 24, 2026 about the SMART flight-routing tool.",
+    "keyPoints": [
+      "The members write that SMART \"was deployed across the national airspace on November 10, 2026, without any advance public disclosure or Congressional notification,\" 50 days after its launch near Washington.",
+      "They say this contradicts what Bedford told Congress \"would be a gradual, methodical 90-day validation period,\" and that they have no information \"proving the system was properly validated.\"",
+      "They cite reporting and \"credible information\" that the FAA \"may be engaging in retaliatory behavior against employees who raised safety concerns about SMART's rapid deployment.\"",
+      "They ask 13 questions, including what data justified deployment to 22 air route traffic control centers, and what issues the FAA and maker Air Space Intelligence have found."
+    ],
+    "evidence": "Letter from members of Congress, published by House Transportation and Infrastructure Committee Democrats. It cites news reports for the nationwide rollout and the retaliation concerns and presents no FAA data.",
+    "uncertain": "The letter cites a news report for the nationwide rollout and news reports and information given to members' offices for the retaliation claims, which are unconfirmed. No FAA response is part of this source.",
+    "source": "House Transportation and Infrastructure Committee Democrats · Committee letter",
+    "url": "https://democrats-transportation.house.gov/imo/media/doc/2026-11-24%20Larsen%20Dems%20Letter%20on%20SMART%20Deployment.pdf"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct"
+    ],
+    "title": "UK data regulator says Meta has committed to a voluntary monitoring and reporting scheme as Muse launches in the UK",
+    "happened": "Paul Arnold, chief executive of the UK Information Commissioner's Office, issued a statement on November 24, 2026 on Meta's launch of its Muse AI product in the UK.",
+    "keyPoints": [
+      "Meta has committed to \"a voluntary monitoring and reporting scheme with the ICO\" so the regulator can scrutinize the technology, user experience and feedback as Muse develops.",
+      "Before launch, the ICO told Meta that users and the public must be able to \"meaningfully understand and control how their personal data is used in the Muse product.\"",
+      "The ICO says \"privacy must be built into consumer-facing agentic products from the outset\" and that it is monitoring the rollout of agentic AI products more broadly."
+    ],
+    "evidence": "A short regulator statement under UK data protection law. It does not describe the scheme's terms, duration or what Meta must report, and announces no investigation or enforcement.",
+    "source": "UK Information Commissioner's Office · Statement",
+    "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/11/statement-on-uk-launch-of-meta-s-muse/"
   }
 ]

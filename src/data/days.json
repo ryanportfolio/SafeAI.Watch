@@ -1,11 +1,36 @@
 [
   {
+    "date": "2026-11-24",
+    "summary": "New York Governor Hochul signs a five-year ban on AI chatbot toys, and the UK NCSC reports a marked rise in attacks run with agentic AI frameworks. Axios reports many Anthropic and OpenAI staff believe unreleased models cannot be safely released, and Australia's AI committee recommends mandatory incident reporting.",
+    "highlights": [
+      "2026-11-24-new-york-governor-hochul-signs-a-five-year-ban-on-ai-chatbot",
+      "2026-11-24-uk-ncsc-reports-a-marked-rise-since-september-in-attacks-run",
+      "2026-11-24-axios-reports-many-anthropic-and-openai-staff-believe-their",
+      "2026-11-24-australia-s-parliamentary-ai-committee-recommends-mandatory",
+      "2026-11-24-uk-data-regulator-says-meta-has-committed-to-a-voluntary"
+    ]
+  },
+  {
     "date": "2026-11-23",
-    "summary": "Virginia and Oregon sue SpaceX, X and xAI, alleging they misled users on Grok's safeguards against sexual images, and the UK AI Security Institute finds a monitor missed 0.2% to 23% of successful test attacks, depending on how they were made. Mottley and Guterres call for a multilateral AI risk framework within a year."
+    "summary": "Virginia and Oregon sue SpaceX, X and xAI over Grok's safeguards against sexual images, and OpenAI rates its GPT-6.2 model for ChatGPT Critical in cybersecurity. The European Commission confirms EU Academy users' data leaked, Wiz details a CyberStrikeAI intrusion, and Barbados and the UN call for an AI risk framework.",
+    "highlights": [
+      "2026-11-23-virginia-and-oregon-sue-spacex-x-and-xai-alleging-they",
+      "2026-11-23-openai-rates-its-new-gpt-6-2-model-for-chatgpt-critical-in",
+      "2026-11-23-european-commission-confirms-eu-academy-users-names-and",
+      "2026-11-23-wiz-details-an-october-cloud-intrusion-run-with-the",
+      "2026-11-23-barbados-and-the-un-secretary-general-issue-a-bridgetown"
+    ]
   },
   {
     "date": "2026-11-22",
-    "summary": "US governors ask Congress for a frontier AI framework with independent evaluation and incident reporting, and OpenRouter drops three inference providers. OpenAI's Jakub Pachocki proposes shared perplexity limits, and Senator Cory Booker and Meta's Alexandr Wang warn about recursive self-improvement."
+    "summary": "US governors ask Congress for a frontier AI framework with independent evaluation and incident reporting, and OpenRouter drops three inference providers. OpenAI's Jakub Pachocki proposes shared limits, Microsoft AI discloses its own perplexity figure, and Senator Cory Booker warns about recursive self-improvement.",
+    "highlights": [
+      "2026-11-22-us-governors-ask-congress-for-a-frontier-ai-framework-with",
+      "2026-11-22-openrouter-drops-three-inference-providers-and-pulls-125",
+      "2026-11-22-openai-chief-scientist-jakub-pachocki-publishes-openai-s",
+      "2026-11-22-microsoft-ai-joins-openai-s-perplexity-transparency-effort",
+      "2026-11-22-sen-booker-calls-on-congress-to-rein-in-the-race-to"
+    ]
   },
   {
     "date": "2026-11-21",
