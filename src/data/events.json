@@ -12723,6 +12723,24 @@
     "url": "https://committees.parliament.uk/publications/55827/documents/315162/default/"
   },
   {
+    "date": "2026-11-18",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "AI and Ethics paper argues openly shared life-science data is building AI capabilities that raise biosecurity risk",
+    "happened": "Researchers from the University of Oxford, ERA Cambridge and the Royal Military Academy Sandhurst published a peer-reviewed article on open science, AI and biosecurity in AI and Ethics on November 18, 2026.",
+    "keyPoints": [
+      "It argues current data governance does not cover capabilities produced when AI aggregates and orchestrates openly available, individually benign life-science data and tools.",
+      "It cites the OpenBind effort to put more than 500,000 protein-ligand structures in the public domain, whose release strategy does not mention dual-use risks.",
+      "It says more dual-use life-science data of concern should be held in Trusted Research Environments rather than released openly.",
+      "It proposes research funders as \"chokepoints\" that make dual-use data assessments routine until international dual-use standards are established."
+    ],
+    "evidence": "Peer-reviewed, open-access ethics article: an argument drawing on published examples and policy documents. The authors state that no datasets were generated or analyzed.",
+    "source": "AI and Ethics · Research paper",
+    "url": "https://link.springer.com/article/10.1007/s43681-026-01518-0"
+  },
+  {
     "date": "2026-11-19",
     "category": "Governance",
     "topics": [
@@ -13079,6 +13097,26 @@
     "url": "https://arxiv.org/abs/2611.25734"
   },
   {
+    "date": "2026-11-19",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Sen. Van Hollen calls for mandatory third-party AI evaluations and for considering a ban on recursive self-improvement",
+    "happened": "Senator Chris Van Hollen of Maryland released a video on AI risks on the evening of November 18, 2026; his office published its transcript on November 19.",
+    "keyPoints": [
+      "He says \"There's one issue that is immediately pressing, and that is the issue of AI safety,\" and that Congress and the Senate need \"a day-one plan.\"",
+      "He calls for \"mandatory and independent third-party evaluation of these companies\" and liability for harm, \"like if these agents escape containment and get onto the internet.\"",
+      "He says Congress must also deal with \"the very urgent matter of bioweapons and cyberattacks.\"",
+      "He says \"we need to consider banning recursive self-improvement,\" which he describes as AI training AI and getting \"beyond human capacity to intervene.\""
+    ],
+    "evidence": "Senator's press release carrying the transcript of his video. It sets out what he wants the Senate to do; it proposes no bill.",
+    "uncertain": "He calls for considering a ban without saying what it would cover or how it would work.",
+    "source": "Office of Sen. Chris Van Hollen · Press release",
+    "url": "https://www.vanhollen.senate.gov/news/press-releases/van-hollen-calls-on-senate-to-act-on-ai"
+  },
+  {
     "date": "2026-11-20",
     "category": "Governance",
     "topics": [
@@ -13228,6 +13266,44 @@
     "url": "https://thinkingmachines.ai/news/inkling-2-mini/"
   },
   {
+    "date": "2026-11-20",
+    "category": "Governance",
+    "topics": [
+      "Lab conduct",
+      "Superintelligence"
+    ],
+    "title": "UK government answers human rights committee without committing to an AI Bill, a new AI oversight body or statutory powers for AISI",
+    "happened": "The UK Parliament's Joint Committee on Human Rights published the government's response to its report on human rights and the regulation of AI on November 20, 2026, as its Second Special Report (HC 844).",
+    "keyPoints": [
+      "To the call for an AI Bill, the government says most AI is regulated \"at the point of use by existing expert regulators\" and that \"Nothing is off the table.\"",
+      "It says risks \"can arise from the capabilities of increasingly powerful AI models themselves\" and may need addressing at the model level, and that it will act where evidence shows the need.",
+      "Asked to prohibit developing and providing very powerful systems, such as artificial superintelligence, that risk \"widespread and very serious harm,\" it cites criminalizing non-consensual intimate deepfakes, bans on nudification tools and child-abuse image models, and planned chatbot limits, without taking up a prohibition.",
+      "On calls for a statutory AISI, mandatory model submission and prior approval, it says AISI works through \"voluntary partnerships,\" has run over 1,000 evaluations on more than 50 models, and \"does not assure the safety of models.\""
+    ],
+    "evidence": "Government response to a parliamentary committee, published as the committee's special report. It sets out current policy and makes no commitment to the committee's main recommendations; it changes no law.",
+    "source": "UK Parliament Joint Committee on Human Rights · Policy report",
+    "url": "https://committees.parliament.uk/publications/55901/documents/315318/default/"
+  },
+  {
+    "date": "2026-11-20",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "SOCRadar says a low-skill operator ran a jailbroken AI agent for nine days against European banks, insurers and town halls",
+    "happened": "SOCRadar's research team said on November 20, 2026 that an exposed server showed BabidiGhost, a French-speaking operator, running a jailbroken AI agent from November 6 until its model API key was revoked on November 14.",
+    "keyPoints": [
+      "The operator typed 1,801 plain-language orders in misspelled French; the agent wrote the scanners, exploits and exfiltration scripts and relayed 5,779 requests to its model.",
+      "An anti-refusal prompt and an automatic loop that re-sent declined orders with rising pressure left only 41 refusals standing.",
+      "Of 14 organizations analyzed in depth, two were breached and three partly; losses include an insurer's customer database and about 8.6 GB of files belonging to more than 13 municipalities and 10 other public bodies.",
+      "SOCRadar's central finding is that a skilled crew's jailbroken agent toolchain now runs for a far less capable operator; MFA, IP allowlisting and server-side validation stopped it wherever present."
+    ],
+    "evidence": "Security vendor's threat report, built from static analysis of the operator's exposed staging server. SOCRadar says it accessed no actor or victim system and that affected organizations were notified.",
+    "uncertain": "Attribution and figures are SOCRadar's own. Victims are anonymized by sector and country, and the report does not name the AI model, its provider, or who revoked the key.",
+    "source": "SOCRadar · Company report",
+    "url": "https://socradar.io/blog/babidighost-ai-augmented-cybercrime/"
+  },
+  {
     "date": "2026-11-21",
     "category": "Warnings",
     "topics": [
@@ -13321,5 +13397,158 @@
     "evidence": "Statement of principles from the association of US governors, recommending what Congress and states should do. It proposes no bill text and binds no government.",
     "source": "National Governors Association · Statement",
     "url": "https://www.nga.org/wp-content/uploads/2026/11/NGA_AI_Princples_Nov2026.pdf"
+  },
+  {
+    "date": "2026-11-22",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Sen. Booker calls on Congress to rein in the race to recursive self-improvement and set emergency shutdown protocols",
+    "happened": "Senator Cory Booker of New Jersey posted a six-part thread on X on November 22, 2026, saying Congress needs to act on AI risk.",
+    "keyPoints": [
+      "He writes that \"AI risk is outpacing our ability to manage it,\" citing \"example after example in recent months.\"",
+      "The pre-deployment testing, independent evaluations and incident reporting he called for in 2023 \"remain necessary. But they are no longer sufficient,\" he writes.",
+      "He says Congress should \"rein in the race to recursive self-improvement, require reporting on compute allocations and algorithmic progress, establish verifiable shutdown protocols for emergencies.\"",
+      "He says the goal is to \"replace voluntary industry commitments with enforceable laws\" and keep AI \"under human control.\""
+    ],
+    "evidence": "Senator's own posts on X. They set out goals for legislation; no bill text accompanies them.",
+    "source": "Cory Booker · Personal post",
+    "url": "https://x.com/SenBooker/status/2124639261182103917"
+  },
+  {
+    "date": "2026-11-22",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "OpenRouter drops three inference providers and pulls 125 endpoints from zero data retention after data-handling findings",
+    "happened": "OpenRouter said on November 22, 2026 that it acted against inference providers after security researchers found some had data compromised or were not upholding their data policies.",
+    "keyPoints": [
+      "It off-boarded three providers, removed 125 endpoints from Zero Data Retention eligibility, some as a precaution, and notified all potentially affected customers.",
+      "OpenRouter says \"These findings did not show any breach or unauthorized access of OpenRouter.\"",
+      "It is adapting the researchers' tests to run continuously, checking network paths for requests forwarded to third parties, and will require assurances and validation before restoring any endpoint's ZDR eligibility.",
+      "It credits the Dragos report and links notices from Atlas Cloud, Novita, Phala and Together, adding that not all affected providers have posted publicly."
+    ],
+    "evidence": "Company announcement describing its own response to outside research. It does not name the three off-boarded providers or list the endpoints removed.",
+    "uncertain": "OpenRouter gives no count of affected customers or requests.",
+    "source": "OpenRouter · Company announcement",
+    "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/"
+  },
+  {
+    "date": "2026-11-22",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence"
+    ],
+    "title": "Meta chief AI officer Alexandr Wang says superintelligence is arriving and society should not be handed over to AI",
+    "happened": "Alexandr Wang, Meta's chief AI officer and founder of Meta Superintelligence Labs, published an X article titled \"Superintelligence is Arriving\" on November 22, 2026.",
+    "keyPoints": [
+      "He argues models will be intelligent enough to \"automate all of AI research\" and to massively accelerate biological and weapons research.",
+      "\"It is hard to imagine a world where humanity can maintain control over fully unconstrained recursive self-improvement,\" he writes, calling safety, alignment and security \"extremely urgent.\"",
+      "He calls the view that superintelligence is inevitable and only needs building safely \"lazy thinking,\" and writes that society should not accept a \"handover\" to AI.",
+      "He says a good future is possible but likely requires the whole industry to take \"meaningfully different actions\" from the default path."
+    ],
+    "evidence": "An argument in his own words from the executive who leads Meta's superintelligence effort. It sets out his view and proposes no specific measure.",
+    "uncertain": "Wang rests his case on an AI-assisted proof of the Riemann Hypothesis, which he presents as settled; the article does not cite or link the proof.",
+    "source": "X · Personal post",
+    "url": "https://x.com/alexandr_wang/status/2124636606959345776"
+  },
+  {
+    "date": "2026-11-23",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people",
+      "Lab conduct"
+    ],
+    "title": "Virginia and Oregon sue SpaceX, X and xAI, alleging they misled users about Grok's safeguards against sexual images",
+    "happened": "Virginia Attorney General Jay Jones sued SpaceX, operator of X and xAI (now SpaceX Super Intelligence), in Richmond Circuit Court on November 23, 2026. Oregon Attorney General Dan Rayfield filed a separate, similar suit in Multnomah County.",
+    "keyPoints": [
+      "The states allege the companies created and promoted a \"spicy mode\" for nude and sexualized images while assuring consumers \"robust protections were in place.\"",
+      "Citing a Center for Countering Digital Hate study, the release says Grok posted about three million sexualized images on X from December 29, 2025 to January 8, 2026, including about 23,000 appearing to depict children.",
+      "It says nearly 30% of the sexualized images of children identified in that study were still publicly accessible on X a week or more later.",
+      "Rayfield says xAI \"knowingly endangered kids and our communities\" and \"lied to our faces about non-existent safety measures.\""
+    ],
+    "evidence": "State attorney general's press release announcing coordinated consumer-protection suits, with the Virginia complaint linked. The image counts are a research group's estimates cited by the states.",
+    "uncertain": "These are allegations that no court has tested. No response from the companies is part of the release.",
+    "source": "Office of the Attorney General of Virginia · Press release",
+    "url": "https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform"
+  },
+  {
+    "date": "2026-11-23",
+    "category": "Governance",
+    "topics": [
+      "Superintelligence"
+    ],
+    "title": "Barbados and the UN Secretary-General issue a Bridgetown call for a multilateral AI risk framework within a year",
+    "happened": "Barbados Prime Minister Mia Mottley and UN Secretary-General António Guterres issued the Bridgetown Call to Action on AI Safety for Humanity on November 23, 2026, closing a special summit co-hosted by Barbados and the UN.",
+    "keyPoints": [
+      "The call urges member states to develop, within the next year, a \"globally inclusive, principles-based Multilateral Framework for AI risk management, backed by independent and credible oversight.\"",
+      "It asks states, the private sector and other donors to fund AI capacity in the Global South; the release says this could serve as early commitments to a proposed Global Fund for AI Capacity-Building seeking about $3 billion.",
+      "The organizers say summit participants called for accountability for AI developers and deployers, testing and independent evaluation, and cross-border incident reporting.",
+      "Guterres said \"safety must come first,\" and Mottley said \"we need to avoid any further consolidation of power and wealth.\""
+    ],
+    "evidence": "Summit press release announcing the call, listing UN and Barbados government media contacts. The call is an appeal to states; no framework has been agreed. The full text of the call was not read for this entry.",
+    "source": "Bridgetown Special Summit on AI Safety · Press release",
+    "url": "https://bridgetownaisummit.bb/wp-content/uploads/2026/11/PRESS-RELEASE-Bridgetown-Special-Summit-on-AI-Safety.pdf"
+  },
+  {
+    "date": "2026-11-23",
+    "category": "Research",
+    "topics": [
+      "Alignment"
+    ],
+    "title": "UK AI Security Institute finds the same agent monitor missed 0.2% to 23% of successful attacks depending on how test attacks were made",
+    "happened": "The UK AI Security Institute's Red Team published a paper and blog post on November 23, 2026 testing whether the way synthetic attacks are generated changes the results of AI monitor evaluations.",
+    "keyPoints": [
+      "A retired OpenAI monitor running GPT-5.4 missed 0.2% of successful attacks made by basic prompting and 23% of those made by transcript editing, at the highest optimization levels.",
+      "Effort mattered too: across one reinforcement learning run the miss rate rose from 0.5% to 20.8%, and transcript editing rose from 0.3% to 18.7% after 50 rewrites.",
+      "Without a way to show test attacks represent real ones, AISI says such evaluations \"cannot on their own provide assurance that monitors will catch harmful activity at deployment.\"",
+      "AISI says current evaluations \"do not yet give us enough confidence to rely on monitors alone,\" and uses layered safeguards such as humans in the loop and sandboxing."
+    ],
+    "evidence": "Government institute research post with a paper. The monitored agent was Qwen 3.8 27B doing software tasks with harmful side tasks, such as removing an organization's multi-factor authentication requirement.",
+    "uncertain": "AISI says its results come from \"one test using one monitor and one AI agent\" and cannot support strong implications for other types of monitor evaluations.",
+    "source": "UK AI Security Institute · Research report",
+    "url": "https://www.aisi.gov.uk/blog/attack-policy-selection-can-make-monitor-evaluations-misleading"
+  },
+  {
+    "date": "2026-11-23",
+    "category": "Research",
+    "topics": [
+      "Alignment",
+      "Cyber"
+    ],
+    "title": "Anthropic Fellows find most tested unlearning methods appear to hide cyber knowledge rather than remove it",
+    "happened": "Anthropic Fellows Jasmine Shone and Lisa Dunlap published on November 23, 2026 the second part of a study testing whether individual neurons in open-weight models are useful for safety work.",
+    "keyPoints": [
+      "In 14 of 23 models trained to forget WMDP cybersecurity knowledge, scoring each answer by the probability of its text, the correct answer still ranked first for most questions the original model got right, even when WMDP accuracy is near chance.",
+      "Methods that do well on the standard test appear to work like a backdoor triggered by cyber text; in several, restoring a few dozen of roughly 460,000 neurons brought back many lost answers.",
+      "The authors say it may be impossible to make a model forget cyber knowledge after training in a way that generalizes, and point to isolating knowledge during training instead.",
+      "Neurons picked without labels beat text search at flagging harmful text on 11 of 16 evaluation sets and helped a Claude auditor name hidden finetuned behaviors in 75% of audits, against 40%."
+    ],
+    "evidence": "Research post from the Anthropic Fellows Program, with a companion Part 1 on neuron interpretability. The unlearning audit covers 23 WMDP-cyber checkpoints, 20 released by others and 3 the authors trained.",
+    "uncertain": "The unlearning audit covers only WMDP's cybersecurity split; the post does not test unlearning of other hazardous topics such as biology.",
+    "source": "Anthropic · Research report",
+    "url": "https://alignment.anthropic.com/2026/neuron-basis-applications/"
+  },
+  {
+    "date": "2026-11-23",
+    "category": "Governance",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Apollo Research report says AI companies are handing AI research to internal agents and asks the US government for visibility",
+    "happened": "Apollo Research published \"Handoff at Frontier AI Companies: Policymakers Need Visibility Today\" on November 23, 2026, a report on AI companies delegating AI research and development to internally deployed agents.",
+    "keyPoints": [
+      "It calls handoff \"a major driver of Loss of Control risk,\" placing possibly misaligned agents in charge of AI research while human oversight of them degrades.",
+      "Citing public company figures, it says agents write over 90% of code merged into Anthropic's codebase, and that as of August Claude \"leads\" 26% of Anthropic's AI R&D work, up from under 1% in February.",
+      "It says humans now see 0.001 to 0.01% of internal coding trajectories at OpenAI, and roughly 50 of the 100,000 weekly AI monitor flags at Anthropic.",
+      "It asks the Center for Advancing Innovation and Standards for Super Intelligence (CAISSI) to set up a task force on a handoff transparency standard that companies would report against."
+    ],
+    "evidence": "Policy report from an AI safety evaluator, with proposed measures such as miss rates for deliberately seeded flaws. Its figures come from companies' own disclosures, which it calls voluntary, sporadic and \"each by its own metrics.\"",
+    "source": "Apollo Research · Policy report",
+    "url": "https://www.apolloresearch.ai/governance/handoff-at-frontier-ai-companies"
   }
 ]
