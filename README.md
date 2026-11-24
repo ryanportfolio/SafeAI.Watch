@@ -27,7 +27,7 @@ Every entry sets out what happened, the source's key points and what the evidenc
 >
 > **Evidence.** A short regulator statement under UK data protection law. It does not describe the scheme's terms, duration or what Meta must report, and announces no investigation or enforcement.
 >
-> **Source.** [UK Information Commissioner's Office · Statement](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/11/statement-on-uk-launch-of-meta-s-muse/)
+> **Source.** [UK Information Commissioner's Office · Statement](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/11/statement-on-uk-launch-of-meta-muse/)
 
 ## Run it locally
 

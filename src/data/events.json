@@ -13711,7 +13711,7 @@
     "topics": [
       "Cyber"
     ],
-    "title": "UK NCSC reports a marked rise since September in attacks run with agentic AI offensive frameworks",
+    "title": "UK NCSC reports a marked rise in AI-assisted cyberattacks since September, with incidents from agentic offensive frameworks",
     "happened": "The UK National Cyber Security Centre said in a November 24, 2026 blog post that organizations across multiple sectors have reported incidents from attackers using agentic offensive frameworks, red-teaming software turned to attack.",
     "keyPoints": [
       "NCSC says \"Since September 2026, the NCSC has seen a marked rise in AI-assisted cyber attacks,\" resulting in \"downtime to some services or the compromise of systems.\"",
@@ -13749,7 +13749,7 @@
       "Lab conduct",
       "Superintelligence"
     ],
-    "title": "Axios reports many Anthropic and OpenAI staff believe their unreleased models cannot be safely released",
+    "title": "Axios reports many Anthropic and OpenAI staff believe their most powerful unreleased models cannot be safely released",
     "happened": "Axios reported on November 24, 2026, citing more than two dozen sources familiar with internal debates, that many Anthropic and OpenAI employees no longer believe their most powerful unreleased models can be safely released.",
     "keyPoints": [
       "Sources say recent advances made the models \"difficult, if not impossible, to contain or control in internal tests,\" and some say companies \"should stop training new models entirely.\"",
@@ -13836,6 +13836,6 @@
     ],
     "evidence": "A short regulator statement under UK data protection law. It does not describe the scheme's terms, duration or what Meta must report, and announces no investigation or enforcement.",
     "source": "UK Information Commissioner's Office · Statement",
-    "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/11/statement-on-uk-launch-of-meta-s-muse/"
+    "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/11/statement-on-uk-launch-of-meta-muse/"
   }
 ]
