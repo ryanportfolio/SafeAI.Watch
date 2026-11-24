@@ -13487,7 +13487,7 @@
       "He says Microsoft AI is \"committed to sharing our pre-training progress on a common held-out evaluation set.\"",
       "With OpenAI's permission, he reports MAI-2 Base log-perplexity of 0.819 on OpenAI's evaluation set, \"in the same ballpark as the GPT-5.6 Sol base model,\" using the same tokenizer.",
       "He says comparing across labs may need bits-per-byte instead of perplexity and different evaluation datasets, since access to OpenAI's set \"is a special case.\"",
-      "He writes, \"One of the hardest parts of AI safety is coordination,\" and that it begins with \"small, practical steps like these towards better coordination on pacing.\""
+      "He writes, \"One of the hardest parts of AI safety is coordination,\" and calls for \"small, practical steps like these towards better coordination on pacing.\""
     ],
     "evidence": "A lab head's own post with a self-reported measurement. It commits to sharing pretraining measurements, not to any limit on development, and gives no reporting schedule.",
     "uncertain": "The 0.819 figure is Microsoft AI's own and has not been independently checked.",
@@ -13633,8 +13633,8 @@
     "category": "Research",
     "topics": [
       "Cyber",
-      "Harm to people",
-      "Superintelligence"
+      "Superintelligence",
+      "Bio"
     ],
     "title": "OpenAI rates its new GPT-6.2 model for ChatGPT Critical in cybersecurity and High in AI self-improvement",
     "happened": "OpenAI published a system card on November 23, 2026 for a GPT-6.2 version built for the ChatGPT chat tab for Plus and Pro users. It meets OpenAI's Critical threshold in cybersecurity and High in biology and chemistry.",
@@ -13770,7 +13770,7 @@
       "Lab conduct"
     ],
     "title": "Australia's foreign minister tells Parliament the frontier AI race must not reward speed over prudence",
-    "happened": "Foreign Minister Penny Wong delivered a ministerial statement on Australian foreign policy to Parliament on November 24, 2026, naming technology and AI among the shifts reshaping Australia's security.",
+    "happened": "Foreign Minister Penny Wong delivered a ministerial statement on Australian foreign policy to Parliament on November 24, 2026, naming technology and AI among six shifts reshaping the international system.",
     "keyPoints": [
       "Wong said AI and emerging technologies are spreading \"faster than any previous revolutionary technologies,\" reordering \"our lives, economies and militaries in ways we cannot fully foresee.\"",
       "She said Australia must help ensure the frontier AI race, \"concentrated in a handful of companies and countries, does not reward speed over prudence.\"",
@@ -13786,13 +13786,14 @@
     "category": "Governance",
     "topics": [
       "Lab conduct",
-      "Harm to people"
+      "Harm to people",
+      "Bio"
     ],
     "title": "Australia's parliamentary AI committee recommends mandatory incident reporting and independent audits for frontier labs",
     "happened": "The Joint Select Committee on Artificial Intelligence tabled its report, \"Artificial Intelligence – the Australian way,\" on November 24, 2026, with 46 recommendations to the Australian Government.",
     "keyPoints": [
       "It recommends a risk-based framework with requirements for \"model evaluation, safety testing, cybersecurity, transparency, accountability, human oversight and ongoing monitoring,\" backed by penalties for breaches.",
-      "It recommends requiring frontier labs to report incidents \"in a timely manner,\" independent evaluation and auditing, and early model access for the Australian Signals Directorate and AI Safety Institute.",
+      "It recommends requiring frontier labs to report incidents \"in a timely manner,\" independent evaluation and auditing, and, where frontier labs train models in Australia, early model access for the Australian Signals Directorate and AI Safety Institute.",
       "It asks the government to mitigate \"risks posed by AI models with increasing biological capabilities\" and to make sure people or companies can be held accountable for tasks AI agents perform.",
       "It asks the government to consider added settings for harm from \"children's use of AI chatbots\" and AI-generated intimate imagery, and to weigh the use of chatbots for mental health support."
     ],
