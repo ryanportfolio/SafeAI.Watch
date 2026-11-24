@@ -22,7 +22,7 @@ Every entry sets out what happened, the source's key points and what the evidenc
 > **Key points.**
 >
 > - It calls handoff "a major driver of Loss of Control risk," placing possibly misaligned agents in charge of AI research while human oversight of them degrades.
-> - Citing public company figures, it says agents write over 90% of code merged into Anthropic's codebase, and Claude "leads" 26% of Anthropic's AI R\&D work, up from under 1% in February.
+> - Citing public company figures, it says agents write over 90% of code merged into Anthropic's codebase, and that as of August Claude "leads" 26% of Anthropic's AI R\&D work, up from under 1% in February.
 > - It says humans now see 0.001 to 0.01% of internal coding trajectories at OpenAI, and roughly 50 of the 100,000 weekly AI monitor flags at Anthropic.
 > - It asks the Center for Advancing Innovation and Standards for Super Intelligence (CAISSI) to set up a task force on a handoff transparency standard that companies would report against.
 >
