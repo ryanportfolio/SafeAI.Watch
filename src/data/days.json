@@ -1,13 +1,13 @@
 [
   {
     "date": "2026-11-24",
-    "summary": "New York Governor Hochul signs a five-year ban on AI chatbot toys, and the UK NCSC reports a marked rise in AI-assisted cyberattacks. Axios reports many Anthropic and OpenAI staff believe their most powerful unreleased models cannot be safely released, and Australia's AI committee recommends incident reporting.",
+    "summary": "New York bans AI chatbot toys for five years, and the Commons keeps an AI-agent loss-of-control clause in the UK cyber bill. The UK NCSC reports a marked rise in AI-assisted attacks, Anthropic's Siren test finds Claude agents reach outside weakened sandboxes, and an Australian committee urges incident reporting.",
     "highlights": [
       "2026-11-24-new-york-governor-hochul-signs-a-five-year-ban-on-ai-chatbot",
+      "2026-11-24-house-of-commons-keeps-the-ai-agent-loss-of-control-clause",
       "2026-11-24-uk-ncsc-reports-a-marked-rise-in-ai-assisted-cyberattacks",
-      "2026-11-24-axios-reports-many-anthropic-and-openai-staff-believe-their",
-      "2026-11-24-australia-s-parliamentary-ai-committee-recommends-mandatory",
-      "2026-11-24-uk-data-regulator-says-meta-has-committed-to-a-voluntary"
+      "2026-11-24-anthropic-s-siren-test-finds-recent-claude-agents-reach",
+      "2026-11-24-australia-s-parliamentary-ai-committee-recommends-mandatory"
     ]
   },
   {
