@@ -12746,7 +12746,7 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Drupal says a highly critical core flaw found by Anthropic's OSS Scanner was exploited on live sites a day after its advisory",
+    "title": "Drupal says it received a report that a highly critical core flaw found by Anthropic's OSS Scanner was exploited a day after its advisory",
     "happened": "The Drupal Security Team published advisory SA-CORE-2026-017 (CVE-2026-132165) on November 18, 2026, for a highly critical remote code execution flaw in Drupal core, then added an exploitation update.",
     "keyPoints": [
       "The advisory credits the find to Anthropic: \"Discovered by Anthropic's OSS Scanner, as vulnerability ANT-2026-GMRPK0BU.\"",
@@ -14075,8 +14075,8 @@
     "title": "Australia's Parliament passes the Digital Duty of Care online safety bill",
     "happened": "Australia's Senate passed the Online Safety Amendment (Digital Duty of Care) Bill 2026 with 42 government and 10 Australian Greens amendments on November 25, 2026; the House of Representatives agreed to them the same day.",
     "keyPoints": [
-      "The bill replaces the Online Safety Act's industry codes and Basic Online Safety Expectations with a duty of care requiring providers \"to take measures to provide a safe online environment.\"",
-      "It expands the eSafety Commissioner's powers to regulate online services, content and conduct, and amends 5 other Acts.",
+      "The bill page summary says the bill replaces the Online Safety Act's industry codes and Basic Online Safety Expectations with a duty of care requiring providers \"to take measures to provide a safe online environment.\"",
+      "The summary says it expands the eSafety Commissioner's powers to regulate online services, content and conduct, and amends 5 other Acts.",
       "The linked Bills Digest, written for the bill as introduced, says covered online services include services that generate material using artificial intelligence."
     ],
     "evidence": "Official bill page recording each stage, ending \"Finally passed both Houses.\" The AI coverage comes from the linked Bills Digest, which describes the bill as introduced, before either chamber's amendments.",
