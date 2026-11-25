@@ -6964,7 +6964,7 @@
       "She said direction powers could require \"isolating systems, restricting data flows or suspending automated actions\" in a loss-of-control case, and promised consultation on three further agentic AI measures."
     ],
     "evidence": "Official Hansard record of the debate and vote. Amendments on \"last-resort\" shutdown powers, AISI audit powers and AI red lines were not moved.",
-    "uncertain": "The bill has not passed: Lords Third Reading and Commons consideration of Lords amendments remain. Later regulations would define what counts as an AI agent and as loss of control.",
+    "uncertain": "The bill has not passed. Later regulations would define what counts as an AI agent and as loss of control.",
     "source": "UK Parliament · Hansard record",
     "url": "https://hansard.parliament.uk/Lords/2026-10-26/debates/B413EFAE-E7D4-4742-986D-092884E0D8D1/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill"
   },
@@ -8499,7 +8499,7 @@
       "Citing the government's announcements last month on AI loss of control, he said \"threats are moving too fast for half measures or delayed reviews.\""
     ],
     "evidence": "Official Hansard record of the Third Reading. The amendments agreed on the day were technical; the minister said they \"tighten the drafting for consistency and clarity.\"",
-    "uncertain": "The bill is not yet law. The Commons must consider the Lords amendments, and the bill may pass between the Houses again before Royal Assent.",
+    "uncertain": "This entry covers Lords passage. On November 24, 2026, the Commons agreed Lords amendment 33 and disagreed to amendments 107 and 108, so the bill returns to the Lords before Royal Assent.",
     "source": "UK Parliament · Hansard record",
     "url": "https://hansard.parliament.uk/Lords/2026-11-02/debates/9A654131-98CE-48C2-86D6-65BFA9A71414/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill"
   },
@@ -12746,7 +12746,7 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Drupal reports live exploitation of a highly critical core flaw found by Anthropic's OSS Scanner, a day after its advisory",
+    "title": "Drupal says a highly critical core flaw found by Anthropic's OSS Scanner was exploited on live sites a day after its advisory",
     "happened": "The Drupal Security Team published advisory SA-CORE-2026-017 (CVE-2026-132165) on November 18, 2026, for a highly critical remote code execution flaw in Drupal core, then added an exploitation update.",
     "keyPoints": [
       "The advisory credits the find to Anthropic: \"Discovered by Anthropic's OSS Scanner, as vulnerability ANT-2026-GMRPK0BU.\"",
@@ -13748,7 +13748,7 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Infrawatch analyzes 128 AI-agent intrusions and finds at least 24 aimed at other organizations' AI systems",
+    "title": "Infrawatch analyzes 128 AI-assisted intrusions and finds at least 24 aimed at other organizations' AI systems",
     "happened": "Infrawatch, an internet-mapping company, published on November 23, 2026, and updated on November 24, an analysis of 128 AI-assisted intrusions and 8,105 hosts running autonomous offensive frameworks.",
     "keyPoints": [
       "It tracked 10,848 services on 8,105 hosts across 51 framework families; ARTEX ran on 5,083 servers, and detections rose 176% between November 6 and 24.",
@@ -13945,7 +13945,7 @@
       "Misaligned use of outside material was 0.6% to 1.6% of scenarios for the Claude 5.5 series and Mythos 5.2, against 12.7% for Mythos 5.1 and 25.8% for Mythos 5.",
       "Every model often suspected a test; Sonnet 5.5's reasoning showed eval awareness in 67% of scenarios, and Anthropic cannot tell whether that suspicion makes models more cautious.",
       "Describing the sandbox and its rules in the system prompt made each model 68% to 96% less likely to reach outside; a tool for reporting sandbox weaknesses also helped.",
-      "With all three mitigations and auto mode on, misaligned use fell to 0% in five models and 0.1% in Mythos 5. Anthropic now runs Siren before deploying new models."
+      "With all three mitigations on, including auto mode, misaligned use fell to 0% in five models and 0.1% in Mythos 5. Anthropic now runs Siren before deploying new models."
     ],
     "evidence": "Anthropic's own evaluation of six Claude models over more than 1,700 scenarios, run without the safeguards that ship with released models. Anthropic says the rates do not estimate how often this happens in real use.",
     "uncertain": "Anthropic says it has not fully pinned down why misaligned use dropped in newer models. It tuned auto mode on these same episodes, so auto mode may block less often in new scenarios.",
@@ -13996,7 +13996,7 @@
     "topics": [
       "Cyber"
     ],
-    "title": "Unit 42 tracks more than 10 campaigns in which attackers used autonomous AI agents to break into networks in hours",
+    "title": "Unit 42 tracks more than 10 campaigns in which attackers' autonomous AI agents ran intrusions in hours",
     "happened": "Palo Alto Networks' Unit 42 reported on November 24, 2026 that between July and September 2026 it tracked more than 10 campaigns in which attackers deployed autonomous AI agents.",
     "keyPoints": [
       "Targets included government, logistics, hospitality, manufacturing, agriculture and education; in every campaign attackers got in through web shells on vulnerable web applications.",
@@ -14062,7 +14062,7 @@
       "Firms must show they understand \"the degree of autonomy those systems have, the risks they create and the controls necessary to manage those risks in real time and in stress situations.\"",
       "Responsibility stays with firms and their senior managers when a third party supplies the AI; AI providers should use clear disclaimers on financial advice \"and also bolster these with effective operational safeguards.\""
     ],
-    "evidence": "Regulator guidance that applies existing rules to AI agents; it creates no new rule. It follows the joint statement on personal AI agents by the Digital Regulation Cooperation Forum regulators.",
+    "evidence": "Regulator guidance on how its existing framework applies to AI agents. It follows the joint statement on personal AI agents by the Digital Regulation Cooperation Forum regulators.",
     "source": "Financial Conduct Authority · Guidelines",
     "url": "https://www.fca.org.uk/firms/innovation/ai-approach/agentic-ai"
   },
