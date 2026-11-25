@@ -4,30 +4,31 @@
 <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/readme/masthead-narrow-dark.svg">
 <source media="(max-width: 500px)" srcset="assets/readme/masthead-narrow-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/readme/masthead-dark.svg">
-<img alt="Keeping watch on AI. 728 dated, sourced entries drawn as a burst, one dot per entry: 141 warnings, 186 incidents, 182 governance, 219 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
+<img alt="Keeping watch on AI. 742 dated, sourced entries drawn as a burst, one dot per entry: 145 warnings, 190 incidents, 186 governance, 221 research. Farther from the centre is newer; dashed rings mark January 1. The record is a selection, so density shows coverage, not frequency." src="assets/readme/masthead-light.svg" width="100%">
 </picture>
 
 **[SafeAI.watch](https://safeai.watch)** is a public record of AI safety and security for general readers: research, reported incidents, public warnings and policy responses. Each entry links its original source, gives its key points, and separates what happened from what the evidence shows.
 
-The record holds 728 entries from Mar 22, 2023 to Nov 24, 2026 (141 warnings, 186 incidents, 182 governance, 219 research), drawn from 365 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
+The record holds 742 entries from Mar 22, 2023 to Nov 25, 2026 (145 warnings, 190 incidents, 186 governance, 221 research), drawn from 370 publishers. It is a selection, not a complete count: the burst above shows what the record covers, so its dense rim is no measure of how often such events happen. Read it on the site: [Latest](https://safeai.watch/latest), [Timeline](https://safeai.watch/timeline), [About](https://safeai.watch/about).
 
 ## How an entry reads
 
-Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 24, 2026, filed under Governance:
+Every entry sets out what happened, the source's key points and what the evidence shows, and adds what remains uncertain when something material is still open. The newest one, from Nov 25, 2026, filed under Warnings:
 
-> **UK data regulator says Meta has committed to a voluntary monitoring and reporting scheme as Muse launches in the UK**
+> **Dario Amodei says turning governance over to AI is a terrible idea and that recursive self-improvement may need limits**
 >
-> **What happened.** Paul Arnold, chief executive of the UK Information Commissioner's Office, issued a statement on November 24, 2026 on Meta's launch of its Muse AI product in the UK.
+> **What happened.** Anthropic CEO Dario Amodei posted on X on November 25, 2026, rejecting coverage suggesting he favors handing human decisions to AI systems.
 >
 > **Key points.**
 >
-> - Meta has committed to "a voluntary monitoring and reporting scheme with the ICO" so the regulator can scrutinize the technology, user experience and feedback as Muse develops.
-> - Before launch, the ICO told Meta that users and the public must be able to "meaningfully understand and control how their personal data is used in the Muse product."
-> - The ICO says "privacy must be built into consumer-facing agentic products from the outset" and that it is monitoring the rollout of agentic AI products more broadly.
+> - He writes that "AI needs to be governed by a legitimate, democratic process" and that "turning over governance to AI is a terrible idea."
+> - He says recursive self-improvement "may cause AI to improve faster than we can control or adjust to it, so we may want limits on this process."
+> - He repeats that Anthropic does not "expect it to be safe for Claude to build successive frontier models fully autonomously, without meaningful human supervision or understanding."
+> - Using AI for alignment research "must be done with caution, because we may not be able to trust the work of the AI system," he writes.
 >
-> **Evidence.** A short regulator statement under UK data protection law. It does not describe the scheme's terms, duration or what Meta must report, and announces no investigation or enforcement.
+> **Evidence.** A lab leader's own post answering press coverage. It states his views and cites his earlier essays; it announces no new policy or commitment.
 >
-> **Source.** [UK Information Commissioner's Office · Statement](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/11/statement-on-uk-launch-of-meta-muse/)
+> **Source.** [Dario Amodei · Personal post](https://x.com/DarioAmodei/status/2125656399392690605)
 
 ## Run it locally
 

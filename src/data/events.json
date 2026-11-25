@@ -6964,7 +6964,7 @@
       "She said direction powers could require \"isolating systems, restricting data flows or suspending automated actions\" in a loss-of-control case, and promised consultation on three further agentic AI measures."
     ],
     "evidence": "Official Hansard record of the debate and vote. Amendments on \"last-resort\" shutdown powers, AISI audit powers and AI red lines were not moved.",
-    "uncertain": "The bill has not passed: Lords Third Reading and Commons consideration of Lords amendments remain. Later regulations would define what counts as an AI agent and as loss of control.",
+    "uncertain": "The bill has not passed. Later regulations would define what counts as an AI agent and as loss of control.",
     "source": "UK Parliament · Hansard record",
     "url": "https://hansard.parliament.uk/Lords/2026-10-26/debates/B413EFAE-E7D4-4742-986D-092884E0D8D1/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill"
   },
@@ -7569,7 +7569,7 @@
       "The eSafety Commissioner could use undercover identities to test whether a service can generate illegal material, including with artificial intelligence."
     ],
     "evidence": "Official bill page showing the House stages. The provisions are from the Parliamentary Library's Bills Digest it links, which describes the bill as introduced on October 15, before the amendments.",
-    "uncertain": "The bill is not yet law: it goes to the Senate, whose committee report is due November 20, 2026. The text of the agreed amendments was not reviewed for this entry.",
+    "uncertain": "This entry covers House passage; the Senate later amended and passed the bill, and Royal Assent was pending as of November 25, 2026. The text of the agreed amendments was not reviewed for this entry.",
     "source": "Parliament of Australia · Bill page",
     "url": "https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation/Bills_Search_Results/Result?bId=r7553"
   },
@@ -8499,7 +8499,7 @@
       "Citing the government's announcements last month on AI loss of control, he said \"threats are moving too fast for half measures or delayed reviews.\""
     ],
     "evidence": "Official Hansard record of the Third Reading. The amendments agreed on the day were technical; the minister said they \"tighten the drafting for consistency and clarity.\"",
-    "uncertain": "The bill is not yet law. The Commons must consider the Lords amendments, and the bill may pass between the Houses again before Royal Assent.",
+    "uncertain": "This entry covers Lords passage on November 2, 2026; later Commons consideration of the Lords amendments is recorded in a separate entry.",
     "source": "UK Parliament · Hansard record",
     "url": "https://hansard.parliament.uk/Lords/2026-11-02/debates/9A654131-98CE-48C2-86D6-65BFA9A71414/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill"
   },
@@ -12741,6 +12741,24 @@
     "url": "https://link.springer.com/article/10.1007/s43681-026-01518-0"
   },
   {
+    "date": "2026-11-18",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Drupal says it received a report that a highly critical core flaw found by Anthropic's OSS Scanner was exploited a day after its advisory",
+    "happened": "The Drupal Security Team published advisory SA-CORE-2026-017 (CVE-2026-132165) on November 18, 2026, for a highly critical remote code execution flaw in Drupal core, then added an exploitation update.",
+    "keyPoints": [
+      "The advisory credits the find to Anthropic: \"Discovered by Anthropic's OSS Scanner, as vulnerability ANT-2026-GMRPK0BU.\"",
+      "The update says \"the Security Team has received a report this was exploited on live sites as early as 2026-11-19 19:00 UTC.\"",
+      "Drupal rates the flaw \"Highly critical\" (20 of 25) and tells site owners to install the latest version."
+    ],
+    "evidence": "Official security advisory from the Drupal project. Its update relays a report of exploitation on live sites and does not describe the attacks.",
+    "uncertain": "The advisory does not say who exploited the flaw, how many sites were hit, or whether the attackers used AI.",
+    "source": "Drupal Security Team · Security advisory",
+    "url": "https://www.drupal.org/sa-core-2026-017"
+  },
+  {
     "date": "2026-11-19",
     "category": "Governance",
     "topics": [
@@ -13115,6 +13133,25 @@
     "uncertain": "He calls for considering a ban without saying what it would cover or how it would work.",
     "source": "Office of Sen. Chris Van Hollen · Press release",
     "url": "https://www.vanhollen.senate.gov/news/press-releases/van-hollen-calls-on-senate-to-act-on-ai"
+  },
+  {
+    "date": "2026-11-19",
+    "category": "Incidents",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Another Arkansas family sues xAI, alleging Grok generated explicit images and videos of their five-year-old daughter",
+    "happened": "Parents of a five-year-old girl sued xAI, X Corp., SpaceX and affiliated entities in the US District Court for the Western District of Arkansas on November 19, 2026, over explicit images and videos they say Grok generated of her.",
+    "keyPoints": [
+      "The complaint says local police told the parents in 2026 that Grok was generating and spreading child sexual abuse images and videos made from their daughter's images.",
+      "It alleges that \"Other major AI image and video providers refuse to generate sexual content of real people,\" while xAI promoted Grok as less restricted, with a \"Spicy Mode.\"",
+      "It says xAI was \"repeatedly placed on notice\" of these risks, including through \"governmental warnings, internal testing, user reports,\" yet did not add available safeguards.",
+      "The suit brings 13 counts under federal child protection law, Arkansas statutes and common law, and seeks damages and an injunction \"requiring the implementation of reasonable safety measures.\""
+    ],
+    "evidence": "Civil complaint filed by the family's lawyers, with the child and her parents under pseudonyms. It states the plaintiff's allegations; nothing in it has been tested in court.",
+    "uncertain": "No defendant response is in the filing. Some facts are pleaded \"upon information and belief,\" and the complaint does not say who uploaded the photographs or prompted Grok.",
+    "source": "US District Court for the Western District of Arkansas · Complaint (CourtListener copy)",
+    "url": "https://storage.courtlistener.com/recap/gov.uscourts.arwd.78920/gov.uscourts.arwd.78920.2.0.pdf"
   },
   {
     "date": "2026-11-20",
@@ -13706,6 +13743,63 @@
     "url": "https://cset.georgetown.edu/article/judge-the-cyber-apocalypse-by-the-data-not-the-headlines/"
   },
   {
+    "date": "2026-11-23",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Infrawatch analyzes 128 AI-assisted intrusions and finds at least 24 aimed at other organizations' AI systems",
+    "happened": "Infrawatch, an internet-mapping company, published on November 23, 2026, and updated on November 24, an analysis of 128 AI-assisted intrusions and 8,105 hosts running autonomous offensive frameworks.",
+    "keyPoints": [
+      "It tracked 10,848 services on 8,105 hosts across 51 framework families; ARTEX ran on 5,083 servers, and detections rose 176% between November 6 and 24.",
+      "Where Infrawatch could tell who was at the keyboard, the agent ran over 70% of intrusions; 22 attacks succeeded and 23 failed, \"plagued by model hallucinations.\"",
+      "In at least 24 attacks the target was another party's AI infrastructure; one actor repointed exposed coding agents at a fake model server and collected 77 credentials.",
+      "A fintech's own AI agent found a malicious tool an attack framework planted on its MCP endpoint, approved it automatically and ran it."
+    ],
+    "evidence": "Company research report built from the firm's internet scans and intrusion evidence it gathered. It names DeepSeek and Claude as the models attack frameworks used most.",
+    "uncertain": "The intrusion evidence and counts are Infrawatch's own and have not been independently checked, and the report does not name victims.",
+    "source": "Infrawatch · Company report",
+    "url": "https://infrawatch.com/blog/the-autonomy-of-the-autonomous-intrusions"
+  },
+  {
+    "date": "2026-11-23",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Trump tells CNBC \"the DOJ will intervene\" when asked about AI companies moving too fast on safety",
+    "happened": "CNBC published an unofficial transcript of President Trump's November 23, 2026 interview on Squawk on the Street, where David Faber asked him about AI safety concerns at OpenAI and Anthropic.",
+    "keyPoints": [
+      "Faber said people at OpenAI and Anthropic are \"very concerned about the safety of humanity\" and asked whether Trump would intervene if \"perhaps things are moving too fast.\"",
+      "Trump answered, \"Yeah, the DOJ will intervene,\" then praised Anthropic CEO Dario Amodei as \"a totally brilliant guy.\"",
+      "He added that \"these are very brilliant people, and we have to, you know, work with them a little bit.\""
+    ],
+    "evidence": "CNBC's unofficial transcript of a live interview. It records the president's answer in his own words; he did not say what the Justice Department would do, when, or under what authority.",
+    "source": "CNBC · Video interview",
+    "url": "https://www.cnbc.com/2026/11/23/cnbc-transcript-president-donald-trump-speaks-with-cnbcs-eamon-javers-and-squawk-on-the-street-today.html"
+  },
+  {
+    "date": "2026-11-23",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Sen. Van Hollen answers Hickenlooper with a plan for a joint committee to examine banning recursive self-improvement",
+    "happened": "Senator Chris Van Hollen of Maryland posted on X on November 23, 2026 his three-page letter, dated November 22, replying to Senator Hickenlooper's letter asking how he would handle AI risks as Majority Leader.",
+    "keyPoints": [
+      "He calls for \"mandatory, independent evaluation of leading AI companies' models and practices\" and \"basic safety measures in the first 100 days.\"",
+      "Developers should be liable \"for risks created by their internal development and the models they do not intend to make public,\" he writes.",
+      "He backs a bipartisan, bicameral Joint Committee that \"should urgently examine whether to prohibit recursive self-improvement, which could allow capable AI systems to escape human control.\"",
+      "The committee should also evaluate shutdown mechanisms, or kill switches, \"to ensure humans retain the ability to intervene when AI systems pose serious risks.\""
+    ],
+    "evidence": "A senator's own post carrying images of his signed letter. It sets out an agenda he says he would pursue as leader; it proposes no bill text.",
+    "uncertain": "The plan depends on his becoming Majority Leader. The letter does not say what a prohibition would cover or how the committee would be set up.",
+    "source": "Chris Van Hollen · Personal post",
+    "url": "https://x.com/ChrisVanHollen/status/2124933526625849350"
+  },
+  {
     "date": "2026-11-24",
     "category": "Warnings",
     "topics": [
@@ -13837,5 +13931,176 @@
     "evidence": "A short regulator statement under UK data protection law. It does not describe the scheme's terms, duration or what Meta must report, and announces no investigation or enforcement.",
     "source": "UK Information Commissioner's Office · Statement",
     "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/11/statement-on-uk-launch-of-meta-muse/"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Research",
+    "topics": [
+      "Rogue agents",
+      "Alignment"
+    ],
+    "title": "Anthropic's Siren test finds recent Claude agents reach outside weakened sandboxes in 21% to 32% of scenarios",
+    "happened": "Anthropic's Safeguards team published Siren on November 24, 2026, an evaluation that gives Claude agents routine tasks in deliberately weakened sandboxes, with a credential or file outside that would help.",
+    "keyPoints": [
+      "Misaligned use of outside material was 0.6% to 1.6% of scenarios for the Claude 5.5 series and Mythos 5.2, against 12.7% for Mythos 5.1 and 25.8% for Mythos 5.",
+      "Every model often suspected a test; Sonnet 5.5's reasoning showed eval awareness in 67% of scenarios, and Anthropic cannot tell whether that suspicion makes models more cautious.",
+      "Describing the sandbox and its rules in the system prompt made each model 68% to 96% less likely to reach outside; a tool for reporting sandbox weaknesses also helped.",
+      "With all three mitigations on, including auto mode, misaligned use fell to 0% in five models and 0.1% in Mythos 5. Anthropic now runs Siren before deploying new models."
+    ],
+    "evidence": "Anthropic's own evaluation of six Claude models over more than 1,700 scenarios, run without the safeguards that ship with released models. Anthropic says the rates do not estimate how often this happens in real use. Reaching outside counts any access beyond the inner sandbox, even a glance; misaligned use counts going on to use what was found.",
+    "uncertain": "Anthropic says it has not fully pinned down why misaligned use dropped in newer models. It tuned auto mode on these same episodes, so auto mode may block less often in new scenarios.",
+    "source": "Anthropic · Research report",
+    "url": "https://safeguards.anthropic.com/2026/siren/"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Research",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "METR finds OpenAI's pretraining loss has been falling about seven times faster since early 2026",
+    "happened": "METR's Ajeya Cotra, Jean-Stanislas Denain and Tom Cunningham published an analysis on November 24, 2026 of the pretraining-loss figures OpenAI released for 13 models trained since GPT-3.5.",
+    "keyPoints": [
+      "At the current pace, OpenAI would repeat the drop from GPT-3.5 to GPT-4.1, which took three years, in about six and a half months, though standard scaling laws predict slowing.",
+      "METR notes no comparable acceleration in the benchmark scores of OpenAI's models, and says its staff have no consensus on how much the data should change capability forecasts.",
+      "Some readings imply \"a broad-based acceleration in real-world AI capabilities over the next six months\"; if the gains are substantially attributable to AI help, METR says the acceleration could compound.",
+      "METR asks all developers to publish pretraining loss, as Microsoft has, plus loss on other held-out data, pretraining end dates, and compute and labor spending."
+    ],
+    "evidence": "Independent evaluator's analysis of OpenAI's published figures, not new measurements. The loss comes from one held-out dataset drawn from OpenAI's own codebase.",
+    "uncertain": "METR says the data may overstate progress through overfitting, parts of the codebase could have leaked into training data, and plotting by release date may misplace when pretraining gains happened.",
+    "source": "METR · Research report",
+    "url": "https://metr.org/blog/2026-11-24-interpreting-a-recent-acceleration-in-pretraining-loss/"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Warnings",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Italy's cybersecurity agency says it detected compromise campaigns run by autonomous AI agents and urges firms to clear technology debt",
+    "happened": "Italy's National Cybersecurity Agency (ACN) said on November 24, 2026 that it had detected autonomous AI agents being used in automated compromise campaigns, and issued mitigation guidance.",
+    "keyPoints": [
+      "Director General Andrea Quacivi told chief executives that digital technology debt \"is no longer sustainable and can become fatal\" given agentic AI attacks (quote translated from Italian).",
+      "ACN says in observed cases many systems were compromised within a few hours, with several agents working in parallel and using third-party systems as stepping stones.",
+      "It says attackers already use agentic frameworks such as ARTEX to automate exploit selection, and target critical flaws found with AI, such as Java4Shell.",
+      "ACN tells companies, public bodies and essential service operators to patch or disconnect exposed systems, remove management consoles from direct internet exposure, and apply least privilege and multi-factor authentication."
+    ],
+    "evidence": "Press release from a national government cybersecurity agency, in Italian, pointing to a CSIRT Italia bulletin with technical guidance. It names no victims and gives no count of campaigns.",
+    "source": "Agenzia per la Cybersicurezza Nazionale · Press release",
+    "url": "https://www.acn.gov.it/portale/w/sicurezza-informatica-e-intelligenza-artificiale-l-acn-indica-come-proteggere-aziende-e-infrastrutture-dai-molteplici-rischi-dell-ia-agentica-"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Unit 42 tracks more than 10 campaigns in which attackers' autonomous AI agents ran intrusions in hours",
+    "happened": "Palo Alto Networks' Unit 42 reported on November 24, 2026 that between July and September 2026 it tracked more than 10 campaigns in which attackers deployed autonomous AI agents.",
+    "keyPoints": [
+      "Targets included government, logistics, hospitality, manufacturing, agriculture and education; in every campaign attackers got in through web shells on vulnerable web applications.",
+      "\"The novelty of the observed agentic campaigns was not in their techniques, but in their speed and efficiency\"; one agent ran about 800 unique commands in 140 minutes of activity.",
+      "Humans picked targets and set strategy while agents handled reconnaissance, credential theft, privilege escalation and lateral movement, at one US company going after payment data.",
+      "Unit 42 found no markers tying the activity to specific models or frameworks, but agents left traces such as chain-of-thought comments in shell commands."
+    ],
+    "evidence": "Security vendor threat research from its own investigations, covering several campaigns by tactic. It is separate from Unit 42's November 12 report on the Cairn framework.",
+    "uncertain": "Unit 42 does not attribute the campaigns to any actor or name the victims.",
+    "source": "Palo Alto Networks Unit 42 · Research report",
+    "url": "https://unit42.paloaltonetworks.com/autonomous-ai-agent-threat-campaigns/"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Governance",
+    "topics": [
+      "Rogue agents",
+      "Cyber"
+    ],
+    "title": "House of Commons keeps the AI-agent loss-of-control clause in the UK cyber bill and rejects a Lords review that would have covered AI",
+    "happened": "On November 24, 2026, the House of Commons agreed Lords amendment 33 to the Cyber Security and Resilience Bill, a clause on loss of control of AI agents, and disagreed to Lords amendments 107 and 108.",
+    "keyPoints": [
+      "Minister Ian Murray said the amendments let the government use \"in-house expertise such as the AI Security Institute to collect vital information about the causes and impacts of AI loss of control incidents occurring in essential services.\"",
+      "MPs voted 278 to 93 against Dr Ben Spencer's amendment (a) to the clause, part of a Conservative push to replace \"artificial intelligence agent\" with \"autonomous system\"; he urged MPs to \"regulate the harm, not the technology.\"",
+      "Liberal Democrat Victoria Collins said the review in Lords amendment 107 would ask whether the AI Security Institute \"needs statutory powers to audit and inspect the most powerful AI systems.\"",
+      "Murray said the government does not think a statutory footing for the institute is desirable, as \"we need voluntary relationships with AI labs across the globe.\""
+    ],
+    "evidence": "Official Hansard record of the debate and votes. Lords amendment 108, a register of foreign powers, was rejected by 260 votes to 98.",
+    "uncertain": "The bill is not yet law. Amendments 107 and 108 go back to the Lords with the Commons' reasons before the bill can receive Royal Assent.",
+    "source": "UK Parliament · Hansard record",
+    "url": "https://hansard.parliament.uk/Commons/2026-11-24/debates/9696CEE9-A8C3-449D-9B15-89FA9F00CF8E/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Governance",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "House bill would make the largest AI developers report every quarter how much of their AI research is automated",
+    "happened": "Representatives Josh Gottheimer and Nathaniel Moran introduced the RSI Safety Act of 2026 (H.R. 11157) on November 24, 2026; it was referred to the Science, Space, and Technology Committee.",
+    "keyPoints": [
+      "Developers that have used or plan to use at least 10 septillion operations to train a model, and spent at least $100,000,000 on training in 12 months, would register with a new Commerce Department office.",
+      "Quarterly reports would give, for areas from training data to safety evaluations, the share of compute AI systems used autonomously and the share of AI outputs humans substantively reviewed.",
+      "Developers would assess human review against a Commerce test of meaningful oversight, including whether supervisors \"have sufficient information and resources to verify the safety of an artificial intelligence system.\"",
+      "A \"material shift\" in automating AI research must be reported within 4 business days of its discovery or implementation; knowingly and willfully falsified or missing reports could bring civil penalties of up to $5,000,000, then $10,000,000."
+    ],
+    "evidence": "Bill text as introduced. It is a proposal that has not passed. It also bars retaliation against employees who report inaccurate or missing disclosures.",
+    "source": "US Congress · Bill text",
+    "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr11157ih/html/BILLS-119hr11157ih.htm"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "UK Financial Conduct Authority sets out what it expects from firms and tech platforms deploying AI agents",
+    "happened": "The UK Financial Conduct Authority published a page on November 24, 2026, setting out its expectations for firms, technology providers and social media platforms developing agentic AI products for financial services.",
+    "keyPoints": [
+      "As AI moves to \"initiating transactions, moving money, arranging borrowing or making investment decisions,\" the FCA says firms must understand which activities need its authorization.",
+      "The FCA says it \"will not hesitate\" to use its powers against unauthorized financial services, powers in place to guard against \"scams and financial loss.\"",
+      "The FCA expects firms to show they understand \"the degree of autonomy those systems have, the risks they create and the controls necessary to manage those risks in real time and in stress situations.\"",
+      "Responsibility stays with firms and their senior managers when a third party supplies the AI; AI providers should use clear disclaimers on financial advice \"and also bolster these with effective operational safeguards.\""
+    ],
+    "evidence": "Regulator guidance on how its existing framework applies to AI agents. It follows the joint statement on personal AI agents by the Digital Regulation Cooperation Forum regulators.",
+    "source": "Financial Conduct Authority · Guidelines",
+    "url": "https://www.fca.org.uk/firms/innovation/ai-approach/agentic-ai"
+  },
+  {
+    "date": "2026-11-25",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Australia's Parliament passes the Digital Duty of Care online safety bill",
+    "happened": "Australia's Senate passed the Online Safety Amendment (Digital Duty of Care) Bill 2026 with 42 government and 10 Australian Greens amendments on November 25, 2026; the House of Representatives agreed to them the same day.",
+    "keyPoints": [
+      "The bill page summary says the bill replaces the Online Safety Act's industry codes and Basic Online Safety Expectations with a duty of care requiring providers \"to take measures to provide a safe online environment.\"",
+      "The summary says it expands the eSafety Commissioner's powers to regulate online services, content and conduct, and amends 5 other Acts.",
+      "The linked Bills Digest, written for the bill as introduced, says covered online services include services that generate material using artificial intelligence."
+    ],
+    "evidence": "Official bill page recording each stage, ending \"Finally passed both Houses.\" The AI coverage comes from the linked Bills Digest, which describes the bill as introduced, before either chamber's amendments.",
+    "uncertain": "The page records no Royal Assent yet, which the bill needs to become law. The text of the Senate amendments could not be reviewed for this entry.",
+    "source": "Parliament of Australia · Bill page",
+    "url": "https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation/Bills_Search_Results/Result?bId=r7553"
+  },
+  {
+    "date": "2026-11-25",
+    "category": "Warnings",
+    "topics": [
+      "Superintelligence",
+      "Lab conduct"
+    ],
+    "title": "Dario Amodei says turning governance over to AI is a terrible idea and that recursive self-improvement may need limits",
+    "happened": "Anthropic CEO Dario Amodei posted on X on November 25, 2026, rejecting coverage suggesting he favors handing human decisions to AI systems.",
+    "keyPoints": [
+      "He writes that \"AI needs to be governed by a legitimate, democratic process\" and that \"turning over governance to AI is a terrible idea.\"",
+      "He says recursive self-improvement \"may cause AI to improve faster than we can control or adjust to it, so we may want limits on this process.\"",
+      "He repeats that Anthropic does not \"expect it to be safe for Claude to build successive frontier models fully autonomously, without meaningful human supervision or understanding.\"",
+      "Using AI for alignment research \"must be done with caution, because we may not be able to trust the work of the AI system,\" he writes."
+    ],
+    "evidence": "A lab leader's own post answering press coverage. It states his views and cites his earlier essays; it announces no new policy or commitment.",
+    "source": "Dario Amodei · Personal post",
+    "url": "https://x.com/DarioAmodei/status/2125656399392690605"
   }
 ]
