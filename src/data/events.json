@@ -8499,7 +8499,7 @@
       "Citing the government's announcements last month on AI loss of control, he said \"threats are moving too fast for half measures or delayed reviews.\""
     ],
     "evidence": "Official Hansard record of the Third Reading. The amendments agreed on the day were technical; the minister said they \"tighten the drafting for consistency and clarity.\"",
-    "uncertain": "This entry covers Lords passage. On November 24, 2026, the Commons agreed Lords amendment 33 and disagreed to amendments 107 and 108, so the bill returns to the Lords before Royal Assent.",
+    "uncertain": "This entry covers Lords passage on November 2, 2026; later Commons consideration of the Lords amendments is recorded in a separate entry.",
     "source": "UK Parliament · Hansard record",
     "url": "https://hansard.parliament.uk/Lords/2026-11-02/debates/9A654131-98CE-48C2-86D6-65BFA9A71414/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill"
   },
@@ -13947,7 +13947,7 @@
       "Describing the sandbox and its rules in the system prompt made each model 68% to 96% less likely to reach outside; a tool for reporting sandbox weaknesses also helped.",
       "With all three mitigations on, including auto mode, misaligned use fell to 0% in five models and 0.1% in Mythos 5. Anthropic now runs Siren before deploying new models."
     ],
-    "evidence": "Anthropic's own evaluation of six Claude models over more than 1,700 scenarios, run without the safeguards that ship with released models. Anthropic says the rates do not estimate how often this happens in real use.",
+    "evidence": "Anthropic's own evaluation of six Claude models over more than 1,700 scenarios, run without the safeguards that ship with released models. Anthropic says the rates do not estimate how often this happens in real use. Reaching outside counts any access beyond the inner sandbox, even a glance; misaligned use counts going on to use what was found.",
     "uncertain": "Anthropic says it has not fully pinned down why misaligned use dropped in newer models. It tuned auto mode on these same episodes, so auto mode may block less often in new scenarios.",
     "source": "Anthropic · Research report",
     "url": "https://safeguards.anthropic.com/2026/siren/"
@@ -14025,7 +14025,7 @@
       "Murray said the government does not think a statutory footing for the institute is desirable, as \"we need voluntary relationships with AI labs across the globe.\""
     ],
     "evidence": "Official Hansard record of the debate and votes. Lords amendment 108, a register of foreign powers, was rejected by 260 votes to 98.",
-    "uncertain": "The bill is not yet law. A Commons committee is drawing up reasons for rejecting amendments 107 and 108, which go back to the Lords before the bill can receive Royal Assent.",
+    "uncertain": "The bill is not yet law. Amendments 107 and 108 go back to the Lords with the Commons' reasons before the bill can receive Royal Assent.",
     "source": "UK Parliament · Hansard record",
     "url": "https://hansard.parliament.uk/Commons/2026-11-24/debates/9696CEE9-A8C3-449D-9B15-89FA9F00CF8E/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill"
   },
@@ -14039,10 +14039,10 @@
     "title": "House bill would make the largest AI developers report every quarter how much of their AI research is automated",
     "happened": "Representatives Josh Gottheimer and Nathaniel Moran introduced the RSI Safety Act of 2026 (H.R. 11157) on November 24, 2026; it was referred to the Science, Space, and Technology Committee.",
     "keyPoints": [
-      "Developers that have used or plan to use 10 septillion operations to train a model, and spent $100,000,000 on training in 12 months, would register with a new Commerce Department office.",
+      "Developers that have used or plan to use at least 10 septillion operations to train a model, and spent at least $100,000,000 on training in 12 months, would register with a new Commerce Department office.",
       "Quarterly reports would give, for areas from training data to safety evaluations, the share of compute AI systems used autonomously and the share of AI outputs humans substantively reviewed.",
-      "Reports would test human oversight, including whether supervisors \"have sufficient information and resources to verify the safety of an artificial intelligence system.\"",
-      "A \"material shift\" in automating AI research must be reported within 4 business days; falsified or missing reports could bring civil penalties of up to $5,000,000, then $10,000,000."
+      "Developers would assess human review against a Commerce test of meaningful oversight, including whether supervisors \"have sufficient information and resources to verify the safety of an artificial intelligence system.\"",
+      "A \"material shift\" in automating AI research must be reported within 4 business days of its discovery or implementation; knowingly and willfully falsified or missing reports could bring civil penalties of up to $5,000,000, then $10,000,000."
     ],
     "evidence": "Bill text as introduced. It is a proposal that has not passed. It also bars retaliation against employees who report inaccurate or missing disclosures.",
     "source": "US Congress · Bill text",
@@ -14057,9 +14057,9 @@
     "title": "UK Financial Conduct Authority sets out what it expects from firms and tech platforms deploying AI agents",
     "happened": "The UK Financial Conduct Authority published a page on November 24, 2026, setting out its expectations for firms, technology providers and social media platforms developing agentic AI products for financial services.",
     "keyPoints": [
-      "As AI moves to \"initiating transactions, moving money, arranging borrowing or making investment decisions,\" firms must know which activities need FCA authorization.",
-      "The FCA says it \"will not hesitate\" to use its powers against unauthorized financial services, which exist to guard against \"scams and financial loss.\"",
-      "Firms must show they understand \"the degree of autonomy those systems have, the risks they create and the controls necessary to manage those risks in real time and in stress situations.\"",
+      "As AI moves to \"initiating transactions, moving money, arranging borrowing or making investment decisions,\" the FCA says firms must understand which activities need its authorization.",
+      "The FCA says it \"will not hesitate\" to use its powers against unauthorized financial services, powers in place to guard against \"scams and financial loss.\"",
+      "The FCA expects firms to show they understand \"the degree of autonomy those systems have, the risks they create and the controls necessary to manage those risks in real time and in stress situations.\"",
       "Responsibility stays with firms and their senior managers when a third party supplies the AI; AI providers should use clear disclaimers on financial advice \"and also bolster these with effective operational safeguards.\""
     ],
     "evidence": "Regulator guidance on how its existing framework applies to AI agents. It follows the joint statement on personal AI agents by the Digital Regulation Cooperation Forum regulators.",
@@ -14072,12 +14072,12 @@
     "topics": [
       "Harm to people"
     ],
-    "title": "Australia's Parliament passes the Digital Duty of Care bill, which would also cover AI services",
+    "title": "Australia's Parliament passes the Digital Duty of Care online safety bill",
     "happened": "Australia's Senate passed the Online Safety Amendment (Digital Duty of Care) Bill 2026 with 42 government and 10 Australian Greens amendments on November 25, 2026; the House of Representatives agreed to them the same day.",
     "keyPoints": [
       "The bill replaces the Online Safety Act's industry codes and Basic Online Safety Expectations with a duty of care requiring providers \"to take measures to provide a safe online environment.\"",
       "It expands the eSafety Commissioner's powers to regulate online services, content and conduct, and amends 5 other Acts.",
-      "The Bills Digest linked from the page says covered online services include services that generate material using artificial intelligence."
+      "The linked Bills Digest, written for the bill as introduced, says covered online services include services that generate material using artificial intelligence."
     ],
     "evidence": "Official bill page recording each stage, ending \"Finally passed both Houses.\" The AI coverage comes from the linked Bills Digest, which describes the bill as introduced, before either chamber's amendments.",
     "uncertain": "The page records no Royal Assent yet, which the bill needs to become law. The text of the Senate amendments could not be reviewed for this entry.",
