@@ -1,12 +1,12 @@
 [
   {
     "date": "2026-11-24",
-    "summary": "New York bans AI chatbot toys for five years, and the Commons keeps an AI-agent loss-of-control clause in the UK cyber bill. The UK NCSC reports a marked rise in AI-assisted attacks, Anthropic's Siren test finds Claude agents reach outside weakened sandboxes, and an Australian committee urges incident reporting.",
+    "summary": "New York bans AI chatbot toys for five years, and the Commons keeps an AI-agent loss-of-control clause in the UK cyber bill. Switzerland confirms its first AI-agent cyberattacks hitting critical infrastructure, OpenAI reports GPT-6 protein design, and an Australian committee urges frontier-lab audits.",
     "highlights": [
       "2026-11-24-new-york-governor-hochul-signs-a-five-year-ban-on-ai-chatbot",
       "2026-11-24-house-of-commons-keeps-the-ai-agent-loss-of-control-clause",
-      "2026-11-24-uk-ncsc-reports-a-marked-rise-in-ai-assisted-cyberattacks",
-      "2026-11-24-anthropic-s-siren-test-finds-recent-claude-agents-reach",
+      "2026-11-24-switzerland-s-cybersecurity-agency-confirms-its-first-ai",
+      "2026-11-24-openai-says-gpt-6-models-can-design-new-proteins-using-only",
       "2026-11-24-australia-s-parliamentary-ai-committee-recommends-mandatory"
     ]
   },

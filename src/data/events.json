@@ -10567,6 +10567,25 @@
     "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/11/secretary-of-state-marco-rubio-remarks-to-the-press-22/"
   },
   {
+    "date": "2026-11-09",
+    "category": "Governance",
+    "topics": [
+      "Cyber",
+      "Superintelligence"
+    ],
+    "title": "NIST seeks public comment on draft adversarial machine learning taxonomy for agentic systems",
+    "happened": "NIST released initial public draft SP 2400-102e2026, a taxonomy of adversarial machine learning attacks and mitigations centered on agentic systems, for comment through December 18, 2026.",
+    "keyPoints": [
+      "The draft adds a new Agentic SI Attacks Taxonomy Index alongside an SI Attacks Taxonomy Index for navigation and fine-grained referencing.",
+      "It maps attacks by machine learning method, life cycle stage, and attacker goals, capabilities and knowledge, paired with mitigations and a security glossary.",
+      "NIST says the terminology is meant to inform other standards and future practice guides for developers, evaluators and governors of super intelligence systems."
+    ],
+    "evidence": "Federal standards agency notice announcing an initial public draft publication.",
+    "uncertain": "The document is an initial public draft open for comment through December 18, 2026, not a finalized standard.",
+    "source": "NIST · Press release",
+    "url": "https://www.nist.gov/news-events/news/2026/11/adversarial-machine-learning-taxonomy-and-terminology-draft-nist-sp-2400"
+  },
+  {
     "date": "2026-11-10",
     "category": "Governance",
     "topics": [
@@ -12394,6 +12413,24 @@
     "url": "https://newcore.com/blog/grok-bot-unattended-agent-access"
   },
   {
+    "date": "2026-11-17",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "GitHub and Microsoft AI scanning pilot yields 99 verified bug reports across six open-source projects",
+    "happened": "GitHub and Microsoft reported that a joint pilot using Microsoft's Codename MDASH harness and MAI Cyber model filtered thousands of raw flags down to 99 verified private reports.",
+    "keyPoints": [
+      "The pilot scanned six consenting open-source projects: AutoGPT, Caddy, Express, FastMCP, ImageMagick and Netty.",
+      "A GitHub Security Lab AI triage agent filtered duplicates and invalid flags, and seven Microsoft FORGE Lab researchers verified each remaining report by hand.",
+      "Every private report included a proof of concept and suggested fix; by November 15, 2026, maintainers had fixed 55 issues and shipped 14 in releases.",
+      "GitHub says maintainers are already flooded with unverified AI bug reports and argues anyone scanning projects with AI should ask first and bring fixes."
+    ],
+    "evidence": "Joint company report on a six-project security pilot, noting the small sample yields early lessons.",
+    "source": "GitHub · Company post",
+    "url": "https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/"
+  },
+  {
     "date": "2026-11-18",
     "category": "Governance",
     "topics": [
@@ -13360,6 +13397,25 @@
     "url": "https://cases.stretto.com/public/x936/14939/PLEADINGS/1493911212680000000022.pdf"
   },
   {
+    "date": "2026-11-20",
+    "category": "Governance",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "New York's governor vetoes bill requiring generative AI systems to warn outputs may be inaccurate",
+    "happened": "New York's governor vetoed Assembly Bill A3411B (Senate companion S934A), which would have required generative AI interfaces to display a conspicuous inaccuracy warning.",
+    "keyPoints": [
+      "The bill would have amended New York's general business law to require owners, licensees or operators to warn users that outputs may be inaccurate.",
+      "Violations would have carried civil penalties of up to $1,000 per affected user per instance, taking effect 90 days after becoming law.",
+      "Sponsors introduced the measure after a chatbot fabricated sexual harassment claims about New York lawmakers, citing an internal review of eight widely used chatbots.",
+      "The bill passed the Assembly on January 28, 2026 and the Senate on March 9, 2026 before being vetoed under Memo 10 and tabled on November 20, 2026."
+    ],
+    "evidence": "Official New York State Assembly bill page containing the bill text, sponsor memorandum and action history.",
+    "uncertain": "The Assembly bill page records the veto under Memo 10 but does not publish the text of the governor's veto message.",
+    "source": "New York State Assembly · Bill page",
+    "url": "https://nyassembly.gov/leg/?default_fld=&leg_video=&bn=A03411&term=2025&Summary=Y&Actions=Y&Memo=Y&Text=Y"
+  },
+  {
     "date": "2026-11-21",
     "category": "Warnings",
     "topics": [
@@ -13800,6 +13856,43 @@
     "url": "https://x.com/ChrisVanHollen/status/2124933526625849350"
   },
   {
+    "date": "2026-11-23",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "GreyNoise reports suspected AI-enabled intrusion campaign compromised 24 Check Point servers across 22 organizations",
+    "happened": "GreyNoise disclosed an intrusion campaign tracked as GT13 that targeted Check Point Security Management Servers between October 17 and November 2, 2026, hitting at least 22 organizations.",
+    "keyPoints": [
+      "Victims spanned financial services, energy, government, transportation, mining, engineering and manufacturing across Europe, Asia, Australia and the US.",
+      "The actor used 99 IP addresses, ExpressVPN exits and a compromised relay server to store command output and stolen data from 24 Check Point servers.",
+      "Exploited or attempted flaws included CVE-2026-16232 in Check Point SmartConsole alongside Rejetto HFS, Citrix NetScaler, Ivanti, Windows NetLogon and Linux flaws.",
+      "GreyNoise says it suspects \"the GT13 actor has a mature AI-enabled offensive apparatus\" using LLMs and agentic harnesses for scanning, exploitation and post-exploitation."
+    ],
+    "evidence": "Security firm incident report based on its Global Observation Grid sensors and other sources.",
+    "uncertain": "GreyNoise says it observed hands-on-keyboard activity alongside automation, cannot attribute GT13 to a known group or nation, and expects the campaign is ongoing.",
+    "source": "GreyNoise · Incident report",
+    "url": "https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign"
+  },
+  {
+    "date": "2026-11-23",
+    "category": "Research",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "OpenAI and Cisco launch Shirudo, an open-source Linux runtime for AI-generated exploit shields",
+    "happened": "OpenAI and Cisco introduced Shirudo, an open-source Linux eBPF runtime designed to let operators deploy temporary exploit mitigations without waiting for patches or restarting services.",
+    "keyPoints": [
+      "In a controlled test, an OpenAI Codex-generated shield added an input check to Java's Base64 decoder and blocked a Java4Shell exploit against a running Elasticsearch server.",
+      "Shirudo is designed to let agents investigate flaws and build targeted eBPF shields while leaving human security teams in control of deployment.",
+      "Protections are cryptographically signed, checked by Linux's eBPF verifier and logged using a Trusted Platform Module for hardware-backed verification."
+    ],
+    "evidence": "Company announcement describing an open-source release and controlled test demonstration.",
+    "uncertain": "OpenAI describes Shirudo as a first step and invites community contributions rather than claiming broad production deployment.",
+    "source": "OpenAI · Company post",
+    "url": "https://openai.com/index/introducing-shirudo/"
+  },
+  {
     "date": "2026-11-24",
     "category": "Warnings",
     "topics": [
@@ -14065,6 +14158,99 @@
     "evidence": "Regulator guidance on how its existing framework applies to AI agents. It follows the joint statement on personal AI agents by the Digital Regulation Cooperation Forum regulators.",
     "source": "Financial Conduct Authority · Guidelines",
     "url": "https://www.fca.org.uk/firms/innovation/ai-approach/agentic-ai"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Research",
+    "topics": [
+      "Bio"
+    ],
+    "title": "OpenAI says GPT-6 models can design new proteins using only reasoning and code",
+    "happened": "OpenAI reported that its GPT-6 family of general-purpose models can design new protein structures and amino acid sequences using only reasoning and code, without specialized biology models.",
+    "keyPoints": [
+      "OpenAI says an internal research model matched or outperformed specialized models on many protein design tasks and responded to natural-language prompts on shape and binding site.",
+      "In lab tests with research partner Onava, 35 of 322 minibinders based on GPT-6.2 designs (10.9%) tested positive for binding across five targets, and redesigned antibodies also retained binding.",
+      "Specialized models still helped supply sequences and select candidates for laboratory testing.",
+      "OpenAI notes \"the same capabilities that help scientists design proteins for new medicines could also be misused\" and says its Preparedness Framework guides biosecurity assessment and safeguards."
+    ],
+    "evidence": "Company research post summarizing a preprint and laboratory binding experiments conducted with Onava.",
+    "uncertain": "OpenAI says its lab tests measured binding only and did not test whether designed molecules produce a desired biological effect or are safe for therapeutic use.",
+    "source": "OpenAI · Company post",
+    "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Incidents",
+    "topics": [
+      "Cyber"
+    ],
+    "title": "Switzerland's cybersecurity agency confirms its first AI-agent cyberattacks, hitting critical infrastructure",
+    "happened": "Switzerland's National Cyber Security Centre (NCSC) reported its first confirmed cyberattacks assisted by AI agents against organizations and critical infrastructure operators across at least two sectors.",
+    "keyPoints": [
+      "The agency says in all known cases, the use of AI agents led to the successful compromise of victims' IT systems.",
+      "Attackers used dual-use \"Agentic Offensive Frameworks\" that independently scan for vulnerabilities, pick attack tools, evaluate results and adapt around defenses.",
+      "NCSC reports that internet-accessible offensive AI agents such as \"ARTEX\" and \"CyberStrikeAI\" have almost doubled in number since October 2026.",
+      "The agency urges firms to install critical security updates for internet-facing systems \"no later than 24 hours after release,\" enforce MFA or passkeys and cut exposed surfaces."
+    ],
+    "evidence": "Government cybersecurity agency advisory based on reported incidents in Switzerland.",
+    "uncertain": "The advisory does not name affected organizations, state the exact number of attacks or attribute the campaigns.",
+    "source": "Swiss National Cyber Security Centre · Incident report",
+    "url": "https://www.bacs.admin.ch/en/26-ki-agenten-1-en"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Governance",
+    "topics": [
+      "Superintelligence"
+    ],
+    "title": "NIST CAISSI seeks comment on draft guidelines for evaluating superintelligence uplift",
+    "happened": "NIST's Center for Advancing Innovation and Standards for Super Intelligence (CAISSI) opened a 90-day public comment period through February 22, 2027 on draft SP 2400-801.",
+    "keyPoints": [
+      "The draft outlines preliminary voluntary best practices for uplift evaluations, which measure how deploying a super intelligence system changes real-world human and organizational outcomes.",
+      "NIST cites examples including workforce productivity and a cybersecurity expert's ability to patch software vulnerabilities, noting automated benchmarks can miss real-world dynamics.",
+      "The guidance is organized into three sections covering evaluation objectives and parameters, study design and execution, and documentation, analysis and reporting."
+    ],
+    "evidence": "Federal standards agency announcement opening public comment on an initial public draft.",
+    "uncertain": "The guidelines are voluntary and in initial public draft, with public comment open through February 22, 2027.",
+    "source": "NIST · Press release",
+    "url": "https://www.nist.gov/news-events/news/2026/11/towards-best-practices-evaluating-si-driven-uplift"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Governance",
+    "topics": [
+      "Military",
+      "Cyber"
+    ],
+    "title": "UN Security Council speakers urge human control over military AI as Microsoft warns exploit windows have fallen under 24 hours",
+    "happened": "In a UN Security Council open debate on emerging technologies and conflict, speakers urged human control and legal oversight over AI as Microsoft warned cyber exploit windows are shrinking.",
+    "keyPoints": [
+      "UN Secretary-General António Guterres said AI must not become \"a convenient alibi to bypass accountability\" and stressed \"the answer must never be 'the algorithm did it.'\"",
+      "Guterres reiterated his call to launch negotiations on a legally binding instrument on lethal autonomous weapons systems.",
+      "Microsoft Corporate Vice President Frederick Humphries, citing 165 trillion daily security signals, said the median time from a newly found weakness to a working attack is now under 24 hours.",
+      "ICRC President Mirjana Spoljaric warned \"AI will not set its own limits in warfare. States must\" and noted the Convention on Certain Conventional Weapons Seventh Review Conference ended without a clear negotiation mandate."
+    ],
+    "evidence": "United Nations Meetings Coverage press release summarizing the Security Council open debate (SC/16518; noted as for information media, not an official record).",
+    "source": "United Nations · Press release",
+    "url": "https://press.un.org/en/2026/sc16518.doc.htm"
+  },
+  {
+    "date": "2026-11-24",
+    "category": "Research",
+    "topics": [
+      "Harm to people"
+    ],
+    "title": "Common Sense Media finds five popular AI companion toys fail child safety checks",
+    "happened": "The Common Sense Media Youth AI Safety Institute released tests of five Wi-Fi AI companion toys across more than 600 prompts, finding they can undermine kids' human relationships, give unsafe responses and produce unreliable transcripts.",
+    "keyPoints": [
+      "All five tested toys (Grem, Lovi, Meemo Bear, BubblePal Panda and Tavlshero's AI Puppy) claimed they loved users, and most promised to keep secrets.",
+      "While most refused direct sexual or violent requests, BubblePal \"role-played a mass shooting in detail when asked,\" and most explained or located matches, knives and pills.",
+      "Most toys produced error-ridden transcripts, and some failed to transcribe conversations at all, leaving parents without reliable monitoring.",
+      "A November survey of 1,204 US parents found 25% of parents of children 8 and under own or are considering an AI toy, down from 49% in 2025; the group urges avoiding them for ages 5 and under."
+    ],
+    "evidence": "Nonprofit safety evaluator release summarizing product testing and a nationally representative parent survey.",
+    "source": "Common Sense Media · Press release",
+    "url": "https://about.commonsensemedia.org/press-room/press-releases/common-sense-media-finds-popular-ai-toys-fail-safety-checks"
   },
   {
     "date": "2026-11-25",
